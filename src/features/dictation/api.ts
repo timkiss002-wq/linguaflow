@@ -86,6 +86,8 @@ export function useRecordAttempt(lessonId: string) {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: libraryKeys.progress(user.id) });
       qc.invalidateQueries({ queryKey: ['dashboard'] });
+      qc.invalidateQueries({ queryKey: ['stats'] });
+      qc.invalidateQueries({ queryKey: ['daily-activity'] });
     },
   });
 }

@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation } from '@tanstack/react-query';
 import { AlertCircle, Loader2 } from 'lucide-react';
 import { useForm } from 'react-hook-form';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { FormField } from '@/components/FormField';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
@@ -31,6 +31,11 @@ export function LoginForm() {
       )}
       <FormField label="Email" type="email" autoComplete="email" autoFocus error={errors.email?.message} {...form.register('email')} />
       <FormField label="Password" type="password" autoComplete="current-password" error={errors.password?.message} {...form.register('password')} />
+      <div className="-mt-2 text-right">
+        <Link to="/forgot-password" className="text-xs font-medium text-primary hover:underline">
+          Forgot password?
+        </Link>
+      </div>
       <Button type="submit" className="w-full" disabled={mutation.isPending}>
         {mutation.isPending && <Loader2 className="animate-spin" />}
         Sign in

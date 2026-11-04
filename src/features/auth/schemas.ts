@@ -27,3 +27,11 @@ export const registerSchema = z
     message: 'Passwords do not match',
   });
 export type RegisterValues = z.infer<typeof registerSchema>;
+
+export const forgotSchema = z.object({ email });
+export type ForgotValues = z.infer<typeof forgotSchema>;
+
+export const newPasswordSchema = z
+  .object({ password: passwordSchema, confirmPassword: z.string() })
+  .refine((v) => v.password === v.confirmPassword, { path: ['confirmPassword'], message: 'Passwords do not match' });
+export type NewPasswordValues = z.infer<typeof newPasswordSchema>;

@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Ear, Headphones, Keyboard, Layers, Sparkles, Volume2 } from 'lucide-react';
+import { ArrowRight, BarChart3, BookOpen, Ear, Headphones, Keyboard, Layers, Shapes, Sparkles, Volume2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
@@ -12,10 +12,12 @@ const STEPS = [
 ];
 
 const FEATURES = [
-  { icon: Keyboard, title: 'Dictation Room', text: 'Sentence-by-sentence listening practice with hints, replay and detailed error analysis.' },
-  { icon: Sparkles, title: 'Built for Chinese too', text: 'Pinyin on demand, and homophone-aware checking that separates 的/得 slips from mishearing.' },
-  { icon: BookOpen, title: 'Words in context', text: 'Tap any word to see its meaning and save it together with the sentence you heard it in.' },
-  { icon: Layers, title: 'Spaced repetition', text: 'Review saved words as flashcards on an SM-2 schedule, so you remember them for good.' },
+  { icon: Keyboard, title: 'Dictation Room', text: 'Sentence-by-sentence listening with slow replay, hints and a clear breakdown of every mistake.' },
+  { icon: Sparkles, title: 'Built for Chinese too', text: 'Pinyin on demand, and checking that tells a wrong tone or a same-sound 汉字 apart from mishearing.' },
+  { icon: BookOpen, title: 'Your vocabulary sheet', text: 'Save words with the sentence you met them in, retype them TRUE/FALSE like your own sheet, and practise typing.' },
+  { icon: Shapes, title: 'IELTS word forms', text: 'decide · decision · decisive · decisively — family cards, drills and a profile of the forms you mix up.' },
+  { icon: Layers, title: 'Spaced repetition', text: 'Flashcards on SM-2 or your own fixed intervals, with audio, context and a daily new-card limit.' },
+  { icon: BarChart3, title: 'Progress you can see', text: 'Study time, listening accuracy per week, streaks and your most repeated mistakes.' },
 ];
 
 export default function LandingPage() {
@@ -91,7 +93,7 @@ export default function LandingPage() {
 
         <section className="container py-16">
           <h2 className="text-2xl font-semibold tracking-tight">Everything you need to practise daily</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map(({ icon: Icon, title, text }) => (
               <div key={title} className="rounded-lg border bg-card p-6">
                 <Icon className="size-5 text-primary" aria-hidden />

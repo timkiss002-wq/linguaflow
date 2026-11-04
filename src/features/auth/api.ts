@@ -33,3 +33,15 @@ export async function signOut() {
   const { error } = await getSupabase().auth.signOut();
   if (error) throw error;
 }
+
+/** Sends a reset link. Always resolves the same way so it can't be used to discover accounts. */
+export async function requestPasswordReset(email: string) {
+  const { error } = await getSupabase().auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/reset-password` });
+  // Rate limits are worth reporting; "user not found" never is.
+  if (error && error.status === 429) throw error;
+}
+
+export async function updatePassword(password: string) {
+  const { error } = await getSupabase().auth.updateUser({ password });
+  if (error) throw error;
+}

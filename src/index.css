@@ -30,6 +30,9 @@
     --sidebar: 0 0% 100%;
     --sidebar-foreground: 222 30% 25%;
     --radius: 0.625rem;
+    /* Chart series colour, validated (dataviz checks) against the light card surface. */
+    --chart-1: #008c7c;
+    --chart-grid: #e5e7eb;
   }
 
   .dark {
@@ -58,6 +61,9 @@
     --ring: 172 66% 45%;
     --sidebar: 222 38% 9%;
     --sidebar-foreground: 215 20% 80%;
+    /* Dark step of the same hue, validated against the dark card surface. */
+    --chart-1: #14a394;
+    --chart-grid: #263041;
   }
 
   * {

@@ -10,7 +10,6 @@ import { useVocabulary } from '@/features/vocabulary/api';
 export interface DashboardSummary {
   streak: number;
   wordsSaved: number;
-  lessonsCompleted: number;
 }
 
 async function count(promise: PromiseLike<{ count: number | null; error: unknown }>) {
@@ -22,13 +21,12 @@ async function count(promise: PromiseLike<{ count: number | null; error: unknown
 async function fetchSummary(): Promise<DashboardSummary> {
   const sb = getSupabase();
   // RLS limits every query to the signed-in user's rows.
-  const [streakRes, wordsSaved, lessonsCompleted] = await Promise.all([
+  const [streakRes, wordsSaved] = await Promise.all([
     sb.rpc('get_learning_streak'),
     count(sb.from('vocabulary').select('id', { count: 'exact', head: true })),
-    count(sb.from('learning_progress').select('lesson_id', { count: 'exact', head: true }).eq('status', 'completed')),
   ]);
   if (streakRes.error) throw streakRes.error;
-  return { streak: streakRes.data ?? 0, wordsSaved, lessonsCompleted };
+  return { streak: streakRes.data ?? 0, wordsSaved };
 }
 
 export function useDashboardSummary() {

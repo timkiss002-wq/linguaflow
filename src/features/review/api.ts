@@ -50,6 +50,8 @@ export function useRecordReview() {
       qc.setQueryData<VocabWord[]>(vocabKeys.all(user.id), (old) => old?.map((w) => (w.id === updated.id ? { ...w, ...updated } : w)));
       qc.invalidateQueries({ queryKey: ['new-reviewed-today', user.id] });
       qc.invalidateQueries({ queryKey: ['dashboard'] });
+      qc.invalidateQueries({ queryKey: ['stats'] });
+      qc.invalidateQueries({ queryKey: ['daily-activity'] });
     },
   });
 }

@@ -442,6 +442,9 @@ isOneToOne: false
               "active_seconds": number,"attempts": number,"day": string,"reviews": number
             }[]
                            },
+"get_learning_stats":
+{ Args: { "p_days"?: number,"p_language"?: Database["public"]['Enums']["language_code"] }; Returns: Json
+                           },
 "get_learning_streak":
 { Args: Record<PropertyKey, never>; Returns: number
                            },

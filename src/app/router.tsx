@@ -4,12 +4,13 @@ import { FullPageSpinner } from '@/components/FullPageSpinner';
 import { GuestOnly, RequireAuth } from '@/features/auth/guards';
 import LandingPage from '@/pages/LandingPage';
 import NotFoundPage from '@/pages/NotFoundPage';
-import { StatisticsPage } from '@/pages/placeholders';
 import RouteErrorPage from '@/pages/RouteErrorPage';
 import { AppLayout } from './layout/AppLayout';
 
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@/pages/RegisterPage'));
+const ForgotPasswordPage = lazy(() => import('@/pages/ForgotPasswordPage'));
+const ResetPasswordPage = lazy(() => import('@/pages/ResetPasswordPage'));
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'));
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 const LessonsPage = lazy(() => import('@/pages/LessonsPage'));
@@ -19,6 +20,7 @@ const VocabularyPage = lazy(() => import('@/pages/VocabularyPage'));
 const VocabularyPracticePage = lazy(() => import('@/pages/VocabularyPracticePage'));
 const WordFormsPage = lazy(() => import('@/pages/WordFormsPage'));
 const ReviewPage = lazy(() => import('@/pages/ReviewPage'));
+const StatisticsPage = lazy(() => import('@/pages/StatisticsPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
@@ -31,6 +33,9 @@ export const router = createBrowserRouter([
       { path: '/', element: <LandingPage /> },
       { path: '/login', element: <GuestOnly>{page(<LoginPage />)}</GuestOnly> },
       { path: '/register', element: <GuestOnly>{page(<RegisterPage />)}</GuestOnly> },
+      { path: '/forgot-password', element: <GuestOnly>{page(<ForgotPasswordPage />)}</GuestOnly> },
+      // Not GuestOnly: the email link signs the user in, then they set a new password here.
+      { path: '/reset-password', element: page(<ResetPasswordPage />) },
       {
         element: (
           <RequireAuth>
@@ -47,7 +52,7 @@ export const router = createBrowserRouter([
           { path: '/vocabulary/practice', element: page(<VocabularyPracticePage />) },
           { path: '/word-forms', element: page(<WordFormsPage />) },
           { path: '/review', element: page(<ReviewPage />) },
-          { path: '/statistics', element: <StatisticsPage /> },
+          { path: '/statistics', element: page(<StatisticsPage />) },
           { path: '/settings', element: page(<SettingsPage />) },
         ],
       },

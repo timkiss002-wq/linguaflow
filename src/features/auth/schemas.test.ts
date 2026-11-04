@@ -1,5 +1,5 @@
 import { safeRedirect } from './redirect';
-import { loginSchema, registerSchema } from './schemas';
+import { loginSchema, newPasswordSchema, registerSchema } from './schemas';
 
 const validRegister = {
   displayName: 'Lan',
@@ -51,5 +51,13 @@ describe('safeRedirect', () => {
     ['%E0%A4%A', '/dashboard'],
   ])('%s → %s', (input, expected) => {
     expect(safeRedirect(input)).toBe(expected);
+  });
+});
+
+describe('newPasswordSchema', () => {
+  it('requires a strong, matching password', () => {
+    expect(newPasswordSchema.safeParse({ password: 'listen123', confirmPassword: 'listen123' }).success).toBe(true);
+    expect(newPasswordSchema.safeParse({ password: 'short', confirmPassword: 'short' }).success).toBe(false);
+    expect(newPasswordSchema.safeParse({ password: 'listen123', confirmPassword: 'listen124' }).success).toBe(false);
   });
 });

@@ -24,8 +24,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | M5 | Vocabulary sheet (incl. *Ôn từ vựng* → TRUE/FALSE *Check*), word lookup, context, CSV import/export, typing practice — [design](docs/VOCABULARY.md) | ✅ Done |
 | M5b | IELTS word forms: 104 word families, family cards, wrong-type warnings, 4 drills, weak spots, `word_form` errors in dictation — [design](docs/VOCABULARY.md#4-word-form-cho-ielts) | ✅ Done |
 | M6 | Flashcard review: SM-2 or fixed intervals (like the learner's sheet), daily new-card limit, word→meaning / meaning→word, forecast | ✅ Done |
-| M7 | Full dashboard, landing polish, deployment | Next |
-| P1–P6 | Personalised path, skill tests, Writing (EN + 中文) — [design](docs/PERSONALIZATION.md) | Planned |
+| M7 | Dashboard (goal, 6 tiles, study-time chart, EN vs 中文), Statistics (accuracy per week, mistake types, confused pairs), forgot/reset/change password, CI, deploy guide | ✅ Done |
+| P1–P6 | Next: personalised path, skill tests, Writing (EN + 中文) — [design](docs/PERSONALIZATION.md) | Planned |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
 yet" page — there are no fake features.
@@ -108,6 +108,8 @@ psql postgresql://postgres:postgres@127.0.0.1:54322/postgres -c "update profiles
 ```
 
 ## Deploy
+
+Step-by-step guide in Vietnamese: **[docs/DEPLOY.md](docs/DEPLOY.md)**. Summary:
 
 ### 1. Supabase (cloud)
 
@@ -216,6 +218,11 @@ picks the best Mandarin/English voice automatically, lets learners choose one in
 explains what to do when no voice is available.
 
 ## Testing
+
+- `npm run e2e` — 7 browser suites (157 checks) that drive the real app against the local Supabase,
+  including database assertions. See [e2e/README.md](e2e/README.md).
+- GitHub Actions (`.github/workflows/ci.yml`) on every push: lint, typecheck, unit tests, seed
+  up-to-date check, build, and all migrations + seed applied to a clean Postgres.
 
 - `npm test` — unit tests (validation, filters, voice selection, Pinyin).
 - `supabase/tests/` — SQL checks that each user can only see and change their own data.

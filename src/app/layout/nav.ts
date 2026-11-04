@@ -15,6 +15,6 @@ export const NAV_ITEMS: NavItem[] = [
   { to: '/vocabulary', label: 'Vocabulary', icon: BookOpen, available: true },
   { to: '/word-forms', label: 'Word Forms', icon: Shapes, available: true },
   { to: '/review', label: 'Review', icon: Layers, available: true },
-  { to: '/statistics', label: 'Statistics', icon: BarChart3, available: false },
+  { to: '/statistics', label: 'Statistics', icon: BarChart3, available: true },
   { to: '/settings', label: 'Settings', icon: Settings, available: true },
 ];
