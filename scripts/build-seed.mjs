@@ -1,4 +1,4 @@
-// Generates supabase/seed.sql from content/lessons.json, word-families.json and assessment.json.
+// Generates supabase/seed.sql from content/lessons.json, word-families.json, assessment.json and writing-tasks.json.
 // Usage: npm run seed:build   (then `npm run db:reset` to load it locally)
 import { readFileSync, writeFileSync } from 'node:fs';
 
@@ -216,6 +216,42 @@ out.push(
   '',
 );
 
+// ───────────── Writing prompts (P5) ─────────────
+const { tasks: writingTasks } = JSON.parse(readFileSync(new URL('../content/writing-tasks.json', import.meta.url), 'utf8'));
+const wErrors = [];
+const wIds = new Set();
+const INTEREST_TOPICS = ['daily-conversation', 'travel', 'business-career', 'education', 'entertainment', 'movies-tv', 'podcast-interviews', 'technology', 'environment', 'health', 'psychology', 'economics', 'science', 'culture-history', 'food', 'sports', 'music'];
+for (const t of writingTasks) {
+  const where = `writing task ${t.id}`;
+  if (!/^[a-z0-9-]{2,60}$/.test(t.id ?? '') || wIds.has(t.id)) wErrors.push(`${where}: invalid or duplicate id`);
+  wIds.add(t.id);
+  if (!['en', 'zh'].includes(t.lang)) wErrors.push(`${where}: lang must be en or zh`);
+  if (!['sentences', 'paragraph', 'letter', 'essay'].includes(t.kind)) wErrors.push(`${where}: unknown kind`);
+  if (!['general', 'hsk', 'ielts'].includes(t.exam)) wErrors.push(`${where}: unknown exam`);
+  const [lo, hi] = t.levels ?? [];
+  if (!(lo >= 1 && hi <= 6 && lo <= hi)) wErrors.push(`${where}: levels [min, max] within 1-6`);
+  if (t.topic && !INTEREST_TOPICS.includes(t.topic)) wErrors.push(`${where}: unknown topic ${t.topic}`);
+  if (!t.title?.trim() || !t.prompt?.trim()) wErrors.push(`${where}: needs title and prompt`);
+  if (!(t.min > 0) || (t.max != null && t.max < t.min)) wErrors.push(`${where}: min/max length`);
+  if (!Array.isArray(t.words) || t.words.length < 3 || new Set(t.words).size !== t.words.length) wErrors.push(`${where}: 3+ different words`);
+  if (t.lang === 'zh' && t.words?.some((w) => /[A-Za-z]/.test(w))) wErrors.push(`${where}: Chinese words only`);
+}
+if (wErrors.length) {
+  console.error(wErrors.join('\n'));
+  process.exit(1);
+}
+const arr = (xs) => `array[${xs.map(q).join(', ')}]::text[]`;
+out.push(
+  '-- Writing prompts (P5), from content/writing-tasks.json.',
+  'insert into public.writing_tasks (id, language, kind, exam, level_min, level_max, topic, title, prompt, prompt_vi, min_length, max_length, words) values',
+  writingTasks
+    .map((t) => `  (${q(t.id)}, ${q(t.lang)}, ${q(t.kind)}, ${q(t.exam)}, ${t.levels[0]}, ${t.levels[1]}, ${q(t.topic ?? null)}, ${q(t.title)}, ${q(t.prompt)}, ${q(t.vi ?? null)}, ${t.min}, ${t.max ?? 'null'}, ${arr(t.words)})`)
+    .join(',\n'),
+  'on conflict (id) do update set language = excluded.language, kind = excluded.kind, exam = excluded.exam, level_min = excluded.level_min, level_max = excluded.level_max,',
+  '  topic = excluded.topic, title = excluded.title, prompt = excluded.prompt, prompt_vi = excluded.prompt_vi, min_length = excluded.min_length, max_length = excluded.max_length, words = excluded.words;',
+  '',
+);
+
 writeFileSync(new URL('../supabase/seed.sql', import.meta.url), out.join('\n'));
 
 // ───────────── HSK word list (separate file: ~11k rows) ─────────────
@@ -228,4 +264,4 @@ for (let i = 0; i < hsk.length; i += 500) {
 }
 writeFileSync(new URL('../supabase/seed-hsk.sql', import.meta.url), hskOut.join('\n') + '\n');
 const total = lessons.reduce((n, l) => n + l.sentences.length, 0);
-console.log(`seed.sql: ${lessons.length} lessons, ${total} sentences, ${families.length} word families, ${itemRows.length} test questions · seed-hsk.sql: ${hsk.length} HSK words`);
+console.log(`seed.sql: ${lessons.length} lessons, ${total} sentences, ${families.length} word families, ${itemRows.length} test questions, ${writingTasks.length} writing prompts · seed-hsk.sql: ${hsk.length} HSK words`);

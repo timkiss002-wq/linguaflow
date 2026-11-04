@@ -69,9 +69,22 @@ describe('buildPlan', () => {
   });
 
   it('continues a started lesson and notes habits', () => {
-    const p = buildPlan({ ...base, dueCards: 0, avgSessionMinutes: 8, lessons: { zh: { ...base.lessons.zh!, continue: true, remaining: 3 } } });
+    const p = buildPlan({ ...base, dueCards: 0, writingsLast7: 3, avgSessionMinutes: 8, lessons: { zh: { ...base.lessons.zh!, continue: true, remaining: 3 } } });
     expect(p.items[0]).toMatchObject({ title: 'Continue: Weekend plans · 3 sentences', minutes: 20 });
     expect(p.notes[0]).toContain('about 8 min');
+  });
+
+  it('adds writing every other day until 3 texts a week, when there is time', () => {
+    const odd = buildPlan({ ...base, today: '2026-11-05', goalMinutes: 30, writingsLast7: 1 }); // day number is odd
+    const even = buildPlan({ ...base, goalMinutes: 30, writingsLast7: 1 });
+    const w = [odd, even].map((p) => p.items.find((i) => i.kind === 'writing'));
+    expect(w.filter(Boolean)).toHaveLength(1);
+    const item = w.find(Boolean)!;
+    expect(item).toMatchObject({ minutes: 10, href: '/writing?lang=zh', target: { type: 'writing', language: 'zh' } });
+    expect(item.reason).toContain('1 of 3 texts this week');
+    const done = [buildPlan({ ...base, goalMinutes: 30, writingsLast7: 3 }), buildPlan({ ...base, today: '2026-11-05', goalMinutes: 30, writingsLast7: 3 })];
+    expect(done.every((p) => !p.items.some((i) => i.kind === 'writing'))).toBe(true);
+    expect(itemProgress(item, { reviews: 0, sentences: {}, practice: 0, word_forms: 0, tests: [], writings: ['zh'] })).toBe(1);
   });
 
   it('works without goals', () => {

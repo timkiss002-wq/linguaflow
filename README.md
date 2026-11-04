@@ -29,7 +29,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | P2 | Strengths & weaknesses page: Chinese mistakes by Pinyin (tone / initial / final / same-sound), English endings & small words, word forms, forgotten words, best study time, same-sound character drill — [design](docs/PERSONALIZATION.md#11-p2--đã-triển-khai) | ✅ Done |
 | P3 | Level test: adaptive placement + 2-weekly check-in per skill (Elo), 110-question bank, 27 grammar points, answers graded on the server — [design](docs/PERSONALIZATION.md#12-p3--đã-triển-khai) | ✅ Done |
 | P4 | Today's plan on the dashboard: due reviews, level test / check-in, one weak spot, an i+1 lesson — sized to the daily goal, with reasons, auto-ticked, skips and rest days adapt it; dictation keeps the listening level current — [design](docs/PERSONALIZATION.md#13-p4--đã-triển-khai) | ✅ Done |
-| P5–P6 | Next: Writing (EN + 中文), AI feedback — [design](docs/PERSONALIZATION.md) | Planned |
+| P5 | Writing in English or 中文: 28 prompts picked by level, interests and exam (HSK / IELTS), notebook words as targets, drafts, automatic analysis without AI (length, sentences, variety, linking words, HSK levels of words, form checks), comparison with earlier texts, in the daily plan — [design](docs/PERSONALIZATION.md#14-p5--đã-triển-khai) | ✅ Done |
+| P6 | Next: AI feedback on writing — [design](docs/PERSONALIZATION.md) | Planned |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
 yet" page — there are no fake features.
@@ -210,7 +211,8 @@ npm run db:reset
 ```
 
 `seed:build` validates the JSON and regenerates `supabase/seed.sql`. Level-test questions and grammar points live in
-**`content/assessment.json`** (correct option first; the build shuffles them). The
+**`content/assessment.json`** (correct option first; the build shuffles them), writing prompts in
+**`content/writing-tasks.json`**. The
 official HSK list is in **`content/hsk-words.json`** (11,470 words, from
 [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary), MIT; regenerate with
 `node scripts/import-hsk.mjs complete.json`), and IELTS word families in **`content/word-families.json`** (104 families, 410 forms, 208 example sentences with a Vietnamese
@@ -226,7 +228,7 @@ explains what to do when no voice is available.
 
 ## Testing
 
-- `npm run e2e` — 11 browser suites (226 checks) that drive the real app against the local Supabase,
+- `npm run e2e` — 12 browser suites (249 checks) that drive the real app against the local Supabase,
   including database assertions. See [e2e/README.md](e2e/README.md).
 - GitHub Actions (`.github/workflows/ci.yml`) on every push: lint, typecheck, unit tests, seed
   up-to-date check, build, and all migrations + seed applied to a clean Postgres.

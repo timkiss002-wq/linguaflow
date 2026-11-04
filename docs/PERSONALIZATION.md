@@ -1,6 +1,6 @@
 # LinguaFlow — Cá nhân hoá lộ trình & Writing (thiết kế)
 
-> Trạng thái: **P1–P4 đã xong** (xem mục 10–13). P5–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
+> Trạng thái: **P1–P5 đã xong** (xem mục 10–14). P6 (góp ý bằng AI) là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## 1. Yêu cầu
 
@@ -256,4 +256,38 @@ Thẻ **Today's plan** ở đầu Dashboard. Logic trong `src/lib/personal/plan.
 - **Dictation cập nhật trình độ nghe** (phần còn nợ từ P3): mỗi câu đã *Check* nhích rating nghe một bước Elo nhỏ
   (K = 8, so với cấp của bài; đúng ≥ 95% = 1, ≥ 80% = 0,5). Câu bấm Show answer / Skip không tính. Chỉ áp dụng khi
   đã có rating (đã làm level test).
-- **Chưa có**: mục Writing (chờ P5); nhắc giờ học bằng thông báo.
+- **Chưa có**: nhắc giờ học bằng thông báo. (Mục Writing được thêm ở P5.)
+
+## 14. P5 — đã triển khai
+
+Trang **Writing** (`/writing`), tiếng Anh và tiếng Trung, **không dùng AI**.
+
+- **Chọn ngôn ngữ trước** (English / 中文), rồi mới thấy đề của ngôn ngữ đó.
+- **28 đề** (`content/writing-tasks.json` → `writing_tasks`, 14 mỗi ngôn ngữ, cấp 1–6). Các dạng:
+  - HSK: đặt câu với từ cho sẵn (HSK 3–4), đoạn ~80 chữ với 5 từ (HSK 5), bài luận (HSK 6);
+  - IELTS: Task 2 essay, General Task 1 letter;
+  - đoạn văn / email theo chủ đề.
+- **Chọn đề cho bạn** (`src/lib/writing/tasks.ts`): đúng trình độ (lấy từ ngữ pháp trong level test → hồ sơ → mặc
+  định), chủ đề bạn thích, dạng đề kỳ thi bạn nhắm tới; đề viết trong 14 ngày gần đây bị đẩy xuống. Mỗi đề ghi lý do.
+- **Từ mục tiêu**: 2 từ trong sổ từ vựng (trạng thái New/Learning) + từ của đề, tổng 5 từ — viết cũng là ôn từ. Đề
+  dạng HSK giữ đúng 5 từ của đề như bài thi thật.
+- **Trình soạn**: đếm chữ/từ trực tiếp, từ mục tiêu sáng lên khi đã dùng, gợi ý bố cục theo dạng bài, đề tiếng Việt
+  khi cần. Bản nháp tự lưu trên thiết bị đến khi nộp. Thời gian viết chỉ tính khi trang đang mở và đã bắt đầu gõ.
+- **Phân tích** (`src/lib/writing/analyze.ts`, thuần, có unit test), lưu cùng bài viết:
+  - **Số liệu**: số chữ/từ so với yêu cầu, số câu, độ dài câu trung bình / dài nhất, số đoạn, độ đa dạng từ vựng
+    (từ khác nhau ÷ từ nội dung), từ lặp nhiều, tốc độ viết.
+  - **Từ nối** theo nhóm (thêm ý, đối lập, nguyên nhân, kết quả, điều kiện, ví dụ, trình tự, quan điểm, kết luận).
+    Tiếng Trung nhận cả cặp 因为…所以, 虽然…但是… và không đếm trùng.
+  - **Kiểm tra tiếng Anh**: viết hoa đầu câu, chữ “I”, dấu cách quanh dấu câu, câu quá dài.
+    Riêng essay/letter: viết tắt (don't), mở câu bằng And/But/So, “very” lặp nhiều, thiếu đoạn hoặc kết luận.
+  - **Kiểm tra tiếng Trung**: dấu câu nửa độ rộng, pinyin/chữ Latin, dấu cách giữa chữ, câu dài không có dấu phẩy,
+    quá nhiều câu mở đầu bằng 我, chưa có từ nối.
+  - **Tiếng Trung — cấp HSK của các từ đã dùng** (tách từ bằng `Intl.Segmenter`, tra `hsk_words`) và danh sách
+    **từ cao hơn trình độ của bạn**.
+  - **So với các bài trước** cùng ngôn ngữ (trung bình 5 bài gần nhất): độ đa dạng, độ dài câu, số loại từ nối, số
+    điểm cần sửa, số từ trên trình độ.
+  - Trang kết quả tô màu từ mục tiêu và từ nối, và nói rõ: kiểm tra tự động chỉ xem hình thức, **không chấm ngữ
+    pháp hay ý** — phần đó để P6 (AI).
+- **Lịch sử** bài viết theo ngôn ngữ, xoá được.
+- **Kế hoạch hằng ngày**: mục *Write a short text* cách ngày, đến khi đủ 3 bài/tuần, khi còn ≥ 15 phút; tự đánh dấu
+  xong khi nộp bài trong ngày.

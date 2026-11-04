@@ -591,6 +591,46 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"writing_submissions": {
+                  Row: {
+                    "body": string,"created_at": string,"duration_seconds": number | null,"id": string,"language": Database["public"]['Enums']["language_code"],"metrics": NonNullable<Json>,"prompt": string,"target_words": (string)[],"task_id": string | null,"title": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "body": string,"created_at"?: string,"duration_seconds"?: number | null,"id"?: string,"language": Database["public"]['Enums']["language_code"],"metrics"?: NonNullable<Json>,"prompt": string,"target_words"?: (string)[],"task_id"?: string | null,"title": string,"user_id"?: string
+                  }
+                  Update: {
+                    "body"?: string,"created_at"?: string,"duration_seconds"?: number | null,"id"?: string,"language"?: Database["public"]['Enums']["language_code"],"metrics"?: NonNullable<Json>,"prompt"?: string,"target_words"?: (string)[],"task_id"?: string | null,"title"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "writing_submissions_task_id_fkey"
+      columns: ["task_id"]
+isOneToOne: false
+      referencedRelation: "writing_tasks"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "writing_submissions_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"writing_tasks": {
+                  Row: {
+                    "exam": string,"id": string,"kind": string,"language": Database["public"]['Enums']["language_code"],"level_max": number,"level_min": number,"max_length": number | null,"min_length": number,"prompt": string,"prompt_vi": string | null,"title": string,"topic": string | null,"words": (string)[]
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "exam"?: string,"id": string,"kind": string,"language": Database["public"]['Enums']["language_code"],"level_max": number,"level_min": number,"max_length"?: number | null,"min_length": number,"prompt": string,"prompt_vi"?: string | null,"title": string,"topic"?: string | null,"words"?: (string)[]
+                  }
+                  Update: {
+                    "exam"?: string,"id"?: string,"kind"?: string,"language"?: Database["public"]['Enums']["language_code"],"level_max"?: number,"level_min"?: number,"max_length"?: number | null,"min_length"?: number,"prompt"?: string,"prompt_vi"?: string | null,"title"?: string,"topic"?: string | null,"words"?: (string)[]
+                  }
+                  Relationships: [
+                    
+                  ]
                 }
           }
           Views: {

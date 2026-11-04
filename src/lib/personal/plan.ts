@@ -5,7 +5,7 @@
 import type { Insight } from './insights';
 
 export type Lang = 'en' | 'zh';
-export type PlanKind = 'review' | 'test' | 'practice' | 'grammar' | 'lesson';
+export type PlanKind = 'review' | 'test' | 'practice' | 'grammar' | 'writing' | 'lesson';
 
 /** How an item is ticked off automatically (from get_plan_progress) — or by the learner ("manual"). */
 export type PlanTarget =
@@ -14,6 +14,7 @@ export type PlanTarget =
   | { type: 'practice'; count: number }
   | { type: 'word_forms'; count: number }
   | { type: 'test'; language: Lang }
+  | { type: 'writing'; language: Lang }
   | { type: 'manual' };
 
 export interface PlanItem {
@@ -70,6 +71,8 @@ export interface PlanInput {
   levelSource: Partial<Record<Lang, string>>;
   /** Times each kind was skipped in the last 14 days. */
   skips: Partial<Record<PlanKind, number>>;
+  /** Texts written in the last 7 days (Writing, P5). */
+  writingsLast7?: number;
   /** Average real session length (habit analysis), null when unknown or habits are off. */
   avgSessionMinutes: number | null;
 }
@@ -193,7 +196,23 @@ export function buildPlan(input: PlanInput): Plan {
     left -= minutes;
   }
 
-  // 4. A lesson with the rest of the time (at least 5 minutes).
+  // 4. Writing every other day, until 3 texts this week — only when there is room for it and a lesson.
+  if (focus && (input.writingsLast7 ?? 0) < 3 && day % 2 === 1 && left >= 15) {
+    const minutes = often('writing') ? 7 : 10;
+    items.push({
+      key: `writing-${focus}`,
+      kind: 'writing',
+      language: focus,
+      title: `Write a short ${LANG_NAME[focus]} text`,
+      reason: `${input.writingsLast7 ?? 0} of 3 texts this week. Writing uses the words you are learning — the analysis shows what to work on.${often('writing') ? ' Shorter today because you often skip this.' : ''}`,
+      minutes,
+      href: `/writing?lang=${focus}`,
+      target: { type: 'writing', language: focus },
+    });
+    left -= minutes;
+  }
+
+  // 5. A lesson with the rest of the time (at least 5 minutes).
   const lesson = focus ? input.lessons[focus] : undefined;
   if (lesson) {
     const minutes = Math.max(5, left);
@@ -231,6 +250,7 @@ export interface TodayProgress {
   practice: number;
   word_forms: number;
   tests: Lang[];
+  writings?: Lang[];
 }
 
 export function itemProgress(item: PlanItem, p: TodayProgress | undefined): number {
@@ -248,6 +268,8 @@ export function itemProgress(item: PlanItem, p: TodayProgress | undefined): numb
       return ratio(p.word_forms, t.count);
     case 'test':
       return p.tests.includes(t.language) ? 1 : 0;
+    case 'writing':
+      return p.writings?.includes(t.language) ? 1 : 0;
     default:
       return 0;
   }

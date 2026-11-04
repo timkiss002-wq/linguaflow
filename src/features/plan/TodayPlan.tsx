@@ -1,4 +1,4 @@
-import { BookOpenCheck, Check, ClipboardCheck, Dumbbell, Headphones, Layers, RefreshCw, type LucideIcon } from 'lucide-react';
+import { BookOpenCheck, Check, ClipboardCheck, Dumbbell, Headphones, Layers, PenLine, RefreshCw, type LucideIcon } from 'lucide-react';
 import { useEffect, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -14,7 +14,7 @@ import { cn } from '@/lib/utils';
 import { usePlanProgress, useRebuildPlan, useSavePlan, useSetItemStatus, useStoredPlans, type StoredPlan } from './api';
 import { usePlanInput } from './usePlanInput';
 
-const ICON: Record<PlanKind, LucideIcon> = { review: Layers, test: ClipboardCheck, practice: Dumbbell, grammar: BookOpenCheck, lesson: Headphones };
+const ICON: Record<PlanKind, LucideIcon> = { review: Layers, test: ClipboardCheck, practice: Dumbbell, grammar: BookOpenCheck, writing: PenLine, lesson: Headphones };
 const LANG = { en: 'English', zh: '中文' } as const;
 
 /** Today's plan on the dashboard: built once a day, ticked off by what you actually do. */

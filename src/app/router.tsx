@@ -23,6 +23,9 @@ const ReviewPage = lazy(() => import('@/pages/ReviewPage'));
 const StatisticsPage = lazy(() => import('@/pages/StatisticsPage'));
 const InsightsPage = lazy(() => import('@/pages/InsightsPage'));
 const LevelTestPage = lazy(() => import('@/pages/LevelTestPage'));
+const WritingPage = lazy(() => import('@/pages/WritingPage'));
+const WritingEditorPage = lazy(() => import('@/pages/WritingEditorPage'));
+const WritingResultPage = lazy(() => import('@/pages/WritingResultPage'));
 const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'));
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
@@ -57,6 +60,9 @@ export const router = createBrowserRouter([
           { path: '/word-forms', element: page(<WordFormsPage />) },
           { path: '/review', element: page(<ReviewPage />) },
           { path: '/statistics', element: page(<StatisticsPage />) },
+          { path: '/writing', element: page(<WritingPage />) },
+          { path: '/writing/new/:taskId', element: page(<WritingEditorPage />) },
+          { path: '/writing/:submissionId', element: page(<WritingResultPage />) },
           { path: '/level-test', element: page(<LevelTestPage />) },
           { path: '/level-test/:testId', element: page(<AssessmentPage />) },
           { path: '/insights', element: page(<InsightsPage />) },

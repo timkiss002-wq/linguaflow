@@ -9,6 +9,7 @@ import { toGoal } from '@/features/learner/useRecommendations';
 import { useProgressMap } from '@/features/library/api';
 import { useProfile } from '@/features/profile/api';
 import { useWordFamilyIndex } from '@/features/wordforms/api';
+import { useSubmissions } from '@/features/writing/api';
 import { EXAMS, recommendLessons, type Goal } from '@/lib/personal/goals';
 import { buildInsights } from '@/lib/personal/insights';
 import { checkinDue, levelLabel, ratingToLevel } from '@/lib/personal/levels';
@@ -30,6 +31,7 @@ export function usePlanInput(today: string | undefined, skips: Partial<Record<Pl
   const insightData = useInsightData(60);
   const index = useWordFamilyIndex();
   const progress = useProgressMap();
+  const writings = useSubmissions();
   const lessons = useQuery({
     queryKey: ['all-lessons', user.id],
     staleTime: 5 * 60_000,
@@ -60,7 +62,7 @@ export function usePlanInput(today: string | undefined, skips: Partial<Record<Pl
 
   const settled = (q: { isPending: boolean; isError: boolean }) => !q.isPending || q.isError;
   // after "Rebuild" the cached data is refetched: wait for the fresh values
-  const fetching = [profile, learner, overview, insightData, progress, lessons].some((q) => q.isFetching);
+  const fetching = [profile, learner, overview, insightData, progress, lessons, writings].some((q) => q.isFetching);
   const ready =
     !fetching &&
     today &&
@@ -71,6 +73,7 @@ export function usePlanInput(today: string | undefined, skips: Partial<Record<Pl
     overview.data &&
     lessons.data &&
     progress.data &&
+    settled(writings) &&
     settled(insightData) &&
     reviews.every(settled);
 
@@ -140,8 +143,9 @@ export function usePlanInput(today: string | undefined, skips: Partial<Record<Pl
       lessons: picks,
       levelSource,
       skips: skips!,
+      writingsLast7: (writings.data ?? []).filter((w) => Date.parse(w.created_at) > Date.now() - 7 * 86_400_000).length,
       avgSessionMinutes: habitAnalysis ? (insightData.data?.habits.avg_session_minutes ?? null) : null,
     } satisfies PlanInput;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ready, today, skips, profile.data, learner.data, due, overview.data, lessons.data, progress.data, insightData.data, index, reviews.map((r) => r.dataUpdatedAt).join()]);
+  }, [ready, today, skips, profile.data, learner.data, due, overview.data, lessons.data, progress.data, insightData.data, writings.data, index, reviews.map((r) => r.dataUpdatedAt).join()]);
 }

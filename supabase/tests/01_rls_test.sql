@@ -70,6 +70,8 @@ select count(*) from assessment_items;
 \echo '--- Alice saves today plan and marks an item done (expect {"review": "done"})'
 insert into daily_plans(day, items) values (current_date, '[{"key":"review","kind":"review"}]');
 select set_plan_item_status(current_date, 'review', 'done');
+\echo '--- Alice saves a text (INSERT 0 1)'
+insert into writing_submissions(language, title, prompt, body) values ('en', 'T', 'P', 'My text.');
 \echo '--- Alice cannot write ratings directly (expect RLS error)'
 insert into user_skill_ratings(user_id, language, skill, rating) values ('aaaaaaaa-0000-0000-0000-000000000001', 'en', 'grammar', 3000);
 
@@ -80,6 +82,9 @@ select (select count(*) from assessments), (select count(*) from user_skill_rati
 \echo '--- Bob sees no plan of Alice (expect 0) and cannot change it (expect plan item not found)'
 select count(*) from daily_plans;
 select set_plan_item_status(current_date, 'review', 'skipped');
+\echo '--- Bob sees no texts of Alice (expect 0) and cannot delete them (DELETE 0)'
+select count(*) from writing_submissions;
+delete from writing_submissions;
 \echo '--- Bob asks for a question of Alice test (expect test not found)'
 select next_assessment_item((select id from public.assessments limit 1));
 \echo '--- Bob sees none of Alice data (expect 0 0 0 0 0)'
