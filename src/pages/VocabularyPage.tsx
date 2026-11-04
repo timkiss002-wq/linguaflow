@@ -1,4 +1,4 @@
-import { BookOpen, Download, Keyboard, Search, Trash2 } from 'lucide-react';
+import { BookOpen, Download, Eye, EyeOff, Keyboard, Search, Trash2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -34,6 +34,7 @@ export default function VocabularyPage() {
   const setFilters = useCallback((f: VocabFilters) => setParams(vocabFiltersToParams(f), { replace: true }), [setParams]);
   const [search, setSearch] = useState(filters.q);
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [hideWords, setHideWords] = useState(false);
 
   useEffect(() => {
     if (search === filters.q) return;
@@ -45,6 +46,8 @@ export default function VocabularyPage() {
   const all = vocab.data ?? [];
   const words = filterWords(all, filters);
   const statusCounts = countByStatus(filterWords(all, filters, ['status']));
+  const checkBase = filterWords(all, filters, ['check']);
+  const trueCount = checkBase.filter((w) => w.review_correct).length;
   const langCount = (l?: 'en' | 'zh') => filterWords(all, { ...filters, lang: l }, ['status', 'topic', 'pos']).length;
   const selectedIds = [...selected].filter((id) => all.some((w) => w.id === id));
 
@@ -117,6 +120,22 @@ export default function VocabularyPage() {
               </button>
             ))}
           </div>
+          <div className="flex gap-1" role="group" aria-label="Check">
+            {(['true', 'false'] as const).map((c) => (
+              <button
+                key={c}
+                type="button"
+                aria-pressed={filters.check === c}
+                onClick={() => setFilters({ ...filters, check: filters.check === c ? undefined : c })}
+                className={cn(
+                  'rounded-full border px-3 py-1 text-xs font-semibold',
+                  filters.check === c ? (c === 'true' ? 'border-success bg-success/15 text-success' : 'border-destructive bg-destructive/10 text-destructive') : 'bg-card text-muted-foreground hover:bg-muted',
+                )}
+              >
+                {c.toUpperCase()} · {c === 'true' ? trueCount : checkBase.length - trueCount}
+              </button>
+            ))}
+          </div>
           <Button size="sm" className="ml-auto" asChild>
             <Link to={practiceHref([])}>
               <Keyboard /> Practise typing
@@ -183,10 +202,20 @@ export default function VocabularyPage() {
           <EmptyState icon={Search} title="No words match" description="Try another search or remove some filters." />
         ) : (
           <>
-            <p className="text-sm text-muted-foreground" aria-live="polite">
-              {words.length} {words.length === 1 ? 'word' : 'words'}
-            </p>
-            <VocabularyList words={words} allWords={all} selected={selected} onSelect={onSelect} />
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="text-sm text-muted-foreground" aria-live="polite">
+                <span>{`${words.length} ${words.length === 1 ? 'word' : 'words'}`}</span>
+                {checkBase.length > 0 && (
+                  <span className="ml-2" data-testid="check-rate">
+                    · Check TRUE {trueCount}/{checkBase.length} ({Math.round((trueCount / checkBase.length) * 100)}%)
+                  </span>
+                )}
+              </p>
+              <Button size="sm" variant="ghost" aria-pressed={hideWords} onClick={() => setHideWords((h) => !h)}>
+                {hideWords ? <Eye /> : <EyeOff />} {hideWords ? 'Show words' : 'Hide words (ôn từ trí nhớ)'}
+              </Button>
+            </div>
+            <VocabularyList words={words} allWords={all} selected={selected} onSelect={onSelect} hideWords={hideWords} />
           </>
         )}
       </div>

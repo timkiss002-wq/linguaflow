@@ -14,6 +14,8 @@ export interface VocabFilters {
   status?: Status;
   topic?: string;
   pos?: string;
+  /** The sheet's Check column: only TRUE or only FALSE rows. */
+  check?: 'true' | 'false';
 }
 
 export function parseVocabFilters(p: URLSearchParams): VocabFilters {
@@ -25,6 +27,7 @@ export function parseVocabFilters(p: URLSearchParams): VocabFilters {
     status: STATUSES.some((s) => s.value === status) ? (status as Status) : undefined,
     topic: p.get('topic')?.slice(0, 60) || undefined,
     pos: p.get('pos')?.slice(0, 20) || undefined,
+    check: p.get('check') === 'true' || p.get('check') === 'false' ? (p.get('check') as 'true' | 'false') : undefined,
   };
 }
 
@@ -35,6 +38,7 @@ export function vocabFiltersToParams(f: VocabFilters): URLSearchParams {
   if (f.status) out.set('status', f.status);
   if (f.topic) out.set('topic', f.topic);
   if (f.pos) out.set('pos', f.pos);
+  if (f.check) out.set('check', f.check);
   return out;
 }
 
@@ -48,6 +52,7 @@ export function filterWords(words: VocabWord[], f: VocabFilters, ignore: (keyof 
     if (f.status && !ignore.includes('status') && w.status !== f.status) return false;
     if (f.topic && !ignore.includes('topic') && (w.topic ?? '').toLowerCase() !== f.topic.toLowerCase()) return false;
     if (f.pos && !ignore.includes('pos') && w.part_of_speech !== f.pos) return false;
+    if (f.check && !ignore.includes('check') && w.review_correct !== (f.check === 'true')) return false;
     if (!q) return true;
     return [w.term, w.meaning_vi, w.reading, w.context_sentence, ...(w.examples ?? [])].some((v) => v && fold(v).includes(q));
   });

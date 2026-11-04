@@ -51,11 +51,14 @@ export interface VocabRow {
   examples: string[];
   context_sentence: string | null;
   reading: string | null;
+  /** "Ôn từ vựng" — what the learner retyped. */
+  review_input?: string;
+  review_correct?: boolean;
   created_at?: string | null;
 }
 
 /** Same column order as the learner's Google Sheet, plus a few LinguaFlow extras at the end. */
-export const SHEET_HEADERS = ['STT', 'Ngày thêm', 'Từ mới', 'Giải thích', 'Topic', 'loại từ', 'Ví dụ 1', 'Ví dụ 2', 'Ví dụ 3', 'Ví dụ 4', 'Ví dụ 5', 'Phiên âm', 'Ngữ cảnh'];
+export const SHEET_HEADERS = ['STT', 'Ngày thêm', 'Từ mới', 'Giải thích', 'Topic', 'loại từ', 'Ôn từ vựng', 'Check', 'Ví dụ 1', 'Ví dụ 2', 'Ví dụ 3', 'Ví dụ 4', 'Ví dụ 5', 'Phiên âm', 'Ngữ cảnh'];
 
 const dateVi = (iso: string | null | undefined) => {
   if (!iso) return '';
@@ -73,6 +76,8 @@ export function vocabularyToCsv(rows: VocabRow[]): string {
       r.meaning_vi,
       r.topic,
       r.part_of_speech ? POS_LABEL[r.part_of_speech] : '',
+      r.review_input ?? '',
+      r.review_correct ? 'TRUE' : 'FALSE',
       ...Array.from({ length: 5 }, (_, k) => r.examples[k] ?? ''),
       r.reading,
       r.context_sentence,
@@ -87,6 +92,7 @@ const HEADER_KEYS: Record<string, keyof VocabRow | 'example'> = {
   'loại từ': 'part_of_speech', type: 'part_of_speech', pos: 'part_of_speech', 'part of speech': 'part_of_speech',
   'phiên âm': 'reading', ipa: 'reading', pinyin: 'reading',
   'ngữ cảnh': 'context_sentence', context: 'context_sentence',
+  'ôn từ vựng': 'review_input', review: 'review_input',
 };
 
 export interface ImportResult {
@@ -109,7 +115,7 @@ export function importVocabularyCsv(text: string): ImportResult {
   const headers = table[headerRow]!.map((h) => h.trim().toLowerCase());
   const col = (key: keyof VocabRow) => headers.findIndex((h) => HEADER_KEYS[h] === key);
   const exampleCols = headers.map((h, i) => (/^(ví dụ|example)\s*\d*$/.test(h) ? i : -1)).filter((i) => i >= 0);
-  const idx = { term: col('term'), meaning: col('meaning_vi'), topic: col('topic'), pos: col('part_of_speech'), reading: col('reading'), context: col('context_sentence') };
+  const idx = { review: col('review_input'), term: col('term'), meaning: col('meaning_vi'), topic: col('topic'), pos: col('part_of_speech'), reading: col('reading'), context: col('context_sentence') };
 
   const rows: VocabRow[] = [];
   const skipped: ImportResult['skipped'] = [];
@@ -131,6 +137,8 @@ export function importVocabularyCsv(text: string): ImportResult {
       reading: get(idx.reading) || null,
       context_sentence: get(idx.context).slice(0, 1000) || null,
       examples: exampleCols.map(get).filter(Boolean).slice(0, 5).map((e) => e.slice(0, 500)),
+      // The sheet's own "Check" value is ignored; the app recomputes it from "Ôn từ vựng".
+      review_input: get(idx.review).slice(0, 300),
     });
   });
   return { rows, skipped, headerRow };

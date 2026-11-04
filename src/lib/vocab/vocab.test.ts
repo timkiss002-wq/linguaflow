@@ -75,14 +75,15 @@ describe('csv', () => {
     const r = importVocabularyCsv(csv);
     expect(r.headerRow).toBe(1);
     expect(r.rows).toHaveLength(2);
-    expect(r.rows[0]).toMatchObject({ term: 'groceries', meaning_vi: 'thực phẩm và hàng tạp hóa', topic: 'Daily life', part_of_speech: 'noun', examples: ['I buy groceries on Sunday.'] });
+    expect(r.rows[0]).toMatchObject({ term: 'groceries', meaning_vi: 'thực phẩm và hàng tạp hóa', topic: 'Daily life', part_of_speech: 'noun', review_input: 'groceries', examples: ['I buy groceries on Sunday.'] });
     expect(r.skipped.map((s) => s.reason)).toEqual(['empty word', 'duplicate "Groceries"']);
   });
 
   it('round-trips through export', () => {
     const rows = [{ term: 'decision', meaning_vi: 'quyết định', topic: 'Work and study', part_of_speech: 'noun' as const, examples: ['Make a decision, quickly.'], context_sentence: 'We made a decision.', reading: '/dɪˈsɪʒn/', created_at: '2026-11-05T03:00:00Z' }];
-    const back = importVocabularyCsv(vocabularyToCsv(rows));
-    expect(back.rows[0]).toMatchObject({ term: 'decision', part_of_speech: 'noun', examples: ['Make a decision, quickly.'], reading: '/dɪˈsɪʒn/', context_sentence: 'We made a decision.' });
+    const back = importVocabularyCsv(vocabularyToCsv(rows.map((r) => ({ ...r, review_input: 'decison', review_correct: false }))));
+    expect(vocabularyToCsv([{ ...rows[0]!, review_input: 'decision', review_correct: true }]).split('\r\n')[1]).toContain(',Noun,decision,TRUE,');
+    expect(back.rows[0]).toMatchObject({ term: 'decision', review_input: 'decison', part_of_speech: 'noun', examples: ['Make a decision, quickly.'], reading: '/dɪˈsɪʒn/', context_sentence: 'We made a decision.' });
   });
 
   it('rejects files without a word column', () => {

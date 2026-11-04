@@ -4,11 +4,13 @@ import { toast } from 'sonner';
 import { useSpeech } from '@/features/audio/useSpeech';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { toUserMessage } from '@/lib/errors';
+import { reviewCheck } from '@/lib/vocab/check';
 import { POS, POS_LABEL } from '@/lib/vocab/pos';
 import { cn } from '@/lib/utils';
 import { topicOptions, useUpdateWord, type VocabWord } from './api';
 import { EditableCell } from './EditableCell';
 import { PosBadge } from './PosBadge';
+import { CheckBadge, ReviewInput } from './ReviewCell';
 import { StatusBadge, TypingDots } from './TypingDots';
 import { WordDetails } from './WordDetails';
 
@@ -19,10 +21,13 @@ interface Props {
   allWords: VocabWord[];
   selected: Set<string>;
   onSelect: (ids: string[], on: boolean) => void;
+  /** Hide "Từ mới" so the review column becomes a recall exercise. */
+  hideWords?: boolean;
 }
 
 /** Desktop: a spreadsheet with inline editing. Mobile: one card per word. */
-export function VocabularyList({ words, allWords, selected, onSelect }: Props) {
+export function VocabularyList({ words, allWords, selected, onSelect, hideWords = false }: Props) {
+  const [peek, setPeek] = useState<string | null>(null);
   const update = useUpdateWord();
   const [open, setOpen] = useState<string | null>(null);
   const speechEn = useSpeech('en');
@@ -30,8 +35,17 @@ export function VocabularyList({ words, allWords, selected, onSelect }: Props) {
   const topics = topicOptions(allWords).map((t) => ({ value: t, label: t }));
   const posOptions = POS.map((p) => ({ value: p, label: POS_LABEL[p] }));
 
-  const save = (w: VocabWord, patch: Parameters<typeof update.mutate>[0]['patch']) =>
-    update.mutate({ id: w.id, patch }, { onError: (e) => toast.error(toUserMessage(e)) });
+  const save = (w: VocabWord, patch: Parameters<typeof update.mutate>[0]['patch']) => {
+    // Editing the word itself re-evaluates the Check column.
+    const full = patch.term ? { ...patch, review_correct: reviewCheck(patch.term, w.review_input, w.language as 'en' | 'zh') } : patch;
+    update.mutate({ id: w.id, patch: full }, { onError: (e) => toast.error(toUserMessage(e)) });
+  };
+  const hidden = (w: VocabWord) => hideWords && peek !== w.id;
+  const masked = (w: VocabWord) => (
+    <button type="button" onClick={() => setPeek(w.id)} title="Show the word" className="rounded px-1 font-mono tracking-widest text-muted-foreground hover:bg-muted">
+      {'•'.repeat(Math.min(Math.max(w.term.length, 3), 10))}
+    </button>
+  );
   const play = (w: VocabWord) => (w.language === 'zh' ? speechZh : speechEn).play(`v:${w.id}`, w.term, 0.9);
   const allOn = words.length > 0 && words.every((w) => selected.has(w.id));
   // Render one layout only, so inputs and their labels exist once.
@@ -42,22 +56,24 @@ export function VocabularyList({ words, allWords, selected, onSelect }: Props) {
       {/* Desktop table */}
       {desktop && (
       <div className="overflow-x-auto rounded-lg border bg-card">
-        <table className="w-full text-sm">
+        <table className="w-full min-w-[1080px] text-sm">
           <thead className="sticky top-0 bg-muted/60 text-left text-xs font-medium text-muted-foreground">
             <tr>
               <th className="w-8 p-2">
                 <input type="checkbox" aria-label="Select all" checked={allOn} onChange={(e) => onSelect(words.map((w) => w.id), e.target.checked)} />
               </th>
               <th className="w-8 p-2" />
-              <th className="p-2">Từ mới</th>
-              <th className="w-24 p-2">Loại từ</th>
-              <th className="p-2">Phiên âm</th>
-              <th className="p-2">Giải thích</th>
-              <th className="p-2">Topic</th>
+              <th className="min-w-40 p-2">Từ mới</th>
+              <th className="w-24 whitespace-nowrap p-2">Loại từ</th>
+              <th className="w-28 p-2">Phiên âm</th>
+              <th className="min-w-52 p-2">Giải thích</th>
+              <th className="min-w-32 p-2">Topic</th>
               <th className="w-16 p-2 text-center">Ví dụ</th>
+              <th className="min-w-40 p-2">Ôn từ vựng</th>
+              <th className="w-20 p-2">Check</th>
               <th className="w-20 p-2">Typing</th>
               <th className="w-24 p-2">Status</th>
-              <th className="w-24 p-2">Ngày thêm</th>
+              <th className="w-24 whitespace-nowrap p-2">Ngày thêm</th>
             </tr>
           </thead>
           <tbody className="divide-y">
@@ -77,13 +93,13 @@ export function VocabularyList({ words, allWords, selected, onSelect }: Props) {
                       </button>
                     </td>
                     <td className="p-2 font-medium">
-                      <EditableCell label="Word" value={w.term} lang={lang} maxLength={100} onSave={(v) => v && save(w, { term: v })} />
+                      {hidden(w) ? masked(w) : <EditableCell label="Word" value={w.term} lang={lang} maxLength={100} onSave={(v) => v && save(w, { term: v })} />}
                     </td>
                     <td className="p-2">
                       <EditableCell label="Type" value={w.part_of_speech} options={posOptions} render={(v) => (v ? <PosBadge pos={v} /> : <span className="text-muted-foreground/50">—</span>)} onSave={(v) => save(w, { part_of_speech: v || null })} />
                     </td>
                     <td className="p-2 text-muted-foreground">
-                      <EditableCell label="Reading" value={w.reading} maxLength={100} onSave={(v) => save(w, { reading: v || null })} />
+                      {hidden(w) ? null : <EditableCell label="Reading" value={w.reading} maxLength={100} onSave={(v) => save(w, { reading: v || null })} />}
                     </td>
                     <td className="max-w-64 p-2">
                       <EditableCell label="Meaning" value={w.meaning_vi} onSave={(v) => save(w, { meaning_vi: v || null })} />
@@ -96,6 +112,12 @@ export function VocabularyList({ words, allWords, selected, onSelect }: Props) {
                         {isOpen ? <ChevronDown className="size-3.5" /> : <ChevronRight className="size-3.5" />} {exampleCount}
                       </button>
                     </td>
+                    <td className="p-1">
+                      <ReviewInput word={w} />
+                    </td>
+                    <td className="p-2">
+                      <CheckBadge correct={w.review_correct} />
+                    </td>
                     <td className="p-2 pt-3">
                       <TypingDots level={w.typing_level} />
                     </td>
@@ -107,7 +129,7 @@ export function VocabularyList({ words, allWords, selected, onSelect }: Props) {
                   {isOpen && (
                     <tr className="bg-muted/20">
                       <td colSpan={2} />
-                      <td colSpan={9} className="p-3">
+                      <td colSpan={11} className="p-3">
                         <WordDetails word={w} />
                       </td>
                     </tr>
@@ -132,13 +154,19 @@ export function VocabularyList({ words, allWords, selected, onSelect }: Props) {
                 <input type="checkbox" className="mt-1.5" aria-label={`Select ${w.term}`} checked={selected.has(w.id)} onChange={(e) => onSelect([w.id], e.target.checked)} />
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-base font-semibold" lang={lang}>
-                      {w.term}
-                    </span>
+                    {hidden(w) ? masked(w) : (
+                      <span className="text-base font-semibold" lang={lang}>
+                        {w.term}
+                      </span>
+                    )}
                     <PosBadge pos={w.part_of_speech} />
                     <span className="text-xs text-muted-foreground">{w.reading}</span>
                   </div>
                   <p className="text-sm">{w.meaning_vi ?? <span className="text-muted-foreground">No meaning yet</span>}</p>
+                  <div className="mt-2 flex items-center gap-2">
+                    <ReviewInput word={w} className="border-input bg-background" />
+                    <CheckBadge correct={w.review_correct} />
+                  </div>
                   <div className="mt-1.5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                     <StatusBadge status={w.status} />
                     <TypingDots level={w.typing_level} />

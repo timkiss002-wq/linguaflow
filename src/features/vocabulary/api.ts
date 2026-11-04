@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useUser } from '@/features/auth/useAuth';
 import { getSupabase } from '@/lib/supabase';
 import { lookupEnglish } from '@/lib/vocab/dictionary';
+import { reviewCheck } from '@/lib/vocab/check';
 import type { VocabRow } from '@/lib/vocab/csv';
 import type { Pos } from '@/lib/vocab/pos';
 import type { Tables, TablesUpdate } from '@/types/database';
@@ -68,7 +69,10 @@ export function useAddWord() {
   });
 }
 
-type WordPatch = Pick<TablesUpdate<'vocabulary'>, 'term' | 'reading' | 'meaning_vi' | 'part_of_speech' | 'topic' | 'context_sentence' | 'examples' | 'notes'>;
+type WordPatch = Pick<
+  TablesUpdate<'vocabulary'>,
+  'term' | 'reading' | 'meaning_vi' | 'part_of_speech' | 'topic' | 'context_sentence' | 'examples' | 'notes' | 'review_input' | 'review_correct'
+>;
 
 /** Optimistic: the cell shows the new value immediately and rolls back on error. */
 export function useUpdateWord() {
@@ -127,6 +131,8 @@ export function useImportWords() {
           reading: r.reading,
           context_sentence: r.context_sentence,
           examples: r.examples,
+          review_input: r.review_input ?? '',
+          review_correct: reviewCheck(r.term, r.review_input ?? '', language),
         }));
         const { data, error } = await getSupabase()
           .from('vocabulary')

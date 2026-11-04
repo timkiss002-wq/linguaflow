@@ -31,7 +31,13 @@ it('counts statuses', () => {
 });
 
 it('round-trips URL params and drops invalid values', () => {
-  const f = parseVocabFilters(new URLSearchParams('q=x&lang=zh&status=learning&topic=Law&pos=noun'));
+  const f = parseVocabFilters(new URLSearchParams('q=x&lang=zh&status=learning&topic=Law&pos=noun&check=false'));
   expect(parseVocabFilters(vocabFiltersToParams(f))).toEqual(f);
-  expect(parseVocabFilters(new URLSearchParams('lang=fr&status=done'))).toEqual({ q: '', lang: undefined, status: undefined, topic: undefined, pos: undefined });
+  expect(parseVocabFilters(new URLSearchParams('lang=fr&status=done&check=maybe'))).toEqual({ q: '', lang: undefined, status: undefined, topic: undefined, pos: undefined, check: undefined });
+});
+
+it('filters by the Check column', () => {
+  const ws = [w('a', { review_correct: true }), w('b', { review_correct: false })];
+  expect(filterWords(ws, { q: '', check: 'false' }).map((x) => x.term)).toEqual(['b']);
+  expect(filterWords(ws, { q: '', check: 'true' }).map((x) => x.term)).toEqual(['a']);
 });

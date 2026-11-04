@@ -1,6 +1,6 @@
 # LinguaFlow — Sổ từ vựng, luyện gõ & Word Form (thiết kế M5)
 
-> Trạng thái: **M5 đã xong** (sổ từ vựng dạng bảng, tra từ, ngữ cảnh, CSV, luyện gõ mức 1–4). Đồng bộ Google Sheets (mục 7) và Word Form (mục 4) là bước tiếp theo. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md) và [PERSONALIZATION.md](PERSONALIZATION.md).
+> Trạng thái: **M5 đã xong** (sổ từ vựng dạng bảng, tra từ, ngữ cảnh, CSV, luyện gõ mức 1–4). Word Form (mục 4) là bước tiếp theo. Đồng bộ với Google Sheets **đã bỏ** theo yêu cầu (mục 7). Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md) và [PERSONALIZATION.md](PERSONALIZATION.md).
 
 ## 1. Yêu cầu
 
@@ -108,39 +108,15 @@ Thêm loại lỗi **`word_form`** vào engine chấm: khi người dùng gõ m�
 | **M5b** | **Word Form**: bảng ~200 họ từ, thẻ family trong popup & sheet, luyện gõ mức 5, gap-fill / lưới / tìm lỗi / phân loại, danh sách bẫy, lỗi `word_form` trong Dictation |
 | **M6** | Ôn SRS (flashcard) dùng chung dữ liệu và các dạng thẻ ở trên |
 
-## 7. Đồng bộ hai chiều với Google Sheets (bước tiếp theo)
+## 7. Cột "Ôn từ vựng" + "Check" (thay cho đồng bộ Google Sheets)
 
-### 7.1. Ánh xạ cột (theo sheet "IELTS Reading + Listening" của người dùng)
+Theo yêu cầu (05/11/2026): **không** liên kết với Google Sheets; chỉ cần cơ chế TRUE/FALSE giống sheet.
 
-| Cột trong sheet | Trong app | Ghi chú |
-|---|---|---|
-| STT | — | app không ghi đè |
-| Ngày thêm | `created_at` | app tự điền khi thêm từ (sheet hiện để trống → tab "Theo dõi tiến độ" đang đếm 0) |
-| Từ mới | `term` | |
-| Giải thích | `meaning_vi` | |
-| Topic | `topic` | giữ đúng danh sách dropdown của sheet |
-| loại từ | `part_of_speech` | Noun / Verb / Adj / Adv / idiom ↔ noun / verb / adj / adv / idiom |
-| Ôn từ vựng, Check | — | công thức và phần gõ của người dùng trong sheet: **app không đụng vào** |
-| Ví dụ 1–5 | `examples[0..4]` | |
-| Ngày ôn | ngày ôn tiếp theo (M6) | |
-| *(cột ẩn mới)* LinguaFlow ID | `vocabulary.id` | để khớp dòng ↔ từ, kể cả khi đổi thứ tự / sửa chữ |
-
-### 7.2. Cách hoạt động
-- **Kết nối**: Settings → "Connect Google Sheet" → đăng nhập Google → **chọn file bằng Google Picker**
-  → app nhận diện dòng tiêu đề và cột, cho xem trước ánh xạ → lần đồng bộ đầu: từ có trong sheet mà
-  chưa có trong app thì nhập vào; ngược lại thì thêm dòng vào sheet; ghi ID vào cột ẩn.
-- **App → Sheet**: thêm / sửa / xoá từ trong app được ghi ngay vào đúng dòng.
-- **Sheet → App**: app đọc lại khi mở app, khi quay lại tab, mỗi 60 giây khi đang mở, và nút "Sync now".
-- **Xung đột**: lưu "dấu vân tay" của mỗi dòng ở lần đồng bộ trước; chỉ một bên đổi → lấy bên đó; cả hai
-  cùng đổi → **sheet thắng** và app báo cho người dùng.
-- (Tuỳ chọn, sau) cập nhật **tức thì** kể cả khi app đóng: Apps Script `onEdit` trong sheet gọi Supabase
-  Edge Function.
-
-### 7.3. Quyền & thiết lập (người chủ dự án làm một lần)
-- Dùng scope **`drive.file`** + Google Picker: app **chỉ** truy cập đúng file người dùng chọn, không đọc
-  được file khác. Scope này không bị xếp loại "nhạy cảm" nên không cần Google xét duyệt dài ngày.
-- Cần tạo trong Google Cloud Console (miễn phí): project → bật **Google Sheets API** và **Google Picker API**
-  → OAuth consent screen (External) → **OAuth Client ID** loại Web, origins `http://localhost:5173` và
-  domain khi deploy → **API key** (giới hạn cho Picker). Đưa vào `.env.local`:
-  `VITE_GOOGLE_CLIENT_ID`, `VITE_GOOGLE_API_KEY`, `VITE_GOOGLE_APP_ID` (project number).
-- Token Google chỉ nằm trong trình duyệt (Google Identity Services), không lưu trên server.
+- Mỗi dòng có ô **Ôn từ vựng** luôn gõ được (như ô trong sheet). Enter hoặc rời ô → lưu, con trỏ xuống dòng dưới.
+- Cột **Check** = TRUE/FALSE như công thức `=IF(C3=G3; TRUE; FALSE)`: không phân biệt hoa/thường, bỏ qua
+  khoảng trắng thừa, dấu câu và nháy cong; ô trống = FALSE. Sửa "Từ mới" thì Check tự tính lại.
+- Lọc nhanh **TRUE · n / FALSE · n**, và tỉ lệ "Check TRUE x/y (%)" (giống ô "Tỷ lệ thành thạo" trong Dashboard của sheet).
+- Nút **Hide words**: che cột Từ mới để tự gõ lại từ trí nhớ (bấm vào ô che để xem).
+- Nhập/xuất CSV có thêm hai cột *Ôn từ vựng, Check* đúng vị trí như sheet; khi nhập, Check được tính lại
+  từ ô Ôn từ vựng (không tin giá trị cũ).
+- Dữ liệu: `vocabulary.review_input`, `vocabulary.review_correct` (migration `20261105120000_vocabulary_review_check.sql`).
