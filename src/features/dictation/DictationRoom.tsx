@@ -12,6 +12,7 @@ import { SentenceText } from '@/features/lessons/SentenceText';
 import type { LessonSummary, Sentence } from '@/features/library/api';
 import { useProfile } from '@/features/profile/api';
 import { DEFAULT_SETTINGS } from '@/features/profile/schemas';
+import { useWordLookup } from '@/features/vocabulary/useWordLookup';
 import { compareAnswer } from '@/lib/compare';
 import { nextHint } from '@/lib/compare/hint';
 import { toUserMessage } from '@/lib/errors';
@@ -49,6 +50,7 @@ export function DictationRoom({ lesson, sentences, startIndex, previouslyFinishe
   const currentRate = rate ?? settings.playbackRate;
   const currentVolume = volume ?? settings.volume;
   const speech = useSpeech(language, { volume: currentVolume });
+  const lookup = useWordLookup(language);
   const [showPinyin, setShowPinyin] = useState<boolean | null>(null);
   const pinyinOn = showPinyin ?? settings.showPinyin;
 
@@ -249,6 +251,7 @@ export function DictationRoom({ lesson, sentences, startIndex, previouslyFinishe
       </nav>
 
       {speech.error && <SpeechErrorNotice error={speech.error} language={language} />}
+      {lookup.popover}
 
       <div className="grid gap-4 lg:grid-cols-[minmax(260px,340px)_1fr]">
         <AudioPanel
@@ -325,13 +328,23 @@ export function DictationRoom({ lesson, sentences, startIndex, previouslyFinishe
             <div className="mt-3 space-y-2 rounded-md bg-muted/60 p-3">
               {entry?.revealed && !result && <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Answer shown</p>}
               <div className="flex items-start justify-between gap-2">
-                <SentenceText text={sentence.text} language={language} showPinyin={pinyinOn} pinyinOverride={sentence.pinyin} className="text-lg" />
+                <SentenceText
+                  text={sentence.text}
+                  language={language}
+                  showPinyin={pinyinOn}
+                  pinyinOverride={sentence.pinyin}
+                  className="text-lg"
+                  onWordClick={(word, element) =>
+                    lookup.open({ word, element, sentence: sentence.text, sentenceTranslation: sentence.translation_vi, lessonId, sentenceId: sentence.id })
+                  }
+                />
                 {language === 'zh' && (
                   <Button variant="ghost" size="sm" aria-pressed={pinyinOn} onClick={() => setShowPinyin(!pinyinOn)}>
                     Pinyin
                   </Button>
                 )}
               </div>
+              <p className="text-xs text-muted-foreground">Click a word to look it up and save it.</p>
               {sentence.translation_vi && (
                 <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
                   <Languages className="size-4 shrink-0" /> {sentence.translation_vi}

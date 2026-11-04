@@ -6,6 +6,7 @@ import { SpeechErrorNotice } from '@/features/audio/SpeechErrorNotice';
 import { useSpeech } from '@/features/audio/useSpeech';
 import { SentenceText } from '@/features/lessons/SentenceText';
 import { PLAYBACK_RATES } from '@/features/profile/schemas';
+import { useWordLookup } from '@/features/vocabulary/useWordLookup';
 import { useProfile } from '@/features/profile/api';
 import { cn } from '@/lib/utils';
 import type { Sentence } from './api';
@@ -20,8 +21,9 @@ function Toggle({ pressed, onClick, children }: { pressed: boolean; onClick: () 
 }
 
 /** Listen to every sentence; text, pinyin and translation are hidden until the learner asks. */
-export function SentenceList({ sentences, language }: { sentences: Sentence[]; language: Language }) {
+export function SentenceList({ sentences, language, lessonId }: { sentences: Sentence[]; language: Language; lessonId: string }) {
   const { data: profile } = useProfile();
+  const lookup = useWordLookup(language);
   const speech = useSpeech(language);
   const [rate, setRate] = useState<number | null>(null);
   const currentRate = rate ?? speech.defaultRate;
@@ -33,6 +35,8 @@ export function SentenceList({ sentences, language }: { sentences: Sentence[]; l
 
   return (
     <div className="space-y-3">
+      {lookup.popover}
+      {showText && <p className="text-xs text-muted-foreground">Tip: click any word to look it up and save it.</p>}
       {speech.error && <SpeechErrorNotice error={speech.error} language={language} />}
       <div className="rounded-lg border bg-card">
         <div className="flex flex-wrap items-center gap-2 border-b px-3 py-2.5">
@@ -86,7 +90,16 @@ export function SentenceList({ sentences, language }: { sentences: Sentence[]; l
                 <span className="w-5 shrink-0 pt-1.5 text-right text-xs tabular-nums text-muted-foreground">{s.position}</span>
                 <div className="min-w-0 flex-1 pt-1">
                   {showText ? (
-                    <SentenceText text={s.text} language={language} showPinyin={pinyinOn} pinyinOverride={s.pinyin} className="text-[15px]" />
+                    <SentenceText
+                      text={s.text}
+                      language={language}
+                      showPinyin={pinyinOn}
+                      pinyinOverride={s.pinyin}
+                      className="text-[15px]"
+                      onWordClick={(word, element) =>
+                        lookup.open({ word, element, sentence: s.text, sentenceTranslation: s.translation_vi, lessonId, sentenceId: s.id })
+                      }
+                    />
                   ) : (
                     <span className="select-none text-sm italic text-muted-foreground">Hidden — listen first</span>
                   )}

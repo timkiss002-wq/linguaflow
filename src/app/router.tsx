@@ -4,7 +4,7 @@ import { FullPageSpinner } from '@/components/FullPageSpinner';
 import { GuestOnly, RequireAuth } from '@/features/auth/guards';
 import LandingPage from '@/pages/LandingPage';
 import NotFoundPage from '@/pages/NotFoundPage';
-import { ReviewPage, StatisticsPage, VocabularyPage } from '@/pages/placeholders';
+import { ReviewPage, StatisticsPage } from '@/pages/placeholders';
 import RouteErrorPage from '@/pages/RouteErrorPage';
 import { AppLayout } from './layout/AppLayout';
 
@@ -15,6 +15,8 @@ const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 const LessonsPage = lazy(() => import('@/pages/LessonsPage'));
 const LessonDetailPage = lazy(() => import('@/pages/LessonDetailPage'));
 const DictationPage = lazy(() => import('@/pages/DictationPage'));
+const VocabularyPage = lazy(() => import('@/pages/VocabularyPage'));
+const VocabularyPracticePage = lazy(() => import('@/pages/VocabularyPracticePage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
@@ -39,7 +41,8 @@ export const router = createBrowserRouter([
           { path: '/lessons/:lessonId', element: page(<LessonDetailPage />) },
           { path: '/lessons/:lessonId/practice', element: page(<DictationPage />) },
           { path: '/my-learning', element: page(<MyLearningPage />) },
-          { path: '/vocabulary', element: <VocabularyPage /> },
+          { path: '/vocabulary', element: page(<VocabularyPage />) },
+          { path: '/vocabulary/practice', element: page(<VocabularyPracticePage />) },
           { path: '/review', element: <ReviewPage /> },
           { path: '/statistics', element: <StatisticsPage /> },
           { path: '/settings', element: page(<SettingsPage />) },

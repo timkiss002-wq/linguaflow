@@ -21,7 +21,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | M2 | Library, detail page, favorites, My Learning | ✅ Done |
 | M3 | Text-to-speech lessons (replaces video), voice settings, Pinyin | ✅ Done |
 | M4 | Dictation Room + answer checking (EN words, ZH characters/tones) | ✅ Done |
-| M5 | Vocabulary sheet, word lookup, context, typing practice — [design](docs/VOCABULARY.md) | Next |
+| M5 | Vocabulary sheet, word lookup, context, CSV import/export, typing practice — [design](docs/VOCABULARY.md) | ✅ Done |
+| M5s | Two-way Google Sheets sync — [design](docs/VOCABULARY.md#7-đồng-bộ-hai-chiều-với-google-sheets-bước-tiếp-theo) | Next |
 | M5b | IELTS word forms (word families, drills, `word_form` errors) — [design](docs/VOCABULARY.md#4-word-form-cho-ielts) | Planned |
 | M6 | SRS flashcard review | Planned |
 | M7 | Full dashboard, landing polish, deployment | Planned |

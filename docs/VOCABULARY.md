@@ -1,6 +1,6 @@
 # LinguaFlow — Sổ từ vựng, luyện gõ & Word Form (thiết kế M5)
 
-> Trạng thái: **đề xuất, chưa code**. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md) và [PERSONALIZATION.md](PERSONALIZATION.md).
+> Trạng thái: **M5 đã xong** (sổ từ vựng dạng bảng, tra từ, ngữ cảnh, CSV, luyện gõ mức 1–4). Đồng bộ Google Sheets (mục 7) và Word Form (mục 4) là bước tiếp theo. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md) và [PERSONALIZATION.md](PERSONALIZATION.md).
 
 ## 1. Yêu cầu
 
@@ -40,7 +40,7 @@ Mỗi từ đi qua các mức khó dần; gõ đúng liên tiếp thì lên mứ
 
 | Mức | Bài | Luyện gì |
 |---|---|---|
-| 1 | **Chép**: thấy từ + nghĩa, gõ lại 3 lần | chính tả |
+| 1 | **Chép**: thấy từ + nghĩa, gõ lại | chính tả |
 | 2 | **Nghe → gõ**: máy đọc từ, gõ lại | nghe + chính tả |
 | 3 | **Nghĩa → từ**: thấy nghĩa tiếng Việt (+ chữ cái đầu), gõ từ | nhớ chủ động |
 | 4 | **Điền vào ngữ cảnh**: câu gốc bị che từ, gõ từ vào | dùng đúng trong câu |
@@ -107,3 +107,40 @@ Thêm loại lỗi **`word_form`** vào engine chấm: khi người dùng gõ m�
 | **M5** | Popup tra từ khi bấm vào từ trong bài & Dictation · nút Add · **Vocabulary Sheet** (bảng sửa trực tiếp, lọc, tìm, xuất/nhập CSV) · ngữ cảnh (câu gốc + nghe, câu tự đặt, collocations) · **Luyện gõ mức 1–4** |
 | **M5b** | **Word Form**: bảng ~200 họ từ, thẻ family trong popup & sheet, luyện gõ mức 5, gap-fill / lưới / tìm lỗi / phân loại, danh sách bẫy, lỗi `word_form` trong Dictation |
 | **M6** | Ôn SRS (flashcard) dùng chung dữ liệu và các dạng thẻ ở trên |
+
+## 7. Đồng bộ hai chiều với Google Sheets (bước tiếp theo)
+
+### 7.1. Ánh xạ cột (theo sheet "IELTS Reading + Listening" của người dùng)
+
+| Cột trong sheet | Trong app | Ghi chú |
+|---|---|---|
+| STT | — | app không ghi đè |
+| Ngày thêm | `created_at` | app tự điền khi thêm từ (sheet hiện để trống → tab "Theo dõi tiến độ" đang đếm 0) |
+| Từ mới | `term` | |
+| Giải thích | `meaning_vi` | |
+| Topic | `topic` | giữ đúng danh sách dropdown của sheet |
+| loại từ | `part_of_speech` | Noun / Verb / Adj / Adv / idiom ↔ noun / verb / adj / adv / idiom |
+| Ôn từ vựng, Check | — | công thức và phần gõ của người dùng trong sheet: **app không đụng vào** |
+| Ví dụ 1–5 | `examples[0..4]` | |
+| Ngày ôn | ngày ôn tiếp theo (M6) | |
+| *(cột ẩn mới)* LinguaFlow ID | `vocabulary.id` | để khớp dòng ↔ từ, kể cả khi đổi thứ tự / sửa chữ |
+
+### 7.2. Cách hoạt động
+- **Kết nối**: Settings → "Connect Google Sheet" → đăng nhập Google → **chọn file bằng Google Picker**
+  → app nhận diện dòng tiêu đề và cột, cho xem trước ánh xạ → lần đồng bộ đầu: từ có trong sheet mà
+  chưa có trong app thì nhập vào; ngược lại thì thêm dòng vào sheet; ghi ID vào cột ẩn.
+- **App → Sheet**: thêm / sửa / xoá từ trong app được ghi ngay vào đúng dòng.
+- **Sheet → App**: app đọc lại khi mở app, khi quay lại tab, mỗi 60 giây khi đang mở, và nút "Sync now".
+- **Xung đột**: lưu "dấu vân tay" của mỗi dòng ở lần đồng bộ trước; chỉ một bên đổi → lấy bên đó; cả hai
+  cùng đổi → **sheet thắng** và app báo cho người dùng.
+- (Tuỳ chọn, sau) cập nhật **tức thì** kể cả khi app đóng: Apps Script `onEdit` trong sheet gọi Supabase
+  Edge Function.
+
+### 7.3. Quyền & thiết lập (người chủ dự án làm một lần)
+- Dùng scope **`drive.file`** + Google Picker: app **chỉ** truy cập đúng file người dùng chọn, không đọc
+  được file khác. Scope này không bị xếp loại "nhạy cảm" nên không cần Google xét duyệt dài ngày.
+- Cần tạo trong Google Cloud Console (miễn phí): project → bật **Google Sheets API** và **Google Picker API**
+  → OAuth consent screen (External) → **OAuth Client ID** loại Web, origins `http://localhost:5173` và
+  domain khi deploy → **API key** (giới hạn cho Picker). Đưa vào `.env.local`:
+  `VITE_GOOGLE_CLIENT_ID`, `VITE_GOOGLE_API_KEY`, `VITE_GOOGLE_APP_ID` (project number).
+- Token Google chỉ nằm trong trình duyệt (Google Identity Services), không lưu trên server.

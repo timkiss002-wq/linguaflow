@@ -1,0 +1,195 @@
+import { BookOpen, Download, Keyboard, Search, Trash2 } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { toast } from 'sonner';
+import { EmptyState } from '@/components/EmptyState';
+import { ErrorState } from '@/components/ErrorState';
+import { PageHeader } from '@/components/PageHeader';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { NativeSelect } from '@/components/ui/native-select';
+import { Skeleton } from '@/components/ui/skeleton';
+import { AddWordDialog } from '@/features/vocabulary/AddWordDialog';
+import { topicOptions, useDeleteWords, useVocabulary } from '@/features/vocabulary/api';
+import { countByStatus, filterWords, parseVocabFilters, STATUSES, vocabFiltersToParams, type VocabFilters } from '@/features/vocabulary/filters';
+import { ImportDialog } from '@/features/vocabulary/ImportDialog';
+import { VocabularyList } from '@/features/vocabulary/VocabularyTable';
+import { toUserMessage } from '@/lib/errors';
+import { cn } from '@/lib/utils';
+import { vocabularyToCsv } from '@/lib/vocab/csv';
+import { POS, POS_LABEL, type Pos } from '@/lib/vocab/pos';
+
+function download(name: string, content: string) {
+  const url = URL.createObjectURL(new Blob([content], { type: 'text/csv;charset=utf-8' }));
+  const a = Object.assign(document.createElement('a'), { href: url, download: name });
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+export default function VocabularyPage() {
+  const vocab = useVocabulary();
+  const remove = useDeleteWords();
+  const [params, setParams] = useSearchParams();
+  const filters = useMemo(() => parseVocabFilters(params), [params]);
+  const setFilters = useCallback((f: VocabFilters) => setParams(vocabFiltersToParams(f), { replace: true }), [setParams]);
+  const [search, setSearch] = useState(filters.q);
+  const [selected, setSelected] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    if (search === filters.q) return;
+    const t = setTimeout(() => setFilters({ ...filters, q: search }), 250);
+    return () => clearTimeout(t);
+  }, [search, filters, setFilters]);
+  useEffect(() => setSearch(filters.q), [filters.q]);
+
+  const all = vocab.data ?? [];
+  const words = filterWords(all, filters);
+  const statusCounts = countByStatus(filterWords(all, filters, ['status']));
+  const langCount = (l?: 'en' | 'zh') => filterWords(all, { ...filters, lang: l }, ['status', 'topic', 'pos']).length;
+  const selectedIds = [...selected].filter((id) => all.some((w) => w.id === id));
+
+  const onSelect = (ids: string[], on: boolean) =>
+    setSelected((prev) => {
+      const next = new Set(prev);
+      ids.forEach((id) => (on ? next.add(id) : next.delete(id)));
+      return next;
+    });
+
+  const exportCsv = () => {
+    const rows = [...words].reverse(); // oldest first, like a sheet
+    download(`linguaflow-vocabulary-${new Date().toISOString().slice(0, 10)}.csv`, vocabularyToCsv(rows.map((w) => ({ ...w, part_of_speech: w.part_of_speech as Pos | null, examples: w.examples ?? [] }))));
+  };
+
+  const deleteSelected = () => {
+    if (!window.confirm(`Delete ${selectedIds.length} word(s)? Their typing and review history is deleted too.`)) return;
+    remove.mutate(selectedIds, {
+      onSuccess: (ids) => {
+        toast.success(`Deleted ${ids.length} word(s)`);
+        setSelected(new Set());
+      },
+      onError: (e) => toast.error(toUserMessage(e)),
+    });
+  };
+
+  const practiceHref = (ids: string[]) => `/vocabulary/practice?${new URLSearchParams(ids.length ? { ids: ids.join(',') } : filters.lang ? { lang: filters.lang } : {})}`;
+
+  return (
+    <>
+      <PageHeader
+        title="Vocabulary"
+        description="Your notebook of saved words. Click any cell to edit it."
+        actions={
+          <>
+            <ImportDialog />
+            <Button size="sm" variant="outline" onClick={exportCsv} disabled={words.length === 0}>
+              <Download /> Export CSV
+            </Button>
+            <AddWordDialog defaultLanguage={filters.lang ?? 'en'} />
+          </>
+        }
+      />
+
+      <div className="space-y-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="flex gap-1 rounded-md border bg-card p-1" role="group" aria-label="Language">
+            {([undefined, 'en', 'zh'] as const).map((l) => (
+              <button
+                key={l ?? 'all'}
+                type="button"
+                aria-pressed={filters.lang === l}
+                onClick={() => setFilters({ ...filters, lang: l })}
+                className={cn('rounded px-3 py-1.5 text-sm font-medium', filters.lang === l ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:bg-muted')}
+              >
+                {l === 'en' ? 'English' : l === 'zh' ? '中文' : 'All'} <span className="opacity-70">{langCount(l)}</span>
+              </button>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-1" role="group" aria-label="Status">
+            {STATUSES.map((s) => (
+              <button
+                key={s.value}
+                type="button"
+                aria-pressed={filters.status === s.value}
+                onClick={() => setFilters({ ...filters, status: filters.status === s.value ? undefined : s.value })}
+                className={cn('rounded-full border px-3 py-1 text-xs font-medium', filters.status === s.value ? 'border-primary bg-accent text-accent-foreground' : 'bg-card text-muted-foreground hover:bg-muted')}
+              >
+                {s.label} · {statusCounts[s.value]}
+              </button>
+            ))}
+          </div>
+          <Button size="sm" className="ml-auto" asChild>
+            <Link to={practiceHref([])}>
+              <Keyboard /> Practise typing
+            </Link>
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-[1fr_200px_160px]">
+          <div className="relative col-span-2 md:col-span-1">
+            <Search className="pointer-events-none absolute left-3 top-3 size-4 text-muted-foreground" />
+            <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search words, meanings (không dấu cũng được), examples…" aria-label="Search vocabulary" className="pl-9" />
+          </div>
+          <NativeSelect aria-label="Topic" value={filters.topic ?? ''} onChange={(e) => setFilters({ ...filters, topic: e.target.value || undefined })}>
+            <option value="">All topics</option>
+            {topicOptions(all).map((t) => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
+          </NativeSelect>
+          <NativeSelect aria-label="Word type" value={filters.pos ?? ''} onChange={(e) => setFilters({ ...filters, pos: e.target.value || undefined })}>
+            <option value="">All types</option>
+            {POS.map((p) => (
+              <option key={p} value={p}>
+                {POS_LABEL[p]}
+              </option>
+            ))}
+          </NativeSelect>
+        </div>
+
+        {selectedIds.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2 rounded-md border border-primary/40 bg-accent/50 px-3 py-2 text-sm" role="region" aria-label="Selection">
+            <span className="font-medium">{selectedIds.length} selected</span>
+            <Button size="sm" asChild>
+              <Link to={practiceHref(selectedIds)}>
+                <Keyboard /> Practise these
+              </Link>
+            </Button>
+            <Button size="sm" variant="outline" onClick={deleteSelected} disabled={remove.isPending}>
+              <Trash2 /> Delete
+            </Button>
+            <Button size="sm" variant="ghost" onClick={() => setSelected(new Set())} className="ml-auto">
+              Clear
+            </Button>
+          </div>
+        )}
+
+        {vocab.isError ? (
+          <ErrorState error={vocab.error} onRetry={() => vocab.refetch()} />
+        ) : vocab.isPending ? (
+          <Skeleton className="h-80" />
+        ) : all.length === 0 ? (
+          <EmptyState
+            icon={BookOpen}
+            title="Your notebook is empty"
+            description="Open a lesson, show the text and click any word to save it — or import your existing sheet as CSV."
+            action={
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/lessons">Explore lessons</Link>
+              </Button>
+            }
+          />
+        ) : words.length === 0 ? (
+          <EmptyState icon={Search} title="No words match" description="Try another search or remove some filters." />
+        ) : (
+          <>
+            <p className="text-sm text-muted-foreground" aria-live="polite">
+              {words.length} {words.length === 1 ? 'word' : 'words'}
+            </p>
+            <VocabularyList words={words} allWords={all} selected={selected} onSelect={onSelect} />
+          </>
+        )}
+      </div>
+    </>
+  );
+}

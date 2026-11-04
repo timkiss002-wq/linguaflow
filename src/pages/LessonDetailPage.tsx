@@ -67,7 +67,7 @@ export default function LessonDetailPage() {
           ) : sentences.data.length === 0 ? (
             <EmptyState icon={FileText} title="No sentences yet" description="This lesson has no sentences to practise." />
           ) : (
-            <SentenceList sentences={sentences.data} language={l.language!} />
+            <SentenceList sentences={sentences.data} language={l.language!} lessonId={l.id!} />
           )}
         </div>
 

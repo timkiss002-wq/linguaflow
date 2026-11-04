@@ -167,6 +167,26 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"practice_attempts": {
+                  Row: {
+                    "created_at": string,"id": number,"is_correct": boolean,"level_after": number,"level_before": number,"mode": string,"typed": string,"user_id": string,"vocabulary_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"id"?: never,"is_correct": boolean,"level_after": number,"level_before": number,"mode": string,"typed": string,"user_id"?: string,"vocabulary_id": string
+                  }
+                  Update: {
+                    "created_at"?: string,"id"?: never,"is_correct"?: boolean,"level_after"?: number,"level_before"?: number,"mode"?: string,"typed"?: string,"user_id"?: string,"vocabulary_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "practice_attempts_vocabulary_id_user_id_fkey"
+      columns: ["vocabulary_id","user_id"]
+isOneToOne: false
+      referencedRelation: "vocabulary"
+      referencedColumns: ["id","user_id"]
+    }
+                  ]
                 },"profiles": {
                   Row: {
                     "avatar_url": string | null,"created_at": string,"daily_goal_minutes": number,"display_name": string,"id": string,"role": Database["public"]['Enums']["user_role"],"settings": NonNullable<Json>,"timezone": string,"updated_at": string
@@ -229,14 +249,14 @@ isOneToOne: false
                   ]
                 },"vocabulary": {
                   Row: {
-                    "created_at": string,"due_at": string,"ease_factor": number,"example": string | null,"id": string,"interval_days": number,"language": Database["public"]['Enums']["language_code"],"lapses": number,"last_reviewed_at": string | null,"meaning_vi": string | null,"notes": string | null,"part_of_speech": string | null,"reading": string | null,"repetitions": number,"source_lesson_id": string | null,"source_sentence_id": string | null,"status": Database["public"]['Enums']["vocab_status"],"term": string,"term_normalized": string | null,"updated_at": string,"user_id": string
+                    "context_sentence": string | null,"created_at": string,"due_at": string,"ease_factor": number,"example": string | null,"examples": (string)[],"id": string,"interval_days": number,"language": Database["public"]['Enums']["language_code"],"lapses": number,"last_reviewed_at": string | null,"last_typed_at": string | null,"meaning_vi": string | null,"notes": string | null,"part_of_speech": string | null,"reading": string | null,"repetitions": number,"source_lesson_id": string | null,"source_sentence_id": string | null,"status": Database["public"]['Enums']["vocab_status"],"term": string,"term_normalized": string | null,"topic": string | null,"typing_level": number,"typing_streak": number,"updated_at": string,"user_id": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "created_at"?: string,"due_at"?: string,"ease_factor"?: number,"example"?: string | null,"id"?: string,"interval_days"?: number,"language": Database["public"]['Enums']["language_code"],"lapses"?: number,"last_reviewed_at"?: string | null,"meaning_vi"?: string | null,"notes"?: string | null,"part_of_speech"?: string | null,"reading"?: string | null,"repetitions"?: number,"source_lesson_id"?: string | null,"source_sentence_id"?: string | null,"status"?: Database["public"]['Enums']["vocab_status"],"term": string,"term_normalized"?: never,"updated_at"?: string,"user_id"?: string
+                    "context_sentence"?: string | null,"created_at"?: string,"due_at"?: string,"ease_factor"?: number,"example"?: string | null,"examples"?: (string)[],"id"?: string,"interval_days"?: number,"language": Database["public"]['Enums']["language_code"],"lapses"?: number,"last_reviewed_at"?: string | null,"last_typed_at"?: string | null,"meaning_vi"?: string | null,"notes"?: string | null,"part_of_speech"?: string | null,"reading"?: string | null,"repetitions"?: number,"source_lesson_id"?: string | null,"source_sentence_id"?: string | null,"status"?: Database["public"]['Enums']["vocab_status"],"term": string,"term_normalized"?: never,"topic"?: string | null,"typing_level"?: number,"typing_streak"?: number,"updated_at"?: string,"user_id"?: string
                   }
                   Update: {
-                    "created_at"?: string,"due_at"?: string,"ease_factor"?: number,"example"?: string | null,"id"?: string,"interval_days"?: number,"language"?: Database["public"]['Enums']["language_code"],"lapses"?: number,"last_reviewed_at"?: string | null,"meaning_vi"?: string | null,"notes"?: string | null,"part_of_speech"?: string | null,"reading"?: string | null,"repetitions"?: number,"source_lesson_id"?: string | null,"source_sentence_id"?: string | null,"status"?: Database["public"]['Enums']["vocab_status"],"term"?: string,"term_normalized"?: never,"updated_at"?: string,"user_id"?: string
+                    "context_sentence"?: string | null,"created_at"?: string,"due_at"?: string,"ease_factor"?: number,"example"?: string | null,"examples"?: (string)[],"id"?: string,"interval_days"?: number,"language"?: Database["public"]['Enums']["language_code"],"lapses"?: number,"last_reviewed_at"?: string | null,"last_typed_at"?: string | null,"meaning_vi"?: string | null,"notes"?: string | null,"part_of_speech"?: string | null,"reading"?: string | null,"repetitions"?: number,"source_lesson_id"?: string | null,"source_sentence_id"?: string | null,"status"?: Database["public"]['Enums']["vocab_status"],"term"?: string,"term_normalized"?: never,"topic"?: string | null,"typing_level"?: number,"typing_streak"?: number,"updated_at"?: string,"user_id"?: string
                   }
                   Relationships: [
                     {
@@ -350,15 +370,18 @@ isOneToOne: false
                            },
 "record_review":
 { Args: { "p_due_at": string,"p_duration_ms"?: number,"p_new_ease": number,"p_new_interval": number,"p_new_reps": number,"p_new_status": Database["public"]['Enums']["vocab_status"],"p_rating": Database["public"]['Enums']["review_rating"],"p_vocabulary_id": string }; Returns: {
-              "created_at": string,
+              "context_sentence": string | null,
+"created_at": string,
 "due_at": string,
 "ease_factor": number,
 "example": string | null,
+"examples": (string)[],
 "id": string,
 "interval_days": number,
 "language": Database["public"]['Enums']["language_code"],
 "lapses": number,
 "last_reviewed_at": string | null,
+"last_typed_at": string | null,
 "meaning_vi": string | null,
 "notes": string | null,
 "part_of_speech": string | null,
@@ -369,6 +392,45 @@ isOneToOne: false
 "status": Database["public"]['Enums']["vocab_status"],
 "term": string,
 "term_normalized": string | null,
+"topic": string | null,
+"typing_level": number,
+"typing_streak": number,
+"updated_at": string,
+"user_id": string
+            }
+                          SetofOptions: {
+        from: "*"
+        to: "vocabulary"
+        isOneToOne: true
+        isSetofReturn: false
+      } },
+"record_typing_practice":
+{ Args: { "p_correct": boolean,"p_mode": string,"p_typed": string,"p_vocabulary_id": string }; Returns: {
+              "context_sentence": string | null,
+"created_at": string,
+"due_at": string,
+"ease_factor": number,
+"example": string | null,
+"examples": (string)[],
+"id": string,
+"interval_days": number,
+"language": Database["public"]['Enums']["language_code"],
+"lapses": number,
+"last_reviewed_at": string | null,
+"last_typed_at": string | null,
+"meaning_vi": string | null,
+"notes": string | null,
+"part_of_speech": string | null,
+"reading": string | null,
+"repetitions": number,
+"source_lesson_id": string | null,
+"source_sentence_id": string | null,
+"status": Database["public"]['Enums']["vocab_status"],
+"term": string,
+"term_normalized": string | null,
+"topic": string | null,
+"typing_level": number,
+"typing_streak": number,
 "updated_at": string,
 "user_id": string
             }

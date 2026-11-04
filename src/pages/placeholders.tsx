@@ -1,16 +1,5 @@
-import { BarChart3, BookOpen, Layers } from 'lucide-react';
+import { BarChart3, Layers } from 'lucide-react';
 import { ComingSoon } from '@/components/ComingSoon';
-
-export function VocabularyPage() {
-  return (
-    <ComingSoon
-      title="Vocabulary"
-      icon={BookOpen}
-      description="Your personal notebook of words saved from lessons."
-      bullets={['New / Learning / Reviewing / Mastered lists', 'Search, filter and edit', 'Each word linked to the sentence you heard it in']}
-    />
-  );
-}
 
 export function ReviewPage() {
   return (

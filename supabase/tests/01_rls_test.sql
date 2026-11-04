@@ -50,6 +50,10 @@ select status, interval_days, repetitions from record_review('44444444-0000-0000
 select rating, prev_interval_days, new_interval_days from vocabulary_reviews;
 \echo '--- record_review invalid ease (expect error)'
 select record_review('44444444-0000-0000-0000-000000000001','good',1,0.5,1,'learning',now()+interval '1 day');
+\echo '--- Alice typing practice: correct moves level 0→1, status learning (expect 1 learning)'
+select typing_level, status from record_typing_practice('44444444-0000-0000-0000-000000000001','copy','天气',true);
+\echo '--- invalid mode rejected (expect check violation)'
+select record_typing_practice('44444444-0000-0000-0000-000000000001','guess','天气',true);
 \echo '--- streak (expect 1) and today activity'
 select get_learning_streak();
 select * from get_daily_activity(2);
@@ -64,6 +68,10 @@ select record_review('44444444-0000-0000-0000-000000000001','easy',4,2.65,1,'rev
 insert into vocabulary_reviews(vocabulary_id,rating,prev_interval_days,new_interval_days,prev_ease,new_ease) values ('44444444-0000-0000-0000-000000000001','easy',0,4,2.5,2.65);
 \echo '--- Bob inserts attempt as Alice (expect RLS error)'
 insert into dictation_attempts(user_id,sentence_id,user_input,accuracy,is_correct) values ('aaaaaaaa-0000-0000-0000-000000000001','33333333-0000-0000-0000-000000000001','x',0,false);
+\echo '--- Bob practises Alice word (expect vocabulary not found)'
+select record_typing_practice('44444444-0000-0000-0000-000000000001','copy','x',true);
+\echo '--- Bob forges a typing attempt on Alice word (expect FK error)'
+insert into practice_attempts(vocabulary_id,mode,typed,is_correct,level_before,level_after) values ('44444444-0000-0000-0000-000000000001','copy','x',true,0,1);
 \echo '--- Bob streak (expect 0)'
 select get_learning_streak();
 
