@@ -501,6 +501,9 @@ isOneToOne: false
               "known": number,"level": number,"saved": number,"total": number
             }[]
                            },
+"get_insight_data":
+{ Args: { "p_days"?: number }; Returns: Json
+                           },
 "get_learning_stats":
 { Args: { "p_days"?: number,"p_language"?: Database["public"]['Enums']["language_code"] }; Returns: Json
                            },

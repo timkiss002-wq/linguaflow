@@ -45,8 +45,12 @@ export interface AttemptInput {
 
 function errorSummary(result: CompareResult | null): { [key: string]: Json } {
   if (!result) return {};
-  const counts = Object.fromEntries(Object.entries(result.counts).filter(([, v]) => v > 0));
-  return result.confusions.length ? { ...counts, confusions: result.confusions } : counts;
+  const out: { [key: string]: Json } = Object.fromEntries(Object.entries(result.counts).filter(([, v]) => v > 0));
+  if (result.confusions.length) out.confusions = result.confusions;
+  // Words/characters left out — used to spot patterns such as skipped articles or particles.
+  const missed = result.tokens.filter((t) => t.kind === 'missing' && !t.punct && t.expected).map((t) => t.expected!.toLowerCase());
+  if (missed.length) out.missed = missed.slice(0, 20);
+  return out;
 }
 
 export function useRecordAttempt(lessonId: string) {

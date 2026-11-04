@@ -1,6 +1,6 @@
 # LinguaFlow — Cá nhân hoá lộ trình & Writing (thiết kế)
 
-> Trạng thái: **P1 đã xong** (xem mục 10). P2–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
+> Trạng thái: **P1, P2 đã xong** (xem mục 10, 11). P3–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## 1. Yêu cầu
 
@@ -179,3 +179,23 @@ P1, P2, P4, P5 chạy hoàn toàn không cần AI. Chỉ P6 (và tuỳ chọn �
 - **Popup từ tiếng Trung** hiện cấp HSK 2.0/3.0 và nghĩa tiếng Anh của từ.
 - Quy đổi dùng để chọn bài: IELTS 4.0–5.0 ≈ B1, 5.5–6.5 ≈ B2, ≥ 7.0 ≈ C1; HSK 3.0 → thang 6 cấp của bài học
   là gần đúng.
+
+## 11. P2 — đã triển khai
+
+Trang **Strengths & Weaknesses** (`/insights`) — chỉ dùng dữ liệu bạn đã tạo ra, không cần AI, không có bài test riêng.
+
+- **Nguồn dữ liệu**: RPC `get_insight_data(p_days)` (30 / 60 / 90 ngày) gom câu đã *Check* trong Dictation
+  (không tính câu bấm Show answer / Skip), cặp chữ/từ nhầm, từ bị bỏ sót (mỗi lần Check giờ lưu thêm
+  `missed`), lượt ôn flashcard, luyện gõ, bài word form, từ hay quên (`lapses ≥ 2`) và giờ học.
+  Phân tích nằm trong `src/lib/personal/insights.ts` (thuần TypeScript, có unit test).
+- **Tiếng Trung — phân tích theo pinyin** từng cặp chữ nhầm: **sai thanh** (买/卖, báo "thanh 3 → 4"),
+  **nhầm phụ âm đầu** (zh/z…), **nhầm vần** (an/ang…), **chữ đồng âm** (气/汽 — nghe đúng, viết sai chữ),
+  **bỏ sót trợ từ** (了, 的, 吗…), và độ chính xác chung.
+- **Tiếng Anh**: rơi/thừa đuôi **-s / -ed / -ing**, bỏ sót **từ chức năng** (a, the, of…), **word form**
+  (dùng 104 họ từ), lỗi chính tả, độ chính xác chung.
+- **Từ vựng**: tỉ lệ nhớ flashcard, **từ hay quên** (nút mở luyện gõ đúng các từ đó), độ chính xác luyện gõ EN / 汉字.
+- **Thói quen** (chỉ khi bật *Learn from my study habits*): phút học theo buổi, **buổi bạn làm đúng nhiều nhất**,
+  số ngày học so với số ngày đã lên kế hoạch trong 2 tuần.
+- **Bài luyện chữ đồng âm**: lấy đúng câu bạn đã nghe sai, đục lỗ chữ đó, chọn giữa chữ đúng và chữ bạn đã gõ.
+- **Không kết luận khi thiếu bằng chứng**: tối thiểu 10 câu / ngôn ngữ, 3 lần cho một mẫu lỗi, 20 lượt ôn,
+  10 lần gõ; mỗi kết luận ghi rõ "Based on: …". Chưa đủ dữ liệu → trang nói cần thêm bao nhiêu.

@@ -1,4 +1,4 @@
-import { BarChart3, BookOpen, Compass, GraduationCap, LayoutDashboard, Layers, Settings, Shapes, type LucideIcon } from 'lucide-react';
+import { BarChart3, BookOpen, Compass, GraduationCap, LayoutDashboard, Layers, Lightbulb, Settings, Shapes, type LucideIcon } from 'lucide-react';
 
 export interface NavItem {
   to: string;
@@ -16,5 +16,6 @@ export const NAV_ITEMS: NavItem[] = [
   { to: '/word-forms', label: 'Word Forms', icon: Shapes, available: true },
   { to: '/review', label: 'Review', icon: Layers, available: true },
   { to: '/statistics', label: 'Statistics', icon: BarChart3, available: true },
+  { to: '/insights', label: 'Strengths & Weaknesses', icon: Lightbulb, available: true },
   { to: '/settings', label: 'Settings', icon: Settings, available: true },
 ];
