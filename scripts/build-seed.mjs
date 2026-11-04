@@ -64,6 +64,76 @@ for (const l of lessons) {
     '',
   );
 }
+// ───────────── Word families (IELTS word forms) ─────────────
+const POS_CODE = { n: 'noun', v: 'verb', adj: 'adj', adv: 'adv' };
+const { families } = JSON.parse(readFileSync(new URL('../content/word-families.json', import.meta.url), 'utf8'));
+
+/** Candidate dictionary forms of an inflected word: groups → group, studies → study, stopped → stop… */
+function lemmas(word) {
+  const w = word.toLowerCase();
+  const out = [w];
+  if (w.endsWith('ies')) out.push(w.slice(0, -3) + 'y');
+  if (w.endsWith('es')) out.push(w.slice(0, -2));
+  if (w.endsWith('s')) out.push(w.slice(0, -1));
+  if (w.endsWith('ied')) out.push(w.slice(0, -3) + 'y');
+  if (w.endsWith('ed')) out.push(w.slice(0, -2), w.slice(0, -1), w.slice(0, -3));
+  if (w.endsWith('ing')) out.push(w.slice(0, -3), w.slice(0, -3) + 'e', w.slice(0, -4));
+  return out;
+}
+
+const famErrors = [];
+const famIds = new Set();
+const famOut = ['', '-- Word families (IELTS word forms), from content/word-families.json.'];
+for (const f of families) {
+  const id = f.h;
+  const where = `family "${id}"`;
+  if (!/^[a-z-]{2,40}$/.test(id)) famErrors.push(`${where}: invalid headword`);
+  if (famIds.has(id)) famErrors.push(`${where}: duplicate`);
+  famIds.add(id);
+  const members = (f.m ?? []).map(([word, pos, vi]) => {
+    if (!POS_CODE[pos]) famErrors.push(`${where}: "${word}" has unknown pos ${pos}`);
+    return { word, pos: POS_CODE[pos], vi };
+  });
+  if (members.length < 2) famErrors.push(`${where}: needs at least 2 members`);
+  const examples = (f.x ?? []).map(([sentence, why, override]) => {
+    const m = /\[([^\]]+)\]/.exec(sentence);
+    if (!m) { famErrors.push(`${where}: example without [answer]: ${sentence}`); return null; }
+    const answer = m[1];
+    const candidates = lemmas(answer);
+    const matches = members.filter((mb) => candidates.includes(mb.word.toLowerCase()));
+    const exact = matches.filter((mb) => mb.word.toLowerCase() === answer.toLowerCase());
+    const pool = exact.length ? exact : matches;
+    let pos = override ? POS_CODE[override] : [...new Set(pool.map((p) => p.pos))].length === 1 ? pool[0].pos : null;
+    if (!pool.length) famErrors.push(`${where}: answer "${answer}" is not a member (or inflection) of the family`);
+    else if (!pos) famErrors.push(`${where}: answer "${answer}" is ambiguous (${pool.map((p) => p.pos).join('/')}); add a pos override`);
+    // Show a base word that differs from the answer, so the learner has to change the form.
+    const lemma = (pool[0] ?? {}).word ?? answer;
+    const base = id !== lemma.toLowerCase() ? id : (members.find((mb) => mb.word.toLowerCase() !== lemma.toLowerCase() && mb.pos !== pos) ?? members.find((mb) => mb.word.toLowerCase() !== lemma.toLowerCase()))?.word ?? id;
+    return { sentence, answer, pos, base, why };
+  });
+  famOut.push(
+    `insert into public.word_families (id, note, traps) values (${q(id)}, ${q(f.note ?? null)}, ${f.t?.length ? `array[${f.t.map(q).join(', ')}]` : `'{}'`}) on conflict (id) do nothing;`,
+    `insert into public.word_family_members (family_id, word, pos, meaning_vi) values`,
+    members.map((mb) => `  (${q(id)}, ${q(mb.word)}, ${q(mb.pos)}, ${q(mb.vi)})`).join(',\n'),
+    `on conflict (family_id, word, pos) do nothing;`,
+  );
+  const ex = examples.filter(Boolean);
+  if (ex.length) {
+    famOut.push(
+      `insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)`,
+      `select v.* from (values`,
+      ex.map((e) => `  (${q(id)}, ${q(e.sentence)}, ${q(e.answer)}, ${q(e.pos)}, ${q(e.base)}, ${q(e.why)})`).join(',\n'),
+      `) as v(family_id, sentence, answer, answer_pos, base_word, why)`,
+      `where not exists (select 1 from public.word_family_examples where family_id = ${q(id)});`,
+    );
+  }
+}
+if (famErrors.length) {
+  console.error(famErrors.join('\n'));
+  process.exit(1);
+}
+out.push(...famOut, '');
+
 writeFileSync(new URL('../supabase/seed.sql', import.meta.url), out.join('\n'));
 const total = lessons.reduce((n, l) => n + l.sentences.length, 0);
-console.log(`seed.sql: ${lessons.length} lessons, ${total} sentences`);
+console.log(`seed.sql: ${lessons.length} lessons, ${total} sentences, ${families.length} word families`);

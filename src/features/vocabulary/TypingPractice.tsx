@@ -11,6 +11,7 @@ import { DiffView } from '@/features/dictation/DiffView';
 import { toUserMessage } from '@/lib/errors';
 import { cn } from '@/lib/utils';
 import { useRecordTyping, type VocabWord } from './api';
+import { useWordFamilyIndex } from '@/features/wordforms/api';
 import { PosBadge } from './PosBadge';
 import { TypingDots } from './TypingDots';
 import { checkTyping, exerciseFor, firstLetterHint, MODE_INFO } from './typing';
@@ -40,6 +41,7 @@ export function TypingPractice({ queue: initialQueue, onRestart }: { queue: Voca
   /** Set while a Pinyin/IME composition is active, so its Enter doesn't submit the answer. */
   const composing = useRef(false);
   const record = useRecordTyping();
+  const familyIndex = useWordFamilyIndex();
   const inputRef = useRef<HTMLInputElement>(null);
   const interacted = useRef(false);
 
@@ -72,7 +74,7 @@ export function TypingPractice({ queue: initialQueue, onRestart }: { queue: Voca
     if (!word || !exercise) return;
     if (phase === 'done') return next();
     if (!typed.trim()) return;
-    const result = checkTyping(word, typed);
+    const result = checkTyping(word, typed, familyIndex?.sameFamily);
 
     if (phase === 'retype') {
       if (result.isCorrect) setPhase('done');

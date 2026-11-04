@@ -36,7 +36,7 @@ export function compareEnglish(expected: string, actual: string, opts: CompareOp
     exp,
     act,
     (a, b) => a.norm === b.norm,
-    (a, b) => (a.punct !== b.punct ? 5 : a.punct ? 0.5 : similarity(a.norm, b.norm) >= 0.6 ? 0.6 : 1),
+    (a, b) => (a.punct !== b.punct ? 5 : a.punct ? 0.5 : similarity(a.norm, b.norm) >= 0.6 || opts.sameFamily?.(a.norm, b.norm) ? 0.6 : 1),
   );
 
   const tokens: DiffToken[] = ops.map((o) => {
@@ -49,6 +49,7 @@ export function compareEnglish(expected: string, actual: string, opts: CompareOp
         return { kind: o.b.punct ? 'punctuation' : 'extra', actual: o.b.text, punct: o.b.punct };
       case 'sub': {
         if (o.a.punct) return { kind: 'punctuation', expected: o.a.text, actual: o.b.text, punct: true };
+        if (opts.sameFamily?.(o.a.norm, o.b.norm)) return { kind: 'word_form', expected: o.a.text, actual: o.b.text, punct: false };
         const close = noApostrophe(o.a.norm) === noApostrophe(o.b.norm) || spellingSimilarity(o.a.norm, o.b.norm) >= 0.75;
         return { kind: close ? 'misspelled' : 'wrong_word', expected: o.a.text, actual: o.b.text, punct: false };
       }

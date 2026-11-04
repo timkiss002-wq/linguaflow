@@ -1,0 +1,3747 @@
+{
+ "$comment": "IELTS word families. m = [word, pos (n|v|adj|adv), nghĩa]. x = gap-fill examples: answer in [brackets] + why (position clue, Vietnamese). t = trap tags: ic-ical, ly-adj, al-noun, ed-ing, same-form, irregular, confusable. Written for LinguaFlow; review by a teacher before production use.",
+ "families": [
+  {
+   "h": "decide",
+   "m": [
+    [
+     "decide",
+     "v",
+     "quyết định"
+    ],
+    [
+     "decision",
+     "n",
+     "sự quyết định"
+    ],
+    [
+     "decisive",
+     "adj",
+     "quyết đoán, mang tính quyết định"
+    ],
+    [
+     "decisively",
+     "adv",
+     "một cách dứt khoát"
+    ],
+    [
+     "indecisive",
+     "adj",
+     "thiếu quyết đoán"
+    ]
+   ],
+   "x": [
+    [
+     "The committee finally reached a [decision] after hours of debate.",
+     "sau mạo từ 'a' và đứng trước giới từ → danh từ"
+    ],
+    [
+     "She acted [decisively] as soon as the crisis began.",
+     "bổ nghĩa cho động từ 'acted' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "economy",
+   "m": [
+    [
+     "economy",
+     "n",
+     "nền kinh tế"
+    ],
+    [
+     "economics",
+     "n",
+     "kinh tế học"
+    ],
+    [
+     "economist",
+     "n",
+     "nhà kinh tế học"
+    ],
+    [
+     "economic",
+     "adj",
+     "thuộc về kinh tế"
+    ],
+    [
+     "economical",
+     "adj",
+     "tiết kiệm"
+    ],
+    [
+     "economically",
+     "adv",
+     "về mặt kinh tế; tiết kiệm"
+    ],
+    [
+     "economize",
+     "v",
+     "tiết kiệm"
+    ]
+   ],
+   "t": [
+    "ic-ical"
+   ],
+   "x": [
+    [
+     "The country has enjoyed strong [economic] growth this decade.",
+     "đứng trước danh từ 'growth', nghĩa 'thuộc về kinh tế' → economic (không phải economical)"
+    ],
+    [
+     "Small cars are more [economical] to run than large ones.",
+     "sau 'more', nghĩa 'tiết kiệm' → economical"
+    ]
+   ]
+  },
+  {
+   "h": "history",
+   "m": [
+    [
+     "history",
+     "n",
+     "lịch sử"
+    ],
+    [
+     "historian",
+     "n",
+     "nhà sử học"
+    ],
+    [
+     "historic",
+     "adj",
+     "mang tính lịch sử, quan trọng"
+    ],
+    [
+     "historical",
+     "adj",
+     "thuộc về lịch sử"
+    ],
+    [
+     "historically",
+     "adv",
+     "về mặt lịch sử"
+    ]
+   ],
+   "t": [
+    "ic-ical"
+   ],
+   "x": [
+    [
+     "The signing of the treaty was a [historic] moment for both nations.",
+     "nghĩa 'quan trọng, đáng ghi nhớ' → historic"
+    ],
+    [
+     "The museum holds many [historical] documents from the 18th century.",
+     "nghĩa 'thuộc về quá khứ/lịch sử' → historical"
+    ]
+   ]
+  },
+  {
+   "h": "sense",
+   "m": [
+    [
+     "sense",
+     "n",
+     "giác quan; ý thức"
+    ],
+    [
+     "sensible",
+     "adj",
+     "hợp lý, khôn ngoan"
+    ],
+    [
+     "sensitive",
+     "adj",
+     "nhạy cảm"
+    ],
+    [
+     "sensibly",
+     "adv",
+     "một cách hợp lý"
+    ],
+    [
+     "sensitivity",
+     "n",
+     "sự nhạy cảm"
+    ],
+    [
+     "sensitively",
+     "adv",
+     "một cách tế nhị"
+    ]
+   ],
+   "t": [
+    "confusable"
+   ],
+   "x": [
+    [
+     "It would be [sensible] to save some money for emergencies.",
+     "nghĩa 'hợp lý' → sensible (sensitive = nhạy cảm)"
+    ],
+    [
+     "Some people's skin is very [sensitive] to sunlight.",
+     "nghĩa 'nhạy cảm' → sensitive"
+    ]
+   ]
+  },
+  {
+   "h": "succeed",
+   "m": [
+    [
+     "succeed",
+     "v",
+     "thành công"
+    ],
+    [
+     "success",
+     "n",
+     "sự thành công"
+    ],
+    [
+     "successful",
+     "adj",
+     "thành công"
+    ],
+    [
+     "successfully",
+     "adv",
+     "một cách thành công"
+    ],
+    [
+     "succession",
+     "n",
+     "sự kế tiếp"
+    ],
+    [
+     "successive",
+     "adj",
+     "liên tiếp"
+    ]
+   ],
+   "t": [
+    "confusable"
+   ],
+   "x": [
+    [
+     "The new policy was a great [success].",
+     "sau 'a great' (tính từ) → danh từ"
+    ],
+    [
+     "The team won the title for three [successive] years.",
+     "nghĩa 'liên tiếp', đứng trước danh từ 'years' → successive (không phải successful)"
+    ]
+   ]
+  },
+  {
+   "h": "compete",
+   "m": [
+    [
+     "compete",
+     "v",
+     "cạnh tranh"
+    ],
+    [
+     "competition",
+     "n",
+     "sự cạnh tranh; cuộc thi"
+    ],
+    [
+     "competitor",
+     "n",
+     "đối thủ"
+    ],
+    [
+     "competitive",
+     "adj",
+     "cạnh tranh"
+    ],
+    [
+     "competitively",
+     "adv",
+     "một cách cạnh tranh"
+    ]
+   ],
+   "x": [
+    [
+     "The job market has become extremely [competitive].",
+     "sau 'become' + trạng từ 'extremely' → tính từ"
+    ],
+    [
+     "There is fierce [competition] between the two companies.",
+     "sau tính từ 'fierce' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "develop",
+   "m": [
+    [
+     "develop",
+     "v",
+     "phát triển"
+    ],
+    [
+     "development",
+     "n",
+     "sự phát triển"
+    ],
+    [
+     "developer",
+     "n",
+     "nhà phát triển"
+    ],
+    [
+     "developed",
+     "adj",
+     "phát triển (đã)"
+    ],
+    [
+     "developing",
+     "adj",
+     "đang phát triển"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "Tourism has played a key role in the [development] of the region.",
+     "sau 'the' và trước 'of' → danh từ"
+    ],
+    [
+     "Many [developing] countries lack basic infrastructure.",
+     "nghĩa 'đang phát triển' trước danh từ → developing"
+    ]
+   ]
+  },
+  {
+   "h": "environment",
+   "m": [
+    [
+     "environment",
+     "n",
+     "môi trường"
+    ],
+    [
+     "environmental",
+     "adj",
+     "thuộc về môi trường"
+    ],
+    [
+     "environmentally",
+     "adv",
+     "về mặt môi trường"
+    ],
+    [
+     "environmentalist",
+     "n",
+     "nhà môi trường học"
+    ]
+   ],
+   "x": [
+    [
+     "Plastic waste is a serious [environmental] problem.",
+     "đứng trước danh từ 'problem' → tính từ"
+    ],
+    [
+     "We should choose more [environmentally] friendly products.",
+     "bổ nghĩa cho tính từ 'friendly' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "pollute",
+   "m": [
+    [
+     "pollute",
+     "v",
+     "làm ô nhiễm"
+    ],
+    [
+     "pollution",
+     "n",
+     "sự ô nhiễm"
+    ],
+    [
+     "pollutant",
+     "n",
+     "chất gây ô nhiễm"
+    ],
+    [
+     "polluted",
+     "adj",
+     "bị ô nhiễm"
+    ]
+   ],
+   "x": [
+    [
+     "Air [pollution] is a major cause of breathing problems.",
+     "sau 'Air' (danh từ làm bổ ngữ) và làm chủ ngữ → danh từ"
+    ],
+    [
+     "Factories continue to [pollute] the river.",
+     "sau 'to' → động từ nguyên mẫu"
+    ]
+   ]
+  },
+  {
+   "h": "produce",
+   "m": [
+    [
+     "produce",
+     "v",
+     "sản xuất"
+    ],
+    [
+     "product",
+     "n",
+     "sản phẩm"
+    ],
+    [
+     "production",
+     "n",
+     "sự sản xuất"
+    ],
+    [
+     "producer",
+     "n",
+     "nhà sản xuất"
+    ],
+    [
+     "productive",
+     "adj",
+     "năng suất"
+    ],
+    [
+     "productivity",
+     "n",
+     "năng suất"
+    ],
+    [
+     "productively",
+     "adv",
+     "một cách hiệu quả"
+    ]
+   ],
+   "x": [
+    [
+     "Working from home can make some employees more [productive].",
+     "sau 'more' bổ nghĩa cho tân ngữ → tính từ"
+    ],
+    [
+     "The factory increased its [production] by 20% last year.",
+     "sau tính từ sở hữu 'its' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "employ",
+   "m": [
+    [
+     "employ",
+     "v",
+     "thuê, tuyển dụng"
+    ],
+    [
+     "employment",
+     "n",
+     "việc làm"
+    ],
+    [
+     "employer",
+     "n",
+     "người sử dụng lao động"
+    ],
+    [
+     "employee",
+     "n",
+     "nhân viên"
+    ],
+    [
+     "unemployed",
+     "adj",
+     "thất nghiệp"
+    ],
+    [
+     "unemployment",
+     "n",
+     "tình trạng thất nghiệp"
+    ]
+   ],
+   "x": [
+    [
+     "The government aims to reduce [unemployment] among young people.",
+     "sau động từ 'reduce' (tân ngữ) → danh từ"
+    ],
+    [
+     "Many [unemployed] graduates are retraining in new skills.",
+     "đứng trước danh từ 'graduates' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "educate",
+   "m": [
+    [
+     "educate",
+     "v",
+     "giáo dục"
+    ],
+    [
+     "education",
+     "n",
+     "sự giáo dục"
+    ],
+    [
+     "educational",
+     "adj",
+     "mang tính giáo dục"
+    ],
+    [
+     "educated",
+     "adj",
+     "có học thức"
+    ],
+    [
+     "educator",
+     "n",
+     "nhà giáo dục"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "Children learn a lot from [educational] games.",
+     "đứng trước danh từ 'games' → tính từ"
+    ],
+    [
+     "Access to [education] should be a basic right.",
+     "sau giới từ 'to' (to ở đây là giới từ) → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "inform",
+   "m": [
+    [
+     "inform",
+     "v",
+     "thông báo"
+    ],
+    [
+     "information",
+     "n",
+     "thông tin"
+    ],
+    [
+     "informative",
+     "adj",
+     "nhiều thông tin, bổ ích"
+    ],
+    [
+     "informed",
+     "adj",
+     "có hiểu biết"
+    ]
+   ],
+   "x": [
+    [
+     "The lecture was extremely [informative].",
+     "sau 'was' + trạng từ → tính từ"
+    ],
+    [
+     "Voters need to make [informed] decisions.",
+     "đứng trước danh từ, nghĩa 'có hiểu biết' → informed"
+    ]
+   ]
+  },
+  {
+   "h": "communicate",
+   "m": [
+    [
+     "communicate",
+     "v",
+     "giao tiếp"
+    ],
+    [
+     "communication",
+     "n",
+     "sự giao tiếp"
+    ],
+    [
+     "communicative",
+     "adj",
+     "cởi mở, thích giao tiếp"
+    ]
+   ],
+   "x": [
+    [
+     "Good [communication] is essential in any team.",
+     "sau tính từ 'Good' và làm chủ ngữ → danh từ"
+    ],
+    [
+     "Teenagers often prefer to [communicate] through social media.",
+     "sau 'to' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "create",
+   "m": [
+    [
+     "create",
+     "v",
+     "tạo ra"
+    ],
+    [
+     "creation",
+     "n",
+     "sự tạo ra"
+    ],
+    [
+     "creative",
+     "adj",
+     "sáng tạo"
+    ],
+    [
+     "creativity",
+     "n",
+     "sự sáng tạo"
+    ],
+    [
+     "creatively",
+     "adv",
+     "một cách sáng tạo"
+    ],
+    [
+     "creator",
+     "n",
+     "người tạo ra"
+    ]
+   ],
+   "x": [
+    [
+     "Art lessons encourage [creativity] in young children.",
+     "sau động từ 'encourage' (tân ngữ) → danh từ"
+    ],
+    [
+     "She solved the problem [creatively].",
+     "bổ nghĩa cho động từ 'solved' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "analyse",
+   "m": [
+    [
+     "analyse",
+     "v",
+     "phân tích"
+    ],
+    [
+     "analysis",
+     "n",
+     "sự phân tích"
+    ],
+    [
+     "analyst",
+     "n",
+     "nhà phân tích"
+    ],
+    [
+     "analytical",
+     "adj",
+     "mang tính phân tích"
+    ],
+    [
+     "analytically",
+     "adv",
+     "một cách phân tích"
+    ]
+   ],
+   "x": [
+    [
+     "A careful [analysis] of the data showed a clear trend.",
+     "sau 'A careful' (mạo từ + tính từ) → danh từ"
+    ],
+    [
+     "The job requires strong [analytical] skills.",
+     "đứng trước danh từ 'skills' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "benefit",
+   "m": [
+    [
+     "benefit",
+     "n",
+     "lợi ích"
+    ],
+    [
+     "benefit",
+     "v",
+     "có lợi, hưởng lợi"
+    ],
+    [
+     "beneficial",
+     "adj",
+     "có lợi"
+    ],
+    [
+     "beneficiary",
+     "n",
+     "người thụ hưởng"
+    ]
+   ],
+   "t": [
+    "same-form"
+   ],
+   "x": [
+    [
+     "Regular exercise is [beneficial] to both body and mind.",
+     "sau 'is' → tính từ (benefit là danh từ/động từ)"
+    ],
+    [
+     "Everyone will [benefit] from the new transport system.",
+     "sau 'will' → động từ",
+     "v"
+    ]
+   ]
+  },
+  {
+   "h": "increase",
+   "m": [
+    [
+     "increase",
+     "n",
+     "sự tăng"
+    ],
+    [
+     "increase",
+     "v",
+     "tăng"
+    ],
+    [
+     "increasing",
+     "adj",
+     "ngày càng tăng"
+    ],
+    [
+     "increasingly",
+     "adv",
+     "ngày càng"
+    ]
+   ],
+   "t": [
+    "same-form"
+   ],
+   "x": [
+    [
+     "Online shopping is becoming [increasingly] popular.",
+     "bổ nghĩa cho tính từ 'popular' → trạng từ"
+    ],
+    [
+     "There was a sharp [increase] in house prices.",
+     "sau 'a sharp' → danh từ",
+     "n"
+    ]
+   ]
+  },
+  {
+   "h": "rely",
+   "m": [
+    [
+     "rely",
+     "v",
+     "dựa vào"
+    ],
+    [
+     "reliance",
+     "n",
+     "sự phụ thuộc"
+    ],
+    [
+     "reliable",
+     "adj",
+     "đáng tin cậy"
+    ],
+    [
+     "reliably",
+     "adv",
+     "một cách đáng tin cậy"
+    ],
+    [
+     "reliability",
+     "n",
+     "độ tin cậy"
+    ],
+    [
+     "unreliable",
+     "adj",
+     "không đáng tin cậy"
+    ]
+   ],
+   "x": [
+    [
+     "Public transport in the city is cheap and [reliable].",
+     "nối bằng 'and' với tính từ 'cheap' → tính từ"
+    ],
+    [
+     "Our [reliance] on fossil fuels must be reduced.",
+     "sau tính từ sở hữu 'Our' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "depend",
+   "m": [
+    [
+     "depend",
+     "v",
+     "phụ thuộc"
+    ],
+    [
+     "dependence",
+     "n",
+     "sự phụ thuộc"
+    ],
+    [
+     "dependent",
+     "adj",
+     "phụ thuộc"
+    ],
+    [
+     "independent",
+     "adj",
+     "độc lập"
+    ],
+    [
+     "independence",
+     "n",
+     "sự độc lập"
+    ],
+    [
+     "independently",
+     "adv",
+     "một cách độc lập"
+    ]
+   ],
+   "x": [
+    [
+     "Many students become financially [independent] after graduating.",
+     "sau 'become' + trạng từ 'financially' → tính từ"
+    ],
+    [
+     "The country celebrated fifty years of [independence].",
+     "sau giới từ 'of' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "significance",
+   "m": [
+    [
+     "signify",
+     "v",
+     "biểu thị"
+    ],
+    [
+     "significance",
+     "n",
+     "tầm quan trọng"
+    ],
+    [
+     "significant",
+     "adj",
+     "đáng kể, quan trọng"
+    ],
+    [
+     "significantly",
+     "adv",
+     "một cách đáng kể"
+    ],
+    [
+     "insignificant",
+     "adj",
+     "không đáng kể"
+    ]
+   ],
+   "x": [
+    [
+     "Prices have risen [significantly] since last year.",
+     "bổ nghĩa cho động từ 'risen' → trạng từ"
+    ],
+    [
+     "Few people understood the [significance] of the discovery.",
+     "sau 'the' và trước 'of' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "effect",
+   "m": [
+    [
+     "effect",
+     "n",
+     "tác động, ảnh hưởng"
+    ],
+    [
+     "effective",
+     "adj",
+     "hiệu quả"
+    ],
+    [
+     "effectively",
+     "adv",
+     "một cách hiệu quả"
+    ],
+    [
+     "effectiveness",
+     "n",
+     "tính hiệu quả"
+    ],
+    [
+     "ineffective",
+     "adj",
+     "không hiệu quả"
+    ],
+    [
+     "affect",
+     "v",
+     "ảnh hưởng đến"
+    ]
+   ],
+   "t": [
+    "confusable"
+   ],
+   "x": [
+    [
+     "Smoking has a harmful [effect] on health.",
+     "sau 'a harmful' → danh từ (affect là động từ)"
+    ],
+    [
+     "Vaccines are an [effective] way to prevent disease.",
+     "sau 'an', trước danh từ 'way' → tính từ"
+    ]
+   ],
+   "note": "affect (v) — effect (n): Stress can affect your sleep. / Stress has an effect on your sleep."
+  },
+  {
+   "h": "efficient",
+   "m": [
+    [
+     "efficient",
+     "adj",
+     "hiệu suất cao, năng suất"
+    ],
+    [
+     "efficiency",
+     "n",
+     "hiệu suất"
+    ],
+    [
+     "efficiently",
+     "adv",
+     "một cách hiệu quả"
+    ],
+    [
+     "inefficient",
+     "adj",
+     "kém hiệu quả"
+    ]
+   ],
+   "x": [
+    [
+     "LED bulbs use energy more [efficiently] than old bulbs.",
+     "bổ nghĩa cho động từ 'use' → trạng từ"
+    ],
+    [
+     "The new system improved the [efficiency] of the factory.",
+     "sau 'the' và trước 'of' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "able",
+   "m": [
+    [
+     "able",
+     "adj",
+     "có thể, có năng lực"
+    ],
+    [
+     "ability",
+     "n",
+     "khả năng"
+    ],
+    [
+     "enable",
+     "v",
+     "cho phép, giúp"
+    ],
+    [
+     "unable",
+     "adj",
+     "không thể"
+    ],
+    [
+     "disability",
+     "n",
+     "khuyết tật"
+    ]
+   ],
+   "x": [
+    [
+     "The internet [enables] people to work from anywhere.",
+     "chủ ngữ số ít 'The internet' + tân ngữ 'people' → động từ (thêm -s)"
+    ],
+    [
+     "Reading improves children's [ability] to concentrate.",
+     "sau sở hữu cách 'children's' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "responsible",
+   "m": [
+    [
+     "responsible",
+     "adj",
+     "có trách nhiệm"
+    ],
+    [
+     "responsibility",
+     "n",
+     "trách nhiệm"
+    ],
+    [
+     "responsibly",
+     "adv",
+     "một cách có trách nhiệm"
+    ],
+    [
+     "irresponsible",
+     "adj",
+     "vô trách nhiệm"
+    ]
+   ],
+   "x": [
+    [
+     "Parents have a [responsibility] to keep their children safe.",
+     "sau mạo từ 'a' → danh từ"
+    ],
+    [
+     "Tourists should behave [responsibly] in protected areas.",
+     "bổ nghĩa cho động từ 'behave' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "possible",
+   "m": [
+    [
+     "possible",
+     "adj",
+     "có thể"
+    ],
+    [
+     "possibility",
+     "n",
+     "khả năng"
+    ],
+    [
+     "possibly",
+     "adv",
+     "có lẽ"
+    ],
+    [
+     "impossible",
+     "adj",
+     "không thể"
+    ]
+   ],
+   "x": [
+    [
+     "There is a strong [possibility] that it will rain tomorrow.",
+     "sau 'a strong' → danh từ"
+    ],
+    [
+     "It is almost [impossible] to find a cheap flat in the city centre.",
+     "sau 'is' + 'almost', nghĩa phủ định → tính từ impossible"
+    ]
+   ]
+  },
+  {
+   "h": "necessary",
+   "m": [
+    [
+     "necessary",
+     "adj",
+     "cần thiết"
+    ],
+    [
+     "necessity",
+     "n",
+     "sự cần thiết; nhu yếu phẩm"
+    ],
+    [
+     "necessarily",
+     "adv",
+     "nhất thiết"
+    ],
+    [
+     "unnecessary",
+     "adj",
+     "không cần thiết"
+    ],
+    [
+     "necessitate",
+     "v",
+     "đòi hỏi"
+    ]
+   ],
+   "x": [
+    [
+     "Expensive products are not [necessarily] better.",
+     "bổ nghĩa cho tính từ 'better' sau 'not' → trạng từ"
+    ],
+    [
+     "A car is a [necessity] for people living in rural areas.",
+     "sau mạo từ 'a' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "important",
+   "m": [
+    [
+     "important",
+     "adj",
+     "quan trọng"
+    ],
+    [
+     "importance",
+     "n",
+     "tầm quan trọng"
+    ],
+    [
+     "importantly",
+     "adv",
+     "quan trọng là"
+    ]
+   ],
+   "x": [
+    [
+     "Teachers stress the [importance] of reading every day.",
+     "sau 'the' và trước 'of' → danh từ"
+    ],
+    [
+     "More [importantly], the plan is affordable.",
+     "đứng đầu câu bổ nghĩa cả câu → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "differ",
+   "m": [
+    [
+     "differ",
+     "v",
+     "khác nhau"
+    ],
+    [
+     "difference",
+     "n",
+     "sự khác biệt"
+    ],
+    [
+     "different",
+     "adj",
+     "khác"
+    ],
+    [
+     "differently",
+     "adv",
+     "một cách khác"
+    ],
+    [
+     "differentiate",
+     "v",
+     "phân biệt"
+    ]
+   ],
+   "x": [
+    [
+     "There is a big [difference] between the two proposals.",
+     "sau 'a big' → danh từ"
+    ],
+    [
+     "Men and women often see the issue [differently].",
+     "bổ nghĩa cho động từ 'see' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "similar",
+   "m": [
+    [
+     "similar",
+     "adj",
+     "tương tự"
+    ],
+    [
+     "similarity",
+     "n",
+     "sự tương đồng"
+    ],
+    [
+     "similarly",
+     "adv",
+     "tương tự như vậy"
+    ]
+   ],
+   "x": [
+    [
+     "There are many [similarities] between the two languages.",
+     "sau 'many' (số nhiều) → danh từ số nhiều"
+    ],
+    [
+     "[Similarly], prices in Japan have also fallen.",
+     "đứng đầu câu, nối ý → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "grow",
+   "m": [
+    [
+     "grow",
+     "v",
+     "phát triển, trồng"
+    ],
+    [
+     "growth",
+     "n",
+     "sự tăng trưởng"
+    ],
+    [
+     "growing",
+     "adj",
+     "ngày càng tăng"
+    ],
+    [
+     "grown",
+     "adj",
+     "trưởng thành"
+    ]
+   ],
+   "t": [
+    "irregular"
+   ],
+   "x": [
+    [
+     "The rapid [growth] of cities has caused housing shortages.",
+     "sau 'The rapid' → danh từ (không phải 'grow')"
+    ],
+    [
+     "There is [growing] concern about climate change.",
+     "đứng trước danh từ 'concern', nghĩa 'ngày càng tăng' → growing"
+    ]
+   ]
+  },
+  {
+   "h": "die",
+   "m": [
+    [
+     "die",
+     "v",
+     "chết"
+    ],
+    [
+     "death",
+     "n",
+     "cái chết"
+    ],
+    [
+     "dead",
+     "adj",
+     "chết (đã)"
+    ],
+    [
+     "deadly",
+     "adj",
+     "chết người"
+    ],
+    [
+     "dying",
+     "adj",
+     "sắp chết"
+    ]
+   ],
+   "t": [
+    "irregular",
+    "ly-adj"
+   ],
+   "x": [
+    [
+     "Road accidents are a leading cause of [death] among young people.",
+     "sau giới từ 'of' → danh từ"
+    ],
+    [
+     "The virus can be [deadly] for elderly people.",
+     "sau 'can be' → tính từ (deadly là tính từ dù có đuôi -ly)"
+    ]
+   ]
+  },
+  {
+   "h": "choose",
+   "m": [
+    [
+     "choose",
+     "v",
+     "chọn"
+    ],
+    [
+     "choice",
+     "n",
+     "sự lựa chọn"
+    ],
+    [
+     "choosy",
+     "adj",
+     "kén chọn"
+    ]
+   ],
+   "t": [
+    "irregular"
+   ],
+   "x": [
+    [
+     "Students have a wide [choice] of courses.",
+     "sau 'a wide' → danh từ"
+    ],
+    [
+     "You can [choose] any seat you like.",
+     "sau 'can' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "high",
+   "m": [
+    [
+     "high",
+     "adj",
+     "cao"
+    ],
+    [
+     "height",
+     "n",
+     "chiều cao"
+    ],
+    [
+     "heighten",
+     "v",
+     "nâng cao"
+    ],
+    [
+     "highly",
+     "adv",
+     "rất, hết sức"
+    ]
+   ],
+   "t": [
+    "irregular"
+   ],
+   "x": [
+    [
+     "The building reaches a [height] of 300 metres.",
+     "sau mạo từ 'a' và trước 'of' → danh từ"
+    ],
+    [
+     "She is a [highly] respected scientist.",
+     "bổ nghĩa cho tính từ 'respected' → trạng từ highly (không dùng 'high')"
+    ]
+   ]
+  },
+  {
+   "h": "long",
+   "m": [
+    [
+     "long",
+     "adj",
+     "dài"
+    ],
+    [
+     "length",
+     "n",
+     "chiều dài"
+    ],
+    [
+     "lengthen",
+     "v",
+     "kéo dài"
+    ],
+    [
+     "lengthy",
+     "adj",
+     "dài dòng"
+    ]
+   ],
+   "t": [
+    "irregular"
+   ],
+   "x": [
+    [
+     "The bridge is two kilometres in [length].",
+     "sau giới từ 'in' → danh từ"
+    ],
+    [
+     "Many people complained about the [lengthy] application process.",
+     "đứng trước cụm danh từ → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "strong",
+   "m": [
+    [
+     "strong",
+     "adj",
+     "mạnh"
+    ],
+    [
+     "strength",
+     "n",
+     "sức mạnh, điểm mạnh"
+    ],
+    [
+     "strengthen",
+     "v",
+     "củng cố"
+    ],
+    [
+     "strongly",
+     "adv",
+     "mạnh mẽ"
+    ]
+   ],
+   "t": [
+    "irregular"
+   ],
+   "x": [
+    [
+     "Exercise helps to [strengthen] the heart.",
+     "sau 'to' → động từ"
+    ],
+    [
+     "I [strongly] believe that education should be free.",
+     "bổ nghĩa cho động từ 'believe' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "wide",
+   "m": [
+    [
+     "wide",
+     "adj",
+     "rộng"
+    ],
+    [
+     "width",
+     "n",
+     "chiều rộng"
+    ],
+    [
+     "widen",
+     "v",
+     "mở rộng"
+    ],
+    [
+     "widely",
+     "adv",
+     "rộng rãi"
+    ]
+   ],
+   "t": [
+    "irregular"
+   ],
+   "x": [
+    [
+     "English is [widely] spoken around the world.",
+     "bổ nghĩa cho 'spoken' → trạng từ"
+    ],
+    [
+     "The council plans to [widen] the main road.",
+     "sau 'to' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "deep",
+   "m": [
+    [
+     "deep",
+     "adj",
+     "sâu"
+    ],
+    [
+     "depth",
+     "n",
+     "chiều sâu"
+    ],
+    [
+     "deepen",
+     "v",
+     "làm sâu thêm"
+    ],
+    [
+     "deeply",
+     "adv",
+     "sâu sắc"
+    ]
+   ],
+   "t": [
+    "irregular"
+   ],
+   "x": [
+    [
+     "The lake has a [depth] of about 50 metres.",
+     "sau mạo từ 'a' → danh từ"
+    ],
+    [
+     "Many residents were [deeply] affected by the floods.",
+     "bổ nghĩa cho 'affected' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "friend",
+   "m": [
+    [
+     "friend",
+     "n",
+     "bạn"
+    ],
+    [
+     "friendship",
+     "n",
+     "tình bạn"
+    ],
+    [
+     "friendly",
+     "adj",
+     "thân thiện"
+    ],
+    [
+     "unfriendly",
+     "adj",
+     "không thân thiện"
+    ]
+   ],
+   "t": [
+    "ly-adj"
+   ],
+   "x": [
+    [
+     "The staff at the hotel were very [friendly].",
+     "sau 'were very' → tính từ (friendly là tính từ, không phải trạng từ)"
+    ],
+    [
+     "Their [friendship] lasted for over forty years.",
+     "sau tính từ sở hữu 'Their' → danh từ"
+    ]
+   ],
+   "note": "friendly là tính từ. Muốn nói 'một cách thân thiện' → in a friendly way."
+  },
+  {
+   "h": "cost",
+   "m": [
+    [
+     "cost",
+     "n",
+     "chi phí"
+    ],
+    [
+     "cost",
+     "v",
+     "tốn"
+    ],
+    [
+     "costly",
+     "adj",
+     "đắt đỏ, tốn kém"
+    ]
+   ],
+   "t": [
+    "ly-adj",
+    "same-form"
+   ],
+   "x": [
+    [
+     "Repairing the old bridge would be very [costly].",
+     "sau 'be very' → tính từ (costly là tính từ)"
+    ],
+    [
+     "The living [cost] in big cities keeps rising.",
+     "sau 'The living' làm chủ ngữ → danh từ",
+     "n"
+    ]
+   ]
+  },
+  {
+   "h": "likely",
+   "m": [
+    [
+     "likely",
+     "adj",
+     "có khả năng"
+    ],
+    [
+     "unlikely",
+     "adj",
+     "không chắc xảy ra"
+    ],
+    [
+     "likelihood",
+     "n",
+     "khả năng xảy ra"
+    ]
+   ],
+   "t": [
+    "ly-adj"
+   ],
+   "x": [
+    [
+     "It is [unlikely] that prices will fall next year.",
+     "sau 'It is', nghĩa phủ định → tính từ"
+    ],
+    [
+     "Smoking increases the [likelihood] of heart disease.",
+     "sau 'the' và trước 'of' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "arrive",
+   "m": [
+    [
+     "arrive",
+     "v",
+     "đến"
+    ],
+    [
+     "arrival",
+     "n",
+     "sự đến"
+    ]
+   ],
+   "t": [
+    "al-noun"
+   ],
+   "x": [
+    [
+     "The [arrival] of the internet changed how we shop.",
+     "sau 'The' và trước 'of' → danh từ (arrival là danh từ dù đuôi -al)"
+    ],
+    [
+     "The train is expected to [arrive] at noon.",
+     "sau 'to' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "approve",
+   "m": [
+    [
+     "approve",
+     "v",
+     "chấp thuận"
+    ],
+    [
+     "approval",
+     "n",
+     "sự chấp thuận"
+    ],
+    [
+     "disapprove",
+     "v",
+     "không tán thành"
+    ],
+    [
+     "disapproval",
+     "n",
+     "sự phản đối"
+    ]
+   ],
+   "t": [
+    "al-noun"
+   ],
+   "x": [
+    [
+     "The project needs [approval] from the city council.",
+     "sau 'needs' (tân ngữ) → danh từ"
+    ],
+    [
+     "Many parents [disapprove] of violent video games.",
+     "chủ ngữ + động từ + 'of' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "propose",
+   "m": [
+    [
+     "propose",
+     "v",
+     "đề xuất"
+    ],
+    [
+     "proposal",
+     "n",
+     "bản đề xuất"
+    ]
+   ],
+   "t": [
+    "al-noun"
+   ],
+   "x": [
+    [
+     "The government rejected the [proposal] to raise taxes.",
+     "sau 'the' → danh từ"
+    ],
+    [
+     "Experts [propose] a ban on single-use plastics.",
+     "sau chủ ngữ số nhiều 'Experts' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "survive",
+   "m": [
+    [
+     "survive",
+     "v",
+     "sống sót"
+    ],
+    [
+     "survival",
+     "n",
+     "sự sống sót"
+    ],
+    [
+     "survivor",
+     "n",
+     "người sống sót"
+    ]
+   ],
+   "t": [
+    "al-noun"
+   ],
+   "x": [
+    [
+     "Clean water is essential for [survival].",
+     "sau giới từ 'for' → danh từ"
+    ],
+    [
+     "Only a few [survivors] were found after the earthquake.",
+     "sau 'a few' → danh từ đếm được số nhiều (chỉ người)"
+    ]
+   ]
+  },
+  {
+   "h": "bore",
+   "m": [
+    [
+     "bore",
+     "v",
+     "làm chán"
+    ],
+    [
+     "bored",
+     "adj",
+     "cảm thấy chán"
+    ],
+    [
+     "boring",
+     "adj",
+     "gây chán, tẻ nhạt"
+    ],
+    [
+     "boredom",
+     "n",
+     "sự buồn chán"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "Many students feel [bored] during long lectures.",
+     "người cảm thấy → -ed"
+    ],
+    [
+     "The film was so [boring] that I fell asleep.",
+     "vật gây ra cảm giác → -ing"
+    ]
+   ]
+  },
+  {
+   "h": "interest",
+   "m": [
+    [
+     "interest",
+     "n",
+     "sự quan tâm"
+    ],
+    [
+     "interested",
+     "adj",
+     "quan tâm"
+    ],
+    [
+     "interesting",
+     "adj",
+     "thú vị"
+    ],
+    [
+     "interestingly",
+     "adv",
+     "điều thú vị là"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "Young people are less [interested] in politics than before.",
+     "người cảm thấy + 'in' → -ed"
+    ],
+    [
+     "[Interestingly], the poorest regions recycle the most.",
+     "đứng đầu câu, bình luận cả câu → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "excite",
+   "m": [
+    [
+     "excite",
+     "v",
+     "làm phấn khích"
+    ],
+    [
+     "excited",
+     "adj",
+     "hào hứng"
+    ],
+    [
+     "exciting",
+     "adj",
+     "thú vị, gây hào hứng"
+    ],
+    [
+     "excitement",
+     "n",
+     "sự phấn khích"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "Travelling abroad for the first time is an [exciting] experience.",
+     "vật/sự việc gây cảm giác, trước danh từ → -ing"
+    ],
+    [
+     "The children could hardly hide their [excitement].",
+     "sau 'their' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "confuse",
+   "m": [
+    [
+     "confuse",
+     "v",
+     "làm bối rối"
+    ],
+    [
+     "confused",
+     "adj",
+     "bối rối"
+    ],
+    [
+     "confusing",
+     "adj",
+     "gây bối rối"
+    ],
+    [
+     "confusion",
+     "n",
+     "sự nhầm lẫn"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "The instructions were [confusing], so nobody finished the task.",
+     "sự vật gây ra cảm giác → -ing"
+    ],
+    [
+     "There was some [confusion] about the new timetable.",
+     "sau 'some' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "satisfy",
+   "m": [
+    [
+     "satisfy",
+     "v",
+     "làm hài lòng"
+    ],
+    [
+     "satisfied",
+     "adj",
+     "hài lòng"
+    ],
+    [
+     "satisfying",
+     "adj",
+     "mang lại sự hài lòng"
+    ],
+    [
+     "satisfaction",
+     "n",
+     "sự hài lòng"
+    ],
+    [
+     "satisfactory",
+     "adj",
+     "đạt yêu cầu"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "Most customers were [satisfied] with the service.",
+     "người cảm thấy + 'with' → -ed"
+    ],
+    [
+     "Job [satisfaction] matters more than salary for many workers.",
+     "sau 'Job' làm chủ ngữ → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "observe",
+   "m": [
+    [
+     "observe",
+     "v",
+     "quan sát"
+    ],
+    [
+     "observation",
+     "n",
+     "sự quan sát"
+    ],
+    [
+     "observer",
+     "n",
+     "người quan sát"
+    ],
+    [
+     "observant",
+     "adj",
+     "tinh ý, giỏi quan sát"
+    ]
+   ],
+   "x": [
+    [
+     "Good scientists are very [observant].",
+     "sau 'are very' → tính từ"
+    ],
+    [
+     "The study is based on careful [observation] of animal behaviour.",
+     "sau tính từ 'careful' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "announce",
+   "m": [
+    [
+     "announce",
+     "v",
+     "thông báo, công bố"
+    ],
+    [
+     "announcement",
+     "n",
+     "thông báo"
+    ],
+    [
+     "announcer",
+     "n",
+     "phát thanh viên"
+    ]
+   ],
+   "x": [
+    [
+     "The company will [announce] its results next week.",
+     "sau 'will' → động từ"
+    ],
+    [
+     "The [announcement] was made on national television.",
+     "sau 'The' làm chủ ngữ → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "celebrate",
+   "m": [
+    [
+     "celebrate",
+     "v",
+     "kỷ niệm, ăn mừng"
+    ],
+    [
+     "celebration",
+     "n",
+     "lễ kỷ niệm"
+    ],
+    [
+     "celebrated",
+     "adj",
+     "nổi tiếng, được ca ngợi"
+    ],
+    [
+     "celebrity",
+     "n",
+     "người nổi tiếng"
+    ]
+   ],
+   "t": [
+    "ed-ing"
+   ],
+   "x": [
+    [
+     "He is a [celebrated] author whose books are read worldwide.",
+     "đứng trước danh từ 'author', nghĩa 'nổi tiếng' → tính từ celebrated"
+    ],
+    [
+     "The city held a huge [celebration] for its 1000th birthday.",
+     "sau 'a huge' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "accelerate",
+   "m": [
+    [
+     "accelerate",
+     "v",
+     "tăng tốc"
+    ],
+    [
+     "acceleration",
+     "n",
+     "sự tăng tốc"
+    ],
+    [
+     "accelerated",
+     "adj",
+     "được đẩy nhanh"
+    ]
+   ],
+   "x": [
+    [
+     "Governments must [accelerate] the shift to clean energy.",
+     "sau 'must' → động từ"
+    ],
+    [
+     "The car's [acceleration] is impressive for its size.",
+     "sau sở hữu cách 'The car's' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "deprive",
+   "m": [
+    [
+     "deprive",
+     "v",
+     "tước đoạt"
+    ],
+    [
+     "deprived",
+     "adj",
+     "thiếu thốn, khó khăn"
+    ],
+    [
+     "deprivation",
+     "n",
+     "sự thiếu thốn"
+    ]
+   ],
+   "x": [
+    [
+     "Children from [deprived] areas often have fewer opportunities.",
+     "đứng trước danh từ 'areas' → tính từ"
+    ],
+    [
+     "Sleep [deprivation] can seriously affect your health.",
+     "sau 'Sleep' làm chủ ngữ → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "suffice",
+   "m": [
+    [
+     "suffice",
+     "v",
+     "đủ"
+    ],
+    [
+     "sufficient",
+     "adj",
+     "đủ"
+    ],
+    [
+     "sufficiently",
+     "adv",
+     "đủ"
+    ],
+    [
+     "insufficient",
+     "adj",
+     "không đủ"
+    ],
+    [
+     "sufficiency",
+     "n",
+     "sự đầy đủ"
+    ]
+   ],
+   "x": [
+    [
+     "There is [insufficient] evidence to prove the theory.",
+     "đứng trước danh từ 'evidence', nghĩa phủ định → tính từ"
+    ],
+    [
+     "The bridge is not [sufficiently] strong for heavy lorries.",
+     "bổ nghĩa cho tính từ 'strong' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "acquaint",
+   "m": [
+    [
+     "acquaint",
+     "v",
+     "làm quen"
+    ],
+    [
+     "acquaintance",
+     "n",
+     "người quen; sự hiểu biết"
+    ],
+    [
+     "acquainted",
+     "adj",
+     "quen biết"
+    ]
+   ],
+   "x": [
+    [
+     "She is not a close friend, just an [acquaintance].",
+     "sau mạo từ 'an' → danh từ"
+    ],
+    [
+     "New staff need time to get [acquainted] with the system.",
+     "sau 'get' + 'with' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "demolish",
+   "m": [
+    [
+     "demolish",
+     "v",
+     "phá dỡ"
+    ],
+    [
+     "demolition",
+     "n",
+     "sự phá dỡ"
+    ]
+   ],
+   "x": [
+    [
+     "The council decided to [demolish] the old factory.",
+     "sau 'to' → động từ"
+    ],
+    [
+     "The [demolition] of the stadium took six months.",
+     "sau 'The' và trước 'of' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "urban",
+   "m": [
+    [
+     "urban",
+     "adj",
+     "thuộc đô thị"
+    ],
+    [
+     "urbanize",
+     "v",
+     "đô thị hoá"
+    ],
+    [
+     "urbanization",
+     "n",
+     "sự đô thị hoá"
+    ]
+   ],
+   "x": [
+    [
+     "Rapid [urbanization] has put pressure on public services.",
+     "sau tính từ 'Rapid' làm chủ ngữ → danh từ"
+    ],
+    [
+     "Most of the population now lives in [urban] areas.",
+     "đứng trước danh từ 'areas' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "globe",
+   "m": [
+    [
+     "globe",
+     "n",
+     "quả địa cầu"
+    ],
+    [
+     "global",
+     "adj",
+     "toàn cầu"
+    ],
+    [
+     "globally",
+     "adv",
+     "trên toàn cầu"
+    ],
+    [
+     "globalization",
+     "n",
+     "toàn cầu hoá"
+    ]
+   ],
+   "x": [
+    [
+     "[Globalization] has made products cheaper but jobs less secure.",
+     "đứng đầu câu làm chủ ngữ → danh từ"
+    ],
+    [
+     "The company now operates [globally].",
+     "bổ nghĩa cho động từ 'operates' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "industry",
+   "m": [
+    [
+     "industry",
+     "n",
+     "ngành công nghiệp"
+    ],
+    [
+     "industrial",
+     "adj",
+     "thuộc công nghiệp"
+    ],
+    [
+     "industrialize",
+     "v",
+     "công nghiệp hoá"
+    ],
+    [
+     "industrialization",
+     "n",
+     "sự công nghiệp hoá"
+    ],
+    [
+     "industrious",
+     "adj",
+     "cần cù, siêng năng"
+    ]
+   ],
+   "t": [
+    "confusable"
+   ],
+   "x": [
+    [
+     "The river was polluted by [industrial] waste.",
+     "nghĩa 'thuộc công nghiệp' trước danh từ → industrial"
+    ],
+    [
+     "She is an [industrious] student who never misses a class.",
+     "nghĩa 'chăm chỉ' → industrious (không phải industrial)"
+    ]
+   ]
+  },
+  {
+   "h": "technology",
+   "m": [
+    [
+     "technology",
+     "n",
+     "công nghệ"
+    ],
+    [
+     "technological",
+     "adj",
+     "thuộc công nghệ"
+    ],
+    [
+     "technologically",
+     "adv",
+     "về mặt công nghệ"
+    ]
+   ],
+   "x": [
+    [
+     "[Technological] advances have changed the way we work.",
+     "đứng trước danh từ 'advances' → tính từ"
+    ],
+    [
+     "Japan is one of the most [technologically] advanced countries.",
+     "bổ nghĩa cho tính từ 'advanced' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "science",
+   "m": [
+    [
+     "science",
+     "n",
+     "khoa học"
+    ],
+    [
+     "scientific",
+     "adj",
+     "mang tính khoa học"
+    ],
+    [
+     "scientifically",
+     "adv",
+     "một cách khoa học"
+    ],
+    [
+     "scientist",
+     "n",
+     "nhà khoa học"
+    ]
+   ],
+   "x": [
+    [
+     "There is no [scientific] proof that the product works.",
+     "đứng trước danh từ 'proof' → tính từ"
+    ],
+    [
+     "The claims have not been [scientifically] tested.",
+     "bổ nghĩa cho 'tested' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "nature",
+   "m": [
+    [
+     "nature",
+     "n",
+     "thiên nhiên; bản chất"
+    ],
+    [
+     "natural",
+     "adj",
+     "tự nhiên"
+    ],
+    [
+     "naturally",
+     "adv",
+     "một cách tự nhiên"
+    ]
+   ],
+   "x": [
+    [
+     "Forests are an important [natural] resource.",
+     "đứng trước danh từ 'resource' → tính từ"
+    ],
+    [
+     "Children [naturally] learn languages faster than adults.",
+     "bổ nghĩa cho động từ 'learn' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "culture",
+   "m": [
+    [
+     "culture",
+     "n",
+     "văn hoá"
+    ],
+    [
+     "cultural",
+     "adj",
+     "thuộc văn hoá"
+    ],
+    [
+     "culturally",
+     "adv",
+     "về mặt văn hoá"
+    ]
+   ],
+   "x": [
+    [
+     "Festivals are an important part of our [cultural] heritage.",
+     "đứng trước danh từ 'heritage' → tính từ"
+    ],
+    [
+     "London is a [culturally] diverse city.",
+     "bổ nghĩa cho tính từ 'diverse' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "tradition",
+   "m": [
+    [
+     "tradition",
+     "n",
+     "truyền thống"
+    ],
+    [
+     "traditional",
+     "adj",
+     "truyền thống"
+    ],
+    [
+     "traditionally",
+     "adv",
+     "theo truyền thống"
+    ]
+   ],
+   "x": [
+    [
+     "[Traditionally], families ate dinner together every evening.",
+     "đứng đầu câu bổ nghĩa cả câu → trạng từ"
+    ],
+    [
+     "Many young people prefer modern music to [traditional] songs.",
+     "đứng trước danh từ 'songs' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "society",
+   "m": [
+    [
+     "society",
+     "n",
+     "xã hội"
+    ],
+    [
+     "social",
+     "adj",
+     "thuộc xã hội"
+    ],
+    [
+     "socially",
+     "adv",
+     "về mặt xã hội"
+    ],
+    [
+     "socialize",
+     "v",
+     "giao lưu"
+    ],
+    [
+     "sociable",
+     "adj",
+     "hoà đồng"
+    ]
+   ],
+   "t": [
+    "confusable"
+   ],
+   "x": [
+    [
+     "Teenagers spend hours on [social] media every day.",
+     "nghĩa 'thuộc xã hội' → social"
+    ],
+    [
+     "He is very [sociable] and loves meeting new people.",
+     "nghĩa 'hoà đồng' (tính cách) → sociable"
+    ]
+   ]
+  },
+  {
+   "h": "politics",
+   "m": [
+    [
+     "politics",
+     "n",
+     "chính trị"
+    ],
+    [
+     "political",
+     "adj",
+     "thuộc chính trị"
+    ],
+    [
+     "politically",
+     "adv",
+     "về mặt chính trị"
+    ],
+    [
+     "politician",
+     "n",
+     "chính trị gia"
+    ]
+   ],
+   "x": [
+    [
+     "Many [politicians] promise lower taxes before elections.",
+     "sau 'Many', chỉ người, số nhiều → politicians"
+    ],
+    [
+     "The issue has become highly [political].",
+     "sau 'become highly' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "govern",
+   "m": [
+    [
+     "govern",
+     "v",
+     "cai trị, điều hành"
+    ],
+    [
+     "government",
+     "n",
+     "chính phủ"
+    ],
+    [
+     "governmental",
+     "adj",
+     "thuộc chính phủ"
+    ],
+    [
+     "governor",
+     "n",
+     "thống đốc"
+    ]
+   ],
+   "x": [
+    [
+     "The [government] should invest more in public transport.",
+     "sau 'The' làm chủ ngữ → danh từ"
+    ],
+    [
+     "Universities are [governed] by independent boards.",
+     "sau 'are' ở thể bị động → quá khứ phân từ của động từ"
+    ]
+   ]
+  },
+  {
+   "h": "consume",
+   "m": [
+    [
+     "consume",
+     "v",
+     "tiêu thụ"
+    ],
+    [
+     "consumption",
+     "n",
+     "sự tiêu thụ"
+    ],
+    [
+     "consumer",
+     "n",
+     "người tiêu dùng"
+    ]
+   ],
+   "x": [
+    [
+     "Meat [consumption] has risen sharply in Asia.",
+     "sau 'Meat' làm chủ ngữ → danh từ"
+    ],
+    [
+     "Older cars [consume] much more fuel.",
+     "sau chủ ngữ số nhiều 'cars' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "conserve",
+   "m": [
+    [
+     "conserve",
+     "v",
+     "bảo tồn"
+    ],
+    [
+     "conservation",
+     "n",
+     "sự bảo tồn"
+    ],
+    [
+     "conservative",
+     "adj",
+     "bảo thủ"
+    ]
+   ],
+   "t": [
+    "confusable"
+   ],
+   "x": [
+    [
+     "Wildlife [conservation] is funded partly by tourism.",
+     "nghĩa 'bảo tồn', làm chủ ngữ → conservation"
+    ],
+    [
+     "Older voters tend to hold more [conservative] views.",
+     "nghĩa 'bảo thủ' trước danh từ 'views' → conservative"
+    ]
+   ]
+  },
+  {
+   "h": "sustain",
+   "m": [
+    [
+     "sustain",
+     "v",
+     "duy trì"
+    ],
+    [
+     "sustainable",
+     "adj",
+     "bền vững"
+    ],
+    [
+     "sustainability",
+     "n",
+     "tính bền vững"
+    ],
+    [
+     "sustainably",
+     "adv",
+     "một cách bền vững"
+    ]
+   ],
+   "x": [
+    [
+     "We need more [sustainable] sources of energy.",
+     "đứng trước danh từ 'sources' → tính từ"
+    ],
+    [
+     "Fish should be caught [sustainably].",
+     "bổ nghĩa cho động từ 'caught' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "recognise",
+   "m": [
+    [
+     "recognise",
+     "v",
+     "nhận ra, công nhận"
+    ],
+    [
+     "recognition",
+     "n",
+     "sự công nhận"
+    ],
+    [
+     "recognisable",
+     "adj",
+     "dễ nhận ra"
+    ]
+   ],
+   "x": [
+    [
+     "Her work finally received international [recognition].",
+     "sau tính từ 'international' → danh từ"
+    ],
+    [
+     "The logo is instantly [recognisable].",
+     "sau 'is instantly' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "accurate",
+   "m": [
+    [
+     "accurate",
+     "adj",
+     "chính xác"
+    ],
+    [
+     "accuracy",
+     "n",
+     "độ chính xác"
+    ],
+    [
+     "accurately",
+     "adv",
+     "một cách chính xác"
+    ],
+    [
+     "inaccurate",
+     "adj",
+     "không chính xác"
+    ]
+   ],
+   "x": [
+    [
+     "Weather forecasts are becoming more [accurate].",
+     "sau 'becoming more' → tính từ"
+    ],
+    [
+     "The report was criticised for its lack of [accuracy].",
+     "sau giới từ 'of' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "adequate",
+   "m": [
+    [
+     "adequate",
+     "adj",
+     "đầy đủ"
+    ],
+    [
+     "adequately",
+     "adv",
+     "một cách đầy đủ"
+    ],
+    [
+     "inadequate",
+     "adj",
+     "không đầy đủ"
+    ]
+   ],
+   "x": [
+    [
+     "Many schools have [inadequate] funding.",
+     "đứng trước danh từ 'funding', nghĩa phủ định → tính từ"
+    ],
+    [
+     "Workers must be [adequately] trained.",
+     "bổ nghĩa cho 'trained' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "appropriate",
+   "m": [
+    [
+     "appropriate",
+     "adj",
+     "phù hợp"
+    ],
+    [
+     "appropriately",
+     "adv",
+     "một cách phù hợp"
+    ],
+    [
+     "inappropriate",
+     "adj",
+     "không phù hợp"
+    ]
+   ],
+   "x": [
+    [
+     "Some websites contain content that is [inappropriate] for children.",
+     "sau 'is', nghĩa phủ định → tính từ"
+    ],
+    [
+     "Students must dress [appropriately] for the interview.",
+     "bổ nghĩa cho động từ 'dress' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "emphasize",
+   "m": [
+    [
+     "emphasize",
+     "v",
+     "nhấn mạnh"
+    ],
+    [
+     "emphasis",
+     "n",
+     "sự nhấn mạnh"
+    ],
+    [
+     "emphatic",
+     "adj",
+     "dứt khoát, mạnh mẽ"
+    ],
+    [
+     "emphatically",
+     "adv",
+     "một cách dứt khoát"
+    ]
+   ],
+   "x": [
+    [
+     "The school places great [emphasis] on sport.",
+     "sau tính từ 'great' → danh từ"
+    ],
+    [
+     "The report [emphasizes] the need for change.",
+     "sau chủ ngữ số ít 'The report' → động từ thêm -s"
+    ]
+   ]
+  },
+  {
+   "h": "solve",
+   "m": [
+    [
+     "solve",
+     "v",
+     "giải quyết"
+    ],
+    [
+     "solution",
+     "n",
+     "giải pháp"
+    ],
+    [
+     "solvable",
+     "adj",
+     "có thể giải quyết"
+    ]
+   ],
+   "x": [
+    [
+     "Building more roads is not the [solution] to traffic jams.",
+     "sau 'the' và trước 'to' → danh từ"
+    ],
+    [
+     "Governments must work together to [solve] the problem.",
+     "sau 'to' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "explain",
+   "m": [
+    [
+     "explain",
+     "v",
+     "giải thích"
+    ],
+    [
+     "explanation",
+     "n",
+     "lời giải thích"
+    ],
+    [
+     "explanatory",
+     "adj",
+     "mang tính giải thích"
+    ]
+   ],
+   "x": [
+    [
+     "Scientists still have no clear [explanation] for the phenomenon.",
+     "sau tính từ 'clear' → danh từ"
+    ],
+    [
+     "Could you [explain] how the system works?",
+     "sau 'Could you' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "predict",
+   "m": [
+    [
+     "predict",
+     "v",
+     "dự đoán"
+    ],
+    [
+     "prediction",
+     "n",
+     "sự dự đoán"
+    ],
+    [
+     "predictable",
+     "adj",
+     "có thể đoán trước"
+    ],
+    [
+     "unpredictable",
+     "adj",
+     "khó đoán"
+    ]
+   ],
+   "x": [
+    [
+     "The weather in the mountains is very [unpredictable].",
+     "sau 'is very', nghĩa 'khó đoán' → tính từ"
+    ],
+    [
+     "Experts made several [predictions] about the economy.",
+     "sau 'several' → danh từ số nhiều"
+    ]
+   ]
+  },
+  {
+   "h": "vary",
+   "m": [
+    [
+     "vary",
+     "v",
+     "thay đổi, khác nhau"
+    ],
+    [
+     "variety",
+     "n",
+     "sự đa dạng"
+    ],
+    [
+     "various",
+     "adj",
+     "khác nhau, đa dạng"
+    ],
+    [
+     "variation",
+     "n",
+     "sự biến đổi"
+    ],
+    [
+     "variable",
+     "adj",
+     "hay thay đổi"
+    ]
+   ],
+   "x": [
+    [
+     "The menu offers a wide [variety] of dishes.",
+     "sau 'a wide' và trước 'of' → danh từ"
+    ],
+    [
+     "Prices [vary] from one shop to another.",
+     "sau chủ ngữ 'Prices' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "apply",
+   "m": [
+    [
+     "apply",
+     "v",
+     "nộp đơn; áp dụng"
+    ],
+    [
+     "application",
+     "n",
+     "đơn xin; ứng dụng"
+    ],
+    [
+     "applicant",
+     "n",
+     "người nộp đơn"
+    ],
+    [
+     "applicable",
+     "adj",
+     "có thể áp dụng"
+    ]
+   ],
+   "x": [
+    [
+     "Over 500 [applicants] applied for the position.",
+     "sau số lượng, chỉ người → applicants"
+    ],
+    [
+     "Please complete the [application] form online.",
+     "đứng trước danh từ 'form' làm bổ ngữ → danh từ application"
+    ]
+   ]
+  },
+  {
+   "h": "attract",
+   "m": [
+    [
+     "attract",
+     "v",
+     "thu hút"
+    ],
+    [
+     "attraction",
+     "n",
+     "sự hấp dẫn; điểm tham quan"
+    ],
+    [
+     "attractive",
+     "adj",
+     "hấp dẫn"
+    ],
+    [
+     "attractively",
+     "adv",
+     "một cách hấp dẫn"
+    ]
+   ],
+   "x": [
+    [
+     "The museum is the city's main tourist [attraction].",
+     "sau 'main tourist' → danh từ"
+    ],
+    [
+     "Low taxes make the country [attractive] to investors.",
+     "make + tân ngữ + tính từ → attractive"
+    ]
+   ]
+  },
+  {
+   "h": "protect",
+   "m": [
+    [
+     "protect",
+     "v",
+     "bảo vệ"
+    ],
+    [
+     "protection",
+     "n",
+     "sự bảo vệ"
+    ],
+    [
+     "protective",
+     "adj",
+     "bảo vệ, che chở"
+    ]
+   ],
+   "x": [
+    [
+     "Workers must wear [protective] clothing.",
+     "đứng trước danh từ 'clothing' → tính từ"
+    ],
+    [
+     "Endangered species need legal [protection].",
+     "sau tính từ 'legal' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "prevent",
+   "m": [
+    [
+     "prevent",
+     "v",
+     "ngăn chặn"
+    ],
+    [
+     "prevention",
+     "n",
+     "sự phòng ngừa"
+    ],
+    [
+     "preventable",
+     "adj",
+     "có thể ngăn ngừa"
+    ]
+   ],
+   "x": [
+    [
+     "[Prevention] is better than cure.",
+     "đứng đầu câu làm chủ ngữ → danh từ"
+    ],
+    [
+     "Many of these deaths are [preventable].",
+     "sau 'are', nghĩa 'có thể ngăn ngừa' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "reduce",
+   "m": [
+    [
+     "reduce",
+     "v",
+     "giảm"
+    ],
+    [
+     "reduction",
+     "n",
+     "sự giảm"
+    ]
+   ],
+   "x": [
+    [
+     "The new law led to a [reduction] in crime.",
+     "sau mạo từ 'a' → danh từ"
+    ],
+    [
+     "We must [reduce] our use of plastic.",
+     "sau 'must' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "achieve",
+   "m": [
+    [
+     "achieve",
+     "v",
+     "đạt được"
+    ],
+    [
+     "achievement",
+     "n",
+     "thành tựu"
+    ],
+    [
+     "achievable",
+     "adj",
+     "có thể đạt được"
+    ]
+   ],
+   "x": [
+    [
+     "Landing on the moon was a remarkable [achievement].",
+     "sau 'a remarkable' → danh từ"
+    ],
+    [
+     "Set goals that are realistic and [achievable].",
+     "nối với tính từ 'realistic' bằng 'and' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "advertise",
+   "m": [
+    [
+     "advertise",
+     "v",
+     "quảng cáo"
+    ],
+    [
+     "advertisement",
+     "n",
+     "mẩu quảng cáo"
+    ],
+    [
+     "advertising",
+     "n",
+     "ngành/hoạt động quảng cáo"
+    ],
+    [
+     "advertiser",
+     "n",
+     "nhà quảng cáo"
+    ]
+   ],
+   "x": [
+    [
+     "Children are strongly influenced by television [advertising].",
+     "hoạt động quảng cáo nói chung (không đếm được) → advertising"
+    ],
+    [
+     "I saw an [advertisement] for the job in the newspaper.",
+     "sau 'an', một mẩu quảng cáo (đếm được) → advertisement"
+    ]
+   ]
+  },
+  {
+   "h": "health",
+   "m": [
+    [
+     "health",
+     "n",
+     "sức khoẻ"
+    ],
+    [
+     "healthy",
+     "adj",
+     "khoẻ mạnh, lành mạnh"
+    ],
+    [
+     "healthily",
+     "adv",
+     "một cách lành mạnh"
+    ],
+    [
+     "unhealthy",
+     "adj",
+     "không lành mạnh"
+    ]
+   ],
+   "x": [
+    [
+     "Fast food is often [unhealthy].",
+     "sau 'is', nghĩa phủ định → tính từ"
+    ],
+    [
+     "People who eat [healthily] tend to live longer.",
+     "bổ nghĩa cho động từ 'eat' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "danger",
+   "m": [
+    [
+     "danger",
+     "n",
+     "sự nguy hiểm"
+    ],
+    [
+     "dangerous",
+     "adj",
+     "nguy hiểm"
+    ],
+    [
+     "dangerously",
+     "adv",
+     "một cách nguy hiểm"
+    ],
+    [
+     "endanger",
+     "v",
+     "gây nguy hiểm"
+    ],
+    [
+     "endangered",
+     "adj",
+     "có nguy cơ tuyệt chủng"
+    ]
+   ],
+   "x": [
+    [
+     "The tiger is an [endangered] species.",
+     "đứng trước 'species', nghĩa 'có nguy cơ tuyệt chủng' → endangered"
+    ],
+    [
+     "He was driving [dangerously] fast.",
+     "bổ nghĩa cho trạng từ 'fast' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "hard",
+   "m": [
+    [
+     "hard",
+     "adj",
+     "khó; cứng"
+    ],
+    [
+     "hard",
+     "adv",
+     "chăm chỉ, nhiều"
+    ],
+    [
+     "hardly",
+     "adv",
+     "hầu như không"
+    ],
+    [
+     "hardship",
+     "n",
+     "sự gian khổ"
+    ]
+   ],
+   "t": [
+    "same-form",
+    "confusable"
+   ],
+   "x": [
+    [
+     "She worked [hard] to pass the exam.",
+     "nghĩa 'chăm chỉ' → hard (hardly = hầu như không)",
+     "adv"
+    ],
+    [
+     "I could [hardly] hear the speaker.",
+     "nghĩa 'hầu như không' → hardly"
+    ]
+   ]
+  },
+  {
+   "h": "late",
+   "m": [
+    [
+     "late",
+     "adj",
+     "muộn"
+    ],
+    [
+     "late",
+     "adv",
+     "muộn"
+    ],
+    [
+     "lately",
+     "adv",
+     "gần đây"
+    ]
+   ],
+   "t": [
+    "same-form",
+    "confusable"
+   ],
+   "x": [
+    [
+     "The train arrived twenty minutes [late].",
+     "nghĩa 'muộn' → late (lately = gần đây)",
+     "adv"
+    ],
+    [
+     "Have you seen any good films [lately]?",
+     "nghĩa 'gần đây' → lately"
+    ]
+   ]
+  },
+  {
+   "h": "popular",
+   "m": [
+    [
+     "popular",
+     "adj",
+     "phổ biến"
+    ],
+    [
+     "popularity",
+     "n",
+     "sự phổ biến"
+    ],
+    [
+     "popularly",
+     "adv",
+     "một cách phổ biến"
+    ]
+   ],
+   "x": [
+    [
+     "The [popularity] of e-books has grown steadily.",
+     "sau 'The' và trước 'of' → danh từ"
+    ],
+    [
+     "Cycling is becoming more [popular] in cities.",
+     "sau 'becoming more' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "equal",
+   "m": [
+    [
+     "equal",
+     "adj",
+     "bằng nhau, bình đẳng"
+    ],
+    [
+     "equality",
+     "n",
+     "sự bình đẳng"
+    ],
+    [
+     "equally",
+     "adv",
+     "bằng nhau"
+    ],
+    [
+     "inequality",
+     "n",
+     "sự bất bình đẳng"
+    ]
+   ],
+   "x": [
+    [
+     "Income [inequality] is rising in many countries.",
+     "sau 'Income' làm chủ ngữ, nghĩa 'bất bình đẳng' → inequality"
+    ],
+    [
+     "Both factors are [equally] important.",
+     "bổ nghĩa cho tính từ 'important' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "free",
+   "m": [
+    [
+     "free",
+     "adj",
+     "tự do; miễn phí"
+    ],
+    [
+     "free",
+     "v",
+     "giải phóng"
+    ],
+    [
+     "freedom",
+     "n",
+     "sự tự do"
+    ],
+    [
+     "freely",
+     "adv",
+     "một cách tự do"
+    ]
+   ],
+   "t": [
+    "same-form"
+   ],
+   "x": [
+    [
+     "Teenagers want more [freedom] from their parents.",
+     "sau 'more', làm tân ngữ → danh từ",
+     "n"
+    ],
+    [
+     "People should be able to express their opinions [freely].",
+     "bổ nghĩa cho động từ 'express' → trạng từ"
+    ]
+   ]
+  },
+  {
+   "h": "reason",
+   "m": [
+    [
+     "reason",
+     "n",
+     "lý do"
+    ],
+    [
+     "reasonable",
+     "adj",
+     "hợp lý; phải chăng"
+    ],
+    [
+     "reasonably",
+     "adv",
+     "khá; hợp lý"
+    ]
+   ],
+   "x": [
+    [
+     "The hotel rooms were clean and [reasonably] priced.",
+     "bổ nghĩa cho 'priced' → trạng từ"
+    ],
+    [
+     "It is [reasonable] to expect some delays.",
+     "sau 'It is' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "value",
+   "m": [
+    [
+     "value",
+     "n",
+     "giá trị"
+    ],
+    [
+     "value",
+     "v",
+     "coi trọng"
+    ],
+    [
+     "valuable",
+     "adj",
+     "có giá trị"
+    ],
+    [
+     "invaluable",
+     "adj",
+     "vô giá"
+    ]
+   ],
+   "t": [
+    "same-form",
+    "confusable"
+   ],
+   "x": [
+    [
+     "Work experience is extremely [valuable] for graduates.",
+     "sau 'is extremely' → tính từ"
+    ],
+    [
+     "Her advice was [invaluable] to me.",
+     "nghĩa 'vô cùng quý giá' → invaluable (không phải 'không có giá trị')"
+    ]
+   ],
+   "note": "invaluable = cực kỳ quý giá (không phải 'vô giá trị' — đó là worthless)."
+  },
+  {
+   "h": "care",
+   "m": [
+    [
+     "care",
+     "n",
+     "sự chăm sóc"
+    ],
+    [
+     "care",
+     "v",
+     "quan tâm"
+    ],
+    [
+     "careful",
+     "adj",
+     "cẩn thận"
+    ],
+    [
+     "carefully",
+     "adv",
+     "một cách cẩn thận"
+    ],
+    [
+     "careless",
+     "adj",
+     "bất cẩn"
+    ]
+   ],
+   "t": [
+    "same-form"
+   ],
+   "x": [
+    [
+     "Read the instructions [carefully] before you start.",
+     "bổ nghĩa cho động từ 'Read' → trạng từ"
+    ],
+    [
+     "Most accidents are caused by [careless] drivers.",
+     "đứng trước danh từ 'drivers' → tính từ"
+    ]
+   ]
+  },
+  {
+   "h": "occur",
+   "m": [
+    [
+     "occur",
+     "v",
+     "xảy ra"
+    ],
+    [
+     "occurrence",
+     "n",
+     "sự việc xảy ra"
+    ]
+   ],
+   "x": [
+    [
+     "Floods are now a regular [occurrence] in the area.",
+     "sau 'a regular' → danh từ"
+    ],
+    [
+     "Most accidents [occur] at home.",
+     "sau chủ ngữ 'Most accidents' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "maintain",
+   "m": [
+    [
+     "maintain",
+     "v",
+     "duy trì, bảo dưỡng"
+    ],
+    [
+     "maintenance",
+     "n",
+     "sự bảo dưỡng"
+    ]
+   ],
+   "x": [
+    [
+     "Old buildings require regular [maintenance].",
+     "sau tính từ 'regular' → danh từ"
+    ],
+    [
+     "It is hard to [maintain] a healthy diet when you travel.",
+     "sau 'to' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "persuade",
+   "m": [
+    [
+     "persuade",
+     "v",
+     "thuyết phục"
+    ],
+    [
+     "persuasion",
+     "n",
+     "sự thuyết phục"
+    ],
+    [
+     "persuasive",
+     "adj",
+     "có sức thuyết phục"
+    ]
+   ],
+   "x": [
+    [
+     "Her speech was very [persuasive].",
+     "sau 'was very' → tính từ"
+    ],
+    [
+     "It took a lot of [persuasion] to change his mind.",
+     "sau 'a lot of' → danh từ"
+    ]
+   ]
+  },
+  {
+   "h": "behave",
+   "m": [
+    [
+     "behave",
+     "v",
+     "cư xử"
+    ],
+    [
+     "behaviour",
+     "n",
+     "hành vi"
+    ],
+    [
+     "behavioural",
+     "adj",
+     "thuộc hành vi"
+    ]
+   ],
+   "x": [
+    [
+     "Violent games may influence children's [behaviour].",
+     "sau sở hữu cách 'children's' → danh từ"
+    ],
+    [
+     "Students are expected to [behave] well in class.",
+     "sau 'to' → động từ"
+    ]
+   ]
+  },
+  {
+   "h": "finance",
+   "m": [
+    [
+     "finance",
+     "n",
+     "tài chính"
+    ],
+    [
+     "finance",
+     "v",
+     "tài trợ"
+    ],
+    [
+     "financial",
+     "adj",
+     "thuộc tài chính"
+    ],
+    [
+     "financially",
+     "adv",
+     "về mặt tài chính"
+    ]
+   ],
+   "t": [
+    "same-form"
+   ],
+   "x": [
+    [
+     "Many students face serious [financial] problems.",
+     "đứng trước danh từ 'problems' → tính từ"
+    ],
+    [
+     "The project was [financed] by a private company.",
+     "sau 'was' ở thể bị động → quá khứ phân từ",
+     "v"
+    ]
+   ]
+  },
+  {
+   "h": "occupy",
+   "m": [
+    [
+     "occupy",
+     "v",
+     "chiếm giữ"
+    ],
+    [
+     "occupation",
+     "n",
+     "nghề nghiệp"
+    ],
+    [
+     "occupational",
+     "adj",
+     "thuộc nghề nghiệp"
+    ]
+   ],
+   "x": [
+    [
+     "Please state your name and [occupation] on the form.",
+     "nối với danh từ 'name' bằng 'and' → danh từ"
+    ],
+    [
+     "Back pain is a common [occupational] health problem.",
+     "đứng trước cụm danh từ → tính từ"
+    ]
+   ]
+  }
+ ]
+}

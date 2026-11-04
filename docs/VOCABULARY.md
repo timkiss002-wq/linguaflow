@@ -1,6 +1,6 @@
 # LinguaFlow — Sổ từ vựng, luyện gõ & Word Form (thiết kế M5)
 
-> Trạng thái: **M5 đã xong** (sổ từ vựng dạng bảng, tra từ, ngữ cảnh, CSV, luyện gõ mức 1–4). Word Form (mục 4) là bước tiếp theo. Đồng bộ với Google Sheets **đã bỏ** theo yêu cầu (mục 7). Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md) và [PERSONALIZATION.md](PERSONALIZATION.md).
+> Trạng thái: **M5 đã xong** (sổ từ vựng dạng bảng, tra từ, ngữ cảnh, CSV, luyện gõ mức 1–4). Word Form (mục 4) **đã xong ở M5b**. Đồng bộ với Google Sheets **đã bỏ** theo yêu cầu (mục 7). Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md) và [PERSONALIZATION.md](PERSONALIZATION.md).
 
 ## 1. Yêu cầu
 
@@ -88,8 +88,11 @@ Thêm loại lỗi **`word_form`** vào engine chấm: khi người dùng gõ m�
 *"Bạn hay dùng danh từ ở chỗ cần tính từ (7 lần tuần này)."*
 
 ### 4.6. Nguồn dữ liệu
-- Bảng dùng chung `word_families` + `word_family_members`: tôi soạn sẵn **~200 họ từ hay gặp trong IELTS**
-  (đánh dấu cần người soát), admin thêm được.
+- Bảng dùng chung `word_families`, `word_family_members`, `word_family_examples`: soạn sẵn **104 họ từ**
+  (410 dạng từ, 208 câu ví dụ kèm giải thích "vì sao" bằng tiếng Việt) trong `content/word-families.json`
+  — cần giáo viên soát lại trước khi dùng thật. Kết quả luyện tập lưu ở `word_form_attempts`.
+- Cảnh báo loại từ: chỉ hiện khi từ có **đúng một** loại trong dữ liệu họ từ (không cảnh báo increase, cost, hard…).
+- Mức 5 "đổi dạng" của luyện gõ được thay bằng trang **Word Forms** riêng (4 dạng bài + hồ sơ điểm yếu).
 - Từ chưa có trong bảng: hiện loại từ từ dictionaryapi.dev; về sau (P6) Gemini gợi ý họ từ → người dùng xác nhận.
 
 ## 5. Database (dự kiến)

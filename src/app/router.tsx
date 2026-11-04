@@ -17,6 +17,7 @@ const LessonDetailPage = lazy(() => import('@/pages/LessonDetailPage'));
 const DictationPage = lazy(() => import('@/pages/DictationPage'));
 const VocabularyPage = lazy(() => import('@/pages/VocabularyPage'));
 const VocabularyPracticePage = lazy(() => import('@/pages/VocabularyPracticePage'));
+const WordFormsPage = lazy(() => import('@/pages/WordFormsPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
@@ -43,6 +44,7 @@ export const router = createBrowserRouter([
           { path: '/my-learning', element: page(<MyLearningPage />) },
           { path: '/vocabulary', element: page(<VocabularyPage />) },
           { path: '/vocabulary/practice', element: page(<VocabularyPracticePage />) },
+          { path: '/word-forms', element: page(<WordFormsPage />) },
           { path: '/review', element: <ReviewPage /> },
           { path: '/statistics', element: <StatisticsPage /> },
           { path: '/settings', element: page(<SettingsPage />) },

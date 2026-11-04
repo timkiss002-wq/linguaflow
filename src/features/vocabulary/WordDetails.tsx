@@ -7,6 +7,9 @@ import { Input } from '@/components/ui/input';
 import { useSpeech } from '@/features/audio/useSpeech';
 import { toUserMessage } from '@/lib/errors';
 import { useUpdateWord, type VocabWord } from './api';
+import { FamilyGrid } from '@/features/wordforms/FamilyGrid';
+import { useWordFamilyIndex } from '@/features/wordforms/api';
+import { familyFor } from '@/lib/wordforms';
 
 /** Context sentence + up to 5 example sentences ("Ví dụ 1–5"), editable. */
 export function WordDetails({ word }: { word: VocabWord }) {
@@ -15,12 +18,20 @@ export function WordDetails({ word }: { word: VocabWord }) {
   const [draft, setDraft] = useState('');
   const lang = word.language === 'zh' ? 'zh' : 'en';
   const examples = word.examples ?? [];
+  const familyIndex = useWordFamilyIndex();
+  const family = word.language === 'en' && familyIndex ? familyFor(familyIndex, word.term) : null;
 
   const saveExamples = (next: string[]) =>
     update.mutate({ id: word.id, patch: { examples: next } }, { onError: (e) => toast.error(toUserMessage(e)) });
 
   return (
     <div className="space-y-3 text-sm">
+      {family && (
+        <div>
+          <p className="mb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">Word family</p>
+          <FamilyGrid family={family} highlight={word.term} />
+        </div>
+      )}
       <div>
         <p className="mb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">Context</p>
         {word.context_sentence ? (

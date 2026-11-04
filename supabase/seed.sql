@@ -225,3 +225,1352 @@ select 'b0000000-0000-4000-8000-000000000e04'::uuid, v.position, v.text, v.trans
   (8, 'Understanding these mechanisms can help learners study smarter rather than harder.', 'Hiểu những cơ chế này giúp người học học thông minh hơn thay vì vất vả hơn.')
 ) as v(position, text, translation_vi)
 where not exists (select 1 from public.lesson_sentences where lesson_id = 'b0000000-0000-4000-8000-000000000e04');
+
+
+-- Word families (IELTS word forms), from content/word-families.json.
+insert into public.word_families (id, note, traps) values ('decide', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('decide', 'decide', 'verb', 'quyết định'),
+  ('decide', 'decision', 'noun', 'sự quyết định'),
+  ('decide', 'decisive', 'adj', 'quyết đoán, mang tính quyết định'),
+  ('decide', 'decisively', 'adv', 'một cách dứt khoát'),
+  ('decide', 'indecisive', 'adj', 'thiếu quyết đoán')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('decide', 'The committee finally reached a [decision] after hours of debate.', 'decision', 'noun', 'decide', 'sau mạo từ ''a'' và đứng trước giới từ → danh từ'),
+  ('decide', 'She acted [decisively] as soon as the crisis began.', 'decisively', 'adv', 'decide', 'bổ nghĩa cho động từ ''acted'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'decide');
+insert into public.word_families (id, note, traps) values ('economy', null, array['ic-ical']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('economy', 'economy', 'noun', 'nền kinh tế'),
+  ('economy', 'economics', 'noun', 'kinh tế học'),
+  ('economy', 'economist', 'noun', 'nhà kinh tế học'),
+  ('economy', 'economic', 'adj', 'thuộc về kinh tế'),
+  ('economy', 'economical', 'adj', 'tiết kiệm'),
+  ('economy', 'economically', 'adv', 'về mặt kinh tế; tiết kiệm'),
+  ('economy', 'economize', 'verb', 'tiết kiệm')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('economy', 'The country has enjoyed strong [economic] growth this decade.', 'economic', 'adj', 'economy', 'đứng trước danh từ ''growth'', nghĩa ''thuộc về kinh tế'' → economic (không phải economical)'),
+  ('economy', 'Small cars are more [economical] to run than large ones.', 'economical', 'adj', 'economy', 'sau ''more'', nghĩa ''tiết kiệm'' → economical')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'economy');
+insert into public.word_families (id, note, traps) values ('history', null, array['ic-ical']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('history', 'history', 'noun', 'lịch sử'),
+  ('history', 'historian', 'noun', 'nhà sử học'),
+  ('history', 'historic', 'adj', 'mang tính lịch sử, quan trọng'),
+  ('history', 'historical', 'adj', 'thuộc về lịch sử'),
+  ('history', 'historically', 'adv', 'về mặt lịch sử')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('history', 'The signing of the treaty was a [historic] moment for both nations.', 'historic', 'adj', 'history', 'nghĩa ''quan trọng, đáng ghi nhớ'' → historic'),
+  ('history', 'The museum holds many [historical] documents from the 18th century.', 'historical', 'adj', 'history', 'nghĩa ''thuộc về quá khứ/lịch sử'' → historical')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'history');
+insert into public.word_families (id, note, traps) values ('sense', null, array['confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('sense', 'sense', 'noun', 'giác quan; ý thức'),
+  ('sense', 'sensible', 'adj', 'hợp lý, khôn ngoan'),
+  ('sense', 'sensitive', 'adj', 'nhạy cảm'),
+  ('sense', 'sensibly', 'adv', 'một cách hợp lý'),
+  ('sense', 'sensitivity', 'noun', 'sự nhạy cảm'),
+  ('sense', 'sensitively', 'adv', 'một cách tế nhị')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('sense', 'It would be [sensible] to save some money for emergencies.', 'sensible', 'adj', 'sense', 'nghĩa ''hợp lý'' → sensible (sensitive = nhạy cảm)'),
+  ('sense', 'Some people''s skin is very [sensitive] to sunlight.', 'sensitive', 'adj', 'sense', 'nghĩa ''nhạy cảm'' → sensitive')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'sense');
+insert into public.word_families (id, note, traps) values ('succeed', null, array['confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('succeed', 'succeed', 'verb', 'thành công'),
+  ('succeed', 'success', 'noun', 'sự thành công'),
+  ('succeed', 'successful', 'adj', 'thành công'),
+  ('succeed', 'successfully', 'adv', 'một cách thành công'),
+  ('succeed', 'succession', 'noun', 'sự kế tiếp'),
+  ('succeed', 'successive', 'adj', 'liên tiếp')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('succeed', 'The new policy was a great [success].', 'success', 'noun', 'succeed', 'sau ''a great'' (tính từ) → danh từ'),
+  ('succeed', 'The team won the title for three [successive] years.', 'successive', 'adj', 'succeed', 'nghĩa ''liên tiếp'', đứng trước danh từ ''years'' → successive (không phải successful)')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'succeed');
+insert into public.word_families (id, note, traps) values ('compete', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('compete', 'compete', 'verb', 'cạnh tranh'),
+  ('compete', 'competition', 'noun', 'sự cạnh tranh; cuộc thi'),
+  ('compete', 'competitor', 'noun', 'đối thủ'),
+  ('compete', 'competitive', 'adj', 'cạnh tranh'),
+  ('compete', 'competitively', 'adv', 'một cách cạnh tranh')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('compete', 'The job market has become extremely [competitive].', 'competitive', 'adj', 'compete', 'sau ''become'' + trạng từ ''extremely'' → tính từ'),
+  ('compete', 'There is fierce [competition] between the two companies.', 'competition', 'noun', 'compete', 'sau tính từ ''fierce'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'compete');
+insert into public.word_families (id, note, traps) values ('develop', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('develop', 'develop', 'verb', 'phát triển'),
+  ('develop', 'development', 'noun', 'sự phát triển'),
+  ('develop', 'developer', 'noun', 'nhà phát triển'),
+  ('develop', 'developed', 'adj', 'phát triển (đã)'),
+  ('develop', 'developing', 'adj', 'đang phát triển')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('develop', 'Tourism has played a key role in the [development] of the region.', 'development', 'noun', 'develop', 'sau ''the'' và trước ''of'' → danh từ'),
+  ('develop', 'Many [developing] countries lack basic infrastructure.', 'developing', 'adj', 'develop', 'nghĩa ''đang phát triển'' trước danh từ → developing')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'develop');
+insert into public.word_families (id, note, traps) values ('environment', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('environment', 'environment', 'noun', 'môi trường'),
+  ('environment', 'environmental', 'adj', 'thuộc về môi trường'),
+  ('environment', 'environmentally', 'adv', 'về mặt môi trường'),
+  ('environment', 'environmentalist', 'noun', 'nhà môi trường học')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('environment', 'Plastic waste is a serious [environmental] problem.', 'environmental', 'adj', 'environment', 'đứng trước danh từ ''problem'' → tính từ'),
+  ('environment', 'We should choose more [environmentally] friendly products.', 'environmentally', 'adv', 'environment', 'bổ nghĩa cho tính từ ''friendly'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'environment');
+insert into public.word_families (id, note, traps) values ('pollute', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('pollute', 'pollute', 'verb', 'làm ô nhiễm'),
+  ('pollute', 'pollution', 'noun', 'sự ô nhiễm'),
+  ('pollute', 'pollutant', 'noun', 'chất gây ô nhiễm'),
+  ('pollute', 'polluted', 'adj', 'bị ô nhiễm')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('pollute', 'Air [pollution] is a major cause of breathing problems.', 'pollution', 'noun', 'pollute', 'sau ''Air'' (danh từ làm bổ ngữ) và làm chủ ngữ → danh từ'),
+  ('pollute', 'Factories continue to [pollute] the river.', 'pollute', 'verb', 'pollution', 'sau ''to'' → động từ nguyên mẫu')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'pollute');
+insert into public.word_families (id, note, traps) values ('produce', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('produce', 'produce', 'verb', 'sản xuất'),
+  ('produce', 'product', 'noun', 'sản phẩm'),
+  ('produce', 'production', 'noun', 'sự sản xuất'),
+  ('produce', 'producer', 'noun', 'nhà sản xuất'),
+  ('produce', 'productive', 'adj', 'năng suất'),
+  ('produce', 'productivity', 'noun', 'năng suất'),
+  ('produce', 'productively', 'adv', 'một cách hiệu quả')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('produce', 'Working from home can make some employees more [productive].', 'productive', 'adj', 'produce', 'sau ''more'' bổ nghĩa cho tân ngữ → tính từ'),
+  ('produce', 'The factory increased its [production] by 20% last year.', 'production', 'noun', 'produce', 'sau tính từ sở hữu ''its'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'produce');
+insert into public.word_families (id, note, traps) values ('employ', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('employ', 'employ', 'verb', 'thuê, tuyển dụng'),
+  ('employ', 'employment', 'noun', 'việc làm'),
+  ('employ', 'employer', 'noun', 'người sử dụng lao động'),
+  ('employ', 'employee', 'noun', 'nhân viên'),
+  ('employ', 'unemployed', 'adj', 'thất nghiệp'),
+  ('employ', 'unemployment', 'noun', 'tình trạng thất nghiệp')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('employ', 'The government aims to reduce [unemployment] among young people.', 'unemployment', 'noun', 'employ', 'sau động từ ''reduce'' (tân ngữ) → danh từ'),
+  ('employ', 'Many [unemployed] graduates are retraining in new skills.', 'unemployed', 'adj', 'employ', 'đứng trước danh từ ''graduates'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'employ');
+insert into public.word_families (id, note, traps) values ('educate', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('educate', 'educate', 'verb', 'giáo dục'),
+  ('educate', 'education', 'noun', 'sự giáo dục'),
+  ('educate', 'educational', 'adj', 'mang tính giáo dục'),
+  ('educate', 'educated', 'adj', 'có học thức'),
+  ('educate', 'educator', 'noun', 'nhà giáo dục')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('educate', 'Children learn a lot from [educational] games.', 'educational', 'adj', 'educate', 'đứng trước danh từ ''games'' → tính từ'),
+  ('educate', 'Access to [education] should be a basic right.', 'education', 'noun', 'educate', 'sau giới từ ''to'' (to ở đây là giới từ) → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'educate');
+insert into public.word_families (id, note, traps) values ('inform', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('inform', 'inform', 'verb', 'thông báo'),
+  ('inform', 'information', 'noun', 'thông tin'),
+  ('inform', 'informative', 'adj', 'nhiều thông tin, bổ ích'),
+  ('inform', 'informed', 'adj', 'có hiểu biết')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('inform', 'The lecture was extremely [informative].', 'informative', 'adj', 'inform', 'sau ''was'' + trạng từ → tính từ'),
+  ('inform', 'Voters need to make [informed] decisions.', 'informed', 'adj', 'inform', 'đứng trước danh từ, nghĩa ''có hiểu biết'' → informed')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'inform');
+insert into public.word_families (id, note, traps) values ('communicate', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('communicate', 'communicate', 'verb', 'giao tiếp'),
+  ('communicate', 'communication', 'noun', 'sự giao tiếp'),
+  ('communicate', 'communicative', 'adj', 'cởi mở, thích giao tiếp')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('communicate', 'Good [communication] is essential in any team.', 'communication', 'noun', 'communicate', 'sau tính từ ''Good'' và làm chủ ngữ → danh từ'),
+  ('communicate', 'Teenagers often prefer to [communicate] through social media.', 'communicate', 'verb', 'communication', 'sau ''to'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'communicate');
+insert into public.word_families (id, note, traps) values ('create', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('create', 'create', 'verb', 'tạo ra'),
+  ('create', 'creation', 'noun', 'sự tạo ra'),
+  ('create', 'creative', 'adj', 'sáng tạo'),
+  ('create', 'creativity', 'noun', 'sự sáng tạo'),
+  ('create', 'creatively', 'adv', 'một cách sáng tạo'),
+  ('create', 'creator', 'noun', 'người tạo ra')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('create', 'Art lessons encourage [creativity] in young children.', 'creativity', 'noun', 'create', 'sau động từ ''encourage'' (tân ngữ) → danh từ'),
+  ('create', 'She solved the problem [creatively].', 'creatively', 'adv', 'create', 'bổ nghĩa cho động từ ''solved'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'create');
+insert into public.word_families (id, note, traps) values ('analyse', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('analyse', 'analyse', 'verb', 'phân tích'),
+  ('analyse', 'analysis', 'noun', 'sự phân tích'),
+  ('analyse', 'analyst', 'noun', 'nhà phân tích'),
+  ('analyse', 'analytical', 'adj', 'mang tính phân tích'),
+  ('analyse', 'analytically', 'adv', 'một cách phân tích')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('analyse', 'A careful [analysis] of the data showed a clear trend.', 'analysis', 'noun', 'analyse', 'sau ''A careful'' (mạo từ + tính từ) → danh từ'),
+  ('analyse', 'The job requires strong [analytical] skills.', 'analytical', 'adj', 'analyse', 'đứng trước danh từ ''skills'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'analyse');
+insert into public.word_families (id, note, traps) values ('benefit', null, array['same-form']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('benefit', 'benefit', 'noun', 'lợi ích'),
+  ('benefit', 'benefit', 'verb', 'có lợi, hưởng lợi'),
+  ('benefit', 'beneficial', 'adj', 'có lợi'),
+  ('benefit', 'beneficiary', 'noun', 'người thụ hưởng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('benefit', 'Regular exercise is [beneficial] to both body and mind.', 'beneficial', 'adj', 'benefit', 'sau ''is'' → tính từ (benefit là danh từ/động từ)'),
+  ('benefit', 'Everyone will [benefit] from the new transport system.', 'benefit', 'verb', 'beneficial', 'sau ''will'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'benefit');
+insert into public.word_families (id, note, traps) values ('increase', null, array['same-form']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('increase', 'increase', 'noun', 'sự tăng'),
+  ('increase', 'increase', 'verb', 'tăng'),
+  ('increase', 'increasing', 'adj', 'ngày càng tăng'),
+  ('increase', 'increasingly', 'adv', 'ngày càng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('increase', 'Online shopping is becoming [increasingly] popular.', 'increasingly', 'adv', 'increase', 'bổ nghĩa cho tính từ ''popular'' → trạng từ'),
+  ('increase', 'There was a sharp [increase] in house prices.', 'increase', 'noun', 'increasing', 'sau ''a sharp'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'increase');
+insert into public.word_families (id, note, traps) values ('rely', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('rely', 'rely', 'verb', 'dựa vào'),
+  ('rely', 'reliance', 'noun', 'sự phụ thuộc'),
+  ('rely', 'reliable', 'adj', 'đáng tin cậy'),
+  ('rely', 'reliably', 'adv', 'một cách đáng tin cậy'),
+  ('rely', 'reliability', 'noun', 'độ tin cậy'),
+  ('rely', 'unreliable', 'adj', 'không đáng tin cậy')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('rely', 'Public transport in the city is cheap and [reliable].', 'reliable', 'adj', 'rely', 'nối bằng ''and'' với tính từ ''cheap'' → tính từ'),
+  ('rely', 'Our [reliance] on fossil fuels must be reduced.', 'reliance', 'noun', 'rely', 'sau tính từ sở hữu ''Our'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'rely');
+insert into public.word_families (id, note, traps) values ('depend', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('depend', 'depend', 'verb', 'phụ thuộc'),
+  ('depend', 'dependence', 'noun', 'sự phụ thuộc'),
+  ('depend', 'dependent', 'adj', 'phụ thuộc'),
+  ('depend', 'independent', 'adj', 'độc lập'),
+  ('depend', 'independence', 'noun', 'sự độc lập'),
+  ('depend', 'independently', 'adv', 'một cách độc lập')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('depend', 'Many students become financially [independent] after graduating.', 'independent', 'adj', 'depend', 'sau ''become'' + trạng từ ''financially'' → tính từ'),
+  ('depend', 'The country celebrated fifty years of [independence].', 'independence', 'noun', 'depend', 'sau giới từ ''of'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'depend');
+insert into public.word_families (id, note, traps) values ('significance', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('significance', 'signify', 'verb', 'biểu thị'),
+  ('significance', 'significance', 'noun', 'tầm quan trọng'),
+  ('significance', 'significant', 'adj', 'đáng kể, quan trọng'),
+  ('significance', 'significantly', 'adv', 'một cách đáng kể'),
+  ('significance', 'insignificant', 'adj', 'không đáng kể')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('significance', 'Prices have risen [significantly] since last year.', 'significantly', 'adv', 'significance', 'bổ nghĩa cho động từ ''risen'' → trạng từ'),
+  ('significance', 'Few people understood the [significance] of the discovery.', 'significance', 'noun', 'signify', 'sau ''the'' và trước ''of'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'significance');
+insert into public.word_families (id, note, traps) values ('effect', 'affect (v) — effect (n): Stress can affect your sleep. / Stress has an effect on your sleep.', array['confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('effect', 'effect', 'noun', 'tác động, ảnh hưởng'),
+  ('effect', 'effective', 'adj', 'hiệu quả'),
+  ('effect', 'effectively', 'adv', 'một cách hiệu quả'),
+  ('effect', 'effectiveness', 'noun', 'tính hiệu quả'),
+  ('effect', 'ineffective', 'adj', 'không hiệu quả'),
+  ('effect', 'affect', 'verb', 'ảnh hưởng đến')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('effect', 'Smoking has a harmful [effect] on health.', 'effect', 'noun', 'effective', 'sau ''a harmful'' → danh từ (affect là động từ)'),
+  ('effect', 'Vaccines are an [effective] way to prevent disease.', 'effective', 'adj', 'effect', 'sau ''an'', trước danh từ ''way'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'effect');
+insert into public.word_families (id, note, traps) values ('efficient', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('efficient', 'efficient', 'adj', 'hiệu suất cao, năng suất'),
+  ('efficient', 'efficiency', 'noun', 'hiệu suất'),
+  ('efficient', 'efficiently', 'adv', 'một cách hiệu quả'),
+  ('efficient', 'inefficient', 'adj', 'kém hiệu quả')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('efficient', 'LED bulbs use energy more [efficiently] than old bulbs.', 'efficiently', 'adv', 'efficient', 'bổ nghĩa cho động từ ''use'' → trạng từ'),
+  ('efficient', 'The new system improved the [efficiency] of the factory.', 'efficiency', 'noun', 'efficient', 'sau ''the'' và trước ''of'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'efficient');
+insert into public.word_families (id, note, traps) values ('able', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('able', 'able', 'adj', 'có thể, có năng lực'),
+  ('able', 'ability', 'noun', 'khả năng'),
+  ('able', 'enable', 'verb', 'cho phép, giúp'),
+  ('able', 'unable', 'adj', 'không thể'),
+  ('able', 'disability', 'noun', 'khuyết tật')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('able', 'The internet [enables] people to work from anywhere.', 'enables', 'verb', 'able', 'chủ ngữ số ít ''The internet'' + tân ngữ ''people'' → động từ (thêm -s)'),
+  ('able', 'Reading improves children''s [ability] to concentrate.', 'ability', 'noun', 'able', 'sau sở hữu cách ''children''s'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'able');
+insert into public.word_families (id, note, traps) values ('responsible', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('responsible', 'responsible', 'adj', 'có trách nhiệm'),
+  ('responsible', 'responsibility', 'noun', 'trách nhiệm'),
+  ('responsible', 'responsibly', 'adv', 'một cách có trách nhiệm'),
+  ('responsible', 'irresponsible', 'adj', 'vô trách nhiệm')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('responsible', 'Parents have a [responsibility] to keep their children safe.', 'responsibility', 'noun', 'responsible', 'sau mạo từ ''a'' → danh từ'),
+  ('responsible', 'Tourists should behave [responsibly] in protected areas.', 'responsibly', 'adv', 'responsible', 'bổ nghĩa cho động từ ''behave'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'responsible');
+insert into public.word_families (id, note, traps) values ('possible', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('possible', 'possible', 'adj', 'có thể'),
+  ('possible', 'possibility', 'noun', 'khả năng'),
+  ('possible', 'possibly', 'adv', 'có lẽ'),
+  ('possible', 'impossible', 'adj', 'không thể')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('possible', 'There is a strong [possibility] that it will rain tomorrow.', 'possibility', 'noun', 'possible', 'sau ''a strong'' → danh từ'),
+  ('possible', 'It is almost [impossible] to find a cheap flat in the city centre.', 'impossible', 'adj', 'possible', 'sau ''is'' + ''almost'', nghĩa phủ định → tính từ impossible')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'possible');
+insert into public.word_families (id, note, traps) values ('necessary', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('necessary', 'necessary', 'adj', 'cần thiết'),
+  ('necessary', 'necessity', 'noun', 'sự cần thiết; nhu yếu phẩm'),
+  ('necessary', 'necessarily', 'adv', 'nhất thiết'),
+  ('necessary', 'unnecessary', 'adj', 'không cần thiết'),
+  ('necessary', 'necessitate', 'verb', 'đòi hỏi')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('necessary', 'Expensive products are not [necessarily] better.', 'necessarily', 'adv', 'necessary', 'bổ nghĩa cho tính từ ''better'' sau ''not'' → trạng từ'),
+  ('necessary', 'A car is a [necessity] for people living in rural areas.', 'necessity', 'noun', 'necessary', 'sau mạo từ ''a'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'necessary');
+insert into public.word_families (id, note, traps) values ('important', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('important', 'important', 'adj', 'quan trọng'),
+  ('important', 'importance', 'noun', 'tầm quan trọng'),
+  ('important', 'importantly', 'adv', 'quan trọng là')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('important', 'Teachers stress the [importance] of reading every day.', 'importance', 'noun', 'important', 'sau ''the'' và trước ''of'' → danh từ'),
+  ('important', 'More [importantly], the plan is affordable.', 'importantly', 'adv', 'important', 'đứng đầu câu bổ nghĩa cả câu → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'important');
+insert into public.word_families (id, note, traps) values ('differ', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('differ', 'differ', 'verb', 'khác nhau'),
+  ('differ', 'difference', 'noun', 'sự khác biệt'),
+  ('differ', 'different', 'adj', 'khác'),
+  ('differ', 'differently', 'adv', 'một cách khác'),
+  ('differ', 'differentiate', 'verb', 'phân biệt')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('differ', 'There is a big [difference] between the two proposals.', 'difference', 'noun', 'differ', 'sau ''a big'' → danh từ'),
+  ('differ', 'Men and women often see the issue [differently].', 'differently', 'adv', 'differ', 'bổ nghĩa cho động từ ''see'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'differ');
+insert into public.word_families (id, note, traps) values ('similar', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('similar', 'similar', 'adj', 'tương tự'),
+  ('similar', 'similarity', 'noun', 'sự tương đồng'),
+  ('similar', 'similarly', 'adv', 'tương tự như vậy')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('similar', 'There are many [similarities] between the two languages.', 'similarities', 'noun', 'similar', 'sau ''many'' (số nhiều) → danh từ số nhiều'),
+  ('similar', '[Similarly], prices in Japan have also fallen.', 'Similarly', 'adv', 'similar', 'đứng đầu câu, nối ý → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'similar');
+insert into public.word_families (id, note, traps) values ('grow', null, array['irregular']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('grow', 'grow', 'verb', 'phát triển, trồng'),
+  ('grow', 'growth', 'noun', 'sự tăng trưởng'),
+  ('grow', 'growing', 'adj', 'ngày càng tăng'),
+  ('grow', 'grown', 'adj', 'trưởng thành')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('grow', 'The rapid [growth] of cities has caused housing shortages.', 'growth', 'noun', 'grow', 'sau ''The rapid'' → danh từ (không phải ''grow'')'),
+  ('grow', 'There is [growing] concern about climate change.', 'growing', 'adj', 'grow', 'đứng trước danh từ ''concern'', nghĩa ''ngày càng tăng'' → growing')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'grow');
+insert into public.word_families (id, note, traps) values ('die', null, array['irregular', 'ly-adj']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('die', 'die', 'verb', 'chết'),
+  ('die', 'death', 'noun', 'cái chết'),
+  ('die', 'dead', 'adj', 'chết (đã)'),
+  ('die', 'deadly', 'adj', 'chết người'),
+  ('die', 'dying', 'adj', 'sắp chết')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('die', 'Road accidents are a leading cause of [death] among young people.', 'death', 'noun', 'die', 'sau giới từ ''of'' → danh từ'),
+  ('die', 'The virus can be [deadly] for elderly people.', 'deadly', 'adj', 'die', 'sau ''can be'' → tính từ (deadly là tính từ dù có đuôi -ly)')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'die');
+insert into public.word_families (id, note, traps) values ('choose', null, array['irregular']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('choose', 'choose', 'verb', 'chọn'),
+  ('choose', 'choice', 'noun', 'sự lựa chọn'),
+  ('choose', 'choosy', 'adj', 'kén chọn')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('choose', 'Students have a wide [choice] of courses.', 'choice', 'noun', 'choose', 'sau ''a wide'' → danh từ'),
+  ('choose', 'You can [choose] any seat you like.', 'choose', 'verb', 'choice', 'sau ''can'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'choose');
+insert into public.word_families (id, note, traps) values ('high', null, array['irregular']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('high', 'high', 'adj', 'cao'),
+  ('high', 'height', 'noun', 'chiều cao'),
+  ('high', 'heighten', 'verb', 'nâng cao'),
+  ('high', 'highly', 'adv', 'rất, hết sức')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('high', 'The building reaches a [height] of 300 metres.', 'height', 'noun', 'high', 'sau mạo từ ''a'' và trước ''of'' → danh từ'),
+  ('high', 'She is a [highly] respected scientist.', 'highly', 'adv', 'high', 'bổ nghĩa cho tính từ ''respected'' → trạng từ highly (không dùng ''high'')')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'high');
+insert into public.word_families (id, note, traps) values ('long', null, array['irregular']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('long', 'long', 'adj', 'dài'),
+  ('long', 'length', 'noun', 'chiều dài'),
+  ('long', 'lengthen', 'verb', 'kéo dài'),
+  ('long', 'lengthy', 'adj', 'dài dòng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('long', 'The bridge is two kilometres in [length].', 'length', 'noun', 'long', 'sau giới từ ''in'' → danh từ'),
+  ('long', 'Many people complained about the [lengthy] application process.', 'lengthy', 'adj', 'long', 'đứng trước cụm danh từ → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'long');
+insert into public.word_families (id, note, traps) values ('strong', null, array['irregular']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('strong', 'strong', 'adj', 'mạnh'),
+  ('strong', 'strength', 'noun', 'sức mạnh, điểm mạnh'),
+  ('strong', 'strengthen', 'verb', 'củng cố'),
+  ('strong', 'strongly', 'adv', 'mạnh mẽ')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('strong', 'Exercise helps to [strengthen] the heart.', 'strengthen', 'verb', 'strong', 'sau ''to'' → động từ'),
+  ('strong', 'I [strongly] believe that education should be free.', 'strongly', 'adv', 'strong', 'bổ nghĩa cho động từ ''believe'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'strong');
+insert into public.word_families (id, note, traps) values ('wide', null, array['irregular']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('wide', 'wide', 'adj', 'rộng'),
+  ('wide', 'width', 'noun', 'chiều rộng'),
+  ('wide', 'widen', 'verb', 'mở rộng'),
+  ('wide', 'widely', 'adv', 'rộng rãi')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('wide', 'English is [widely] spoken around the world.', 'widely', 'adv', 'wide', 'bổ nghĩa cho ''spoken'' → trạng từ'),
+  ('wide', 'The council plans to [widen] the main road.', 'widen', 'verb', 'wide', 'sau ''to'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'wide');
+insert into public.word_families (id, note, traps) values ('deep', null, array['irregular']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('deep', 'deep', 'adj', 'sâu'),
+  ('deep', 'depth', 'noun', 'chiều sâu'),
+  ('deep', 'deepen', 'verb', 'làm sâu thêm'),
+  ('deep', 'deeply', 'adv', 'sâu sắc')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('deep', 'The lake has a [depth] of about 50 metres.', 'depth', 'noun', 'deep', 'sau mạo từ ''a'' → danh từ'),
+  ('deep', 'Many residents were [deeply] affected by the floods.', 'deeply', 'adv', 'deep', 'bổ nghĩa cho ''affected'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'deep');
+insert into public.word_families (id, note, traps) values ('friend', 'friendly là tính từ. Muốn nói ''một cách thân thiện'' → in a friendly way.', array['ly-adj']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('friend', 'friend', 'noun', 'bạn'),
+  ('friend', 'friendship', 'noun', 'tình bạn'),
+  ('friend', 'friendly', 'adj', 'thân thiện'),
+  ('friend', 'unfriendly', 'adj', 'không thân thiện')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('friend', 'The staff at the hotel were very [friendly].', 'friendly', 'adj', 'friend', 'sau ''were very'' → tính từ (friendly là tính từ, không phải trạng từ)'),
+  ('friend', 'Their [friendship] lasted for over forty years.', 'friendship', 'noun', 'friend', 'sau tính từ sở hữu ''Their'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'friend');
+insert into public.word_families (id, note, traps) values ('cost', null, array['ly-adj', 'same-form']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('cost', 'cost', 'noun', 'chi phí'),
+  ('cost', 'cost', 'verb', 'tốn'),
+  ('cost', 'costly', 'adj', 'đắt đỏ, tốn kém')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('cost', 'Repairing the old bridge would be very [costly].', 'costly', 'adj', 'cost', 'sau ''be very'' → tính từ (costly là tính từ)'),
+  ('cost', 'The living [cost] in big cities keeps rising.', 'cost', 'noun', 'costly', 'sau ''The living'' làm chủ ngữ → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'cost');
+insert into public.word_families (id, note, traps) values ('likely', null, array['ly-adj']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('likely', 'likely', 'adj', 'có khả năng'),
+  ('likely', 'unlikely', 'adj', 'không chắc xảy ra'),
+  ('likely', 'likelihood', 'noun', 'khả năng xảy ra')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('likely', 'It is [unlikely] that prices will fall next year.', 'unlikely', 'adj', 'likely', 'sau ''It is'', nghĩa phủ định → tính từ'),
+  ('likely', 'Smoking increases the [likelihood] of heart disease.', 'likelihood', 'noun', 'likely', 'sau ''the'' và trước ''of'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'likely');
+insert into public.word_families (id, note, traps) values ('arrive', null, array['al-noun']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('arrive', 'arrive', 'verb', 'đến'),
+  ('arrive', 'arrival', 'noun', 'sự đến')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('arrive', 'The [arrival] of the internet changed how we shop.', 'arrival', 'noun', 'arrive', 'sau ''The'' và trước ''of'' → danh từ (arrival là danh từ dù đuôi -al)'),
+  ('arrive', 'The train is expected to [arrive] at noon.', 'arrive', 'verb', 'arrival', 'sau ''to'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'arrive');
+insert into public.word_families (id, note, traps) values ('approve', null, array['al-noun']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('approve', 'approve', 'verb', 'chấp thuận'),
+  ('approve', 'approval', 'noun', 'sự chấp thuận'),
+  ('approve', 'disapprove', 'verb', 'không tán thành'),
+  ('approve', 'disapproval', 'noun', 'sự phản đối')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('approve', 'The project needs [approval] from the city council.', 'approval', 'noun', 'approve', 'sau ''needs'' (tân ngữ) → danh từ'),
+  ('approve', 'Many parents [disapprove] of violent video games.', 'disapprove', 'verb', 'approve', 'chủ ngữ + động từ + ''of'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'approve');
+insert into public.word_families (id, note, traps) values ('propose', null, array['al-noun']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('propose', 'propose', 'verb', 'đề xuất'),
+  ('propose', 'proposal', 'noun', 'bản đề xuất')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('propose', 'The government rejected the [proposal] to raise taxes.', 'proposal', 'noun', 'propose', 'sau ''the'' → danh từ'),
+  ('propose', 'Experts [propose] a ban on single-use plastics.', 'propose', 'verb', 'proposal', 'sau chủ ngữ số nhiều ''Experts'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'propose');
+insert into public.word_families (id, note, traps) values ('survive', null, array['al-noun']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('survive', 'survive', 'verb', 'sống sót'),
+  ('survive', 'survival', 'noun', 'sự sống sót'),
+  ('survive', 'survivor', 'noun', 'người sống sót')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('survive', 'Clean water is essential for [survival].', 'survival', 'noun', 'survive', 'sau giới từ ''for'' → danh từ'),
+  ('survive', 'Only a few [survivors] were found after the earthquake.', 'survivors', 'noun', 'survive', 'sau ''a few'' → danh từ đếm được số nhiều (chỉ người)')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'survive');
+insert into public.word_families (id, note, traps) values ('bore', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('bore', 'bore', 'verb', 'làm chán'),
+  ('bore', 'bored', 'adj', 'cảm thấy chán'),
+  ('bore', 'boring', 'adj', 'gây chán, tẻ nhạt'),
+  ('bore', 'boredom', 'noun', 'sự buồn chán')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('bore', 'Many students feel [bored] during long lectures.', 'bored', 'adj', 'bore', 'người cảm thấy → -ed'),
+  ('bore', 'The film was so [boring] that I fell asleep.', 'boring', 'adj', 'bore', 'vật gây ra cảm giác → -ing')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'bore');
+insert into public.word_families (id, note, traps) values ('interest', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('interest', 'interest', 'noun', 'sự quan tâm'),
+  ('interest', 'interested', 'adj', 'quan tâm'),
+  ('interest', 'interesting', 'adj', 'thú vị'),
+  ('interest', 'interestingly', 'adv', 'điều thú vị là')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('interest', 'Young people are less [interested] in politics than before.', 'interested', 'adj', 'interest', 'người cảm thấy + ''in'' → -ed'),
+  ('interest', '[Interestingly], the poorest regions recycle the most.', 'Interestingly', 'adv', 'interest', 'đứng đầu câu, bình luận cả câu → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'interest');
+insert into public.word_families (id, note, traps) values ('excite', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('excite', 'excite', 'verb', 'làm phấn khích'),
+  ('excite', 'excited', 'adj', 'hào hứng'),
+  ('excite', 'exciting', 'adj', 'thú vị, gây hào hứng'),
+  ('excite', 'excitement', 'noun', 'sự phấn khích')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('excite', 'Travelling abroad for the first time is an [exciting] experience.', 'exciting', 'adj', 'excite', 'vật/sự việc gây cảm giác, trước danh từ → -ing'),
+  ('excite', 'The children could hardly hide their [excitement].', 'excitement', 'noun', 'excite', 'sau ''their'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'excite');
+insert into public.word_families (id, note, traps) values ('confuse', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('confuse', 'confuse', 'verb', 'làm bối rối'),
+  ('confuse', 'confused', 'adj', 'bối rối'),
+  ('confuse', 'confusing', 'adj', 'gây bối rối'),
+  ('confuse', 'confusion', 'noun', 'sự nhầm lẫn')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('confuse', 'The instructions were [confusing], so nobody finished the task.', 'confusing', 'adj', 'confuse', 'sự vật gây ra cảm giác → -ing'),
+  ('confuse', 'There was some [confusion] about the new timetable.', 'confusion', 'noun', 'confuse', 'sau ''some'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'confuse');
+insert into public.word_families (id, note, traps) values ('satisfy', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('satisfy', 'satisfy', 'verb', 'làm hài lòng'),
+  ('satisfy', 'satisfied', 'adj', 'hài lòng'),
+  ('satisfy', 'satisfying', 'adj', 'mang lại sự hài lòng'),
+  ('satisfy', 'satisfaction', 'noun', 'sự hài lòng'),
+  ('satisfy', 'satisfactory', 'adj', 'đạt yêu cầu')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('satisfy', 'Most customers were [satisfied] with the service.', 'satisfied', 'adj', 'satisfy', 'người cảm thấy + ''with'' → -ed'),
+  ('satisfy', 'Job [satisfaction] matters more than salary for many workers.', 'satisfaction', 'noun', 'satisfy', 'sau ''Job'' làm chủ ngữ → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'satisfy');
+insert into public.word_families (id, note, traps) values ('observe', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('observe', 'observe', 'verb', 'quan sát'),
+  ('observe', 'observation', 'noun', 'sự quan sát'),
+  ('observe', 'observer', 'noun', 'người quan sát'),
+  ('observe', 'observant', 'adj', 'tinh ý, giỏi quan sát')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('observe', 'Good scientists are very [observant].', 'observant', 'adj', 'observe', 'sau ''are very'' → tính từ'),
+  ('observe', 'The study is based on careful [observation] of animal behaviour.', 'observation', 'noun', 'observe', 'sau tính từ ''careful'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'observe');
+insert into public.word_families (id, note, traps) values ('announce', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('announce', 'announce', 'verb', 'thông báo, công bố'),
+  ('announce', 'announcement', 'noun', 'thông báo'),
+  ('announce', 'announcer', 'noun', 'phát thanh viên')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('announce', 'The company will [announce] its results next week.', 'announce', 'verb', 'announcement', 'sau ''will'' → động từ'),
+  ('announce', 'The [announcement] was made on national television.', 'announcement', 'noun', 'announce', 'sau ''The'' làm chủ ngữ → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'announce');
+insert into public.word_families (id, note, traps) values ('celebrate', null, array['ed-ing']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('celebrate', 'celebrate', 'verb', 'kỷ niệm, ăn mừng'),
+  ('celebrate', 'celebration', 'noun', 'lễ kỷ niệm'),
+  ('celebrate', 'celebrated', 'adj', 'nổi tiếng, được ca ngợi'),
+  ('celebrate', 'celebrity', 'noun', 'người nổi tiếng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('celebrate', 'He is a [celebrated] author whose books are read worldwide.', 'celebrated', 'adj', 'celebrate', 'đứng trước danh từ ''author'', nghĩa ''nổi tiếng'' → tính từ celebrated'),
+  ('celebrate', 'The city held a huge [celebration] for its 1000th birthday.', 'celebration', 'noun', 'celebrate', 'sau ''a huge'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'celebrate');
+insert into public.word_families (id, note, traps) values ('accelerate', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('accelerate', 'accelerate', 'verb', 'tăng tốc'),
+  ('accelerate', 'acceleration', 'noun', 'sự tăng tốc'),
+  ('accelerate', 'accelerated', 'adj', 'được đẩy nhanh')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('accelerate', 'Governments must [accelerate] the shift to clean energy.', 'accelerate', 'verb', 'acceleration', 'sau ''must'' → động từ'),
+  ('accelerate', 'The car''s [acceleration] is impressive for its size.', 'acceleration', 'noun', 'accelerate', 'sau sở hữu cách ''The car''s'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'accelerate');
+insert into public.word_families (id, note, traps) values ('deprive', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('deprive', 'deprive', 'verb', 'tước đoạt'),
+  ('deprive', 'deprived', 'adj', 'thiếu thốn, khó khăn'),
+  ('deprive', 'deprivation', 'noun', 'sự thiếu thốn')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('deprive', 'Children from [deprived] areas often have fewer opportunities.', 'deprived', 'adj', 'deprive', 'đứng trước danh từ ''areas'' → tính từ'),
+  ('deprive', 'Sleep [deprivation] can seriously affect your health.', 'deprivation', 'noun', 'deprive', 'sau ''Sleep'' làm chủ ngữ → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'deprive');
+insert into public.word_families (id, note, traps) values ('suffice', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('suffice', 'suffice', 'verb', 'đủ'),
+  ('suffice', 'sufficient', 'adj', 'đủ'),
+  ('suffice', 'sufficiently', 'adv', 'đủ'),
+  ('suffice', 'insufficient', 'adj', 'không đủ'),
+  ('suffice', 'sufficiency', 'noun', 'sự đầy đủ')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('suffice', 'There is [insufficient] evidence to prove the theory.', 'insufficient', 'adj', 'suffice', 'đứng trước danh từ ''evidence'', nghĩa phủ định → tính từ'),
+  ('suffice', 'The bridge is not [sufficiently] strong for heavy lorries.', 'sufficiently', 'adv', 'suffice', 'bổ nghĩa cho tính từ ''strong'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'suffice');
+insert into public.word_families (id, note, traps) values ('acquaint', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('acquaint', 'acquaint', 'verb', 'làm quen'),
+  ('acquaint', 'acquaintance', 'noun', 'người quen; sự hiểu biết'),
+  ('acquaint', 'acquainted', 'adj', 'quen biết')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('acquaint', 'She is not a close friend, just an [acquaintance].', 'acquaintance', 'noun', 'acquaint', 'sau mạo từ ''an'' → danh từ'),
+  ('acquaint', 'New staff need time to get [acquainted] with the system.', 'acquainted', 'adj', 'acquaint', 'sau ''get'' + ''with'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'acquaint');
+insert into public.word_families (id, note, traps) values ('demolish', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('demolish', 'demolish', 'verb', 'phá dỡ'),
+  ('demolish', 'demolition', 'noun', 'sự phá dỡ')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('demolish', 'The council decided to [demolish] the old factory.', 'demolish', 'verb', 'demolition', 'sau ''to'' → động từ'),
+  ('demolish', 'The [demolition] of the stadium took six months.', 'demolition', 'noun', 'demolish', 'sau ''The'' và trước ''of'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'demolish');
+insert into public.word_families (id, note, traps) values ('urban', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('urban', 'urban', 'adj', 'thuộc đô thị'),
+  ('urban', 'urbanize', 'verb', 'đô thị hoá'),
+  ('urban', 'urbanization', 'noun', 'sự đô thị hoá')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('urban', 'Rapid [urbanization] has put pressure on public services.', 'urbanization', 'noun', 'urban', 'sau tính từ ''Rapid'' làm chủ ngữ → danh từ'),
+  ('urban', 'Most of the population now lives in [urban] areas.', 'urban', 'adj', 'urbanize', 'đứng trước danh từ ''areas'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'urban');
+insert into public.word_families (id, note, traps) values ('globe', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('globe', 'globe', 'noun', 'quả địa cầu'),
+  ('globe', 'global', 'adj', 'toàn cầu'),
+  ('globe', 'globally', 'adv', 'trên toàn cầu'),
+  ('globe', 'globalization', 'noun', 'toàn cầu hoá')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('globe', '[Globalization] has made products cheaper but jobs less secure.', 'Globalization', 'noun', 'globe', 'đứng đầu câu làm chủ ngữ → danh từ'),
+  ('globe', 'The company now operates [globally].', 'globally', 'adv', 'globe', 'bổ nghĩa cho động từ ''operates'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'globe');
+insert into public.word_families (id, note, traps) values ('industry', null, array['confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('industry', 'industry', 'noun', 'ngành công nghiệp'),
+  ('industry', 'industrial', 'adj', 'thuộc công nghiệp'),
+  ('industry', 'industrialize', 'verb', 'công nghiệp hoá'),
+  ('industry', 'industrialization', 'noun', 'sự công nghiệp hoá'),
+  ('industry', 'industrious', 'adj', 'cần cù, siêng năng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('industry', 'The river was polluted by [industrial] waste.', 'industrial', 'adj', 'industry', 'nghĩa ''thuộc công nghiệp'' trước danh từ → industrial'),
+  ('industry', 'She is an [industrious] student who never misses a class.', 'industrious', 'adj', 'industry', 'nghĩa ''chăm chỉ'' → industrious (không phải industrial)')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'industry');
+insert into public.word_families (id, note, traps) values ('technology', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('technology', 'technology', 'noun', 'công nghệ'),
+  ('technology', 'technological', 'adj', 'thuộc công nghệ'),
+  ('technology', 'technologically', 'adv', 'về mặt công nghệ')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('technology', '[Technological] advances have changed the way we work.', 'Technological', 'adj', 'technology', 'đứng trước danh từ ''advances'' → tính từ'),
+  ('technology', 'Japan is one of the most [technologically] advanced countries.', 'technologically', 'adv', 'technology', 'bổ nghĩa cho tính từ ''advanced'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'technology');
+insert into public.word_families (id, note, traps) values ('science', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('science', 'science', 'noun', 'khoa học'),
+  ('science', 'scientific', 'adj', 'mang tính khoa học'),
+  ('science', 'scientifically', 'adv', 'một cách khoa học'),
+  ('science', 'scientist', 'noun', 'nhà khoa học')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('science', 'There is no [scientific] proof that the product works.', 'scientific', 'adj', 'science', 'đứng trước danh từ ''proof'' → tính từ'),
+  ('science', 'The claims have not been [scientifically] tested.', 'scientifically', 'adv', 'science', 'bổ nghĩa cho ''tested'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'science');
+insert into public.word_families (id, note, traps) values ('nature', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('nature', 'nature', 'noun', 'thiên nhiên; bản chất'),
+  ('nature', 'natural', 'adj', 'tự nhiên'),
+  ('nature', 'naturally', 'adv', 'một cách tự nhiên')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('nature', 'Forests are an important [natural] resource.', 'natural', 'adj', 'nature', 'đứng trước danh từ ''resource'' → tính từ'),
+  ('nature', 'Children [naturally] learn languages faster than adults.', 'naturally', 'adv', 'nature', 'bổ nghĩa cho động từ ''learn'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'nature');
+insert into public.word_families (id, note, traps) values ('culture', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('culture', 'culture', 'noun', 'văn hoá'),
+  ('culture', 'cultural', 'adj', 'thuộc văn hoá'),
+  ('culture', 'culturally', 'adv', 'về mặt văn hoá')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('culture', 'Festivals are an important part of our [cultural] heritage.', 'cultural', 'adj', 'culture', 'đứng trước danh từ ''heritage'' → tính từ'),
+  ('culture', 'London is a [culturally] diverse city.', 'culturally', 'adv', 'culture', 'bổ nghĩa cho tính từ ''diverse'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'culture');
+insert into public.word_families (id, note, traps) values ('tradition', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('tradition', 'tradition', 'noun', 'truyền thống'),
+  ('tradition', 'traditional', 'adj', 'truyền thống'),
+  ('tradition', 'traditionally', 'adv', 'theo truyền thống')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('tradition', '[Traditionally], families ate dinner together every evening.', 'Traditionally', 'adv', 'tradition', 'đứng đầu câu bổ nghĩa cả câu → trạng từ'),
+  ('tradition', 'Many young people prefer modern music to [traditional] songs.', 'traditional', 'adj', 'tradition', 'đứng trước danh từ ''songs'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'tradition');
+insert into public.word_families (id, note, traps) values ('society', null, array['confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('society', 'society', 'noun', 'xã hội'),
+  ('society', 'social', 'adj', 'thuộc xã hội'),
+  ('society', 'socially', 'adv', 'về mặt xã hội'),
+  ('society', 'socialize', 'verb', 'giao lưu'),
+  ('society', 'sociable', 'adj', 'hoà đồng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('society', 'Teenagers spend hours on [social] media every day.', 'social', 'adj', 'society', 'nghĩa ''thuộc xã hội'' → social'),
+  ('society', 'He is very [sociable] and loves meeting new people.', 'sociable', 'adj', 'society', 'nghĩa ''hoà đồng'' (tính cách) → sociable')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'society');
+insert into public.word_families (id, note, traps) values ('politics', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('politics', 'politics', 'noun', 'chính trị'),
+  ('politics', 'political', 'adj', 'thuộc chính trị'),
+  ('politics', 'politically', 'adv', 'về mặt chính trị'),
+  ('politics', 'politician', 'noun', 'chính trị gia')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('politics', 'Many [politicians] promise lower taxes before elections.', 'politicians', 'noun', 'politics', 'sau ''Many'', chỉ người, số nhiều → politicians'),
+  ('politics', 'The issue has become highly [political].', 'political', 'adj', 'politics', 'sau ''become highly'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'politics');
+insert into public.word_families (id, note, traps) values ('govern', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('govern', 'govern', 'verb', 'cai trị, điều hành'),
+  ('govern', 'government', 'noun', 'chính phủ'),
+  ('govern', 'governmental', 'adj', 'thuộc chính phủ'),
+  ('govern', 'governor', 'noun', 'thống đốc')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('govern', 'The [government] should invest more in public transport.', 'government', 'noun', 'govern', 'sau ''The'' làm chủ ngữ → danh từ'),
+  ('govern', 'Universities are [governed] by independent boards.', 'governed', 'verb', 'government', 'sau ''are'' ở thể bị động → quá khứ phân từ của động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'govern');
+insert into public.word_families (id, note, traps) values ('consume', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('consume', 'consume', 'verb', 'tiêu thụ'),
+  ('consume', 'consumption', 'noun', 'sự tiêu thụ'),
+  ('consume', 'consumer', 'noun', 'người tiêu dùng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('consume', 'Meat [consumption] has risen sharply in Asia.', 'consumption', 'noun', 'consume', 'sau ''Meat'' làm chủ ngữ → danh từ'),
+  ('consume', 'Older cars [consume] much more fuel.', 'consume', 'verb', 'consumption', 'sau chủ ngữ số nhiều ''cars'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'consume');
+insert into public.word_families (id, note, traps) values ('conserve', null, array['confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('conserve', 'conserve', 'verb', 'bảo tồn'),
+  ('conserve', 'conservation', 'noun', 'sự bảo tồn'),
+  ('conserve', 'conservative', 'adj', 'bảo thủ')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('conserve', 'Wildlife [conservation] is funded partly by tourism.', 'conservation', 'noun', 'conserve', 'nghĩa ''bảo tồn'', làm chủ ngữ → conservation'),
+  ('conserve', 'Older voters tend to hold more [conservative] views.', 'conservative', 'adj', 'conserve', 'nghĩa ''bảo thủ'' trước danh từ ''views'' → conservative')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'conserve');
+insert into public.word_families (id, note, traps) values ('sustain', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('sustain', 'sustain', 'verb', 'duy trì'),
+  ('sustain', 'sustainable', 'adj', 'bền vững'),
+  ('sustain', 'sustainability', 'noun', 'tính bền vững'),
+  ('sustain', 'sustainably', 'adv', 'một cách bền vững')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('sustain', 'We need more [sustainable] sources of energy.', 'sustainable', 'adj', 'sustain', 'đứng trước danh từ ''sources'' → tính từ'),
+  ('sustain', 'Fish should be caught [sustainably].', 'sustainably', 'adv', 'sustain', 'bổ nghĩa cho động từ ''caught'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'sustain');
+insert into public.word_families (id, note, traps) values ('recognise', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('recognise', 'recognise', 'verb', 'nhận ra, công nhận'),
+  ('recognise', 'recognition', 'noun', 'sự công nhận'),
+  ('recognise', 'recognisable', 'adj', 'dễ nhận ra')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('recognise', 'Her work finally received international [recognition].', 'recognition', 'noun', 'recognise', 'sau tính từ ''international'' → danh từ'),
+  ('recognise', 'The logo is instantly [recognisable].', 'recognisable', 'adj', 'recognise', 'sau ''is instantly'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'recognise');
+insert into public.word_families (id, note, traps) values ('accurate', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('accurate', 'accurate', 'adj', 'chính xác'),
+  ('accurate', 'accuracy', 'noun', 'độ chính xác'),
+  ('accurate', 'accurately', 'adv', 'một cách chính xác'),
+  ('accurate', 'inaccurate', 'adj', 'không chính xác')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('accurate', 'Weather forecasts are becoming more [accurate].', 'accurate', 'adj', 'accuracy', 'sau ''becoming more'' → tính từ'),
+  ('accurate', 'The report was criticised for its lack of [accuracy].', 'accuracy', 'noun', 'accurate', 'sau giới từ ''of'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'accurate');
+insert into public.word_families (id, note, traps) values ('adequate', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('adequate', 'adequate', 'adj', 'đầy đủ'),
+  ('adequate', 'adequately', 'adv', 'một cách đầy đủ'),
+  ('adequate', 'inadequate', 'adj', 'không đầy đủ')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('adequate', 'Many schools have [inadequate] funding.', 'inadequate', 'adj', 'adequate', 'đứng trước danh từ ''funding'', nghĩa phủ định → tính từ'),
+  ('adequate', 'Workers must be [adequately] trained.', 'adequately', 'adv', 'adequate', 'bổ nghĩa cho ''trained'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'adequate');
+insert into public.word_families (id, note, traps) values ('appropriate', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('appropriate', 'appropriate', 'adj', 'phù hợp'),
+  ('appropriate', 'appropriately', 'adv', 'một cách phù hợp'),
+  ('appropriate', 'inappropriate', 'adj', 'không phù hợp')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('appropriate', 'Some websites contain content that is [inappropriate] for children.', 'inappropriate', 'adj', 'appropriate', 'sau ''is'', nghĩa phủ định → tính từ'),
+  ('appropriate', 'Students must dress [appropriately] for the interview.', 'appropriately', 'adv', 'appropriate', 'bổ nghĩa cho động từ ''dress'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'appropriate');
+insert into public.word_families (id, note, traps) values ('emphasize', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('emphasize', 'emphasize', 'verb', 'nhấn mạnh'),
+  ('emphasize', 'emphasis', 'noun', 'sự nhấn mạnh'),
+  ('emphasize', 'emphatic', 'adj', 'dứt khoát, mạnh mẽ'),
+  ('emphasize', 'emphatically', 'adv', 'một cách dứt khoát')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('emphasize', 'The school places great [emphasis] on sport.', 'emphasis', 'noun', 'emphasize', 'sau tính từ ''great'' → danh từ'),
+  ('emphasize', 'The report [emphasizes] the need for change.', 'emphasizes', 'verb', 'emphasis', 'sau chủ ngữ số ít ''The report'' → động từ thêm -s')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'emphasize');
+insert into public.word_families (id, note, traps) values ('solve', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('solve', 'solve', 'verb', 'giải quyết'),
+  ('solve', 'solution', 'noun', 'giải pháp'),
+  ('solve', 'solvable', 'adj', 'có thể giải quyết')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('solve', 'Building more roads is not the [solution] to traffic jams.', 'solution', 'noun', 'solve', 'sau ''the'' và trước ''to'' → danh từ'),
+  ('solve', 'Governments must work together to [solve] the problem.', 'solve', 'verb', 'solution', 'sau ''to'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'solve');
+insert into public.word_families (id, note, traps) values ('explain', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('explain', 'explain', 'verb', 'giải thích'),
+  ('explain', 'explanation', 'noun', 'lời giải thích'),
+  ('explain', 'explanatory', 'adj', 'mang tính giải thích')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('explain', 'Scientists still have no clear [explanation] for the phenomenon.', 'explanation', 'noun', 'explain', 'sau tính từ ''clear'' → danh từ'),
+  ('explain', 'Could you [explain] how the system works?', 'explain', 'verb', 'explanation', 'sau ''Could you'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'explain');
+insert into public.word_families (id, note, traps) values ('predict', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('predict', 'predict', 'verb', 'dự đoán'),
+  ('predict', 'prediction', 'noun', 'sự dự đoán'),
+  ('predict', 'predictable', 'adj', 'có thể đoán trước'),
+  ('predict', 'unpredictable', 'adj', 'khó đoán')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('predict', 'The weather in the mountains is very [unpredictable].', 'unpredictable', 'adj', 'predict', 'sau ''is very'', nghĩa ''khó đoán'' → tính từ'),
+  ('predict', 'Experts made several [predictions] about the economy.', 'predictions', 'noun', 'predict', 'sau ''several'' → danh từ số nhiều')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'predict');
+insert into public.word_families (id, note, traps) values ('vary', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('vary', 'vary', 'verb', 'thay đổi, khác nhau'),
+  ('vary', 'variety', 'noun', 'sự đa dạng'),
+  ('vary', 'various', 'adj', 'khác nhau, đa dạng'),
+  ('vary', 'variation', 'noun', 'sự biến đổi'),
+  ('vary', 'variable', 'adj', 'hay thay đổi')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('vary', 'The menu offers a wide [variety] of dishes.', 'variety', 'noun', 'vary', 'sau ''a wide'' và trước ''of'' → danh từ'),
+  ('vary', 'Prices [vary] from one shop to another.', 'vary', 'verb', 'variety', 'sau chủ ngữ ''Prices'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'vary');
+insert into public.word_families (id, note, traps) values ('apply', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('apply', 'apply', 'verb', 'nộp đơn; áp dụng'),
+  ('apply', 'application', 'noun', 'đơn xin; ứng dụng'),
+  ('apply', 'applicant', 'noun', 'người nộp đơn'),
+  ('apply', 'applicable', 'adj', 'có thể áp dụng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('apply', 'Over 500 [applicants] applied for the position.', 'applicants', 'noun', 'apply', 'sau số lượng, chỉ người → applicants'),
+  ('apply', 'Please complete the [application] form online.', 'application', 'noun', 'apply', 'đứng trước danh từ ''form'' làm bổ ngữ → danh từ application')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'apply');
+insert into public.word_families (id, note, traps) values ('attract', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('attract', 'attract', 'verb', 'thu hút'),
+  ('attract', 'attraction', 'noun', 'sự hấp dẫn; điểm tham quan'),
+  ('attract', 'attractive', 'adj', 'hấp dẫn'),
+  ('attract', 'attractively', 'adv', 'một cách hấp dẫn')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('attract', 'The museum is the city''s main tourist [attraction].', 'attraction', 'noun', 'attract', 'sau ''main tourist'' → danh từ'),
+  ('attract', 'Low taxes make the country [attractive] to investors.', 'attractive', 'adj', 'attract', 'make + tân ngữ + tính từ → attractive')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'attract');
+insert into public.word_families (id, note, traps) values ('protect', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('protect', 'protect', 'verb', 'bảo vệ'),
+  ('protect', 'protection', 'noun', 'sự bảo vệ'),
+  ('protect', 'protective', 'adj', 'bảo vệ, che chở')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('protect', 'Workers must wear [protective] clothing.', 'protective', 'adj', 'protect', 'đứng trước danh từ ''clothing'' → tính từ'),
+  ('protect', 'Endangered species need legal [protection].', 'protection', 'noun', 'protect', 'sau tính từ ''legal'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'protect');
+insert into public.word_families (id, note, traps) values ('prevent', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('prevent', 'prevent', 'verb', 'ngăn chặn'),
+  ('prevent', 'prevention', 'noun', 'sự phòng ngừa'),
+  ('prevent', 'preventable', 'adj', 'có thể ngăn ngừa')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('prevent', '[Prevention] is better than cure.', 'Prevention', 'noun', 'prevent', 'đứng đầu câu làm chủ ngữ → danh từ'),
+  ('prevent', 'Many of these deaths are [preventable].', 'preventable', 'adj', 'prevent', 'sau ''are'', nghĩa ''có thể ngăn ngừa'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'prevent');
+insert into public.word_families (id, note, traps) values ('reduce', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('reduce', 'reduce', 'verb', 'giảm'),
+  ('reduce', 'reduction', 'noun', 'sự giảm')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('reduce', 'The new law led to a [reduction] in crime.', 'reduction', 'noun', 'reduce', 'sau mạo từ ''a'' → danh từ'),
+  ('reduce', 'We must [reduce] our use of plastic.', 'reduce', 'verb', 'reduction', 'sau ''must'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'reduce');
+insert into public.word_families (id, note, traps) values ('achieve', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('achieve', 'achieve', 'verb', 'đạt được'),
+  ('achieve', 'achievement', 'noun', 'thành tựu'),
+  ('achieve', 'achievable', 'adj', 'có thể đạt được')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('achieve', 'Landing on the moon was a remarkable [achievement].', 'achievement', 'noun', 'achieve', 'sau ''a remarkable'' → danh từ'),
+  ('achieve', 'Set goals that are realistic and [achievable].', 'achievable', 'adj', 'achieve', 'nối với tính từ ''realistic'' bằng ''and'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'achieve');
+insert into public.word_families (id, note, traps) values ('advertise', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('advertise', 'advertise', 'verb', 'quảng cáo'),
+  ('advertise', 'advertisement', 'noun', 'mẩu quảng cáo'),
+  ('advertise', 'advertising', 'noun', 'ngành/hoạt động quảng cáo'),
+  ('advertise', 'advertiser', 'noun', 'nhà quảng cáo')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('advertise', 'Children are strongly influenced by television [advertising].', 'advertising', 'noun', 'advertise', 'hoạt động quảng cáo nói chung (không đếm được) → advertising'),
+  ('advertise', 'I saw an [advertisement] for the job in the newspaper.', 'advertisement', 'noun', 'advertise', 'sau ''an'', một mẩu quảng cáo (đếm được) → advertisement')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'advertise');
+insert into public.word_families (id, note, traps) values ('health', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('health', 'health', 'noun', 'sức khoẻ'),
+  ('health', 'healthy', 'adj', 'khoẻ mạnh, lành mạnh'),
+  ('health', 'healthily', 'adv', 'một cách lành mạnh'),
+  ('health', 'unhealthy', 'adj', 'không lành mạnh')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('health', 'Fast food is often [unhealthy].', 'unhealthy', 'adj', 'health', 'sau ''is'', nghĩa phủ định → tính từ'),
+  ('health', 'People who eat [healthily] tend to live longer.', 'healthily', 'adv', 'health', 'bổ nghĩa cho động từ ''eat'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'health');
+insert into public.word_families (id, note, traps) values ('danger', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('danger', 'danger', 'noun', 'sự nguy hiểm'),
+  ('danger', 'dangerous', 'adj', 'nguy hiểm'),
+  ('danger', 'dangerously', 'adv', 'một cách nguy hiểm'),
+  ('danger', 'endanger', 'verb', 'gây nguy hiểm'),
+  ('danger', 'endangered', 'adj', 'có nguy cơ tuyệt chủng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('danger', 'The tiger is an [endangered] species.', 'endangered', 'adj', 'danger', 'đứng trước ''species'', nghĩa ''có nguy cơ tuyệt chủng'' → endangered'),
+  ('danger', 'He was driving [dangerously] fast.', 'dangerously', 'adv', 'danger', 'bổ nghĩa cho trạng từ ''fast'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'danger');
+insert into public.word_families (id, note, traps) values ('hard', null, array['same-form', 'confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('hard', 'hard', 'adj', 'khó; cứng'),
+  ('hard', 'hard', 'adv', 'chăm chỉ, nhiều'),
+  ('hard', 'hardly', 'adv', 'hầu như không'),
+  ('hard', 'hardship', 'noun', 'sự gian khổ')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('hard', 'She worked [hard] to pass the exam.', 'hard', 'adv', 'hardship', 'nghĩa ''chăm chỉ'' → hard (hardly = hầu như không)'),
+  ('hard', 'I could [hardly] hear the speaker.', 'hardly', 'adv', 'hard', 'nghĩa ''hầu như không'' → hardly')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'hard');
+insert into public.word_families (id, note, traps) values ('late', null, array['same-form', 'confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('late', 'late', 'adj', 'muộn'),
+  ('late', 'late', 'adv', 'muộn'),
+  ('late', 'lately', 'adv', 'gần đây')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('late', 'The train arrived twenty minutes [late].', 'late', 'adv', 'lately', 'nghĩa ''muộn'' → late (lately = gần đây)'),
+  ('late', 'Have you seen any good films [lately]?', 'lately', 'adv', 'late', 'nghĩa ''gần đây'' → lately')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'late');
+insert into public.word_families (id, note, traps) values ('popular', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('popular', 'popular', 'adj', 'phổ biến'),
+  ('popular', 'popularity', 'noun', 'sự phổ biến'),
+  ('popular', 'popularly', 'adv', 'một cách phổ biến')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('popular', 'The [popularity] of e-books has grown steadily.', 'popularity', 'noun', 'popular', 'sau ''The'' và trước ''of'' → danh từ'),
+  ('popular', 'Cycling is becoming more [popular] in cities.', 'popular', 'adj', 'popularity', 'sau ''becoming more'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'popular');
+insert into public.word_families (id, note, traps) values ('equal', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('equal', 'equal', 'adj', 'bằng nhau, bình đẳng'),
+  ('equal', 'equality', 'noun', 'sự bình đẳng'),
+  ('equal', 'equally', 'adv', 'bằng nhau'),
+  ('equal', 'inequality', 'noun', 'sự bất bình đẳng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('equal', 'Income [inequality] is rising in many countries.', 'inequality', 'noun', 'equal', 'sau ''Income'' làm chủ ngữ, nghĩa ''bất bình đẳng'' → inequality'),
+  ('equal', 'Both factors are [equally] important.', 'equally', 'adv', 'equal', 'bổ nghĩa cho tính từ ''important'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'equal');
+insert into public.word_families (id, note, traps) values ('free', null, array['same-form']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('free', 'free', 'adj', 'tự do; miễn phí'),
+  ('free', 'free', 'verb', 'giải phóng'),
+  ('free', 'freedom', 'noun', 'sự tự do'),
+  ('free', 'freely', 'adv', 'một cách tự do')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('free', 'Teenagers want more [freedom] from their parents.', 'freedom', 'noun', 'free', 'sau ''more'', làm tân ngữ → danh từ'),
+  ('free', 'People should be able to express their opinions [freely].', 'freely', 'adv', 'free', 'bổ nghĩa cho động từ ''express'' → trạng từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'free');
+insert into public.word_families (id, note, traps) values ('reason', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('reason', 'reason', 'noun', 'lý do'),
+  ('reason', 'reasonable', 'adj', 'hợp lý; phải chăng'),
+  ('reason', 'reasonably', 'adv', 'khá; hợp lý')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('reason', 'The hotel rooms were clean and [reasonably] priced.', 'reasonably', 'adv', 'reason', 'bổ nghĩa cho ''priced'' → trạng từ'),
+  ('reason', 'It is [reasonable] to expect some delays.', 'reasonable', 'adj', 'reason', 'sau ''It is'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'reason');
+insert into public.word_families (id, note, traps) values ('value', 'invaluable = cực kỳ quý giá (không phải ''vô giá trị'' — đó là worthless).', array['same-form', 'confusable']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('value', 'value', 'noun', 'giá trị'),
+  ('value', 'value', 'verb', 'coi trọng'),
+  ('value', 'valuable', 'adj', 'có giá trị'),
+  ('value', 'invaluable', 'adj', 'vô giá')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('value', 'Work experience is extremely [valuable] for graduates.', 'valuable', 'adj', 'value', 'sau ''is extremely'' → tính từ'),
+  ('value', 'Her advice was [invaluable] to me.', 'invaluable', 'adj', 'value', 'nghĩa ''vô cùng quý giá'' → invaluable (không phải ''không có giá trị'')')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'value');
+insert into public.word_families (id, note, traps) values ('care', null, array['same-form']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('care', 'care', 'noun', 'sự chăm sóc'),
+  ('care', 'care', 'verb', 'quan tâm'),
+  ('care', 'careful', 'adj', 'cẩn thận'),
+  ('care', 'carefully', 'adv', 'một cách cẩn thận'),
+  ('care', 'careless', 'adj', 'bất cẩn')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('care', 'Read the instructions [carefully] before you start.', 'carefully', 'adv', 'care', 'bổ nghĩa cho động từ ''Read'' → trạng từ'),
+  ('care', 'Most accidents are caused by [careless] drivers.', 'careless', 'adj', 'care', 'đứng trước danh từ ''drivers'' → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'care');
+insert into public.word_families (id, note, traps) values ('occur', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('occur', 'occur', 'verb', 'xảy ra'),
+  ('occur', 'occurrence', 'noun', 'sự việc xảy ra')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('occur', 'Floods are now a regular [occurrence] in the area.', 'occurrence', 'noun', 'occur', 'sau ''a regular'' → danh từ'),
+  ('occur', 'Most accidents [occur] at home.', 'occur', 'verb', 'occurrence', 'sau chủ ngữ ''Most accidents'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'occur');
+insert into public.word_families (id, note, traps) values ('maintain', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('maintain', 'maintain', 'verb', 'duy trì, bảo dưỡng'),
+  ('maintain', 'maintenance', 'noun', 'sự bảo dưỡng')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('maintain', 'Old buildings require regular [maintenance].', 'maintenance', 'noun', 'maintain', 'sau tính từ ''regular'' → danh từ'),
+  ('maintain', 'It is hard to [maintain] a healthy diet when you travel.', 'maintain', 'verb', 'maintenance', 'sau ''to'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'maintain');
+insert into public.word_families (id, note, traps) values ('persuade', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('persuade', 'persuade', 'verb', 'thuyết phục'),
+  ('persuade', 'persuasion', 'noun', 'sự thuyết phục'),
+  ('persuade', 'persuasive', 'adj', 'có sức thuyết phục')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('persuade', 'Her speech was very [persuasive].', 'persuasive', 'adj', 'persuade', 'sau ''was very'' → tính từ'),
+  ('persuade', 'It took a lot of [persuasion] to change his mind.', 'persuasion', 'noun', 'persuade', 'sau ''a lot of'' → danh từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'persuade');
+insert into public.word_families (id, note, traps) values ('behave', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('behave', 'behave', 'verb', 'cư xử'),
+  ('behave', 'behaviour', 'noun', 'hành vi'),
+  ('behave', 'behavioural', 'adj', 'thuộc hành vi')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('behave', 'Violent games may influence children''s [behaviour].', 'behaviour', 'noun', 'behave', 'sau sở hữu cách ''children''s'' → danh từ'),
+  ('behave', 'Students are expected to [behave] well in class.', 'behave', 'verb', 'behaviour', 'sau ''to'' → động từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'behave');
+insert into public.word_families (id, note, traps) values ('finance', null, array['same-form']) on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('finance', 'finance', 'noun', 'tài chính'),
+  ('finance', 'finance', 'verb', 'tài trợ'),
+  ('finance', 'financial', 'adj', 'thuộc tài chính'),
+  ('finance', 'financially', 'adv', 'về mặt tài chính')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('finance', 'Many students face serious [financial] problems.', 'financial', 'adj', 'finance', 'đứng trước danh từ ''problems'' → tính từ'),
+  ('finance', 'The project was [financed] by a private company.', 'financed', 'verb', 'financial', 'sau ''was'' ở thể bị động → quá khứ phân từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'finance');
+insert into public.word_families (id, note, traps) values ('occupy', null, '{}') on conflict (id) do nothing;
+insert into public.word_family_members (family_id, word, pos, meaning_vi) values
+  ('occupy', 'occupy', 'verb', 'chiếm giữ'),
+  ('occupy', 'occupation', 'noun', 'nghề nghiệp'),
+  ('occupy', 'occupational', 'adj', 'thuộc nghề nghiệp')
+on conflict (family_id, word, pos) do nothing;
+insert into public.word_family_examples (family_id, sentence, answer, answer_pos, base_word, why)
+select v.* from (values
+  ('occupy', 'Please state your name and [occupation] on the form.', 'occupation', 'noun', 'occupy', 'nối với danh từ ''name'' bằng ''and'' → danh từ'),
+  ('occupy', 'Back pain is a common [occupational] health problem.', 'occupational', 'adj', 'occupy', 'đứng trước cụm danh từ → tính từ')
+) as v(family_id, sentence, answer, answer_pos, base_word, why)
+where not exists (select 1 from public.word_family_examples where family_id = 'occupy');

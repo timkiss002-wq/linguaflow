@@ -3,6 +3,7 @@ export type ErrorKind =
   | 'extra' // typed but not in the answer
   | 'misspelled' // EN: close to the right word (spelling)
   | 'wrong_word' // EN: a different word (misheard)
+  | 'word_form' // EN: another form of the same word family (decision → decisive)
   | 'wrong_character' // ZH: same sound incl. tone, wrong character (writing error)
   | 'tone' // ZH: right syllable, wrong tone
   | 'misheard' // ZH: different syllable (listening error)
@@ -33,6 +34,8 @@ export interface CompareResult {
 
 export interface CompareOptions {
   ignorePunctuation: boolean;
+  /** EN: true when two different words belong to the same word family (enables 'word_form'). */
+  sameFamily?: (a: string, b: string) => boolean;
 }
 
 export const emptyCounts = (): Record<ErrorKind, number> => ({
@@ -40,6 +43,7 @@ export const emptyCounts = (): Record<ErrorKind, number> => ({
   extra: 0,
   misspelled: 0,
   wrong_word: 0,
+  word_form: 0,
   wrong_character: 0,
   tone: 0,
   misheard: 0,

@@ -305,6 +305,86 @@ isOneToOne: false
       referencedColumns: ["id","user_id"]
     }
                   ]
+                },"word_families": {
+                  Row: {
+                    "id": string,"note": string | null,"traps": (string)[]
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "id": string,"note"?: string | null,"traps"?: (string)[]
+                  }
+                  Update: {
+                    "id"?: string,"note"?: string | null,"traps"?: (string)[]
+                  }
+                  Relationships: [
+                    
+                  ]
+                },"word_family_examples": {
+                  Row: {
+                    "answer": string,"answer_pos": string,"base_word": string,"family_id": string,"id": number,"sentence": string,"why": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "answer": string,"answer_pos": string,"base_word": string,"family_id": string,"id"?: never,"sentence": string,"why": string
+                  }
+                  Update: {
+                    "answer"?: string,"answer_pos"?: string,"base_word"?: string,"family_id"?: string,"id"?: never,"sentence"?: string,"why"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "word_family_examples_family_id_fkey"
+      columns: ["family_id"]
+isOneToOne: false
+      referencedRelation: "word_families"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"word_family_members": {
+                  Row: {
+                    "family_id": string,"id": number,"meaning_vi": string | null,"pos": string,"word": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "family_id": string,"id"?: never,"meaning_vi"?: string | null,"pos": string,"word": string
+                  }
+                  Update: {
+                    "family_id"?: string,"id"?: never,"meaning_vi"?: string | null,"pos"?: string,"word"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "word_family_members_family_id_fkey"
+      columns: ["family_id"]
+isOneToOne: false
+      referencedRelation: "word_families"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"word_form_attempts": {
+                  Row: {
+                    "created_at": string,"exercise": string,"expected": string,"expected_pos": string,"family_id": string,"id": number,"result": string,"typed": string,"typed_pos": string | null,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"exercise": string,"expected": string,"expected_pos": string,"family_id": string,"id"?: never,"result": string,"typed": string,"typed_pos"?: string | null,"user_id"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"exercise"?: string,"expected"?: string,"expected_pos"?: string,"family_id"?: string,"id"?: never,"result"?: string,"typed"?: string,"typed_pos"?: string | null,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "word_form_attempts_family_id_fkey"
+      columns: ["family_id"]
+isOneToOne: false
+      referencedRelation: "word_families"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "word_form_attempts_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 }
           }
           Views: {

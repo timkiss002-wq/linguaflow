@@ -53,10 +53,10 @@ export function exerciseFor(w: VocabWord): Exercise {
 }
 
 /** Same checker as dictation, so mistakes are explained the same way. */
-export function checkTyping(w: VocabWord, typed: string): CompareResult {
+export function checkTyping(w: VocabWord, typed: string, sameFamily?: (a: string, b: string) => boolean): CompareResult {
   return w.language === 'zh'
     ? compareChinese(w.term, typed, { ignorePunctuation: true })
-    : compareEnglish(w.term, typed, { ignorePunctuation: true });
+    : compareEnglish(w.term, typed, { ignorePunctuation: true, sameFamily });
 }
 
 /** "demolish" → "d_______"; Chinese → its reading. */

@@ -22,8 +22,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | M3 | Text-to-speech lessons (replaces video), voice settings, Pinyin | ✅ Done |
 | M4 | Dictation Room + answer checking (EN words, ZH characters/tones) | ✅ Done |
 | M5 | Vocabulary sheet (incl. *Ôn từ vựng* → TRUE/FALSE *Check*), word lookup, context, CSV import/export, typing practice — [design](docs/VOCABULARY.md) | ✅ Done |
-| M5b | IELTS word forms (word families, drills, `word_form` errors) — [design](docs/VOCABULARY.md#4-word-form-cho-ielts) | Planned |
-| M6 | SRS flashcard review | Planned |
+| M5b | IELTS word forms: 104 word families, family cards, wrong-type warnings, 4 drills, weak spots, `word_form` errors in dictation — [design](docs/VOCABULARY.md#4-word-form-cho-ielts) | ✅ Done |
+| M6 | SRS flashcard review | Next |
 | M7 | Full dashboard, landing polish, deployment | Planned |
 | P1–P6 | Personalised path, skill tests, Writing (EN + 中文) — [design](docs/PERSONALIZATION.md) | Planned |
 
@@ -190,7 +190,9 @@ npm run seed:build
 npm run db:reset
 ```
 
-`seed:build` validates the JSON and regenerates `supabase/seed.sql`. The seed is safe to run more
+`seed:build` validates the JSON and regenerates `supabase/seed.sql`. IELTS word families live in
+**`content/word-families.json`** (104 families, 410 forms, 208 example sentences with a Vietnamese
+"why" for each); the build checks that every example answer is a member of its family. The seed is safe to run more
 than once. Translations should be reviewed by a native speaker before production use.
 
 ### Voices

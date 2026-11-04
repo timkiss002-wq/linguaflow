@@ -52,6 +52,15 @@ describe('compareEnglish', () => {
     expect(strict.accuracy).toBe(100); // punctuation never affects accuracy
   });
 
+  it('reports another form of the same word family as word_form', () => {
+    const family = new Set(['decide', 'decision', 'decisive', 'decisively']);
+    const sameFamily = (a: string, b: string) => a !== b && family.has(a) && family.has(b);
+    const r = compareEnglish('They reached a decision quickly.', 'they reached a decisive quickly', { ignorePunctuation: true, sameFamily });
+    expect(r.tokens.find((t) => t.expected === 'decision')).toMatchObject({ kind: 'word_form', actual: 'decisive' });
+    // without family data it would be mislabelled as a spelling slip (75% similar)
+    expect(compareEnglish('a decision', 'a decisive', IGNORE).counts.misspelled).toBe(1);
+  });
+
   it('handles empty input', () => {
     const r = compareEnglish('Good morning', '', IGNORE);
     expect(r.accuracy).toBe(0);

@@ -14,6 +14,9 @@ import { POS, POS_LABEL, type Pos } from '@/lib/vocab/pos';
 import { normalizeTerm } from '@/lib/vocab/words';
 import { topicOptions, useAddWord, useEnglishLookup, useSharedMeaning, useVocabulary, type Language } from './api';
 import { PosBadge } from './PosBadge';
+import { FamilyGrid } from '@/features/wordforms/FamilyGrid';
+import { useWordFamilyIndex } from '@/features/wordforms/api';
+import { familyFor } from '@/lib/wordforms';
 
 export function WordCard({ target, language, onDone }: { target: LookupTarget; language: Language; onDone: () => void }) {
   const term = normalizeTerm(target.word, language);
@@ -23,6 +26,8 @@ export function WordCard({ target, language, onDone }: { target: LookupTarget; l
   const shared = useSharedMeaning(language, term);
   const add = useAddWord();
   const speech = useSpeech(language);
+  const familyIndex = useWordFamilyIndex();
+  const family = language === 'en' && familyIndex ? familyFor(familyIndex, term) : null;
 
   const reading = language === 'zh' ? toPinyin(term) : (lookup.data?.reading ?? null);
   const [meaning, setMeaning] = useState('');
@@ -95,6 +100,15 @@ export function WordCard({ target, language, onDone }: { target: LookupTarget; l
             ))
           )}
         </div>
+      )}
+
+      {family && (
+        <details className="rounded-md border px-2 py-1.5 text-xs" open>
+          <summary className="cursor-pointer font-medium">Word family</summary>
+          <div className="mt-2">
+            <FamilyGrid family={family} highlight={term} compact contextSentence={target.sentence} />
+          </div>
+        </details>
       )}
 
       <p className="rounded-md border-l-2 border-primary/50 pl-2 text-xs text-muted-foreground" lang={language === 'zh' ? 'zh' : 'en'}>

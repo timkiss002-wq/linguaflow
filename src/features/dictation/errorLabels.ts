@@ -5,6 +5,7 @@ export const ERROR_LABELS: Record<ErrorKind, { label: string; tip: string; tone:
   extra: { label: 'Extra', tip: 'This is not in the sentence.', tone: 'red' },
   misspelled: { label: 'Spelling', tip: 'Close — check the spelling.', tone: 'amber' },
   wrong_word: { label: 'Wrong word', tip: 'A different word — listen again.', tone: 'red' },
+  word_form: { label: 'Word form', tip: 'Right word family, wrong form (noun / verb / adjective / adverb).', tone: 'amber' },
   wrong_character: { label: 'Wrong character', tip: 'Same sound, different character (writing mistake).', tone: 'amber' },
   tone: { label: 'Wrong tone', tip: 'Right syllable, different tone.', tone: 'amber' },
   misheard: { label: 'Misheard', tip: 'A different sound — listen again.', tone: 'red' },

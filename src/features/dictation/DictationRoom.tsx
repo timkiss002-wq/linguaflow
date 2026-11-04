@@ -13,6 +13,7 @@ import type { LessonSummary, Sentence } from '@/features/library/api';
 import { useProfile } from '@/features/profile/api';
 import { DEFAULT_SETTINGS } from '@/features/profile/schemas';
 import { useWordLookup } from '@/features/vocabulary/useWordLookup';
+import { useWordFamilyIndex } from '@/features/wordforms/api';
 import { compareAnswer } from '@/lib/compare';
 import { nextHint } from '@/lib/compare/hint';
 import { toUserMessage } from '@/lib/errors';
@@ -51,6 +52,7 @@ export function DictationRoom({ lesson, sentences, startIndex, previouslyFinishe
   const currentVolume = volume ?? settings.volume;
   const speech = useSpeech(language, { volume: currentVolume });
   const lookup = useWordLookup(language);
+  const familyIndex = useWordFamilyIndex();
   const [showPinyin, setShowPinyin] = useState<boolean | null>(null);
   const pinyinOn = showPinyin ?? settings.showPinyin;
 
@@ -107,7 +109,12 @@ export function DictationRoom({ lesson, sentences, startIndex, previouslyFinishe
   };
 
   // ── actions ──
-  const compare = () => compareAnswer(language, sentence.text, entry?.input ?? '', { ignorePunctuation: settings.ignorePunctuation });
+  const compare = () =>
+    compareAnswer(language, sentence.text, entry?.input ?? '', {
+      ignorePunctuation: settings.ignorePunctuation,
+      // English: typing another form of the same word family is reported as 'word form'.
+      sameFamily: language === 'en' ? familyIndex?.sameFamily : undefined,
+    });
 
   const goTo = useCallback((index: number) => dispatch({ type: 'goto', index, now: Date.now() }), []);
   const next = useCallback(() => {

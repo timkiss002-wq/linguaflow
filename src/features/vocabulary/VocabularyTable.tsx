@@ -13,6 +13,7 @@ import { PosBadge } from './PosBadge';
 import { CheckBadge, ReviewInput } from './ReviewCell';
 import { StatusBadge, TypingDots } from './TypingDots';
 import { WordDetails } from './WordDetails';
+import { PosWarning } from './PosWarning';
 
 const date = (iso: string) => new Date(iso).toLocaleDateString('vi-VN');
 
@@ -96,7 +97,10 @@ export function VocabularyList({ words, allWords, selected, onSelect, hideWords 
                       {hidden(w) ? masked(w) : <EditableCell label="Word" value={w.term} lang={lang} maxLength={100} onSave={(v) => v && save(w, { term: v })} />}
                     </td>
                     <td className="p-2">
-                      <EditableCell label="Type" value={w.part_of_speech} options={posOptions} render={(v) => (v ? <PosBadge pos={v} /> : <span className="text-muted-foreground/50">—</span>)} onSave={(v) => save(w, { part_of_speech: v || null })} />
+                      <div className="flex items-center gap-1">
+                        <EditableCell label="Type" value={w.part_of_speech} options={posOptions} render={(v) => (v ? <PosBadge pos={v} /> : <span className="text-muted-foreground/50">—</span>)} onSave={(v) => save(w, { part_of_speech: v || null })} />
+                        <PosWarning word={w} onFix={(pos) => save(w, { part_of_speech: pos })} />
+                      </div>
                     </td>
                     <td className="p-2 text-muted-foreground">
                       {hidden(w) ? null : <EditableCell label="Reading" value={w.reading} maxLength={100} onSave={(v) => save(w, { reading: v || null })} />}
@@ -160,6 +164,7 @@ export function VocabularyList({ words, allWords, selected, onSelect, hideWords 
                       </span>
                     )}
                     <PosBadge pos={w.part_of_speech} />
+                    <PosWarning word={w} onFix={(pos) => save(w, { part_of_speech: pos })} />
                     <span className="text-xs text-muted-foreground">{w.reading}</span>
                   </div>
                   <p className="text-sm">{w.meaning_vi ?? <span className="text-muted-foreground">No meaning yet</span>}</p>
