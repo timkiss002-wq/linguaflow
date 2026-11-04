@@ -23,8 +23,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | M4 | Dictation Room + answer checking (EN words, ZH characters/tones) | ✅ Done |
 | M5 | Vocabulary sheet (incl. *Ôn từ vựng* → TRUE/FALSE *Check*), word lookup, context, CSV import/export, typing practice — [design](docs/VOCABULARY.md) | ✅ Done |
 | M5b | IELTS word forms: 104 word families, family cards, wrong-type warnings, 4 drills, weak spots, `word_form` errors in dictation — [design](docs/VOCABULARY.md#4-word-form-cho-ielts) | ✅ Done |
-| M6 | SRS flashcard review | Next |
-| M7 | Full dashboard, landing polish, deployment | Planned |
+| M6 | Flashcard review: SM-2 or fixed intervals (like the learner's sheet), daily new-card limit, word→meaning / meaning→word, forecast | ✅ Done |
+| M7 | Full dashboard, landing polish, deployment | Next |
 | P1–P6 | Personalised path, skill tests, Writing (EN + 中文) — [design](docs/PERSONALIZATION.md) | Planned |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
@@ -175,6 +175,19 @@ Logic lives in `src/lib/compare/` (pure TypeScript, unit-tested):
 
 Keyboard: `Enter` check / next (ignored while a Pinyin IME is composing), `Alt+R` replay,
 `Alt+S` slow, `Alt+H` hint, `Alt+A` show answer, `Alt+←/→` previous / next sentence.
+
+## Spaced review (M6)
+
+Every saved word is a flashcard. Scheduling lives in `src/lib/srs/` (pure, unit-tested) and is saved
+atomically through the `record_review` database function.
+
+- **SM-2 (default)** — Again 10 min · Hard 1 d / ×1.2 · Good 1 d → 3 d → × ease · Easy 4 d / × ease × 1.3;
+  ease starts at 2.5, never below 1.3; a card is *mastered* from 21 days.
+- **Fixed intervals** — one wait per status, default New 1 · Learning 3 · Reviewing 7 · Mastered 30 days
+  (same as the learner's Google Sheet), editable in Settings. Good moves one status up, Easy two, Hard
+  stays, Again restarts.
+- Daily queue = due cards (most overdue first) + new cards up to the daily limit (default 20).
+  "Again" cards come back in the same session. Keys: Space, 1–4.
 
 ## Lesson content
 

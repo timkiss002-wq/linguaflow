@@ -14,6 +14,8 @@ describe('parseSettings', () => {
     });
     expect(parseSettings({ playbackRate: 3 }).playbackRate).toBe(1);
     expect(parseSettings({ volume: 150, voiceZh: 'Microsoft Xiaoxiao' })).toMatchObject({ volume: 100, voiceZh: 'Microsoft Xiaoxiao' });
+    expect(parseSettings({ srsMode: 'fixed', fixedIntervals: [2, 4, 8, 60], newPerDay: 5 })).toMatchObject({ srsMode: 'fixed', fixedIntervals: [2, 4, 8, 60], newPerDay: 5 });
+    expect(parseSettings({ srsMode: 'weird', fixedIntervals: [1, 2], newPerDay: -1 })).toMatchObject({ srsMode: 'sm2', fixedIntervals: [1, 3, 7, 30], newPerDay: 20 });
   });
 });
 

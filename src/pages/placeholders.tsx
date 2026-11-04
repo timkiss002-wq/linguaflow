@@ -1,16 +1,5 @@
-import { BarChart3, Layers } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
 import { ComingSoon } from '@/components/ComingSoon';
-
-export function ReviewPage() {
-  return (
-    <ComingSoon
-      title="Review"
-      icon={Layers}
-      description="Flashcard review with spaced repetition (SM-2)."
-      bullets={['Due today and upcoming reviews', 'Again / Hard / Good / Easy ratings', 'Pronunciation audio for English and Chinese']}
-    />
-  );
-}
 
 export function StatisticsPage() {
   return (

@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useDashboardSummary } from '@/features/dashboard/api';
+import { useDashboardSummary, useDueToday } from '@/features/dashboard/api';
 import { StatCard } from '@/features/dashboard/StatCard';
 import { useProfile } from '@/features/profile/api';
 
@@ -19,6 +19,7 @@ export default function DashboardPage() {
   const profile = useProfile();
   const summary = useDashboardSummary();
   const s = summary.data;
+  const due = useDueToday();
 
   return (
     <>
@@ -33,7 +34,7 @@ export default function DashboardPage() {
         <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
           <StatCard label="Learning streak" icon={Flame} loading={summary.isPending} value={s ? `${s.streak} ${s.streak === 1 ? 'day' : 'days'}` : ''} />
           <StatCard label="Words saved" icon={BookOpen} loading={summary.isPending} value={s?.wordsSaved ?? 0} />
-          <StatCard label="Due for review" icon={CalendarCheck} loading={summary.isPending} value={s?.dueToday ?? 0} />
+          <StatCard label="Due for review" icon={CalendarCheck} loading={due === undefined} value={due ?? 0} />
           <StatCard label="Lessons completed" icon={Trophy} loading={summary.isPending} value={s?.lessonsCompleted ?? 0} />
         </div>
       )}

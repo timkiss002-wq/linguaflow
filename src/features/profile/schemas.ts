@@ -18,6 +18,12 @@ export const learningSettingsSchema = z.object({
   /** Preferred TTS voice names; null = pick the best available on this device. */
   voiceEn: z.string().max(200).nullable().catch(null),
   voiceZh: z.string().max(200).nullable().catch(null),
+  /** Spaced repetition: SM-2 (Anki-like) or fixed waits per status like the learner's sheet. */
+  srsMode: z.enum(['sm2', 'fixed']).catch('sm2'),
+  /** Days to wait for New / Learning / Reviewing / Mastered in fixed mode. */
+  fixedIntervals: z.array(z.number().int().min(1).max(365)).length(4).catch([1, 3, 7, 30]),
+  /** Max new cards introduced per day. */
+  newPerDay: z.number().int().min(0).max(200).catch(20),
 });
 export type LearningSettings = { playbackRate: PlaybackRate } & Omit<z.infer<typeof learningSettingsSchema>, 'playbackRate'>;
 
@@ -29,6 +35,9 @@ export const DEFAULT_SETTINGS: LearningSettings = {
   volume: 100,
   voiceEn: null,
   voiceZh: null,
+  srsMode: 'sm2',
+  fixedIntervals: [1, 3, 7, 30],
+  newPerDay: 20,
 };
 
 export function parseSettings(raw: Json | null | undefined): LearningSettings {

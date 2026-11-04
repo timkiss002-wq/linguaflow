@@ -98,7 +98,7 @@ const FLUSH_EVERY_MS = 30_000;
  * interacted within the last minute. The row is created on the first counted second (so idle
  * visits leave nothing behind), saved every 30 s, on hide, on unmount and on page close.
  */
-export function useStudySession(language: 'en' | 'zh', lessonId: string, kind: 'dictation' | 'review' = 'dictation') {
+export function useStudySession(language: 'en' | 'zh', lessonId: string | null, kind: 'dictation' | 'review' = 'dictation') {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [activeSeconds, setActiveSeconds] = useState(0);
   const { session } = useAuth();

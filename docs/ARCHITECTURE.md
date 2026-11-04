@@ -169,7 +169,7 @@ chưa gõ đúng. Số lần hint được lưu lại và trừ vào điểm "ho
 `new` (chưa ôn lần nào) → `learning` (interval < 1 ngày hoặc vừa Again) → `reviewing` → `mastered`
 (interval ≥ 21 ngày). Thuật toán viết **bằng TypeScript** (thuần, có test, còn dùng để hiện
 "10m / 1d / 3d / 8d" trên mỗi nút). Việc ghi dữ liệu đi qua RPC `record_review` để cập nhật thẻ +
-ghi log trong **một transaction**. Tất cả hằng số nằm trong một file config để chỉnh được.
+ghi log trong **một transaction**. Tất cả hằng số nằm trong `src/lib/srs/config.ts`. Ngoài SM-2 còn có chế độ **khoảng cách cố định** (mặc định 1/3/7/30 ngày như sheet của người dùng), chọn trong Settings (thêm ở M6).
 
 **f) Thời gian học & streak.** Bảng `study_sessions` ghi thời gian **thực sự học** (đếm khi tab
 đang hiển thị và có tương tác trong 60s gần nhất, gửi heartbeat mỗi 30s). Streak tính theo
