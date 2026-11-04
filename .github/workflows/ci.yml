@@ -46,4 +46,4 @@ jobs:
       - name: Apply migrations in order
         run: for f in supabase/migrations/*.sql; do echo "== $f"; psql -v ON_ERROR_STOP=1 -q -f "$f"; done
       - name: Load seed
-        run: psql -v ON_ERROR_STOP=1 -q -f supabase/seed.sql && psql -v ON_ERROR_STOP=1 -q -f supabase/seed-hsk.sql && psql -tAc "select count(*) from hsk_words" && psql -tAc "select count(*) from lessons" && psql -tAc "select count(*) from word_families"
+        run: psql -v ON_ERROR_STOP=1 -q -f supabase/seed.sql && psql -v ON_ERROR_STOP=1 -q -f supabase/seed-hsk.sql && psql -tAc "select count(*) from hsk_words" && psql -tAc "select count(*) from lessons" && psql -tAc "select count(*) from word_families" && psql -tAc "select count(*) from assessment_items"

@@ -1,6 +1,6 @@
 # LinguaFlow — Cá nhân hoá lộ trình & Writing (thiết kế)
 
-> Trạng thái: **P1, P2 đã xong** (xem mục 10, 11). P3–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
+> Trạng thái: **P1, P2, P3 đã xong** (xem mục 10–12). P4–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## 1. Yêu cầu
 
@@ -199,3 +199,34 @@ Trang **Strengths & Weaknesses** (`/insights`) — chỉ dùng dữ liệu bạn
 - **Bài luyện chữ đồng âm**: lấy đúng câu bạn đã nghe sai, đục lỗ chữ đó, chọn giữa chữ đúng và chữ bạn đã gõ.
 - **Không kết luận khi thiếu bằng chứng**: tối thiểu 10 câu / ngôn ngữ, 3 lần cho một mẫu lỗi, 20 lượt ôn,
   10 lần gõ; mỗi kết luận ghi rõ "Based on: …". Chưa đủ dữ liệu → trang nói cần thêm bao nhiêu.
+
+## 12. P3 — đã triển khai
+
+Trang **Level Test** (`/level-test`): bài test xếp trình độ thích ứng cho từng kỹ năng, check-in mỗi 2 tuần.
+
+- **Ngân hàng câu hỏi** `content/assessment.json` → bảng `assessment_items` (110 câu: 中文 vocabulary · grammar ·
+  listening · characters · reading, English vocabulary · grammar · listening · reading; mỗi kỹ năng 2 câu × 6 cấp
+  HSK 1–6 / A1–C2, kèm giải thích tiếng Việt). Dạng: trắc nghiệm (gồm điền chỗ trống, chọn chữ đồng âm, đọc đoạn văn,
+  nghe câu TTS) và **sắp xếp từ thành câu** (chấp nhận nhiều đáp án đúng). Câu hỏi do LinguaFlow soạn (demo), nên được
+  giáo viên/người bản ngữ duyệt trước khi dùng thật. `npm run seed:build` kiểm tra từng câu (đủ phương án, không trùng,
+  câu nghe có audio, câu đọc có đoạn văn, điểm ngữ pháp tồn tại) và trộn phương án cố định theo id.
+- **27 điểm ngữ pháp** (`grammar_points`: 把, 被, 了, 过, 比, 是…的, 连…都, 与其…不如…; present perfect, passive,
+  conditionals, inversion…). Câu sai gắn điểm ngữ pháp → mục *Grammar to review* trong kết quả.
+- **Đáp án không bao giờ gửi về trình duyệt trước khi trả lời**: người học không đọc được `assessment_items` (RLS chỉ
+  cho admin); câu hỏi đến từ `next_assessment_item()` (không kèm đáp án), chấm bằng `answer_assessment_item()`.
+  Ngoại lệ không tránh được: câu nghe phải có chữ trong trình duyệt để TTS đọc.
+- **Thích ứng**: luân phiên kỹ năng (kỹ năng ít câu nhất đi trước); trong kỹ năng chọn câu **chưa làm bao giờ**, có
+  rating gần rating hiện tại nhất. Chọn câu xác định (không ngẫu nhiên) nên tải lại trang vẫn đúng câu đó; bỏ dở thì
+  quay lại làm tiếp. Placement 20 câu (4/kỹ năng), check-in 10 câu.
+- **Elo** như mục 4.2, với hai điều chỉnh sau khi chạy thử:
+  - `K = max(24, 160/√(n+1))` thay vì 64 — với chỉ 4 câu mỗi kỹ năng, K = 64 chỉ dịch được khoảng nửa cấp.
+  - **Trình độ = cấp khó nhất mà xác suất làm đúng ≥ 50%** (định nghĩa chuẩn của Elo/IRT) thay vì 70%; với 70%,
+    làm đúng cả câu HSK 5 vẫn chỉ ra HSK 3.
+  - Độ tin cậy: < 4 câu "rough", 4–11 "provisional", ≥ 12 "stable".
+  - Rating câu hỏi chỉ bắt đầu thay đổi khi có ≥ 30 lượt trả lời.
+- **Bắt đầu** ở trình độ người học khai báo trong hồ sơ (P1), mặc định HSK 3 / B1.
+- **Kết quả**: trình độ từng kỹ năng, thay đổi so với lần test trước (▲▼ theo phần lẻ cấp), điểm ngữ pháp cần ôn,
+  xem lại từng câu với đáp án và giải thích. Lịch sử rating lưu ở `user_skill_ratings_history`.
+- **Dashboard** nhắc: chưa test ngôn ngữ đang học / có bài làm dở / đã 14 ngày → check-in.
+- **Chưa làm (để sau)**: trình soạn câu hỏi cho admin và AI soạn nháp (hiện sửa trong JSON như bài học); cập nhật
+  rating từ Dictation/ôn từ (dự kiến cùng P4).

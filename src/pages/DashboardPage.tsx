@@ -11,6 +11,7 @@ import { useDashboardSummary, useDueToday } from '@/features/dashboard/api';
 import { StatCard } from '@/features/dashboard/StatCard';
 import { useProgressMap } from '@/features/library/api';
 import { useProfile } from '@/features/profile/api';
+import { LevelTestPrompt } from '@/features/assessment/LevelTestPrompt';
 import { GoalsPanel } from '@/features/learner/GoalsPanel';
 import { formatStudyTime, useDailyActivity, useLearningStats, type StatsLanguage } from '@/features/stats/api';
 import { StudyTimeChart } from '@/features/stats/charts';
@@ -108,7 +109,8 @@ export default function DashboardPage() {
         </div>
       )}
 
-      <div className="mt-6">
+      <div className="mt-6 space-y-4">
+        <LevelTestPrompt />
         <GoalsPanel />
       </div>
 

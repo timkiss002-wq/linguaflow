@@ -64,8 +64,18 @@ update learner_profiles set study_days = '{7}' where user_id = auth.uid();
 select get_learning_streak();
 select * from get_daily_activity(2);
 
+\echo '--- Alice starts a level test (expect a uuid) and cannot read the question bank (expect 0)'
+select start_assessment('zh', 'placement', 3) is not null;
+select count(*) from assessment_items;
+\echo '--- Alice cannot write ratings directly (expect RLS error)'
+insert into user_skill_ratings(user_id, language, skill, rating) values ('aaaaaaaa-0000-0000-0000-000000000001', 'en', 'grammar', 3000);
+
 -- ===== Bob =====
 set request.jwt.claim.sub = 'bbbbbbbb-0000-0000-0000-000000000002';
+\echo '--- Bob sees no tests/ratings of Alice (expect 0 0)'
+select (select count(*) from assessments), (select count(*) from user_skill_ratings);
+\echo '--- Bob asks for a question of Alice test (expect test not found)'
+select next_assessment_item((select id from public.assessments limit 1));
 \echo '--- Bob sees none of Alice data (expect 0 0 0 0 0)'
 select (select count(*) from vocabulary),(select count(*) from dictation_attempts),(select count(*) from favorites),(select count(*) from vocabulary_reviews),(select count(*) from profiles where id<>auth.uid());
 \echo '--- Bob reviews Alice word (expect vocabulary not found)'

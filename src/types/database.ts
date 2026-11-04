@@ -5,7 +5,79 @@ export type Database = {
   
   "public": {
           Tables: {
-            "dictation_attempts": {
+            "assessment_items": {
+                  Row: {
+                    "answer": NonNullable<Json>,"audio": string | null,"explanation_vi": string | null,"id": string,"kind": string,"language": Database["public"]['Enums']["language_code"],"level": number,"options": NonNullable<Json>,"passage": string | null,"point": string | null,"prompt": string,"rating": number,"responses": number,"skill": string,"source": string,"status": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "answer": NonNullable<Json>,"audio"?: string | null,"explanation_vi"?: string | null,"id": string,"kind": string,"language": Database["public"]['Enums']["language_code"],"level": number,"options": NonNullable<Json>,"passage"?: string | null,"point"?: string | null,"prompt": string,"rating": number,"responses"?: number,"skill": string,"source"?: string,"status"?: string
+                  }
+                  Update: {
+                    "answer"?: NonNullable<Json>,"audio"?: string | null,"explanation_vi"?: string | null,"id"?: string,"kind"?: string,"language"?: Database["public"]['Enums']["language_code"],"level"?: number,"options"?: NonNullable<Json>,"passage"?: string | null,"point"?: string | null,"prompt"?: string,"rating"?: number,"responses"?: number,"skill"?: string,"source"?: string,"status"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "assessment_items_point_fkey"
+      columns: ["point"]
+isOneToOne: false
+      referencedRelation: "grammar_points"
+      referencedColumns: ["code"]
+    }
+                  ]
+                },"assessment_responses": {
+                  Row: {
+                    "assessment_id": string,"correct": boolean,"created_at": string,"duration_ms": number | null,"id": string,"item_id": string,"item_rating": number,"rating_after": number,"rating_before": number,"response": NonNullable<Json>,"skill": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "assessment_id": string,"correct": boolean,"created_at"?: string,"duration_ms"?: number | null,"id"?: string,"item_id": string,"item_rating": number,"rating_after": number,"rating_before": number,"response": NonNullable<Json>,"skill": string,"user_id": string
+                  }
+                  Update: {
+                    "assessment_id"?: string,"correct"?: boolean,"created_at"?: string,"duration_ms"?: number | null,"id"?: string,"item_id"?: string,"item_rating"?: number,"rating_after"?: number,"rating_before"?: number,"response"?: NonNullable<Json>,"skill"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "assessment_responses_assessment_id_fkey"
+      columns: ["assessment_id"]
+isOneToOne: false
+      referencedRelation: "assessments"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "assessment_responses_item_id_fkey"
+      columns: ["item_id"]
+isOneToOne: false
+      referencedRelation: "assessment_items"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "assessment_responses_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"assessments": {
+                  Row: {
+                    "finished_at": string | null,"id": string,"kind": string,"language": Database["public"]['Enums']["language_code"],"result": Json | null,"started_at": string,"total": number,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "finished_at"?: string | null,"id"?: string,"kind": string,"language": Database["public"]['Enums']["language_code"],"result"?: Json | null,"started_at"?: string,"total": number,"user_id"?: string
+                  }
+                  Update: {
+                    "finished_at"?: string | null,"id"?: string,"kind"?: string,"language"?: Database["public"]['Enums']["language_code"],"result"?: Json | null,"started_at"?: string,"total"?: number,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "assessments_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"dictation_attempts": {
                   Row: {
                     "accuracy": number,"answer_revealed": boolean,"created_at": string,"duration_ms": number | null,"error_summary": NonNullable<Json>,"hints_used": number,"id": string,"is_correct": boolean,"sentence_id": string,"session_id": string | null,"skipped": boolean,"user_id": string,"user_input": string
                   }
@@ -82,6 +154,20 @@ isOneToOne: false
       referencedRelation: "lessons"
       referencedColumns: ["id"]
     }
+                  ]
+                },"grammar_points": {
+                  Row: {
+                    "code": string,"explanation_vi": string,"language": Database["public"]['Enums']["language_code"],"level": number,"name": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "code": string,"explanation_vi": string,"language": Database["public"]['Enums']["language_code"],"level": number,"name": string
+                  }
+                  Update: {
+                    "code"?: string,"explanation_vi"?: string,"language"?: Database["public"]['Enums']["language_code"],"level"?: number,"name"?: string
+                  }
+                  Relationships: [
+                    
                   ]
                 },"hsk_words": {
                   Row: {
@@ -301,6 +387,52 @@ isOneToOne: false
                   Relationships: [
                     
                   ]
+                },"user_skill_ratings": {
+                  Row: {
+                    "language": Database["public"]['Enums']["language_code"],"n": number,"rating": number,"skill": string,"updated_at": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "language": Database["public"]['Enums']["language_code"],"n"?: number,"rating": number,"skill": string,"updated_at"?: string,"user_id": string
+                  }
+                  Update: {
+                    "language"?: Database["public"]['Enums']["language_code"],"n"?: number,"rating"?: number,"skill"?: string,"updated_at"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "user_skill_ratings_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"user_skill_ratings_history": {
+                  Row: {
+                    "assessment_id": string,"id": number,"language": Database["public"]['Enums']["language_code"],"n": number,"rating": number,"recorded_at": string,"skill": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "assessment_id": string,"id"?: never,"language": Database["public"]['Enums']["language_code"],"n": number,"rating": number,"recorded_at"?: string,"skill": string,"user_id": string
+                  }
+                  Update: {
+                    "assessment_id"?: string,"id"?: never,"language"?: Database["public"]['Enums']["language_code"],"n"?: number,"rating"?: number,"recorded_at"?: string,"skill"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "user_skill_ratings_history_assessment_id_fkey"
+      columns: ["assessment_id"]
+isOneToOne: false
+      referencedRelation: "assessments"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "user_skill_ratings_history_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"vocabulary": {
                   Row: {
                     "context_sentence": string | null,"created_at": string,"due_at": string,"ease_factor": number,"example": string | null,"examples": (string)[],"id": string,"interval_days": number,"language": Database["public"]['Enums']["language_code"],"lapses": number,"last_reviewed_at": string | null,"last_typed_at": string | null,"meaning_vi": string | null,"notes": string | null,"part_of_speech": string | null,"reading": string | null,"repetitions": number,"review_correct": boolean,"review_input": string,"source_lesson_id": string | null,"source_sentence_id": string | null,"status": Database["public"]['Enums']["vocab_status"],"term": string,"term_normalized": string | null,"topic": string | null,"typing_level": number,"typing_streak": number,"updated_at": string,"user_id": string
@@ -491,7 +623,16 @@ isOneToOne: false
                 }
           }
           Functions: {
-            "get_daily_activity":
+            "answer_assessment_item":
+{ Args: { "p_assessment": string,"p_duration_ms"?: number,"p_item": string,"p_response": Json }; Returns: Json
+                           },
+"assessment_skills":
+{ Args: { "p_language": Database["public"]['Enums']["language_code"] }; Returns: (string)[]
+                           },
+"get_assessment_review":
+{ Args: { "p_assessment": string }; Returns: Json
+                           },
+"get_daily_activity":
 { Args: { "p_days"?: number,"p_language"?: Database["public"]['Enums']["language_code"] }; Returns: {
               "active_seconds": number,"attempts": number,"day": string,"reviews": number
             }[]
@@ -512,6 +653,9 @@ isOneToOne: false
                            },
 "is_admin":
 { Args: Record<PropertyKey, never>; Returns: boolean
+                           },
+"next_assessment_item":
+{ Args: { "p_assessment": string }; Returns: Json
                            },
 "record_review":
 { Args: { "p_due_at": string,"p_duration_ms"?: number,"p_new_ease": number,"p_new_interval": number,"p_new_reps": number,"p_new_status": Database["public"]['Enums']["vocab_status"],"p_rating": Database["public"]['Enums']["review_rating"],"p_vocabulary_id": string }; Returns: {
@@ -588,7 +732,10 @@ isOneToOne: false
         to: "vocabulary"
         isOneToOne: true
         isSetofReturn: false
-      } }
+      } },
+"start_assessment":
+{ Args: { "p_kind": string,"p_language": Database["public"]['Enums']["language_code"],"p_start_level"?: number }; Returns: string
+                           }
           }
           Enums: {
             "cefr_level": "beginner"|"elementary"|"intermediate"|"upper_intermediate"|"advanced","language_code": "en"|"zh","progress_status": "in_progress"|"completed","review_rating": "again"|"hard"|"good"|"easy","session_kind": "dictation"|"review","user_role": "learner"|"admin","vocab_status": "new"|"learning"|"reviewing"|"mastered"

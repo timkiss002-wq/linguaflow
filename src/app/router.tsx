@@ -22,6 +22,8 @@ const WordFormsPage = lazy(() => import('@/pages/WordFormsPage'));
 const ReviewPage = lazy(() => import('@/pages/ReviewPage'));
 const StatisticsPage = lazy(() => import('@/pages/StatisticsPage'));
 const InsightsPage = lazy(() => import('@/pages/InsightsPage'));
+const LevelTestPage = lazy(() => import('@/pages/LevelTestPage'));
+const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'));
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
 
@@ -55,6 +57,8 @@ export const router = createBrowserRouter([
           { path: '/word-forms', element: page(<WordFormsPage />) },
           { path: '/review', element: page(<ReviewPage />) },
           { path: '/statistics', element: page(<StatisticsPage />) },
+          { path: '/level-test', element: page(<LevelTestPage />) },
+          { path: '/level-test/:testId', element: page(<AssessmentPage />) },
           { path: '/insights', element: page(<InsightsPage />) },
           { path: '/settings', element: page(<SettingsPage />) },
           { path: '/onboarding', element: page(<OnboardingPage />) },

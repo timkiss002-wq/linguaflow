@@ -27,7 +27,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | M7 | Dashboard (goal, 6 tiles, study-time chart, EN vs 中文), Statistics (accuracy per week, mistake types, confused pairs), forgot/reset/change password, CI, deploy guide | ✅ Done |
 | P1 | Learning profile & goals (IELTS / HSK 2.0 / HSK 3.0 / CEFR), onboarding wizard, official HSK word list (11,470 words), goal progress & recommended lessons — [design](docs/PERSONALIZATION.md#10-p1--đã-triển-khai) | ✅ Done |
 | P2 | Strengths & weaknesses page: Chinese mistakes by Pinyin (tone / initial / final / same-sound), English endings & small words, word forms, forgotten words, best study time, same-sound character drill — [design](docs/PERSONALIZATION.md#11-p2--đã-triển-khai) | ✅ Done |
-| P3–P6 | Next: placement test, daily plan, Writing (EN + 中文), AI feedback — [design](docs/PERSONALIZATION.md) | Planned |
+| P3 | Level test: adaptive placement + 2-weekly check-in per skill (Elo), 110-question bank, 27 grammar points, answers graded on the server — [design](docs/PERSONALIZATION.md#12-p3--đã-triển-khai) | ✅ Done |
+| P4–P6 | Next: daily plan, Writing (EN + 中文), AI feedback — [design](docs/PERSONALIZATION.md) | Planned |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
 yet" page — there are no fake features.
@@ -207,8 +208,9 @@ npm run seed:build
 npm run db:reset
 ```
 
-`seed:build` validates the JSON and regenerates `supabase/seed.sql`. IELTS word families live in
-the official HSK list in **`content/hsk-words.json`** (11,470 words, from
+`seed:build` validates the JSON and regenerates `supabase/seed.sql`. Level-test questions and grammar points live in
+**`content/assessment.json`** (correct option first; the build shuffles them). The
+official HSK list is in **`content/hsk-words.json`** (11,470 words, from
 [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary), MIT; regenerate with
 `node scripts/import-hsk.mjs complete.json`), and IELTS word families in **`content/word-families.json`** (104 families, 410 forms, 208 example sentences with a Vietnamese
 "why" for each); the build checks that every example answer is a member of its family. The seed is safe to run more
@@ -223,7 +225,7 @@ explains what to do when no voice is available.
 
 ## Testing
 
-- `npm run e2e` — 9 browser suites (191 checks) that drive the real app against the local Supabase,
+- `npm run e2e` — 10 browser suites (211 checks) that drive the real app against the local Supabase,
   including database assertions. See [e2e/README.md](e2e/README.md).
 - GitHub Actions (`.github/workflows/ci.yml`) on every push: lint, typecheck, unit tests, seed
   up-to-date check, build, and all migrations + seed applied to a clean Postgres.

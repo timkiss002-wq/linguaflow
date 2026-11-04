@@ -1,4 +1,4 @@
-// Generates supabase/seed.sql from content/lessons.json.
+// Generates supabase/seed.sql from content/lessons.json, word-families.json and assessment.json.
 // Usage: npm run seed:build   (then `npm run db:reset` to load it locally)
 import { readFileSync, writeFileSync } from 'node:fs';
 
@@ -134,6 +134,88 @@ if (famErrors.length) {
 }
 out.push(...famOut, '');
 
+// ───────────── Level tests (P3): grammar points + question bank ─────────────
+const bank = JSON.parse(readFileSync(new URL('../content/assessment.json', import.meta.url), 'utf8'));
+const SKILLS = ['vocabulary', 'grammar', 'characters', 'reading', 'listening'];
+/** Small seeded PRNG so the shuffled order is stable between builds (CI checks the seed is up to date). */
+function rng(seed) {
+  let h = 2166136261;
+  for (const c of seed) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  return () => {
+    h = Math.imul(h ^ (h >>> 15), 2246822507);
+    h = Math.imul(h ^ (h >>> 13), 3266489909);
+    return ((h ^= h >>> 16) >>> 0) / 4294967296;
+  };
+}
+function shuffle(arr, seed) {
+  const r = rng(seed);
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(r() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+const bankErrors = [];
+const points = new Map();
+for (const [code, language, level, name, vi] of bank.grammar_points) {
+  if (!/^[a-z0-9-]{2,60}$/.test(code) || points.has(code)) bankErrors.push(`grammar point ${code}: invalid or duplicate code`);
+  if (!['en', 'zh'].includes(language) || !(level >= 1 && level <= 6) || !name || !vi) bankErrors.push(`grammar point ${code}: incomplete`);
+  points.set(code, language);
+}
+const itemIds = new Set();
+const itemRows = [];
+for (const it of bank.items) {
+  const where = `question ${it.id}`;
+  const kind = it.kind ?? 'choice';
+  if (!/^[a-z0-9-]{2,60}$/.test(it.id ?? '') || itemIds.has(it.id)) bankErrors.push(`${where}: invalid or duplicate id`);
+  itemIds.add(it.id);
+  if (!['en', 'zh'].includes(it.lang)) bankErrors.push(`${where}: lang must be en or zh`);
+  if (!SKILLS.includes(it.skill)) bankErrors.push(`${where}: unknown skill ${it.skill}`);
+  if (it.skill === 'characters' && it.lang !== 'zh') bankErrors.push(`${where}: characters is Chinese only`);
+  if (!(it.level >= 1 && it.level <= 6)) bankErrors.push(`${where}: level 1-6`);
+  if (!it.prompt?.trim() || !it.vi?.trim()) bankErrors.push(`${where}: needs prompt and vi explanation`);
+  if (it.skill === 'listening' && !it.audio?.trim()) bankErrors.push(`${where}: listening needs audio`);
+  if (it.skill === 'reading' && !it.passage?.trim()) bankErrors.push(`${where}: reading needs a passage`);
+  if (it.point && points.get(it.point) !== it.lang) bankErrors.push(`${where}: unknown grammar point ${it.point}`);
+  let options;
+  let answer;
+  if (kind === 'choice') {
+    const o = it.options ?? [];
+    if (o.length < 2 || o.length > 5 || new Set(o).size !== o.length || o.some((x) => !String(x).trim())) bankErrors.push(`${where}: 2-5 different options`);
+    options = shuffle(o, it.id);
+    answer = options.indexOf(o[0]);
+  } else if (kind === 'order') {
+    const t = it.tokens ?? [];
+    if (t.length < 3) bankErrors.push(`${where}: order needs 3+ tokens`);
+    const sep = it.lang === 'zh' ? '' : ' ';
+    answer = [t.join(sep), ...(it.accept ?? [])];
+    options = shuffle(t, it.id);
+    // never hand out the tokens already in a correct order
+    for (let i = 0; answer.includes(options.join(sep)) && i < t.length; i++) options = [...options.slice(1), options[0]];
+    if (answer.includes(options.join(sep))) bankErrors.push(`${where}: cannot shuffle tokens`);
+  } else bankErrors.push(`${where}: unknown kind ${kind}`);
+  itemRows.push({ ...it, kind, options, answer, rating: 800 + 150 * (it.level - 1) });
+}
+if (bankErrors.length) {
+  console.error(bankErrors.join('\n'));
+  process.exit(1);
+}
+out.push(
+  '',
+  '-- Level tests (P3), from content/assessment.json. Re-running updates the text but keeps learned item ratings.',
+  'insert into public.grammar_points (code, language, level, name, explanation_vi) values',
+  bank.grammar_points.map(([c, l, lv, n, vi]) => `  (${q(c)}, ${q(l)}, ${lv}, ${q(n)}, ${q(vi)})`).join(',\n'),
+  'on conflict (code) do update set language = excluded.language, level = excluded.level, name = excluded.name, explanation_vi = excluded.explanation_vi;',
+  'insert into public.assessment_items (id, language, skill, kind, level, prompt, passage, audio, options, answer, explanation_vi, point, rating) values',
+  itemRows
+    .map((r) => `  (${q(r.id)}, ${q(r.lang)}, ${q(r.skill)}, ${q(r.kind)}, ${r.level}, ${q(r.prompt)}, ${q(r.passage ?? null)}, ${q(r.audio ?? null)}, ${q(JSON.stringify(r.options))}::jsonb, ${q(JSON.stringify(r.answer))}::jsonb, ${q(r.vi)}, ${q(r.point ?? null)}, ${r.rating})`)
+    .join(',\n'),
+  'on conflict (id) do update set language = excluded.language, skill = excluded.skill, kind = excluded.kind, level = excluded.level, prompt = excluded.prompt,',
+  '  passage = excluded.passage, audio = excluded.audio, options = excluded.options, answer = excluded.answer, explanation_vi = excluded.explanation_vi, point = excluded.point;',
+  '',
+);
+
 writeFileSync(new URL('../supabase/seed.sql', import.meta.url), out.join('\n'));
 
 // ───────────── HSK word list (separate file: ~11k rows) ─────────────
@@ -146,4 +228,4 @@ for (let i = 0; i < hsk.length; i += 500) {
 }
 writeFileSync(new URL('../supabase/seed-hsk.sql', import.meta.url), hskOut.join('\n') + '\n');
 const total = lessons.reduce((n, l) => n + l.sentences.length, 0);
-console.log(`seed.sql: ${lessons.length} lessons, ${total} sentences, ${families.length} word families · seed-hsk.sql: ${hsk.length} HSK words`);
+console.log(`seed.sql: ${lessons.length} lessons, ${total} sentences, ${families.length} word families, ${itemRows.length} test questions · seed-hsk.sql: ${hsk.length} HSK words`);
