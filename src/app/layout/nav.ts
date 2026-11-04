@@ -10,7 +10,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard, available: true },
-  { to: '/library', label: 'Explore Videos', icon: Compass, available: true },
+  { to: '/lessons', label: 'Explore Lessons', icon: Compass, available: true },
   { to: '/my-learning', label: 'My Learning', icon: GraduationCap, available: true },
   { to: '/vocabulary', label: 'Vocabulary', icon: BookOpen, available: false },
   { to: '/review', label: 'Review', icon: Layers, available: false },

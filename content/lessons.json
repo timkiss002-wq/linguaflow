@@ -1,0 +1,207 @@
+{
+  "$comment": "Demo lessons for LinguaFlow. Edit here, then run `npm run seed:build` and `npm run db:reset`. Sentences were written for this project (not copied from textbooks). Translations should be reviewed by a native speaker before production use.",
+  "lessons": [
+    {
+      "id": "b0000000-0000-4000-8000-000000000301",
+      "language": "zh", "hsk": 3, "level": "elementary", "topic": "daily-conversation", "difficulty": 2,
+      "title": "周末的计划 · Weekend plans",
+      "description": "Making plans with a friend: times, places and what to do if it rains.",
+      "sentences": [
+        ["这个周末你打算做什么？", "Cuối tuần này bạn định làm gì?"],
+        ["我想先去超市买点儿东西，然后回家做饭。", "Mình muốn đi siêu thị mua ít đồ trước, sau đó về nhà nấu cơm."],
+        ["天气好的话，我们可以一起去公园走走。", "Nếu thời tiết đẹp, chúng ta có thể cùng đi dạo công viên."],
+        ["听说新开的那家咖啡馆很不错。", "Nghe nói quán cà phê mới mở kia khá được."],
+        ["你周六上午有空吗？", "Sáng thứ Bảy bạn có rảnh không?"],
+        ["不好意思，我上午要去图书馆还书。", "Xin lỗi, buổi sáng mình phải đến thư viện trả sách."],
+        ["那我们下午三点在学校门口见吧。", "Vậy chúng ta gặp nhau ở cổng trường lúc ba giờ chiều nhé."],
+        ["别忘了带上你的照相机。", "Đừng quên mang theo máy ảnh của bạn."],
+        ["如果下雨，我们就在家看电影。", "Nếu trời mưa, chúng ta sẽ ở nhà xem phim."],
+        ["好的，到时候我给你打电话。", "Được, đến lúc đó mình sẽ gọi điện cho bạn."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000302",
+      "language": "zh", "hsk": 3, "level": "elementary", "topic": "travel", "difficulty": 2,
+      "title": "在火车站 · At the train station",
+      "description": "Buying tickets, asking about times and helping with luggage.",
+      "sentences": [
+        ["请问，去北京的火车几点出发？", "Xin hỏi, tàu đi Bắc Kinh mấy giờ khởi hành?"],
+        ["下一班车是十点二十分的。", "Chuyến tiếp theo là chuyến mười giờ hai mươi."],
+        ["我要买两张票，一张大人的，一张孩子的。", "Tôi muốn mua hai vé, một vé người lớn, một vé trẻ em."],
+        ["坐火车去比坐飞机便宜多了。", "Đi tàu hỏa rẻ hơn nhiều so với đi máy bay."],
+        ["从这儿到北京大概需要五个小时。", "Từ đây đến Bắc Kinh mất khoảng năm tiếng."],
+        ["你的行李箱太重了，我帮你拿吧。", "Vali của bạn nặng quá, để mình xách giúp nhé."],
+        ["车上可以买到吃的和喝的。", "Trên tàu có thể mua được đồ ăn và đồ uống."],
+        ["我们的座位在八号车厢。", "Chỗ ngồi của chúng ta ở toa số tám."],
+        ["别着急，离开车还有半个小时。", "Đừng vội, còn nửa tiếng nữa tàu mới chạy."],
+        ["到了以后记得给妈妈发个短信。", "Đến nơi rồi nhớ nhắn tin cho mẹ nhé."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000401",
+      "language": "zh", "hsk": 4, "level": "intermediate", "topic": "business-career", "difficulty": 3,
+      "title": "第一次面试 · My first job interview",
+      "description": "Preparing for an interview, answering questions and waiting for the result.",
+      "sentences": [
+        ["明天下午我有一个很重要的面试。", "Chiều mai tôi có một buổi phỏng vấn rất quan trọng."],
+        ["为了这次机会，我准备了整整一个星期。", "Vì cơ hội lần này, tôi đã chuẩn bị suốt cả một tuần."],
+        ["面试的时候一定要准时，最好提前十分钟到。", "Khi phỏng vấn nhất định phải đúng giờ, tốt nhất nên đến sớm mười phút."],
+        ["经理问我为什么想来他们公司工作。", "Giám đốc hỏi tôi vì sao muốn đến công ty họ làm việc."],
+        ["我说我对这个行业一直很感兴趣。", "Tôi nói rằng tôi luôn rất hứng thú với ngành này."],
+        ["虽然我的经验不多，但是我学东西很快。", "Tuy kinh nghiệm của tôi không nhiều, nhưng tôi học rất nhanh."],
+        ["他们希望新同事能适应加班。", "Họ hy vọng đồng nghiệp mới có thể thích nghi với việc tăng ca."],
+        ["面试结束后，我礼貌地向他们表示感谢。", "Sau khi phỏng vấn kết thúc, tôi lịch sự cảm ơn họ."],
+        ["他们说一周之内会通知我结果。", "Họ nói trong vòng một tuần sẽ thông báo kết quả cho tôi."],
+        ["不管结果怎么样，这都是一次很好的经验。", "Dù kết quả thế nào, đây đều là một trải nghiệm rất tốt."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000402",
+      "language": "zh", "hsk": 4, "level": "intermediate", "topic": "daily-conversation", "difficulty": 3,
+      "title": "租房子 · Renting a flat",
+      "description": "Looking at a flat, talking about rent and signing the contract.",
+      "sentences": [
+        ["我最近在找房子，想离公司近一点儿。", "Dạo này tôi đang tìm nhà, muốn gần công ty hơn một chút."],
+        ["这套房子虽然不大，但是阳光很好。", "Căn nhà này tuy không lớn nhưng rất nhiều nắng."],
+        ["房租每个月三千块，水电费另算。", "Tiền thuê mỗi tháng ba nghìn tệ, tiền điện nước tính riêng."],
+        ["附近有地铁站，上下班很方便。", "Gần đó có ga tàu điện ngầm, đi làm rất tiện."],
+        ["房东说至少要租一年。", "Chủ nhà nói phải thuê ít nhất một năm."],
+        ["我能不能先看看厨房和洗手间？", "Tôi có thể xem bếp và nhà vệ sinh trước không?"],
+        ["楼下就是超市，买东西不用走很远。", "Ngay dưới tầng là siêu thị, mua đồ không cần đi xa."],
+        ["签合同以前，最好把每一条都看清楚。", "Trước khi ký hợp đồng, tốt nhất nên đọc kỹ từng điều khoản."],
+        ["我打算这个周末就搬过去。", "Tôi định cuối tuần này chuyển qua luôn."],
+        ["搬家那天，几个朋友来帮了我很大的忙。", "Hôm chuyển nhà, mấy người bạn đến giúp tôi rất nhiều."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000501",
+      "language": "zh", "hsk": 5, "level": "upper_intermediate", "topic": "education", "difficulty": 4,
+      "title": "网上学习的利与弊 · Pros and cons of online learning",
+      "description": "A short opinion piece on flexibility, self-discipline and screen time.",
+      "sentences": [
+        ["随着网络的发展，越来越多的人选择在网上学习。", "Cùng với sự phát triển của Internet, ngày càng nhiều người chọn học trực tuyến."],
+        ["网上课程最大的优势是时间安排比较灵活。", "Ưu thế lớn nhất của khóa học trực tuyến là sắp xếp thời gian khá linh hoạt."],
+        ["无论你在哪儿，只要有电脑就能上课。", "Dù bạn ở đâu, chỉ cần có máy tính là có thể học."],
+        ["然而，缺少老师的监督，有些人很难坚持下去。", "Tuy nhiên, thiếu sự giám sát của giáo viên, một số người rất khó kiên trì."],
+        ["长时间盯着屏幕，对眼睛也有一定的影响。", "Nhìn màn hình trong thời gian dài cũng ảnh hưởng nhất định đến mắt."],
+        ["专家建议学习者给自己制定一个明确的计划。", "Chuyên gia khuyên người học nên lập cho mình một kế hoạch rõ ràng."],
+        ["和同学互相交流，也能提高学习的效率。", "Trao đổi với bạn học cũng có thể nâng cao hiệu quả học tập."],
+        ["总的来说，网上学习适合自觉性比较强的人。", "Nhìn chung, học trực tuyến phù hợp với người có tính tự giác cao."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000502",
+      "language": "zh", "hsk": 5, "level": "upper_intermediate", "topic": "entertainment", "difficulty": 4,
+      "title": "一部改变我的电影 · A film that changed me",
+      "description": "A personal story about a film, a quote and a new daily habit.",
+      "sentences": [
+        ["上大学的时候，我偶然看了一部关于梦想的电影。", "Hồi học đại học, tôi tình cờ xem một bộ phim về ước mơ."],
+        ["主人公出生在一个普通的农村家庭。", "Nhân vật chính sinh ra trong một gia đình nông thôn bình thường."],
+        ["尽管遇到了很多困难，他从来没有放弃过。", "Mặc dù gặp rất nhiều khó khăn, anh ấy chưa từng bỏ cuộc."],
+        ["电影里有一句台词让我印象特别深刻。", "Trong phim có một câu thoại khiến tôi ấn tượng đặc biệt sâu sắc."],
+        ["他说：“机会永远属于有准备的人。”", "Anh ấy nói: \"Cơ hội luôn thuộc về người có sự chuẩn bị.\""],
+        ["看完以后，我开始认真思考自己的未来。", "Xem xong, tôi bắt đầu nghiêm túc suy nghĩ về tương lai của mình."],
+        ["从那以后，我每天早上坚持学一个小时外语。", "Từ đó trở đi, mỗi sáng tôi kiên trì học ngoại ngữ một tiếng."],
+        ["现在回想起来，那部电影确实改变了我的生活态度。", "Bây giờ nghĩ lại, bộ phim đó thực sự đã thay đổi thái độ sống của tôi."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000601",
+      "language": "zh", "hsk": 6, "level": "advanced", "topic": "podcast-interviews", "difficulty": 5,
+      "title": "城市化与乡愁 · Urbanisation and homesickness",
+      "description": "A reflective talk about moving to big cities and what “home” means.",
+      "sentences": [
+        ["近几十年来，中国的城市化进程速度惊人。", "Mấy chục năm gần đây, tốc độ đô thị hóa của Trung Quốc thật đáng kinh ngạc."],
+        ["大批年轻人离开家乡，涌入大城市寻找机遇。", "Rất nhiều người trẻ rời quê, đổ về các thành phố lớn tìm kiếm cơ hội."],
+        ["他们在享受便利生活的同时，也承受着巨大的生存压力。", "Họ vừa tận hưởng cuộc sống tiện nghi, vừa phải chịu áp lực mưu sinh rất lớn."],
+        ["每逢春节，火车站里挤满了归心似箭的旅客。", "Mỗi dịp Tết, nhà ga chật kín những hành khách nóng lòng về quê."],
+        ["对许多人而言，“乡愁”已不仅仅是对某个地方的怀念。", "Với nhiều người, \"nỗi nhớ quê\" không chỉ đơn thuần là hoài niệm về một nơi chốn."],
+        ["它更是一种对传统生活方式和人际关系的眷恋。", "Đó còn là sự lưu luyến với lối sống truyền thống và các mối quan hệ giữa người với người."],
+        ["如何在发展经济的同时保留文化记忆，是一个值得深思的问题。", "Làm sao vừa phát triển kinh tế vừa lưu giữ ký ức văn hóa là một vấn đề đáng suy ngẫm."],
+        ["或许，真正的家乡始终存在于我们的心中。", "Có lẽ, quê hương thực sự luôn tồn tại trong trái tim chúng ta."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000602",
+      "language": "zh", "hsk": 6, "level": "advanced", "topic": "business-career", "difficulty": 5,
+      "title": "人工智能时代的职业选择 · Careers in the age of AI",
+      "description": "Which jobs change, which skills matter, and how to keep learning.",
+      "sentences": [
+        ["人工智能的迅速普及，正在深刻地改变着就业市场。", "Sự phổ biến nhanh chóng của trí tuệ nhân tạo đang thay đổi sâu sắc thị trường việc làm."],
+        ["一些重复性强的岗位面临着被取代的风险。", "Một số vị trí mang tính lặp lại cao đang đối mặt nguy cơ bị thay thế."],
+        ["与此同时，也涌现出了许多前所未有的新职业。", "Đồng thời, cũng xuất hiện nhiều nghề mới chưa từng có."],
+        ["专家指出，创造力和沟通能力将变得愈发重要。", "Chuyên gia chỉ ra rằng khả năng sáng tạo và giao tiếp sẽ ngày càng quan trọng."],
+        ["因此，终身学习已经成为每个人不可回避的课题。", "Vì vậy, học tập suốt đời đã trở thành vấn đề mà ai cũng không thể né tránh."],
+        ["与其担心被机器淘汰，不如主动学会与之合作。", "Thay vì lo bị máy móc đào thải, chi bằng chủ động học cách hợp tác với nó."],
+        ["在选择专业时，年轻人应当兼顾兴趣与社会需求。", "Khi chọn ngành học, người trẻ nên cân nhắc cả sở thích lẫn nhu cầu xã hội."],
+        ["归根结底，技术只是工具，人的价值在于判断与创造。", "Suy cho cùng, công nghệ chỉ là công cụ, giá trị của con người nằm ở khả năng phán đoán và sáng tạo."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000e01",
+      "language": "en", "hsk": null, "level": "elementary", "topic": "daily-conversation", "difficulty": 2,
+      "title": "Morning Routine",
+      "description": "Everyday habits from waking up to getting to work.",
+      "sentences": [
+        ["I usually wake up at half past six.", "Tôi thường thức dậy lúc sáu giờ rưỡi."],
+        ["The first thing I do is drink a glass of water.", "Việc đầu tiên tôi làm là uống một cốc nước."],
+        ["Then I take a quick shower and get dressed.", "Sau đó tôi tắm nhanh và mặc quần áo."],
+        ["I don't have much time for breakfast on weekdays.", "Vào các ngày trong tuần tôi không có nhiều thời gian ăn sáng."],
+        ["Most mornings I just have toast and a cup of coffee.", "Hầu hết các buổi sáng tôi chỉ ăn bánh mì nướng và một tách cà phê."],
+        ["I leave the house at about a quarter past seven.", "Tôi ra khỏi nhà vào khoảng bảy giờ mười lăm."],
+        ["It takes me twenty minutes to get to work by bus.", "Tôi mất hai mươi phút để đi làm bằng xe buýt."],
+        ["On the bus, I listen to podcasts to practise my listening.", "Trên xe buýt, tôi nghe podcast để luyện nghe."],
+        ["On Sundays, I sleep in and make a big breakfast.", "Vào Chủ nhật, tôi ngủ nướng và làm một bữa sáng thịnh soạn."],
+        ["A good morning routine makes the whole day better.", "Một thói quen buổi sáng tốt giúp cả ngày tốt hơn."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000e02",
+      "language": "en", "hsk": null, "level": "intermediate", "topic": "travel", "difficulty": 3,
+      "title": "Lost Luggage",
+      "description": "A suitcase goes missing after a flight — past tenses and reported speech.",
+      "sentences": [
+        ["When we landed, I realised my suitcase hadn't arrived.", "Khi hạ cánh, tôi nhận ra vali của mình chưa đến."],
+        ["I went to the baggage desk and explained the problem.", "Tôi đến quầy hành lý và giải thích vấn đề."],
+        ["The woman asked me to fill in a form with my contact details.", "Người phụ nữ yêu cầu tôi điền vào mẫu đơn với thông tin liên lạc."],
+        ["She said it had probably been put on the wrong flight.", "Cô ấy nói có lẽ nó đã bị đưa lên nhầm chuyến bay."],
+        ["They promised to deliver it to my hotel within two days.", "Họ hứa sẽ giao nó đến khách sạn của tôi trong vòng hai ngày."],
+        ["Luckily, I had packed a change of clothes in my hand luggage.", "May mắn là tôi đã để một bộ quần áo thay trong hành lý xách tay."],
+        ["The next evening, the receptionist called to say it had arrived.", "Tối hôm sau, lễ tân gọi điện báo rằng nó đã đến."],
+        ["Since then, I've always kept the essentials in my backpack.", "Từ đó, tôi luôn để những thứ thiết yếu trong ba lô."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000e03",
+      "language": "en", "hsk": null, "level": "upper_intermediate", "topic": "business-career", "difficulty": 4,
+      "title": "Working From Home",
+      "description": "Benefits and challenges of remote and hybrid work.",
+      "sentences": [
+        ["Over the past few years, remote work has become far more common.", "Trong vài năm qua, làm việc từ xa đã trở nên phổ biến hơn nhiều."],
+        ["Many employees appreciate not having to commute every day.", "Nhiều nhân viên đánh giá cao việc không phải đi lại mỗi ngày."],
+        ["However, some find it hard to separate work from their personal life.", "Tuy nhiên, một số người thấy khó tách công việc khỏi cuộc sống cá nhân."],
+        ["Without clear boundaries, the working day can easily stretch into the evening.", "Nếu không có ranh giới rõ ràng, ngày làm việc dễ kéo dài sang buổi tối."],
+        ["Managers, on the other hand, worry about communication and team spirit.", "Mặt khác, các nhà quản lý lo ngại về giao tiếp và tinh thần đồng đội."],
+        ["That's why a lot of companies have adopted a hybrid model.", "Đó là lý do nhiều công ty đã áp dụng mô hình kết hợp."],
+        ["Staff spend two or three days in the office and work from home the rest of the week.", "Nhân viên dành hai hoặc ba ngày ở văn phòng và làm việc tại nhà những ngày còn lại."],
+        ["Whether this arrangement will last remains to be seen.", "Liệu cách sắp xếp này có kéo dài hay không thì vẫn còn phải chờ xem."]
+      ]
+    },
+    {
+      "id": "b0000000-0000-4000-8000-000000000e04",
+      "language": "en", "hsk": null, "level": "advanced", "topic": "education", "difficulty": 5,
+      "title": "How Memory Works",
+      "description": "Why we forget, and what research says about studying smarter.",
+      "sentences": [
+        ["Contrary to popular belief, memory is not a perfect recording of the past.", "Trái với niềm tin phổ biến, trí nhớ không phải là bản ghi hoàn hảo về quá khứ."],
+        ["Each time we recall an event, our brain reconstructs it from scattered fragments.", "Mỗi lần nhớ lại một sự kiện, não bộ tái dựng nó từ những mảnh rời rạc."],
+        ["This is why two witnesses can give strikingly different accounts of the same incident.", "Đây là lý do hai nhân chứng có thể kể lại cùng một sự việc khác nhau đến bất ngờ."],
+        ["Researchers have found that sleep plays a crucial role in consolidating new information.", "Các nhà nghiên cứu phát hiện giấc ngủ đóng vai trò then chốt trong việc củng cố thông tin mới."],
+        ["Spacing out practice sessions is considerably more effective than cramming.", "Giãn cách các buổi luyện tập hiệu quả hơn đáng kể so với học nhồi nhét."],
+        ["Testing yourself, rather than simply rereading notes, strengthens long-term retention.", "Tự kiểm tra bản thân, thay vì chỉ đọc lại ghi chép, giúp ghi nhớ lâu dài tốt hơn."],
+        ["Emotionally charged experiences also tend to be remembered more vividly.", "Những trải nghiệm giàu cảm xúc cũng thường được nhớ rõ nét hơn."],
+        ["Understanding these mechanisms can help learners study smarter rather than harder.", "Hiểu những cơ chế này giúp người học học thông minh hơn thay vì vất vả hơn."]
+      ]
+    }
+  ]
+}

@@ -6,8 +6,8 @@ import { ErrorState } from '@/components/ErrorState';
 import { PageHeader } from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
 import { useUser } from '@/features/auth/useAuth';
-import { useFavoriteIds, useProgressMap, type VideoSummary } from '@/features/library/api';
-import { VideoGrid, VideoGridSkeleton } from '@/features/library/VideoGrid';
+import { useFavoriteIds, useProgressMap, type LessonSummary } from '@/features/library/api';
+import { LessonGrid, LessonGridSkeleton } from '@/features/library/LessonGrid';
 import { getSupabase } from '@/lib/supabase';
 import { cn } from '@/lib/utils';
 
@@ -19,9 +19,9 @@ const TABS = [
 type Tab = (typeof TABS)[number]['id'];
 
 const EMPTY: Record<Tab, { title: string; description: string }> = {
-  'in-progress': { title: 'Nothing in progress', description: 'Videos you start practising will show up here so you can continue where you left off.' },
-  completed: { title: 'No completed videos yet', description: 'Finish every sentence of a video to see it here.' },
-  favorites: { title: 'No favorites yet', description: 'Tap the heart on any video to save it for later.' },
+  'in-progress': { title: 'Nothing in progress', description: 'Lessons you start practising will show up here so you can continue where you left off.' },
+  completed: { title: 'No completed lessons yet', description: 'Finish every sentence of a lesson to see it here.' },
+  favorites: { title: 'No favorites yet', description: 'Tap the heart on any lesson to save it for later.' },
 };
 
 export default function MyLearningPage() {
@@ -35,15 +35,15 @@ export default function MyLearningPage() {
   const ids =
     tab === 'favorites'
       ? [...(favorites.data ?? [])]
-      : [...(progress.data?.values() ?? [])].filter((p) => (tab === 'completed' ? p.status === 'completed' : p.status === 'in_progress')).map((p) => p.video_id!);
+      : [...(progress.data?.values() ?? [])].filter((p) => (tab === 'completed' ? p.status === 'completed' : p.status === 'in_progress')).map((p) => p.lesson_id!);
   const ready = tab === 'favorites' ? favorites.isSuccess : progress.isSuccess;
 
-  const videos = useQuery({
+  const lessons = useQuery({
     queryKey: ['my-learning', user.id, tab, [...ids].sort()],
     enabled: ready,
-    queryFn: async (): Promise<VideoSummary[]> => {
+    queryFn: async (): Promise<LessonSummary[]> => {
       if (ids.length === 0) return [];
-      const { data, error } = await getSupabase().from('video_catalog').select('*').in('id', ids);
+      const { data, error } = await getSupabase().from('lesson_catalog').select('*').in('id', ids);
       if (error) throw error;
       // Most recently studied first.
       const last = (id: string) => progress.data?.get(id)?.last_studied_at ?? '';
@@ -51,11 +51,11 @@ export default function MyLearningPage() {
     },
   });
 
-  const error = progress.error ?? favorites.error ?? videos.error;
+  const error = progress.error ?? favorites.error ?? lessons.error;
 
   return (
     <>
-      <PageHeader title="My Learning" description="Your videos in progress, finished, and saved for later." />
+      <PageHeader title="My Learning" description="Your lessons in progress, finished, and saved for later." />
       <div className="mb-6 flex gap-1 overflow-x-auto border-b" role="tablist">
         {TABS.map(({ id, label, icon: Icon }) => (
           <button
@@ -74,22 +74,22 @@ export default function MyLearningPage() {
       </div>
 
       {error ? (
-        <ErrorState error={error} onRetry={() => { progress.refetch(); favorites.refetch(); videos.refetch(); }} />
-      ) : !videos.isSuccess ? (
-        <VideoGridSkeleton count={3} />
-      ) : videos.data.length === 0 ? (
+        <ErrorState error={error} onRetry={() => { progress.refetch(); favorites.refetch(); lessons.refetch(); }} />
+      ) : !lessons.isSuccess ? (
+        <LessonGridSkeleton count={3} />
+      ) : lessons.data.length === 0 ? (
         <EmptyState
           icon={TABS.find((t) => t.id === tab)!.icon}
           title={EMPTY[tab].title}
           description={EMPTY[tab].description}
           action={
             <Button variant="outline" size="sm" asChild>
-              <Link to="/library">Explore videos</Link>
+              <Link to="/lessons">Explore lessons</Link>
             </Button>
           }
         />
       ) : (
-        <VideoGrid videos={videos.data} favorites={favorites.data} progress={progress.data} />
+        <LessonGrid lessons={lessons.data} favorites={favorites.data} progress={progress.data} />
       )}
     </>
   );

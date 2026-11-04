@@ -34,7 +34,7 @@ export default function DashboardPage() {
           <StatCard label="Learning streak" icon={Flame} loading={summary.isPending} value={s ? `${s.streak} ${s.streak === 1 ? 'day' : 'days'}` : ''} />
           <StatCard label="Words saved" icon={BookOpen} loading={summary.isPending} value={s?.wordsSaved ?? 0} />
           <StatCard label="Due for review" icon={CalendarCheck} loading={summary.isPending} value={s?.dueToday ?? 0} />
-          <StatCard label="Videos completed" icon={Trophy} loading={summary.isPending} value={s?.videosCompleted ?? 0} />
+          <StatCard label="Lessons completed" icon={Trophy} loading={summary.isPending} value={s?.lessonsCompleted ?? 0} />
         </div>
       )}
 
@@ -42,13 +42,13 @@ export default function DashboardPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base">
-              <Compass className="size-4 text-primary" /> Pick a video
+              <Compass className="size-4 text-primary" /> Pick a lesson
             </CardTitle>
-            <CardDescription>Browse English and Chinese videos by topic and level, then practise sentence by sentence.</CardDescription>
+            <CardDescription>Browse English and Chinese (HSK) listening lessons by topic and level.</CardDescription>
           </CardHeader>
           <CardContent>
             <Button variant="outline" asChild>
-              <Link to="/library">Explore videos</Link>
+              <Link to="/lessons">Explore lessons</Link>
             </Button>
           </CardContent>
         </Card>

@@ -6,7 +6,7 @@ export function VocabularyPage() {
     <ComingSoon
       title="Vocabulary"
       icon={BookOpen}
-      description="Your personal notebook of words saved from videos."
+      description="Your personal notebook of words saved from lessons."
       bullets={['New / Learning / Reviewing / Mastered lists', 'Search, filter and edit', 'Each word linked to the sentence you heard it in']}
     />
   );

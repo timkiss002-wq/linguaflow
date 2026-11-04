@@ -13,6 +13,7 @@ describe('parseSettings', () => {
       autoNext: true,
     });
     expect(parseSettings({ playbackRate: 3 }).playbackRate).toBe(1);
+    expect(parseSettings({ volume: 150, voiceZh: 'Microsoft Xiaoxiao' })).toMatchObject({ volume: 100, voiceZh: 'Microsoft Xiaoxiao' });
   });
 });
 

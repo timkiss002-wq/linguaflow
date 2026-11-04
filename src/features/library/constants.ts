@@ -22,3 +22,6 @@ export const levelLabel = (v: CefrLevel) => LEVELS.find((l) => l.value === v)?.l
 export const languageLabel = (v: Language) => LANGUAGES.find((l) => l.value === v)?.label ?? v;
 
 export const DIFFICULTY_LABELS = ['', 'Very easy', 'Easy', 'Medium', 'Hard', 'Very hard'] as const;
+
+/** Rough practice time: ~45 s per sentence (listen a few times, type, check). */
+export const estimateMinutes = (sentences: number) => Math.max(1, Math.round(sentences * 0.75));

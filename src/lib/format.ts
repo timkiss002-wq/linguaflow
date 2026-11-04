@@ -8,10 +8,3 @@ export function formatDuration(totalSeconds: number | null | undefined): string 
   const m = Math.floor((s % 3600) / 60);
   return h > 0 ? `${h}:${pad(m)}:${pad(s % 60)}` : `${m}:${pad(s % 60)}`;
 }
-
-/** Segment timestamp with tenths: 80.25 → "01:20.2". */
-export function formatTimestamp(seconds: number): string {
-  const tenths = Math.floor(seconds * 10);
-  const s = Math.floor(tenths / 10);
-  return `${pad(Math.floor(s / 60))}:${pad(s % 60)}.${tenths % 10}`;
-}

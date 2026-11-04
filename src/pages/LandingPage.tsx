@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Ear, Headphones, Keyboard, Layers, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, Ear, Headphones, Keyboard, Layers, Sparkles, Volume2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
@@ -6,7 +6,7 @@ import { useAuth } from '@/features/auth/useAuth';
 import { cn } from '@/lib/utils';
 
 const STEPS = [
-  { icon: Headphones, title: 'Listen', text: 'Play one short sentence from a real video. Slow it down or loop it as often as you need.' },
+  { icon: Headphones, title: 'Listen', text: 'Hear one natural sentence read aloud. Slow it down and replay it as often as you need.' },
   { icon: Keyboard, title: 'Type', text: 'Write down exactly what you hear — English words or Chinese characters.' },
   { icon: Ear, title: 'Check', text: 'See every missing, extra or misspelled word, and whether a Chinese mistake was hearing or writing.' },
 ];
@@ -50,10 +50,10 @@ export default function LandingPage() {
               English · 中文 (Simplified, with Pinyin)
             </p>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Learn languages through the videos you love.
+              Learn languages by listening, typing and writing.
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-              Turn interviews, vlogs, podcasts and dramas into active listening practice. Hear a sentence, type it, and see exactly what you missed.
+              Practise English and Chinese (HSK 3–6) with short listening lessons. Hear a sentence, type it, and see exactly what you missed — then keep the new words with spaced repetition.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" asChild>
@@ -106,12 +106,14 @@ export default function LandingPage() {
       <footer className="border-t py-8">
         <div className="container flex flex-col items-center justify-between gap-2 text-sm text-muted-foreground sm:flex-row">
           <span>© {new Date().getFullYear()} LinguaFlow</span>
-          <span>Videos are embedded from their original sources. We never download or re-host them.</span>
+          <span>Audio is generated on your device with text-to-speech.</span>
         </div>
       </footer>
     </div>
   );
 }
+
+const WAVE = [30, 55, 80, 45, 90, 60, 35, 70, 95, 50, 40, 75, 85, 45, 30, 65, 90, 55, 35, 60, 80, 40, 25, 50, 70, 45, 30, 55];
 
 const ZH_PREVIEW: [string, string, 'ok' | 'char'][] = [
   ['今', 'jīn', 'ok'],
@@ -126,14 +128,19 @@ const ZH_PREVIEW: [string, string, 'ok' | 'char'][] = [
 function DictationPreview() {
   return (
     <div aria-hidden className="rounded-xl border bg-card p-5 shadow-sm">
-      <div className="flex aspect-video items-center justify-center rounded-lg bg-gradient-to-br from-slate-800 to-slate-900">
-        <div className="flex size-14 items-center justify-center rounded-full bg-white/15 backdrop-blur">
-          <div className="ml-1 size-0 border-y-[10px] border-l-[16px] border-y-transparent border-l-white" />
+      <div className="flex items-center gap-4 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 p-5 text-white">
+        <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-white/15">
+          <Volume2 className="size-5" />
+        </div>
+        <div className="flex h-10 flex-1 items-center gap-[3px]">
+          {WAVE.map((h, i) => (
+            <span key={i} className="w-1 rounded-full bg-teal-300/80" style={{ height: `${h}%` }} />
+          ))}
         </div>
       </div>
       <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
         <span>Sentence 4 / 18</span>
-        <span>0.75x · Loop on</span>
+        <span>0.75x · Replay</span>
       </div>
       <div className="mt-2 h-1.5 rounded-full bg-muted">
         <div className="h-full w-1/4 rounded-full bg-primary" />

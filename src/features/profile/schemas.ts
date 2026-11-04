@@ -13,10 +13,23 @@ export const learningSettingsSchema = z.object({
   ignorePunctuation: z.boolean().catch(true),
   showPinyin: z.boolean().catch(true),
   autoNext: z.boolean().catch(false),
+  /** Speech volume 0–100. */
+  volume: z.number().int().min(0).max(100).catch(100),
+  /** Preferred TTS voice names; null = pick the best available on this device. */
+  voiceEn: z.string().max(200).nullable().catch(null),
+  voiceZh: z.string().max(200).nullable().catch(null),
 });
 export type LearningSettings = { playbackRate: PlaybackRate } & Omit<z.infer<typeof learningSettingsSchema>, 'playbackRate'>;
 
-export const DEFAULT_SETTINGS: LearningSettings = { playbackRate: 1, ignorePunctuation: true, showPinyin: true, autoNext: false };
+export const DEFAULT_SETTINGS: LearningSettings = {
+  playbackRate: 1,
+  ignorePunctuation: true,
+  showPinyin: true,
+  autoNext: false,
+  volume: 100,
+  voiceEn: null,
+  voiceZh: null,
+};
 
 export function parseSettings(raw: Json | null | undefined): LearningSettings {
   const obj = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};

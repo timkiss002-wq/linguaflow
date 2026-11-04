@@ -29,7 +29,7 @@ export function LibraryFilters({ value, onChange }: { value: Filters; onChange: 
       <div className="flex flex-col gap-3 sm:flex-row">
         <div className="relative flex-1">
           <Search className="pointer-events-none absolute left-3 top-3 size-4 text-muted-foreground" aria-hidden />
-          <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search videos…" aria-label="Search videos" className="pl-9" maxLength={100} />
+          <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search lessons…" aria-label="Search lessons" className="pl-9" maxLength={100} />
         </div>
         <div className="flex gap-1 rounded-md border bg-card p-1" role="group" aria-label="Language">
           {[{ value: undefined, label: 'All' }, ...LANGUAGES].map((l) => (

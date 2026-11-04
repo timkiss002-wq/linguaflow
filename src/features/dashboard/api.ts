@@ -6,7 +6,7 @@ export interface DashboardSummary {
   streak: number;
   wordsSaved: number;
   dueToday: number;
-  videosCompleted: number;
+  lessonsCompleted: number;
 }
 
 async function count(promise: PromiseLike<{ count: number | null; error: unknown }>) {
@@ -18,14 +18,14 @@ async function count(promise: PromiseLike<{ count: number | null; error: unknown
 async function fetchSummary(): Promise<DashboardSummary> {
   const sb = getSupabase();
   // RLS limits every query to the signed-in user's rows.
-  const [streakRes, wordsSaved, dueToday, videosCompleted] = await Promise.all([
+  const [streakRes, wordsSaved, dueToday, lessonsCompleted] = await Promise.all([
     sb.rpc('get_learning_streak'),
     count(sb.from('vocabulary').select('id', { count: 'exact', head: true })),
     count(sb.from('vocabulary').select('id', { count: 'exact', head: true }).lte('due_at', new Date().toISOString())),
-    count(sb.from('learning_progress').select('video_id', { count: 'exact', head: true }).eq('status', 'completed')),
+    count(sb.from('learning_progress').select('lesson_id', { count: 'exact', head: true }).eq('status', 'completed')),
   ]);
   if (streakRes.error) throw streakRes.error;
-  return { streak: streakRes.data ?? 0, wordsSaved, dueToday, videosCompleted };
+  return { streak: streakRes.data ?? 0, wordsSaved, dueToday, lessonsCompleted };
 }
 
 export function useDashboardSummary() {

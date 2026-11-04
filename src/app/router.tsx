@@ -12,8 +12,8 @@ const LoginPage = lazy(() => import('@/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@/pages/RegisterPage'));
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'));
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
-const LibraryPage = lazy(() => import('@/pages/LibraryPage'));
-const VideoDetailPage = lazy(() => import('@/pages/VideoDetailPage'));
+const LessonsPage = lazy(() => import('@/pages/LessonsPage'));
+const LessonDetailPage = lazy(() => import('@/pages/LessonDetailPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
@@ -34,8 +34,8 @@ export const router = createBrowserRouter([
         ),
         children: [
           { path: '/dashboard', element: page(<DashboardPage />) },
-          { path: '/library', element: page(<LibraryPage />) },
-          { path: '/videos/:videoId', element: page(<VideoDetailPage />) },
+          { path: '/lessons', element: page(<LessonsPage />) },
+          { path: '/lessons/:lessonId', element: page(<LessonDetailPage />) },
           { path: '/my-learning', element: page(<MyLearningPage />) },
           { path: '/vocabulary', element: <VocabularyPage /> },
           { path: '/review', element: <ReviewPage /> },

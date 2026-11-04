@@ -1,5 +1,19 @@
 # LinguaFlow — Phân tích & Kiến trúc (Milestone 0)
 
+## Quyết định M3: bỏ video
+
+Theo yêu cầu (04/11/2026), sản phẩm **không dùng video** nữa vì cắt câu và căn thời gian cho
+video quá tốn công. Thay vào đó:
+
+- **Bài học = danh sách câu** (`lessons`, `lesson_sentences`). Audio do **text-to-speech của trình
+  duyệt** đọc, nên câu chữ và âm thanh luôn khớp 100%, không cần timestamp, không lưu file.
+- Nội dung nằm trong `content/lessons.json` → `npm run seed:build` sinh `supabase/seed.sql`.
+- Migration `20261104120000_lessons_without_video.sql` đổi tên bảng/cột (videos → lessons,
+  video_segments → lesson_sentences, bỏ cột thời gian và YouTube, xoá bảng `transcripts`).
+- Các phần bên dưới nói về video/YouTube/segment là **thiết kế ban đầu**, giữ lại để tham khảo;
+  "segment" nay là "sentence", "Video Library" nay là "Lessons".
+
+
 > *Learn languages through the videos you love.*
 
 Tài liệu này là bước "thiết kế trước khi code". Mọi milestone sau sẽ bám theo đây; khi có thay đổi

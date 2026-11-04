@@ -5,17 +5,17 @@ import { getSupabase } from '@/lib/supabase';
 import type { Tables } from '@/types/database';
 import { escapeSearch, type LibraryFilters } from './filters';
 
-export type VideoSummary = Tables<'video_catalog'>;
-export type VideoProgress = Pick<Tables<'user_video_progress'>, 'video_id' | 'status' | 'finished_segments' | 'last_segment_position' | 'last_studied_at' | 'avg_accuracy'>;
-export type Segment = Pick<Tables<'video_segments'>, 'id' | 'position' | 'start_time' | 'end_time' | 'text' | 'pinyin' | 'translation_vi' | 'difficulty'>;
+export type LessonSummary = Tables<'lesson_catalog'>;
+export type LessonProgress = Pick<Tables<'user_lesson_progress'>, 'lesson_id' | 'status' | 'finished_sentences' | 'last_sentence_position' | 'last_studied_at' | 'avg_accuracy'>;
+export type Sentence = Pick<Tables<'lesson_sentences'>, 'id' | 'position' | 'text' | 'pinyin' | 'translation_vi' | 'difficulty'>;
 
 export const PAGE_SIZE = 12;
 
 export const libraryKeys = {
   topics: ['topics'] as const,
-  videos: (f: LibraryFilters, favIds: string[] | null) => ['videos', f, favIds] as const,
-  video: (id: string) => ['video', id] as const,
-  segments: (id: string) => ['video', id, 'segments'] as const,
+  lessons: (f: LibraryFilters, favIds: string[] | null) => ['lessons', f, favIds] as const,
+  lesson: (id: string) => ['lesson', id] as const,
+  sentences: (id: string) => ['lesson', id, 'sentences'] as const,
   favorites: (userId: string) => ['favorites', userId] as const,
   progress: (userId: string) => ['progress', userId] as const,
 };
@@ -33,15 +33,15 @@ export function useTopics() {
 }
 
 /** Paged, filtered catalog. `favoriteIds` is only needed when filtering to favourites. */
-export function useVideoCatalog(filters: LibraryFilters, favoriteIds: Set<string> | undefined) {
+export function useLessonCatalog(filters: LibraryFilters, favoriteIds: Set<string> | undefined) {
   const favIds = filters.favoritesOnly ? [...(favoriteIds ?? [])].sort() : null;
   return useInfiniteQuery({
-    queryKey: libraryKeys.videos(filters, favIds),
+    queryKey: libraryKeys.lessons(filters, favIds),
     enabled: !filters.favoritesOnly || favoriteIds !== undefined,
     initialPageParam: 0,
     queryFn: async ({ pageParam }) => {
-      if (favIds && favIds.length === 0) return { rows: [] as VideoSummary[], total: 0, page: 0 };
-      let q = getSupabase().from('video_catalog').select('*', { count: 'exact' }).eq('is_published', true);
+      if (favIds && favIds.length === 0) return { rows: [] as LessonSummary[], total: 0, page: 0 };
+      let q = getSupabase().from('lesson_catalog').select('*', { count: 'exact' }).eq('is_published', true);
       if (filters.lang) q = q.eq('language', filters.lang);
       if (filters.level) q = q.eq('level', filters.level);
       if (filters.hsk) q = q.eq('hsk_level', filters.hsk);
@@ -49,7 +49,7 @@ export function useVideoCatalog(filters: LibraryFilters, favoriteIds: Set<string
       if (favIds) q = q.in('id', favIds);
       if (filters.q) {
         const s = escapeSearch(filters.q);
-        q = q.or(`title.ilike.%${s}%,description.ilike.%${s}%,source_name.ilike.%${s}%`);
+        q = q.or(`title.ilike.%${s}%,description.ilike.%${s}%`);
       }
       const from = pageParam * PAGE_SIZE;
       const { data, count, error } = await q
@@ -66,13 +66,13 @@ export function useVideoCatalog(filters: LibraryFilters, favoriteIds: Set<string
 
 const uuid = z.string().uuid();
 
-export function useVideo(id: string | undefined) {
+export function useLesson(id: string | undefined) {
   const valid = uuid.safeParse(id).success;
   return useQuery({
-    queryKey: libraryKeys.video(id ?? ''),
+    queryKey: libraryKeys.lesson(id ?? ''),
     enabled: valid,
     queryFn: async () => {
-      const { data, error } = await getSupabase().from('video_catalog').select('*').eq('id', id!).maybeSingle();
+      const { data, error } = await getSupabase().from('lesson_catalog').select('*').eq('id', id!).maybeSingle();
       if (error) throw error;
       return data; // null → not found (or not published)
     },
@@ -81,15 +81,15 @@ export function useVideo(id: string | undefined) {
   });
 }
 
-export function useVideoSegments(id: string | undefined, enabled = true) {
+export function useLessonSentences(id: string | undefined, enabled = true) {
   return useQuery({
-    queryKey: libraryKeys.segments(id ?? ''),
+    queryKey: libraryKeys.sentences(id ?? ''),
     enabled: enabled && uuid.safeParse(id).success,
-    queryFn: async (): Promise<Segment[]> => {
+    queryFn: async (): Promise<Sentence[]> => {
       const { data, error } = await getSupabase()
-        .from('video_segments')
-        .select('id, position, start_time, end_time, text, pinyin, translation_vi, difficulty')
-        .eq('video_id', id!)
+        .from('lesson_sentences')
+        .select('id, position, text, pinyin, translation_vi, difficulty')
+        .eq('lesson_id', id!)
         .order('position');
       if (error) throw error;
       return data;
@@ -102,9 +102,9 @@ export function useFavoriteIds() {
   return useQuery({
     queryKey: libraryKeys.favorites(user.id),
     queryFn: async () => {
-      const { data, error } = await getSupabase().from('favorites').select('video_id');
+      const { data, error } = await getSupabase().from('favorites').select('lesson_id');
       if (error) throw error;
-      return new Set(data.map((r) => r.video_id));
+      return new Set(data.map((r) => r.lesson_id));
     },
   });
 }
@@ -118,19 +118,19 @@ export function useToggleFavorite() {
   return useMutation({
     // Run toggles one after another so a quick double-click can't reach the server out of order.
     scope: { id: 'favorites' },
-    mutationFn: async ({ videoId, favorite }: { videoId: string; favorite: boolean }) => {
+    mutationFn: async ({ lessonId, favorite }: { lessonId: string; favorite: boolean }) => {
       const sb = getSupabase();
       const { error } = favorite
-        ? await sb.from('favorites').upsert({ user_id: user.id, video_id: videoId }, { ignoreDuplicates: true })
-        : await sb.from('favorites').delete().eq('user_id', user.id).eq('video_id', videoId);
+        ? await sb.from('favorites').upsert({ user_id: user.id, lesson_id: lessonId }, { ignoreDuplicates: true })
+        : await sb.from('favorites').delete().eq('user_id', user.id).eq('lesson_id', lessonId);
       if (error) throw error;
     },
-    onMutate: async ({ videoId, favorite }) => {
+    onMutate: async ({ lessonId, favorite }) => {
       await qc.cancelQueries({ queryKey: key });
       const previous = qc.getQueryData<Set<string>>(key);
       const next = new Set(previous);
-      if (favorite) next.add(videoId);
-      else next.delete(videoId);
+      if (favorite) next.add(lessonId);
+      else next.delete(lessonId);
       qc.setQueryData(key, next);
       return { previous };
     },
@@ -147,10 +147,10 @@ export function useProgressMap() {
     queryKey: libraryKeys.progress(user.id),
     queryFn: async () => {
       const { data, error } = await getSupabase()
-        .from('user_video_progress')
-        .select('video_id, status, finished_segments, last_segment_position, last_studied_at, avg_accuracy');
+        .from('user_lesson_progress')
+        .select('lesson_id, status, finished_sentences, last_sentence_position, last_studied_at, avg_accuracy');
       if (error) throw error;
-      return new Map(data.filter((r) => r.video_id).map((r) => [r.video_id!, r as VideoProgress]));
+      return new Map(data.filter((r) => r.lesson_id).map((r) => [r.lesson_id!, r as LessonProgress]));
     },
   });
 }
