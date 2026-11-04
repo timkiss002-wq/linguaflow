@@ -92,10 +92,12 @@ export default function LessonDetailPage() {
               <Progress value={total ? (done / total) * 100 : 0} label="Lesson progress" />
             </div>
             <div className="space-y-2">
-              <Button className="w-full" disabled>
-                <Headphones /> Start dictation
+              <Button className="w-full" asChild>
+                <Link to={`/lessons/${l.id}/practice`}>
+                  <Headphones /> {done === 0 ? 'Start dictation' : done >= total ? 'Practise again' : 'Continue dictation'}
+                </Link>
               </Button>
-              <p className="text-xs text-muted-foreground">The Dictation Room opens in the next update. For now, listen to each sentence on the left.</p>
+              <p className="text-xs text-muted-foreground">Listen to each sentence, type it, and check your answer.</p>
             </div>
             <FavoriteButton lessonId={l.id!} isFavorite={favorites.data?.has(l.id!) ?? false} withLabel className="w-full justify-center rounded-md" />
           </CardContent>

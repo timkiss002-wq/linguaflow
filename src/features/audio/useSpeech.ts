@@ -7,7 +7,7 @@ import { DEFAULT_SETTINGS } from '@/features/profile/schemas';
 const pause = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /** Plays sentences with the learner's voice/volume settings. Only one thing plays at a time. */
-export function useSpeech(language: SpeechLanguage) {
+export function useSpeech(language: SpeechLanguage, overrides: { volume?: number } = {}) {
   const { data: profile } = useProfile();
   const settings = profile?.settings ?? DEFAULT_SETTINGS;
   const [playingKey, setPlayingKey] = useState<string | null>(null);
@@ -26,7 +26,7 @@ export function useSpeech(language: SpeechLanguage) {
         return await speak(text, {
           language,
           rate,
-          volume: settings.volume / 100,
+          volume: (overrides.volume ?? settings.volume) / 100,
           voiceName: language === 'zh' ? settings.voiceZh : settings.voiceEn,
         });
       } catch (e) {
@@ -36,7 +36,7 @@ export function useSpeech(language: SpeechLanguage) {
         if (id === runId.current) setPlayingKey(null);
       }
     },
-    [language, settings.volume, settings.voiceEn, settings.voiceZh],
+    [language, overrides.volume, settings.volume, settings.voiceEn, settings.voiceZh],
   );
 
   const stop = useCallback(() => {
@@ -72,5 +72,12 @@ export function useSpeech(language: SpeechLanguage) {
     [playOne],
   );
 
-  return { play, playAll, stop, playingKey, error, defaultRate: settings.playbackRate };
+  /** Repeats one sentence until stopped (max `times`). */
+  const loop = useCallback(
+    (key: string, text: string, rate: number, times = 10) =>
+      playAll(Array.from({ length: times }, (_, i) => ({ key: `loop${i}:${key}`, text })), rate),
+    [playAll],
+  );
+
+  return { play, playAll, loop, stop, playingKey, error, defaultRate: settings.playbackRate, defaultVolume: settings.volume };
 }

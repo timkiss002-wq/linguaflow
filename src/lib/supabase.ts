@@ -15,6 +15,13 @@ export const supabase: TypedSupabaseClient | null = result.ok
 
 export const envIssues = result.ok ? [] : result.issues;
 
+/** Raw REST access for requests that must survive page unload (fetch keepalive). */
+export function restUrl(path: string) {
+  if (!result.ok) throw new Error('Supabase is not configured.');
+  return `${result.env.VITE_SUPABASE_URL}/rest/v1/${path}`;
+}
+export const anonKey = result.ok ? result.env.VITE_SUPABASE_ANON_KEY : '';
+
 /** Use inside the app (always rendered after the env check passed). */
 export function getSupabase(): TypedSupabaseClient {
   if (!supabase) throw new Error('Supabase is not configured. See README → Configuration.');

@@ -5,6 +5,14 @@ import type { SpeechError } from '@/lib/speech/tts';
 
 /** Explains how to get a voice when the device can't speak the lesson language. */
 export function SpeechErrorNotice({ error, language }: { error: SpeechError; language: 'en' | 'zh' }) {
+  if (error.reason === 'blocked') {
+    return (
+      <Alert variant="info">
+        <VolumeX />
+        <AlertDescription>{error.message}</AlertDescription>
+      </Alert>
+    );
+  }
   return (
     <Alert variant="destructive">
       <VolumeX />

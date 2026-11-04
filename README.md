@@ -20,8 +20,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | M1 | Project setup, authentication, app layout, settings, basic dashboard | ✅ Done |
 | M2 | Library, detail page, favorites, My Learning | ✅ Done |
 | M3 | Text-to-speech lessons (replaces video), voice settings, Pinyin | ✅ Done |
-| M4 | Dictation Room + answer checking | Next |
-| M5 | Vocabulary notebook | Planned |
+| M4 | Dictation Room + answer checking (EN words, ZH characters/tones) | ✅ Done |
+| M5 | Vocabulary notebook | Next |
 | M6 | SRS flashcard review | Planned |
 | M7 | Full dashboard, landing polish, deployment | Planned |
 | P1–P6 | Personalised path, skill tests, Writing (EN + 中文) — [design](docs/PERSONALIZATION.md) | Planned |
@@ -155,6 +155,25 @@ supabase/
   tests/        SQL tests for RLS on plain Postgres
 docs/           architecture & plan
 ```
+
+## How answers are checked
+
+Logic lives in `src/lib/compare/` (pure TypeScript, unit-tested):
+
+- **English** — word by word, case-insensitive, punctuation optional (Settings). A changed word
+  that is ≥ 75% similar (swapped letters count once) is a **spelling** slip; otherwise it's a
+  **wrong word** (usually misheard). Also reports **missing** and **extra** words.
+- **Chinese** — character by character; full-/half-width punctuation and spaces are normalised.
+  A wrong character is classified by sound using context-aware Pinyin:
+  same sound → **wrong character** (heard it, picked the wrong 汉字, e.g. 的/得, 气/汽);
+  same syllable, other tone → **wrong tone** (买/卖); otherwise → **misheard**.
+- **Hints** reveal the first unit you haven't got right: first a clue (first letter / Pinyin),
+  then the word / character.
+- Every Check, Show answer and Skip is saved to `dictation_attempts` with an error summary
+  (and the confused pairs), which later feeds the strengths/weaknesses analysis.
+
+Keyboard: `Enter` check / next (ignored while a Pinyin IME is composing), `Alt+R` replay,
+`Alt+S` slow, `Alt+H` hint, `Alt+A` show answer, `Alt+←/→` previous / next sentence.
 
 ## Lesson content
 

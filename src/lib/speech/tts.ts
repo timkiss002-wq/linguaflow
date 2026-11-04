@@ -35,7 +35,7 @@ export interface SpeakOptions {
 }
 
 export class SpeechError extends Error {
-  constructor(public reason: 'unsupported' | 'no-voice' | 'failed', message: string) {
+  constructor(public reason: 'unsupported' | 'no-voice' | 'blocked' | 'failed', message: string) {
     super(message);
   }
 }
@@ -69,6 +69,8 @@ export async function speak(text: string, opts: SpeakOptions): Promise<'ended' |
     u.onend = () => resolve('ended');
     u.onerror = (e) => {
       if (e.error === 'interrupted' || e.error === 'canceled') resolve('cancelled');
+      // Browsers refuse audio that wasn't started by a click/key press.
+      else if (e.error === 'not-allowed') reject(new SpeechError('blocked', 'Press Play to start the audio.'));
       else reject(new SpeechError('failed', `Speech failed (${e.error}).`));
     };
     synth.speak(u);
