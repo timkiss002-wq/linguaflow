@@ -83,6 +83,60 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"hsk_words": {
+                  Row: {
+                    "level_v2": number | null,"level_v3": number | null,"meaning_en": string | null,"pinyin": string,"word": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "level_v2"?: number | null,"level_v3"?: number | null,"meaning_en"?: string | null,"pinyin": string,"word": string
+                  }
+                  Update: {
+                    "level_v2"?: number | null,"level_v3"?: number | null,"meaning_en"?: string | null,"pinyin"?: string,"word"?: string
+                  }
+                  Relationships: [
+                    
+                  ]
+                },"learner_profiles": {
+                  Row: {
+                    "habit_analysis": boolean,"interests": (string)[],"onboarded_at": string | null,"preferred_time": string | null,"study_days": (number)[],"updated_at": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "habit_analysis"?: boolean,"interests"?: (string)[],"onboarded_at"?: string | null,"preferred_time"?: string | null,"study_days"?: (number)[],"updated_at"?: string,"user_id"?: string
+                  }
+                  Update: {
+                    "habit_analysis"?: boolean,"interests"?: (string)[],"onboarded_at"?: string | null,"preferred_time"?: string | null,"study_days"?: (number)[],"updated_at"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "learner_profiles_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: true
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"learning_goals": {
+                  Row: {
+                    "created_at": string,"current_level": string,"exam": string,"exam_date": string | null,"focus_skills": (string)[],"id": string,"language": Database["public"]['Enums']["language_code"],"target_level": string,"updated_at": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"current_level": string,"exam": string,"exam_date"?: string | null,"focus_skills"?: (string)[],"id"?: string,"language": Database["public"]['Enums']["language_code"],"target_level": string,"updated_at"?: string,"user_id"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"current_level"?: string,"exam"?: string,"exam_date"?: string | null,"focus_skills"?: (string)[],"id"?: string,"language"?: Database["public"]['Enums']["language_code"],"target_level"?: string,"updated_at"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "learning_goals_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"learning_progress": {
                   Row: {
                     "completed_at": string | null,"last_sentence_position": number,"last_studied_at": string,"lesson_id": string,"started_at": string,"status": Database["public"]['Enums']["progress_status"],"user_id": string
@@ -440,6 +494,11 @@ isOneToOne: false
             "get_daily_activity":
 { Args: { "p_days"?: number,"p_language"?: Database["public"]['Enums']["language_code"] }; Returns: {
               "active_seconds": number,"attempts": number,"day": string,"reviews": number
+            }[]
+                           },
+"get_hsk_coverage":
+{ Args: { "p_version"?: number }; Returns: {
+              "known": number,"level": number,"saved": number,"total": number
             }[]
                            },
 "get_learning_stats":

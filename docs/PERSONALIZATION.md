@@ -1,6 +1,6 @@
 # LinguaFlow — Cá nhân hoá lộ trình & Writing (thiết kế)
 
-> Trạng thái: **đề xuất, chưa code**. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
+> Trạng thái: **P1 đã xong** (xem mục 10). P2–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## 1. Yêu cầu
 
@@ -160,3 +160,22 @@ Personalization dùng dữ liệu từ Dictation và SRS, nên đặt **sau vòn
 | **P6** | Góp ý Writing bằng AI + gắn nhãn lỗi ngữ pháp vào mô hình năng lực | Có |
 
 P1, P2, P4, P5 chạy hoàn toàn không cần AI. Chỉ P6 (và tuỳ chọn ở P3) cần Claude API key.
+
+## 10. P1 — đã triển khai
+
+- **Hồ sơ học tập** (`learner_profiles`): sở thích, giờ học hay học, ngày học trong tuần, đồng ý/không
+  cho phân tích thói quen (tắt được bất cứ lúc nào). **Mục tiêu** (`learning_goals`): mỗi ngôn ngữ một mục
+  tiêu — tiếng Anh: IELTS (band 3.0–9.0) hoặc CEFR; tiếng Trung: HSK 2.0 (1–6), HSK 3.0 (1–9) hoặc CEFR —
+  trình độ hiện tại → mục tiêu, ngày thi (tuỳ chọn), kỹ năng muốn tập trung.
+- **Wizard 4 bước** ngay sau khi đăng ký (bỏ qua được), sửa lại từ Settings → Learning profile.
+- **Danh sách từ HSK chính thức** (`hsk_words`, 11.470 từ, cả HSK 2.0 và 3.0, nguồn
+  *complete-hsk-vocabulary*, MIT) — `content/hsk-words.json`, nạp qua `supabase/seed-hsk.sql`.
+- **Dashboard → Your goals**: đếm ngược đến ngày thi; với HSK: số từ của cấp mục tiêu bạn đã biết
+  (từ trong sổ ở trạng thái Reviewing/Mastered) và **số từ mới cần học mỗi ngày** (kèm nhận xét
+  comfortable / challenging / very ambitious); với IELTS/CEFR: số giờ học có được với thời lượng mỗi ngày.
+- **Gợi ý bài học** (rule-based, có lý do): bài ở đúng trình độ hoặc cao hơn một bậc (i+1), ưu tiên chủ đề
+  yêu thích, bỏ bài đã xong, không bao giờ gợi ý bài khó hơn quá một bậc. Hiện ở Dashboard và hàng
+  "For you" trên trang Lessons.
+- **Popup từ tiếng Trung** hiện cấp HSK 2.0/3.0 và nghĩa tiếng Anh của từ.
+- Quy đổi dùng để chọn bài: IELTS 4.0–5.0 ≈ B1, 5.5–6.5 ≈ B2, ≥ 7.0 ≈ C1; HSK 3.0 → thang 6 cấp của bài học
+  là gần đúng.

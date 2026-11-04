@@ -54,6 +54,12 @@ select record_review('44444444-0000-0000-0000-000000000001','good',1,0.5,1,'lear
 select typing_level, status from record_typing_practice('44444444-0000-0000-0000-000000000001','copy','天气',true);
 \echo '--- invalid mode rejected (expect check violation)'
 select record_typing_practice('44444444-0000-0000-0000-000000000001','guess','天气',true);
+\echo '--- Alice sets goals: valid EN goal (INSERT), IELTS for Chinese rejected'
+insert into learning_goals(language, exam, current_level, target_level) values ('en','ielts','5.0','7.0');
+insert into learning_goals(language, exam, current_level, target_level) values ('zh','ielts','5.0','7.0');
+insert into learner_profiles(interests, study_days) values ('{travel}', '{1,2,3}');
+\echo '--- invalid study day rejected'
+update learner_profiles set study_days = '{7}' where user_id = auth.uid();
 \echo '--- streak (expect 1) and today activity'
 select get_learning_streak();
 select * from get_daily_activity(2);
@@ -72,6 +78,8 @@ insert into dictation_attempts(user_id,sentence_id,user_input,accuracy,is_correc
 select record_typing_practice('44444444-0000-0000-0000-000000000001','copy','x',true);
 \echo '--- Bob forges a typing attempt on Alice word (expect FK error)'
 insert into practice_attempts(vocabulary_id,mode,typed,is_correct,level_before,level_after) values ('44444444-0000-0000-0000-000000000001','copy','x',true,0,1);
+\echo '--- Bob sees no goals/profile of Alice (expect 0 0)'
+select (select count(*) from learning_goals), (select count(*) from learner_profiles);
 \echo '--- Bob streak (expect 0)'
 select get_learning_streak();
 

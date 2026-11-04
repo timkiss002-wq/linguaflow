@@ -19,7 +19,8 @@ export function RegisterForm() {
   const mutation = useMutation({
     mutationFn: signUp,
     onSuccess: ({ needsConfirmation }) => {
-      if (!needsConfirmation) navigate('/dashboard', { replace: true });
+      // New learners set up their goals first (they can skip).
+      if (!needsConfirmation) navigate('/onboarding', { replace: true });
     },
   });
   const { errors } = form.formState;

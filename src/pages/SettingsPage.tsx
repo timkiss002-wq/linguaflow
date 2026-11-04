@@ -7,6 +7,7 @@ import { LearningPreferences } from '@/features/profile/LearningPreferences';
 import { ProfileForm } from '@/features/profile/ProfileForm';
 import { ReviewPreferences } from '@/features/profile/ReviewPreferences';
 import { ChangePassword } from '@/features/profile/ChangePassword';
+import { LearningProfileCard } from '@/features/learner/LearningProfileCard';
 
 export default function SettingsPage() {
   const user = useUser();
@@ -25,6 +26,7 @@ export default function SettingsPage() {
       ) : (
         <div className="space-y-6">
           <ProfileForm profile={profile.data} email={user.email ?? ''} />
+          <LearningProfileCard />
           <LearningPreferences profile={profile.data} />
           <ReviewPreferences profile={profile.data} />
           <ChangePassword />

@@ -49,6 +49,8 @@ const FAKE_TTS = () => {
   await page.getByLabel('Password', { exact: true }).fill('listen123');
   await page.getByLabel('Confirm password').fill('listen123');
   await page.getByRole('button', { name: 'Create account' }).click();
+  await page.waitForURL(/onboarding/); // new accounts start in the learning-profile wizard
+  await page.goto(BASE + '/dashboard');
   await page.waitForURL(/dashboard/);
 
   await page.getByRole('link', { name: 'Explore Lessons' }).click();

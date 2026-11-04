@@ -25,7 +25,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | M5b | IELTS word forms: 104 word families, family cards, wrong-type warnings, 4 drills, weak spots, `word_form` errors in dictation — [design](docs/VOCABULARY.md#4-word-form-cho-ielts) | ✅ Done |
 | M6 | Flashcard review: SM-2 or fixed intervals (like the learner's sheet), daily new-card limit, word→meaning / meaning→word, forecast | ✅ Done |
 | M7 | Dashboard (goal, 6 tiles, study-time chart, EN vs 中文), Statistics (accuracy per week, mistake types, confused pairs), forgot/reset/change password, CI, deploy guide | ✅ Done |
-| P1–P6 | Next: personalised path, skill tests, Writing (EN + 中文) — [design](docs/PERSONALIZATION.md) | Planned |
+| P1 | Learning profile & goals (IELTS / HSK 2.0 / HSK 3.0 / CEFR), onboarding wizard, official HSK word list (11,470 words), goal progress & recommended lessons — [design](docs/PERSONALIZATION.md#10-p1--đã-triển-khai) | ✅ Done |
+| P2–P6 | Next: strengths/weaknesses, placement test, daily plan, Writing, skill tests, Writing (EN + 中文) — [design](docs/PERSONALIZATION.md) | Planned |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
 yet" page — there are no fake features.
@@ -206,7 +207,9 @@ npm run db:reset
 ```
 
 `seed:build` validates the JSON and regenerates `supabase/seed.sql`. IELTS word families live in
-**`content/word-families.json`** (104 families, 410 forms, 208 example sentences with a Vietnamese
+the official HSK list in **`content/hsk-words.json`** (11,470 words, from
+[complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary), MIT; regenerate with
+`node scripts/import-hsk.mjs complete.json`), and IELTS word families in **`content/word-families.json`** (104 families, 410 forms, 208 example sentences with a Vietnamese
 "why" for each); the build checks that every example answer is a member of its family. The seed is safe to run more
 than once. Translations should be reviewed by a native speaker before production use.
 
@@ -219,7 +222,7 @@ explains what to do when no voice is available.
 
 ## Testing
 
-- `npm run e2e` — 7 browser suites (157 checks) that drive the real app against the local Supabase,
+- `npm run e2e` — 8 browser suites (177 checks) that drive the real app against the local Supabase,
   including database assertions. See [e2e/README.md](e2e/README.md).
 - GitHub Actions (`.github/workflows/ci.yml`) on every push: lint, typecheck, unit tests, seed
   up-to-date check, build, and all migrations + seed applied to a clean Postgres.

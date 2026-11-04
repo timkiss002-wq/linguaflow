@@ -17,6 +17,7 @@ import { PosBadge } from './PosBadge';
 import { FamilyGrid } from '@/features/wordforms/FamilyGrid';
 import { useWordFamilyIndex } from '@/features/wordforms/api';
 import { familyFor } from '@/lib/wordforms';
+import { useHskWord } from '@/features/learner/api';
 
 export function WordCard({ target, language, onDone }: { target: LookupTarget; language: Language; onDone: () => void }) {
   const term = normalizeTerm(target.word, language);
@@ -27,6 +28,7 @@ export function WordCard({ target, language, onDone }: { target: LookupTarget; l
   const add = useAddWord();
   const speech = useSpeech(language);
   const familyIndex = useWordFamilyIndex();
+  const hsk = useHskWord(language === 'zh' ? term : null);
   const family = language === 'en' && familyIndex ? familyFor(familyIndex, term) : null;
 
   const reading = language === 'zh' ? toPinyin(term) : (lookup.data?.reading ?? null);
@@ -99,6 +101,16 @@ export function WordCard({ target, language, onDone }: { target: LookupTarget; l
               </p>
             ))
           )}
+        </div>
+      )}
+
+      {language === 'zh' && hsk.data && (
+        <div className="rounded-md bg-muted/60 p-2 text-xs" data-testid="hsk-info">
+          <p className="flex flex-wrap gap-1.5">
+            {hsk.data.level_v2 && <span className="rounded bg-accent px-1.5 py-0.5 font-medium text-accent-foreground">HSK 2.0 · {hsk.data.level_v2}</span>}
+            {hsk.data.level_v3 && <span className="rounded bg-accent px-1.5 py-0.5 font-medium text-accent-foreground">HSK 3.0 · {hsk.data.level_v3 === 7 ? '7–9' : hsk.data.level_v3}</span>}
+          </p>
+          {hsk.data.meaning_en && <p className="mt-1 text-muted-foreground">English: {hsk.data.meaning_en}</p>}
         </div>
       )}
 

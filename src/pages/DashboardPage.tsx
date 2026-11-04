@@ -11,6 +11,7 @@ import { useDashboardSummary, useDueToday } from '@/features/dashboard/api';
 import { StatCard } from '@/features/dashboard/StatCard';
 import { useProgressMap } from '@/features/library/api';
 import { useProfile } from '@/features/profile/api';
+import { GoalsPanel } from '@/features/learner/GoalsPanel';
 import { formatStudyTime, useDailyActivity, useLearningStats, type StatsLanguage } from '@/features/stats/api';
 import { StudyTimeChart } from '@/features/stats/charts';
 import { LanguageSwitch } from '@/features/stats/LanguageSwitch';
@@ -106,6 +107,10 @@ export default function DashboardPage() {
           <StatCard label="Lessons completed" icon={Trophy} loading={!s} value={s?.lessons_completed ?? 0} />
         </div>
       )}
+
+      <div className="mt-6">
+        <GoalsPanel />
+      </div>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">

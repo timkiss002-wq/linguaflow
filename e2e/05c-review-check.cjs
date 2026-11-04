@@ -26,6 +26,8 @@ const check = (name, cond, extra = '') => results.push(`${cond ? 'PASS' : 'FAIL'
   await page.getByLabel('Password', { exact: true }).fill('listen123');
   await page.getByLabel('Confirm password').fill('listen123');
   await page.getByRole('button', { name: 'Create account' }).click();
+  await page.waitForURL(/onboarding/); // new accounts start in the learning-profile wizard
+  await page.goto(BASE + '/dashboard');
   await page.waitForURL(/dashboard/);
   const uid = sql(`select id from auth.users where email='${email}'`);
   const state = () => sql(`select string_agg(term || '=' || review_input || '=' || review_correct, ' ; ' order by term) from vocabulary where user_id='${uid}'`);

@@ -9,6 +9,8 @@ import { useFavoriteIds, useLessonCatalog, useProgressMap } from '@/features/lib
 import { hasActiveFilters, parseFilters, toSearchParams, type LibraryFilters as Filters } from '@/features/library/filters';
 import { LessonGrid, LessonGridSkeleton } from '@/features/library/LessonGrid';
 import { LibraryFilters } from '@/features/library/LibraryFilters';
+import { RecommendedList } from '@/features/learner/RecommendedLessons';
+import { useRecommendations } from '@/features/learner/useRecommendations';
 
 export default function LessonsPage() {
   const [params, setParams] = useSearchParams();
@@ -18,6 +20,8 @@ export default function LessonsPage() {
   const favorites = useFavoriteIds();
   const progress = useProgressMap();
   const catalog = useLessonCatalog(filters, favorites.data);
+  const recs = useRecommendations(2);
+  const forYou = (recs ?? []).filter((r) => !filters.lang || r.language === filters.lang).flatMap((r) => r.items);
 
   const lessons = catalog.data?.pages.flatMap((p) => p.rows) ?? [];
   const total = catalog.data?.pages[0]?.total ?? 0;
@@ -25,6 +29,12 @@ export default function LessonsPage() {
   return (
     <>
       <PageHeader title="Explore Lessons" description="Listening lessons read aloud sentence by sentence. Pick one at your level." />
+      {forYou.length > 0 && !hasActiveFilters({ ...filters, lang: undefined }) && (
+        <section className="mb-6 space-y-2" aria-label="Recommended for you">
+          <h2 className="text-sm font-semibold">For you</h2>
+          <RecommendedList items={forYou} />
+        </section>
+      )}
       <LibraryFilters value={filters} onChange={setFilters} />
 
       <div className="mt-6">
