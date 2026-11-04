@@ -14,8 +14,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 |---|---|---|
 | M0 | Analysis, architecture, database schema + RLS | ✅ Done |
 | M1 | Project setup, authentication, app layout, settings, basic dashboard | ✅ Done |
-| M2 | Video library + video detail | Next |
-| M3 | Player engine (YouTube + HTML5, segment playback) | Planned |
+| M2 | Video library, video detail, favorites, My Learning | ✅ Done |
+| M3 | Player engine (YouTube + HTML5, segment playback) | Next |
 | M4 | Dictation Room + answer checking | Planned |
 | M5 | Vocabulary notebook | Planned |
 | M6 | SRS flashcard review | Planned |
@@ -149,6 +149,13 @@ supabase/
   tests/        SQL tests for RLS on plain Postgres
 docs/           architecture & plan
 ```
+
+## Demo content
+
+`supabase/seed.sql` adds 14 Chinese demo videos (HSK 3–6) found on YouTube, marked **Demo**
+(`is_sample = true`). They are only embedded. Their lesson sentences are not seeded: sentences must
+match the audio exactly and be timed by listening, so an admin adds them (segment editor / SRT
+import). Until then a video shows "Transcript pending".
 
 ## Content & copyright
 

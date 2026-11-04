@@ -1,27 +1,5 @@
-import { BarChart3, BookOpen, Compass, GraduationCap, Layers } from 'lucide-react';
+import { BarChart3, BookOpen, Layers } from 'lucide-react';
 import { ComingSoon } from '@/components/ComingSoon';
-
-export function LibraryPage() {
-  return (
-    <ComingSoon
-      title="Explore Videos"
-      icon={Compass}
-      description="The video library is the next milestone."
-      bullets={['Filter by language, topic and level', 'Search and favourites', 'Progress on every video']}
-    />
-  );
-}
-
-export function MyLearningPage() {
-  return (
-    <ComingSoon
-      title="My Learning"
-      icon={GraduationCap}
-      description="Videos you have started will be listed here so you can resume where you left off."
-      bullets={['Continue from the last sentence', 'Completed videos and accuracy']}
-    />
-  );
-}
 
 export function VocabularyPage() {
   return (

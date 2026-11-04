@@ -191,7 +191,7 @@ dictionary_entries (dùng chung, chỉ admin ghi)
 | Bảng (yêu cầu) | Tên thực tế | Ghi chú |
 |---|---|---|
 | users | `profiles` | `auth.users` do Supabase quản lý; `profiles` lưu tên, role, múi giờ, cài đặt học (`settings` jsonb: tốc độ mặc định, bỏ qua dấu câu, hiện pinyin, auto-next). Tự tạo bằng trigger khi đăng ký. Người dùng **không** tự sửa được cột `role` (phân quyền theo cột). |
-| videos | `videos` | Nguồn: `youtube` / `upload` / `external_url`, có CHECK đảm bảo đủ trường theo nguồn. `license_note` ghi rõ nguồn được phép. `is_sample` đánh dấu dữ liệu demo. |
+| videos | `videos` | `hsk_level` (1–6, chỉ cho video tiếng Trung, thêm ở M2). Nguồn: `youtube` / `upload` / `external_url`, có CHECK đảm bảo đủ trường theo nguồn. `license_note` ghi rõ nguồn được phép. `is_sample` đánh dấu dữ liệu demo. |
 | transcripts | `transcripts` | Một **phiên bản** transcript của video (manual/srt/vtt, file gốc). Chỉ 1 bản `is_active` mỗi video (unique partial index). |
 | video_segments | `video_segments` | `start_time`, `end_time` (giây, 3 chữ số thập phân), `text`, `pinyin` ghi đè, `translation_vi`, `difficulty`. Ràng buộc `end > start`, `unique(video_id, position)`. |
 | dictation_attempts | `dictation_attempts` | Mỗi lần Check. Lưu input, accuracy, đúng/sai, tóm tắt lỗi (jsonb), hint, reveal, skip, thời gian. |
