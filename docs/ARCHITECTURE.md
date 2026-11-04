@@ -290,6 +290,10 @@ Mỗi milestone kết thúc bằng: chạy được, có test cho phần logic, 
 - **M9** Admin: quản lý video/segment, bắt thời gian segment ngay trên player, import SRT/VTT.
 - **M10** Upload video vào Supabase Storage (chỉ nội dung được phép), cải thiện pinyin/audio, tuỳ chỉnh SRS (có thể thêm FSRS).
 
+### Cá nhân hoá & Writing (đề xuất)
+Xem [PERSONALIZATION.md](PERSONALIZATION.md): milestones P1–P6 (hồ sơ học tập, mô hình năng lực,
+placement test, lộ trình hằng ngày, Writing, góp ý AI).
+
 ### Phase 3
 - **M11** AI Assistant qua Supabase Edge Function + Claude API: giải thích ngữ pháp/từ trong ngữ cảnh, phân tích lỗi nghe hay gặp, tạo ví dụ & bài kiểm tra, đề xuất video theo trình độ.
 
