@@ -24,6 +24,8 @@ export const learningSettingsSchema = z.object({
   fixedIntervals: z.array(z.number().int().min(1).max(365)).length(4).catch([1, 3, 7, 30]),
   /** Max new cards introduced per day. */
   newPerDay: z.number().int().min(0).max(200).catch(20),
+  /** AI feedback on writing (sends the text to Google Gemini) — off until the learner agrees. */
+  aiFeedback: z.boolean().catch(false),
 });
 export type LearningSettings = { playbackRate: PlaybackRate } & Omit<z.infer<typeof learningSettingsSchema>, 'playbackRate'>;
 
@@ -38,6 +40,7 @@ export const DEFAULT_SETTINGS: LearningSettings = {
   srsMode: 'sm2',
   fixedIntervals: [1, 3, 7, 30],
   newPerDay: 20,
+  aiFeedback: false,
 };
 
 export function parseSettings(raw: Json | null | undefined): LearningSettings {

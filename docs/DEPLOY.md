@@ -74,7 +74,42 @@ Thời gian: khoảng 20–30 phút. Cả hai dịch vụ đều có gói miễn
 - [ ] Word Forms có 104 họ từ.
 - [ ] Đăng nhập tài khoản thứ hai: **không** thấy từ vựng / tiến độ của tài khoản đầu.
 
-## 4. Cập nhật về sau
+## 4. Góp ý bài viết bằng AI (tuỳ chọn)
+
+Writing vẫn dùng được khi chưa làm bước này (phân tích tự động không cần AI); nút **Get AI feedback** sẽ báo
+"AI feedback is not set up".
+
+1. **Lấy API key Gemini miễn phí**: vào <https://aistudio.google.com/apikey> → *Create API key*. Gói miễn phí có giới
+   hạn số lượt mỗi phút/ngày; Google có thể dùng dữ liệu gửi qua gói miễn phí để cải thiện sản phẩm (app đã báo cho
+   người học và xin đồng ý trước lần dùng đầu).
+2. **Đặt key làm secret của Supabase** (key chỉ nằm ở server, không bao giờ vào trình duyệt):
+
+   ```bash
+   npx supabase secrets set GEMINI_API_KEY=<key của bạn>
+   ```
+
+   Tuỳ chọn: `GEMINI_MODEL` (mặc định `gemini-2.5-flash` — kiểm tra tên model miễn phí hiện tại trong AI Studio),
+   `WRITING_FEEDBACK_DAILY_LIMIT` (mặc định 5 lượt/người/24 giờ).
+3. **Deploy function**:
+
+   ```bash
+   npx supabase functions deploy writing-feedback
+   ```
+
+4. Thử: viết một bài → **Get AI feedback** → đồng ý → sau 10–30 giây có điểm theo tiêu chí, các câu sửa kèm giải
+   thích tiếng Việt và bản viết lại.
+
+**Chạy ở máy local**:
+- Cách 1: `npx supabase functions serve --env-file supabase/functions/.env` (cần Docker), app tự gọi
+  `http://127.0.0.1:54321/functions/v1/writing-feedback`.
+- Cách 2 (không cần image edge-runtime): chạy bằng Deno rồi trỏ app tới nó bằng `VITE_FUNCTIONS_URL=http://127.0.0.1:8000`
+  trong `.env.local`:
+
+  ```bash
+  SUPABASE_URL=http://127.0.0.1:54321 SUPABASE_ANON_KEY=<anon> SUPABASE_SERVICE_ROLE_KEY=<service_role> GEMINI_API_KEY=<key> deno run --allow-net --allow-env supabase/functions/writing-feedback/index.ts
+  ```
+
+## 5. Cập nhật về sau
 
 - Thay đổi database: thêm file mới trong `supabase/migrations/` (không sửa file cũ), thử local bằng
   `npm run db:reset`, rồi `npx supabase db push`.

@@ -591,6 +591,32 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"writing_feedback": {
+                  Row: {
+                    "created_at": string,"feedback": NonNullable<Json>,"model": string,"submission_id": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"feedback": NonNullable<Json>,"model": string,"submission_id": string,"user_id": string
+                  }
+                  Update: {
+                    "created_at"?: string,"feedback"?: NonNullable<Json>,"model"?: string,"submission_id"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "writing_feedback_submission_id_fkey"
+      columns: ["submission_id"]
+isOneToOne: true
+      referencedRelation: "writing_submissions"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "writing_feedback_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"writing_submissions": {
                   Row: {
                     "body": string,"created_at": string,"duration_seconds": number | null,"id": string,"language": Database["public"]['Enums']["language_code"],"metrics": NonNullable<Json>,"prompt": string,"target_words": (string)[],"task_id": string | null,"title": string,"user_id": string

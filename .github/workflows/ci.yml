@@ -21,6 +21,11 @@ jobs:
       - run: npm test
       - run: npm run seed:build && git diff --exit-code supabase/seed.sql supabase/seed-hsk.sql
       - run: npm run build
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Type-check Edge Functions
+        run: deno check supabase/functions/writing-feedback/index.ts
 
   database:
     name: Migrations + seed on Postgres

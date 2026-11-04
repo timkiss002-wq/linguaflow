@@ -101,3 +101,21 @@ describe('buildInsights', () => {
     expect(buildInsights(d, { ...opts, habitAnalysis: false }).filter((i) => i.area === 'habits')).toEqual([]);
   });
 });
+
+describe('buildInsights — AI writing feedback', () => {
+  const empty: InsightData = { days: 60, pairs: [], missed: [], sentences: {}, reviews: [], typing: {}, word_forms: { n: 0, correct: 0 }, leeches: [], habits: { slots: {}, accuracy_by_slot: {}, avg_session_minutes: null, active_days_14: 0 } };
+  const c = (category: string) => ({ category, original: 'he go', corrected: 'he goes' });
+  it('reports an error type corrected 3+ times across 2+ texts', () => {
+    const ins = buildInsights(empty, { habitAnalysis: false, plannedDays: 0, writing: [
+      { language: 'en', corrections: [c('agreement'), c('agreement'), c('article')] },
+      { language: 'en', corrections: [c('agreement'), c('other'), c('other'), c('other')] },
+    ] });
+    expect(ins.map((i) => i.id)).toEqual(['writing-en-agreement']);
+    expect(ins[0]).toMatchObject({ title: 'Writing: Subject–verb agreement', evidence: '3 corrections in 2 texts', action: { href: '/writing?lang=en' } });
+  });
+  it('needs more than one text', () => {
+    const ins = buildInsights(empty, { habitAnalysis: false, plannedDays: 0, writing: [{ language: 'zh', corrections: [c('le'), c('le'), c('le')] }] });
+    expect(ins).toEqual([]);
+  });
+});
+

@@ -27,3 +27,9 @@ export function getSupabase(): TypedSupabaseClient {
   if (!supabase) throw new Error('Supabase is not configured. See README → Configuration.');
   return supabase;
 }
+
+/** URL of an Edge Function: `<project>/functions/v1/<name>`, or VITE_FUNCTIONS_URL/<name> when set. */
+export function functionUrl(name: string) {
+  if (!result.ok) throw new Error('Supabase is not configured.');
+  return `${result.env.VITE_FUNCTIONS_URL ?? `${result.env.VITE_SUPABASE_URL}/functions/v1`}/${name}`;
+}

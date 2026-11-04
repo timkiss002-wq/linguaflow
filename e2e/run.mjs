@@ -26,6 +26,11 @@ for (const suite of suites) {
   const out = (r.stdout ?? '') + (r.stderr ?? '');
   const pass = (out.match(/^PASS/gm) ?? []).length;
   const fail = out.split('\n').filter((l) => /^(FAIL|CRASH)/.test(l));
+  const skip = out.split('\n').find((l) => l.startsWith('SKIP'));
+  if (skip) {
+    console.log(`- ${suite}: skipped (${skip.slice(4).trim()})`);
+    continue;
+  }
   failed += fail.length + (r.status && !fail.length ? 1 : 0);
   console.log(`${fail.length || r.status ? '✗' : '✓'} ${suite}: ${pass} passed${fail.length ? `, ${fail.length} failed` : ''}`);
   for (const l of fail) console.log(`    ${l}`);

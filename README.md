@@ -30,7 +30,7 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | P3 | Level test: adaptive placement + 2-weekly check-in per skill (Elo), 110-question bank, 27 grammar points, answers graded on the server — [design](docs/PERSONALIZATION.md#12-p3--đã-triển-khai) | ✅ Done |
 | P4 | Today's plan on the dashboard: due reviews, level test / check-in, one weak spot, an i+1 lesson — sized to the daily goal, with reasons, auto-ticked, skips and rest days adapt it; dictation keeps the listening level current — [design](docs/PERSONALIZATION.md#13-p4--đã-triển-khai) | ✅ Done |
 | P5 | Writing in English or 中文: 28 prompts picked by level, interests and exam (HSK / IELTS), notebook words as targets, drafts, automatic analysis without AI (length, sentences, variety, linking words, HSK levels of words, form checks), comparison with earlier texts, in the daily plan — [design](docs/PERSONALIZATION.md#14-p5--đã-triển-khai) | ✅ Done |
-| P6 | Next: AI feedback on writing — [design](docs/PERSONALIZATION.md) | Planned |
+| P6 | AI feedback on writing (Gemini via a Supabase Edge Function, key on the server): scores on IELTS / HSK criteria, sentence corrections with Vietnamese explanations, improved version; validated against the text, cached, daily limit, opt-in with a privacy notice; repeated error types feed Strengths & Weaknesses — [design](docs/PERSONALIZATION.md#15-p6--đã-triển-khai), [setup](docs/DEPLOY.md) | ✅ Done |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
 yet" page — there are no fake features.
@@ -142,6 +142,7 @@ Step-by-step guide in Vietnamese: **[docs/DEPLOY.md](docs/DEPLOY.md)**. Summary:
 
 - Build command: `npm run build` · Output directory: `dist`
 - Environment variables: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
+- Optional AI writing feedback: `npx supabase secrets set GEMINI_API_KEY=…` and `npx supabase functions deploy writing-feedback` ([guide](docs/DEPLOY.md)).
 - Single-page routing is already configured: `vercel.json` (Vercel) and `public/_redirects` (Netlify/Cloudflare Pages).
 
 The anon key is safe to expose in the browser: all data access is protected by Row Level Security.
@@ -228,7 +229,7 @@ explains what to do when no voice is available.
 
 ## Testing
 
-- `npm run e2e` — 12 browser suites (249 checks) that drive the real app against the local Supabase,
+- `npm run e2e` — 13 browser suites (267 checks; suite 13 needs [Deno](https://deno.com) and is skipped without it) that drive the real app against the local Supabase,
   including database assertions. See [e2e/README.md](e2e/README.md).
 - GitHub Actions (`.github/workflows/ci.yml`) on every push: lint, typecheck, unit tests, seed
   up-to-date check, build, and all migrations + seed applied to a clean Postgres.

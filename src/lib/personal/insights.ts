@@ -1,5 +1,6 @@
 import { pinyin } from 'pinyin-pro';
 import { spellingSimilarity } from '@/lib/compare/align';
+import { CATEGORIES } from '../../../supabase/functions/_shared/writing-feedback.ts';
 
 /* ───────────── classification of single mistakes ───────────── */
 
@@ -72,7 +73,7 @@ export const SLOT_LABEL: Record<Slot, string> = { morning: 'morning', afternoon:
 export interface Insight {
   id: string;
   kind: 'strength' | 'weakness' | 'info';
-  area: 'listening' | 'sounds' | 'characters' | 'english' | 'vocabulary' | 'word-forms' | 'habits';
+  area: 'listening' | 'sounds' | 'characters' | 'english' | 'vocabulary' | 'word-forms' | 'writing' | 'habits';
   language?: 'en' | 'zh';
   title: string;
   detail: string;
@@ -101,7 +102,13 @@ function topGroups<T>(items: T[], key: (t: T) => string, weight: (t: T) => numbe
 
 export function buildInsights(
   d: InsightData,
-  opts: { sameFamily?: (a: string, b: string) => boolean; habitAnalysis: boolean; plannedDays: number },
+  opts: {
+    sameFamily?: (a: string, b: string) => boolean;
+    habitAnalysis: boolean;
+    plannedDays: number;
+    /** AI writing feedback (P6): the corrections of each reviewed text. */
+    writing?: { language: 'en' | 'zh'; corrections: { category: string; original: string; corrected: string }[] }[];
+  },
 ): Insight[] {
   const out: Insight[] = [];
 
@@ -235,6 +242,36 @@ export function buildInsights(
       const p = pct(t.correct, t.n);
       if (p >= 85) out.push({ id: `typing-${lang}`, kind: 'strength', area: 'vocabulary', language: lang, title: lang === 'en' ? 'Spelling saved words' : 'Writing saved words (汉字)', detail: `${p}% right on the first try.`, evidence: `${t.n} typing answers` });
       else if (p < 60) out.push({ id: `typing-${lang}`, kind: 'weakness', area: 'vocabulary', language: lang, title: lang === 'en' ? 'Spelling saved words' : 'Writing saved words (汉字)', detail: `${p}% right on the first try.`, evidence: `${t.n} typing answers`, action: { label: 'Typing practice', href: `/vocabulary/practice?lang=${lang}` } });
+    }
+  }
+
+  /* Writing: error types the AI corrected again and again (P6) */
+  for (const lang of ['en', 'zh'] as const) {
+    const texts = (opts.writing ?? []).filter((w) => w.language === lang);
+    const byCat = new Map<string, { n: number; texts: number; examples: string[] }>();
+    for (const t of texts) {
+      const seen = new Set<string>();
+      for (const c of t.corrections) {
+        if (c.category === 'other') continue;
+        const g = byCat.get(c.category) ?? { n: 0, texts: 0, examples: [] };
+        g.n += 1;
+        if (!seen.has(c.category)) g.texts += 1;
+        seen.add(c.category);
+        const ex = `${c.original.slice(0, 30)} → ${c.corrected.slice(0, 30)}`;
+        if (g.examples.length < 3 && !g.examples.includes(ex)) g.examples.push(ex);
+        byCat.set(c.category, g);
+      }
+    }
+    for (const [cat, g] of [...byCat.entries()].sort((a, b) => b[1].n - a[1].n)) {
+      if (g.n < MIN.pattern || g.texts < 2) continue;
+      out.push({
+        id: `writing-${lang}-${cat}`, kind: 'weakness', area: 'writing', language: lang,
+        title: `Writing: ${CATEGORIES[lang][cat] ?? cat}`,
+        detail: 'The AI feedback keeps correcting this in your texts.',
+        evidence: `${g.n} corrections in ${g.texts} texts`,
+        examples: g.examples,
+        action: { label: 'Write another text', href: `/writing?lang=${lang}` },
+      });
     }
   }
 

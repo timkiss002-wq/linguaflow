@@ -13,6 +13,7 @@ import { buildDrill, type DrillItem } from '@/features/insights/drill';
 import { useLearner } from '@/features/learner/api';
 import { HBarList } from '@/features/stats/charts';
 import { useWordFamilyIndex } from '@/features/wordforms/api';
+import { useAllFeedback } from '@/features/writing/feedback';
 import { buildInsights, MIN, SLOT_LABEL, type Insight, type InsightData, type Slot } from '@/lib/personal/insights';
 import { cn } from '@/lib/utils';
 
@@ -24,14 +25,23 @@ export default function InsightsPage() {
   const data = useInsightData(days);
   const learner = useLearner();
   const index = useWordFamilyIndex();
+  const feedback = useAllFeedback();
   const profile = learner.data?.profile;
   // No profile yet (onboarding skipped) → same defaults as the database: habits on, every day planned.
   const habitAnalysis = profile?.habit_analysis ?? true;
   const plannedDays = profile?.study_days.length ?? 7;
 
   const insights = useMemo(
-    () => (data.data ? buildInsights(data.data, { sameFamily: index?.sameFamily, habitAnalysis, plannedDays }) : []),
-    [data.data, index, habitAnalysis, plannedDays],
+    () =>
+      data.data
+        ? buildInsights(data.data, {
+            sameFamily: index?.sameFamily,
+            habitAnalysis,
+            plannedDays,
+            writing: feedback.data?.map((f) => ({ language: f.feedback.language, corrections: f.feedback.corrections })),
+          })
+        : [],
+    [data.data, index, habitAnalysis, plannedDays, feedback.data],
   );
   const drill = useMemo(() => (data.data ? buildDrill(data.data.pairs) : []), [data.data]);
 
@@ -138,8 +148,8 @@ function InsightItem({ insight: i }: { insight: Insight }) {
       <p className="text-sm">{i.detail}</p>
       {i.examples && i.examples.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
-          {i.examples.map((e) => (
-            <span key={e} className="rounded bg-muted px-1.5 py-0.5 text-sm" lang={i.language === 'zh' ? 'zh-CN' : undefined}>
+          {i.examples.map((e, n) => (
+            <span key={`${n}:${e}`} className="rounded bg-muted px-1.5 py-0.5 text-sm" lang={i.language === 'zh' ? 'zh-CN' : undefined}>
               {e}
             </span>
           ))}

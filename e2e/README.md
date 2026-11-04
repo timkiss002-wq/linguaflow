@@ -25,3 +25,7 @@ npm run e2e
 
 Only some suites: `npm run e2e -- 04 06`. Screenshots are written to `e2e/.shots/` (git-ignored).
 The suites create throw-away accounts (`m3_…@example.com`); `npm run db:reset` removes them.
+
+Suite 13 (AI writing feedback) runs the real `writing-feedback` Edge Function with **Deno** against the local
+Supabase and a fake Gemini API, so no API key is needed. Install Deno (`npm i -g deno`) or point `DENO_BIN` at it;
+without Deno the suite is skipped.

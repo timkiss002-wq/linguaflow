@@ -9,7 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useDeleteSubmission, useSubmission, useSubmissions } from '@/features/writing/api';
+import { AiFeedback } from '@/features/writing/AiFeedback';
+import { useDeleteSubmission, useSubmission, useSubmissions, useWritingProfile } from '@/features/writing/api';
 import { toUserMessage } from '@/lib/errors';
 import { highlights, levelCounts, type Metrics } from '@/lib/writing/analyze';
 import { compareWithPrevious } from '@/lib/writing/tasks';
@@ -36,6 +37,7 @@ export default function WritingResultPage() {
   const navigate = useNavigate();
   const del = useDeleteSubmission();
   const s = sub.data;
+  const profile = useWritingProfile(s?.language ?? 'en');
 
   const compare = useMemo(() => {
     if (!s || !list.data) return null;
@@ -153,7 +155,7 @@ export default function WritingResultPage() {
                   </span>
                 </p>
               )}
-              <p className="border-t pt-2 text-xs text-muted-foreground">These checks look at form — length, structure, words. They cannot judge grammar or meaning.</p>
+              <p className="border-t pt-2 text-xs text-muted-foreground">These checks look at form — length, structure, words. They cannot judge grammar or meaning: use AI feedback below for that.</p>
             </CardContent>
           </Card>
 
@@ -179,6 +181,10 @@ export default function WritingResultPage() {
             </CardContent>
           </Card>
         </div>
+      </div>
+
+      <div className="mt-4">
+        <AiFeedback submissionId={s.id} language={s.language} level={profile?.level.value ?? 3} />
       </div>
     </>
   );

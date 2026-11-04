@@ -3,6 +3,8 @@ import { z } from 'zod';
 const envSchema = z.object({
   VITE_SUPABASE_URL: z.string().url(),
   VITE_SUPABASE_ANON_KEY: z.string().min(20),
+  /** Optional: where Edge Functions are served when not behind the Supabase API (e.g. `deno run` locally). */
+  VITE_FUNCTIONS_URL: z.string().url().optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;

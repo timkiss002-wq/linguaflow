@@ -72,6 +72,8 @@ insert into daily_plans(day, items) values (current_date, '[{"key":"review","kin
 select set_plan_item_status(current_date, 'review', 'done');
 \echo '--- Alice saves a text (INSERT 0 1)'
 insert into writing_submissions(language, title, prompt, body) values ('en', 'T', 'P', 'My text.');
+\echo '--- Alice cannot store AI feedback herself (expect RLS error)'
+insert into writing_feedback(submission_id, user_id, model, feedback) select id, auth.uid(), 'fake', '{}' from writing_submissions limit 1;
 \echo '--- Alice cannot write ratings directly (expect RLS error)'
 insert into user_skill_ratings(user_id, language, skill, rating) values ('aaaaaaaa-0000-0000-0000-000000000001', 'en', 'grammar', 3000);
 

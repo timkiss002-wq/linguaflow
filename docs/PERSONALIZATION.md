@@ -1,6 +1,6 @@
 # LinguaFlow — Cá nhân hoá lộ trình & Writing (thiết kế)
 
-> Trạng thái: **P1–P5 đã xong** (xem mục 10–14). P6 (góp ý bằng AI) là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
+> Trạng thái: **P1–P6 đã xong** (xem mục 10–15). Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## 1. Yêu cầu
 
@@ -291,3 +291,51 @@ Trang **Writing** (`/writing`), tiếng Anh và tiếng Trung, **không dùng AI
 - **Lịch sử** bài viết theo ngôn ngữ, xoá được.
 - **Kế hoạch hằng ngày**: mục *Write a short text* cách ngày, đến khi đủ 3 bài/tuần, khi còn ≥ 15 phút; tự đánh dấu
   xong khi nộp bài trong ngày.
+
+## 15. P6 — đã triển khai
+
+Nút **Get AI feedback** trên trang kết quả bài viết. Dùng **Gemini** (gói miễn phí của Google AI Studio) qua
+Supabase Edge Function `writing-feedback`; cách cài đặt key xem [DEPLOY.md §4](DEPLOY.md#4-góp-ý-bài-viết-bằng-ai-tuỳ-chọn).
+
+- **Key chỉ ở server** (secret `GEMINI_API_KEY`). Function không phụ thuộc thư viện ngoài, chỉ dùng `fetch`:
+  - kiểm tra người dùng qua Auth;
+  - đọc bài viết **bằng token của người học**, nên RLS đảm bảo chỉ đọc được bài của chính họ;
+  - gọi Gemini;
+  - lưu kết quả bằng service role.
+- **Người học không tự ghi được góp ý** (bảng `writing_feedback` không có policy insert); xoá bài thì xoá luôn góp ý.
+- **Nội dung góp ý** (`supabase/functions/_shared/writing-feedback.ts`, dùng chung cho function và app, có unit test):
+  - Điểm theo 4 tiêu chí:
+    - tiếng Anh theo thang IELTS 0–9: Task response, Coherence & cohesion, Lexical resource, Grammar;
+    - tiếng Trung thang 1–5: 内容, 词汇, 语法, 结构, kèm cấp HSK ước lượng.
+  - Điểm tổng **do app tự tính** từ 4 tiêu chí, không lấy theo AI.
+  - Tối đa 12 câu sửa: câu gốc → câu sửa, loại lỗi (chia động từ, mạo từ, 了/过/着, 的/得/地, 量词…), giải thích
+    tiếng Việt.
+  - Nhận xét chung, điểm tốt, việc cần tập trung, và bản viết lại cùng ý ở trình độ cao hơn tối đa một bậc.
+- **Không tin AI mù quáng**:
+  - JSON phải đúng schema; điểm được kẹp vào thang.
+  - **Câu sửa nào không trích đúng nguyên văn bài viết thì bị bỏ**; câu "sửa" mà không đổi gì cũng bị bỏ.
+  - Câu trả lời hỏng → báo lỗi, không lưu.
+  - Bài viết được đặt trong thẻ `<learner_text>` và AI được dặn bỏ qua mọi "lệnh" nằm trong bài (chống prompt injection).
+- **Chi phí và giới hạn**:
+  - Mỗi bài chỉ gọi AI một lần (kết quả được lưu).
+  - Mỗi người tối đa 5 lượt / 24 giờ (`WRITING_FEEDBACK_DAILY_LIMIT`).
+  - Gemini quá tải (429) → báo "busy, thử lại sau một phút".
+- **Quyền riêng tư**:
+  - Lần đầu bấm nút sẽ hiện hộp thoại: bài viết được gửi cho Google Gemini, và ở gói miễn phí Google có thể dùng
+    dữ liệu này → đừng ghi thông tin cá nhân.
+  - Đồng ý thì mới bật `settings.aiFeedback`; tắt lại được trong Settings → AI feedback.
+- **Nối với phân tích điểm yếu (P2)**: loại lỗi AI sửa ≥ 3 lần trong ≥ 2 bài viết xuất hiện ở Strengths & Weaknesses
+  ("Writing: Subject–verb agreement — 4 corrections in 2 texts").
+- **Kiểm thử**: bộ e2e 13 chạy function thật bằng Deno, nối với Supabase local và một **Gemini giả** (không cần key,
+  không tốn quota). Bộ này kiểm tra:
+  - xin đồng ý trước lần đầu;
+  - server chưa có key thì báo rõ;
+  - nội dung gửi sang Gemini đúng (key trong header, bài viết nằm trong thẻ, JSON mode);
+  - lọc câu sửa bịa;
+  - lưu kết quả và không gọi lại AI;
+  - câu trả lời hỏng thì báo lỗi rồi thử lại được;
+  - giới hạn mỗi ngày;
+  - không giả mạo được góp ý;
+  - lỗi lặp lại hiện ở trang điểm yếu;
+  - tắt được trong Settings.
+- **Chưa làm**: cập nhật trình độ Elo từ điểm AI (điểm AI chưa đủ ổn định để đưa vào level test).
