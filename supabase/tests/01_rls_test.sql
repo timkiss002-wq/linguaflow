@@ -67,6 +67,9 @@ select * from get_daily_activity(2);
 \echo '--- Alice starts a level test (expect a uuid) and cannot read the question bank (expect 0)'
 select start_assessment('zh', 'placement', 3) is not null;
 select count(*) from assessment_items;
+\echo '--- Alice saves today plan and marks an item done (expect {"review": "done"})'
+insert into daily_plans(day, items) values (current_date, '[{"key":"review","kind":"review"}]');
+select set_plan_item_status(current_date, 'review', 'done');
 \echo '--- Alice cannot write ratings directly (expect RLS error)'
 insert into user_skill_ratings(user_id, language, skill, rating) values ('aaaaaaaa-0000-0000-0000-000000000001', 'en', 'grammar', 3000);
 
@@ -74,6 +77,9 @@ insert into user_skill_ratings(user_id, language, skill, rating) values ('aaaaaa
 set request.jwt.claim.sub = 'bbbbbbbb-0000-0000-0000-000000000002';
 \echo '--- Bob sees no tests/ratings of Alice (expect 0 0)'
 select (select count(*) from assessments), (select count(*) from user_skill_ratings);
+\echo '--- Bob sees no plan of Alice (expect 0) and cannot change it (expect plan item not found)'
+select count(*) from daily_plans;
+select set_plan_item_status(current_date, 'review', 'skipped');
 \echo '--- Bob asks for a question of Alice test (expect test not found)'
 select next_assessment_item((select id from public.assessments limit 1));
 \echo '--- Bob sees none of Alice data (expect 0 0 0 0 0)'

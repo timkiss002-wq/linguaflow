@@ -77,6 +77,26 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"daily_plans": {
+                  Row: {
+                    "created_at": string,"day": string,"items": NonNullable<Json>,"notes": NonNullable<Json>,"rest_day": boolean,"status": NonNullable<Json>,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"day": string,"items": NonNullable<Json>,"notes"?: NonNullable<Json>,"rest_day"?: boolean,"status"?: NonNullable<Json>,"user_id"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"day"?: string,"items"?: NonNullable<Json>,"notes"?: NonNullable<Json>,"rest_day"?: boolean,"status"?: NonNullable<Json>,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "daily_plans_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"dictation_attempts": {
                   Row: {
                     "accuracy": number,"answer_revealed": boolean,"created_at": string,"duration_ms": number | null,"error_summary": NonNullable<Json>,"hints_used": number,"id": string,"is_correct": boolean,"sentence_id": string,"session_id": string | null,"skipped": boolean,"user_id": string,"user_input": string
@@ -651,6 +671,9 @@ isOneToOne: false
 "get_learning_streak":
 { Args: Record<PropertyKey, never>; Returns: number
                            },
+"get_plan_progress":
+{ Args: Record<PropertyKey, never>; Returns: Json
+                           },
 "is_admin":
 { Args: Record<PropertyKey, never>; Returns: boolean
                            },
@@ -733,6 +756,9 @@ isOneToOne: false
         isOneToOne: true
         isSetofReturn: false
       } },
+"set_plan_item_status":
+{ Args: { "p_day": string,"p_key": string,"p_status": string }; Returns: Json
+                           },
 "start_assessment":
 { Args: { "p_kind": string,"p_language": Database["public"]['Enums']["language_code"],"p_start_level"?: number }; Returns: string
                            }

@@ -34,20 +34,23 @@ export function useDashboardSummary() {
   return useQuery({ queryKey: ['dashboard', 'summary', user.id], queryFn: fetchSummary });
 }
 
-/** Cards in today's review queue (due + new up to the daily limit) — same rule as the Review page. */
-export function useDueToday(): number | undefined {
+/** Cards in today's review queue per language (due + new up to the daily limit) — same rule as the Review page. */
+export function useDueByLanguage(): Record<'en' | 'zh', number> | undefined {
   const vocab = useVocabulary();
   const newToday = useNewReviewedToday();
   const settings = useProfile().data?.settings ?? DEFAULT_SETTINGS;
   if (!vocab.data || !newToday.data) return undefined;
-  return (['en', 'zh'] as const).reduce(
-    (n, language) =>
-      n +
-      buildReviewQueue(vocab.data, {
-        language,
-        newLimit: settings.newPerDay,
-        newDoneToday: vocab.data.filter((w) => w.language === language && newToday.data.has(w.id)).length,
-      }).queue.length,
-    0,
-  );
+  const count = (language: 'en' | 'zh') =>
+    buildReviewQueue(vocab.data!, {
+      language,
+      newLimit: settings.newPerDay,
+      newDoneToday: vocab.data!.filter((w) => w.language === language && newToday.data!.has(w.id)).length,
+    }).queue.length;
+  return { en: count('en'), zh: count('zh') };
+}
+
+/** Cards in today's review queue, both languages. */
+export function useDueToday(): number | undefined {
+  const due = useDueByLanguage();
+  return due ? due.en + due.zh : undefined;
 }

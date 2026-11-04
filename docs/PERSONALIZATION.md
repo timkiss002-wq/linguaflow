@@ -1,6 +1,6 @@
 # LinguaFlow — Cá nhân hoá lộ trình & Writing (thiết kế)
 
-> Trạng thái: **P1, P2, P3 đã xong** (xem mục 10–12). P4–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
+> Trạng thái: **P1–P4 đã xong** (xem mục 10–13). P5–P6 là đề xuất. Bổ sung cho [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## 1. Yêu cầu
 
@@ -230,3 +230,30 @@ Trang **Level Test** (`/level-test`): bài test xếp trình độ thích ứng 
 - **Dashboard** nhắc: chưa test ngôn ngữ đang học / có bài làm dở / đã 14 ngày → check-in.
 - **Chưa làm (để sau)**: trình soạn câu hỏi cho admin và AI soạn nháp (hiện sửa trong JSON như bài học); cập nhật
   rating từ Dictation/ôn từ (dự kiến cùng P4).
+
+## 13. P4 — đã triển khai
+
+Thẻ **Today's plan** ở đầu Dashboard. Logic trong `src/lib/personal/plan.ts` (thuần, có unit test).
+
+- **Một kế hoạch mỗi ngày** (bảng `daily_plans`, theo múi giờ của người học): tạo lần đầu mở Dashboard trong ngày rồi
+  giữ nguyên cả ngày. Nút **Rebuild** tạo lại từ dữ liệu mới nhất (ví dụ sau khi đổi mục tiêu).
+- **Thứ tự, gói trong `daily_goal_minutes`:**
+  1. **Ôn thẻ đến hạn**, tối đa 40% thời gian (~4 thẻ/phút). Link mở đúng ngôn ngữ có nhiều thẻ nhất.
+  2. **Level test**: làm tiếp bài dở, làm bài xếp lớp đầu tiên, hoặc check-in sau 14 ngày (tối đa 1 bài/ngày).
+  3. **Một điểm yếu**, đổi theo ngày: điểm ngữ pháp sai trong bài test gần nhất (hiện giải thích ngay trong thẻ), hoặc
+     bài luyện cho điểm yếu từ P2 (từ hay quên → luyện gõ đúng những từ đó, word form, chính tả, chữ đồng âm).
+  4. **Bài Dictation** với thời gian còn lại: làm tiếp bài đang dở, nếu không thì bài i+1. Cấp độ lấy từ **trình độ
+     nghe trong level test** (nếu có), không thì từ hồ sơ. Lỗi nghe lặp lại (thanh điệu, đuôi -s/-ed…) thành
+     *Today's focus* của bài.
+  - 2 ngôn ngữ: kỳ thi trong 60 ngày tới được ưu tiên, không thì luân phiên theo ngày.
+- **Mỗi mục có lý do** ("10 cards are due today…", "One step above your level — your listening level is HSK 3…").
+- **Tự đánh dấu xong** từ việc đã làm hôm nay (`get_plan_progress`): số lượt ôn, số câu đã làm của đúng bài đó, lượt
+  luyện gõ, word form, bài test đã nộp. Mục không đo được (đọc điểm ngữ pháp, bài luyện chữ đồng âm) có nút *Mark done*.
+- **Bỏ qua (Skip / Undo)** được lưu lại. Loại mục bị bỏ ≥ 3 lần trong 14 ngày sẽ ngắn hơn và có ghi chú giải thích.
+- **Thói quen**:
+  - Ngày không nằm trong lịch học → *Rest day*, chỉ ôn nhẹ (tối đa 10 phút).
+  - Buổi học thực tế < 60% mục tiêu → gợi ý hạ mục tiêu (chỉ khi bật phân tích thói quen).
+- **Dictation cập nhật trình độ nghe** (phần còn nợ từ P3): mỗi câu đã *Check* nhích rating nghe một bước Elo nhỏ
+  (K = 8, so với cấp của bài; đúng ≥ 95% = 1, ≥ 80% = 0,5). Câu bấm Show answer / Skip không tính. Chỉ áp dụng khi
+  đã có rating (đã làm level test).
+- **Chưa có**: mục Writing (chờ P5); nhắc giờ học bằng thông báo.

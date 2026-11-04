@@ -28,7 +28,8 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | P1 | Learning profile & goals (IELTS / HSK 2.0 / HSK 3.0 / CEFR), onboarding wizard, official HSK word list (11,470 words), goal progress & recommended lessons — [design](docs/PERSONALIZATION.md#10-p1--đã-triển-khai) | ✅ Done |
 | P2 | Strengths & weaknesses page: Chinese mistakes by Pinyin (tone / initial / final / same-sound), English endings & small words, word forms, forgotten words, best study time, same-sound character drill — [design](docs/PERSONALIZATION.md#11-p2--đã-triển-khai) | ✅ Done |
 | P3 | Level test: adaptive placement + 2-weekly check-in per skill (Elo), 110-question bank, 27 grammar points, answers graded on the server — [design](docs/PERSONALIZATION.md#12-p3--đã-triển-khai) | ✅ Done |
-| P4–P6 | Next: daily plan, Writing (EN + 中文), AI feedback — [design](docs/PERSONALIZATION.md) | Planned |
+| P4 | Today's plan on the dashboard: due reviews, level test / check-in, one weak spot, an i+1 lesson — sized to the daily goal, with reasons, auto-ticked, skips and rest days adapt it; dictation keeps the listening level current — [design](docs/PERSONALIZATION.md#13-p4--đã-triển-khai) | ✅ Done |
+| P5–P6 | Next: Writing (EN + 中文), AI feedback — [design](docs/PERSONALIZATION.md) | Planned |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
 yet" page — there are no fake features.
@@ -225,7 +226,7 @@ explains what to do when no voice is available.
 
 ## Testing
 
-- `npm run e2e` — 10 browser suites (211 checks) that drive the real app against the local Supabase,
+- `npm run e2e` — 11 browser suites (226 checks) that drive the real app against the local Supabase,
   including database assertions. See [e2e/README.md](e2e/README.md).
 - GitHub Actions (`.github/workflows/ci.yml`) on every push: lint, typecheck, unit tests, seed
   up-to-date check, build, and all migrations + seed applied to a clean Postgres.

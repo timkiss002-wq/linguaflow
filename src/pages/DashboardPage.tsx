@@ -11,8 +11,8 @@ import { useDashboardSummary, useDueToday } from '@/features/dashboard/api';
 import { StatCard } from '@/features/dashboard/StatCard';
 import { useProgressMap } from '@/features/library/api';
 import { useProfile } from '@/features/profile/api';
-import { LevelTestPrompt } from '@/features/assessment/LevelTestPrompt';
 import { GoalsPanel } from '@/features/learner/GoalsPanel';
+import { TodayPlan } from '@/features/plan/TodayPlan';
 import { formatStudyTime, useDailyActivity, useLearningStats, type StatsLanguage } from '@/features/stats/api';
 import { StudyTimeChart } from '@/features/stats/charts';
 import { LanguageSwitch } from '@/features/stats/LanguageSwitch';
@@ -96,6 +96,10 @@ export default function DashboardPage() {
         actions={<LanguageSwitch value={lang} onChange={setLang as (l: StatsLanguage) => void} />}
       />
 
+      <div className="mb-6">
+        <TodayPlan />
+      </div>
+
       {stats.isError || summary.isError ? (
         <ErrorState error={stats.error ?? summary.error} onRetry={() => (stats.refetch(), summary.refetch())} title="Could not load your stats" />
       ) : (
@@ -109,8 +113,7 @@ export default function DashboardPage() {
         </div>
       )}
 
-      <div className="mt-6 space-y-4">
-        <LevelTestPrompt />
+      <div className="mt-6">
         <GoalsPanel />
       </div>
 
