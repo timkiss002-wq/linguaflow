@@ -1,5 +1,5 @@
 import { useMutation } from '@tanstack/react-query';
-import { LogOut, Monitor, Moon, Settings, Sun } from 'lucide-react';
+import { LogOut, Monitor, Moon, Settings, ShieldCheck, Sun } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { useTheme } from '@/components/theme/useTheme';
@@ -45,6 +45,11 @@ export function UserMenu({ compact = false }: { compact?: boolean }) {
         <DropdownMenuItem onSelect={() => navigate('/settings')}>
           <Settings /> Settings
         </DropdownMenuItem>
+        {profile?.role === 'admin' && (
+          <DropdownMenuItem onSelect={() => navigate('/admin')}>
+            <ShieldCheck /> Admin
+          </DropdownMenuItem>
+        )}
         <DropdownMenuSeparator />
         <DropdownMenuLabel className="text-xs font-medium text-muted-foreground">Theme</DropdownMenuLabel>
         {([

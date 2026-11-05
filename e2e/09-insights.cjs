@@ -37,7 +37,8 @@ const EN = 'b0000000-0000-4000-8000-000000000e03';
   const uid = sql(`select id from auth.users where email='${email}'`);
 
   // ── empty state ──
-  await page.getByRole('link', { name: 'Strengths & Weaknesses' }).first().click();
+  await page.getByRole('link', { name: /^Progress/ }).first().click();
+  await page.getByRole('link', { name: 'Strengths & Weaknesses' }).click();
   await page.getByText('Not enough answers yet').waitFor();
   check('empty state shows how much evidence is needed', (await page.getByTestId('insight-progress').textContent()).includes('0 / 10'));
 

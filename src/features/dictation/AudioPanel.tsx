@@ -24,12 +24,12 @@ interface Props {
 export function AudioPanel({ playing, rate, volume, onPlay, onSlow, onLoop, onStop, onRate, onVolume }: Props) {
   return (
     <Card className="p-4 sm:p-5">
-      <div className="flex flex-col items-center gap-3 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 px-4 py-5 text-white sm:gap-4 sm:py-8">
+      <div className="flex flex-col items-center gap-3 rounded-xl bg-gradient-to-br from-teal-700 via-teal-600 to-emerald-600 px-4 py-5 text-white sm:gap-4 sm:py-8">
         <button
           type="button"
           onClick={playing === 'normal' ? onStop : onPlay}
           aria-label={playing === 'normal' ? 'Stop' : 'Play sentence'}
-          className="flex size-16 items-center sm:size-20 justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40"
+          className="flex size-16 items-center justify-center rounded-full bg-white text-teal-700 shadow-lg ring-8 ring-white/20 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-white/60 sm:size-20"
         >
           {playing === 'normal' ? <Pause className="size-8" /> : <Play className="ml-1 size-8" />}
         </button>
@@ -37,12 +37,12 @@ export function AudioPanel({ playing, rate, volume, onPlay, onSlow, onLoop, onSt
           {Array.from({ length: 18 }, (_, i) => (
             <span
               key={i}
-              className={cn('w-1 rounded-full bg-teal-300/70', playing && 'animate-pulse')}
+              className={cn('w-1 rounded-full bg-white/60', playing && 'animate-pulse')}
               style={{ height: `${30 + ((i * 37) % 70)}%`, animationDelay: `${(i % 6) * 120}ms` }}
             />
           ))}
         </div>
-        <p className="hidden text-xs text-white/70 sm:block">
+        <p className="hidden text-xs text-white/85 sm:block">
           <Kbd dark>Alt</Kbd> + <Kbd dark>R</Kbd> replay
         </p>
       </div>

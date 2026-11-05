@@ -53,7 +53,7 @@ const FAKE_TTS = () => {
   await page.goto(BASE + '/dashboard');
   await page.waitForURL(/dashboard/);
 
-  await page.getByRole('link', { name: 'Explore Lessons' }).click();
+  await page.getByRole('link', { name: /^Lessons/ }).first().click();
   await page.getByText('12 lessons').waitFor();
   check('lessons list: 12', true);
   await page.screenshot({ path: `${SHOTS}/m3-01-lessons.png` });

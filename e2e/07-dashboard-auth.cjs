@@ -93,7 +93,7 @@ const FAKE_TTS = () => {
   check('language switch hides split, filters tiles', (await page.getByTestId('language-split').count()) === 0 && (await page.getByTestId('stat-tiles').textContent()).includes('25m'));
 
   // ── statistics ──
-  await page.getByRole('link', { name: 'Statistics' }).click();
+  await page.getByRole('link', { name: /^Progress/ }).first().click();
   await page.getByTestId('mistakes').waitFor();
   check('All mode: no Chinese-only insight', !(await page.getByText(/of your Chinese mistakes/).count()));
   await page.getByRole('button', { name: '中文' }).click();

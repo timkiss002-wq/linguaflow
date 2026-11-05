@@ -30,9 +30,9 @@ export default function LessonsPage() {
     <>
       <PageHeader title="Explore Lessons" description="Listening lessons read aloud sentence by sentence. Pick one at your level." />
       {forYou.length > 0 && !hasActiveFilters({ ...filters, lang: undefined }) && (
-        <section className="mb-6 space-y-2" aria-label="Recommended for you">
-          <h2 className="text-sm font-semibold">For you</h2>
-          <RecommendedList items={forYou} />
+        <section className="mb-8 space-y-3" aria-label="Recommended for you">
+          <h2 className="text-lg font-bold">For you</h2>
+          <RecommendedList items={forYou} columns={2} />
         </section>
       )}
       <LibraryFilters value={filters} onChange={setFilters} />

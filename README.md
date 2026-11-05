@@ -33,8 +33,10 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | P6 | AI feedback on writing (Gemini via a Supabase Edge Function, key on the server): scores on IELTS / HSK criteria, sentence corrections with Vietnamese explanations, improved version; validated against the text, cached, daily limit, opt-in with a privacy notice; repeated error types feed Strengths & Weaknesses — [design](docs/PERSONALIZATION.md#15-p6--đã-triển-khai), [setup](docs/DEPLOY.md) | ✅ Done |
 | Admin | Content page for admins: lessons on/off, question approval with answer statistics, writing prompts on/off, AI usage | ✅ Done |
 
-Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
-yet" page — there are no fake features.
+**Navigation.** Five areas, each with its own colour: **Home** (today's plan) · **Lessons** (Explore, My lessons) ·
+**Words** (Notebook, Review, Word forms) · **Writing** · **Progress** (Statistics, Strengths & Weaknesses, Level
+test). Pages of one area are tabs at the top; dictation, tests, writing and typing practice open in a focus mode
+without the menu. On phones the areas are a bottom tab bar.
 
 ## Tech stack
 

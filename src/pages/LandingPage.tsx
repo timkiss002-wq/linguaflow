@@ -1,23 +1,24 @@
-import { ArrowRight, BarChart3, BookOpen, Ear, Headphones, Keyboard, Layers, Shapes, Sparkles, Volume2 } from 'lucide-react';
+import { ArrowRight, BookOpen, CalendarCheck, ClipboardCheck, Ear, Headphones, Keyboard, PenLine, Sparkles, Volume2, type LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/features/auth/useAuth';
+import { TONE, type Tone } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
 
-const STEPS = [
-  { icon: Headphones, title: 'Listen', text: 'Hear one natural sentence read aloud. Slow it down and replay it as often as you need.' },
-  { icon: Keyboard, title: 'Type', text: 'Write down exactly what you hear — English words or Chinese characters.' },
-  { icon: Ear, title: 'Check', text: 'See every missing, extra or misspelled word, and whether a Chinese mistake was hearing or writing.' },
+const STEPS: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
+  { icon: Headphones, tone: 'teal', title: 'Listen', text: 'Hear one natural sentence read aloud. Slow it down and replay it as often as you need.' },
+  { icon: Keyboard, tone: 'violet', title: 'Type', text: 'Write down exactly what you hear — English words or Chinese characters.' },
+  { icon: Ear, tone: 'orange', title: 'Check', text: 'See every missing, extra or misspelled word, and whether a Chinese mistake was hearing or writing.' },
 ];
 
-const FEATURES = [
-  { icon: Keyboard, title: 'Dictation Room', text: 'Sentence-by-sentence listening with slow replay, hints and a clear breakdown of every mistake.' },
-  { icon: Sparkles, title: 'Built for Chinese too', text: 'Pinyin on demand, and checking that tells a wrong tone or a same-sound 汉字 apart from mishearing.' },
-  { icon: BookOpen, title: 'Your vocabulary sheet', text: 'Save words with the sentence you met them in, retype them TRUE/FALSE like your own sheet, and practise typing.' },
-  { icon: Shapes, title: 'IELTS word forms', text: 'decide · decision · decisive · decisively — family cards, drills and a profile of the forms you mix up.' },
-  { icon: Layers, title: 'Spaced repetition', text: 'Flashcards on SM-2 or your own fixed intervals, with audio, context and a daily new-card limit.' },
-  { icon: BarChart3, title: 'Progress you can see', text: 'Study time, listening accuracy per week, streaks and your most repeated mistakes.' },
+const FEATURES: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
+  { icon: Keyboard, title: 'Dictation Room', text: 'Sentence-by-sentence listening with slow replay, hints and a clear breakdown of every mistake.', tone: 'teal' },
+  { icon: Sparkles, title: 'Built for Chinese too', text: 'Pinyin on demand, HSK levels, and checking that tells a wrong tone or a same-sound 汉字 apart from mishearing.', tone: 'teal' },
+  { icon: BookOpen, title: 'Your word notebook', text: 'Save words with the sentence you met them in, flashcards with spaced repetition, IELTS word forms and typing practice.', tone: 'violet' },
+  { icon: PenLine, title: 'Writing with feedback', text: 'Prompts for your level and interests, an instant analysis, and optional AI corrections explained in Vietnamese.', tone: 'rose' },
+  { icon: ClipboardCheck, title: 'Level test & weak spots', text: 'A short adaptive test per skill, then the exact mistakes you repeat — tones, word endings, grammar points.', tone: 'sky' },
+  { icon: CalendarCheck, title: 'A plan for every day', text: 'Reviews, one weak spot and a lesson just above your level — sized to the minutes you have.', tone: 'orange' },
 ];
 
 export default function LandingPage() {
@@ -46,12 +47,15 @@ export default function LandingPage() {
       </header>
 
       <main>
-        <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+        <section className="relative overflow-hidden">
+          <div aria-hidden className="pointer-events-none absolute -left-32 -top-32 size-[28rem] rounded-full bg-teal-200/40 blur-3xl dark:bg-teal-500/10" />
+          <div aria-hidden className="pointer-events-none absolute -right-24 top-24 size-[22rem] rounded-full bg-orange-200/40 blur-3xl dark:bg-orange-500/10" />
+        <div className="container relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
           <div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
               English · 中文 (Simplified, with Pinyin)
             </p>
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               Learn languages by listening, typing and writing.
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
@@ -71,15 +75,16 @@ export default function LandingPage() {
             </div>
           </div>
           <DictationPreview />
+        </div>
         </section>
 
         <section className="border-y bg-card py-16">
           <div className="container">
-            <h2 className="text-center text-2xl font-semibold tracking-tight">How it works</h2>
+            <h2 className="text-center text-2xl font-bold tracking-tight sm:text-3xl">How it works</h2>
             <div className="mt-10 grid gap-8 sm:grid-cols-3">
-              {STEPS.map(({ icon: Icon, title, text }, i) => (
+              {STEPS.map(({ icon: Icon, title, text, tone }, i) => (
                 <div key={title} className="text-center">
-                  <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                  <div className={cn('mx-auto flex size-14 items-center justify-center rounded-2xl', TONE[tone].tile)}>
                     <Icon className="size-5" aria-hidden />
                   </div>
                   <p className="mt-4 text-sm font-medium text-muted-foreground">Step {i + 1}</p>
@@ -92,12 +97,14 @@ export default function LandingPage() {
         </section>
 
         <section className="container py-16">
-          <h2 className="text-2xl font-semibold tracking-tight">Everything you need to practise daily</h2>
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Everything you need to practise daily</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-lg border bg-card p-6">
-                <Icon className="size-5 text-primary" aria-hidden />
-                <h3 className="mt-3 font-semibold">{title}</h3>
+            {FEATURES.map(({ icon: Icon, title, text, tone }) => (
+              <div key={title} className="rounded-xl border border-border/70 bg-card p-6 shadow-soft transition-transform hover:-translate-y-0.5">
+                <span className={cn('flex size-11 items-center justify-center rounded-xl', TONE[tone].tile)}>
+                  <Icon className="size-5" aria-hidden />
+                </span>
+                <h3 className="mt-4 font-semibold">{title}</h3>
                 <p className="mt-1.5 text-sm text-muted-foreground">{text}</p>
               </div>
             ))}
@@ -129,14 +136,14 @@ const ZH_PREVIEW: [string, string, 'ok' | 'char'][] = [
 /** Static illustration of the Dictation Room result view (not interactive). */
 function DictationPreview() {
   return (
-    <div aria-hidden className="rounded-xl border bg-card p-5 shadow-sm">
-      <div className="flex items-center gap-4 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 p-5 text-white">
+    <div aria-hidden className="rotate-1 rounded-2xl border bg-card p-5 shadow-lift">
+      <div className="flex items-center gap-4 rounded-lg bg-gradient-to-br from-teal-700 via-teal-600 to-emerald-600 p-5 text-white">
         <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-white/15">
           <Volume2 className="size-5" />
         </div>
         <div className="flex h-10 flex-1 items-center gap-[3px]">
           {WAVE.map((h, i) => (
-            <span key={i} className="w-1 rounded-full bg-teal-300/80" style={{ height: `${h}%` }} />
+            <span key={i} className="w-1 rounded-full bg-white/70" style={{ height: `${h}%` }} />
           ))}
         </div>
       </div>

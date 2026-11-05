@@ -8,7 +8,7 @@ export default {
     container: { center: true, padding: '1rem', screens: { '2xl': '1280px' } },
     extend: {
       fontFamily: {
-        sans: ['Inter', '"Noto Sans SC"', 'system-ui', 'sans-serif'],
+        sans: ['"Be Vietnam Pro"', '"Noto Sans SC"', 'system-ui', 'sans-serif'],
         han: ['"Noto Sans SC"', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
       },
       colors: {
@@ -28,7 +28,11 @@ export default {
         card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
         sidebar: { DEFAULT: 'hsl(var(--sidebar))', foreground: 'hsl(var(--sidebar-foreground))' },
       },
-      borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+      borderRadius: { xl: 'calc(var(--radius) + 4px)', lg: 'var(--radius)', md: 'calc(var(--radius) - 4px)', sm: 'calc(var(--radius) - 6px)' },
+      boxShadow: {
+        soft: '0 1px 2px rgb(30 41 59 / 0.04), 0 4px 16px -4px rgb(30 41 59 / 0.08)',
+        lift: '0 2px 4px rgb(30 41 59 / 0.05), 0 12px 32px -8px rgb(30 41 59 / 0.16)',
+      },
     },
   },
   plugins: [animate],

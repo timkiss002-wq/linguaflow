@@ -2,7 +2,6 @@ import { ArrowRight, BookOpen, CalendarCheck, Clock, Compass, Flame, Layers, Pla
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ErrorState } from '@/components/ErrorState';
-import { PageHeader } from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -40,6 +39,19 @@ function useContinueLesson() {
       return data ? { ...data, done: last!.finished_sentences ?? 0 } : null;
     },
   });
+}
+
+/** Circular progress towards today's minutes goal. */
+function GoalRing({ value, goal }: { value: number; goal: number }) {
+  const pct = Math.min(1, value / Math.max(1, goal));
+  const r = 22;
+  const c = 2 * Math.PI * r;
+  return (
+    <svg viewBox="0 0 56 56" className="size-14 -rotate-90" aria-hidden>
+      <circle cx="28" cy="28" r={r} fill="none" stroke="currentColor" strokeOpacity="0.25" strokeWidth="6" />
+      <circle cx="28" cy="28" r={r} fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - pct)} className="transition-[stroke-dashoffset] duration-700" />
+    </svg>
+  );
 }
 
 function LanguageCard({ language }: { language: 'en' | 'zh' }) {
@@ -82,34 +94,42 @@ export default function DashboardPage() {
 
   return (
     <>
-      <PageHeader
-        title={profile.data ? `${greeting(new Date().getHours())}, ${profile.data.display_name}` : 'Dashboard'}
-        description={
-          <span className="flex items-center gap-3">
-            <span data-testid="goal">
-              Today: {todayMinutes} / {goal} min
-            </span>
-            <Progress value={(todayMinutes / goal) * 100} className="w-32" label="Daily goal progress" />
-            {todayMinutes >= goal && <span className="text-success">Goal reached 🎉</span>}
-          </span>
-        }
-        actions={<LanguageSwitch value={lang} onChange={setLang as (l: StatsLanguage) => void} />}
-      />
+      <section className="mb-6 flex flex-col gap-5 rounded-2xl bg-gradient-to-br from-teal-700 via-teal-700 to-emerald-700 p-6 text-white shadow-lift sm:flex-row sm:items-center sm:justify-between sm:p-8 dark:from-teal-800 dark:via-teal-800 dark:to-emerald-700">
+        <div>
+          <p className="text-sm font-medium text-teal-50/90">{new Date().toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long' })}</p>
+          <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{profile.data ? `${greeting(new Date().getHours())}, ${profile.data.display_name}` : 'Dashboard'}</h1>
+          <p className="mt-1.5 text-teal-50/90">{todayMinutes >= goal ? 'Done for today 🎉 — anything more is a bonus.' : 'A little every day beats a lot once a week. Your plan is ready below.'}</p>
+        </div>
+        <div className="flex items-center gap-4 rounded-xl bg-white/15 px-4 py-3 backdrop-blur">
+          <GoalRing value={todayMinutes} goal={goal} />
+          <div className="text-sm">
+            <p className="text-teal-50/90">Today</p>
+            <p className="text-lg font-bold tabular-nums" data-testid="goal">
+              {todayMinutes} / {goal} min
+            </p>
+            {todayMinutes >= goal ? <p className="font-medium">Goal reached 🎉</p> : <p className="text-teal-50/90">{goal - todayMinutes} min to go</p>}
+          </div>
+        </div>
+      </section>
 
       <div className="mb-6">
         <TodayPlan />
       </div>
 
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+        <h2 className="text-lg font-bold">Your numbers</h2>
+        <LanguageSwitch value={lang} onChange={setLang as (l: StatsLanguage) => void} />
+      </div>
       {stats.isError || summary.isError ? (
         <ErrorState error={stats.error ?? summary.error} onRetry={() => (stats.refetch(), summary.refetch())} title="Could not load your stats" />
       ) : (
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-6" data-testid="stat-tiles">
-          <StatCard label="Learning streak" icon={Flame} loading={summary.isPending} value={summary.data ? `${summary.data.streak} ${summary.data.streak === 1 ? 'day' : 'days'}` : ''} />
-          <StatCard label="Study time" icon={Clock} loading={!s} value={s ? formatStudyTime(s.total_seconds) : ''} hint="all time" />
-          <StatCard label="Listening accuracy" icon={Target} loading={!s} value={s?.avg_accuracy == null ? '—' : `${s.avg_accuracy}%`} hint="last 30 days" />
-          <StatCard label="Words saved" icon={BookOpen} loading={!s} value={s?.words ?? 0} />
-          <StatCard label="Due for review" icon={CalendarCheck} loading={due === undefined} value={due ?? 0} />
-          <StatCard label="Lessons completed" icon={Trophy} loading={!s} value={s?.lessons_completed ?? 0} />
+          <StatCard tone="orange" label="Learning streak" icon={Flame} loading={summary.isPending} value={summary.data ? `${summary.data.streak} ${summary.data.streak === 1 ? 'day' : 'days'}` : ''} />
+          <StatCard tone="teal" label="Study time" icon={Clock} loading={!s} value={s ? formatStudyTime(s.total_seconds) : ''} hint="all time" />
+          <StatCard tone="sky" label="Listening accuracy" icon={Target} loading={!s} value={s?.avg_accuracy == null ? '—' : `${s.avg_accuracy}%`} hint="last 30 days" />
+          <StatCard tone="violet" label="Words saved" icon={BookOpen} loading={!s} value={s?.words ?? 0} />
+          <StatCard tone="violet" label="Due for review" icon={CalendarCheck} loading={due === undefined} value={due ?? 0} />
+          <StatCard tone="amber" label="Lessons completed" icon={Trophy} loading={!s} value={s?.lessons_completed ?? 0} />
         </div>
       )}
 

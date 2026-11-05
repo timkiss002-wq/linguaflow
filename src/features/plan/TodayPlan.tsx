@@ -10,12 +10,15 @@ import { Progress } from '@/components/ui/progress';
 import { Skeleton } from '@/components/ui/skeleton';
 import { toUserMessage } from '@/lib/errors';
 import { buildPlan, countSkips, itemProgress, type PlanItem, type PlanKind, type TodayProgress } from '@/lib/personal/plan';
+import { TONE, type Tone } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
 import { usePlanProgress, useRebuildPlan, useSavePlan, useSetItemStatus, useStoredPlans, type StoredPlan } from './api';
 import { usePlanInput } from './usePlanInput';
 
 const ICON: Record<PlanKind, LucideIcon> = { review: Layers, test: ClipboardCheck, practice: Dumbbell, grammar: BookOpenCheck, writing: PenLine, lesson: Headphones };
 const LANG = { en: 'English', zh: '中文' } as const;
+/** Same colours as the areas of the app: reviews are Words (violet), lessons are Lessons (teal)… */
+const KIND_TONE: Record<PlanKind, Tone> = { review: 'violet', test: 'sky', practice: 'amber', grammar: 'amber', writing: 'rose', lesson: 'teal' };
 
 /** Today's plan on the dashboard: built once a day, ticked off by what you actually do. */
 export function TodayPlan() {
@@ -60,17 +63,21 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
   const mark = (key: string, status: 'done' | 'skipped' | null) =>
     setStatus.mutate({ day: plan.day, key, status }, { onError: (e) => toast.error(toUserMessage(e)) });
 
+  const next = plan.items.find((i) => !state(i).done && !state(i).skipped);
+  const pct = plan.items.length ? (doneCount / plan.items.length) * 100 : 0;
+
   return (
-    <Card data-testid="today-plan">
-      <CardHeader className="flex-row flex-wrap items-start justify-between gap-2 space-y-0 pb-3">
-        <div className="space-y-1">
-          <CardTitle className="flex items-center gap-2 text-base">
+    <Card data-testid="today-plan" className="overflow-hidden">
+      <CardHeader className="flex-row flex-wrap items-start justify-between gap-2 space-y-0 pb-4">
+        <div className="space-y-1.5">
+          <CardTitle className="flex items-center gap-2 text-xl font-bold">
             Today's plan
             {plan.restDay && <Badge variant="secondary">Rest day</Badge>}
           </CardTitle>
           <CardDescription data-testid="plan-summary">
             {plan.items.length ? `${doneCount} of ${plan.items.length} done · about ${minutes} min` : 'Nothing planned today.'}
           </CardDescription>
+          {plan.items.length > 0 && <Progress value={pct} className="h-2 w-48 max-w-full" label="Plan progress" />}
         </div>
         <Button
           variant="ghost"
@@ -85,19 +92,31 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
       </CardHeader>
       <CardContent className="space-y-4">
         {plan.items.length > 0 && (
-          <ol className="divide-y rounded-md border">
+          <ol className="space-y-2.5">
             {plan.items.map((item) => {
               const s = state(item);
               const Icon = s.done ? Check : ICON[item.kind];
               const auto = item.target.type !== 'manual';
+              const isNext = item === next;
+              const tone = TONE[KIND_TONE[item.kind]];
               return (
-                <li key={item.key} className={cn('flex gap-3 p-3', (s.done || s.skipped) && 'bg-muted/40')} data-plan-item={item.key} data-state={s.done ? 'done' : s.skipped ? 'skipped' : 'todo'}>
-                  <span className={cn('mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full', s.done ? 'bg-success/15 text-success' : 'bg-primary/10 text-primary')}>
-                    <Icon className="size-4" aria-hidden />
+                <li
+                  key={item.key}
+                  className={cn(
+                    'flex gap-3 rounded-xl border p-3 transition-colors sm:gap-4 sm:p-4',
+                    isNext && `${tone.soft} border-transparent ring-2 ${tone.ring}`,
+                    (s.done || s.skipped) && 'bg-muted/50',
+                  )}
+                  data-plan-item={item.key}
+                  data-state={s.done ? 'done' : s.skipped ? 'skipped' : 'todo'}
+                >
+                  <span className={cn('flex size-10 shrink-0 items-center justify-center rounded-xl', s.done ? 'bg-success/15 text-success' : tone.tile)}>
+                    <Icon className="size-5" aria-hidden />
                   </span>
                   <div className="min-w-0 flex-1 space-y-1">
+                    {isNext && <p className={cn('text-xs font-semibold uppercase tracking-wide', tone.text)}>Up next</p>}
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                      <p className={cn('font-medium', s.skipped && 'text-muted-foreground line-through')}>{item.title}</p>
+                      <p className={cn('font-semibold', s.skipped && 'text-muted-foreground line-through', s.done && 'text-muted-foreground')}>{item.title}</p>
                       {item.language && <Badge variant="outline">{LANG[item.language]}</Badge>}
                       <span className="text-xs text-muted-foreground">{item.minutes} min</span>
                     </div>
@@ -105,22 +124,22 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
                       {item.reason}
                     </p>
                     {item.detail && (
-                      <p className="rounded bg-muted/60 px-2 py-1 text-sm" lang={item.kind === 'grammar' ? 'vi' : undefined}>
+                      <p className="rounded-lg bg-card/80 px-2.5 py-1.5 text-sm ring-1 ring-border" lang={item.kind === 'grammar' ? 'vi' : undefined}>
                         {item.detail}
                       </p>
                     )}
                     {auto && !s.done && s.p > 0 && <Progress value={s.p * 100} className="h-1.5 max-w-xs" label={`${item.title} progress`} />}
                   </div>
-                  <div className="flex shrink-0 flex-col items-end gap-1 sm:flex-row sm:items-start">
+                  <div className="flex shrink-0 flex-col items-end gap-1 sm:flex-row sm:items-center">
                     {s.done ? (
-                      <span className="text-sm font-medium text-success">Done</span>
+                      <span className="text-sm font-semibold text-success">Done</span>
                     ) : s.skipped ? (
                       <Button variant="ghost" size="sm" onClick={() => mark(item.key, null)}>
                         Undo
                       </Button>
                     ) : (
                       <>
-                        <Button asChild size="sm">
+                        <Button asChild size={isNext ? 'default' : 'sm'} variant={isNext ? 'default' : 'outline'} className={isNext ? `${tone.solid} shadow-none hover:opacity-90` : undefined}>
                           <Link to={item.href}>Start</Link>
                         </Button>
                         {!auto && (
@@ -139,10 +158,15 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
             })}
           </ol>
         )}
+        {plan.items.length > 0 && !next && (
+          <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-medium text-success">🎉 All done for today — great work. Anything extra is a bonus.</p>
+        )}
         {plan.notes.length > 0 && (
-          <ul className="space-y-1 text-sm text-muted-foreground" data-testid="plan-notes">
+          <ul className="space-y-1.5 text-sm text-muted-foreground" data-testid="plan-notes">
             {plan.notes.map((n) => (
-              <li key={n}>💡 {n}</li>
+              <li key={n} className="rounded-lg bg-amber-50 px-3 py-2 text-amber-900 dark:bg-amber-500/10 dark:text-amber-200">
+                💡 {n}
+              </li>
             ))}
           </ul>
         )}
