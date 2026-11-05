@@ -1,11 +1,13 @@
 import { NavLink } from 'react-router-dom';
+import { useProfile } from '@/features/profile/api';
 import { cn } from '@/lib/utils';
 import { NAV_ITEMS } from './nav';
 
 export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
+  const isAdmin = useProfile().data?.role === 'admin';
   return (
     <nav aria-label="Main" className="flex flex-col gap-0.5">
-      {NAV_ITEMS.map(({ to, label, icon: Icon, available }) => (
+      {NAV_ITEMS.filter((i) => !i.adminOnly || isAdmin).map(({ to, label, icon: Icon, available }) => (
         <NavLink
           key={to}
           to={to}

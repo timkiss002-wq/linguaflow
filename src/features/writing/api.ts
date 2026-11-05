@@ -23,7 +23,8 @@ export function useWritingTasks() {
     queryKey: keys.tasks,
     staleTime: 30 * 60_000,
     queryFn: async () => {
-      const { data, error } = await getSupabase().from('writing_tasks').select('*').order('level_min');
+      // admins can read switched-off prompts too; learners only get active ones (RLS), so filter for everyone
+      const { data, error } = await getSupabase().from('writing_tasks').select('*').eq('is_active', true).order('level_min');
       if (error) throw error;
       return data as WritingTask[];
     },

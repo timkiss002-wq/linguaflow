@@ -77,7 +77,8 @@ const EN = 'b0000000-0000-4000-8000-000000000e03';
   check('tone insight shows evidence + examples', tones.includes('tone 3 → 4') && tones.includes('买→卖') && /Based on: 10 of 12 wrong characters/.test(tones), tones);
   const strong = await page.getByTestId('strengths').locator('[data-insight]').evaluateAll((els) => els.map((e) => e.getAttribute('data-insight')));
   check('strength: English listening', strong.includes('en-accuracy'), strong.join(','));
-  check('habits: best time of day', (await page.getByTestId('habits').textContent()).includes("You're most accurate in the morning (96% vs"));
+  // the 3 real dictation answers above also count in whatever part of the day the suite runs, so match loosely
+  check('habits: best time of day', /You're most accurate in the morning \(\d+(\.\d+)?% vs \d+(\.\d+)?% in the evening\)/.test(await page.getByTestId('habits').textContent()));
   await page.screenshot({ path: `${SHOTS}/p2-01-insights.png`, fullPage: true });
 
   // ── same-sound drill ──

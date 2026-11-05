@@ -24,6 +24,7 @@ const StatisticsPage = lazy(() => import('@/pages/StatisticsPage'));
 const InsightsPage = lazy(() => import('@/pages/InsightsPage'));
 const LevelTestPage = lazy(() => import('@/pages/LevelTestPage'));
 const WritingPage = lazy(() => import('@/pages/WritingPage'));
+const AdminPage = lazy(() => import('@/pages/AdminPage'));
 const WritingEditorPage = lazy(() => import('@/pages/WritingEditorPage'));
 const WritingResultPage = lazy(() => import('@/pages/WritingResultPage'));
 const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'));
@@ -66,6 +67,7 @@ export const router = createBrowserRouter([
           { path: '/level-test', element: page(<LevelTestPage />) },
           { path: '/level-test/:testId', element: page(<AssessmentPage />) },
           { path: '/insights', element: page(<InsightsPage />) },
+          { path: '/admin', element: page(<AdminPage />) },
           { path: '/settings', element: page(<SettingsPage />) },
           { path: '/onboarding', element: page(<OnboardingPage />) },
         ],

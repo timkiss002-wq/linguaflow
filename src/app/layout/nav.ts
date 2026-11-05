@@ -1,4 +1,4 @@
-import { BarChart3, BookOpen, ClipboardCheck, Compass, GraduationCap, LayoutDashboard, Layers, Lightbulb, PenLine, Settings, Shapes, type LucideIcon } from 'lucide-react';
+import { BarChart3, BookOpen, ClipboardCheck, Compass, GraduationCap, LayoutDashboard, Layers, Lightbulb, PenLine, Settings, Shapes, ShieldCheck, type LucideIcon } from 'lucide-react';
 
 export interface NavItem {
   to: string;
@@ -6,6 +6,8 @@ export interface NavItem {
   icon: LucideIcon;
   /** Shown as "Soon" until the feature ships. */
   available: boolean;
+  /** Only listed for accounts with role = admin. */
+  adminOnly?: boolean;
 }
 
 export const NAV_ITEMS: NavItem[] = [
@@ -20,4 +22,5 @@ export const NAV_ITEMS: NavItem[] = [
   { to: '/level-test', label: 'Level Test', icon: ClipboardCheck, available: true },
   { to: '/insights', label: 'Strengths & Weaknesses', icon: Lightbulb, available: true },
   { to: '/settings', label: 'Settings', icon: Settings, available: true },
+  { to: '/admin', label: 'Admin', icon: ShieldCheck, available: true, adminOnly: true },
 ];

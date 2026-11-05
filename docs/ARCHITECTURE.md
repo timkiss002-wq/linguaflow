@@ -33,6 +33,10 @@ quyết định, cập nhật file này trước.
 
 Admin chỉ là một cột `role` trong `profiles`, cấp thủ công bằng SQL. Không làm UI phân quyền ở MVP.
 
+> Cập nhật: video đã bỏ ở M3 nên phần quản lý video/segment (M9) không làm. Thay vào đó có trang **Admin → Content**
+> (`/admin`): bật/tắt bài học, duyệt câu hỏi level test (kèm tỉ lệ làm đúng, cảnh báo câu quá dễ/khó), bật/tắt đề
+> Writing, xem lượt dùng AI. Nội dung chữ vẫn sửa trong `content/*.json` để mọi thay đổi được review qua git.
+
 ### 1.2. Luồng giá trị cốt lõi (phải chạy tốt nhất)
 
 ```

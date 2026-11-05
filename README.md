@@ -31,6 +31,7 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | P4 | Today's plan on the dashboard: due reviews, level test / check-in, one weak spot, an i+1 lesson — sized to the daily goal, with reasons, auto-ticked, skips and rest days adapt it; dictation keeps the listening level current — [design](docs/PERSONALIZATION.md#13-p4--đã-triển-khai) | ✅ Done |
 | P5 | Writing in English or 中文: 28 prompts picked by level, interests and exam (HSK / IELTS), notebook words as targets, drafts, automatic analysis without AI (length, sentences, variety, linking words, HSK levels of words, form checks), comparison with earlier texts, in the daily plan — [design](docs/PERSONALIZATION.md#14-p5--đã-triển-khai) | ✅ Done |
 | P6 | AI feedback on writing (Gemini via a Supabase Edge Function, key on the server): scores on IELTS / HSK criteria, sentence corrections with Vietnamese explanations, improved version; validated against the text, cached, daily limit, opt-in with a privacy notice; repeated error types feed Strengths & Weaknesses — [design](docs/PERSONALIZATION.md#15-p6--đã-triển-khai), [setup](docs/DEPLOY.md) | ✅ Done |
+| Admin | Content page for admins: lessons on/off, question approval with answer statistics, writing prompts on/off, AI usage | ✅ Done |
 
 Sidebar sections that are not built yet show a **Soon** label and an explicit "Not available
 yet" page — there are no fake features.
@@ -106,7 +107,10 @@ email confirmation.
 
 ### Make yourself an admin
 
-Admins can manage videos and transcripts (UI arrives in Phase 2). Promote an account with SQL:
+Admins get an **Admin** page (`/admin`): publish or hide lessons, approve or draft level-test questions (with how
+often each one is answered correctly, flagged when it looks too easy or too hard for its level), switch writing
+prompts on or off, and see AI feedback usage. Texts themselves are edited in `content/*.json` so every change is
+reviewed in git. Promote an account with SQL:
 
 ```bash
 psql postgresql://postgres:postgres@127.0.0.1:54322/postgres -c "update profiles set role = 'admin' where id = (select id from auth.users where email = 'you@example.com');"
@@ -229,7 +233,7 @@ explains what to do when no voice is available.
 
 ## Testing
 
-- `npm run e2e` — 13 browser suites (267 checks; suite 13 needs [Deno](https://deno.com) and is skipped without it) that drive the real app against the local Supabase,
+- `npm run e2e` — 14 browser suites (281 checks; suite 13 needs [Deno](https://deno.com) and is skipped without it) that drive the real app against the local Supabase,
   including database assertions. See [e2e/README.md](e2e/README.md).
 - GitHub Actions (`.github/workflows/ci.yml`) on every push: lint, typecheck, unit tests, seed
   up-to-date check, build, and all migrations + seed applied to a clean Postgres.

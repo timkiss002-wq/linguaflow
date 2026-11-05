@@ -87,6 +87,9 @@ select set_plan_item_status(current_date, 'review', 'skipped');
 \echo '--- Bob sees no texts of Alice (expect 0) and cannot delete them (DELETE 0)'
 select count(*) from writing_submissions;
 delete from writing_submissions;
+\echo '--- Bob (learner) cannot read admin statistics (expect admins only) or switch prompts off (UPDATE 0)'
+select admin_content_stats();
+update writing_tasks set is_active = false;
 \echo '--- Bob asks for a question of Alice test (expect test not found)'
 select next_assessment_item((select id from public.assessments limit 1));
 \echo '--- Bob sees none of Alice data (expect 0 0 0 0 0)'

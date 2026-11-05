@@ -645,14 +645,14 @@ isOneToOne: false
                   ]
                 },"writing_tasks": {
                   Row: {
-                    "exam": string,"id": string,"kind": string,"language": Database["public"]['Enums']["language_code"],"level_max": number,"level_min": number,"max_length": number | null,"min_length": number,"prompt": string,"prompt_vi": string | null,"title": string,"topic": string | null,"words": (string)[]
+                    "exam": string,"id": string,"is_active": boolean,"kind": string,"language": Database["public"]['Enums']["language_code"],"level_max": number,"level_min": number,"max_length": number | null,"min_length": number,"prompt": string,"prompt_vi": string | null,"title": string,"topic": string | null,"words": (string)[]
                   }
                   ComputedFields: never
                   Insert: {
-                    "exam"?: string,"id": string,"kind": string,"language": Database["public"]['Enums']["language_code"],"level_max": number,"level_min": number,"max_length"?: number | null,"min_length": number,"prompt": string,"prompt_vi"?: string | null,"title": string,"topic"?: string | null,"words"?: (string)[]
+                    "exam"?: string,"id": string,"is_active"?: boolean,"kind": string,"language": Database["public"]['Enums']["language_code"],"level_max": number,"level_min": number,"max_length"?: number | null,"min_length": number,"prompt": string,"prompt_vi"?: string | null,"title": string,"topic"?: string | null,"words"?: (string)[]
                   }
                   Update: {
-                    "exam"?: string,"id"?: string,"kind"?: string,"language"?: Database["public"]['Enums']["language_code"],"level_max"?: number,"level_min"?: number,"max_length"?: number | null,"min_length"?: number,"prompt"?: string,"prompt_vi"?: string | null,"title"?: string,"topic"?: string | null,"words"?: (string)[]
+                    "exam"?: string,"id"?: string,"is_active"?: boolean,"kind"?: string,"language"?: Database["public"]['Enums']["language_code"],"level_max"?: number,"level_min"?: number,"max_length"?: number | null,"min_length"?: number,"prompt"?: string,"prompt_vi"?: string | null,"title"?: string,"topic"?: string | null,"words"?: (string)[]
                   }
                   Relationships: [
                     
@@ -709,7 +709,10 @@ isOneToOne: false
                 }
           }
           Functions: {
-            "answer_assessment_item":
+            "admin_content_stats":
+{ Args: Record<PropertyKey, never>; Returns: Json
+                           },
+"answer_assessment_item":
 { Args: { "p_assessment": string,"p_duration_ms"?: number,"p_item": string,"p_response": Json }; Returns: Json
                            },
 "assessment_skills":
