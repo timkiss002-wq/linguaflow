@@ -1,20 +1,8 @@
-import { useSearchParams } from 'react-router-dom';
+import { useStudyLanguage } from '@/features/study/context';
 import type { StatsLanguage } from './api';
 
-/** All / English / 中文, kept in the URL (?lang=). */
+/** Stats follow "Hôm nay học" in the top bar: only the language being studied. */
 export function useStatsLanguage(): [StatsLanguage, (l: StatsLanguage) => void] {
-  const [params, setParams] = useSearchParams();
-  const v = params.get('lang');
-  const lang: StatsLanguage = v === 'en' || v === 'zh' ? v : undefined;
-  const set = (l: StatsLanguage) =>
-    setParams(
-      (p) => {
-        const next = new URLSearchParams(p);
-        if (l) next.set('lang', l);
-        else next.delete('lang');
-        return next;
-      },
-      { replace: true },
-    );
-  return [lang, set];
+  const { lang, setLang } = useStudyLanguage();
+  return [lang, (l) => l && setLang(l)];
 }

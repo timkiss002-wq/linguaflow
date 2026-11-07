@@ -1,4 +1,5 @@
 import { BookOpen, Download, Eye, EyeOff, Keyboard, Search, Trash2 } from 'lucide-react';
+import { useStudyLanguage } from '@/features/study/context';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -30,8 +31,10 @@ export default function VocabularyPage() {
   const vocab = useVocabulary();
   const remove = useDeleteWords();
   const [params, setParams] = useSearchParams();
-  const filters = useMemo(() => parseVocabFilters(params), [params]);
-  const setFilters = useCallback((f: VocabFilters) => setParams(vocabFiltersToParams(f), { replace: true }), [setParams]);
+  const { lang } = useStudyLanguage();
+  // only the words of the language being studied
+  const filters = useMemo(() => ({ ...parseVocabFilters(params), lang }), [params, lang]);
+  const setFilters = useCallback((f: VocabFilters) => setParams(vocabFiltersToParams({ ...f, lang: undefined }), { replace: true }), [setParams]);
   const [search, setSearch] = useState(filters.q);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [hideWords, setHideWords] = useState(false);
@@ -48,7 +51,6 @@ export default function VocabularyPage() {
   const statusCounts = countByStatus(filterWords(all, filters, ['status']));
   const checkBase = filterWords(all, filters, ['check']);
   const trueCount = checkBase.filter((w) => w.review_correct).length;
-  const langCount = (l?: 'en' | 'zh') => filterWords(all, { ...filters, lang: l }, ['status', 'topic', 'pos']).length;
   const selectedIds = [...selected].filter((id) => all.some((w) => w.id === id));
 
   const onSelect = (ids: string[], on: boolean) =>
@@ -79,7 +81,7 @@ export default function VocabularyPage() {
   return (
     <>
       <PageHeader
-        title="Vocabulary"
+        title={lang === 'zh' ? 'Sổ từ tiếng Trung' : 'Sổ từ tiếng Anh'}
         description="Your notebook of saved words. Click any cell to edit it."
         actions={
           <>
@@ -94,19 +96,6 @@ export default function VocabularyPage() {
 
       <div className="space-y-3">
         <div className="flex flex-wrap items-center gap-2">
-          <div className="flex gap-1 rounded-md border bg-card p-1" role="group" aria-label="Language">
-            {([undefined, 'en', 'zh'] as const).map((l) => (
-              <button
-                key={l ?? 'all'}
-                type="button"
-                aria-pressed={filters.lang === l}
-                onClick={() => setFilters({ ...filters, lang: l })}
-                className={cn('rounded px-3 py-1.5 text-sm font-medium', filters.lang === l ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:bg-muted')}
-              >
-                {l === 'en' ? 'English' : l === 'zh' ? '中文' : 'All'} <span className="opacity-70">{langCount(l)}</span>
-              </button>
-            ))}
-          </div>
           <div className="flex flex-wrap gap-1" role="group" aria-label="Status">
             {STATUSES.map((s) => (
               <button

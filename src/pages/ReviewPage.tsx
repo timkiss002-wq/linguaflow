@@ -1,6 +1,7 @@
 import { ArrowRight, Bell, CalendarClock, CheckCircle2, Layers, ListChecks, Plus, Shapes, Sparkles, SpellCheck2, Zap } from 'lucide-react';
 import { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useStudyLanguage } from '@/features/study/context';
 import { toast } from 'sonner';
 import { EmptyState } from '@/components/EmptyState';
 import { ErrorState } from '@/components/ErrorState';
@@ -28,7 +29,7 @@ export default function ReviewPage() {
   const goal = useDailyGoal();
   const starter = useAddStarterWords();
   const settings = useProfile().data?.settings ?? DEFAULT_SETTINGS;
-  const [params, setParams] = useSearchParams();
+  const { lang: study } = useStudyLanguage();
   const [direction, setDirection] = useState<Direction>('forward');
   const [session, setSession] = useState<{ kind: Kind; queue: VocabWord[] } | null>(null);
 
@@ -42,8 +43,7 @@ export default function ReviewPage() {
     buildReviewQueue(words, { language, newLimit, newDoneToday: words.filter((w) => w.language === language && newToday.data.has(w.id)).length });
   const en = deck('en');
   const zh = deck('zh');
-  const requested = params.get('lang');
-  const language: 'en' | 'zh' = requested === 'en' || requested === 'zh' ? requested : zh.queue.length > en.queue.length ? 'zh' : 'en';
+  const language = study;
   const current = language === 'en' ? en : zh;
 
   if (session?.kind === 'practice') return <PracticeSession language={language} queue={session.queue} all={words} mode={mode} onDone={() => setSession(null)} />;
@@ -58,7 +58,6 @@ export default function ReviewPage() {
     try {
       const r = await starter.add(n);
       toast.success(r.inserted ? `Đã thêm ${r.inserted} từ IELTS vào sổ — bắt đầu học nhé!` : 'Bạn đã có hết các từ gợi ý trong sổ.');
-      setParams({ lang: 'en' }, { replace: true });
     } catch (e) {
       toast.error(toUserMessage(e));
     }
@@ -68,26 +67,10 @@ export default function ReviewPage() {
     <>
       <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Ôn tập từ vựng</h1>
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Ôn tập từ vựng {language === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}</h1>
           <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
             Lặp lại ngắt quãng (spaced repetition): từ quay lại đúng lúc bạn sắp quên. Mỗi từ được ôn bằng cách <b>dùng</b> nó — chọn nghĩa, điền dạng từ, rồi dịch lại.
           </p>
-        </div>
-        <div className="flex gap-1 rounded-full border bg-card p-1" role="group" aria-label="Ngôn ngữ">
-          {(['en', 'zh'] as const).map((l) => {
-            const n = (l === 'en' ? en : zh).queue.length;
-            return (
-              <button
-                key={l}
-                type="button"
-                aria-pressed={language === l}
-                onClick={() => setParams({ lang: l }, { replace: true })}
-                className={cn('rounded-full px-3 py-1 text-sm font-medium', language === l ? 'bg-violet-600 text-white' : 'text-muted-foreground hover:bg-muted')}
-              >
-                {l === 'en' ? 'English' : '中文'} <span className="opacity-75 tabular-nums">{n}</span>
-              </button>
-            );
-          })}
         </div>
       </div>
 
@@ -105,10 +88,14 @@ export default function ReviewPage() {
             {short && (
               <p className="text-sm">
                 Sổ từ chỉ còn {goal.available} từ mới.{' '}
-                <button type="button" className="font-medium text-violet-700 hover:underline disabled:opacity-50 dark:text-violet-300" disabled={!starter.ready || starter.pending} onClick={() => addStarter(DAILY_NEW_GOAL)}>
-                  <Plus className="inline size-3.5" /> Thêm {DAILY_NEW_GOAL} từ IELTS gợi ý
-                </button>{' '}
-                hoặc{' '}
+                {language === 'en' && (
+                  <>
+                    <button type="button" className="font-medium text-violet-700 hover:underline disabled:opacity-50 dark:text-violet-300" disabled={!starter.ready || starter.pending} onClick={() => addStarter(DAILY_NEW_GOAL)}>
+                      <Plus className="inline size-3.5" /> Thêm {DAILY_NEW_GOAL} từ IELTS gợi ý
+                    </button>{' '}
+                    hoặc{' '}
+                  </>
+                )}
                 <Link to="/lessons" className="text-violet-700 hover:underline dark:text-violet-300">
                   lưu từ trong bài nghe
                 </Link>

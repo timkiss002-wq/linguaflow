@@ -1,16 +1,19 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { TONE } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
-import { SECTIONS, sectionFor } from './nav';
+import { useStudyLanguage } from '@/features/study/context';
+import { sectionFor, sectionsFor } from './nav';
 
 /** Phone navigation: the six areas as a tab bar at the bottom, within thumb reach. */
 export function BottomNav() {
   const { pathname } = useLocation();
   const active = sectionFor(pathname)?.id;
+  const { lang } = useStudyLanguage();
+  const sections = sectionsFor(lang);
   return (
     <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden">
-      <ul className="grid grid-cols-6">
-        {SECTIONS.map((s) => {
+      <ul className={cn('grid', sections.length === 6 ? 'grid-cols-6' : 'grid-cols-5')}>
+        {sections.map((s) => {
           const on = active === s.id;
           return (
             <li key={s.id}>

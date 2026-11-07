@@ -18,6 +18,7 @@ import { LanguageSwitch } from '@/features/stats/LanguageSwitch';
 import { useStatsLanguage } from '@/features/stats/useStatsLanguage';
 import { cn } from '@/lib/utils';
 import { useQuery } from '@tanstack/react-query';
+import { STUDY_LABEL } from '@/features/study/context';
 import { getSupabase } from '@/lib/supabase';
 
 function greeting(hour: number) {
@@ -27,16 +28,20 @@ function greeting(hour: number) {
 }
 
 /** The lesson studied most recently that isn't finished yet. */
-function useContinueLesson() {
+function useContinueLesson(lang: 'en' | 'zh') {
   const progress = useProgressMap();
-  const last = [...(progress.data?.values() ?? [])].filter((p) => p.status === 'in_progress').sort((a, b) => (b.last_studied_at ?? '').localeCompare(a.last_studied_at ?? ''))[0];
+  const open = [...(progress.data?.values() ?? [])].filter((p) => p.status === 'in_progress').sort((a, b) => (b.last_studied_at ?? '').localeCompare(a.last_studied_at ?? ''));
+  const ids = open.map((p) => p.lesson_id!).slice(0, 50);
   return useQuery({
-    queryKey: ['continue-lesson', last?.lesson_id],
-    enabled: Boolean(last?.lesson_id),
+    queryKey: ['continue-lesson', lang, ids],
+    enabled: ids.length > 0,
     queryFn: async () => {
-      const { data, error } = await getSupabase().from('lesson_catalog').select('id, title, language, sentence_count').eq('id', last!.lesson_id!).maybeSingle();
+      // most recent unfinished lesson in the language being studied
+      const { data, error } = await getSupabase().from('lesson_catalog').select('id, title, language, sentence_count').in('id', ids).eq('language', lang);
       if (error) throw error;
-      return data ? { ...data, done: last!.finished_sentences ?? 0 } : null;
+      const p = open.find((x) => data.some((l) => l.id === x.lesson_id));
+      const lesson = p && data.find((l) => l.id === p.lesson_id);
+      return lesson ? { ...lesson, done: p!.finished_sentences ?? 0 } : null;
     },
   });
 }
@@ -87,7 +92,7 @@ export default function DashboardPage() {
   const activity = useDailyActivity(lang, days);
   const today = useDailyActivity(undefined, 1);
   const due = useDueToday();
-  const cont = useContinueLesson();
+  const cont = useContinueLesson(lang ?? 'en');
   const s = stats.data;
   const goal = profile.data?.daily_goal_minutes ?? 15;
   const todayMinutes = Math.floor((today.data?.[0]?.minutes ?? 0));
@@ -98,6 +103,9 @@ export default function DashboardPage() {
         <div>
           <p className="text-sm font-medium text-teal-50/90">{new Date().toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long' })}</p>
           <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{profile.data ? `${greeting(new Date().getHours())}, ${profile.data.display_name}` : 'Dashboard'}</h1>
+          <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-0.5 text-sm font-semibold" data-testid="studying">
+            Hôm nay học: {STUDY_LABEL[lang ?? 'en'].flag} {STUDY_LABEL[lang ?? 'en'].name}
+          </p>
           <p className="mt-1.5 text-teal-50/90">{todayMinutes >= goal ? 'Done for today 🎉 — anything more is a bonus.' : 'A little every day beats a lot once a week. Your plan is ready below.'}</p>
         </div>
         <div className="flex items-center gap-4 rounded-xl bg-white/15 px-4 py-3 backdrop-blur">

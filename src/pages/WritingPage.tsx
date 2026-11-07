@@ -1,7 +1,5 @@
-import { PenLine } from 'lucide-react';
 import { useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { EmptyState } from '@/components/EmptyState';
+import { Link } from 'react-router-dom';
 import { ErrorState } from '@/components/ErrorState';
 import { PageHeader } from '@/components/PageHeader';
 import { Badge } from '@/components/ui/badge';
@@ -13,7 +11,7 @@ import { useSubmissions, useWritingProfile, useWritingTasks } from '@/features/w
 import { levelLabel } from '@/lib/personal/levels';
 import type { Lang } from '@/lib/writing/analyze';
 import { pickTasks, type WritingTask } from '@/lib/writing/tasks';
-import { cn } from '@/lib/utils';
+import { useStudyLanguage } from '@/features/study/context';
 import { visiblePrompt } from '@/lib/writing/guided';
 
 const LANGS: { value: Lang; name: string; blurb: string }[] = [
@@ -23,27 +21,13 @@ const LANGS: { value: Lang; name: string; blurb: string }[] = [
 const KIND_LABEL = { sentences: 'Sentences', paragraph: 'Paragraph', letter: 'Letter / email', essay: 'Essay' } as const;
 
 export default function WritingPage() {
-  const [params, setParams] = useSearchParams();
-  const lang = params.get('lang') === 'en' || params.get('lang') === 'zh' ? (params.get('lang') as Lang) : null;
-
+  // the language comes from "Hôm nay học" in the top bar
+  const { lang } = useStudyLanguage();
+  const l = LANGS.find((x) => x.value === lang)!;
   return (
     <>
-      <PageHeader title="Writing" description="Choose a language, pick a prompt, write — then see an automatic analysis of your text." />
-      <div className="mb-6 grid gap-3 sm:grid-cols-2" role="group" aria-label="Language to write in">
-        {LANGS.map((l) => (
-          <button
-            key={l.value}
-            type="button"
-            aria-pressed={lang === l.value}
-            onClick={() => setParams({ lang: l.value })}
-            className={cn('rounded-lg border bg-card p-4 text-left transition-colors hover:border-primary', lang === l.value && 'border-primary ring-2 ring-primary/30')}
-          >
-            <p className="text-lg font-semibold">{l.name}</p>
-            <p className="text-sm text-muted-foreground">{l.blurb}</p>
-          </button>
-        ))}
-      </div>
-      {lang ? <LanguageView key={lang} lang={lang} /> : <EmptyState icon={PenLine} title="Which language do you want to write in?" description="Choose English or 中文 above." />}
+      <PageHeader title={lang === 'zh' ? 'Viết tiếng Trung' : 'Viết tiếng Anh'} description={`${l.blurb} Pick a prompt, write — then get your score and an analysis of your text.`} />
+      <LanguageView key={lang} lang={lang} />
     </>
   );
 }

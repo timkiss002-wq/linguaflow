@@ -1,4 +1,5 @@
 import { CheckCircle2, Heart, PlayCircle } from 'lucide-react';
+import { useStudyLanguage } from '@/features/study/context';
 import { useQuery } from '@tanstack/react-query';
 import { Link, useSearchParams } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
@@ -31,6 +32,7 @@ export default function MyLearningPage() {
 
   const progress = useProgressMap();
   const favorites = useFavoriteIds();
+  const { lang } = useStudyLanguage();
 
   const ids =
     tab === 'favorites'
@@ -39,11 +41,11 @@ export default function MyLearningPage() {
   const ready = tab === 'favorites' ? favorites.isSuccess : progress.isSuccess;
 
   const lessons = useQuery({
-    queryKey: ['my-learning', user.id, tab, [...ids].sort()],
+    queryKey: ['my-learning', user.id, tab, lang, [...ids].sort()],
     enabled: ready,
     queryFn: async (): Promise<LessonSummary[]> => {
       if (ids.length === 0) return [];
-      const { data, error } = await getSupabase().from('lesson_catalog').select('*').in('id', ids);
+      const { data, error } = await getSupabase().from('lesson_catalog').select('*').in('id', ids).eq('language', lang);
       if (error) throw error;
       // Most recently studied first.
       const last = (id: string) => progress.data?.get(id)?.last_studied_at ?? '';

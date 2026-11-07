@@ -38,6 +38,11 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | W5 | More IELTS practice: a second Reading test (3 passages) and a second Listening test (4 parts), five more Task 2 prompts and five more Task 1 figures (three prompts per Task 2 type, two per Task 1 chart type), and a sixth Task 1 type — before/after maps drawn in the app, with its own frame (*was transformed from… into…*, *had been replaced by…*, *remained unchanged*) — [design](docs/PERSONALIZATION.md#20-w5--thêm-đề-và-task-1-bản-đồ) | ✅ Done |
 | Admin | Content page for admins: lessons on/off, question approval with answer statistics, writing prompts on/off, AI usage | ✅ Done |
 
+**Study language.** The top bar always shows “Hôm nay học: Tiếng Anh | Tiếng Trung”, and the first visit of each day
+asks which one. The whole app then shows only that language: lessons, notebook, review, writing prompts, statistics,
+level test, insights, today's plan and the daily word goal. English-only areas (Luyện đề IELTS, word forms, writing
+mistakes) disappear while studying Chinese; a link to one of them switches to English. The choice is kept on the device.
+
 **Navigation.** A top menu (no sidebar) with six areas, each in its own colour: **Home** (today's plan) ·
 **Luyện đề IELTS** (Reading, Listening, Writing, Ngữ pháp & dịch câu) · **Lessons** (Explore, My lessons) · **Words** (Notebook, Review, Word forms) ·
 **Writing** (Prompts, My mistakes) · **Progress** (Statistics, Strengths & Weaknesses, Level test). Pages of one area are

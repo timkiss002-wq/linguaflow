@@ -5,9 +5,10 @@ import { Input } from '@/components/ui/input';
 import { NativeSelect } from '@/components/ui/native-select';
 import { cn } from '@/lib/utils';
 import { useTopics } from './api';
-import { HSK_LEVELS, LANGUAGES, LEVELS } from './constants';
+import { HSK_LEVELS, LEVELS } from './constants';
 import { hasActiveFilters, type LibraryFilters as Filters } from './filters';
 
+/** Search, topic, level, HSK (Chinese only), favourites. The language comes from "Hôm nay học" in the top bar. */
 export function LibraryFilters({ value, onChange }: { value: Filters; onChange: (f: Filters) => void }) {
   const topics = useTopics();
   const [search, setSearch] = useState(value.q);
@@ -31,25 +32,9 @@ export function LibraryFilters({ value, onChange }: { value: Filters; onChange: 
           <Search className="pointer-events-none absolute left-3 top-3 size-4 text-muted-foreground" aria-hidden />
           <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search lessons…" aria-label="Search lessons" className="pl-9" maxLength={100} />
         </div>
-        <div className="flex gap-1 rounded-md border bg-card p-1" role="group" aria-label="Language">
-          {[{ value: undefined, label: 'All' }, ...LANGUAGES].map((l) => (
-            <button
-              key={l.label}
-              type="button"
-              aria-pressed={value.lang === l.value}
-              onClick={() => set({ lang: l.value, hsk: l.value === 'en' ? undefined : value.hsk })}
-              className={cn(
-                'rounded px-3 py-1.5 text-sm font-medium transition-colors',
-                value.lang === l.value ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:bg-muted hover:text-foreground',
-              )}
-            >
-              {l.label}
-            </button>
-          ))}
-        </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-[1fr_1fr_1fr_auto]">
+      <div className={cn('grid grid-cols-2 gap-3', value.lang === 'en' ? 'md:grid-cols-[1fr_1fr_auto]' : 'md:grid-cols-[1fr_1fr_1fr_auto]')}>
         <NativeSelect aria-label="Topic" value={value.topic ?? ''} onChange={(e) => set({ topic: e.target.value || undefined })}>
           <option value="">All topics</option>
           {topics.data?.map((t) => (
@@ -66,10 +51,10 @@ export function LibraryFilters({ value, onChange }: { value: Filters; onChange: 
             </option>
           ))}
         </NativeSelect>
+        {value.lang !== 'en' && (
         <NativeSelect
           aria-label="HSK level"
           value={value.hsk ?? ''}
-          disabled={value.lang === 'en'}
           onChange={(e) => set({ hsk: e.target.value ? Number(e.target.value) : undefined })}
         >
           <option value="">Any HSK</option>
@@ -79,6 +64,7 @@ export function LibraryFilters({ value, onChange }: { value: Filters; onChange: 
             </option>
           ))}
         </NativeSelect>
+        )}
         <Button
           type="button"
           variant="outline"
@@ -90,8 +76,8 @@ export function LibraryFilters({ value, onChange }: { value: Filters; onChange: 
         </Button>
       </div>
 
-      {hasActiveFilters(value) && (
-        <Button variant="link" size="sm" className="h-auto px-0" onClick={() => onChange({ q: '', favoritesOnly: false })}>
+      {hasActiveFilters({ ...value, lang: undefined }) && (
+        <Button variant="link" size="sm" className="h-auto px-0" onClick={() => onChange({ q: '', favoritesOnly: false, lang: value.lang })}>
           <X /> Clear all filters
         </Button>
       )}

@@ -13,6 +13,7 @@ import { buildPlan, countSkips, itemProgress, type PlanItem, type PlanKind, type
 import { TONE, type Tone } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
 import { usePlanProgress, useRebuildPlan, useSavePlan, useSetItemStatus, useStoredPlans, type StoredPlan } from './api';
+import { useStudyLanguage } from '@/features/study/context';
 import { usePlanInput } from './usePlanInput';
 
 const ICON: Record<PlanKind, LucideIcon> = { review: Layers, test: ClipboardCheck, practice: Dumbbell, grammar: BookOpenCheck, writing: PenLine, lesson: Headphones };
@@ -51,6 +52,9 @@ export function TodayPlan() {
 }
 
 function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgress }) {
+  const { lang } = useStudyLanguage();
+  // only what belongs to the language being studied (items without a language, like habits, always)
+  const items = plan.items.filter((i) => !i.language || i.language === lang);
   const setStatus = useSetItemStatus();
   const rebuild = useRebuildPlan();
   const state = (i: PlanItem) => {
@@ -58,13 +62,13 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
     const p = itemProgress(i, progress);
     return { p, done: s === 'done' || p >= 1, skipped: s === 'skipped' && p < 1 };
   };
-  const doneCount = plan.items.filter((i) => state(i).done).length;
-  const minutes = plan.items.reduce((n, i) => n + i.minutes, 0);
+  const doneCount = items.filter((i) => state(i).done).length;
+  const minutes = items.reduce((n, i) => n + i.minutes, 0);
   const mark = (key: string, status: 'done' | 'skipped' | null) =>
     setStatus.mutate({ day: plan.day, key, status }, { onError: (e) => toast.error(toUserMessage(e)) });
 
-  const next = plan.items.find((i) => !state(i).done && !state(i).skipped);
-  const pct = plan.items.length ? (doneCount / plan.items.length) * 100 : 0;
+  const next = items.find((i) => !state(i).done && !state(i).skipped);
+  const pct = items.length ? (doneCount / items.length) * 100 : 0;
 
   return (
     <Card data-testid="today-plan" className="overflow-hidden">
@@ -75,9 +79,9 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
             {plan.restDay && <Badge variant="secondary">Rest day</Badge>}
           </CardTitle>
           <CardDescription data-testid="plan-summary">
-            {plan.items.length ? `${doneCount} of ${plan.items.length} done · about ${minutes} min` : 'Nothing planned today.'}
+            {items.length ? `${doneCount} of ${items.length} done · about ${minutes} min` : 'Nothing planned today.'}
           </CardDescription>
-          {plan.items.length > 0 && <Progress value={pct} className="h-2 w-48 max-w-full" label="Plan progress" />}
+          {items.length > 0 && <Progress value={pct} className="h-2 w-48 max-w-full" label="Plan progress" />}
         </div>
         <Button
           variant="ghost"
@@ -91,9 +95,9 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
         </Button>
       </CardHeader>
       <CardContent className="space-y-4">
-        {plan.items.length > 0 && (
+        {items.length > 0 && (
           <ol className="space-y-2.5">
-            {plan.items.map((item) => {
+            {items.map((item) => {
               const s = state(item);
               const Icon = s.done ? Check : ICON[item.kind];
               const auto = item.target.type !== 'manual';
@@ -158,7 +162,7 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
             })}
           </ol>
         )}
-        {plan.items.length > 0 && !next && (
+        {items.length > 0 && !next && (
           <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-medium text-success">🎉 All done for today — great work. Anything extra is a bonus.</p>
         )}
         {plan.notes.length > 0 && (

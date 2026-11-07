@@ -110,10 +110,7 @@ const FAKE_TTS = () => {
   // lessons "For you"
   await page.goto(BASE + '/lessons');
   await page.getByRole('region', { name: 'Recommended for you' }).waitFor();
-  check('lessons: For you row', (await page.getByRole('region', { name: 'Recommended for you' }).locator('li').count()) === 4);
-  await page.getByRole('button', { name: 'English', exact: true }).click();
-  await page.waitForTimeout(300);
-  check('For you follows the language filter', (await page.getByRole('region', { name: 'Recommended for you' }).locator('li').count()) === 2);
+  check('For you follows the study language (English)', (await page.getByRole('region', { name: 'Recommended for you' }).locator('li').count()) === 2);
 
   // edit from settings
   await page.goto(BASE + '/settings');

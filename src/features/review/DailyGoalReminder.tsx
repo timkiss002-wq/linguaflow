@@ -2,6 +2,7 @@ import { Bell, BookOpen, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useStudyLanguage } from '@/features/study/context';
 import { useDailyGoal } from './goal';
 
 const today = () => new Date().toLocaleDateString('en-CA');
@@ -30,6 +31,7 @@ const SNOOZE_MS = 2 * 60 * 60 * 1000;
  */
 export function DailyGoalReminder() {
   const goal = useDailyGoal();
+  const { lang } = useStudyLanguage();
   const navigate = useNavigate();
   const [snoozedUntil, setSnoozedUntil] = useState(() => Number(read('vocab:snooze') ?? 0));
   const [permission, setPermission] = useState<NotificationPermission | 'unsupported'>(() => (typeof Notification === 'undefined' ? 'unsupported' : Notification.permission));
@@ -78,7 +80,7 @@ export function DailyGoalReminder() {
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2 text-sm sm:px-6">
         <span className="flex items-center gap-2 font-medium text-violet-900 dark:text-violet-100">
           <BookOpen className="size-4 shrink-0" aria-hidden />
-          Từ vựng hôm nay: {goal.learned}/{goal.goal} từ mới
+          Từ vựng hôm nay: {goal.learned}/{goal.goal} từ mới {lang === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}
         </span>
         <span className="h-1.5 w-28 overflow-hidden rounded-full bg-violet-200 dark:bg-violet-500/30" aria-hidden>
           <span className="block h-full rounded-full bg-violet-600" style={{ width: `${(goal.learned / goal.goal) * 100}%` }} />

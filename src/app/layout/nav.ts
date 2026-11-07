@@ -5,6 +5,8 @@ import type { Tone } from '@/lib/ui/tones';
 export interface SectionTab {
   to: string;
   label: string;
+  /** shown only while studying this language */
+  only?: 'en' | 'zh';
 }
 
 /** The six areas of the app, shown as the top menu. Each groups related pages, shown as tabs under the menu. */
@@ -21,6 +23,8 @@ export interface Section {
   /** Path prefixes that belong to this area (for the active state). */
   match: string[];
   tabs?: SectionTab[];
+  /** the whole area exists for one language only (IELTS → English) */
+  only?: 'en' | 'zh';
 }
 
 export const SECTIONS: Section[] = [
@@ -29,6 +33,7 @@ export const SECTIONS: Section[] = [
     // All IELTS practice in one place, one tab per skill (Reading · Listening · Writing).
     // Listed before Writing so /writing/guided belongs here, not to free writing.
     id: 'ielts',
+    only: 'en',
     label: 'Luyện đề IELTS',
     short: 'IELTS',
     hint: 'Reading · Listening · Writing · Ngữ pháp',
@@ -67,7 +72,7 @@ export const SECTIONS: Section[] = [
     tabs: [
       { to: '/vocabulary', label: 'Notebook' },
       { to: '/review', label: 'Review' },
-      { to: '/word-forms', label: 'Word forms' },
+      { to: '/word-forms', label: 'Word forms', only: 'en' },
     ],
   },
   {
@@ -80,7 +85,7 @@ export const SECTIONS: Section[] = [
     match: ['/writing'],
     tabs: [
       { to: '/writing', label: 'Prompts' },
-      { to: '/writing/mistakes', label: 'My mistakes' },
+      { to: '/writing/mistakes', label: 'My mistakes', only: 'en' },
     ],
   },
   {
@@ -98,6 +103,11 @@ export const SECTIONS: Section[] = [
     ],
   },
 ];
+
+/** The areas (and their tabs) for the language being studied. */
+export function sectionsFor(lang: 'en' | 'zh'): Section[] {
+  return SECTIONS.filter((s) => !s.only || s.only === lang).map((s) => ({ ...s, tabs: s.tabs?.filter((t) => !t.only || t.only === lang) }));
+}
 
 export function sectionFor(pathname: string): Section | undefined {
   return SECTIONS.find((s) => s.match.some((m) => pathname === m || pathname.startsWith(`${m}/`)));

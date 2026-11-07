@@ -11,11 +11,17 @@ import { LessonGrid, LessonGridSkeleton } from '@/features/library/LessonGrid';
 import { LibraryFilters } from '@/features/library/LibraryFilters';
 import { RecommendedList } from '@/features/learner/RecommendedLessons';
 import { useRecommendations } from '@/features/learner/useRecommendations';
+import { useStudyLanguage } from '@/features/study/context';
 
 export default function LessonsPage() {
   const [params, setParams] = useSearchParams();
-  const filters = useMemo(() => parseFilters(params), [params]);
-  const setFilters = useCallback((f: Filters) => setParams(toSearchParams(f), { replace: true }), [setParams]);
+  const { lang } = useStudyLanguage();
+  // only lessons of the language being studied
+  const filters = useMemo(() => {
+    const f = parseFilters(params);
+    return { ...f, lang, hsk: lang === 'en' ? undefined : f.hsk };
+  }, [params, lang]);
+  const setFilters = useCallback((f: Filters) => setParams(toSearchParams({ ...f, lang: undefined }), { replace: true }), [setParams]);
 
   const favorites = useFavoriteIds();
   const progress = useProgressMap();
@@ -28,7 +34,7 @@ export default function LessonsPage() {
 
   return (
     <>
-      <PageHeader title="Explore Lessons" description="Listening lessons read aloud sentence by sentence. Pick one at your level." />
+      <PageHeader title={lang === 'zh' ? 'Bài nghe tiếng Trung' : 'Bài nghe tiếng Anh'} description="Listening lessons read aloud sentence by sentence. Pick one at your level." />
       {forYou.length > 0 && !hasActiveFilters({ ...filters, lang: undefined }) && (
         <section className="mb-8 space-y-3" aria-label="Recommended for you">
           <h2 className="text-lg font-bold">For you</h2>
@@ -48,8 +54,8 @@ export default function LessonsPage() {
             title={filters.favoritesOnly && !filters.q ? 'No favorites yet' : 'No lessons match'}
             description={filters.favoritesOnly && !filters.q ? 'Tap the heart on any lesson to keep it here.' : 'Try a different search or remove some filters.'}
             action={
-              hasActiveFilters(filters) && (
-                <Button variant="outline" size="sm" onClick={() => setFilters({ q: '', favoritesOnly: false })}>
+              hasActiveFilters({ ...filters, lang: undefined }) && (
+                <Button variant="outline" size="sm" onClick={() => setFilters({ q: '', favoritesOnly: false, lang })}>
                   Clear filters
                 </Button>
               )

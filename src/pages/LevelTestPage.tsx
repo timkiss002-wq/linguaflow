@@ -1,4 +1,5 @@
 import { ClipboardCheck } from 'lucide-react';
+import { useStudyLanguage } from '@/features/study/context';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { ErrorState } from '@/components/ErrorState';
@@ -20,7 +21,8 @@ export default function LevelTestPage() {
   const overview = useLevelOverview();
   const learner = useLearner();
   const goals = learner.data?.goals ?? [];
-  const languages: ('en' | 'zh')[] = goals.length ? goals.map((g) => g.language) : ['en', 'zh'];
+  const { lang } = useStudyLanguage();
+  const languages: ('en' | 'zh')[] = [lang];
 
   return (
     <>

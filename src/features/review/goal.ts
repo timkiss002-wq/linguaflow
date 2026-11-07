@@ -3,6 +3,7 @@ import { useImportWords, useVocabulary } from '@/features/vocabulary/api';
 import { useWordFamilies } from '@/features/wordforms/api';
 import type { VocabRow } from '@/lib/vocab/csv';
 import type { Family } from '@/lib/wordforms';
+import { useStudyLanguage } from '@/features/study/context';
 import { useNewReviewedToday } from './api';
 import { isNewCard } from './queue';
 
@@ -20,14 +21,17 @@ export interface DailyGoal {
   available: number;
 }
 
+/** Today's goal for the language being studied (10 new English words, or 10 new Chinese words). */
 export function useDailyGoal(): DailyGoal | undefined {
   const newToday = useNewReviewedToday();
   const vocab = useVocabulary();
+  const { lang } = useStudyLanguage();
   return useMemo(() => {
     if (!newToday.data || !vocab.data) return undefined;
-    const learned = newToday.data.size;
-    return { learned, goal: DAILY_NEW_GOAL, done: learned >= DAILY_NEW_GOAL, available: vocab.data.filter(isNewCard).length };
-  }, [newToday.data, vocab.data]);
+    const mine = vocab.data.filter((w) => w.language === lang);
+    const learned = mine.filter((w) => newToday.data.has(w.id)).length;
+    return { learned, goal: DAILY_NEW_GOAL, done: learned >= DAILY_NEW_GOAL, available: mine.filter(isNewCard).length };
+  }, [newToday.data, vocab.data, lang]);
 }
 
 /** IELTS headwords from the word-family list that are not in the notebook yet (with a meaning and an example). */

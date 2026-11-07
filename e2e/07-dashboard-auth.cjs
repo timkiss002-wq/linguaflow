@@ -49,7 +49,7 @@ const FAKE_TTS = () => {
   await page.waitForURL(/dashboard/);
   const uid = sql(`select id from auth.users where email='${email}'`);
   await page.getByTestId('stat-tiles').waitFor();
-  check('dashboard: 6 tiles + goal + EN/ZH split', (await page.getByTestId('stat-tiles').locator(':scope > div').count()) === 6 && (await page.getByTestId('goal').textContent()).includes('0 / 15') && (await page.getByTestId('language-split').locator(':scope > div').count()) === 2);
+  check('dashboard: 6 tiles + goal', (await page.getByTestId('stat-tiles').locator(':scope > div').count()) === 6 && (await page.getByTestId('goal').textContent()).includes('0 / 15'));
 
   // ── practice to create data ──
   await page.goto(BASE + '/lessons/b0000000-0000-4000-8000-000000000301/practice');
@@ -87,17 +87,13 @@ const FAKE_TTS = () => {
   check('data table view', (await page.locator('details table tbody tr').count()) === 7);
   check('continue-learning card', await page.getByRole('link', { name: 'Continue' }).isVisible());
   await page.screenshot({ path: `${SHOTS}/m7-01-dashboard.png`, fullPage: true });
-  await page.getByRole('button', { name: '中文' }).click();
-  await page.waitForURL(/lang=zh/);
+  await page.getByTestId('study-switch').getByRole('radio', { name: /Tiếng Trung/ }).click();
   await page.waitForTimeout(800);
-  check('language switch hides split, filters tiles', (await page.getByTestId('language-split').count()) === 0 && (await page.getByTestId('stat-tiles').textContent()).includes('25m'));
+  check('studying Chinese filters tiles', (await page.getByTestId('stat-tiles').textContent()).includes('25m'));
 
   // ── statistics ──
   await page.getByRole('link', { name: /^Progress/ }).first().click();
   await page.getByTestId('mistakes').waitFor();
-  check('All mode: no Chinese-only insight', !(await page.getByText(/of your Chinese mistakes/).count()));
-  await page.getByRole('button', { name: '中文' }).click();
-  await page.waitForURL(/lang=zh/);
   await page.waitForTimeout(800);
   const mistakes = await page.getByTestId('mistakes').textContent();
   check('mistake types (zh): misheard + tone, no English word form', mistakes.includes('Misheard') && mistakes.includes('Wrong tone') && !mistakes.includes('Word form'), mistakes.slice(0, 120));

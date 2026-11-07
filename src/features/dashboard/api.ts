@@ -5,6 +5,7 @@ import { useProfile } from '@/features/profile/api';
 import { DEFAULT_SETTINGS } from '@/features/profile/schemas';
 import { useNewReviewedToday } from '@/features/review/api';
 import { newLimitFor } from '@/features/review/goal';
+import { useStudyLanguage } from '@/features/study/context';
 import { buildReviewQueue } from '@/features/review/queue';
 import { useVocabulary } from '@/features/vocabulary/api';
 
@@ -50,8 +51,9 @@ export function useDueByLanguage(): Record<'en' | 'zh', number> | undefined {
   return { en: count('en'), zh: count('zh') };
 }
 
-/** Cards in today's review queue, both languages. */
+/** Cards in today's review queue for the language being studied. */
 export function useDueToday(): number | undefined {
   const due = useDueByLanguage();
-  return due ? due.en + due.zh : undefined;
+  const { lang } = useStudyLanguage();
+  return due ? due[lang] : undefined;
 }

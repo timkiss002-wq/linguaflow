@@ -1,13 +1,16 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { TONE } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
+import { useStudyLanguage } from '@/features/study/context';
 import { sectionFor } from './nav';
 
 /** Pages of the current area (e.g. IELTS: Reading · Listening · Writing), centred under the menu, active one underlined. */
 export function SectionTabs() {
   const { pathname } = useLocation();
-  const section = sectionFor(pathname);
-  if (!section?.tabs || !section.tabs.some((t) => t.to === pathname)) return null;
+  const { lang } = useStudyLanguage();
+  const found = sectionFor(pathname);
+  const section = found && { ...found, tabs: found.tabs?.filter((t) => !t.only || t.only === lang) };
+  if (!section?.tabs || section.tabs.length < 2 || !section.tabs.some((t) => t.to === pathname)) return null;
   return (
     <div className="border-t bg-background">
       <nav aria-label={`${section.label} pages`} className="mx-auto flex w-full max-w-7xl justify-start gap-1 overflow-x-auto px-4 sm:justify-center sm:px-6">

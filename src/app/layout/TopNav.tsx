@@ -2,16 +2,19 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useDueToday } from '@/features/dashboard/api';
 import { TONE } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
-import { SECTIONS, sectionFor } from './nav';
+import { useStudyLanguage } from '@/features/study/context';
+import { sectionFor, sectionsFor } from './nav';
 
 /** Desktop main menu: the six areas in one row of tabs, each in its own colour. */
 export function TopNav() {
   const { pathname } = useLocation();
   const active = sectionFor(pathname)?.id;
+  const { lang } = useStudyLanguage();
+  const sections = sectionsFor(lang);
   const due = useDueToday();
   return (
     <nav aria-label="Main" className="-mx-1 flex gap-1 overflow-x-auto px-1 py-2">
-      {SECTIONS.map((s) => {
+      {sections.map((s) => {
         const on = active === s.id;
         return (
           <NavLink

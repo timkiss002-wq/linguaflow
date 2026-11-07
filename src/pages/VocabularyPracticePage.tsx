@@ -1,4 +1,5 @@
 import { ArrowLeft, Keyboard } from 'lucide-react';
+import { useStudyLanguage } from '@/features/study/context';
 import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
@@ -13,7 +14,7 @@ export default function VocabularyPracticePage() {
   const vocab = useVocabulary();
   const [params] = useSearchParams();
   const [round, setRound] = useState(0);
-  const lang = params.get('lang');
+  const { lang } = useStudyLanguage();
   const ids = params.get('ids')?.split(',').filter(Boolean);
 
   const back = (
@@ -28,7 +29,7 @@ export default function VocabularyPracticePage() {
   if (vocab.isPending) return (<>{back}<Skeleton className="mx-auto h-96 max-w-xl" /></>);
 
   // Explicit ids only on the first round; "Practise more" continues with the normal queue.
-  const queue = buildQueue(vocab.data, { ids: round === 0 ? ids : undefined, lang: lang === 'en' || lang === 'zh' ? lang : undefined });
+  const queue = buildQueue(vocab.data, { ids: round === 0 ? ids : undefined, lang });
 
   return (
     <>

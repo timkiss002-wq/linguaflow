@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Lightbulb, ThumbsUp, TriangleAlert, X } from 'lucide-react';
+import { useStudyLanguage } from '@/features/study/context';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
@@ -26,6 +27,7 @@ export default function InsightsPage() {
   const data = useInsightData(days);
   const learner = useLearner();
   const index = useWordFamilyIndex();
+  const { lang } = useStudyLanguage();
   const feedback = useAllFeedback();
   const ielts = useIeltsAttempts();
   const profile = learner.data?.profile;
@@ -46,14 +48,15 @@ export default function InsightsPage() {
         : [],
     [data.data, index, habitAnalysis, plannedDays, feedback.data, ielts.data],
   );
-  const drill = useMemo(() => (data.data ? buildDrill(data.data.pairs) : []), [data.data]);
+  const drill = useMemo(() => (data.data && lang === 'zh' ? buildDrill(data.data.pairs) : []), [data.data, lang]);
 
   const d = data.data;
   const checked = (d?.sentences.en?.n ?? 0) + (d?.sentences.zh?.n ?? 0);
   const reviews = d?.reviews.reduce((n, r) => n + r.count, 0) ?? 0;
-  const strengths = insights.filter((i) => i.kind === 'strength' && i.area !== 'habits');
-  const weaknesses = insights.filter((i) => i.kind === 'weakness' && i.area !== 'habits');
-  const habits = insights.filter((i) => i.area === 'habits');
+  const mine = insights.filter((i) => !i.language || i.language === lang);
+  const strengths = mine.filter((i) => i.kind === 'strength' && i.area !== 'habits');
+  const weaknesses = mine.filter((i) => i.kind === 'weakness' && i.area !== 'habits');
+  const habits = mine.filter((i) => i.area === 'habits');
 
   return (
     <>
@@ -75,7 +78,7 @@ export default function InsightsPage() {
         <ErrorState error={data.error} onRetry={() => data.refetch()} />
       ) : !d || learner.isPending ? (
         <Skeleton className="h-96" />
-      ) : insights.length === 0 && drill.length === 0 ? (
+      ) : mine.length === 0 && drill.length === 0 ? (
         <EmptyState
           icon={Lightbulb}
           title="Not enough answers yet"

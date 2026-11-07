@@ -54,13 +54,13 @@ const FAKE_TTS = () => {
   await page.waitForURL(/dashboard/);
 
   await page.getByRole('link', { name: /^Lessons/ }).first().click();
-  await page.getByText('12 lessons').waitFor();
-  check('lessons list: 12', true);
-  await page.screenshot({ path: `${SHOTS}/m3-01-lessons.png` });
-  await page.getByRole('button', { name: 'English' }).click();
+  // the study language (top bar) defaults to English
   await page.getByText('4 lessons').waitFor();
-  check('English filter → 4', true);
-  await page.getByRole('button', { name: 'Chinese' }).click();
+  check('lessons list: English only → 4', true);
+  await page.screenshot({ path: `${SHOTS}/m3-01-lessons.png` });
+  await page.getByTestId('study-switch').getByRole('radio', { name: /Tiếng Trung/ }).click();
+  await page.getByText('8 lessons').waitFor();
+  check('Chinese → 8', true);
   await page.getByLabel('HSK level').selectOption('6');
   await page.getByText('2 lessons').waitFor();
   check('Chinese + HSK 6 → 2', true);
