@@ -3,6 +3,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { DailyGoalReminder } from '@/features/review/DailyGoalReminder';
 import { BottomNav } from './BottomNav';
 import { isFocusRoute, sectionFor } from './nav';
 import { SectionTabs } from './SectionTabs';
@@ -63,6 +64,8 @@ export function AppLayout() {
         </div>
         <SectionTabs />
       </header>
+      {/* Daily vocabulary goal: shown everywhere until 10 new words are learned (the Review page has its own card). */}
+      {pathname !== '/review' && <DailyGoalReminder />}
       <BottomNav />
 
       <main className="min-w-0 pb-24 lg:pb-0" data-section={area}>

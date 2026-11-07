@@ -4,6 +4,7 @@ import { getSupabase } from '@/lib/supabase';
 import { useProfile } from '@/features/profile/api';
 import { DEFAULT_SETTINGS } from '@/features/profile/schemas';
 import { useNewReviewedToday } from '@/features/review/api';
+import { newLimitFor } from '@/features/review/goal';
 import { buildReviewQueue } from '@/features/review/queue';
 import { useVocabulary } from '@/features/vocabulary/api';
 
@@ -43,7 +44,7 @@ export function useDueByLanguage(): Record<'en' | 'zh', number> | undefined {
   const count = (language: 'en' | 'zh') =>
     buildReviewQueue(vocab.data!, {
       language,
-      newLimit: settings.newPerDay,
+      newLimit: newLimitFor(settings.newPerDay),
       newDoneToday: vocab.data!.filter((w) => w.language === language && newToday.data!.has(w.id)).length,
     }).queue.length;
   return { en: count('en'), zh: count('zh') };

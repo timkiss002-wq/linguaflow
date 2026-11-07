@@ -36,10 +36,12 @@ export function AiFeedback({ submissionId, language, level, autoStart = false }:
       },
     );
   const auto = useRef(false);
+  // A text just written is scored at once. The first time, the learner is asked to agree to sending it to the AI.
   useEffect(() => {
-    if (!autoStart || auto.current || stored.isPending || stored.data || !profile.data || !settings.aiFeedback) return;
+    if (!autoStart || auto.current || stored.isPending || stored.data || !profile.data) return;
     auto.current = true;
-    request.mutate(level);
+    if (settings.aiFeedback) request.mutate(level);
+    else setAsking(true);
   }, [autoStart, stored.isPending, stored.data, profile.data, settings.aiFeedback, request, level]);
   const err = request.error instanceof FeedbackError ? request.error : request.error ? new FeedbackError('ai_failed') : null;
 
@@ -66,7 +68,7 @@ export function AiFeedback({ submissionId, language, level, autoStart = false }:
         )}
       </CardHeader>
       <CardContent>
-        {request.isPending && <p className="text-sm text-muted-foreground">This usually takes 10–30 seconds.</p>}
+        {request.isPending && <p className="text-sm text-muted-foreground">Đang chấm bài — thường mất 10–30 giây…</p>}
         {err && (
           <Alert variant="destructive" data-testid="ai-error" data-code={err.code}>
             <AlertDescription>{FEEDBACK_ERRORS[err.code] ?? FEEDBACK_ERRORS.ai_failed}</AlertDescription>
@@ -85,6 +87,7 @@ export function AiFeedback({ submissionId, language, level, autoStart = false }:
                 <b>don't include personal information</b> (full names, addresses, phone numbers).
               </p>
               <p>The feedback is saved with your text. AI can be wrong: for important texts, check with a teacher. You can turn this off any time in Settings.</p>
+              <p lang="vi">Đồng ý một lần: từ nay mỗi bài bạn tự viết sẽ được chấm band ngay sau khi nộp.</p>
             </div>
           </DialogDescription>
           <div className="mt-2 flex justify-end gap-2">

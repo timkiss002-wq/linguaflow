@@ -80,18 +80,18 @@ export function ReviewPreferences({ profile }: { profile: Profile }) {
         <div className="flex items-center justify-between gap-4">
           <div>
             <Label htmlFor="new-per-day">New cards per day</Label>
-            <p className="mt-1 text-xs text-muted-foreground">Fewer new cards = shorter daily reviews.</p>
+            <p className="mt-1 text-xs text-muted-foreground">At least 10 — the daily goal is 10 new words.</p>
           </div>
           <Input
             id="new-per-day"
             type="number"
-            min={0}
+            min={10}
             max={200}
             value={newPerDay}
             onChange={(e) => setNewPerDay(e.target.value)}
             onBlur={() => {
               const n = Number(newPerDay);
-              if (!Number.isInteger(n) || n < 0 || n > 200) return toast.error('Enter 0–200.');
+              if (!Number.isInteger(n) || n < 10 || n > 200) return toast.error('Enter 10–200 (the daily goal is 10 new words).');
               if (n !== s.newPerDay) save({ newPerDay: n });
             }}
             className="h-9 w-24"

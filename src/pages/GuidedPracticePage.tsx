@@ -268,7 +268,7 @@ function Finish({
         seconds: session.seconds,
       });
       writeSession(storageKey, null);
-      navigate(`/writing/${id}`);
+      navigate(`/writing/${id}?new=1`);
     } catch (e) {
       toast.error(toUserMessage(e));
       setBusy(false);

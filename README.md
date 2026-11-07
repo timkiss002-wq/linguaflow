@@ -48,6 +48,16 @@ On phones the areas are a bottom tab bar and the filters fold into one panel.
 **Reading tests** show passage and questions side by side, each scrolling on its own, with three text sizes. Select text
 in the passage to highlight it (click a highlight to remove it); highlights are saved with the answers.
 
+**Vocabulary goal and review.** The daily goal is 10 new words (first review of a new card); until it is met a banner
+shows on every page, and — if the learner clicks “Nhắc tôi” — a system notification appears at 12:00 and 20:00 while
+the app is open. When the notebook runs out of new words, 10 IELTS headwords from the word-family list can be added in
+one click. Review (`/review`) practises each due word by using it, in rounds over groups of 10: choose the Vietnamese
+meaning → fill a gap with the right form of its word family (or the word in its own sentence) → type the word from its
+meaning. The mistakes made set the SM-2 rating (no self-grading). Quick flip-cards remain as a second option.
+
+**Writing** is scored straight away: every text the learner writes (free prompts, guided level 4, exam mode) opens its
+result page with the AI band already requested (the first time, the learner agrees to sending the text to the AI).
+
 **Ngữ pháp & dịch câu** (`/grammar`, content in `content/grammar-drills.json`): 11 grammar points for band 4.5 → 5.5
 (tenses, comparison, passive, relative clauses, conditionals, modals, linking words, describing trends). Each has a 2D
 diagram, formula, examples and common mistakes, then 8 Vietnamese sentences to translate. Answers are compared word by

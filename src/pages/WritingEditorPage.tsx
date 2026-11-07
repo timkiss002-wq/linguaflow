@@ -121,7 +121,7 @@ function Editor({ task }: { task: WritingTask }) {
       const metrics = analyze(body, { language: lang, kind: task.kind, minLength: task.min_length, targets, hsk, level: profile?.level.value, seconds: seconds.current });
       const id = await save.mutateAsync({ language: lang, taskId: task.id, title: task.title, prompt: task.prompt, targets, body: body.trim(), metrics, seconds: seconds.current });
       writeDraft(task.id, null);
-      navigate(`/writing/${id}`);
+      navigate(`/writing/${id}?new=1`);
     } catch (e) {
       toast.error(toUserMessage(e));
       setBusy(false);

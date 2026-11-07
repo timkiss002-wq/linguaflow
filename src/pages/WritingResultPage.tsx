@@ -91,17 +91,18 @@ export default function WritingResultPage() {
         }
       />
 
-      {m.exam && (
-        <div className="mb-4 space-y-2">
+      {/* Scored straight away: the AI band comes first, the automatic checks below it. */}
+      <div className="mb-4 space-y-2">
+        {m.exam && (
           <p className="text-sm text-muted-foreground" data-testid="exam-note">
             Bài thi thử {m.exam.minutes} phút{m.exam.timeUp ? ' — nộp tự động khi hết giờ' : ''}.{' '}
             <Link to="/writing/mistakes" className="text-primary hover:underline">
               Xem các lỗi bạn hay lặp lại →
             </Link>
           </p>
-          <AiFeedback submissionId={s.id} language={s.language} level={profile?.level.value ?? 3} autoStart={params.get('exam') === '1'} />
-        </div>
-      )}
+        )}
+        <AiFeedback submissionId={s.id} language={s.language} level={profile?.level.value ?? 3} autoStart={params.get('exam') === '1' || params.get('new') === '1'} />
+      </div>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4" data-testid="writing-tiles">
         <Tile label={zh ? 'Characters' : 'Words'} value={`${m.length}`} hint={m.length >= m.minLength ? `≥ ${m.minLength} ✓` : `task asks for ${m.minLength}+`} good={m.length >= m.minLength} />
         <Tile label="Sentences" value={`${m.sentences}`} hint={`avg ${m.avgSentence} ${unit}, longest ${m.longestSentence}`} />
@@ -167,7 +168,7 @@ export default function WritingResultPage() {
                   </span>
                 </p>
               )}
-              <p className="border-t pt-2 text-xs text-muted-foreground">These checks look at form — length, structure, words. They cannot judge grammar or meaning: use AI feedback below for that.</p>
+              <p className="border-t pt-2 text-xs text-muted-foreground">These checks look at form — length, structure, words. They cannot judge grammar or meaning: the AI score above does that.</p>
             </CardContent>
           </Card>
 
@@ -195,11 +196,6 @@ export default function WritingResultPage() {
         </div>
       </div>
 
-      {!m.exam && (
-        <div className="mt-4">
-          <AiFeedback submissionId={s.id} language={s.language} level={profile?.level.value ?? 3} />
-        </div>
-      )}
     </>
   );
 }

@@ -54,9 +54,9 @@ const FAKE_TTS = () => {
   // ── English review: new cards ──
   await page.goto(BASE + '/review?lang=en');
   await page.getByTestId('due-now').waitFor();
-  check('overview: 0 due, 3 new of 20', (await page.getByTestId('due-now').textContent()) === '0' && (await page.getByTestId('new-today').textContent()).startsWith('3'));
+  check('overview: 0 due, 3 new', (await page.getByTestId('due-now').textContent()) === '0' && (await page.getByTestId('new-today').textContent()).startsWith('3'));
   await page.screenshot({ path: `${SHOTS}/m6-01-overview.png` });
-  await page.getByRole('button', { name: /Start review · 3 cards/ }).click();
+  await page.getByRole('button', { name: /Lật 3 thẻ/ }).click();
   const front = async () => (await page.getByTestId('flashcard').locator('p').first().textContent()).trim();
 
   const t1 = await front();
@@ -95,7 +95,7 @@ const FAKE_TTS = () => {
   await page.reload();
   await page.getByTestId('due-now').waitFor();
   check('due card appears after its date', (await page.getByTestId('due-now').textContent()) === '1');
-  await page.getByRole('button', { name: /Start review · 1 cards/ }).click();
+  await page.getByRole('button', { name: /Lật 1 thẻ/ }).click();
   await page.keyboard.press('Space');
   check('second Good previews 3d', (await page.locator('button', { hasText: /^Good/ }).textContent()).includes('3d'));
   await page.keyboard.press('3');
@@ -118,7 +118,7 @@ const FAKE_TTS = () => {
 
   await page.goto(BASE + '/review?lang=zh');
   await page.getByLabel('Card front').selectOption('reverse');
-  await page.getByRole('button', { name: /Start review · 2 cards/ }).click();
+  await page.getByRole('button', { name: /Lật 2 thẻ/ }).click();
   const zhFront = await front();
   check('reverse card shows the meaning first', ['siêu thị', 'phỏng vấn'].includes(zhFront), zhFront);
   await page.keyboard.press('Space');
