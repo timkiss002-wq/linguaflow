@@ -5,10 +5,17 @@ import { Button } from '@/components/ui/button';
 import { BottomNav } from './BottomNav';
 import { isFocusRoute, sectionFor } from './nav';
 import { SectionTabs } from './SectionTabs';
-import { SecondaryNav, SidebarNav } from './SidebarNav';
-import { TodayMini } from './TodayMini';
+import { TopNav } from './TopNav';
+import { TodayChip } from './TodayMini';
 import { UserMenu } from './UserMenu';
 
+/**
+ * Top-menu layout (no sidebar), so pages get the full width:
+ *   row 1 — logo, today's streak, account
+ *   row 2 — the six areas as tabs (desktop; phones use the bottom bar)
+ *   row 3 — the pages of the current area (Reading · Listening · Writing …)
+ * All three rows stick to the top while scrolling.
+ */
 export function AppLayout() {
   const { pathname } = useLocation();
   const area = sectionFor(pathname)?.id;
@@ -34,36 +41,28 @@ export function AppLayout() {
   }
 
   return (
-    <div className="min-h-screen lg:grid lg:grid-cols-[264px_1fr]">
-      {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-screen flex-col border-r bg-sidebar lg:flex">
-        <div className="px-5 pb-4 pt-5">
+    <div className="min-h-screen bg-muted/30">
+      <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
+        <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 sm:px-6">
           <Logo to="/dashboard" />
+          <div className="ml-auto flex items-center gap-2">
+            <TodayChip />
+            <div className="w-10">
+              <UserMenu compact />
+            </div>
+          </div>
         </div>
-        <div className="px-4 pb-4">
-          <TodayMini />
+        <div className="hidden border-t lg:block">
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+            <TopNav />
+          </div>
         </div>
-        <div className="flex-1 overflow-y-auto px-3">
-          <SidebarNav />
-        </div>
-        <div className="space-y-2 border-t p-3">
-          <SecondaryNav />
-          <UserMenu />
-        </div>
-      </aside>
-
-      {/* Phone: top bar + bottom tabs */}
-      <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b bg-background/90 px-4 backdrop-blur lg:hidden">
-        <Logo to="/dashboard" />
-        <div className="w-9">
-          <UserMenu compact />
-        </div>
+        <SectionTabs />
       </header>
       <BottomNav />
 
       <main className="min-w-0 pb-24 lg:pb-0" data-section={area}>
-        <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-10 lg:py-9">
-          <SectionTabs />
+        <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:py-8">
           <Outlet />
         </div>
       </main>

@@ -38,10 +38,12 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | W5 | More IELTS practice: a second Reading test (3 passages) and a second Listening test (4 parts), five more Task 2 prompts and five more Task 1 figures (three prompts per Task 2 type, two per Task 1 chart type), and a sixth Task 1 type — before/after maps drawn in the app, with its own frame (*was transformed from… into…*, *had been replaced by…*, *remained unchanged*) — [design](docs/PERSONALIZATION.md#20-w5--thêm-đề-và-task-1-bản-đồ) | ✅ Done |
 | Admin | Content page for admins: lessons on/off, question approval with answer statistics, writing prompts on/off, AI usage | ✅ Done |
 
-**Navigation.** Five areas, each with its own colour: **Home** (today's plan) · **Lessons** (Explore, My lessons, IELTS tests) ·
-**Words** (Notebook, Review, Word forms) · **Writing** (Prompts, IELTS frames, My mistakes) · **Progress** (Statistics, Strengths & Weaknesses, Level
-test). Pages of one area are tabs at the top; dictation, tests, writing and typing practice open in a focus mode
-without the menu. On phones the areas are a bottom tab bar.
+**Navigation.** A top menu (no sidebar) with six areas, each in its own colour: **Home** (today's plan) ·
+**Luyện đề IELTS** (Reading, Listening, Writing) · **Lessons** (Explore, My lessons) · **Words** (Notebook, Review, Word forms) ·
+**Writing** (Prompts, My mistakes) · **Progress** (Statistics, Strengths & Weaknesses, Level test). Pages of one area are
+tabs under the menu. The IELTS pages are practice libraries: filters on the left (format, status, question type — kept
+in the URL), cards on the right. Dictation, tests, writing and typing practice open in a focus mode without the menu.
+On phones the areas are a bottom tab bar and the filters fold into one panel.
 
 ## Tech stack
 
@@ -163,7 +165,7 @@ Never put the `service_role` / secret key in frontend env vars.
 
 ```
 src/
-  app/          router, providers, layout (sidebar)
+  app/          router, providers, layout (top menu)
   pages/        one component per route
   features/     auth, profile, dashboard, … (UI + data hooks per feature)
   lib/          framework-free logic (env, errors; later compare/, srs/, subtitles/)

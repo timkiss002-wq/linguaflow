@@ -253,7 +253,7 @@ linguaflow/
 │   ├── migrations/            # SQL schema, đánh số theo thời gian
 │   └── seed.sql               # dữ liệu demo (is_sample = true)
 ├── src/
-│   ├── app/                   # router.tsx, providers.tsx, AppLayout (sidebar)
+│   ├── app/                   # router.tsx, providers.tsx, AppLayout (top menu)
 │   ├── pages/                 # 1 file / route, mỏng, chỉ ghép feature
 │   │   ├── LandingPage.tsx  LoginPage.tsx  RegisterPage.tsx
 │   │   ├── DashboardPage.tsx  LibraryPage.tsx  VideoDetailPage.tsx

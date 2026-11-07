@@ -1,4 +1,4 @@
-import { BookOpen, Headphones, Home, LineChart, PenLine, type LucideIcon } from 'lucide-react';
+import { BookOpen, GraduationCap, Headphones, Home, LineChart, PenLine, type LucideIcon } from 'lucide-react';
 import { matchPath } from 'react-router-dom';
 import type { Tone } from '@/lib/ui/tones';
 
@@ -7,10 +7,12 @@ export interface SectionTab {
   label: string;
 }
 
-/** The five areas of the app. Each groups related pages, shown as tabs at the top of those pages. */
+/** The six areas of the app, shown as the top menu. Each groups related pages, shown as tabs under the menu. */
 export interface Section {
-  id: 'home' | 'lessons' | 'words' | 'writing' | 'progress';
+  id: 'home' | 'ielts' | 'lessons' | 'words' | 'writing' | 'progress';
   label: string;
+  /** Shorter label for the phone tab bar. */
+  short?: string;
   /** One line under the label in the menu, so learners know what's inside. */
   hint: string;
   to: string;
@@ -24,17 +26,33 @@ export interface Section {
 export const SECTIONS: Section[] = [
   { id: 'home', label: 'Home', hint: "Today's plan", to: '/dashboard', icon: Home, tone: 'orange', match: ['/dashboard', '/onboarding'] },
   {
+    // All IELTS practice in one place, one tab per skill (Reading · Listening · Writing).
+    // Listed before Writing so /writing/guided belongs here, not to free writing.
+    id: 'ielts',
+    label: 'Luyện đề IELTS',
+    short: 'IELTS',
+    hint: 'Reading · Listening · Writing',
+    to: '/ielts/reading',
+    icon: GraduationCap,
+    tone: 'amber',
+    match: ['/ielts', '/writing/guided'],
+    tabs: [
+      { to: '/ielts/reading', label: 'Reading' },
+      { to: '/ielts/listening', label: 'Listening' },
+      { to: '/writing/guided', label: 'Writing' },
+    ],
+  },
+  {
     id: 'lessons',
     label: 'Lessons',
     hint: 'Listen & type',
     to: '/lessons',
     icon: Headphones,
     tone: 'teal',
-    match: ['/lessons', '/my-learning', '/ielts'],
+    match: ['/lessons', '/my-learning'],
     tabs: [
       { to: '/lessons', label: 'Explore' },
       { to: '/my-learning', label: 'My lessons' },
-      { to: '/ielts', label: 'IELTS tests' },
     ],
   },
   {
@@ -61,7 +79,6 @@ export const SECTIONS: Section[] = [
     match: ['/writing'],
     tabs: [
       { to: '/writing', label: 'Prompts' },
-      { to: '/writing/guided', label: 'IELTS frames' },
       { to: '/writing/mistakes', label: 'My mistakes' },
     ],
   },
@@ -87,4 +104,6 @@ export function sectionFor(pathname: string): Section | undefined {
 
 /** Pages where the learner is doing one task: no menu, nothing else competing for attention. */
 const FOCUS_ROUTES = ['/lessons/:lessonId/practice', '/level-test/:testId', '/writing/new/:taskId', '/writing/guided/frame/:typeId', '/writing/guided/:promptId', '/ielts/:testId', '/vocabulary/practice'];
-export const isFocusRoute = (pathname: string) => FOCUS_ROUTES.some((p) => matchPath(p, pathname));
+/** List pages whose path would otherwise look like a focus route (e.g. /ielts/reading vs /ielts/:testId). */
+const LIST_ROUTES = ['/ielts/reading', '/ielts/listening'];
+export const isFocusRoute = (pathname: string) => !LIST_ROUTES.includes(pathname) && FOCUS_ROUTES.some((p) => matchPath(p, pathname));

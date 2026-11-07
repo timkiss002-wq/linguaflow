@@ -125,7 +125,7 @@ describe('buildInsights — IELTS practice tests', () => {
     const few = buildInsights(empty, { habitAnalysis: false, plannedDays: 0, ielts: [r('reading', 'tfng', 'wrong'), r('reading', 'tfng', 'wrong')] });
     expect(few.filter((i) => i.area === 'ielts')).toEqual([]);
     const ins = buildInsights(empty, { habitAnalysis: false, plannedDays: 0, ielts: [...Array(4).fill(r('reading', 'tfng', 'wrong')), r('reading', 'tfng', 'correct')] });
-    expect(ins.find((i) => i.id === 'ielts-reading-tfng')).toMatchObject({ kind: 'weakness', evidence: '1 of 5 questions right', action: { href: '/ielts' } });
+    expect(ins.find((i) => i.id === 'ielts-reading-tfng')).toMatchObject({ kind: 'weakness', evidence: '1 of 5 questions right', action: { href: '/ielts/reading?type=tfng' } });
   });
   it('names a strong type and spelling / word-limit losses', () => {
     const ins = buildInsights(empty, { habitAnalysis: false, plannedDays: 0, ielts: [...Array(8).fill(r('listening', 'mcq', 'correct')), ...Array(3).fill(r('listening', 'gap', 'spelling'))] });

@@ -66,7 +66,7 @@ export default function IeltsTestPage() {
         title="Test not found"
         action={
           <Button asChild variant="outline">
-            <Link to="/ielts">IELTS tests</Link>
+            <Link to="/ielts/reading">IELTS tests</Link>
           </Button>
         }
       />
@@ -83,7 +83,7 @@ function Setup({ test }: { test: PracticeTest }) {
   const Icon = test.skill === 'reading' ? BookOpen : Headphones;
   return (
     <>
-      <PageHeader title={test.title} description={<BackLink />} />
+      <PageHeader title={test.title} description={<BackLink skill={test.skill} />} />
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader className="pb-2">
@@ -126,9 +126,9 @@ function Setup({ test }: { test: PracticeTest }) {
   );
 }
 
-function BackLink() {
+function BackLink({ skill }: { skill: PracticeTest['skill'] }) {
   return (
-    <Link to="/ielts" className="inline-flex items-center gap-1 hover:underline">
+    <Link to={`/ielts/${skill}`} className="inline-flex items-center gap-1 hover:underline">
       <ArrowLeft className="size-3.5" aria-hidden /> IELTS tests
     </Link>
   );
@@ -204,7 +204,7 @@ function Runner({ test, partIds, mode }: { test: PracticeTest; partIds: string[]
         title={test.title}
         description={
           <div className="space-y-1">
-            <BackLink />
+            <BackLink skill={test.skill} />
             <div className="flex flex-wrap gap-1.5">
               <Badge variant="outline">{parts.length === test.parts.length ? 'Cả bài' : parts[0]!.title}</Badge>
               <Badge variant={mode === 'exam' ? 'accent' : 'secondary'}>{mode === 'exam' ? 'Thi thử' : 'Luyện tập'}</Badge>
@@ -405,7 +405,7 @@ function Summary({ test, results, onReset }: { test: PracticeTest; results: Ques
               <RotateCcw className="size-4" /> Làm lại
             </Button>
             <Button asChild variant="ghost" size="sm">
-              <Link to="/ielts">Chọn bài khác</Link>
+              <Link to={`/ielts/${test.skill}`}>Chọn bài khác</Link>
             </Button>
           </div>
           <p className="text-xs text-muted-foreground">Bấm “Xem chỗ có đáp án trong bài” dưới mỗi câu để thấy câu chứa đáp án được tô màu.</p>

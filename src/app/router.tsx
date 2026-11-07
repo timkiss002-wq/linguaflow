@@ -1,5 +1,5 @@
 import { lazy, Suspense, type ReactNode } from 'react';
-import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom';
 import { FullPageSpinner } from '@/components/FullPageSpinner';
 import { GuestOnly, RequireAuth } from '@/features/auth/guards';
 import LandingPage from '@/pages/LandingPage';
@@ -61,7 +61,9 @@ export const router = createBrowserRouter([
           { path: '/lessons/:lessonId', element: page(<LessonDetailPage />) },
           { path: '/lessons/:lessonId/practice', element: page(<DictationPage />) },
           { path: '/my-learning', element: page(<MyLearningPage />) },
-          { path: '/ielts', element: page(<IeltsTestsPage />) },
+          { path: '/ielts', element: <Navigate to="/ielts/reading" replace /> },
+          { path: '/ielts/reading', element: page(<IeltsTestsPage skill="reading" />) },
+          { path: '/ielts/listening', element: page(<IeltsTestsPage skill="listening" />) },
           { path: '/ielts/:testId', element: page(<IeltsTestPage />) },
           { path: '/vocabulary', element: page(<VocabularyPage />) },
           { path: '/vocabulary/practice', element: page(<VocabularyPracticePage />) },

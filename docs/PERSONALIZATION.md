@@ -342,7 +342,7 @@ Supabase Edge Function `writing-feedback`; cách cài đặt key xem [DEPLOY.md 
 
 ## 16. W1 — viết theo khung (IELTS Task 2)
 
-Trang **Writing → IELTS frames** (`/writing/guided`), cho người chưa biết viết: học **một khung cố định cho mỗi dạng
+Trang **Luyện đề IELTS → Writing** (`/writing/guided`), cho người chưa biết viết: học **một khung cố định cho mỗi dạng
 đề**, dùng lại cho mọi đề cùng dạng, rồi dịch bài mẫu từng câu từ tiếng Việt cho đến khi tự viết được trọn bài.
 
 - **Nội dung** (`content/ielts-guided/*.json`, không cần database — nằm trong một chunk tải khi mở trang):
@@ -375,7 +375,7 @@ Trang **Writing → IELTS frames** (`/writing/guided`), cho người chưa biế
 
 ## 17. W2 — luyện đề IELTS Reading & Listening
 
-Trang **Lessons → IELTS tests** (`/ielts`). Đề do LinguaFlow tự soạn đúng format IELTS (không chép đề Cambridge).
+Trang **Luyện đề IELTS → Reading / Listening** (`/ielts/reading`, `/ielts/listening`). Đề do LinguaFlow tự soạn đúng format IELTS (không chép đề Cambridge).
 
 - **Nội dung** (`content/ielts-tests/*.json`, nằm trong app, không cần seed):
   - `reading-1`: Academic Reading, 3 bài đọc, 40 câu — True/False/Not Given, Yes/No/Not Given, matching headings,

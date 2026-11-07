@@ -53,7 +53,7 @@ export default function GuidedPracticePage() {
         title="Not found"
         action={
           <Button asChild variant="outline">
-            <Link to="/writing/guided">IELTS frames</Link>
+            <Link to="/writing/guided">IELTS Writing</Link>
           </Button>
         }
       />
@@ -81,7 +81,7 @@ function Practice({ type, prompt }: { type: GuidedType; prompt?: GuidedPrompt })
   const title = prompt ? prompt.title : `Learn the frame: ${type.name}`;
   const back = (
     <Link to="/writing/guided" className="inline-flex items-center gap-1 hover:underline">
-      <ArrowLeft className="size-3.5" aria-hidden /> IELTS frames
+      <ArrowLeft className="size-3.5" aria-hidden /> IELTS Writing
     </Link>
   );
 

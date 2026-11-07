@@ -297,7 +297,7 @@ export function buildInsights(
       const label = IELTS_TYPE_LABEL[g.key] ?? g.key;
       const base = { id: `ielts-${skill}-${g.key}`, area: 'ielts' as const, language: 'en' as const, title: `IELTS ${name}: ${label}`, evidence: `${right} of ${g.n} questions right` };
       if (g.n >= MIN.ielts && p < 60)
-        out.push({ ...base, kind: 'weakness', detail: `${p}% right — below the level needed for band 6.5. Read the explanation of every wrong answer and find the evidence in the text.`, action: { label: 'Practise', href: '/ielts' } });
+        out.push({ ...base, kind: 'weakness', detail: `${p}% right — below the level needed for band 6.5. Read the explanation of every wrong answer and find the evidence in the text.`, action: { label: 'Practise', href: `/ielts/${skill}?type=${g.key}` } });
       else if (g.n >= MIN.ielts + 3 && p >= 85) out.push({ ...base, kind: 'strength', detail: `${p}% right.` });
     }
     const form = rs.filter((r) => r.type === 'gap' && (r.mark === 'spelling' || r.mark === 'too_long')).length;
@@ -305,7 +305,7 @@ export function buildInsights(
       out.push({
         id: `ielts-${skill}-form`, kind: 'weakness', area: 'ielts', language: 'en', title: `IELTS ${name}: spelling and word limits`,
         detail: 'Answers lost to spelling or to writing more words than allowed — in the exam these are simply wrong.',
-        evidence: `${form} completion answers`, action: { label: 'Practise', href: '/ielts' },
+        evidence: `${form} completion answers`, action: { label: 'Practise', href: `/ielts/${skill}?type=gap` },
       });
   }
 
