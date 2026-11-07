@@ -20,7 +20,7 @@ import { cn } from '@/lib/utils';
  */
 
 type Status = 'all' | 'todo' | 'done';
-const TYPE_COLOR = ['bg-orange-500', 'bg-violet-500', 'bg-sky-600', 'bg-emerald-600', 'bg-rose-500', 'bg-amber-600'];
+const TYPE_COLOR = ['bg-orange-700', 'bg-violet-700', 'bg-sky-700', 'bg-emerald-700', 'bg-rose-700', 'bg-amber-700']; // 700 shades: white text passes 4.5:1
 
 export default function GuidedWritingPage() {
   const subs = useSubmissions();
@@ -101,7 +101,7 @@ export default function GuidedWritingPage() {
         <section aria-label="Đề Writing" className="min-w-0">
           <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
             <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
-              Luyện đề IELTS Writing Task {task}
+              IELTS Writing Task {task}
               <span className="ml-2 text-sm font-normal text-muted-foreground">{prompts.length} đề</span>
             </h1>
             <p className="max-w-xl text-sm text-muted-foreground">
@@ -160,7 +160,7 @@ function Steps() {
         ['AI', 'Chấm band', '4 tiêu chí + lỗi hay lặp'],
       ].map(([n, t, d]) => (
         <li key={n} className="flex gap-2">
-          <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-rose-500 text-xs font-bold text-white">{n}</span>
+          <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-rose-700 text-xs font-bold text-white">{n}</span>
           <span>
             <span className="font-medium">{t}</span>
             <span className="block text-xs text-muted-foreground">{d}</span>

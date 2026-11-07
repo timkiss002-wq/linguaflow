@@ -31,8 +31,8 @@ const FAKE_TTS = () => {
     await page.waitForURL(/dashboard/);
   };
   const signOut = async () => {
-    await page.getByRole('button', { name: 'Account menu' }).first().click();
-    await page.getByRole('menuitem', { name: 'Sign out' }).click();
+    await page.getByRole('button', { name: 'Tài khoản' }).first().click();
+    await page.getByRole('menuitem', { name: 'Đăng xuất' }).click();
     await page.waitForURL(BASE + '/');
   };
 
@@ -49,7 +49,7 @@ const FAKE_TTS = () => {
   await page.waitForURL(/dashboard/);
   const uid = sql(`select id from auth.users where email='${email}'`);
   await page.getByTestId('stat-tiles').waitFor();
-  check('dashboard: 6 tiles + goal', (await page.getByTestId('stat-tiles').locator(':scope > div').count()) === 6 && (await page.getByTestId('goal').textContent()).includes('0 / 15'));
+  check('dashboard: 3 tiles + goal', (await page.getByTestId('stat-tiles').locator(':scope > div').count()) === 3 && (await page.getByTestId('goal').textContent()).includes('0 / 15'));
 
   // ── practice to create data ──
   await page.goto(BASE + '/lessons/b0000000-0000-4000-8000-000000000301/practice');
@@ -75,9 +75,9 @@ const FAKE_TTS = () => {
   // ── dashboard ──
   await page.goto(BASE + '/dashboard');
   await page.getByTestId('goal').filter({ hasText: '15 / 15' }).waitFor();
-  check('daily goal reached', await page.getByText('Goal reached').isVisible());
+  check('daily goal reached', await page.getByText(/Đạt mục tiêu/).isVisible());
   const tiles = await page.getByTestId('stat-tiles').textContent();
-  check('tiles: study time + accuracy', tiles.includes('25m') && /Listening accuracy\s*\d+(\.\d)?%/.test(tiles), tiles.slice(0, 160));
+  check('tiles: study time', tiles.includes('25m'), tiles.slice(0, 160));
   const bars = await page.locator('.recharts-bar-rectangle path').count();
   check('study-time chart draws bars for active days', bars >= 2, `bars=${bars}`);
   await page.locator('.recharts-bar-rectangle').last().hover();
@@ -85,14 +85,14 @@ const FAKE_TTS = () => {
   check('chart tooltip on hover', await page.locator('.recharts-tooltip-wrapper').getByText(/min/).isVisible());
   await page.getByText('Show data table').first().click();
   check('data table view', (await page.locator('details table tbody tr').count()) === 7);
-  check('continue-learning card', await page.getByRole('link', { name: 'Continue' }).isVisible());
+  check('continue-learning card', await page.getByRole('link', { name: 'Học tiếp' }).isVisible());
   await page.screenshot({ path: `${SHOTS}/m7-01-dashboard.png`, fullPage: true });
   await page.getByTestId('study-switch').getByRole('radio', { name: /Tiếng Trung/ }).click();
   await page.waitForTimeout(800);
   check('studying Chinese filters tiles', (await page.getByTestId('stat-tiles').textContent()).includes('25m'));
 
   // ── statistics ──
-  await page.getByRole('link', { name: /^Progress/ }).first().click();
+  await page.getByRole('link', { name: /^Tiến độ/ }).first().click();
   await page.getByTestId('mistakes').waitFor();
   await page.waitForTimeout(800);
   const mistakes = await page.getByTestId('mistakes').textContent();

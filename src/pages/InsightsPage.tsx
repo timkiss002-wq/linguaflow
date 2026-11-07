@@ -61,8 +61,8 @@ export default function InsightsPage() {
   return (
     <>
       <PageHeader
-        title="Strengths & weaknesses"
-        description="What your answers say about your listening, characters, word forms and memory — with the evidence behind each point."
+        title="Điểm mạnh & yếu"
+        description="Câu trả lời của bạn nói gì về khả năng nghe, chữ Hán, dạng từ và trí nhớ — kèm bằng chứng cho từng nhận xét."
         actions={
           <div className="flex gap-1 rounded-md border bg-card p-1" role="group" aria-label="Range">
             {RANGES.map((r) => (

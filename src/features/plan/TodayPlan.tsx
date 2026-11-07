@@ -17,7 +17,7 @@ import { useStudyLanguage } from '@/features/study/context';
 import { usePlanInput } from './usePlanInput';
 
 const ICON: Record<PlanKind, LucideIcon> = { review: Layers, test: ClipboardCheck, practice: Dumbbell, grammar: BookOpenCheck, writing: PenLine, lesson: Headphones };
-const LANG = { en: 'English', zh: '中文' } as const;
+const LANG = { en: 'Tiếng Anh', zh: '中文' } as const;
 /** Same colours as the areas of the app: reviews are Words (violet), lessons are Lessons (teal)… */
 const KIND_TONE: Record<PlanKind, Tone> = { review: 'violet', test: 'sky', practice: 'amber', grammar: 'amber', writing: 'rose', lesson: 'teal' };
 
@@ -45,7 +45,7 @@ export function TodayPlan() {
   }, [input, plan, save]);
 
   if (progress.isError || stored.isError) {
-    return <ErrorState error={progress.error ?? stored.error} onRetry={() => (progress.refetch(), stored.refetch())} title="Could not load today's plan" />;
+    return <ErrorState error={progress.error ?? stored.error} onRetry={() => (progress.refetch(), stored.refetch())} title="Không tải được kế hoạch hôm nay" />;
   }
   if (!plan) return <Skeleton className="h-56" data-testid="plan-loading" />;
   return <PlanCard plan={plan} progress={progress.data!} />;
@@ -75,23 +75,23 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
       <CardHeader className="flex-row flex-wrap items-start justify-between gap-2 space-y-0 pb-4">
         <div className="space-y-1.5">
           <CardTitle className="flex items-center gap-2 text-xl font-bold">
-            Today's plan
-            {plan.restDay && <Badge variant="secondary">Rest day</Badge>}
+            Kế hoạch hôm nay
+            {plan.restDay && <Badge variant="secondary">Ngày nghỉ</Badge>}
           </CardTitle>
           <CardDescription data-testid="plan-summary">
-            {items.length ? `${doneCount} of ${items.length} done · about ${minutes} min` : 'Nothing planned today.'}
+            {items.length ? `Xong ${doneCount}/${items.length} · khoảng ${minutes} phút` : 'Hôm nay không có gì trong kế hoạch.'}
           </CardDescription>
-          {items.length > 0 && <Progress value={pct} className="h-2 w-48 max-w-full" label="Plan progress" />}
+          {items.length > 0 && <Progress value={pct} className="h-2 w-48 max-w-full" label="Tiến độ kế hoạch" />}
         </div>
         <Button
           variant="ghost"
           size="sm"
           disabled={rebuild.isPending}
-          title="Make a new plan from your latest data (clears today's skips)"
+          title="Lập lại kế hoạch từ dữ liệu mới nhất (xoá các mục đã bỏ qua hôm nay)"
           onClick={() => rebuild.mutate(plan.day, { onError: (e) => toast.error(toUserMessage(e)) })}
         >
           <RefreshCw className="size-3.5" aria-hidden />
-          Rebuild
+          Lập lại
         </Button>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -118,11 +118,11 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
                     <Icon className="size-5" aria-hidden />
                   </span>
                   <div className="min-w-0 flex-1 space-y-1">
-                    {isNext && <p className={cn('text-xs font-semibold uppercase tracking-wide', tone.text)}>Up next</p>}
+                    {isNext && <p className={cn('text-xs font-semibold uppercase tracking-wide', tone.text)}>Làm tiếp theo</p>}
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                       <p className={cn('font-semibold', s.skipped && 'text-muted-foreground line-through', s.done && 'text-muted-foreground')}>{item.title}</p>
                       {item.language && <Badge variant="outline">{LANG[item.language]}</Badge>}
-                      <span className="text-xs text-muted-foreground">{item.minutes} min</span>
+                      <span className="text-xs text-muted-foreground">{item.minutes} phút</span>
                     </div>
                     <p className="text-sm text-muted-foreground" data-testid="plan-reason">
                       {item.reason}
@@ -132,27 +132,27 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
                         {item.detail}
                       </p>
                     )}
-                    {auto && !s.done && s.p > 0 && <Progress value={s.p * 100} className="h-1.5 max-w-xs" label={`${item.title} progress`} />}
+                    {auto && !s.done && s.p > 0 && <Progress value={s.p * 100} className="h-1.5 max-w-xs" label={`Tiến độ: ${item.title}`} />}
                   </div>
                   <div className="flex shrink-0 flex-col items-end gap-1 sm:flex-row sm:items-center">
                     {s.done ? (
-                      <span className="text-sm font-semibold text-success">Done</span>
+                      <span className="text-sm font-semibold text-success">Xong</span>
                     ) : s.skipped ? (
                       <Button variant="ghost" size="sm" onClick={() => mark(item.key, null)}>
-                        Undo
+                        Hoàn tác
                       </Button>
                     ) : (
                       <>
                         <Button asChild size={isNext ? 'default' : 'sm'} variant={isNext ? 'default' : 'outline'} className={isNext ? `${tone.solid} shadow-none hover:opacity-90` : undefined}>
-                          <Link to={item.href}>Start</Link>
+                          <Link to={item.href}>Bắt đầu</Link>
                         </Button>
                         {!auto && (
                           <Button variant="outline" size="sm" onClick={() => mark(item.key, 'done')}>
-                            Mark done
+                            Đánh dấu xong
                           </Button>
                         )}
-                        <Button variant="ghost" size="sm" onClick={() => mark(item.key, 'skipped')} aria-label={`Skip: ${item.title}`}>
-                          Skip
+                        <Button variant="ghost" size="sm" onClick={() => mark(item.key, 'skipped')} aria-label={`Bỏ qua: ${item.title}`}>
+                          Bỏ qua
                         </Button>
                       </>
                     )}
@@ -163,7 +163,7 @@ function PlanCard({ plan, progress }: { plan: StoredPlan; progress: TodayProgres
           </ol>
         )}
         {items.length > 0 && !next && (
-          <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-medium text-success">🎉 All done for today — great work. Anything extra is a bonus.</p>
+          <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-medium text-success">🎉 Xong hết kế hoạch hôm nay — học thêm là thưởng.</p>
         )}
         {plan.notes.length > 0 && (
           <ul className="space-y-1.5 text-sm text-muted-foreground" data-testid="plan-notes">

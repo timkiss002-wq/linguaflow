@@ -34,7 +34,7 @@ export default function LessonsPage() {
 
   return (
     <>
-      <PageHeader title={lang === 'zh' ? 'Bài nghe tiếng Trung' : 'Bài nghe tiếng Anh'} description="Listening lessons read aloud sentence by sentence. Pick one at your level." />
+      <PageHeader title={lang === 'zh' ? 'Kho bài nghe tiếng Trung' : 'Kho bài nghe tiếng Anh'} description="Bài nghe được đọc từng câu để bạn chép lại. Chọn bài hợp trình độ." />
       {forYou.length > 0 && !hasActiveFilters({ ...filters, lang: undefined }) && (
         <section className="mb-8 space-y-3" aria-label="Recommended for you">
           <h2 className="text-lg font-bold">For you</h2>

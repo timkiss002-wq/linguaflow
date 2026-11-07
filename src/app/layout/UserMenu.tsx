@@ -28,7 +28,7 @@ export function UserMenu({ compact = false }: { compact?: boolean }) {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex w-full items-center gap-3 rounded-md p-2 text-left hover:bg-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" aria-label="Account menu">
+      <DropdownMenuTrigger className="flex w-full items-center gap-3 rounded-md p-2 text-left hover:bg-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" aria-label="Tài khoản">
         <Avatar>
           <AvatarFallback>{initials(name)}</AvatarFallback>
         </Avatar>
@@ -43,19 +43,19 @@ export function UserMenu({ compact = false }: { compact?: boolean }) {
         <DropdownMenuLabel className="truncate font-normal text-muted-foreground">{user.email}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem onSelect={() => navigate('/settings')}>
-          <Settings /> Settings
+          <Settings /> Cài đặt
         </DropdownMenuItem>
         {profile?.role === 'admin' && (
           <DropdownMenuItem onSelect={() => navigate('/admin')}>
-            <ShieldCheck /> Admin
+            <ShieldCheck /> Quản trị
           </DropdownMenuItem>
         )}
         <DropdownMenuSeparator />
-        <DropdownMenuLabel className="text-xs font-medium text-muted-foreground">Theme</DropdownMenuLabel>
+        <DropdownMenuLabel className="text-xs font-medium text-muted-foreground">Giao diện</DropdownMenuLabel>
         {([
-          ['light', 'Light', Sun],
-          ['dark', 'Dark', Moon],
-          ['system', 'System', Monitor],
+          ['light', 'Sáng', Sun],
+          ['dark', 'Tối', Moon],
+          ['system', 'Theo hệ thống', Monitor],
         ] as const).map(([value, label, Icon]) => (
           <DropdownMenuItem key={value} onSelect={() => setTheme(value)} className={theme === value ? 'font-semibold text-primary' : undefined}>
             <Icon /> {label}
@@ -63,7 +63,7 @@ export function UserMenu({ compact = false }: { compact?: boolean }) {
         ))}
         <DropdownMenuSeparator />
         <DropdownMenuItem onSelect={() => logout.mutate()} disabled={logout.isPending}>
-          <LogOut /> Sign out
+          <LogOut /> Đăng xuất
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

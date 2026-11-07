@@ -41,7 +41,7 @@ let browserRef;
   check('learners cannot read the question bank (answers)', asUser(uid, 'select count(*) from assessment_items') === '0');
 
   await page.goto(BASE + '/dashboard');
-  await page.locator('[data-plan-item=test-zh]').getByRole('link', { name: 'Start' }).click();
+  await page.locator('[data-plan-item=test-zh]').getByRole('link', { name: 'Bắt đầu' }).click();
   await page.waitForURL(/\/level-test$/);
   await page.getByTestId('level-zh').waitFor();
   check('hub shows only the learner\'s language', (await page.getByTestId('level-zh').count()) === 1 && (await page.getByTestId('level-en').count()) === 0);
@@ -122,8 +122,8 @@ let browserRef;
   sql(`update assessments set started_at = started_at - interval '15 days', finished_at = finished_at - interval '15 days' where id='${testId}'`);
   await page.goto(BASE + '/dashboard');
   // today's plan was made before the test: rebuild it so the check-in shows up
-  await page.getByTestId('today-plan').getByRole('button', { name: 'Rebuild' }).click();
-  await page.locator('[data-plan-item=test-zh]', { hasText: 'check-in' }).getByRole('link', { name: 'Start' }).click();
+  await page.getByTestId('today-plan').getByRole('button', { name: 'Lập lại' }).click();
+  await page.locator('[data-plan-item=test-zh]', { hasText: 'check-in' }).getByRole('link', { name: 'Bắt đầu' }).click();
   await page.getByTestId('level-zh').getByText('Check-in due').waitFor();
   await page.getByRole('button', { name: 'Check-in · 10 questions' }).click();
   await page.waitForURL(/\/level-test\/[0-9a-f-]{36}$/);

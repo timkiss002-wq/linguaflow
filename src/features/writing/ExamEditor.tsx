@@ -1,4 +1,8 @@
 import { Clock, Send, Timer } from 'lucide-react';
+import { ConfirmDialog } from '@/components/ConfirmDialog';
+import { ExamClock, ExamFrame, SplitPane } from '@/features/exam/ExamFrame';
+import { ExamSettings } from '@/features/exam/ExamSettings';
+import { useExamPrefs, type TextSize } from '@/features/exam/prefs';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -41,14 +45,14 @@ function writeExam(taskId: string, d: ExamDraft | null) {
   }
 }
 
-const clock = (s: number) => `${Math.floor(Math.max(0, s) / 60)}:${String(Math.max(0, Math.floor(s)) % 60).padStart(2, '0')}`;
+const PROMPT_SIZE: Record<TextSize, string> = { sm: 'text-sm', md: 'text-[15.5px]', lg: 'text-[17px]' };
 
 export function ExamEditor({ task }: { task: WritingTask }) {
   const EXAM_MINUTES = minutesFor(task);
   const [draft, setDraft] = useState<ExamDraft | null>(() => readExam(task.id));
   const back = (
     <Link to="/writing?lang=en" className="hover:underline">
-      ← English prompts
+      ← Đề viết tiếng Anh
     </Link>
   );
   if (!draft)
@@ -88,10 +92,11 @@ export function ExamEditor({ task }: { task: WritingTask }) {
         </Card>
       </>
     );
-  return <Writing task={task} draft={draft} back={back} />;
+  return <Writing task={task} draft={draft} />;
 }
 
-function Writing({ task, draft, back }: { task: WritingTask; draft: ExamDraft; back: React.ReactNode }) {
+/** The exam itself: prompt and chart on the left, the answer box on the right, word count bottom-left — like the computer test. */
+function Writing({ task, draft }: { task: WritingTask; draft: ExamDraft }) {
   const EXAM_MINUTES = minutesFor(task);
   const chart = guidedForTask(task.id)?.chart;
   const navigate = useNavigate();
@@ -101,7 +106,8 @@ function Writing({ task, draft, back }: { task: WritingTask; draft: ExamDraft; b
   const [now, setNow] = useState(Date.now());
   const [busy, setBusy] = useState(false);
   const submitted = useRef(false);
-  const warned = useRef<Set<number>>(new Set());
+  const [confirming, setConfirming] = useState(false);
+  const [prefs, setPrefs] = useExamPrefs();
   const limit = EXAM_MINUTES * 60;
   const elapsed = Math.min(limit, Math.floor((now - draft.startedAt) / 1000));
   const left = limit - elapsed;
@@ -116,14 +122,6 @@ function Writing({ task, draft, back }: { task: WritingTask; draft: ExamDraft; b
     const id = setTimeout(() => writeExam(task.id, { ...draft, body }), 300);
     return () => clearTimeout(id);
   }, [body, draft, task.id]);
-  useEffect(() => {
-    for (const m of [10, 5, 1])
-      if (left <= m * 60 && left > 0 && !warned.current.has(m)) {
-        warned.current.add(m);
-        toast.warning(`Còn ${m} phút`);
-      }
-  }, [left]);
-
   const submit = useCallback(
     async (auto: boolean) => {
       if (submitted.current) return;
@@ -164,58 +162,80 @@ function Writing({ task, draft, back }: { task: WritingTask; draft: ExamDraft; b
     if (timeUp) void submit(true);
   }, [timeUp, submit]);
 
+  const n = taskNumber(task);
   return (
-    <>
-      <PageHeader title={task.title} description={back} />
-      <div className="sticky top-0 z-10 -mx-4 mb-3 flex flex-wrap items-center justify-between gap-3 border-b bg-background/95 px-4 py-2 backdrop-blur">
-        <span
-          className={cn('inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-lg tabular-nums', left < 300 ? 'border-destructive text-destructive' : left < 600 ? 'border-warning text-warning' : '')}
-          data-testid="exam-timer"
-        >
-          <Clock className="size-4" aria-hidden /> {clock(left)}
-        </span>
-        <span className={cn('text-sm tabular-nums', words >= task.min_length ? 'text-success' : 'text-muted-foreground')} data-testid="length">
-          {words} / {task.min_length}+ words
-        </span>
-        <Button onClick={() => (words < task.min_length && !window.confirm(`Bài mới có ${words} từ (cần ${task.min_length}). Vẫn nộp?`) ? null : void submit(false))} disabled={busy || !body.trim()}>
-          <Send className="size-4" /> {busy ? 'Đang nộp…' : 'Nộp bài'}
-        </Button>
-      </div>
-      <Card className="mb-3">
-        <CardContent className="pt-5">
-          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-            Writing Task {taskNumber(task)} · You should spend about {EXAM_MINUTES} minutes on this task.
-          </p>
-          <p className="mt-1 font-medium" lang="en" data-testid="task-prompt">
-            {visiblePrompt(task.prompt)}
-          </p>
-          {taskNumber(task) === 2 && <p className="mt-1 text-sm text-muted-foreground">Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>}
-          <p className="mt-1 text-sm text-muted-foreground">Write at least {task.min_length} words.</p>
-          {chart && (
-            <div className="mt-3 rounded-md border p-3">
-              <TaskChart chart={chart} />
-            </div>
-          )}
-        </CardContent>
-      </Card>
-      <label htmlFor="exam-body" className="sr-only">
-        Your essay
-      </label>
-      <textarea
-        id="exam-body"
-        value={body}
-        readOnly={timeUp || busy}
-        onChange={(e) => setBody(e.target.value)}
-        rows={20}
-        maxLength={20000}
-        lang="en"
-        spellCheck={false}
-        autoCorrect="off"
-        autoCapitalize="off"
-        placeholder="Write your essay here…"
-        className="w-full rounded-md border bg-card p-4 leading-relaxed shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    <ExamFrame
+      exit={{ to: '/writing?lang=en', label: 'Thoát phòng thi (bài viết vẫn được lưu nháp, đồng hồ vẫn chạy)' }}
+      theme={prefs.theme}
+      title={`Writing Task ${n} · ${task.title}`}
+      timer={<ExamClock seconds={elapsed} limit={limit} countdown blink={prefs.blink} />}
+      actions={
+        <>
+          <ExamSettings prefs={prefs} onChange={setPrefs} help={<p>Kéo thanh giữa hai cột để đổi độ rộng. Kiểm tra chính tả của trình duyệt đã tắt, như khi thi trên máy tính.</p>} />
+          <Button size="sm" onClick={() => (words < task.min_length ? setConfirming(true) : void submit(false))} disabled={busy || !body.trim()} data-testid="exam-submit">
+            <Send className="size-4" /> {busy ? 'Đang nộp…' : 'Nộp bài'}
+          </Button>
+        </>
+      }
+      footer={
+        <p className={cn('text-sm tabular-nums', words >= task.min_length ? 'text-success' : 'text-muted-foreground')} data-testid="length" aria-live="polite">
+          Số từ: <b>{words}</b> / {task.min_length}+
+        </p>
+      }
+    >
+      <SplitPane
+        split={prefs.split}
+        onSplit={(split) => setPrefs({ split })}
+        leftLabel="Đề bài"
+        rightLabel="Bài viết"
+        left={
+          <div className={cn('space-y-3 px-7 py-6', PROMPT_SIZE[prefs.size])} lang="en">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              Writing Task {n} · You should spend about {EXAM_MINUTES} minutes on this task.
+            </p>
+            <p className="font-medium" data-testid="task-prompt">
+              {visiblePrompt(task.prompt)}
+            </p>
+            {n === 2 && <p className="text-muted-foreground">Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>}
+            <p className="text-muted-foreground">Write at least {task.min_length} words.</p>
+            {chart && (
+              <div className="rounded-md border bg-card p-3">
+                <TaskChart chart={chart} />
+              </div>
+            )}
+          </div>
+        }
+        right={
+          <div className="flex h-full flex-col p-4">
+            <label htmlFor="exam-body" className="sr-only">
+              Your essay
+            </label>
+            <textarea
+              id="exam-body"
+              value={body}
+              readOnly={timeUp || busy}
+              onChange={(e) => setBody(e.target.value)}
+              maxLength={20000}
+              lang="en"
+              spellCheck={false}
+              autoCorrect="off"
+              autoCapitalize="off"
+              autoFocus
+              placeholder="Write your essay here…"
+              className={cn('min-h-0 w-full flex-1 resize-none rounded-md border bg-card p-4 leading-relaxed shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring', PROMPT_SIZE[prefs.size])}
+            />
+          </div>
+        }
       />
-      <p className="mt-1 text-xs text-muted-foreground">Kiểm tra chính tả của trình duyệt đã tắt, như khi thi trên máy tính.</p>
-    </>
+      <ConfirmDialog
+        open={confirming}
+        onOpenChange={setConfirming}
+        title={`Bài mới có ${words} từ`}
+        description={`Đề yêu cầu ít nhất ${task.min_length} từ; bài thiếu từ bị trừ điểm Task Achievement / Response. Vẫn nộp?`}
+        confirmLabel="Vẫn nộp"
+        cancelLabel="Viết tiếp"
+        onConfirm={() => void submit(false)}
+      />
+    </ExamFrame>
   );
 }

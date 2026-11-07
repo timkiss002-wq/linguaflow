@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, CalendarCheck, Clock, Compass, Flame, Layers, PlayCircle, Shapes, Target, Trophy } from 'lucide-react';
+import { ArrowRight, BookOpen, CalendarCheck, Clock, Compass, Flame, Layers, PlayCircle, Shapes } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ErrorState } from '@/components/ErrorState';
@@ -12,19 +12,20 @@ import { useProgressMap } from '@/features/library/api';
 import { useProfile } from '@/features/profile/api';
 import { GoalsPanel } from '@/features/learner/GoalsPanel';
 import { TodayPlan } from '@/features/plan/TodayPlan';
-import { formatStudyTime, useDailyActivity, useLearningStats, type StatsLanguage } from '@/features/stats/api';
+import { useNextPlanItem } from '@/features/plan/useNextPlanItem';
+import { formatStudyTime, useDailyActivity, useLearningStats } from '@/features/stats/api';
 import { StudyTimeChart } from '@/features/stats/charts';
-import { LanguageSwitch } from '@/features/stats/LanguageSwitch';
 import { useStatsLanguage } from '@/features/stats/useStatsLanguage';
 import { cn } from '@/lib/utils';
 import { useQuery } from '@tanstack/react-query';
-import { STUDY_LABEL } from '@/features/study/context';
+import { useStudyLanguage } from '@/features/study/context';
 import { getSupabase } from '@/lib/supabase';
 
 function greeting(hour: number) {
-  if (hour < 12) return 'Good morning';
-  if (hour < 18) return 'Good afternoon';
-  return 'Good evening';
+  if (hour < 11) return 'Chào buổi sáng';
+  if (hour < 14) return 'Chào buổi trưa';
+  if (hour < 18) return 'Chào buổi chiều';
+  return 'Chào buổi tối';
 }
 
 /** The lesson studied most recently that isn't finished yet. */
@@ -64,18 +65,18 @@ function LanguageCard({ language }: { language: 'en' | 'zh' }) {
   const s = stats.data;
   return (
     <Card className="p-4">
-      <p className="font-semibold">{language === 'en' ? 'English' : '中文 Chinese'}</p>
+      <p className="font-semibold">{language === 'en' ? 'Tiếng Anh' : 'Tiếng Trung 中文'}</p>
       {!s ? (
         <Skeleton className="mt-3 h-14" />
       ) : (
         <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-          <dt className="text-muted-foreground">Study time (30d)</dt>
+          <dt className="text-muted-foreground">Thời gian học (30 ngày)</dt>
           <dd className="text-right font-medium tabular-nums">{formatStudyTime(s.period_seconds)}</dd>
-          <dt className="text-muted-foreground">Accuracy (30d)</dt>
+          <dt className="text-muted-foreground">Độ chính xác (30 ngày)</dt>
           <dd className="text-right font-medium tabular-nums">{s.avg_accuracy === null ? '—' : `${s.avg_accuracy}%`}</dd>
-          <dt className="text-muted-foreground">Words saved</dt>
+          <dt className="text-muted-foreground">Từ đã lưu</dt>
           <dd className="text-right font-medium tabular-nums">{s.words}</dd>
-          <dt className="text-muted-foreground">Lessons completed</dt>
+          <dt className="text-muted-foreground">Bài đã xong</dt>
           <dd className="text-right font-medium tabular-nums">{s.lessons_completed}</dd>
         </dl>
       )}
@@ -86,36 +87,55 @@ function LanguageCard({ language }: { language: 'en' | 'zh' }) {
 export default function DashboardPage() {
   const profile = useProfile();
   const summary = useDashboardSummary();
-  const [lang, setLang] = useStatsLanguage();
+  const [lang] = useStatsLanguage();
+  const { lang: studying } = useStudyLanguage();
   const [days, setDays] = useState<7 | 30>(7);
   const stats = useLearningStats(lang, 30);
   const activity = useDailyActivity(lang, days);
   const today = useDailyActivity(undefined, 1);
   const due = useDueToday();
+  const next = useNextPlanItem();
   const cont = useContinueLesson(lang ?? 'en');
   const s = stats.data;
   const goal = profile.data?.daily_goal_minutes ?? 15;
-  const todayMinutes = Math.floor((today.data?.[0]?.minutes ?? 0));
+  const todayMinutes = Math.floor(today.data?.[0]?.minutes ?? 0);
+  const streak = summary.data?.streak ?? 0;
 
+  // Each number appears once: streak and today's minutes live in the hero (the header chip is hidden on this page),
+  // the language being studied lives in the header switch.
   return (
     <>
-      <section className="mb-6 flex flex-col gap-5 rounded-2xl bg-gradient-to-br from-teal-700 via-teal-700 to-emerald-700 p-6 text-white shadow-lift sm:flex-row sm:items-center sm:justify-between sm:p-8 dark:from-teal-800 dark:via-teal-800 dark:to-emerald-700">
-        <div>
-          <p className="text-sm font-medium text-teal-50/90">{new Date().toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long' })}</p>
-          <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{profile.data ? `${greeting(new Date().getHours())}, ${profile.data.display_name}` : 'Dashboard'}</h1>
-          <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-0.5 text-sm font-semibold" data-testid="studying">
-            Hôm nay học: {STUDY_LABEL[lang ?? 'en'].flag} {STUDY_LABEL[lang ?? 'en'].name}
-          </p>
-          <p className="mt-1.5 text-teal-50/90">{todayMinutes >= goal ? 'Done for today 🎉 — anything more is a bonus.' : 'A little every day beats a lot once a week. Your plan is ready below.'}</p>
+      <section className="mb-6 flex flex-col gap-5 rounded-2xl bg-gradient-to-br from-teal-700 via-teal-700 to-emerald-700 p-6 text-white shadow-lift sm:flex-row sm:items-center sm:justify-between sm:p-7 dark:from-teal-800 dark:via-teal-800 dark:to-emerald-700">
+        <div className="min-w-0">
+          <p className="text-sm font-medium text-teal-50/90">{new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}</p>
+          <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{profile.data ? `${greeting(new Date().getHours())}, ${profile.data.display_name}` : 'Trang chủ'}</h1>
+          <div className="mt-4">
+            {next === 'error' ? null : next === undefined ? (
+              <Skeleton className="h-11 w-72 bg-white/20" />
+            ) : next ? (
+              <Button asChild size="lg" className="max-w-full bg-white text-teal-800 shadow-none hover:bg-teal-50" data-testid="hero-next">
+                <Link to={next.href}>
+                  <PlayCircle className="size-5" />
+                  <span className="truncate">Tiếp tục: {next.title}</span>
+                </Link>
+              </Button>
+            ) : (
+              <p className="font-medium" data-testid="hero-next">
+                Xong kế hoạch hôm nay 🎉 — học thêm là thưởng.
+              </p>
+            )}
+          </div>
         </div>
-        <div className="flex items-center gap-4 rounded-xl bg-white/15 px-4 py-3 backdrop-blur">
+        <div className="flex shrink-0 items-center gap-4 rounded-xl bg-white/15 px-4 py-3 backdrop-blur">
           <GoalRing value={todayMinutes} goal={goal} />
           <div className="text-sm">
-            <p className="text-teal-50/90">Today</p>
             <p className="text-lg font-bold tabular-nums" data-testid="goal">
-              {todayMinutes} / {goal} min
+              {todayMinutes} / {goal} phút
             </p>
-            {todayMinutes >= goal ? <p className="font-medium">Goal reached 🎉</p> : <p className="text-teal-50/90">{goal - todayMinutes} min to go</p>}
+            <p className="text-teal-50/90">{todayMinutes >= goal ? 'Đạt mục tiêu hôm nay 🎉' : `còn ${goal - todayMinutes} phút`}</p>
+            <p className="mt-1 flex items-center gap-1 font-semibold" data-testid="streak" title="Số ngày học liên tiếp">
+              <Flame className="size-4" aria-hidden /> {summary.isPending ? '…' : `Chuỗi ${streak} ngày`}
+            </p>
           </div>
         </div>
       </section>
@@ -124,22 +144,20 @@ export default function DashboardPage() {
         <TodayPlan />
       </div>
 
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-lg font-bold">Your numbers</h2>
-        <LanguageSwitch value={lang} onChange={setLang as (l: StatsLanguage) => void} />
-      </div>
       {stats.isError || summary.isError ? (
-        <ErrorState error={stats.error ?? summary.error} onRetry={() => (stats.refetch(), summary.refetch())} title="Could not load your stats" />
+        <ErrorState error={stats.error ?? summary.error} onRetry={() => (stats.refetch(), summary.refetch())} title="Không tải được số liệu" />
       ) : (
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-6" data-testid="stat-tiles">
-          <StatCard tone="orange" label="Learning streak" icon={Flame} loading={summary.isPending} value={summary.data ? `${summary.data.streak} ${summary.data.streak === 1 ? 'day' : 'days'}` : ''} />
-          <StatCard tone="teal" label="Study time" icon={Clock} loading={!s} value={s ? formatStudyTime(s.total_seconds) : ''} hint="all time" />
-          <StatCard tone="sky" label="Listening accuracy" icon={Target} loading={!s} value={s?.avg_accuracy == null ? '—' : `${s.avg_accuracy}%`} hint="last 30 days" />
-          <StatCard tone="violet" label="Words saved" icon={BookOpen} loading={!s} value={s?.words ?? 0} />
-          <StatCard tone="violet" label="Due for review" icon={CalendarCheck} loading={due === undefined} value={due ?? 0} />
-          <StatCard tone="amber" label="Lessons completed" icon={Trophy} loading={!s} value={s?.lessons_completed ?? 0} />
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4" data-testid="stat-tiles">
+          <StatCard label="Thời gian học" icon={Clock} loading={!s} value={s ? formatStudyTime(s.total_seconds) : ''} hint="từ trước tới nay" />
+          <StatCard label="Từ đã lưu" icon={BookOpen} loading={!s} value={s?.words ?? 0} />
+          <StatCard label="Thẻ cần ôn hôm nay" icon={CalendarCheck} loading={due === undefined} value={due ?? 0} />
         </div>
       )}
+      <p className="mt-2 text-right text-xs">
+        <Link to="/statistics" className="text-primary hover:underline">
+          Xem đủ thống kê (độ chính xác, bài đã xong…) →
+        </Link>
+      </p>
 
       <div className="mt-6">
         <GoalsPanel />
@@ -148,8 +166,8 @@ export default function DashboardPage() {
       <div className="mt-6 grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardHeader className="flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-base">Study time</CardTitle>
-            <div className="flex gap-1" role="group" aria-label="Range">
+            <CardTitle className="text-base">Thời gian học</CardTitle>
+            <div className="flex gap-1" role="group" aria-label="Khoảng thời gian">
               {([7, 30] as const).map((d) => (
                 <button
                   key={d}
@@ -158,7 +176,7 @@ export default function DashboardPage() {
                   onClick={() => setDays(d)}
                   className={cn('rounded px-2 py-1 text-xs font-medium', days === d ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-muted')}
                 >
-                  {d} days
+                  {d} ngày
                 </button>
               ))}
             </div>
@@ -169,26 +187,27 @@ export default function DashboardPage() {
         <div className="space-y-4">
           {cont.data && (
             <Card className="p-4">
-              <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Continue learning</p>
+              <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Học tiếp bài nghe</p>
               <p className="mt-1 font-semibold" lang={cont.data.language === 'zh' ? 'zh' : undefined}>
                 {cont.data.title?.split(' · ')[0]}
               </p>
-              <Progress className="mt-2" value={((cont.data.done ?? 0) / Math.max(1, cont.data.sentence_count ?? 1)) * 100} label="Lesson progress" />
+              <Progress className="mt-2" value={((cont.data.done ?? 0) / Math.max(1, cont.data.sentence_count ?? 1)) * 100} label="Tiến độ bài" />
               <p className="mt-1 text-xs text-muted-foreground">
-                {cont.data.done} / {cont.data.sentence_count} sentences
+                {cont.data.done} / {cont.data.sentence_count} câu
               </p>
               <Button size="sm" className="mt-3 w-full" asChild>
                 <Link to={`/lessons/${cont.data.id}/practice`}>
-                  <PlayCircle /> Continue
+                  <PlayCircle /> Học tiếp
                 </Link>
               </Button>
             </Card>
           )}
           <Card className="divide-y">
             {[
-              { to: '/review', icon: Layers, label: 'Review flashcards', extra: due ? `${due} due` : undefined },
-              { to: '/lessons', icon: Compass, label: 'Explore lessons' },
-              { to: '/word-forms', icon: Shapes, label: 'Word forms practice' },
+              { to: '/review', icon: Layers, label: 'Ôn thẻ từ', extra: due ? `${due} thẻ` : undefined },
+              { to: '/lessons', icon: Compass, label: 'Kho bài nghe' },
+              // English only: shown only while studying English, so it never switches the app's language silently
+              ...(studying === 'en' ? [{ to: '/word-forms', icon: Shapes, label: 'Luyện dạng từ' }] : []),
             ].map(({ to, icon: Icon, label, extra }) => (
               <Link key={to} to={to} className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-muted">
                 <Icon className="size-4 text-primary" />
@@ -203,7 +222,7 @@ export default function DashboardPage() {
 
       {!lang && (
         <div className="mt-6">
-          <h2 className="mb-3 text-base font-semibold">English vs Chinese</h2>
+          <h2 className="mb-3 text-base font-semibold">Tiếng Anh và tiếng Trung</h2>
           <div className="grid gap-4 sm:grid-cols-2" data-testid="language-split">
             <LanguageCard language="en" />
             <LanguageCard language="zh" />

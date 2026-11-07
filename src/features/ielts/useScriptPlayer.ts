@@ -9,13 +9,16 @@ export type PlayerState = 'idle' | 'playing' | 'paused' | 'done';
  * Reads a listening script aloud line by line, one voice per speaker (browser text-to-speech).
  * Pause stops after cancelling the current line; Play continues from that line.
  */
-export function useScriptPlayer(part: TestPart | undefined, rate: number) {
+export function useScriptPlayer(part: TestPart | undefined, rate: number, volume = 1) {
   const [state, setState] = useState<PlayerState>('idle');
   const [line, setLine] = useState(0);
   const [plays, setPlays] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const run = useRef(0);
   const at = useRef(0);
+  // read when each sentence starts, so moving the slider applies from the next sentence without restarting
+  const vol = useRef(volume);
+  vol.current = volume;
 
   const stopAll = useCallback(() => {
     run.current += 1;
@@ -68,6 +71,7 @@ export function useScriptPlayer(part: TestPart | undefined, rate: number) {
           }
           u.pitch = c?.pitch ?? 1;
           u.rate = rate;
+          u.volume = vol.current;
           u.onend = () => resolve(true);
           u.onerror = () => resolve(false);
           window.speechSynthesis.speak(u);

@@ -35,8 +35,8 @@ export default function StatisticsPage() {
   return (
     <>
       <PageHeader
-        title="Statistics"
-        description="Where your time goes, how your listening improves, and which mistakes repeat."
+        title="Thống kê"
+        description="Thời gian học đi vào đâu, khả năng nghe tiến bộ ra sao, lỗi nào hay lặp lại."
         actions={
           <>
             <LanguageSwitch value={lang} onChange={setLang as (l: StatsLanguage) => void} />

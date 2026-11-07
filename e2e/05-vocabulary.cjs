@@ -243,7 +243,7 @@ const FAKE_TTS = () => {
   await page.goto(BASE + '/dashboard');
   await page.getByTestId('stat-tiles').waitFor();
   await page.waitForTimeout(1200);
-  check('dashboard counts saved words', /Words saved\s*6/.test(await page.getByTestId('stat-tiles').textContent()));
+  check('dashboard counts saved words', /Từ đã lưu\s*6/.test(await page.getByTestId('stat-tiles').textContent()));
 
   const m = await (await browser.newContext({ viewport: { width: 390, height: 844 }, storageState: await ctx.storageState() })).newPage();
   await m.addInitScript(FAKE_TTS);

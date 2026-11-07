@@ -6,6 +6,9 @@ export interface Highlight {
   end: number;
 }
 
+/** A note sits on a highlight; key = `${paragraph}:${start}` of that highlight. */
+export const noteKey = (h: Highlight) => `${h.p}:${h.start}`;
+
 /** Add a range, merging with any it touches or overlaps in the same paragraph. */
 export function addHighlight(list: Highlight[], h: Highlight): Highlight[] {
   if (h.end <= h.start) return list;

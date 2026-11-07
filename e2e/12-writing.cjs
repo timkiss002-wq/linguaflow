@@ -39,8 +39,7 @@ const ZH = '我周末一般在家休息,有时候和朋友去公园。上个周�
   sql(`insert into vocabulary (user_id, language, term, meaning_vi) values ('${uid}', 'en', 'commute', 'đi làm'), ('${uid}', 'en', 'hobby', 'sở thích')`);
 
   // ── choose a language ──
-  await page.goto(BASE + '/dashboard');
-  await page.getByRole('link', { name: 'Writing' }).first().click();
+  await page.goto(BASE + '/writing');
   await page.getByText('Which language do you want to write in?').waitFor();
   check('starts by choosing a language', (await page.getByRole('group', { name: 'Language to write in' }).getByRole('button').count()) === 2);
   await page.getByRole('button', { name: /^English/ }).click();
@@ -113,9 +112,9 @@ const ZH = '我周末一般在家休息,有时候和朋友去公园。上个周�
   check('history lists both English texts', (await page.getByTestId('writing-history').locator('tbody tr').count()) === 2);
   const prog = sql(`begin; set local role authenticated; select set_config('request.jwt.claims', '{\"sub\":\"${uid}\",\"role\":\"authenticated\"}', true); select get_plan_progress()->>'writings'; commit;`);
   check('today\'s plan sees the writing', prog.includes('"en"') && prog.includes('"zh"'), prog);
-  page.once('dialog', (d) => d.accept());
   await page.goto(BASE + `/writing/${firstId}`);
-  await page.getByRole('button', { name: 'Delete this text' }).click();
+  await page.getByRole('button', { name: 'Xoá bài viết này' }).click();
+  await page.getByTestId('confirm').click();
   await page.waitForURL(/writing\?lang=en/);
   check('delete removes the text', sql(`select count(*) from writing_submissions where user_id='${uid}' and language='en'`) === '1');
 

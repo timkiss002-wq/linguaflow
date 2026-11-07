@@ -1,10 +1,11 @@
-import { Eraser, Highlighter } from 'lucide-react';
+import { Eraser, Highlighter, StickyNote } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import type { TextSize } from '@/features/exam/prefs';
 import type { TestPart } from '@/lib/ielts/tests';
 import { cn } from '@/lib/utils';
-import { addHighlight, evidenceRanges, removeHighlight, segment, type Highlight } from './highlights';
+import { addHighlight, evidenceRanges, noteKey, removeHighlight, segment, type Highlight } from './highlights';
 
-export type TextSize = 'sm' | 'md' | 'lg';
+export type { TextSize };
 const TEXT_SIZE: Record<TextSize, string> = {
   sm: 'text-[15px] leading-[1.8]',
   md: 'text-[17px] leading-[1.85]',
@@ -16,6 +17,9 @@ interface Props {
   highlights: Highlight[];
   onChange: (h: Highlight[]) => void;
   size: TextSize;
+  /** notes on highlights (right-click a highlight to write one) */
+  notes?: Record<string, string>;
+  onNote?: (key: string, text: string) => void;
   /** after marking: where each answer is in the text */
   evidence?: { marks: { n: number; quote: string }[]; active: number | null };
 }
@@ -40,9 +44,10 @@ interface Pending {
  * The reading passage. Select any text to highlight it (like the computer-based IELTS);
  * click a highlight to remove it. Highlights are plain character ranges, so they survive reloads.
  */
-export function Passage({ part, highlights, onChange, size, evidence }: Props) {
+export function Passage({ part, highlights, onChange, size, evidence, notes = {}, onNote }: Props) {
   const box = useRef<HTMLDivElement>(null);
   const [pending, setPending] = useState<Pending | null>(null);
+  const [editing, setEditing] = useState<{ key: string; x: number; y: number; text: string } | null>(null);
 
   const readSelection = useCallback(() => {
     const sel = window.getSelection();
@@ -71,7 +76,7 @@ export function Passage({ part, highlights, onChange, size, evidence }: Props) {
   // keyboard selection (shift + arrows) also opens the toolbar
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.shiftKey && readSelection();
-    const close = () => setPending(null);
+    const close = () => (setPending(null), setEditing(null));
     document.addEventListener('keyup', onKey);
     window.addEventListener('scroll', close, true);
     return () => {
@@ -117,21 +122,34 @@ export function Passage({ part, highlights, onChange, size, evidence }: Props) {
                       {s.text}
                     </mark>
                   );
-                if (s.user)
+                if (s.user) {
+                  const h = highlights.find((x) => x.p === i && x.start <= s.start && x.end >= s.start + s.text.length);
+                  const note = h ? notes[noteKey(h)] : undefined;
+                  const isLast = h && s.start + s.text.length >= h.end;
                   return (
                     <mark
                       key={s.start}
-                      title="Bấm để bỏ tô"
-                      onClick={() => {
-                        if (window.getSelection()?.isCollapsed === false) return;
-                        const h = highlights.find((x) => x.p === i && x.start <= s.start && x.end >= s.start + s.text.length);
-                        if (h) onChange(removeHighlight(highlights, h));
+                      title={note ? `Ghi chú: ${note}\n(Bấm để xem / sửa ghi chú)` :onNote ? 'Bấm để bỏ tô · chuột phải để ghi chú' : 'Bấm để bỏ tô'}
+                      onClick={(e) => {
+                        if (window.getSelection()?.isCollapsed === false || !h) return;
+                        // a highlight with a note opens the note, so one stray click can't lose it
+                        if (note && onNote) return setEditing({ key: noteKey(h), x: e.clientX, y: e.clientY, text: note });
+                        onChange(removeHighlight(highlights, h));
                       }}
-                      className="cursor-pointer rounded-sm bg-yellow-200 text-foreground hover:bg-yellow-300 dark:bg-yellow-400/40"
+                      onContextMenu={(e) => {
+                        if (!h || !onNote) return;
+                        e.preventDefault();
+                        setPending(null);
+                        setEditing({ key: noteKey(h), x: e.clientX, y: e.clientY, text: note ?? '' });
+                      }}
+                      className={cn('cursor-pointer rounded-sm bg-yellow-200 text-foreground hover:bg-yellow-300 dark:bg-yellow-400/40', note && 'underline decoration-sky-600 decoration-dotted decoration-2 underline-offset-4')}
+                      data-note={note ? 'true' : undefined}
                     >
                       {s.text}
+                      {note && isLast && <StickyNote className="ml-0.5 inline size-3.5 align-baseline text-sky-700 dark:text-sky-300" aria-label="Có ghi chú" />}
                     </mark>
                   );
+                }
                 return <span key={s.start}>{s.text}</span>;
               })}
             </span>
@@ -150,6 +168,50 @@ export function Passage({ part, highlights, onChange, size, evidence }: Props) {
             </button>
           )}
         </div>
+      )}
+
+      {editing && onNote && (
+        <form
+          role="dialog"
+          aria-label="Ghi chú cho chỗ đã tô"
+          className="fixed z-50 w-72 space-y-2 rounded-lg border bg-popover p-2 text-sm text-popover-foreground shadow-lg"
+          style={{ left: Math.min(editing.x, window.innerWidth - 300), top: Math.min(editing.y + 8, window.innerHeight - 170) }}
+          onSubmit={(e) => {
+            e.preventDefault();
+            onNote(editing.key, editing.text.trim());
+            setEditing(null);
+          }}
+          onKeyDown={(e) => e.key === 'Escape' && setEditing(null)}
+        >
+          <textarea
+            autoFocus
+            rows={3}
+            value={editing.text}
+            onChange={(e) => setEditing({ ...editing, text: e.target.value })}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                e.currentTarget.form?.requestSubmit();
+              }
+            }}
+            placeholder="Ghi chú (Enter để lưu)…"
+            className="w-full resize-none rounded-md border bg-card p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            data-testid="note-input"
+          />
+          <div className="flex justify-end gap-1">
+            {notes[editing.key] && (
+              <button type="button" onClick={() => (onNote(editing.key, ''), setEditing(null))} className="mr-auto rounded-md px-2 py-1 text-destructive hover:bg-muted">
+                Xoá ghi chú
+              </button>
+            )}
+            <button type="button" onClick={() => setEditing(null)} className="rounded-md px-2 py-1 hover:bg-muted">
+              Huỷ
+            </button>
+            <button type="submit" className="rounded-md bg-primary px-2.5 py-1 font-medium text-primary-foreground">
+              Lưu
+            </button>
+          </div>
+        </form>
       )}
     </div>
   );

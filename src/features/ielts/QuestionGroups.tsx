@@ -1,4 +1,4 @@
-import { Check, Search, X } from 'lucide-react';
+import { Check, Flag, Search, X } from 'lucide-react';
 import { Fragment } from 'react';
 import { NativeSelect } from '@/components/ui/native-select';
 import { optionsFor, type Mark, type Question, type QuestionGroup } from '@/lib/ielts/tests';
@@ -23,11 +23,18 @@ export function QuestionGroups({
   answers,
   onAnswer,
   review,
+  current,
+  onCurrent,
+  flagged,
 }: {
   groups: QuestionGroup[];
   answers: Record<number, string>;
   onAnswer: (n: number, value: string) => void;
   review?: Review;
+  /** the question the learner is on (shown in the bottom navigator) */
+  current?: number | null;
+  onCurrent?: (n: number) => void;
+  flagged?: Set<number>;
 }) {
   return (
     <div className="space-y-6">
@@ -55,7 +62,14 @@ export function QuestionGroups({
             {g.title && <p className="font-medium">{g.title}</p>}
             <ol className="space-y-3">
               {g.questions.map((q) => (
-                <li key={q.n} id={`q-${q.n}`} className={cn('scroll-mt-24 rounded-md', review && 'border p-3', review?.active === q.n && 'ring-2 ring-warning/60')}>
+                <li
+                  key={q.n}
+                  id={`q-${q.n}`}
+                  onFocusCapture={() => onCurrent?.(q.n)}
+                  onPointerDown={() => onCurrent?.(q.n)}
+                  className={cn('relative scroll-mt-4 rounded-md p-1.5 -m-1.5', review && 'm-0 border p-3', review?.active === q.n && 'ring-2 ring-warning/60', !review && current === q.n && 'bg-primary/5 ring-1 ring-primary/30')}
+                >
+                  {flagged?.has(q.n) && <Flag className="absolute -left-1 -top-1 size-3.5 fill-warning text-warning" aria-label="Đánh dấu xem lại" />}
                   <QuestionInput group={g} q={q} value={answers[q.n] ?? ''} onChange={(v) => onAnswer(q.n, v)} disabled={Boolean(review)} mark={review?.marks[q.n]} />
                   {review && <Feedback q={q} mark={review.marks[q.n] ?? 'empty'} onShowEvidence={() => review.onShowEvidence(q.n)} />}
                 </li>

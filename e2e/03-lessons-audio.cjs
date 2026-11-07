@@ -53,7 +53,7 @@ const FAKE_TTS = () => {
   await page.goto(BASE + '/dashboard');
   await page.waitForURL(/dashboard/);
 
-  await page.getByRole('link', { name: /^Lessons/ }).first().click();
+  await page.getByRole('link', { name: /^Bài nghe/ }).first().click();
   // the study language (top bar) defaults to English
   await page.getByText('4 lessons').waitFor();
   check('lessons list: English only → 4', true);

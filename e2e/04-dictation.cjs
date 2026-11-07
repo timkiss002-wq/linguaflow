@@ -170,7 +170,8 @@ const FAKE_TTS = () => {
   await page.getByTestId('stat-tiles').waitFor();
   await page.waitForTimeout(1200);
   const dash = await page.getByTestId('stat-tiles').textContent();
-  check('dashboard: streak 1 day + 1 completed', dash.includes('1 day') && /Lessons completed\s*1/.test(dash), dash.slice(0, 200));
+  const streak = await page.getByTestId('streak').textContent();
+  check('dashboard: streak 1 day', streak.includes('Chuỗi 1 ngày'), `${streak} · ${dash.slice(0, 120)}`);
   await page.waitForTimeout(500);
   const sess = sql(`select count(*) filter (where active_seconds > 0) || '/' || count(*) filter (where active_seconds = 0) from study_sessions where user_id='${uid}'`);
   check('study time recorded, no empty sessions left', /^[1-9]\d*\/0$/.test(sess), sess);
