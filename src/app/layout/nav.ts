@@ -47,6 +47,7 @@ export const SECTIONS: Section[] = [
     match: ['/ielts', '/writing', '/grammar'],
     tabs: [
       { to: '/ielts/reading', label: 'Reading', only: 'en' },
+      { to: '/ielts/passage3', label: 'Passage 3 hằng ngày', only: 'en' },
       { to: '/ielts/listening', label: 'Listening', only: 'en' },
       { to: '/writing/guided', label: 'Writing', only: 'en' },
       { to: '/writing', label: 'Viết tự do' },
@@ -114,7 +115,7 @@ export function sectionFor(pathname: string): Section | undefined {
 }
 
 /** Pages where the learner is doing one task: no menu, nothing else competing for attention. */
-const FOCUS_ROUTES = ['/lessons/:lessonId/practice', '/level-test/:testId', '/writing/new/:taskId', '/writing/guided/frame/:typeId', '/writing/guided/:promptId', '/ielts/:testId', '/vocabulary/practice', '/grammar/:topicId'];
+const FOCUS_ROUTES = ['/lessons/:lessonId/practice', '/level-test/:testId', '/writing/new/:taskId', '/writing/guided/frame/:typeId', '/writing/guided/:promptId', '/ielts/:testId', '/vocabulary/practice', '/grammar/:topicId', '/ielts/passage3/:setId', '/ielts/passage3/edit/:key'];
 /** List pages whose path would otherwise look like a focus route (e.g. /ielts/reading vs /ielts/:testId). */
-const LIST_ROUTES = ['/ielts/reading', '/ielts/listening'];
+const LIST_ROUTES = ['/ielts/reading', '/ielts/listening', '/ielts/passage3'];
 export const isFocusRoute = (pathname: string) => !LIST_ROUTES.includes(pathname) && FOCUS_ROUTES.some((p) => matchPath(p, pathname));

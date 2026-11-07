@@ -1,0 +1,269 @@
+{
+ "note": "Index of Reading Passage 3 in Cambridge IELTS Academic 10–20 (book, test, title). Titles only where checked against published answer guides; null = enter it when importing. Book 12 numbers its tests 5–8. No passage text is stored here: learners paste text from their own copy, and it stays on their device.",
+ "passages": [
+  {
+   "id": "cam10-t1",
+   "book": 10,
+   "test": 1,
+   "title": "The psychology of innovation"
+  },
+  {
+   "id": "cam10-t2",
+   "book": 10,
+   "test": 2,
+   "title": "Museums of fine art and their public"
+  },
+  {
+   "id": "cam10-t3",
+   "book": 10,
+   "test": 3,
+   "title": "Beyond the blue horizon"
+  },
+  {
+   "id": "cam10-t4",
+   "book": 10,
+   "test": 4,
+   "title": null
+  },
+  {
+   "id": "cam11-t1",
+   "book": 11,
+   "test": 1,
+   "title": null
+  },
+  {
+   "id": "cam11-t2",
+   "book": 11,
+   "test": 2,
+   "title": "Neuroaesthetics"
+  },
+  {
+   "id": "cam11-t3",
+   "book": 11,
+   "test": 3,
+   "title": "How the other half thinks: Adventures in mathematical reasoning"
+  },
+  {
+   "id": "cam11-t4",
+   "book": 11,
+   "test": 4,
+   "title": null
+  },
+  {
+   "id": "cam12-t5",
+   "book": 12,
+   "test": 5,
+   "title": null
+  },
+  {
+   "id": "cam12-t6",
+   "book": 12,
+   "test": 6,
+   "title": null
+  },
+  {
+   "id": "cam12-t7",
+   "book": 12,
+   "test": 7,
+   "title": "Music and the emotions"
+  },
+  {
+   "id": "cam12-t8",
+   "book": 12,
+   "test": 8,
+   "title": "UK companies need more effective boards of directors"
+  },
+  {
+   "id": "cam13-t1",
+   "book": 13,
+   "test": 1,
+   "title": null
+  },
+  {
+   "id": "cam13-t2",
+   "book": 13,
+   "test": 2,
+   "title": null
+  },
+  {
+   "id": "cam13-t3",
+   "book": 13,
+   "test": 3,
+   "title": null
+  },
+  {
+   "id": "cam13-t4",
+   "book": 13,
+   "test": 4,
+   "title": "Book Review (The Happiness Industry)"
+  },
+  {
+   "id": "cam14-t1",
+   "book": 14,
+   "test": 1,
+   "title": null
+  },
+  {
+   "id": "cam14-t2",
+   "book": 14,
+   "test": 2,
+   "title": null
+  },
+  {
+   "id": "cam14-t3",
+   "book": 14,
+   "test": 3,
+   "title": "The power of play"
+  },
+  {
+   "id": "cam14-t4",
+   "book": 14,
+   "test": 4,
+   "title": null
+  },
+  {
+   "id": "cam15-t1",
+   "book": 15,
+   "test": 1,
+   "title": "What is exploration?"
+  },
+  {
+   "id": "cam15-t2",
+   "book": 15,
+   "test": 2,
+   "title": null
+  },
+  {
+   "id": "cam15-t3",
+   "book": 15,
+   "test": 3,
+   "title": "Why fairy tales are really scary tales"
+  },
+  {
+   "id": "cam15-t4",
+   "book": 15,
+   "test": 4,
+   "title": "Environmental practices of big businesses"
+  },
+  {
+   "id": "cam16-t1",
+   "book": 16,
+   "test": 1,
+   "title": "The future of work"
+  },
+  {
+   "id": "cam16-t2",
+   "book": 16,
+   "test": 2,
+   "title": "How to make wise decisions"
+  },
+  {
+   "id": "cam16-t3",
+   "book": 16,
+   "test": 3,
+   "title": "Plant ‘thermometer’ triggers springtime growth by measuring night-time heat"
+  },
+  {
+   "id": "cam16-t4",
+   "book": 16,
+   "test": 4,
+   "title": "Attitudes towards Artificial Intelligence"
+  },
+  {
+   "id": "cam17-t1",
+   "book": 17,
+   "test": 1,
+   "title": "To catch a king"
+  },
+  {
+   "id": "cam17-t2",
+   "book": 17,
+   "test": 2,
+   "title": "Insight or evolution?"
+  },
+  {
+   "id": "cam17-t3",
+   "book": 17,
+   "test": 3,
+   "title": "Building the Skyline: The Birth and Growth of Manhattan’s Skyscrapers"
+  },
+  {
+   "id": "cam17-t4",
+   "book": 17,
+   "test": 4,
+   "title": "Timur Gareyev – blindfold chess champion"
+  },
+  {
+   "id": "cam18-t1",
+   "book": 18,
+   "test": 1,
+   "title": "Conquering Earth’s space junk problem"
+  },
+  {
+   "id": "cam18-t2",
+   "book": 18,
+   "test": 2,
+   "title": "An ideal city"
+  },
+  {
+   "id": "cam18-t3",
+   "book": 18,
+   "test": 3,
+   "title": "The case for mixed-ability classes"
+  },
+  {
+   "id": "cam18-t4",
+   "book": 18,
+   "test": 4,
+   "title": "Alfred Wegener: science, exploration and the theory of continental drift"
+  },
+  {
+   "id": "cam19-t1",
+   "book": 19,
+   "test": 1,
+   "title": "The persistence and peril of misinformation"
+  },
+  {
+   "id": "cam19-t2",
+   "book": 19,
+   "test": 2,
+   "title": "An inquiry into the existence of the gifted child"
+  },
+  {
+   "id": "cam19-t3",
+   "book": 19,
+   "test": 3,
+   "title": "Is the era of artificial speech translation upon us?"
+  },
+  {
+   "id": "cam19-t4",
+   "book": 19,
+   "test": 4,
+   "title": "The Unselfish Gene"
+  },
+  {
+   "id": "cam20-t1",
+   "book": 20,
+   "test": 1,
+   "title": null
+  },
+  {
+   "id": "cam20-t2",
+   "book": 20,
+   "test": 2,
+   "title": null
+  },
+  {
+   "id": "cam20-t3",
+   "book": 20,
+   "test": 3,
+   "title": "Robots and us"
+  },
+  {
+   "id": "cam20-t4",
+   "book": 20,
+   "test": 4,
+   "title": null
+  }
+ ]
+}

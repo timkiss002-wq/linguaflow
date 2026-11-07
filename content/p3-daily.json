@@ -1,0 +1,1965 @@
+{
+ "note": "Original IELTS Passage-3-style excerpts written for LinguaFlow. Markup: {id:text} = obvious pair (pre-highlighted), [id:text] = keyword the learner pairs, [g:____] = gap. pairs[id].p = phrase in the passage (null = not in the passage), n = which occurrence.",
+ "sets": [
+  {
+   "id": "A1",
+   "track": "A",
+   "type": "tfng",
+   "title": "The fixation on metrics",
+   "topic": "Quản lý công · đo lường hiệu suất",
+   "passage": "Few administrative habits have spread as relentlessly as the urge to quantify. Hospitals, universities and police forces are now routinely assessed through performance indicators, on the assumption that what can be counted can also be improved. The economist Charles Goodhart observed as early as 1975 that once a measure is turned into a target, it ceases to be a reliable measure, because those being assessed learn to manipulate the figures rather than the reality behind them. His warning has been largely ignored. Critics such as Jerry Muller argue that the problem is not measurement itself but the fixation on it: numerical data, they contend, are indispensable when they inform the judgement of experienced practitioners, yet corrosive when they are used to replace it. Muller concedes that metrics have occasionally exposed genuine failings, notably in surgical outcomes, where publishing mortality rates prompted some underperforming units to reform. Nevertheless, he notes that the same publication led a number of surgeons to decline high-risk patients altogether, so as to protect their statistics.",
+   "items": [
+    {
+     "stmt": "{gd:Goodhart} was the [fi:first person] to [no:notice] that [tg:targets] can [ds:distort] measurement.",
+     "pairs": {
+      "gd": {
+       "p": "Charles Goodhart"
+      },
+      "fi": {
+       "p": null,
+       "vi": "bài chỉ nói 'as early as 1975', không nói 'đầu tiên'"
+      },
+      "no": {
+       "p": "observed",
+       "vi": "nhận thấy"
+      },
+      "tg": {
+       "p": "turned into a target",
+       "vi": "bị biến thành mục tiêu"
+      },
+      "ds": {
+       "p": "ceases to be a reliable measure",
+       "vi": "không còn đáng tin = bị bóp méo"
+      }
+     },
+     "ans": "NG",
+     "explain": "Mọi ý đều khớp TRỪ 'first person'. 'As early as 1975' chỉ nói là sớm, không nói ông là người đầu tiên. Pill không có cặp → NOT GIVEN."
+    },
+    {
+     "stmt": "{gw:Goodhart's warning} has had [li:little influence].",
+     "pairs": {
+      "gw": {
+       "p": "His warning"
+      },
+      "li": {
+       "p": "largely ignored",
+       "vi": "phần lớn bị phớt lờ"
+      }
+     },
+     "ans": "T",
+     "explain": "'Largely ignored' (phần lớn bị phớt lờ) = 'little influence' (ít ảnh hưởng). Đồng nghĩa → TRUE."
+    },
+    {
+     "stmt": "{mu:Muller} believes that {nd:numerical data} should [np:play no part] in [pj:professional decision-making].",
+     "pairs": {
+      "mu": {
+       "p": "Jerry Muller"
+      },
+      "nd": {
+       "p": "numerical data"
+      },
+      "np": {
+       "p": "indispensable",
+       "vi": "không thể thiếu"
+      },
+      "pj": {
+       "p": "judgement of experienced practitioners",
+       "vi": "phán đoán của người hành nghề có kinh nghiệm"
+      }
+     },
+     "ans": "F",
+     "explain": "Muller nói dữ liệu là 'indispensable' (không thể thiếu) khi hỗ trợ phán đoán của chuyên gia. 'Play no part' (không có vai trò gì) trái nghĩa → FALSE."
+    },
+    {
+     "stmt": "According to Muller, {mt:metrics} have [nv:never revealed] [rp:real problems].",
+     "pairs": {
+      "mt": {
+       "p": "metrics"
+      },
+      "nv": {
+       "p": "occasionally exposed",
+       "vi": "đôi khi đã phơi bày"
+      },
+      "rp": {
+       "p": "genuine failings",
+       "vi": "những yếu kém thật sự"
+      }
+     },
+     "ans": "F",
+     "explain": "'Occasionally exposed' (đôi khi đã phơi bày) mâu thuẫn với 'never revealed' (chưa bao giờ). Bẫy: từ 'concedes' (thừa nhận) – Muller chấp nhận một phần điểm tốt của metrics."
+    },
+    {
+     "stmt": "{pm:Publishing mortality rates} caused some surgeons to [av:avoid treating] [dc:dangerous cases].",
+     "pairs": {
+      "pm": {
+       "p": "publishing mortality rates"
+      },
+      "av": {
+       "p": "decline",
+       "vi": "từ chối"
+      },
+      "dc": {
+       "p": "high-risk patients",
+       "vi": "bệnh nhân rủi ro cao"
+      }
+     },
+     "ans": "T",
+     "explain": "'The same publication' = việc công bố tỉ lệ tử vong. 'Decline high-risk patients' = 'avoid treating dangerous cases' → TRUE."
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "track": "B",
+   "type": "gap",
+   "title": "Rewriting the past: memory reconsolidation",
+   "topic": "Khoa học thần kinh · trí nhớ",
+   "passage": "For most of the twentieth century, neuroscientists believed that a memory, once consolidated, was stored in a more or less permanent form, much as a document is filed in an archive. Experiments conducted around the turn of the millennium challenged this view. Researchers found that when rats were prompted to recall a fearful association, the memory temporarily became unstable, and administering a drug that blocked protein synthesis at that moment could weaken it substantially. Recollection, in other words, appeared to reopen a memory for revision before it was stored again – a process now termed reconsolidation. The implications are considerable. On the one hand, the finding offers a plausible mechanism for the well-documented unreliability of eyewitness testimony, since each act of remembering creates an opportunity for distortion. On the other, it has raised hopes that traumatic memories might be deliberately modified, although clinical trials have so far produced inconsistent results, and some ethicists have questioned whether altering a person's past experience is ever desirable.",
+   "box": [
+    "fixed",
+    "vulnerable",
+    "witnesses",
+    "optimism",
+    "mixed",
+    "inaccessible",
+    "scepticism",
+    "conclusive",
+    "scientists"
+   ],
+   "items": [
+    {
+     "stmt": "Scientists once [th:thought] that a memory, after it had been {co:consolidated}, was essentially [g:____].",
+     "pairs": {
+      "th": {
+       "p": "believed",
+       "vi": "tin rằng"
+      },
+      "co": {
+       "p": "consolidated"
+      },
+      "g": {
+       "p": "permanent form",
+       "vi": "dạng vĩnh viễn"
+      }
+     },
+     "ans": 0,
+     "explain": "'Permanent form' → fixed (cố định). 'Inaccessible' (không truy cập được) sai nghĩa."
+    },
+    {
+     "stmt": "However, studies on {rt:rats} showed that [rc:remembering] a fearful event made the memory [g:____] for a [st:short period].",
+     "pairs": {
+      "rt": {
+       "p": "rats"
+      },
+      "rc": {
+       "p": "prompted to recall",
+       "vi": "được gợi để nhớ lại"
+      },
+      "st": {
+       "p": "temporarily",
+       "vi": "tạm thời"
+      },
+      "g": {
+       "p": "unstable",
+       "vi": "không ổn định"
+      }
+     },
+     "ans": 1,
+     "explain": "'Unstable' (không ổn định, dễ bị thay đổi) → vulnerable (dễ bị tổn thương/tác động)."
+    },
+    {
+     "stmt": "This process may [ex:explain] why the [ac:accounts] given by [g:____] are often [ur:inaccurate].",
+     "pairs": {
+      "ex": {
+       "p": "plausible mechanism",
+       "vi": "cơ chế hợp lý (để giải thích)"
+      },
+      "ac": {
+       "p": "testimony",
+       "vi": "lời khai"
+      },
+      "g": {
+       "p": "eyewitness",
+       "vi": "nhân chứng"
+      },
+      "ur": {
+       "p": "unreliability",
+       "vi": "sự không đáng tin"
+      }
+     },
+     "ans": 2,
+     "explain": "'Eyewitness testimony' = lời khai của nhân chứng → witnesses. 'Scientists' là bẫy (có trong bài nhưng sai chỗ)."
+    },
+    {
+     "stmt": "The research has also [en:given rise to] [g:____] that [tm:distressing memories] could be {md:deliberately modified},",
+     "pairs": {
+      "en": {
+       "p": "raised",
+       "vi": "làm dấy lên"
+      },
+      "g": {
+       "p": "hopes",
+       "vi": "hy vọng"
+      },
+      "tm": {
+       "p": "traumatic memories",
+       "vi": "ký ức sang chấn"
+      },
+      "md": {
+       "p": "deliberately modified"
+      }
+     },
+     "ans": 3,
+     "explain": "'Raised hopes' → optimism (sự lạc quan). 'Scepticism' (hoài nghi) là trái nghĩa – nghĩ đến các nhà đạo đức học nhưng đó là ý khác."
+    },
+    {
+     "stmt": "although [ts:tests on patients] have [sf:up to now] given [g:____] results.",
+     "pairs": {
+      "ts": {
+       "p": "clinical trials",
+       "vi": "thử nghiệm lâm sàng"
+      },
+      "sf": {
+       "p": "so far",
+       "vi": "cho đến nay"
+      },
+      "g": {
+       "p": "inconsistent",
+       "vi": "không nhất quán"
+      }
+     },
+     "ans": 4,
+     "explain": "'Inconsistent results' → mixed (lẫn lộn, lúc được lúc không). 'Conclusive' (có tính kết luận) là trái nghĩa."
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "track": "A",
+   "type": "mcq",
+   "title": "Why languages fall silent",
+   "topic": "Ngôn ngữ học · ngôn ngữ tuyệt chủng",
+   "passage": "Of the roughly seven thousand languages spoken today, linguists estimate that as many as half may fall silent by the end of this century. The conventional explanation attributes this decline to globalisation, yet the historical record suggests a more complicated picture. Languages have always vanished; what is unprecedented is the pace. Moreover, the decisive factor is seldom outright prohibition. Far more often, parents in minority communities voluntarily abandon their ancestral tongue, reasoning that fluency in a dominant language will secure their children's prospects. This choice, rational at the level of the individual household, produces a collective loss that no single family intended. Revitalisation efforts have yielded mixed results. Hebrew, revived as an everyday language in the late nineteenth and early twentieth centuries, is frequently cited as proof that extinction can be reversed, but its case is arguably exceptional: its revival coincided with the founding of a nation-state that had compelling ideological reasons to promote it. Communities lacking such institutional backing have generally found it far harder to persuade younger speakers that the effort is worthwhile.",
+   "items": [
+    {
+     "stmt": "What does the writer consider [un:new] about the [ls:disappearance] of languages today?",
+     "pairs": {
+      "un": {
+       "p": "unprecedented",
+       "vi": "chưa từng có"
+      },
+      "ls": {
+       "p": "vanished",
+       "vi": "biến mất"
+      }
+     },
+     "options": [
+      "the number of languages that are affected",
+      "the speed at which it is happening",
+      "the involvement of governments",
+      "the fact that it happens at all"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "speed",
+       "pace"
+      ]
+     ],
+     "explain": "'Languages have always vanished' loại D. Cái mới (unprecedented) là 'the pace' = tốc độ → B."
+    },
+    {
+     "stmt": "According to the writer, the [mc:main cause] of language decline is usually",
+     "pairs": {
+      "mc": {
+       "p": "decisive factor",
+       "vi": "yếu tố quyết định"
+      }
+     },
+     "options": [
+      "official bans on minority languages",
+      "decisions made freely by parents",
+      "a shortage of written materials",
+      "the movement of people to cities"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "made freely",
+       "voluntarily"
+      ],
+      [
+       "official bans",
+       "outright prohibition (bị phủ định bởi 'seldom')"
+      ]
+     ],
+     "explain": "'Seldom outright prohibition' loại A. 'Far more often, parents ... voluntarily abandon' → B."
+    },
+    {
+     "stmt": "What point does the writer make about the [ch:decision] taken by {pa:parents}?",
+     "pairs": {
+      "ch": {
+       "p": "This choice",
+       "vi": "lựa chọn này"
+      },
+      "pa": {
+       "p": "parents"
+      }
+     },
+     "options": [
+      "It is usually made under pressure from the authorities.",
+      "It makes sense for each family but has an effect nobody wanted.",
+      "It rarely benefits the children involved.",
+      "It is based on inaccurate information about the future."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "makes sense",
+       "rational"
+      ],
+      [
+       "each family",
+       "individual household"
+      ],
+      [
+       "nobody wanted",
+       "no single family intended"
+      ]
+     ],
+     "explain": "Câu 'rational at the level of the individual household, produces a collective loss that no single family intended' được paraphrase gần như toàn bộ trong B."
+    },
+    {
+     "stmt": "The writer refers to the [rs:restoration] of {hb:Hebrew} in order to",
+     "pairs": {
+      "rs": {
+       "p": "revived",
+       "vi": "được hồi sinh"
+      },
+      "hb": {
+       "p": "Hebrew"
+      }
+     },
+     "options": [
+      "show that any language can be saved with enough effort",
+      "suggest that a well-known example may not be typical",
+      "criticise the methods used by the state",
+      "explain why young people reject minority languages"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "well-known",
+       "frequently cited"
+      ],
+      [
+       "not typical",
+       "exceptional"
+      ]
+     ],
+     "explain": "A là quan điểm của người khác ('frequently cited as proof'); tác giả phản bác bằng 'but ... arguably exceptional' → B."
+    },
+    {
+     "stmt": "What [di:difficulty] do communities [wi:without official support] usually face?",
+     "pairs": {
+      "di": {
+       "p": "far harder",
+       "vi": "khó hơn nhiều"
+      },
+      "wi": {
+       "p": "lacking such institutional backing",
+       "vi": "thiếu sự hậu thuẫn của thể chế"
+      }
+     },
+     "options": [
+      "finding qualified teachers",
+      "competing with other minority languages",
+      "convincing the young that the effort is worthwhile",
+      "opposition from national governments"
+     ],
+     "ans": 2,
+     "para": [
+      [
+       "convincing",
+       "persuade"
+      ],
+      [
+       "the young",
+       "younger speakers"
+      ]
+     ],
+     "explain": "'Far harder to persuade younger speakers that the effort is worthwhile' → C."
+    }
+   ]
+  },
+  {
+   "id": "B2",
+   "track": "B",
+   "type": "gap",
+   "title": "Learning from nature: biomimicry",
+   "topic": "Kỹ thuật · thiết kế mô phỏng sinh học",
+   "passage": "Engineers have long borrowed ideas from nature, but the deliberate, systematic study of biological solutions – now often called biomimicry – has gained momentum only in recent decades. Its advocates point to a growing list of successes. The structure of termite mounds, which maintain a remarkably stable internal temperature without any external energy source, informed the design of an office complex in Zimbabwe that uses a fraction of the electricity consumed by conventionally cooled buildings of similar size. The microscopic texture of sharkskin, which discourages bacteria from settling, has been reproduced on hospital surfaces. Critics, however, caution against romanticising the natural world. Evolution does not produce optimal designs; it produces structures that are merely adequate for an organism's survival, and these are constrained by the materials and developmental pathways available. A bird's wing, for instance, must also serve functions irrelevant to an aircraft. The most productive approach, these critics suggest, is not to copy nature directly but to extract the underlying principle and adapt it to human requirements.",
+   "box": [
+    "methodical",
+    "commercial",
+    "power",
+    "maintenance",
+    "sufficient",
+    "perfect",
+    "materials",
+    "principle",
+    "structure"
+   ],
+   "items": [
+    {
+     "stmt": "Although engineers have {lb:long borrowed} ideas from nature, a [g:____] approach to this has [gm:become popular] [rc:only lately].",
+     "pairs": {
+      "lb": {
+       "p": "long borrowed"
+      },
+      "g": {
+       "p": "systematic",
+       "vi": "có hệ thống"
+      },
+      "gm": {
+       "p": "gained momentum",
+       "vi": "có đà phát triển"
+      },
+      "rc": {
+       "p": "only in recent decades",
+       "vi": "chỉ trong vài thập kỷ gần đây"
+      }
+     },
+     "ans": 0,
+     "explain": "'Deliberate, systematic' → methodical (có phương pháp). 'Commercial' không có trong bài."
+    },
+    {
+     "stmt": "An office building in {zb:Zimbabwe}, [ms:based on] {tm:termite mounds}, uses [fl:much less] [g:____] than [cp:comparable] buildings.",
+     "pairs": {
+      "zb": {
+       "p": "Zimbabwe"
+      },
+      "tm": {
+       "p": "termite mounds"
+      },
+      "ms": {
+       "p": "informed the design",
+       "vi": "định hướng cho thiết kế"
+      },
+      "fl": {
+       "p": "a fraction of",
+       "vi": "một phần nhỏ"
+      },
+      "g": {
+       "p": "electricity",
+       "vi": "điện"
+      },
+      "cp": {
+       "p": "of similar size",
+       "vi": "có quy mô tương tự"
+      }
+     },
+     "ans": 2,
+     "explain": "'Electricity' → power. 'Maintenance' (bảo trì) không được nhắc."
+    },
+    {
+     "stmt": "{cr:Critics} [wa:warn] that evolution creates designs that are [on:no more than] [g:____] for {sv:survival}.",
+     "pairs": {
+      "cr": {
+       "p": "Critics"
+      },
+      "wa": {
+       "p": "caution",
+       "vi": "cảnh báo"
+      },
+      "on": {
+       "p": "merely",
+       "vi": "chỉ đơn thuần"
+      },
+      "g": {
+       "p": "adequate",
+       "vi": "đủ dùng"
+      },
+      "sv": {
+       "p": "survival"
+      }
+     },
+     "ans": 4,
+     "explain": "'Merely adequate' → sufficient (vừa đủ). 'Perfect' bị phủ định bởi 'does not produce optimal designs'."
+    },
+    {
+     "stmt": "Such designs are also [lm:limited] by the [g:____] and developmental routes that are {av:available}.",
+     "pairs": {
+      "lm": {
+       "p": "constrained",
+       "vi": "bị ràng buộc"
+      },
+      "g": {
+       "p": "materials",
+       "vi": "vật liệu"
+      },
+      "av": {
+       "p": "available"
+      }
+     },
+     "ans": 6,
+     "explain": "'Constrained by the materials and developmental pathways available' → materials."
+    },
+    {
+     "stmt": "Instead of [cy:imitating] nature {di:directly}, engineers should [ex:draw out] the basic [g:____] and {ad:adapt} it.",
+     "pairs": {
+      "cy": {
+       "p": "copy",
+       "vi": "sao chép"
+      },
+      "di": {
+       "p": "directly"
+      },
+      "ex": {
+       "p": "extract",
+       "vi": "rút ra"
+      },
+      "g": {
+       "p": "underlying principle",
+       "vi": "nguyên lý cốt lõi"
+      },
+      "ad": {
+       "p": "adapt"
+      }
+     },
+     "ans": 7,
+     "explain": "'Extract the underlying principle' → principle. 'Structure' là bẫy: có trong bài nhưng ở ý khác."
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "track": "A",
+   "type": "tfng",
+   "title": "The paradox of choice revisited",
+   "topic": "Tâm lý học · hành vi người tiêu dùng",
+   "passage": "In a frequently quoted experiment conducted in a Californian supermarket, shoppers who were offered a tasting table of twenty-four varieties of jam were considerably less likely to make a purchase than those offered only six. The finding seemed to confirm an intuition that had long circulated among marketing professionals: that an abundance of options can paralyse rather than liberate. Subsequent research, however, has proved difficult to reconcile with this tidy conclusion. A meta-analysis combining the results of some fifty studies found that the average effect of increasing choice was close to zero, with some experiments reporting the opposite pattern. Researchers have since attempted to identify the circumstances under which an excess of options does become burdensome. The effect appears strongest when consumers lack clear preferences, when the alternatives are difficult to compare, and when they are under pressure to decide quickly. Such qualifications are rarely mentioned in the popular books that have turned the original study into a parable about modern life.",
+   "items": [
+    {
+     "stmt": "The results of the {jm:jam} experiment [sp:came as a surprise to] [me:people in marketing].",
+     "pairs": {
+      "jm": {
+       "p": "jam"
+      },
+      "sp": {
+       "p": "seemed to confirm",
+       "vi": "dường như xác nhận"
+      },
+      "me": {
+       "p": "marketing professionals",
+       "vi": "giới chuyên gia marketing"
+      }
+     },
+     "ans": "F",
+     "explain": "Kết quả 'confirm an intuition' (xác nhận trực giác vốn có) của dân marketing → không hề bất ngờ → FALSE."
+    },
+    {
+     "stmt": "[ls:Later studies] have [cs:consistently supported] the original finding.",
+     "pairs": {
+      "ls": {
+       "p": "Subsequent research",
+       "vi": "các nghiên cứu sau đó"
+      },
+      "cs": {
+       "p": "difficult to reconcile",
+       "vi": "khó dung hòa"
+      }
+     },
+     "ans": "F",
+     "explain": "'Difficult to reconcile with this tidy conclusion' + hiệu ứng trung bình gần bằng 0 → không ủng hộ nhất quán → FALSE."
+    },
+    {
+     "stmt": "{st:Some experiments} found that [mo:offering more options] had the [rv:reverse] effect.",
+     "pairs": {
+      "st": {
+       "p": "some experiments"
+      },
+      "mo": {
+       "p": "increasing choice",
+       "vi": "tăng lựa chọn"
+      },
+      "rv": {
+       "p": "opposite pattern",
+       "vi": "xu hướng ngược lại"
+      }
+     },
+     "ans": "T",
+     "explain": "'Some experiments reporting the opposite pattern' → TRUE."
+    },
+    {
+     "stmt": "[tc:Too much choice] is [ml:most likely] to cause difficulty when shoppers are [un:unsure what they want].",
+     "pairs": {
+      "tc": {
+       "p": "an excess of options",
+       "vi": "quá nhiều lựa chọn"
+      },
+      "ml": {
+       "p": "strongest",
+       "vi": "mạnh nhất"
+      },
+      "un": {
+       "p": "lack clear preferences",
+       "vi": "thiếu sở thích rõ ràng"
+      }
+     },
+     "ans": "T",
+     "explain": "'The effect appears strongest when consumers lack clear preferences' → TRUE."
+    },
+    {
+     "stmt": "The [rs:researchers who ran the original study] [ob:object to] the way their work has been [po:popularised].",
+     "pairs": {
+      "rs": {
+       "p": "conducted",
+       "vi": "(nghiên cứu) được tiến hành"
+      },
+      "ob": {
+       "p": null,
+       "vi": "bài không nói ý kiến của nhóm nghiên cứu gốc"
+      },
+      "po": {
+       "p": "popular books",
+       "vi": "sách phổ thông"
+      }
+     },
+     "ans": "NG",
+     "explain": "Bài phê bình các cuốn sách phổ thông, nhưng không hề nói nhóm nghiên cứu gốc phản đối → NOT GIVEN. Đừng nhầm ý của TÁC GIẢ với ý của nhân vật khác."
+    }
+   ]
+  },
+  {
+   "id": "B3",
+   "track": "B",
+   "type": "gap",
+   "title": "The ambiguous triumph of farming",
+   "topic": "Khảo cổ học · nguồn gốc nông nghiệp",
+   "passage": "The transition from foraging to farming, which began in south-west Asia roughly twelve thousand years ago, was long portrayed as a triumph of human ingenuity: once people grasped that seeds could be planted, the advantages of a settled life were supposedly so obvious that the new practice spread rapidly. Archaeological evidence now suggests a slower and more ambiguous process. Wild cereals were cultivated for well over a millennium before they display the physical changes associated with full domestication, and many communities moved back and forth between farming and foraging for generations. Nor were the benefits self-evident. Skeletal remains from early agricultural villages frequently show signs of nutritional deficiency and reduced stature compared with those of contemporary hunter-gatherers, while dense settlements encouraged the spread of infectious disease. Why, then, did farming prevail? One influential answer is that it supported higher population densities: even if individual farmers were less healthy, farming communities could simply outnumber their neighbours. Agriculture, on this view, succeeded not because it improved lives but because it multiplied them.",
+   "box": [
+    "inventiveness",
+    "curiosity",
+    "swift",
+    "gradual",
+    "malnourished",
+    "healthier",
+    "illnesses",
+    "populations",
+    "harvests"
+   ],
+   "items": [
+    {
+     "stmt": "The [sh:shift] from foraging to farming was [lp:for a long time presented] as proof of human [g:____].",
+     "pairs": {
+      "sh": {
+       "p": "transition",
+       "vi": "sự chuyển đổi"
+      },
+      "lp": {
+       "p": "long portrayed",
+       "vi": "từ lâu được miêu tả"
+      },
+      "g": {
+       "p": "ingenuity",
+       "vi": "sự khéo léo, sáng tạo"
+      }
+     },
+     "ans": 0,
+     "explain": "'Ingenuity' → inventiveness (óc sáng tạo)."
+    },
+    {
+     "stmt": "It was [as:assumed] that the new practice had {sp:spread} in a [g:____] manner.",
+     "pairs": {
+      "as": {
+       "p": "supposedly",
+       "vi": "được cho là"
+      },
+      "sp": {
+       "p": "spread",
+       "n": 1
+      },
+      "g": {
+       "p": "rapidly",
+       "vi": "nhanh chóng"
+      }
+     },
+     "ans": 2,
+     "explain": "'Spread rapidly' → swift. 'Gradual' là bẫy: đó là quan điểm MỚI ('slower'), không phải quan điểm cũ được hỏi."
+    },
+    {
+     "stmt": "However, [sk:bones found] in early farming villages suggest that people there were often [g:____] and [sm:shorter] than hunter-gatherers.",
+     "pairs": {
+      "sk": {
+       "p": "Skeletal remains",
+       "vi": "hài cốt"
+      },
+      "g": {
+       "p": "nutritional deficiency",
+       "vi": "thiếu hụt dinh dưỡng"
+      },
+      "sm": {
+       "p": "reduced stature",
+       "vi": "tầm vóc thấp hơn"
+      }
+     },
+     "ans": 4,
+     "explain": "'Nutritional deficiency' → malnourished (suy dinh dưỡng). 'Healthier' trái nghĩa."
+    },
+    {
+     "stmt": "In addition, [cr:crowded villages] helped [g:____] to {sp:spread}.",
+     "pairs": {
+      "cr": {
+       "p": "dense settlements",
+       "vi": "khu định cư đông đúc"
+      },
+      "g": {
+       "p": "infectious disease",
+       "vi": "bệnh truyền nhiễm"
+      },
+      "sp": {
+       "p": "spread",
+       "n": 2
+      }
+     },
+     "ans": 6,
+     "explain": "'Infectious disease' → illnesses."
+    },
+    {
+     "stmt": "Farming may have {pv:prevail}ed because it [ss:made possible] larger [g:____], even if {lh:individual farmers} were [hl:in poorer health].",
+     "pairs": {
+      "pv": {
+       "p": "prevail"
+      },
+      "ss": {
+       "p": "supported",
+       "vi": "hỗ trợ, nuôi được"
+      },
+      "g": {
+       "p": "higher population densities",
+       "vi": "mật độ dân số cao hơn"
+      },
+      "lh": {
+       "p": "individual farmers"
+      },
+      "hl": {
+       "p": "less healthy",
+       "vi": "kém khỏe mạnh hơn"
+      }
+     },
+     "ans": 7,
+     "explain": "'Higher population densities' / 'multiplied them' → populations. 'Harvests' (mùa màng) không được nhắc."
+    }
+   ]
+  },
+  {
+   "id": "A4",
+   "track": "A",
+   "type": "mcq",
+   "title": "A short history of peer review",
+   "topic": "Lịch sử khoa học · xuất bản học thuật",
+   "passage": "It is commonly assumed that peer review – the practice of submitting research to the scrutiny of independent experts before publication – has been a cornerstone of science since its origins. In fact, the system in its modern form is surprisingly recent. When the Royal Society began publishing its Philosophical Transactions in 1665, decisions about what to print rested largely with the editor, and for much of the following two centuries most journals operated on a similar basis. Systematic external refereeing became widespread only after the Second World War, when a dramatic expansion in the number of submissions made it impossible for editors to evaluate every manuscript themselves. Even the journal Nature did not adopt formal peer review for all its papers until the 1970s. Historians who draw attention to this chronology are not, for the most part, seeking to discredit the practice. Their point is rather that the authority now attached to it owes as much to institutional necessity as to any demonstrated ability to separate sound research from flawed.",
+   "items": [
+    {
+     "stmt": "What [mi:widespread belief] does the writer challenge at the start of the passage?",
+     "pairs": {
+      "mi": {
+       "p": "commonly assumed",
+       "vi": "thường được cho là"
+      }
+     },
+     "options": [
+      "that peer review slows down scientific progress",
+      "that peer review is as old as science itself",
+      "that early journals published very little research",
+      "that experts rarely agree with one another"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "as old as science itself",
+       "since its origins"
+      ]
+     ],
+     "explain": "'Has been a cornerstone of science since its origins' rồi bị phản bác bằng 'In fact ... surprisingly recent' → B."
+    },
+    {
+     "stmt": "In the [ey:first years] of {pt:Philosophical Transactions}, decisions about publication were made [ma:mainly] by",
+     "pairs": {
+      "ey": {
+       "p": "began publishing",
+       "vi": "bắt đầu xuất bản"
+      },
+      "pt": {
+       "p": "Philosophical Transactions"
+      },
+      "ma": {
+       "p": "largely",
+       "vi": "chủ yếu"
+      }
+     },
+     "options": [
+      "a committee of Society members",
+      "independent specialists",
+      "the editor",
+      "the authors themselves"
+     ],
+     "ans": 2,
+     "para": [
+      [
+       "mainly",
+       "largely"
+      ]
+     ],
+     "explain": "'Rested largely with the editor' → C. B (independent experts) là đặc điểm của peer review hiện đại – bẫy."
+    },
+    {
+     "stmt": "According to the writer, {er:external refereeing} [sp:became common] [af:after 1945] because",
+     "pairs": {
+      "er": {
+       "p": "external refereeing"
+      },
+      "sp": {
+       "p": "became widespread",
+       "vi": "trở nên phổ biến"
+      },
+      "af": {
+       "p": "after the Second World War",
+       "vi": "sau Thế chiến II (1945)"
+      }
+     },
+     "options": [
+      "editors could no longer assess the growing number of papers",
+      "scientists demanded fairer treatment",
+      "fraud had damaged the reputation of journals",
+      "governments made it a condition of funding"
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "growing number of papers",
+       "dramatic expansion in the number of submissions"
+      ],
+      [
+       "could no longer assess",
+       "impossible ... to evaluate"
+      ]
+     ],
+     "explain": "Lý do nằm ngay sau 'when ...' → A. Các lựa chọn khác không được nhắc."
+    },
+    {
+     "stmt": "The writer mentions {na:Nature} to show that {fp:formal peer review} was [ad:introduced]",
+     "pairs": {
+      "na": {
+       "p": "Nature"
+      },
+      "fp": {
+       "p": "formal peer review"
+      },
+      "ad": {
+       "p": "adopt",
+       "vi": "áp dụng"
+      }
+     },
+     "options": [
+      "surprisingly late, even by a leading journal",
+      "first of all by that journal",
+      "against the wishes of most scientists",
+      "less strictly there than at other journals"
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "surprisingly late",
+       "Even ... did not adopt ... until the 1970s"
+      ]
+     ],
+     "explain": "Từ 'Even' cho thấy ngay cả tạp chí hàng đầu cũng áp dụng muộn → A."
+    },
+    {
+     "stmt": "What is the [ma:main aim] of the {hi:historians} mentioned at the end?",
+     "pairs": {
+      "ma": {
+       "p": "seeking",
+       "vi": "tìm cách, nhằm"
+      },
+      "hi": {
+       "p": "Historians"
+      }
+     },
+     "options": [
+      "to show that peer review has no real value",
+      "to suggest that its prestige partly reflects practical necessity",
+      "to propose an alternative to peer review",
+      "to defend the traditional role of editors"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "prestige",
+       "authority"
+      ],
+      [
+       "practical necessity",
+       "institutional necessity"
+      ]
+     ],
+     "explain": "A bị phủ định bởi 'not ... seeking to discredit'. Ý chính: uy tín (authority) đến một phần từ nhu cầu thể chế → B."
+    }
+   ]
+  },
+  {
+   "id": "B4",
+   "track": "B",
+   "type": "gap",
+   "title": "The ironies of automation",
+   "topic": "Công nghệ · tự động hóa và con người",
+   "passage": "Automation is usually justified on the grounds that machines are less prone to error than people. Yet the introduction of automated systems frequently creates a new category of mistake. Studies of pilots, radiologists and process-plant operators have documented a tendency, known as automation bias, for human supervisors to accept a system's recommendations without adequate scrutiny, even when contradictory information is readily available. Paradoxically, the more reliable a system is, the more pronounced this tendency becomes: operators who rarely see the machine fail gradually lose the habit of checking it. A related difficulty is the erosion of manual skills. When automation does break down, it typically does so in unusual circumstances that its designers failed to anticipate – precisely the situations in which an experienced human would be most valuable, and in which a deskilled one is least capable of intervening. Some researchers therefore advocate designs that keep operators actively engaged, for example by requiring them to perform certain tasks manually at regular intervals, even at some cost to efficiency.",
+   "box": [
+    "inaccuracies",
+    "examination",
+    "training",
+    "dependable",
+    "complex",
+    "unforeseen",
+    "routine",
+    "periodically",
+    "permanently"
+   ],
+   "items": [
+    {
+     "stmt": "Automation is [jf:generally defended] on the basis that it reduces [g:____].",
+     "pairs": {
+      "jf": {
+       "p": "usually justified",
+       "vi": "thường được biện minh"
+      },
+      "g": {
+       "p": "less prone to error",
+       "vi": "ít mắc lỗi hơn"
+      }
+     },
+     "ans": 0,
+     "explain": "'Less prone to error' → giảm inaccuracies (sai sót)."
+    },
+    {
+     "stmt": "{su:Human supervisors} may {ac:accept} a system's [rc:advice] without proper [g:____].",
+     "pairs": {
+      "su": {
+       "p": "human supervisors"
+      },
+      "ac": {
+       "p": "accept"
+      },
+      "rc": {
+       "p": "recommendations",
+       "vi": "khuyến nghị"
+      },
+      "g": {
+       "p": "adequate scrutiny",
+       "vi": "sự xem xét kỹ lưỡng"
+      }
+     },
+     "ans": 1,
+     "explain": "'Scrutiny' → examination. 'Training' là bẫy: hợp ngữ pháp nhưng không có trong bài."
+    },
+    {
+     "stmt": "[pd:Strangely], this tendency becomes [wo:stronger] as systems become more [g:____].",
+     "pairs": {
+      "pd": {
+       "p": "Paradoxically",
+       "vi": "nghịch lý thay"
+      },
+      "wo": {
+       "p": "more pronounced",
+       "vi": "rõ rệt hơn"
+      },
+      "g": {
+       "p": "reliable",
+       "vi": "đáng tin cậy"
+      }
+     },
+     "ans": 3,
+     "explain": "'Reliable' → dependable. 'Complex' nghe hợp lý nhưng bài không nói."
+    },
+    {
+     "stmt": "When automation [fa:fails], it usually does so in [g:____] situations, where [ex:an experienced person] would be [mo:most useful].",
+     "pairs": {
+      "fa": {
+       "p": "break down",
+       "vi": "hỏng hóc"
+      },
+      "g": {
+       "p": "failed to anticipate",
+       "vi": "không lường trước được"
+      },
+      "ex": {
+       "p": "experienced human",
+       "vi": "người có kinh nghiệm"
+      },
+      "mo": {
+       "p": "most valuable",
+       "vi": "có giá trị nhất"
+      }
+     },
+     "ans": 5,
+     "explain": "'Unusual circumstances that its designers failed to anticipate' → unforeseen. 'Routine' trái nghĩa."
+    },
+    {
+     "stmt": "Some researchers [rc:recommend] requiring operators to carry out certain tasks [mn:by hand] [g:____].",
+     "pairs": {
+      "rc": {
+       "p": "advocate",
+       "vi": "ủng hộ, đề xuất"
+      },
+      "mn": {
+       "p": "manually",
+       "vi": "bằng tay"
+      },
+      "g": {
+       "p": "at regular intervals",
+       "vi": "định kỳ"
+      }
+     },
+     "ans": 7,
+     "explain": "'At regular intervals' → periodically. 'Permanently' sai vì chỉ là thỉnh thoảng định kỳ."
+    }
+   ]
+  },
+  {
+   "id": "A5",
+   "track": "A",
+   "type": "tfng",
+   "title": "Why new roads fill up",
+   "topic": "Quy hoạch đô thị · giao thông",
+   "passage": "For much of the twentieth century, traffic engineers approached congestion as a straightforward problem of supply: if roads were overcrowded, the remedy was to build more of them. Yet a growing body of evidence indicates that additional capacity tends to generate additional traffic. When a new lane is opened, journeys that drivers previously avoided – because they were inconvenient, or could be made by public transport – suddenly become attractive, and within a few years the road is frequently as congested as before. This phenomenon, known as induced demand, was described in outline as early as the 1930s, but it was not until the 1990s that transport departments began to take it seriously in their forecasts. The converse also seems to hold. Studies of cities where major roads have been closed, whether through deliberate policy or as a result of disasters, report that a proportion of the displaced traffic simply disappears rather than overwhelming neighbouring streets. Such findings remain counterintuitive to many motorists, and politicians have generally been reluctant to act on them.",
+   "items": [
+    {
+     "stmt": "Twentieth-century {te:traffic engineers} [rg:treated] congestion as a [cx:complicated] problem.",
+     "pairs": {
+      "te": {
+       "p": "traffic engineers"
+      },
+      "rg": {
+       "p": "approached",
+       "vi": "tiếp cận, xử lý"
+      },
+      "cx": {
+       "p": "straightforward",
+       "vi": "đơn giản"
+      }
+     },
+     "ans": "F",
+     "explain": "'Straightforward' (đơn giản) trái nghĩa với 'complicated' → FALSE."
+    },
+    {
+     "stmt": "Adding [rc:road capacity] [of:often] leads to congestion [sb:returning to its earlier level].",
+     "pairs": {
+      "rc": {
+       "p": "additional capacity",
+       "vi": "công suất bổ sung"
+      },
+      "of": {
+       "p": "frequently",
+       "vi": "thường xuyên"
+      },
+      "sb": {
+       "p": "as congested as before",
+       "vi": "tắc như trước"
+      }
+     },
+     "ans": "T",
+     "explain": "'Frequently as congested as before' → TRUE."
+    },
+    {
+     "stmt": "{id:Induced demand} was [fi:first identified] in the {ys:1990s}.",
+     "pairs": {
+      "id": {
+       "p": "induced demand"
+      },
+      "fi": {
+       "p": "described in outline",
+       "vi": "được mô tả sơ lược"
+      },
+      "ys": {
+       "p": "1990s"
+      }
+     },
+     "ans": "F",
+     "explain": "Đã được mô tả từ 1930s; 1990s chỉ là lúc được 'take seriously'. Bẫy: năm 1990s có trong bài nhưng gắn với ý khác → FALSE."
+    },
+    {
+     "stmt": "When major roads are {cl:closed}, [al:all of the traffic] moves onto [ns:nearby streets].",
+     "pairs": {
+      "cl": {
+       "p": "closed"
+      },
+      "al": {
+       "p": "a proportion",
+       "vi": "một phần"
+      },
+      "ns": {
+       "p": "neighbouring streets",
+       "vi": "các phố lân cận"
+      }
+     },
+     "ans": "F",
+     "explain": "'A proportion of the displaced traffic simply disappears rather than overwhelming neighbouring streets' → không phải tất cả → FALSE."
+    },
+    {
+     "stmt": "Closures caused by {ds:disasters} have had [ml:longer-lasting effects] than [pl:planned closures].",
+     "pairs": {
+      "ds": {
+       "p": "disasters"
+      },
+      "ml": {
+       "p": null,
+       "vi": "bài không so sánh độ bền của tác động"
+      },
+      "pl": {
+       "p": "deliberate policy",
+       "vi": "chính sách có chủ đích"
+      }
+     },
+     "ans": "NG",
+     "explain": "Bài nhắc cả hai loại đóng đường nhưng KHÔNG so sánh chúng → NOT GIVEN. Câu so sánh hơn mà bài không so sánh = dấu hiệu NG."
+    }
+   ]
+  },
+  {
+   "id": "A6",
+   "track": "A",
+   "type": "ynng",
+   "title": "In defence of boredom",
+   "topic": "Tâm lý học · quan điểm tác giả",
+   "passage": "Boredom has rarely enjoyed a good reputation. Moralists have long treated it as a symptom of idleness, and modern employers regard it chiefly as a threat to productivity. In my view, both attitudes misunderstand its function. Boredom is best understood not as an absence of stimulation but as a signal that our current activity has ceased to engage us meaningfully – in that sense it resembles pain, which is unpleasant precisely because it prompts us to act. Some psychologists have gone further, claiming that periods of tedium are a precondition for creativity. The evidence for this is suggestive rather than conclusive: laboratory studies in which participants who first completed a dull task subsequently generated more inventive ideas have proved difficult to replicate. What seems beyond dispute, however, is that the habit of reaching for a phone at the first hint of tedium deprives people of the opportunity to discover what they actually wish to do. Schools that schedule every minute of a child's day may therefore be doing more harm than good, though I would not go so far as to recommend that lessons be made deliberately monotonous.",
+   "items": [
+    {
+     "stmt": "The writer [ag:shares] the [tr:traditional view] that boredom is a sign of [la:laziness].",
+     "pairs": {
+      "ag": {
+       "p": "misunderstand",
+       "vi": "hiểu sai (tác giả không đồng tình)"
+      },
+      "tr": {
+       "p": "Moralists have long treated",
+       "vi": "các nhà đạo đức từ lâu đã coi"
+      },
+      "la": {
+       "p": "idleness",
+       "vi": "sự lười nhác"
+      }
+     },
+     "ans": "N",
+     "explain": "Tác giả nói 'both attitudes misunderstand its function' → không đồng ý với quan điểm truyền thống → NO."
+    },
+    {
+     "stmt": "The writer [cm:likens] {bo:boredom} to [ph:an unpleasant bodily feeling] that [mo:pushes us into action].",
+     "pairs": {
+      "bo": {
+       "p": "Boredom is best understood"
+      },
+      "cm": {
+       "p": "resembles",
+       "vi": "giống với"
+      },
+      "ph": {
+       "p": "pain",
+       "vi": "cơn đau"
+      },
+      "mo": {
+       "p": "prompts us to act",
+       "vi": "thúc đẩy ta hành động"
+      }
+     },
+     "ans": "Y",
+     "explain": "'It resembles pain, which is unpleasant precisely because it prompts us to act' → YES."
+    },
+    {
+     "stmt": "It has been [fp:firmly established] that boredom is [nc:necessary for] {cr:creativity}.",
+     "pairs": {
+      "fp": {
+       "p": "suggestive rather than conclusive",
+       "vi": "mang tính gợi ý chứ chưa kết luận"
+      },
+      "nc": {
+       "p": "precondition",
+       "vi": "điều kiện tiên quyết"
+      },
+      "cr": {
+       "p": "creativity"
+      }
+     },
+     "ans": "N",
+     "explain": "Bằng chứng 'suggestive rather than conclusive', thí nghiệm 'difficult to replicate' → chưa được chứng minh chắc chắn → NO."
+    },
+    {
+     "stmt": "[mo:Most] {or:schools} now [fi:fill] every minute of children's time.",
+     "pairs": {
+      "or": {
+       "p": "Schools"
+      },
+      "mo": {
+       "p": null,
+       "vi": "bài không nói 'phần lớn' trường học"
+      },
+      "fi": {
+       "p": "schedule every minute",
+       "vi": "lên lịch kín từng phút"
+      }
+     },
+     "ans": "NG",
+     "explain": "Tác giả chỉ nói về 'Schools that schedule every minute' (những trường làm vậy), không nói bao nhiêu trường làm vậy → NOT GIVEN."
+    },
+    {
+     "stmt": "The writer [re:advises] that lessons should be made [db:intentionally dull].",
+     "pairs": {
+      "re": {
+       "p": "recommend",
+       "vi": "khuyến nghị"
+      },
+      "db": {
+       "p": "deliberately monotonous",
+       "vi": "cố tình đơn điệu"
+      }
+     },
+     "ans": "N",
+     "explain": "'I would not go so far as to recommend...' = tác giả KHÔNG khuyên như vậy → NO. Bẫy: từ 'recommend' có trong bài nhưng bị phủ định."
+    }
+   ]
+  },
+  {
+   "id": "B5",
+   "track": "B",
+   "type": "gap",
+   "title": "The problem of the last mile",
+   "topic": "Logistics · giao hàng chặng cuối",
+   "passage": "In freight logistics, the final stage of a journey – the movement of goods from a local depot to the customer's door – is notoriously the most expensive. Industry estimates commonly attribute more than half of total delivery costs to this 'last mile', largely because vehicles must make numerous small drops along unpredictable routes, often failing to find anyone at home. The rapid expansion of online retail has intensified the problem, while also generating congestion and emissions in residential streets that were never designed for heavy commercial traffic. Firms have experimented with a variety of remedies. Parcel lockers, located at stations and supermarkets, allow customers to collect items at their convenience and enable couriers to consolidate dozens of deliveries into a single stop. Some cities have established micro-hubs from which cargo bicycles complete the final leg, an approach that appears particularly effective in dense historic centres. Autonomous delivery robots have attracted considerable publicity, but their deployment remains confined to small trials, partly because regulators are uncertain how they should share pavements with pedestrians.",
+   "box": [
+    "costliest",
+    "slowest",
+    "recipients",
+    "couriers",
+    "pollution",
+    "noise",
+    "convenient",
+    "experiments",
+    "factories"
+   ],
+   "items": [
+    {
+     "stmt": "The {fs:final stage} of delivery is [kn:well known] to be the [g:____] part of the journey.",
+     "pairs": {
+      "fs": {
+       "p": "final stage"
+      },
+      "kn": {
+       "p": "notoriously",
+       "vi": "nổi tiếng là (theo nghĩa xấu)"
+      },
+      "g": {
+       "p": "most expensive",
+       "vi": "đắt nhất"
+      }
+     },
+     "ans": 0,
+     "explain": "'Most expensive' → costliest. 'Slowest' không được nhắc."
+    },
+    {
+     "stmt": "This is [ma:mainly] because drivers make [nu:many small stops] and [of:frequently] discover that [g:____] are not at home.",
+     "pairs": {
+      "ma": {
+       "p": "largely because",
+       "vi": "phần lớn là vì"
+      },
+      "nu": {
+       "p": "numerous small drops",
+       "vi": "nhiều điểm giao nhỏ"
+      },
+      "of": {
+       "p": "often",
+       "vi": "thường xuyên"
+      },
+      "g": {
+       "p": "anyone at home",
+       "vi": "(không có) ai ở nhà = người nhận"
+      }
+     },
+     "ans": 2,
+     "explain": "Người không có nhà là người nhận hàng → recipients. 'Couriers' (người giao) là bẫy."
+    },
+    {
+     "stmt": "The [gr:growth] of [on:internet shopping] has made the problem worse and [br:brought] more [g:____] to residential streets.",
+     "pairs": {
+      "gr": {
+       "p": "rapid expansion",
+       "vi": "sự mở rộng nhanh"
+      },
+      "on": {
+       "p": "online retail",
+       "vi": "bán lẻ trực tuyến"
+      },
+      "br": {
+       "p": "generating",
+       "vi": "tạo ra"
+      },
+      "g": {
+       "p": "emissions",
+       "vi": "khí thải"
+      }
+     },
+     "ans": 4,
+     "explain": "'Emissions' (khí thải) → pollution. 'Noise' không có trong bài."
+    },
+    {
+     "stmt": "{pl:Parcel lockers} let couriers [co:combine] many deliveries, while customers can [pi:pick up] items whenever it is [g:____] for them.",
+     "pairs": {
+      "pl": {
+       "p": "Parcel lockers"
+      },
+      "co": {
+       "p": "consolidate",
+       "vi": "gộp lại"
+      },
+      "pi": {
+       "p": "collect",
+       "vi": "nhận, lấy"
+      },
+      "g": {
+       "p": "at their convenience",
+       "vi": "lúc thuận tiện"
+      }
+     },
+     "ans": 6,
+     "explain": "'At their convenience' → convenient."
+    },
+    {
+     "stmt": "[db:Self-driving delivery machines] are still only used in [g:____], partly because the [au:authorities] are unsure about the rules.",
+     "pairs": {
+      "db": {
+       "p": "Autonomous delivery robots",
+       "vi": "robot giao hàng tự hành"
+      },
+      "g": {
+       "p": "small trials",
+       "vi": "thử nghiệm nhỏ"
+      },
+      "au": {
+       "p": "regulators",
+       "vi": "cơ quan quản lý"
+      }
+     },
+     "ans": 7,
+     "explain": "'Confined to small trials' → experiments."
+    }
+   ]
+  },
+  {
+   "id": "A7",
+   "track": "A",
+   "type": "mcq",
+   "title": "Science by the crowd",
+   "topic": "Khoa học · citizen science",
+   "passage": "Over the past two decades, so-called citizen science – research in which members of the public collect or analyse data – has grown from a curiosity into a significant contributor to several disciplines. Amateur birdwatchers now supply much of the information used to track changes in bird populations, and online volunteers have classified millions of galaxy images that professional astronomers could never have examined unaided. Sceptics initially questioned the reliability of such data, arguing that untrained observers would inevitably make errors. Studies comparing volunteer and expert classifications have largely allayed these fears, provided that tasks are clearly defined and each item is examined by several participants, so that individual mistakes cancel one another out. A subtler concern is that projects tend to recruit from a narrow demographic: participants are disproportionately well educated and affluent, which may skew both the questions that are asked and the locations from which data are gathered. Proponents argue that the greatest benefit of citizen science may lie not in the data at all but in the scientific literacy it fosters, though this claim has so far received little systematic investigation.",
+   "items": [
+    {
+     "stmt": "What does the writer say about the [dv:development] of {cs:citizen science}?",
+     "pairs": {
+      "cs": {
+       "p": "citizen science"
+      },
+      "dv": {
+       "p": "grown from a curiosity",
+       "vi": "phát triển từ một thứ lạ lẫm"
+      }
+     },
+     "options": [
+      "It has become an important part of some fields of research.",
+      "It was originally designed to help astronomers.",
+      "It has replaced professional data collection.",
+      "It has become less popular in recent years."
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "important part",
+       "significant contributor"
+      ],
+      [
+       "fields of research",
+       "disciplines"
+      ]
+     ],
+     "explain": "'Grown from a curiosity into a significant contributor to several disciplines' → A. C sai vì bài không nói thay thế chuyên gia."
+    },
+    {
+     "stmt": "The example of {gi:galaxy images} shows that volunteers can [ha:deal with] tasks that are",
+     "pairs": {
+      "gi": {
+       "p": "galaxy images"
+      },
+      "ha": {
+       "p": "classified",
+       "vi": "đã phân loại"
+      }
+     },
+     "options": [
+      "too large for professionals to complete alone",
+      "too complicated for computers",
+      "unpopular with expert astronomers",
+      "less reliable than birdwatching"
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "too large for professionals to complete alone",
+       "professional astronomers could never have examined unaided"
+      ]
+     ],
+     "explain": "'Unaided' = không có trợ giúp. Chuyên gia không thể tự làm hết hàng triệu ảnh → A."
+    },
+    {
+     "stmt": "According to the writer, [er:errors] made by volunteers are [mi:reduced] when",
+     "pairs": {
+      "er": {
+       "p": "mistakes",
+       "vi": "lỗi"
+      },
+      "mi": {
+       "p": "cancel one another out",
+       "vi": "triệt tiêu lẫn nhau"
+      }
+     },
+     "options": [
+      "volunteers receive formal training",
+      "several people check each item",
+      "experts review all the results",
+      "tasks are kept very short"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "several people check each item",
+       "each item is examined by several participants"
+      ]
+     ],
+     "explain": "Điều kiện là 'each item is examined by several participants' → B. A là bẫy: bài nói 'untrained observers' nhưng không đề xuất đào tạo."
+    },
+    {
+     "stmt": "What [pr:problem] does the writer identify with the [pa:people who take part]?",
+     "pairs": {
+      "pr": {
+       "p": "subtler concern",
+       "vi": "mối lo tinh tế hơn"
+      },
+      "pa": {
+       "p": "participants are",
+       "vi": "người tham gia"
+      }
+     },
+     "options": [
+      "They quickly lose interest.",
+      "They come from a limited range of backgrounds.",
+      "They often live far from research sites.",
+      "They prefer to work on their own."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "limited range of backgrounds",
+       "narrow demographic"
+      ]
+     ],
+     "explain": "'Recruit from a narrow demographic ... disproportionately well educated and affluent' → B."
+    },
+    {
+     "stmt": "What does the writer say about the [cl:claim] that citizen science [im:develops] [sl:public understanding of science]?",
+     "pairs": {
+      "cl": {
+       "p": "Proponents argue",
+       "vi": "những người ủng hộ cho rằng"
+      },
+      "im": {
+       "p": "fosters",
+       "vi": "nuôi dưỡng, thúc đẩy"
+      },
+      "sl": {
+       "p": "scientific literacy",
+       "vi": "hiểu biết khoa học"
+      }
+     },
+     "options": [
+      "It has been confirmed by recent studies.",
+      "It has not yet been properly tested.",
+      "It is rejected by most scientists.",
+      "It applies only to well-educated participants."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "not yet been properly tested",
+       "received little systematic investigation"
+      ]
+     ],
+     "explain": "'This claim has so far received little systematic investigation' → B."
+    }
+   ]
+  },
+  {
+   "id": "B6",
+   "track": "B",
+   "type": "gap",
+   "title": "What happens to memories at night",
+   "topic": "Khoa học thần kinh · giấc ngủ",
+   "passage": "Scientists have long suspected that sleep plays a role in memory, but only recently have they begun to understand the mechanism. During deep, slow-wave sleep, the hippocampus – a structure that temporarily stores new experiences – appears to replay the day's events, transferring them to the cortex, where they are integrated with existing knowledge. Experiments in which volunteers learned word pairs before either sleeping or remaining awake have repeatedly found that those who slept recalled more the following morning. Intriguingly, sleep does not merely preserve memories; it seems to reorganise them. In one well-known study, participants who slept were more than twice as likely as those who stayed awake to discover a hidden rule that simplified a numerical task. Such findings have practical implications. Students who sacrifice sleep to revise late into the night may undermine the very learning they are trying to secure, and shift workers, whose sleep is frequently disrupted, may be at a particular disadvantage when acquiring new skills.",
+   "box": [
+    "process",
+    "location",
+    "combined",
+    "compared",
+    "retention",
+    "attention",
+    "pattern",
+    "damage",
+    "improve"
+   ],
+   "items": [
+    {
+     "stmt": "Scientists have {su:long suspected} a link between sleep and memory, but the [g:____] [in:behind it] has [on:only lately] become clearer.",
+     "pairs": {
+      "su": {
+       "p": "long suspected"
+      },
+      "g": {
+       "p": "mechanism",
+       "vi": "cơ chế"
+      },
+      "in": {
+       "p": "understand",
+       "vi": "hiểu (cơ chế)"
+      },
+      "on": {
+       "p": "only recently",
+       "vi": "chỉ gần đây"
+      }
+     },
+     "ans": 0,
+     "explain": "'Mechanism' (cơ chế) → process. 'Location' sai nghĩa."
+    },
+    {
+     "stmt": "During [ds:the deepest kind of sleep], the hippocampus, which holds new experiences [te:for a short time], {rp:replay}s them so they can be [g:____] with existing knowledge.",
+     "pairs": {
+      "ds": {
+       "p": "slow-wave sleep",
+       "vi": "giấc ngủ sóng chậm (ngủ sâu)"
+      },
+      "te": {
+       "p": "temporarily",
+       "vi": "tạm thời"
+      },
+      "rp": {
+       "p": "replay"
+      },
+      "g": {
+       "p": "integrated",
+       "vi": "tích hợp"
+      }
+     },
+     "ans": 2,
+     "explain": "'Integrated with existing knowledge' → combined. 'Compared' là bẫy về nghĩa."
+    },
+    {
+     "stmt": "Volunteers who slept after learning {wp:word pairs} showed better [g:____] [nm:the next day].",
+     "pairs": {
+      "wp": {
+       "p": "word pairs"
+      },
+      "g": {
+       "p": "recalled more",
+       "vi": "nhớ lại được nhiều hơn"
+      },
+      "nm": {
+       "p": "the following morning",
+       "vi": "sáng hôm sau"
+      }
+     },
+     "ans": 4,
+     "explain": "'Recalled more' → khả năng ghi nhớ tốt hơn = retention. 'Attention' (sự chú ý) không phải ý của bài."
+    },
+    {
+     "stmt": "Sleep also seems to [re:restructure] memories: sleepers were far more likely to [fi:notice] a concealed [g:____] that made a task easier.",
+     "pairs": {
+      "re": {
+       "p": "reorganise",
+       "vi": "sắp xếp lại"
+      },
+      "fi": {
+       "p": "discover",
+       "vi": "phát hiện"
+      },
+      "g": {
+       "p": "hidden rule",
+       "vi": "quy luật ẩn"
+      }
+     },
+     "ans": 6,
+     "explain": "'Hidden rule' → một quy luật/khuôn mẫu = pattern."
+    },
+    {
+     "stmt": "{st:Students} who [sa:give up] sleep in order to [rv:study] may [g:____] their own learning.",
+     "pairs": {
+      "st": {
+       "p": "Students"
+      },
+      "sa": {
+       "p": "sacrifice",
+       "vi": "hy sinh"
+      },
+      "rv": {
+       "p": "revise",
+       "vi": "ôn bài"
+      },
+      "g": {
+       "p": "undermine",
+       "vi": "làm suy yếu"
+      }
+     },
+     "ans": 7,
+     "explain": "'Undermine' → damage. 'Improve' trái nghĩa."
+    }
+   ]
+  },
+  {
+   "id": "A8",
+   "track": "A",
+   "type": "tfng",
+   "title": "The box that changed trade",
+   "topic": "Logistics · lịch sử container",
+   "passage": "Before the 1950s, loading a cargo ship was a slow and labour-intensive business. Goods arrived at the docks in sacks, barrels and crates of every size, and gangs of dockworkers stowed them by hand, a process that could keep a vessel in port for a week or more. The American trucking entrepreneur Malcom McLean is generally credited with demonstrating that standardised steel boxes, which could be lifted directly from lorry to ship, would transform this process. His first converted tanker sailed from Newark to Houston in 1956. The economic consequences were not immediate. Ports had to be rebuilt with specialised cranes and vast storage areas, and dockworkers' unions, fearing mass redundancies, resisted the change for years. Only after international standards for container dimensions were agreed in the late 1960s did the system begin to spread worldwide. Economists still disagree about how much of the subsequent growth in world trade can be attributed to containerisation, but one widely cited study concluded that its effect was larger than that of all trade agreements of the period combined.",
+   "items": [
+    {
+     "stmt": "Before containers, loading could [kp:keep a ship] in port for [mt:seven days or longer].",
+     "pairs": {
+      "kp": {
+       "p": "keep a vessel",
+       "vi": "giữ một con tàu"
+      },
+      "mt": {
+       "p": "a week or more",
+       "vi": "một tuần hoặc hơn"
+      }
+     },
+     "ans": "T",
+     "explain": "'A week or more' = seven days or longer → TRUE."
+    },
+    {
+     "stmt": "{mm:McLean} was the [fi:first person] to [pr:suggest] carrying goods in [sb:boxes of a standard size].",
+     "pairs": {
+      "mm": {
+       "p": "Malcom McLean"
+      },
+      "fi": {
+       "p": null,
+       "vi": "bài chỉ nói ông 'được ghi nhận' đã chứng minh, không nói đầu tiên đề xuất"
+      },
+      "pr": {
+       "p": "demonstrating",
+       "vi": "chứng minh"
+      },
+      "sb": {
+       "p": "standardised steel boxes",
+       "vi": "thùng thép tiêu chuẩn hóa"
+      }
+     },
+     "ans": "NG",
+     "explain": "'Generally credited with demonstrating' ≠ 'first to suggest'. Bài không nói ai là người đề xuất đầu tiên → NOT GIVEN."
+    },
+    {
+     "stmt": "The [ec:financial benefits] of containers were [fe:felt straight away].",
+     "pairs": {
+      "ec": {
+       "p": "economic consequences",
+       "vi": "hệ quả kinh tế"
+      },
+      "fe": {
+       "p": "not immediate",
+       "vi": "không tức thì"
+      }
+     },
+     "ans": "F",
+     "explain": "'The economic consequences were not immediate' → FALSE."
+    },
+    {
+     "stmt": "Dockworkers' {un:unions} [op:opposed] containers because they were [wo:afraid of large-scale job losses].",
+     "pairs": {
+      "un": {
+       "p": "unions"
+      },
+      "op": {
+       "p": "resisted",
+       "vi": "chống lại"
+      },
+      "wo": {
+       "p": "fearing mass redundancies",
+       "vi": "lo sợ sa thải hàng loạt"
+      }
+     },
+     "ans": "T",
+     "explain": "'Fearing mass redundancies, resisted the change' → TRUE. 'Redundancy' = mất việc do cắt giảm (từ uncommon cần nhớ)."
+    },
+    {
+     "stmt": "Economists [ag:are in agreement] about how far containers [co:were responsible for] the [gr:expansion of global trade].",
+     "pairs": {
+      "ag": {
+       "p": "disagree",
+       "vi": "bất đồng"
+      },
+      "co": {
+       "p": "attributed to",
+       "vi": "được quy cho"
+      },
+      "gr": {
+       "p": "growth in world trade",
+       "vi": "tăng trưởng thương mại thế giới"
+      }
+     },
+     "ans": "F",
+     "explain": "'Economists still disagree' → FALSE."
+    }
+   ]
+  },
+  {
+   "id": "B7",
+   "track": "B",
+   "type": "gap",
+   "title": "A second life for batteries",
+   "topic": "Công nghệ · tái chế pin lithium",
+   "passage": "As electric vehicles multiply, attention is turning to what will happen to their batteries once they reach the end of their useful lives. Lithium-ion batteries contain valuable metals such as cobalt, nickel and lithium, yet at present only a modest proportion are recycled, in part because their designs vary so widely between manufacturers that disassembly cannot easily be automated. The two dominant recovery methods each involve compromises. Pyrometallurgy, which smelts batteries at high temperatures, is robust and tolerant of mixed inputs, but it consumes large amounts of energy and loses much of the lithium. Hydrometallurgy, which dissolves the materials in chemical solutions, recovers a wider range of metals but generates liquid waste that must be carefully treated. A third option, known as direct recycling, attempts to restore the cathode material without breaking it down into its constituent elements; it promises substantial savings but remains largely confined to the laboratory. Many analysts argue that the most effective intervention would be regulatory: requiring manufacturers to standardise designs and label battery chemistry clearly would make every recycling method cheaper.",
+   "box": [
+    "mechanise",
+    "prohibit",
+    "power",
+    "water",
+    "effluent",
+    "profit",
+    "experimental",
+    "widespread",
+    "identification"
+   ],
+   "items": [
+    {
+     "stmt": "Only a [sm:small share] of batteries are recycled, [pa:partly] because [va:large differences] in design make it hard to [g:____] taking them apart.",
+     "pairs": {
+      "sm": {
+       "p": "modest proportion",
+       "vi": "tỷ lệ khiêm tốn"
+      },
+      "pa": {
+       "p": "in part",
+       "vi": "một phần"
+      },
+      "va": {
+       "p": "vary so widely",
+       "vi": "khác nhau rất nhiều"
+      },
+      "g": {
+       "p": "automated",
+       "vi": "tự động hóa"
+      }
+     },
+     "ans": 0,
+     "explain": "'Cannot easily be automated' → khó mechanise (cơ giới hóa). 'Prohibit' sai nghĩa."
+    },
+    {
+     "stmt": "{py:Pyrometallurgy} can [ha:cope with] mixed materials but [us:uses up] a great deal of [g:____].",
+     "pairs": {
+      "py": {
+       "p": "Pyrometallurgy"
+      },
+      "ha": {
+       "p": "tolerant of",
+       "vi": "chịu được"
+      },
+      "us": {
+       "p": "consumes",
+       "vi": "tiêu thụ"
+      },
+      "g": {
+       "p": "energy",
+       "vi": "năng lượng"
+      }
+     },
+     "ans": 2,
+     "explain": "'Consumes large amounts of energy' → power. 'Water' là bẫy (liên tưởng tới dung dịch ở phương pháp sau)."
+    },
+    {
+     "stmt": "{hy:Hydrometallurgy} recovers [mo:more kinds of metal] but [ge:produces] [g:____] that needs careful treatment.",
+     "pairs": {
+      "hy": {
+       "p": "Hydrometallurgy"
+      },
+      "mo": {
+       "p": "a wider range of metals",
+       "vi": "nhiều loại kim loại hơn"
+      },
+      "ge": {
+       "p": "generates",
+       "vi": "tạo ra"
+      },
+      "g": {
+       "p": "liquid waste",
+       "vi": "chất thải lỏng"
+      }
+     },
+     "ans": 4,
+     "explain": "'Liquid waste' → effluent (nước thải) – từ uncommon rất hay gặp trong IELTS."
+    },
+    {
+     "stmt": "{dr:Direct recycling} could [cu:reduce costs] [sb:considerably], but it is still mostly [g:____].",
+     "pairs": {
+      "dr": {
+       "p": "direct recycling"
+      },
+      "cu": {
+       "p": "savings",
+       "vi": "tiết kiệm"
+      },
+      "sb": {
+       "p": "substantial",
+       "vi": "đáng kể"
+      },
+      "g": {
+       "p": "confined to the laboratory",
+       "vi": "chỉ giới hạn trong phòng thí nghiệm"
+      }
+     },
+     "ans": 6,
+     "explain": "'Largely confined to the laboratory' → experimental. 'Widespread' trái nghĩa."
+    },
+    {
+     "stmt": "Analysts believe [ru:new rules] for manufacturers, such as the clear [g:____] of battery chemistry, would be the [ef:most effective] step.",
+     "pairs": {
+      "ru": {
+       "p": "regulatory",
+       "vi": "thuộc về quy định"
+      },
+      "g": {
+       "p": "label",
+       "vi": "dán nhãn"
+      },
+      "ef": {
+       "p": "most effective intervention",
+       "vi": "biện pháp hiệu quả nhất"
+      }
+     },
+     "ans": 8,
+     "explain": "'Label battery chemistry clearly' → identification (việc ghi rõ/nhận diện)."
+    }
+   ]
+  },
+  {
+   "id": "A9",
+   "track": "A",
+   "type": "ynng",
+   "title": "When to trust your gut",
+   "topic": "Tâm lý học · trực giác chuyên gia",
+   "passage": "It is often said that experts rely on intuition rather than deliberate reasoning, and in many fields this description is accurate. An experienced firefighter may sense that a building is about to collapse without being able to explain why; a chess master may glance at a board and immediately see the strongest move. Yet I believe the popular enthusiasm for 'trusting your gut' has outrun the evidence. Intuition is reliable only in environments that are sufficiently regular and that provide rapid, unambiguous feedback, conditions that allow the patterns underlying expert judgement to be learned. Chess satisfies both requirements; long-term political forecasting satisfies neither, and it is no coincidence that the confident predictions of political pundits have been shown to be scarcely more accurate than chance. The difficulty is that subjective confidence is a poor guide to accuracy: an intuition feels equally compelling whether or not it rests on genuine expertise. Organisations would therefore be wise to ask not how certain their experts feel, but whether the domain in which they work is one in which skill can be acquired at all.",
+   "items": [
+    {
+     "stmt": "The writer [ac:accepts] that in [so:a number of areas], experts {in:rely on intuition}.",
+     "pairs": {
+      "in": {
+       "p": "rely on intuition"
+      },
+      "ac": {
+       "p": "accurate",
+       "vi": "(mô tả này là) chính xác"
+      },
+      "so": {
+       "p": "many fields",
+       "vi": "nhiều lĩnh vực"
+      }
+     },
+     "ans": "Y",
+     "explain": "'In many fields this description is accurate' → tác giả thừa nhận → YES."
+    },
+    {
+     "stmt": "The writer thinks that [pe:the public's enthusiasm] for intuition is [js:supported by research].",
+     "pairs": {
+      "pe": {
+       "p": "popular enthusiasm",
+       "vi": "sự nhiệt tình của công chúng"
+      },
+      "js": {
+       "p": "outrun the evidence",
+       "vi": "vượt quá bằng chứng"
+      }
+     },
+     "ans": "N",
+     "explain": "'Has outrun the evidence' = đi xa hơn những gì bằng chứng ủng hộ → NO."
+    },
+    {
+     "stmt": "Intuition can only be [tr:relied on] in situations that are [pr:predictable] and give [qf:quick and clear feedback].",
+     "pairs": {
+      "tr": {
+       "p": "reliable",
+       "vi": "đáng tin cậy"
+      },
+      "pr": {
+       "p": "sufficiently regular",
+       "vi": "đủ đều đặn, có quy luật"
+      },
+      "qf": {
+       "p": "rapid, unambiguous feedback",
+       "vi": "phản hồi nhanh, rõ ràng"
+      }
+     },
+     "ans": "Y",
+     "explain": "Paraphrase gần như nguyên câu → YES. Chú ý 'only' có trong cả hai."
+    },
+    {
+     "stmt": "[fc:Feeling sure] about a judgement is a [gi:reliable sign] that it is [co:correct].",
+     "pairs": {
+      "fc": {
+       "p": "subjective confidence",
+       "vi": "sự tự tin chủ quan"
+      },
+      "gi": {
+       "p": "poor guide",
+       "vi": "chỉ dẫn kém"
+      },
+      "co": {
+       "p": "accuracy",
+       "vi": "độ chính xác"
+      }
+     },
+     "ans": "N",
+     "explain": "'Subjective confidence is a poor guide to accuracy' → NO."
+    },
+    {
+     "stmt": "[mo:Most] {or:organisations} [al:already] [as:consider] whether skill can be learned in their field.",
+     "pairs": {
+      "or": {
+       "p": "Organisations"
+      },
+      "mo": {
+       "p": null,
+       "vi": "bài không nói 'phần lớn'"
+      },
+      "al": {
+       "p": null,
+       "vi": "bài không nói 'đã' làm"
+      },
+      "as": {
+       "p": "ask",
+       "vi": "đặt câu hỏi, xem xét"
+      }
+     },
+     "ans": "NG",
+     "explain": "Tác giả chỉ khuyên tổ chức NÊN hỏi ('would be wise to ask'), không nói hiện nay họ đã làm hay chưa → NOT GIVEN."
+    }
+   ]
+  }
+ ]
+}
