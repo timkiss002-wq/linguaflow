@@ -109,6 +109,14 @@ export default function GuidedWritingPage() {
             </p>
           </div>
 
+          <p className="mb-4 rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-sm dark:border-teal-500/30 dark:bg-teal-500/10">
+            Còn khó viết câu đúng ngữ pháp? Luyện trước{' '}
+            <Link to="/grammar" className="font-medium text-teal-700 hover:underline dark:text-teal-300">
+              Ngữ pháp &amp; dịch câu
+            </Link>{' '}
+            (band 4.5 → 5.5): thì, so sánh, bị động, câu điều kiện, miêu tả xu hướng…
+          </p>
+
           {/* The frame of each type shown: learn it before (or instead of) a prompt. */}
           <div className="mb-5 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
             {shownTypes.map((t) => (

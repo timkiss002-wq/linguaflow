@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpen, Clock, Headphones, Pause, Play, RotateCcw, Send } from 'lucide-react';
+import { ArrowLeft, BookOpen, Clock, Headphones, Highlighter, Pause, Play, RotateCcw, Send } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { useSaveIeltsAttempt } from '@/features/ielts/api';
+import type { Highlight } from '@/features/ielts/highlights';
+import { Passage, type TextSize } from '@/features/ielts/Passage';
 import { Highlighted, QuestionGroups } from '@/features/ielts/QuestionGroups';
 import { useScriptPlayer } from '@/features/ielts/useScriptPlayer';
 import { toUserMessage } from '@/lib/errors';
@@ -33,6 +35,8 @@ interface Saved {
   answers: Record<number, string>;
   seconds: number;
   results?: QuestionResult[];
+  /** reading: the learner's highlights, per part */
+  highlights?: Record<string, Highlight[]>;
 }
 
 const storeKey = (test: string, parts: string[], mode: Mode) => `ielts:${test}:${parts.join('+')}:${mode}`;
@@ -126,6 +130,34 @@ function Setup({ test }: { test: PracticeTest }) {
   );
 }
 
+function ReadingTools({ size, onSize, count, onClear }: { size: TextSize; onSize: (s: TextSize) => void; count: number; onClear: () => void }) {
+  return (
+    <div className="mb-3 flex flex-wrap items-center justify-between gap-2 text-sm text-muted-foreground">
+      <p className="flex items-center gap-1.5">
+        <Highlighter className="size-4 text-amber-600" aria-hidden /> Bôi đen chữ trong bài đọc để tô vàng; bấm vào chỗ đã tô để bỏ.
+        {count > 0 && (
+          <button type="button" onClick={onClear} className="ml-1 text-primary hover:underline">
+            Xoá {count} chỗ tô
+          </button>
+        )}
+      </p>
+      <div role="group" aria-label="Cỡ chữ" className="flex items-center rounded-full border bg-card p-0.5">
+        {(['sm', 'md', 'lg'] as const).map((s, i) => (
+          <button
+            key={s}
+            type="button"
+            onClick={() => onSize(s)}
+            aria-pressed={size === s}
+            className={cn('rounded-full px-2.5 py-0.5 font-semibold', ['text-xs', 'text-sm', 'text-base'][i], size === s ? 'bg-foreground text-background' : 'hover:text-foreground')}
+          >
+            A
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function BackLink({ skill }: { skill: PracticeTest['skill'] }) {
   return (
     <Link to={`/ielts/${skill}`} className="inline-flex items-center gap-1 hover:underline">
@@ -142,6 +174,22 @@ function Runner({ test, partIds, mode }: { test: PracticeTest; partIds: string[]
   const [results, setResults] = useState<QuestionResult[] | null>(initial?.results ?? null);
   const [tab, setTab] = useState(0);
   const [active, setActive] = useState<number | null>(null);
+  const [highlights, setHighlights] = useState<Record<string, Highlight[]>>(initial?.highlights ?? {});
+  const [size, setSize] = useState<TextSize>(() => {
+    try {
+      return (localStorage.getItem('ielts:text-size') as TextSize | null) ?? 'md';
+    } catch {
+      return 'md';
+    }
+  });
+  const changeSize = (s: TextSize) => {
+    setSize(s);
+    try {
+      localStorage.setItem('ielts:text-size', s);
+    } catch {
+      /* private mode */
+    }
+  };
   const seconds = useRef(initial?.seconds ?? 0);
   const [, tick] = useState(0);
   const save = useSaveIeltsAttempt();
@@ -155,7 +203,7 @@ function Runner({ test, partIds, mode }: { test: PracticeTest; partIds: string[]
     const r = markParts(test, partIds, answers);
     setResults(r);
     setTab(0);
-    write(key, { answers, seconds: seconds.current, results: r });
+    write(key, { answers, seconds: seconds.current, results: r, highlights });
     window.scrollTo({ top: 0 });
     const correct = r.filter((x) => x.mark === 'correct').length;
     try {
@@ -180,8 +228,8 @@ function Runner({ test, partIds, mode }: { test: PracticeTest; partIds: string[]
   }, [results, mode, limit]);
 
   useEffect(() => {
-    if (!results) write(key, { answers, seconds: seconds.current });
-  }, [answers, key, results]);
+    write(key, { answers, seconds: seconds.current, highlights, ...(results ? { results } : {}) });
+  }, [answers, key, results, highlights]);
 
   const showEvidence = (n: number) => {
     const p = parts.findIndex((x) => partQuestions(x).some(({ q }) => q.n === n));
@@ -248,25 +296,30 @@ function Runner({ test, partIds, mode }: { test: PracticeTest; partIds: string[]
       )}
 
       {test.skill === 'reading' ? (
-        <div className="grid gap-4 lg:grid-cols-2">
-          <Card className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
-            <CardContent className="space-y-3 pt-5" data-testid="passage">
-              <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{part.title}</p>
-              <h2 className="text-xl font-bold">{part.heading}</h2>
-              {part.paragraphs!.map(([label, text], i) => (
-                <p key={i} className="leading-relaxed">
-                  {label && <strong className="mr-2">{label}</strong>}
-                  {results ? <Highlighted text={text!} marks={partQuestions(part).map(({ q }) => ({ n: q.n, quote: q.evidence }))} active={active} /> : text}
-                </p>
-              ))}
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-5">
-              <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={results ? { marks, active, onShowEvidence: showEvidence } : undefined} />
-            </CardContent>
-          </Card>
-        </div>
+        <>
+          <ReadingTools size={size} onSize={changeSize} count={(highlights[part.id] ?? []).length} onClear={() => setHighlights((h) => ({ ...h, [part.id]: [] }))} />
+          {/* Two panes that scroll on their own, like the computer-based test: the passage never scrolls away from the questions. */}
+          <div className="grid gap-4 lg:h-[calc(100vh-8rem)] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+            <Card className="lg:overflow-y-auto">
+              <CardContent className="mx-auto max-w-[72ch] space-y-4 px-5 pt-6 sm:px-8" data-testid="passage">
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{part.title}</p>
+                <h2 className="text-2xl font-bold leading-tight">{part.heading}</h2>
+                <Passage
+                  part={part}
+                  size={size}
+                  highlights={highlights[part.id] ?? []}
+                  onChange={(h) => setHighlights((all) => ({ ...all, [part.id]: h }))}
+                  evidence={results ? { marks: partQuestions(part).map(({ q }) => ({ n: q.n, quote: q.evidence })), active } : undefined}
+                />
+              </CardContent>
+            </Card>
+            <Card className="lg:overflow-y-auto">
+              <CardContent className={cn('px-5 pt-6 sm:px-6', size === 'lg' ? 'text-[17px]' : size === 'md' ? 'text-[15.5px]' : 'text-sm')}>
+                <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={results ? { marks, active, onShowEvidence: showEvidence } : undefined} />
+              </CardContent>
+            </Card>
+          </div>
+        </>
       ) : (
         <div className="space-y-4">
           <AudioPanel key={part.id} part={part} mode={mode} finished={Boolean(results)} />

@@ -2,6 +2,7 @@ import { X } from 'lucide-react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { BottomNav } from './BottomNav';
 import { isFocusRoute, sectionFor } from './nav';
 import { SectionTabs } from './SectionTabs';
@@ -23,17 +24,20 @@ export function AppLayout() {
   // Doing one task (dictation, a test, writing, typing practice): no menu, just a way out.
   if (isFocusRoute(pathname)) {
     const section = sectionFor(pathname);
+    // back to the page this task was opened from (e.g. /grammar/passive → /grammar), else the area's first page
+    const exit = section?.tabs?.filter((t) => pathname.startsWith(`${t.to}/`)).sort((a, b) => b.to.length - a.to.length)[0]?.to ?? section?.to ?? '/dashboard';
     return (
       <div className="min-h-screen" data-section={area}>
         <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b bg-background/90 px-4 backdrop-blur sm:px-6">
           <Logo to="/dashboard" />
           <Button asChild variant="ghost" size="sm">
-            <Link to={section?.to ?? '/dashboard'} aria-label="Leave focus mode">
+            <Link to={exit} aria-label="Leave focus mode">
               <X /> Exit
             </Link>
           </Button>
         </header>
-        <main className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 lg:py-8">
+        {/* IELTS tests get the whole screen: passage and questions side by side. */}
+        <main className={cn('mx-auto w-full px-4 py-6 sm:px-6 lg:py-8', pathname.startsWith('/ielts/') ? 'max-w-[1600px] lg:py-5' : 'max-w-5xl')}>
           <Outlet />
         </main>
       </div>

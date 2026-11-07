@@ -35,6 +35,8 @@ const IeltsTestPage = lazy(() => import('@/pages/IeltsTestPage'));
 const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'));
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
+const GrammarPage = lazy(() => import('@/pages/GrammarPage'));
+const GrammarDrillPage = lazy(() => import('@/pages/GrammarDrillPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
 
@@ -65,6 +67,8 @@ export const router = createBrowserRouter([
           { path: '/ielts/reading', element: page(<IeltsTestsPage skill="reading" />) },
           { path: '/ielts/listening', element: page(<IeltsTestsPage skill="listening" />) },
           { path: '/ielts/:testId', element: page(<IeltsTestPage />) },
+          { path: '/grammar', element: page(<GrammarPage />) },
+          { path: '/grammar/:topicId', element: page(<GrammarDrillPage />) },
           { path: '/vocabulary', element: page(<VocabularyPage />) },
           { path: '/vocabulary/practice', element: page(<VocabularyPracticePage />) },
           { path: '/word-forms', element: page(<WordFormsPage />) },

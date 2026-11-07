@@ -39,11 +39,20 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | Admin | Content page for admins: lessons on/off, question approval with answer statistics, writing prompts on/off, AI usage | ✅ Done |
 
 **Navigation.** A top menu (no sidebar) with six areas, each in its own colour: **Home** (today's plan) ·
-**Luyện đề IELTS** (Reading, Listening, Writing) · **Lessons** (Explore, My lessons) · **Words** (Notebook, Review, Word forms) ·
+**Luyện đề IELTS** (Reading, Listening, Writing, Ngữ pháp & dịch câu) · **Lessons** (Explore, My lessons) · **Words** (Notebook, Review, Word forms) ·
 **Writing** (Prompts, My mistakes) · **Progress** (Statistics, Strengths & Weaknesses, Level test). Pages of one area are
 tabs under the menu. The IELTS pages are practice libraries: filters on the left (format, status, question type — kept
 in the URL), cards on the right. Dictation, tests, writing and typing practice open in a focus mode without the menu.
 On phones the areas are a bottom tab bar and the filters fold into one panel.
+
+**Reading tests** show passage and questions side by side, each scrolling on its own, with three text sizes. Select text
+in the passage to highlight it (click a highlight to remove it); highlights are saved with the answers.
+
+**Ngữ pháp & dịch câu** (`/grammar`, content in `content/grammar-drills.json`): 11 grammar points for band 4.5 → 5.5
+(tenses, comparison, passive, relative clauses, conditionals, modals, linking words, describing trends). Each has a 2D
+diagram, formula, examples and common mistakes, then 8 Vietnamese sentences to translate. Answers are compared word by
+word with every accepted translation (contractions, case and punctuation don't matter); spelling slips are told apart from
+grammar mistakes, and the learner can accept a correct translation that isn't listed. Best scores are kept in the browser.
 
 ## Tech stack
 

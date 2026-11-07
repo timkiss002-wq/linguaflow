@@ -1,0 +1,1419 @@
+{
+  "topics": [
+    {
+      "id": "present-simple",
+      "title_vi": "Hiện tại đơn",
+      "title_en": "Present simple",
+      "band": "4.5",
+      "diagram": "habit",
+      "summary_vi": "Thói quen, việc lặp lại, sự thật hiển nhiên.",
+      "formula": [
+        "I / You / We / They + V",
+        "He / She / It + V-s / V-es",
+        "Phủ định: don't / doesn't + V",
+        "Câu hỏi: Do / Does + S + V?"
+      ],
+      "tips_vi": [
+        "Chủ ngữ số ít (he, she, it, my mother, the city…) → động từ thêm -s/-es. Đây là lỗi người Việt hay quên nhất.",
+        "Sau doesn't / does dùng động từ nguyên mẫu: She doesn't like (không phải doesn't likes).",
+        "Dấu hiệu: always, usually, often, sometimes, every day, on Mondays."
+      ],
+      "examples": [
+        {
+          "en": "My sister works in a hospital.",
+          "vi": "Chị tôi làm việc ở bệnh viện."
+        },
+        {
+          "en": "Water boils at 100 degrees Celsius.",
+          "vi": "Nước sôi ở 100 độ C."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Tôi uống cà phê mỗi sáng.",
+          "scene": "☕🌅",
+          "hint": "drink · every morning",
+          "en": [
+            "I drink coffee every morning."
+          ]
+        },
+        {
+          "vi": "Mẹ tôi nấu bữa tối mỗi ngày.",
+          "scene": "👩‍🍳🍲",
+          "hint": "my mother → cooks (thêm -s)",
+          "en": [
+            "My mother cooks dinner every day.",
+            "My mom cooks dinner every day.",
+            "My mum cooks dinner every day."
+          ]
+        },
+        {
+          "vi": "Anh ấy không thích bóng đá.",
+          "scene": "🙅‍♂️⚽",
+          "hint": "doesn't + like",
+          "en": [
+            "He doesn't like football.",
+            "He doesn't like soccer."
+          ]
+        },
+        {
+          "vi": "Mặt trời mọc ở phía đông.",
+          "scene": "🌄",
+          "hint": "rise → rises · in the east",
+          "en": [
+            "The sun rises in the east."
+          ]
+        },
+        {
+          "vi": "Bạn có đi học bằng xe buýt không?",
+          "scene": "🚌🏫",
+          "hint": "Do you … by bus?",
+          "en": [
+            "Do you go to school by bus?"
+          ]
+        },
+        {
+          "vi": "Thư viện mở cửa lúc 8 giờ sáng.",
+          "scene": "📚🕗",
+          "hint": "open → opens · at 8 a.m.",
+          "en": [
+            "The library opens at 8 a.m.",
+            "The library opens at 8 am.",
+            "The library opens at 8am.",
+            "The library opens at 8 o'clock in the morning.",
+            "The library opens at 8 in the morning.",
+            "The library opens at eight a.m."
+          ]
+        },
+        {
+          "vi": "Nhiều người trẻ sống ở các thành phố lớn.",
+          "scene": "👫🏙️",
+          "hint": "many young people · live",
+          "en": [
+            "Many young people live in big cities.",
+            "Many young people live in large cities.",
+            "A lot of young people live in big cities.",
+            "A lot of young people live in large cities.",
+            "Lots of young people live in big cities."
+          ]
+        },
+        {
+          "vi": "Chị gái tôi thường đọc sách vào buổi tối.",
+          "scene": "👧📖🌙",
+          "hint": "usually đứng trước động từ · reads",
+          "en": [
+            "My sister usually reads books in the evening.",
+            "My sister often reads books in the evening.",
+            "My sister usually reads in the evening.",
+            "My sister often reads in the evening.",
+            "My older sister usually reads books in the evening.",
+            "My older sister often reads books in the evening."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past-simple",
+      "title_vi": "Quá khứ đơn",
+      "title_en": "Past simple",
+      "band": "4.5",
+      "diagram": "past",
+      "summary_vi": "Việc đã xảy ra và kết thúc tại một thời điểm trong quá khứ.",
+      "formula": [
+        "S + V-ed / V2 (bất quy tắc)",
+        "Phủ định: didn't + V",
+        "Câu hỏi: Did + S + V?",
+        "be → was / were"
+      ],
+      "tips_vi": [
+        "Có thời gian trong quá khứ (yesterday, last year, in 2010, … ago) → dùng quá khứ đơn.",
+        "Sau didn't dùng động từ nguyên mẫu: didn't go (không phải didn't went).",
+        "Học thuộc động từ bất quy tắc hay gặp: go–went, buy–bought, see–saw, take–took, meet–met."
+      ],
+      "examples": [
+        {
+          "en": "I visited Da Nang last summer.",
+          "vi": "Tôi đến Đà Nẵng hè năm ngoái."
+        },
+        {
+          "en": "We didn't watch TV yesterday.",
+          "vi": "Hôm qua chúng tôi không xem TV."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Hôm qua tôi đi siêu thị.",
+          "scene": "🛒",
+          "hint": "go → went · yesterday",
+          "en": [
+            "I went to the supermarket yesterday.",
+            "Yesterday I went to the supermarket."
+          ]
+        },
+        {
+          "vi": "Chúng tôi đã xem một bộ phim hay tối qua.",
+          "scene": "🎬🍿",
+          "hint": "watch → watched · last night",
+          "en": [
+            "We watched a good film last night.",
+            "We watched a good movie last night.",
+            "We saw a good film last night.",
+            "We saw a good movie last night.",
+            "We watched a great film last night.",
+            "We watched a great movie last night."
+          ]
+        },
+        {
+          "vi": "Cô ấy không làm bài tập về nhà.",
+          "scene": "📚❌",
+          "hint": "didn't + do · homework",
+          "en": [
+            "She didn't do her homework.",
+            "She didn't do the homework."
+          ]
+        },
+        {
+          "vi": "Bạn đã mua chiếc điện thoại này ở đâu?",
+          "scene": "📱❓",
+          "hint": "Where did you + buy …?",
+          "en": [
+            "Where did you buy this phone?",
+            "Where did you buy this mobile phone?"
+          ]
+        },
+        {
+          "vi": "Năm 2010, dân số của thành phố là 2 triệu người.",
+          "scene": "📊🏙️",
+          "hint": "In 2010 · the population of … was",
+          "en": [
+            "In 2010, the population of the city was 2 million.",
+            "In 2010, the population of the city was 2 million people.",
+            "In 2010, the city's population was 2 million.",
+            "In 2010, the city's population was 2 million people.",
+            "The population of the city was 2 million in 2010.",
+            "The city's population was 2 million in 2010."
+          ]
+        },
+        {
+          "vi": "Họ chuyển đến Hà Nội ba năm trước.",
+          "scene": "🚚🏠",
+          "hint": "move → moved · three years ago",
+          "en": [
+            "They moved to Hanoi three years ago.",
+            "They moved to Ha Noi three years ago.",
+            "They moved to Hanoi 3 years ago."
+          ]
+        },
+        {
+          "vi": "Bữa tiệc rất vui.",
+          "scene": "🎉",
+          "hint": "be → was",
+          "en": [
+            "The party was very fun.",
+            "The party was a lot of fun.",
+            "The party was great fun.",
+            "The party was really fun.",
+            "The party was very enjoyable."
+          ]
+        },
+        {
+          "vi": "Tôi đã gặp thầy giáo cũ ở công viên tuần trước.",
+          "scene": "👨‍🏫🌳",
+          "hint": "meet → met · last week",
+          "en": [
+            "I met my old teacher in the park last week.",
+            "Last week I met my old teacher in the park.",
+            "I met my former teacher in the park last week.",
+            "I saw my old teacher in the park last week."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "title_vi": "Hiện tại hoàn thành",
+      "title_en": "Present perfect",
+      "band": "5.0",
+      "diagram": "perfect",
+      "summary_vi": "Việc bắt đầu trong quá khứ, kéo dài hoặc còn ảnh hưởng đến hiện tại.",
+      "formula": [
+        "S + have / has + V3 (past participle)",
+        "Phủ định: haven't / hasn't + V3",
+        "Câu hỏi: Have / Has + S + V3?",
+        "for + khoảng thời gian · since + mốc thời gian"
+      ],
+      "tips_vi": [
+        "Không dùng với thời gian cụ thể đã qua: I have seen him yesterday ✗ → I saw him yesterday ✓.",
+        "for three years (một khoảng) — since 2020 (một mốc).",
+        "Hay gặp: just, already, yet, ever, never, so far, over the last ten years."
+      ],
+      "examples": [
+        {
+          "en": "I have lived here for five years.",
+          "vi": "Tôi đã sống ở đây được năm năm."
+        },
+        {
+          "en": "The number of tourists has increased since 2015.",
+          "vi": "Số du khách đã tăng từ năm 2015."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Tôi đã sống ở đây được năm năm.",
+          "scene": "🏡⏳",
+          "hint": "have lived · for five years",
+          "en": [
+            "I have lived here for five years.",
+            "I have lived here for 5 years.",
+            "I have been living here for five years."
+          ]
+        },
+        {
+          "vi": "Cô ấy chưa bao giờ đi máy bay.",
+          "scene": "✈️🙅‍♀️",
+          "hint": "has never + V3",
+          "en": [
+            "She has never travelled by plane.",
+            "She has never traveled by plane.",
+            "She has never travelled by air.",
+            "She has never traveled by air.",
+            "She has never flown.",
+            "She has never flown on a plane.",
+            "She has never been on a plane.",
+            "She has never taken a plane."
+          ]
+        },
+        {
+          "vi": "Bạn đã ăn sáng chưa?",
+          "scene": "🍳❓",
+          "hint": "Have you had … yet?",
+          "en": [
+            "Have you had breakfast yet?",
+            "Have you eaten breakfast yet?",
+            "Have you had breakfast?",
+            "Have you eaten breakfast?",
+            "Have you had your breakfast yet?"
+          ]
+        },
+        {
+          "vi": "Chúng tôi đã học tiếng Anh từ năm 2020.",
+          "scene": "📘📅",
+          "hint": "have studied · since 2020",
+          "en": [
+            "We have studied English since 2020.",
+            "We have learned English since 2020.",
+            "We have learnt English since 2020.",
+            "We have been studying English since 2020.",
+            "We have been learning English since 2020."
+          ]
+        },
+        {
+          "vi": "Giá nhà đã tăng mạnh trong mười năm qua.",
+          "scene": "🏠📈",
+          "hint": "have increased sharply · over the last ten years",
+          "en": [
+            "House prices have increased sharply over the last ten years.",
+            "House prices have risen sharply over the last ten years.",
+            "House prices have increased sharply over the past ten years.",
+            "House prices have risen sharply over the past ten years.",
+            "House prices have increased sharply in the last ten years.",
+            "House prices have risen sharply in the last ten years.",
+            "House prices have increased sharply in the past ten years.",
+            "House prices have risen sharply in the past ten years.",
+            "House prices have gone up sharply over the last ten years.",
+            "House prices have increased significantly over the last ten years.",
+            "The price of houses has increased sharply over the last ten years."
+          ]
+        },
+        {
+          "vi": "Anh ấy vừa mới hoàn thành bài luận.",
+          "scene": "📝✅",
+          "hint": "has just + finished",
+          "en": [
+            "He has just finished the essay.",
+            "He has just finished his essay.",
+            "He has just completed the essay.",
+            "He has just completed his essay."
+          ]
+        },
+        {
+          "vi": "Tôi đã đọc cuốn sách này ba lần.",
+          "scene": "📖3️⃣",
+          "hint": "have read · three times",
+          "en": [
+            "I have read this book three times.",
+            "I have read this book 3 times."
+          ]
+        },
+        {
+          "vi": "Họ chưa tìm được giải pháp cho vấn đề này.",
+          "scene": "🧩❓",
+          "hint": "haven't found · a solution to",
+          "en": [
+            "They haven't found a solution to this problem yet.",
+            "They haven't found a solution to this problem.",
+            "They haven't found a solution for this problem yet.",
+            "They haven't found a solution for this problem."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "title_vi": "Tương lai: will / be going to",
+      "title_en": "Future forms",
+      "band": "4.5",
+      "diagram": "future",
+      "summary_vi": "will: quyết định ngay, dự đoán, lời hứa. be going to: kế hoạch đã định, dự đoán có dấu hiệu.",
+      "formula": [
+        "S + will + V",
+        "S + am / is / are going to + V",
+        "Phủ định: won't + V · am / is / are not going to + V",
+        "Task 1: is expected / predicted to + V"
+      ],
+      "tips_vi": [
+        "Sau will luôn là động từ nguyên mẫu: will go (không phải will goes / will to go).",
+        "Kế hoạch đã có từ trước → be going to: I'm going to study abroad next year.",
+        "Biểu đồ có số liệu dự báo: is expected to / is predicted to + V."
+      ],
+      "examples": [
+        {
+          "en": "I think it will rain tomorrow.",
+          "vi": "Tôi nghĩ mai trời sẽ mưa."
+        },
+        {
+          "en": "We are going to visit our grandparents this weekend.",
+          "vi": "Cuối tuần này chúng tôi sẽ thăm ông bà."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Tôi sẽ gọi cho bạn tối nay.",
+          "scene": "📞🌙",
+          "hint": "will + call · tonight",
+          "en": [
+            "I will call you tonight.",
+            "I will call you this evening.",
+            "I will phone you tonight."
+          ]
+        },
+        {
+          "vi": "Chúng tôi định đi Đà Lạt vào mùa hè này.",
+          "scene": "🌲🧳",
+          "hint": "are going to + go / visit",
+          "en": [
+            "We are going to go to Da Lat this summer.",
+            "We are going to visit Da Lat this summer.",
+            "We are going to travel to Da Lat this summer.",
+            "We are going to Da Lat this summer.",
+            "We are planning to go to Da Lat this summer.",
+            "We plan to go to Da Lat this summer."
+          ]
+        },
+        {
+          "vi": "Tôi nghĩ ngày mai trời sẽ mưa.",
+          "scene": "🌧️",
+          "hint": "I think it will …",
+          "en": [
+            "I think it will rain tomorrow."
+          ]
+        },
+        {
+          "vi": "Cô ấy sẽ không đến bữa tiệc.",
+          "scene": "🎉🚫",
+          "hint": "won't + come",
+          "en": [
+            "She won't come to the party.",
+            "She won't go to the party.",
+            "She isn't going to come to the party."
+          ]
+        },
+        {
+          "vi": "Nhìn những đám mây kia kìa! Trời sắp mưa rồi.",
+          "scene": "☁️☔",
+          "hint": "có dấu hiệu → it's going to rain",
+          "en": [
+            "Look at those clouds! It's going to rain."
+          ]
+        },
+        {
+          "vi": "Anh ấy sẽ bắt đầu công việc mới vào tháng sau.",
+          "scene": "💼📅",
+          "hint": "will start / is going to start · next month",
+          "en": [
+            "He will start his new job next month.",
+            "He will start a new job next month.",
+            "He is going to start his new job next month.",
+            "He is going to start a new job next month.",
+            "He is starting his new job next month."
+          ]
+        },
+        {
+          "vi": "Đến năm 2030, số lượng ô tô điện được dự đoán sẽ tăng gấp đôi.",
+          "scene": "🚗⚡📈",
+          "hint": "By 2030 · is predicted / expected to double",
+          "en": [
+            "By 2030, the number of electric cars is expected to double.",
+            "By 2030, the number of electric cars is predicted to double.",
+            "By 2030, the number of electric cars will double.",
+            "The number of electric cars is expected to double by 2030.",
+            "The number of electric cars is predicted to double by 2030."
+          ]
+        },
+        {
+          "vi": "Đừng lo, tôi sẽ giúp bạn.",
+          "scene": "🤝",
+          "hint": "Don't worry · will help",
+          "en": [
+            "Don't worry, I will help you."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "title_vi": "So sánh hơn / nhất / bằng",
+      "title_en": "Comparatives & superlatives",
+      "band": "4.5",
+      "diagram": "compare",
+      "summary_vi": "So sánh hai hay nhiều người, vật, số liệu — dùng rất nhiều trong Task 1.",
+      "formula": [
+        "Tính từ ngắn: adj-er + than · the + adj-est",
+        "Tính từ dài: more + adj + than · the most + adj",
+        "Bất quy tắc: good–better–best · bad–worse–worst · many–more–most",
+        "Bằng nhau: as + adj + as"
+      ],
+      "tips_vi": [
+        "Không dùng cả hai: more bigger ✗ → bigger ✓.",
+        "Có 'the' trước so sánh nhất: the highest, the most popular.",
+        "Task 1 hay dùng: higher than, the highest, the number of … was higher than that of …"
+      ],
+      "examples": [
+        {
+          "en": "Ho Chi Minh City is bigger than Hanoi.",
+          "vi": "TP. Hồ Chí Minh lớn hơn Hà Nội."
+        },
+        {
+          "en": "Rice was the most popular food in the survey.",
+          "vi": "Cơm là món phổ biến nhất trong khảo sát."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Hôm nay trời nóng hơn hôm qua.",
+          "scene": "🌡️☀️",
+          "hint": "hot → hotter than",
+          "en": [
+            "It is hotter today than yesterday.",
+            "It is hotter today than it was yesterday.",
+            "Today is hotter than yesterday.",
+            "Today it is hotter than yesterday."
+          ]
+        },
+        {
+          "vi": "Xe buýt rẻ hơn taxi.",
+          "scene": "🚌💰🚕",
+          "hint": "cheap → cheaper than",
+          "en": [
+            "The bus is cheaper than a taxi.",
+            "The bus is cheaper than the taxi.",
+            "A bus is cheaper than a taxi.",
+            "Buses are cheaper than taxis.",
+            "Taking the bus is cheaper than taking a taxi.",
+            "Going by bus is cheaper than going by taxi."
+          ]
+        },
+        {
+          "vi": "Đây là ngọn núi cao nhất Việt Nam.",
+          "scene": "🏔️🇻🇳",
+          "hint": "the highest · in Vietnam",
+          "en": [
+            "This is the highest mountain in Vietnam.",
+            "This is the highest mountain in Viet Nam.",
+            "This is the tallest mountain in Vietnam.",
+            "This is the tallest mountain in Viet Nam."
+          ]
+        },
+        {
+          "vi": "Đối với tôi, tiếng Anh dễ hơn tiếng Trung.",
+          "scene": "🇬🇧🇨🇳",
+          "hint": "easy → easier than",
+          "en": [
+            "For me, English is easier than Chinese.",
+            "English is easier than Chinese for me.",
+            "English is easier for me than Chinese."
+          ]
+        },
+        {
+          "vi": "Đây là cuốn sách thú vị nhất tôi từng đọc.",
+          "scene": "📚⭐",
+          "hint": "the most interesting · have ever read",
+          "en": [
+            "This is the most interesting book I have ever read.",
+            "This is the most interesting book that I have ever read."
+          ]
+        },
+        {
+          "vi": "Số nam sinh nhiều hơn số nữ sinh.",
+          "scene": "👦👦👧",
+          "hint": "more … than · hoặc the number of … was higher than …",
+          "en": [
+            "There were more male students than female students.",
+            "There are more male students than female students.",
+            "There were more boys than girls.",
+            "There are more boys than girls.",
+            "The number of male students was higher than the number of female students.",
+            "The number of male students is higher than the number of female students.",
+            "The number of male students was higher than that of female students.",
+            "The number of male students is higher than that of female students.",
+            "The number of male students was greater than the number of female students.",
+            "The number of male students is greater than the number of female students.",
+            "The number of male students was larger than the number of female students."
+          ]
+        },
+        {
+          "vi": "Anh trai tôi chơi guitar giỏi hơn tôi.",
+          "scene": "🎸",
+          "hint": "well → better than",
+          "en": [
+            "My brother plays the guitar better than me.",
+            "My brother plays the guitar better than I do.",
+            "My brother plays guitar better than me.",
+            "My brother plays guitar better than I do.",
+            "My older brother plays the guitar better than me.",
+            "My older brother plays the guitar better than I do.",
+            "My older brother plays guitar better than me.",
+            "My older brother plays guitar better than I do."
+          ]
+        },
+        {
+          "vi": "Căn phòng này rộng bằng căn phòng kia.",
+          "scene": "🛋️🟰🛋️",
+          "hint": "as big as",
+          "en": [
+            "This room is as big as that room.",
+            "This room is as big as that one.",
+            "This room is as large as that room.",
+            "This room is as large as that one.",
+            "This room is as spacious as that room.",
+            "This room is as spacious as that one."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "passive",
+      "title_vi": "Câu bị động",
+      "title_en": "The passive voice",
+      "band": "5.0",
+      "diagram": "passive",
+      "summary_vi": "Nhấn mạnh việc được làm, không quan trọng ai làm — rất hay dùng trong Task 1 dạng quy trình.",
+      "formula": [
+        "S + be + V3 (past participle)",
+        "Hiện tại: is / are + V3 · Quá khứ: was / were + V3",
+        "Hoàn thành: has / have been + V3 · Modal: must / can be + V3",
+        "Muốn nói ai làm: … by + người / vật"
+      ],
+      "tips_vi": [
+        "Đừng quên 'be': The rice harvested ✗ → The rice is harvested ✓.",
+        "Chia 'be' theo chủ ngữ mới: The bottles are collected (số nhiều).",
+        "Quy trình (process) dùng hiện tại bị động: First, the leaves are picked. Then, they are dried."
+      ],
+      "examples": [
+        {
+          "en": "English is spoken all over the world.",
+          "vi": "Tiếng Anh được nói khắp thế giới."
+        },
+        {
+          "en": "The bridge was built in 1990.",
+          "vi": "Cây cầu được xây năm 1990."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Tiếng Anh được nói ở nhiều quốc gia.",
+          "scene": "🗣️🌍",
+          "hint": "is spoken",
+          "en": [
+            "English is spoken in many countries.",
+            "English is spoken in a lot of countries."
+          ]
+        },
+        {
+          "vi": "Ngôi nhà này được xây năm 1995.",
+          "scene": "🏠🔨",
+          "hint": "was built",
+          "en": [
+            "This house was built in 1995."
+          ]
+        },
+        {
+          "vi": "Những chai nhựa được thu gom và mang đến nhà máy.",
+          "scene": "🧴♻️🏭",
+          "hint": "are collected and taken to",
+          "en": [
+            "Plastic bottles are collected and taken to a factory.",
+            "Plastic bottles are collected and taken to the factory.",
+            "The plastic bottles are collected and taken to a factory.",
+            "The plastic bottles are collected and taken to the factory.",
+            "Plastic bottles are collected and transported to a factory.",
+            "Plastic bottles are collected and transported to the factory.",
+            "The plastic bottles are collected and transported to the factory.",
+            "Plastic bottles are collected and brought to a factory.",
+            "Plastic bottles are collected and brought to the factory.",
+            "The plastic bottles are collected and brought to the factory."
+          ]
+        },
+        {
+          "vi": "Lá trà được hái bằng tay.",
+          "scene": "🍃✋",
+          "hint": "are picked by hand",
+          "en": [
+            "Tea leaves are picked by hand.",
+            "The tea leaves are picked by hand."
+          ]
+        },
+        {
+          "vi": "Điện thoại của tôi bị đánh cắp hôm qua.",
+          "scene": "📱🦹",
+          "hint": "was stolen",
+          "en": [
+            "My phone was stolen yesterday.",
+            "My mobile phone was stolen yesterday.",
+            "Yesterday my phone was stolen."
+          ]
+        },
+        {
+          "vi": "Cây cầu mới đã được hoàn thành.",
+          "scene": "🌉✅",
+          "hint": "has been completed",
+          "en": [
+            "The new bridge has been completed.",
+            "The new bridge has been finished."
+          ]
+        },
+        {
+          "vi": "Bài luận phải được nộp trước thứ Sáu.",
+          "scene": "📝⏰",
+          "hint": "must be submitted · by Friday",
+          "en": [
+            "The essay must be submitted by Friday.",
+            "The essay must be submitted before Friday.",
+            "The essay has to be submitted by Friday.",
+            "The essay has to be submitted before Friday.",
+            "Essays must be submitted by Friday.",
+            "Essays must be submitted before Friday.",
+            "The essay must be handed in by Friday.",
+            "The essay must be handed in before Friday."
+          ]
+        },
+        {
+          "vi": "Bức tranh này được vẽ bởi một họa sĩ nổi tiếng.",
+          "scene": "🖼️🎨",
+          "hint": "was painted by",
+          "en": [
+            "This painting was painted by a famous artist.",
+            "This painting was painted by a famous painter.",
+            "This picture was painted by a famous artist.",
+            "This picture was painted by a famous painter.",
+            "This painting was made by a famous artist.",
+            "This painting was drawn by a famous artist.",
+            "This picture was drawn by a famous artist."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relative",
+      "title_vi": "Mệnh đề quan hệ",
+      "title_en": "Relative clauses",
+      "band": "5.0",
+      "diagram": "relative",
+      "summary_vi": "Nối hai câu ngắn thành một câu dài hơn, bổ nghĩa cho danh từ đứng trước.",
+      "formula": [
+        "who: thay cho người",
+        "which: thay cho vật, sự việc",
+        "that: thay cho người và vật (mệnh đề xác định)",
+        "where: nơi chốn · whose: của ai"
+      ],
+      "tips_vi": [
+        "Đặt mệnh đề ngay sau danh từ nó bổ nghĩa: The man who lives next door is a doctor.",
+        "Không lặp lại chủ ngữ/tân ngữ: The book which I bought it ✗ → The book which I bought ✓.",
+        "Mệnh đề có dấu phẩy (thông tin thêm) chỉ dùng which / who, không dùng that."
+      ],
+      "examples": [
+        {
+          "en": "The woman who teaches us English is very kind.",
+          "vi": "Cô giáo dạy chúng tôi tiếng Anh rất tốt bụng."
+        },
+        {
+          "en": "This is the café where we first met.",
+          "vi": "Đây là quán cà phê nơi chúng ta gặp nhau lần đầu."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Người đàn ông sống cạnh nhà tôi là bác sĩ.",
+          "scene": "👨‍⚕️🏠",
+          "hint": "The man who lives …",
+          "en": [
+            "The man who lives next door is a doctor.",
+            "The man who lives next door to me is a doctor.",
+            "The man who lives next to my house is a doctor.",
+            "The man who lives near my house is a doctor.",
+            "The man that lives next door is a doctor.",
+            "The man that lives next to my house is a doctor."
+          ]
+        },
+        {
+          "vi": "Đây là chiếc điện thoại mà tôi mua tuần trước.",
+          "scene": "📱🛍️",
+          "hint": "the phone which / that I bought",
+          "en": [
+            "This is the phone which I bought last week.",
+            "This is the phone that I bought last week.",
+            "This is the phone I bought last week."
+          ]
+        },
+        {
+          "vi": "Tôi có một người bạn nói được ba thứ tiếng.",
+          "scene": "🧑‍🤝‍🧑🗣️",
+          "hint": "a friend who can speak",
+          "en": [
+            "I have a friend who can speak three languages.",
+            "I have a friend who speaks three languages.",
+            "I have a friend that can speak three languages.",
+            "I have a friend that speaks three languages."
+          ]
+        },
+        {
+          "vi": "Đó là ngôi trường nơi bố tôi từng học.",
+          "scene": "🏫👨",
+          "hint": "the school where · used to study",
+          "en": [
+            "That is the school where my father used to study.",
+            "That is the school where my father studied.",
+            "That is the school where my dad used to study.",
+            "That is the school where my dad studied."
+          ]
+        },
+        {
+          "vi": "Những học sinh học chăm chỉ thường đạt điểm cao.",
+          "scene": "🧑‍🎓💯",
+          "hint": "Students who study hard …",
+          "en": [
+            "Students who study hard usually get high scores.",
+            "Students who study hard often get high scores.",
+            "Students who study hard usually get high marks.",
+            "Students who study hard often get high marks.",
+            "Students who study hard usually get good marks.",
+            "Students who study hard often get good marks.",
+            "Students who study hard usually get good grades.",
+            "Students who study hard often get good grades.",
+            "Students who study hard usually achieve high scores.",
+            "Students who work hard usually get high scores.",
+            "Students that study hard usually get high scores."
+          ]
+        },
+        {
+          "vi": "Thành phố mà chúng tôi đến thăm rất sạch.",
+          "scene": "🏙️✨",
+          "hint": "The city which / that we visited",
+          "en": [
+            "The city which we visited was very clean.",
+            "The city that we visited was very clean.",
+            "The city we visited was very clean.",
+            "The city which we visited is very clean.",
+            "The city that we visited is very clean.",
+            "The city we visited is very clean."
+          ]
+        },
+        {
+          "vi": "Tôi biết một cô gái có anh trai là ca sĩ.",
+          "scene": "👧🎤",
+          "hint": "a girl whose brother …",
+          "en": [
+            "I know a girl whose brother is a singer."
+          ]
+        },
+        {
+          "vi": "Ô nhiễm không khí, vấn đề nghiêm trọng ở các thành phố lớn, ảnh hưởng đến sức khỏe.",
+          "scene": "🏭😷",
+          "hint": "Air pollution, which is …, affects …",
+          "en": [
+            "Air pollution, which is a serious problem in big cities, affects health.",
+            "Air pollution, which is a serious problem in big cities, affects people's health.",
+            "Air pollution, which is a serious problem in large cities, affects health.",
+            "Air pollution, which is a serious problem in large cities, affects people's health.",
+            "Air pollution, which is a serious problem in major cities, affects health.",
+            "Air pollution, which is a serious problem in major cities, affects people's health.",
+            "Air pollution, which is a serious issue in big cities, affects health.",
+            "Air pollution, which is a serious issue in big cities, affects people's health."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditionals",
+      "title_vi": "Câu điều kiện loại 1 & 2",
+      "title_en": "Conditionals (first & second)",
+      "band": "5.5",
+      "diagram": "conditional",
+      "summary_vi": "Loại 1: điều có thể xảy ra. Loại 2: điều không có thật ở hiện tại, giả định.",
+      "formula": [
+        "Loại 1: If + S + V (hiện tại), S + will + V",
+        "Loại 2: If + S + V2 / were, S + would + V",
+        "If đứng đầu câu → có dấu phẩy; đứng sau → không cần"
+      ],
+      "tips_vi": [
+        "Không dùng will trong mệnh đề if: If it will rain ✗ → If it rains ✓.",
+        "Loại 2 dùng were cho mọi ngôi: If I were you…",
+        "Task 2 hay dùng: If governments invested more in public transport, there would be less traffic."
+      ],
+      "examples": [
+        {
+          "en": "If it rains, we will stay at home.",
+          "vi": "Nếu trời mưa, chúng tôi sẽ ở nhà."
+        },
+        {
+          "en": "If I had more time, I would learn Chinese.",
+          "vi": "Nếu có nhiều thời gian hơn, tôi sẽ học tiếng Trung."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Nếu trời mưa, chúng tôi sẽ ở nhà.",
+          "scene": "🌧️🏠",
+          "hint": "If it rains, … will",
+          "en": [
+            "If it rains, we will stay at home.",
+            "If it rains, we will stay home.",
+            "We will stay at home if it rains.",
+            "We will stay home if it rains."
+          ]
+        },
+        {
+          "vi": "Nếu bạn học chăm chỉ, bạn sẽ đạt band 6.5.",
+          "scene": "📚🎯",
+          "hint": "If you study hard, you will …",
+          "en": [
+            "If you study hard, you will get band 6.5.",
+            "If you study hard, you will get a band 6.5.",
+            "If you study hard, you will achieve band 6.5.",
+            "If you study hard, you will reach band 6.5.",
+            "You will get band 6.5 if you study hard."
+          ]
+        },
+        {
+          "vi": "Nếu tôi là bạn, tôi sẽ nhận công việc đó.",
+          "scene": "💼🤔",
+          "hint": "If I were you, I would …",
+          "en": [
+            "If I were you, I would take that job.",
+            "If I were you, I would take the job.",
+            "If I were you, I would accept that job.",
+            "If I were you, I would accept the job."
+          ]
+        },
+        {
+          "vi": "Nếu tôi có nhiều tiền, tôi sẽ đi du lịch vòng quanh thế giới.",
+          "scene": "💰🌍",
+          "hint": "If I had …, I would travel",
+          "en": [
+            "If I had a lot of money, I would travel around the world.",
+            "If I had a lot of money, I would travel the world.",
+            "If I had lots of money, I would travel around the world.",
+            "If I had more money, I would travel around the world.",
+            "If I had much money, I would travel around the world."
+          ]
+        },
+        {
+          "vi": "Nếu bạn không ăn sáng, bạn sẽ thấy mệt.",
+          "scene": "🍳😴",
+          "hint": "If you don't …, you will feel",
+          "en": [
+            "If you don't eat breakfast, you will feel tired.",
+            "If you don't have breakfast, you will feel tired.",
+            "If you skip breakfast, you will feel tired."
+          ]
+        },
+        {
+          "vi": "Nếu chính phủ đầu tư vào giao thông công cộng, sẽ có ít tắc đường hơn.",
+          "scene": "🚇🚗",
+          "hint": "If the government invested …, there would be less …",
+          "en": [
+            "If the government invested in public transport, there would be less traffic congestion.",
+            "If governments invested in public transport, there would be less traffic congestion.",
+            "If the government invested in public transport, there would be fewer traffic jams.",
+            "If governments invested in public transport, there would be fewer traffic jams.",
+            "If the government invested in public transport, there would be less traffic.",
+            "If the government invested in public transportation, there would be less traffic congestion.",
+            "If the government invests in public transport, there will be less traffic congestion.",
+            "If governments invest in public transport, there will be less traffic congestion.",
+            "If the government invests in public transport, there will be fewer traffic jams.",
+            "If governments invest in public transport, there will be fewer traffic jams.",
+            "If the government invests in public transport, there will be less traffic.",
+            "If the government invests in public transportation, there will be less traffic congestion."
+          ]
+        },
+        {
+          "vi": "Bạn sẽ làm gì nếu bạn trúng xổ số?",
+          "scene": "🎟️❓",
+          "hint": "What would you do if you won …?",
+          "en": [
+            "What would you do if you won the lottery?"
+          ]
+        },
+        {
+          "vi": "Nếu bạn đun nóng nước đến 100 độ, nó sẽ sôi.",
+          "scene": "🔥💧",
+          "hint": "If you heat …, it will boil",
+          "en": [
+            "If you heat water to 100 degrees, it will boil.",
+            "If you heat water to 100 degrees, it boils.",
+            "If you heat water to 100 degrees Celsius, it will boil.",
+            "If you heat water to 100 degrees Celsius, it boils."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modals",
+      "title_vi": "Động từ khuyết thiếu: can / should / must",
+      "title_en": "Modal verbs",
+      "band": "5.0",
+      "diagram": "modal",
+      "summary_vi": "Nói khả năng, lời khuyên, sự bắt buộc — dùng nhiều để nêu quan điểm trong Task 2.",
+      "formula": [
+        "can + V: có thể (khả năng, được phép)",
+        "should + V: nên (lời khuyên)",
+        "must / have to + V: phải (bắt buộc)",
+        "mustn't: cấm · don't have to: không cần"
+      ],
+      "tips_vi": [
+        "Sau động từ khuyết thiếu luôn là V nguyên mẫu: should study (không phải should to study / should studies).",
+        "mustn't = cấm; don't have to = không bắt buộc — hai nghĩa khác nhau.",
+        "Task 2: Governments should…, This can lead to…, People must…"
+      ],
+      "examples": [
+        {
+          "en": "You should drink more water.",
+          "vi": "Bạn nên uống nhiều nước hơn."
+        },
+        {
+          "en": "Students must wear uniforms at this school.",
+          "vi": "Học sinh trường này phải mặc đồng phục."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Bạn nên ngủ sớm hơn.",
+          "scene": "🛏️🌙",
+          "hint": "should + go to bed",
+          "en": [
+            "You should go to bed earlier.",
+            "You should go to sleep earlier.",
+            "You should sleep earlier."
+          ]
+        },
+        {
+          "vi": "Tôi có thể bơi nhưng tôi không thể lái xe.",
+          "scene": "🏊🚗",
+          "hint": "can … but can't …",
+          "en": [
+            "I can swim but I can't drive."
+          ]
+        },
+        {
+          "vi": "Học sinh phải mặc đồng phục.",
+          "scene": "👔🏫",
+          "hint": "must / have to + wear",
+          "en": [
+            "Students must wear uniforms.",
+            "Students must wear uniform.",
+            "Students must wear a uniform.",
+            "Students must wear school uniforms.",
+            "Students must wear school uniform.",
+            "Students have to wear uniforms.",
+            "Students have to wear uniform.",
+            "Students have to wear a uniform.",
+            "Students have to wear school uniforms.",
+            "Students have to wear school uniform."
+          ]
+        },
+        {
+          "vi": "Bạn không được hút thuốc ở đây.",
+          "scene": "🚭",
+          "hint": "mustn't + smoke",
+          "en": [
+            "You mustn't smoke here.",
+            "You can't smoke here.",
+            "You are not allowed to smoke here."
+          ]
+        },
+        {
+          "vi": "Ngày mai bạn không cần phải đến sớm.",
+          "scene": "⏰🙂",
+          "hint": "don't have to + come",
+          "en": [
+            "You don't have to come early tomorrow.",
+            "You don't need to come early tomorrow.",
+            "You needn't come early tomorrow.",
+            "Tomorrow you don't have to come early."
+          ]
+        },
+        {
+          "vi": "Chính phủ nên xây thêm công viên.",
+          "scene": "🌳🏛️",
+          "hint": "should + build more",
+          "en": [
+            "The government should build more parks.",
+            "Governments should build more parks."
+          ]
+        },
+        {
+          "vi": "Trẻ em không nên chơi điện tử quá nhiều.",
+          "scene": "🧒🎮",
+          "hint": "shouldn't + play · too much",
+          "en": [
+            "Children shouldn't play video games too much.",
+            "Children shouldn't play computer games too much.",
+            "Children shouldn't play games too much.",
+            "Kids shouldn't play video games too much.",
+            "Children shouldn't spend too much time playing video games."
+          ]
+        },
+        {
+          "vi": "Việc này có thể dẫn đến nhiều vấn đề sức khỏe.",
+          "scene": "⚠️🏥",
+          "hint": "can lead to",
+          "en": [
+            "This can lead to many health problems.",
+            "This can lead to a lot of health problems.",
+            "This can lead to many health issues.",
+            "This may lead to many health problems.",
+            "This could lead to many health problems.",
+            "This can cause many health problems.",
+            "This may cause many health problems.",
+            "This could cause many health problems.",
+            "This can result in many health problems."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linking",
+      "title_vi": "Từ nối: because, although, however, therefore",
+      "title_en": "Linking words",
+      "band": "5.5",
+      "diagram": "linking",
+      "summary_vi": "Nối ý cho mạch lạc: nguyên nhân, tương phản, kết quả, thêm ý.",
+      "formula": [
+        "Nguyên nhân: because + mệnh đề · because of + danh từ",
+        "Tương phản: although + mệnh đề, … · However, …",
+        "Kết quả: …, so … · Therefore, …",
+        "Thêm ý: Moreover, … · In addition, …"
+      ],
+      "tips_vi": [
+        "Although và but không đi cùng một câu: Although it rained, but… ✗.",
+        "because + S + V; because of + danh từ: because of the rain.",
+        "However / Therefore / Moreover đứng đầu câu và có dấu phẩy sau."
+      ],
+      "examples": [
+        {
+          "en": "Although it was raining, we went out.",
+          "vi": "Mặc dù trời mưa, chúng tôi vẫn ra ngoài."
+        },
+        {
+          "en": "Public transport is cheap. Therefore, many people use it.",
+          "vi": "Giao thông công cộng rẻ. Vì vậy, nhiều người sử dụng."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Tôi ở nhà vì trời mưa.",
+          "scene": "🏠🌧️",
+          "hint": "because + it was raining",
+          "en": [
+            "I stayed at home because it was raining.",
+            "I stayed home because it was raining.",
+            "I stayed at home because it rained.",
+            "I stayed home because it rained.",
+            "I stayed at home because of the rain.",
+            "I stayed home because of the rain.",
+            "I stay at home because it is raining.",
+            "I am staying at home because it is raining."
+          ]
+        },
+        {
+          "vi": "Mặc dù anh ấy giàu, anh ấy không hạnh phúc.",
+          "scene": "💰😞",
+          "hint": "Although he is rich, …",
+          "en": [
+            "Although he is rich, he is not happy.",
+            "Though he is rich, he is not happy.",
+            "Even though he is rich, he is not happy."
+          ]
+        },
+        {
+          "vi": "Chuyến bay bị hoãn vì thời tiết xấu.",
+          "scene": "✈️⛈️",
+          "hint": "was delayed because of + danh từ",
+          "en": [
+            "The flight was delayed because of bad weather.",
+            "The flight was delayed because of the bad weather.",
+            "The flight was delayed due to bad weather.",
+            "The flight was delayed due to the bad weather.",
+            "The flight was delayed because the weather was bad."
+          ]
+        },
+        {
+          "vi": "Giá vé rẻ. Vì vậy, nhiều người sử dụng xe buýt.",
+          "scene": "🎫🚌",
+          "hint": "Therefore, …",
+          "en": [
+            "Tickets are cheap. Therefore, many people use buses.",
+            "Tickets are cheap. Therefore, many people use the bus.",
+            "The tickets are cheap. Therefore, many people use buses.",
+            "The tickets are cheap. Therefore, many people use the bus.",
+            "Ticket prices are low. Therefore, many people use buses.",
+            "Ticket prices are low. Therefore, many people use the bus.",
+            "Ticket prices are cheap. Therefore, many people use buses.",
+            "Fares are cheap. Therefore, many people use buses.",
+            "Tickets are cheap. As a result, many people use buses.",
+            "Tickets are cheap. As a result, many people use the bus."
+          ]
+        },
+        {
+          "vi": "Sống ở thành phố rất tiện lợi. Tuy nhiên, chi phí sinh hoạt cao.",
+          "scene": "🏙️💸",
+          "hint": "However, the cost of living …",
+          "en": [
+            "Living in a city is very convenient. However, the cost of living is high.",
+            "Living in the city is very convenient. However, the cost of living is high.",
+            "Living in cities is very convenient. However, the cost of living is high.",
+            "Living in a city is very convenient. However, living costs are high.",
+            "Living in the city is very convenient. However, living costs are high.",
+            "City life is very convenient. However, the cost of living is high."
+          ]
+        },
+        {
+          "vi": "Tôi mệt nên tôi đi ngủ sớm.",
+          "scene": "😴🛏️",
+          "hint": "…, so …",
+          "en": [
+            "I was tired, so I went to bed early.",
+            "I was tired, so I went to sleep early.",
+            "I was tired, so I slept early.",
+            "I am tired, so I am going to bed early.",
+            "I am tired, so I go to bed early."
+          ]
+        },
+        {
+          "vi": "Học trực tuyến tiết kiệm thời gian. Hơn nữa, nó rẻ hơn.",
+          "scene": "💻⏱️",
+          "hint": "Moreover / In addition, …",
+          "en": [
+            "Online learning saves time. Moreover, it is cheaper.",
+            "Online learning saves time. Moreover, it is also cheaper.",
+            "Online learning saves time. In addition, it is cheaper.",
+            "Online learning saves time. Furthermore, it is cheaper.",
+            "Online learning saves time. What is more, it is cheaper.",
+            "Online study saves time. Moreover, it is cheaper.",
+            "Studying online saves time. Moreover, it is cheaper.",
+            "Studying online saves time. In addition, it is cheaper.",
+            "Learning online saves time. Moreover, it is cheaper."
+          ]
+        },
+        {
+          "vi": "Mặc dù bị mất điện, chúng tôi vẫn hoàn thành bài kiểm tra.",
+          "scene": "💡❌📝",
+          "hint": "Although there was a power cut, … still …",
+          "en": [
+            "Although there was a power cut, we still finished the test.",
+            "Although there was a power cut, we still completed the test.",
+            "Although there was a power cut, we finished the test.",
+            "Although there was a power outage, we still finished the test.",
+            "Although there was a power outage, we still completed the test.",
+            "Although there was a blackout, we still finished the test.",
+            "Although the power went out, we still finished the test.",
+            "Although the electricity went out, we still finished the test.",
+            "Even though there was a power cut, we still finished the test.",
+            "Even though there was a power outage, we still finished the test.",
+            "Despite the power cut, we still finished the test.",
+            "Despite the power outage, we still finished the test."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trends",
+      "title_vi": "Miêu tả xu hướng (Task 1)",
+      "title_en": "Describing trends",
+      "band": "5.5",
+      "diagram": "trend",
+      "summary_vi": "Tăng, giảm, ổn định, dao động, đạt đỉnh — bộ câu cần thiết nhất cho biểu đồ đường và cột.",
+      "formula": [
+        "S + increased / rose / grew · decreased / fell / dropped",
+        "+ sharply · significantly · slightly · gradually · steadily",
+        "There was a + sharp / slight + increase / decrease + in + N",
+        "from … to … · remained stable · fluctuated · peaked at …"
+      ],
+      "tips_vi": [
+        "Biểu đồ về năm đã qua → quá khứ đơn: rose (không phải rised), fell (không phải falled).",
+        "rise–rose–risen · fall–fell–fallen · grow–grew–grown.",
+        "Động từ + trạng từ: increased sharply. Danh từ + tính từ: a sharp increase."
+      ],
+      "examples": [
+        {
+          "en": "The number of visitors rose sharply from 2 million to 5 million.",
+          "vi": "Số khách tăng mạnh từ 2 triệu lên 5 triệu."
+        },
+        {
+          "en": "There was a slight decrease in sales in 2015.",
+          "vi": "Doanh số giảm nhẹ vào năm 2015."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Số lượng du khách tăng mạnh từ năm 2010 đến năm 2020.",
+          "scene": "🧳📈",
+          "hint": "The number of tourists rose sharply from … to …",
+          "en": [
+            "The number of tourists increased sharply from 2010 to 2020.",
+            "The number of tourists rose sharply from 2010 to 2020.",
+            "The number of tourists grew sharply from 2010 to 2020.",
+            "The number of tourists increased sharply between 2010 and 2020.",
+            "The number of tourists rose sharply between 2010 and 2020.",
+            "The number of tourists grew sharply between 2010 and 2020.",
+            "The number of tourists increased significantly from 2010 to 2020.",
+            "The number of tourists increased dramatically from 2010 to 2020.",
+            "The number of visitors increased sharply from 2010 to 2020.",
+            "The number of visitors rose sharply from 2010 to 2020.",
+            "The number of visitors increased sharply between 2010 and 2020.",
+            "The number of visitors rose sharply between 2010 and 2020."
+          ]
+        },
+        {
+          "vi": "Doanh số giảm nhẹ vào năm 2015.",
+          "scene": "💵📉",
+          "hint": "Sales fell slightly · hoặc There was a slight decrease in …",
+          "en": [
+            "Sales decreased slightly in 2015.",
+            "Sales fell slightly in 2015.",
+            "Sales dropped slightly in 2015.",
+            "Sales declined slightly in 2015.",
+            "In 2015, sales decreased slightly.",
+            "In 2015, sales fell slightly.",
+            "In 2015, sales dropped slightly.",
+            "There was a slight decrease in sales in 2015.",
+            "There was a slight fall in sales in 2015.",
+            "There was a slight drop in sales in 2015."
+          ]
+        },
+        {
+          "vi": "Giá xăng giữ ổn định trong ba năm.",
+          "scene": "⛽➖",
+          "hint": "remained stable · for three years",
+          "en": [
+            "The price of petrol remained stable for three years.",
+            "The price of petrol remained stable for 3 years.",
+            "The price of petrol remained steady for three years.",
+            "The price of petrol remained unchanged for three years.",
+            "The price of petrol stayed stable for three years.",
+            "Petrol prices remained stable for three years.",
+            "Petrol prices remained steady for three years.",
+            "Petrol prices stayed stable for three years.",
+            "The price of gasoline remained stable for three years.",
+            "Gasoline prices remained stable for three years.",
+            "The price of gas remained stable for three years.",
+            "Gas prices remained stable for three years.",
+            "The price of fuel remained stable for three years.",
+            "Fuel prices remained stable for three years."
+          ]
+        },
+        {
+          "vi": "Có một sự tăng đáng kể về số người dùng internet.",
+          "scene": "🌐📈",
+          "hint": "There was a significant increase in the number of …",
+          "en": [
+            "There was a significant increase in the number of internet users.",
+            "There was a significant rise in the number of internet users.",
+            "There was a considerable increase in the number of internet users.",
+            "There was a significant growth in the number of internet users.",
+            "There was significant growth in the number of internet users.",
+            "There has been a significant increase in the number of internet users."
+          ]
+        },
+        {
+          "vi": "Tỷ lệ thất nghiệp giảm từ 8% xuống 5%.",
+          "scene": "👷📉",
+          "hint": "fell from 8% to 5%",
+          "en": [
+            "The unemployment rate fell from 8% to 5%.",
+            "The unemployment rate decreased from 8% to 5%.",
+            "The unemployment rate dropped from 8% to 5%.",
+            "The unemployment rate declined from 8% to 5%.",
+            "The unemployment rate fell from 8 percent to 5 percent.",
+            "The unemployment rate decreased from 8 percent to 5 percent.",
+            "The unemployment rate dropped from 8 percent to 5 percent.",
+            "The rate of unemployment fell from 8% to 5%.",
+            "The rate of unemployment decreased from 8% to 5%.",
+            "Unemployment fell from 8% to 5%.",
+            "Unemployment decreased from 8% to 5%."
+          ]
+        },
+        {
+          "vi": "Lượng điện tiêu thụ tăng dần qua các năm.",
+          "scene": "💡📈",
+          "hint": "increased gradually · over the years",
+          "en": [
+            "Electricity consumption increased gradually over the years.",
+            "Electricity consumption rose gradually over the years.",
+            "Electricity consumption grew gradually over the years.",
+            "Electricity consumption gradually increased over the years.",
+            "Electricity consumption gradually rose over the years.",
+            "Electricity consumption increased steadily over the years.",
+            "Electricity consumption rose steadily over the years.",
+            "Electricity consumption has increased gradually over the years.",
+            "The consumption of electricity increased gradually over the years.",
+            "The consumption of electricity rose gradually over the years.",
+            "The amount of electricity consumed increased gradually over the years.",
+            "Electricity use increased gradually over the years."
+          ]
+        },
+        {
+          "vi": "Số lượng sinh viên dao động trong khoảng 500 đến 600.",
+          "scene": "🧑‍🎓〰️",
+          "hint": "fluctuated between … and …",
+          "en": [
+            "The number of students fluctuated between 500 and 600.",
+            "The number of students fluctuated between 500 and 600 students.",
+            "The number of students fluctuated from 500 to 600.",
+            "Student numbers fluctuated between 500 and 600."
+          ]
+        },
+        {
+          "vi": "Năm 2020, doanh thu đạt đỉnh ở mức 10 triệu đô la.",
+          "scene": "💰🏔️",
+          "hint": "peaked at · reached a peak of",
+          "en": [
+            "In 2020, revenue peaked at 10 million dollars.",
+            "In 2020, revenue peaked at $10 million.",
+            "In 2020, revenue peaked at 10 million US dollars.",
+            "In 2020, the revenue peaked at 10 million dollars.",
+            "In 2020, the revenue peaked at $10 million.",
+            "In 2020, revenue reached a peak of 10 million dollars.",
+            "In 2020, revenue reached a peak of $10 million.",
+            "In 2020, revenue reached its peak at 10 million dollars.",
+            "In 2020, revenue reached its peak of $10 million.",
+            "Revenue peaked at 10 million dollars in 2020.",
+            "Revenue peaked at $10 million in 2020.",
+            "Revenue reached a peak of 10 million dollars in 2020.",
+            "Revenue reached a peak of $10 million in 2020."
+          ]
+        }
+      ]
+    }
+  ]
+}
