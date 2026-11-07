@@ -1,6 +1,6 @@
 import { Check, Languages, PenLine } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import { EmptyState } from '@/components/EmptyState';
 import { ErrorState } from '@/components/ErrorState';
@@ -9,11 +9,14 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
+import { ExamEditor } from '@/features/writing/ExamEditor';
 import { fetchHskLevels, useSaveSubmission, useWritingProfile, useWritingTasks } from '@/features/writing/api';
 import { toUserMessage } from '@/lib/errors';
 import { splitWords } from '@/lib/vocab/words';
 import { analyze, usesWord, type Lang } from '@/lib/writing/analyze';
 import { targetWords, type WritingTask } from '@/lib/writing/tasks';
+import { guidedForTask, visiblePrompt } from '@/lib/writing/guided';
+import { TaskChart } from '@/features/writing/guided/TaskChart';
 import { cn } from '@/lib/utils';
 
 const TIPS: Record<Lang, Record<WritingTask['kind'], string>> = {
@@ -51,6 +54,7 @@ function writeDraft(taskId: string, d: { body: string; targets: string[]; second
 
 export default function WritingEditorPage() {
   const { taskId = '' } = useParams();
+  const [params] = useSearchParams();
   const tasks = useWritingTasks();
   const task = tasks.data?.find((t) => t.id === taskId);
   if (tasks.isError) return <ErrorState error={tasks.error} onRetry={() => tasks.refetch()} />;
@@ -67,6 +71,7 @@ export default function WritingEditorPage() {
         }
       />
     );
+  if (params.get('exam') === '1' && task.exam === 'ielts' && task.kind === 'essay') return <ExamEditor key={task.id} task={task} />;
   return <Editor key={task.id} task={task} />;
 }
 
@@ -138,8 +143,13 @@ function Editor({ task }: { task: WritingTask }) {
           <Card>
             <CardContent className="space-y-2 pt-5">
               <p className={cn(lang === 'zh' && 'text-lg')} lang={lang === 'zh' ? 'zh-CN' : 'en'} data-testid="task-prompt">
-                {task.prompt}
+                {visiblePrompt(task.prompt)}
               </p>
+              {guidedForTask(task.id)?.chart && (
+                <div className="rounded-md border p-3">
+                  <TaskChart chart={guidedForTask(task.id)!.chart!} />
+                </div>
+              )}
               {task.prompt_vi && (
                 <>
                   <button type="button" onClick={() => setShowVi((v) => !v)} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline">

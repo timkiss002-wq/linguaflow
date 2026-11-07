@@ -339,3 +339,119 @@ Supabase Edge Function `writing-feedback`; cách cài đặt key xem [DEPLOY.md 
   - lỗi lặp lại hiện ở trang điểm yếu;
   - tắt được trong Settings.
 - **Chưa làm**: cập nhật trình độ Elo từ điểm AI (điểm AI chưa đủ ổn định để đưa vào level test).
+
+## 16. W1 — viết theo khung (IELTS Task 2)
+
+Trang **Writing → IELTS frames** (`/writing/guided`), cho người chưa biết viết: học **một khung cố định cho mỗi dạng
+đề**, dùng lại cho mọi đề cùng dạng, rồi dịch bài mẫu từng câu từ tiếng Việt cho đến khi tự viết được trọn bài.
+
+- **Nội dung** (`content/ielts-guided/*.json`, không cần database — nằm trong một chunk tải khi mở trang):
+  - `frames.json`: 5 dạng (Agree/Disagree, Discuss both views, Advantages/Disadvantages, Problem–Solution,
+    Two-part). Mỗi khung 13–15 câu; mỗi câu có chức năng (VI/EN), mẫu câu có chỗ trống `___` và các **cụm cố định**
+    phải có (mỗi cụm có thể có vài cách viết thay thế, ví dụ agree/disagree).
+  - 2 đề mỗi dạng (10 đề). Mỗi câu: bản tiếng Việt + 3 bản tiếng Anh band **5.5 / 6.5 / 7.5** — cùng ý, khác độ
+    phức tạp. Mỗi bài mẫu ≥ 245 từ ở mọi band.
+  - Mỗi đề trỏ tới một `writing_tasks` (essay, IELTS) cùng nội dung, nên bài lưu được phân tích và AI chấm như bài
+    IELTS. 5 đề mới được thêm vào `content/writing-tasks.json`; nếu database chưa chạy lại seed, bài vẫn lưu được
+    (không gắn đề).
+  - `src/lib/writing/guided.test.ts` kiểm tra: câu mẫu đúng thứ tự khung, **mọi câu mẫu ở mọi band chứa đủ cụm cố
+    định**, viết hoa đầu câu, có dấu chấm, đủ độ dài, đề khớp với writing task.
+- **Các mức** (một đề → chọn band → chọn mức):
+  - 0 — *Học khung*: chỉ có chức năng câu + mẫu câu đã che cụm cố định; gõ lại cụm cố định (sai chính tả không qua).
+  - 1 — câu tiếng Việt + mẫu câu (cụm cố định in đậm) + 4 từ gợi ý + dàn khung bên cạnh.
+  - 2 — câu tiếng Việt + chức năng câu.
+  - 3 — chỉ câu tiếng Việt.
+  - 4 — tự viết cả bài trong trình soạn thường (`/writing/new/:taskId`).
+- **Kiểm tra từng câu** (`checkSentence`, thuần, không AI):
+  - cụm cố định: so từng từ, bỏ qua hoa/thường và dấu câu, cho phép lỗi chính tả nhỏ nhưng báo ra;
+  - so với cả 3 câu mẫu, lấy câu gần nhất (độ giống %, so sánh từng từ như bài chính tả);
+  - "từ quan trọng chưa dùng" = từ nội dung có mặt ở **cả ba** câu mẫu (ý cốt lõi), nên từ đồng nghĩa chỉ có ở một
+    band không bị coi là thiếu;
+  - lưu ý hình thức: viết hoa đầu câu, dấu chấm, chữ "I", không viết tắt trong essay, câu quá ngắn;
+  - kết luận: *Rất tốt* (≥ 85%), *Gần đúng* (≥ 55%), *Khác câu mẫu* (vẫn có thể đúng — tự so sánh), *Thiếu khung*.
+- Làm dở được lưu trên thiết bị (localStorage) theo đề + band + mức. Hết bài: số liệu, bài của bạn (sửa được) cạnh
+  bài mẫu 3 band; **Save & analyse** lưu vào `writing_submissions` với `metrics.guided` (đề, band, mức, độ giống
+  trung bình) → trang kết quả có phân tích và nút AI chấm band. Danh sách đề hiện kết quả tốt nhất mỗi mức.
+
+## 17. W2 — luyện đề IELTS Reading & Listening
+
+Trang **Lessons → IELTS tests** (`/ielts`). Đề do LinguaFlow tự soạn đúng format IELTS (không chép đề Cambridge).
+
+- **Nội dung** (`content/ielts-tests/*.json`, nằm trong app, không cần seed):
+  - `reading-1`: Academic Reading, 3 bài đọc, 40 câu — True/False/Not Given, Yes/No/Not Given, matching headings,
+    multiple choice, matching information, điền từ (note / sentence / summary).
+  - `listening-1`: 4 phần, 40 câu — form completion, multiple choice, matching, note completion. Âm thanh là giọng
+    đọc của trình duyệt: mỗi người nói một giọng (`assignVoices`: đúng giới tính nếu máy có, nếu thiếu giọng thì đổi
+    cao độ), đọc từng câu một để trình duyệt không cắt câu dài.
+  - Mỗi câu hỏi có đáp án (điền từ: mọi cách viết được chấp nhận), giải thích tiếng Việt (bẫy thường gặp) và một
+    **đoạn trích nguyên văn** chứa đáp án. `src/lib/ielts/tests.test.ts` kiểm tra đủ 40 câu, đánh số liên tục, đáp án
+    nằm trong các lựa chọn, mọi đáp án điền từ đều được chấm đúng, và mọi đoạn trích có thật trong bài / transcript.
+- **Hai chế độ**: *Thi thử* cả bài (đếm ngược 60 / 30 phút, hết giờ tự nộp; Listening mỗi phần nghe một lần) và
+  *Luyện tập* cả bài hoặc từng phần (không giới hạn giờ, nghe lại, tạm dừng, chỉnh tốc độ). Bài làm dở lưu trên
+  thiết bị.
+- **Chấm** (`markQuestion`, thuần): lựa chọn so khớp chính xác; điền từ bỏ qua hoa/thường, dấu, gạch nối, mạo từ
+  đầu câu, dấu cách trong số — nhưng **quá số từ là sai** như thi thật (số không tính khi đề cho "AND/OR A NUMBER"),
+  và sai chính tả cũng sai (app nói rõ "sai chính tả" để người học biết mình nghe/đọc đúng).
+- **Kết quả**: số câu đúng, band ước lượng (bảng quy đổi thông dụng, chỉ khi làm đủ 40 câu), còn thiếu bao nhiêu câu
+  để đạt 6.5, thống kê theo dạng câu hỏi; mỗi câu có đáp án, giải thích, nút *Xem chỗ có đáp án* tô màu đoạn trích
+  trong bài đọc / transcript (transcript chỉ hiện sau khi nộp).
+- **Lưu trữ**: bảng `ielts_attempts` (migration `20261115000000_ielts_tests.sql`, RLS: mỗi người chỉ đọc / thêm /
+  xoá bài của mình) — câu trả lời và kết quả từng câu. Trang `/ielts` hiện lịch sử, band tốt nhất và dạng câu yếu
+  nhất. Nếu database chưa có bảng, đề vẫn làm được, chỉ không lưu lịch sử.
+- **Strengths & Weaknesses**: dạng câu hỏi đúng < 60% (từ 5 câu) là điểm yếu, ≥ 85% (từ 8 câu) là điểm mạnh; mất
+  điểm vì chính tả / quá số từ (từ 3 câu) có mục riêng.
+- Thêm đề: tạo `content/ielts-tests/<id>.json` theo cùng cấu trúc và thêm vào `TESTS` trong `src/lib/ielts/tests.ts`.
+
+## 18. W3 — thi thử Writing và lỗi hay lặp lại
+
+- **Thi thử Task 2** (`/writing/new/:taskId?exam=1`, chỉ cho đề essay IELTS; vào từ thẻ đề, từ *IELTS frames* —
+  nút *Thi thử 40′* và Level 4 — và từ khung IELTS trên trang Writing):
+  - màn hình bắt đầu nêu luật; đồng hồ đếm ngược **40 phút tính theo giờ thật** (lưu thời điểm bắt đầu, nên tải lại
+    trang không dừng được đồng hồ); không có bản dịch, từ gợi ý, khung bài; tắt kiểm tra chính tả của trình duyệt;
+    nhắc khi còn 10 / 5 / 1 phút;
+  - hết giờ: khóa ô viết và **tự nộp** (bài trống thì không lưu); nộp sớm dưới 250 từ thì hỏi lại;
+  - bài lưu như bài viết thường, có thêm `metrics.exam = { minutes, timeUp }`; trang kết quả của bài thi đưa phần AI
+    lên đầu và **tự gọi AI chấm** (chỉ khi người học đã đồng ý dùng AI feedback trước đó; mỗi bài một lần).
+- **Lỗi hay lặp lại** (`/writing/mistakes`, `src/lib/writing/mistakes.ts`, thuần, có test) — từ phản hồi AI đã lưu
+  của các bài tiếng Anh:
+  - band từng bài theo 4 tiêu chí (TR / CC / LR / GRA), trung bình 3 bài gần nhất và thay đổi so với 3 bài trước,
+    tiêu chí yếu nhất;
+  - nhóm lỗi xếp theo **số bài có lỗi đó** (rồi số lỗi), mỗi nhóm có tên tiếng Việt và 3 ví dụ mới nhất của chính
+    người học (câu gốc → câu sửa + giải thích); bỏ các "lỗi" mà câu gốc trùng câu sửa;
+  - **luyện sửa**: câu gốc của bạn được đặt lại vào ô, bạn tự sửa; đúng khi giống bản sửa của AI ≥ 95% (bỏ qua dấu
+    câu), sai thì so sánh từng từ. Mỗi lượt tối đa 15 câu, câu chưa sửa đúng lần nào được hỏi trước (nhớ trên thiết
+    bị).
+- Không cần thay đổi database.
+
+## 19. W4 — Writing Task 1 (mô tả biểu đồ)
+
+Task 1 Academic dùng đúng cách học của W1 (khung cố định → dịch từng câu → bớt gợi ý → thi thử), trong mục
+*IELTS frames*, phần "Task 1".
+
+- **5 dạng** (`content/ielts-guided/frames.json`, `task: 1`): line graph, bar chart, pie charts, table, process
+  diagram. Mỗi khung 9–10 câu trong 4 đoạn có tên riêng (`paras`): mở bài · **overview** (đặc điểm chính, không có số
+  liệu) · chi tiết 1 · chi tiết 2. Cụm cố định: *The line graph illustrates…*, *Overall,…*, *It is also clear that…*,
+  *This means that…*, *By contrast,…*; quy trình dùng câu bị động.
+- **Đề** (`content/ielts-guided/task1.json`): 1 đề mỗi dạng, bài mẫu 3 band ≥ 150 từ, mỗi đề có `chart` — dữ liệu
+  của hình. Hình được vẽ trong app (`TaskChart`: SVG cho đường / cột / tròn, bảng HTML, sơ đồ các bước), màu theo bảng
+  màu đã kiểm tra (`--viz-1…4`, có bản cho dark mode), mọi chuỗi số liệu đều có nhãn chữ và nút xem dạng bảng. Khi
+  luyện, hình nằm cạnh câu đang dịch.
+- **AI chấm được Task 1**: AI không nhìn thấy hình, nên đề Task 1 trong `writing-tasks.json` có thêm dòng
+  `[Chart data] …` (tạo bởi `chartDataText`, test kiểm tra khớp nội dung). App ẩn dòng này khi hiển thị
+  (`visiblePrompt`), nhưng lưu kèm bài viết để AI chấm biết số liệu.
+- **Thi thử Task 1**: 20 phút, tối thiểu 150 từ (`TASK_RULES`); trình soạn thường và thi thử đều hiện hình.
+- 5 đề Task 1 mới nằm trong seed → chạy `npx supabase db push --include-seed`.
+
+## 20. W5 — thêm đề và Task 1 bản đồ
+
+- **Reading/Listening đề 2** (`content/ielts-tests/reading-2.json`, `listening-2.json`): đủ 40 câu, đủ các dạng câu
+  hỏi như đề 1 (TFNG, YNNG, headings, matching, MCQ, điền từ). `tests.test.ts` kiểm tra mọi đề: đủ 40 câu, mã không
+  trùng, đáp án nằm đúng trong bài/script, bài đọc đủ dài.
+- **Thêm đề Writing**: mỗi dạng Task 2 có 3 đề, mỗi dạng biểu đồ Task 1 có 2 đề (tổng 10 đề mới), đều có 3 band và
+  câu tiếng Việt. Biểu đồ cột không phải phần trăm (ví dụ "giờ mỗi tuần") hiện đơn vị dưới hình và trong `[Chart data]`.
+- **Task 1 dạng bản đồ** (`type: "map"`): hai bản đồ trước – sau trên lưới 100 × 70 (`MapFeature`: nhà, đồng ruộng,
+  cây xanh, nước, đường, bãi đỗ), mỗi khu vực ghi tên trực tiếp, có mũi tên hướng Bắc. Khung 11 câu: *The maps
+  illustrate…*, *Overall, … was transformed from … into …*, *… was located in …*, *To the … of …, there was …*,
+  *By …, … had been replaced by …*, *… was built …*, *Finally, … remained unchanged.* Vị trí trong `[Chart data]`
+  (north-west, along the southern edge…) do `mapPosition` tính từ toạ độ, để AI chấm biết bản đồ có gì ở đâu.
+- Đề mới nằm trong seed → chạy `npx supabase db push --include-seed`.

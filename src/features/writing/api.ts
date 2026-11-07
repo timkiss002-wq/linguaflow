@@ -64,22 +64,26 @@ export function useSaveSubmission() {
   const user = useUser();
   return useMutation({
     mutationFn: async (v: { language: Lang; taskId: string; title: string; prompt: string; targets: string[]; body: string; metrics: Metrics; seconds: number }) => {
-      const { data, error } = await getSupabase()
-        .from('writing_submissions')
-        .insert({
-          language: v.language,
-          task_id: v.taskId,
-          title: v.title,
-          prompt: v.prompt,
-          target_words: v.targets,
-          body: v.body,
-          metrics: v.metrics as unknown as NonNullable<Json>,
-          duration_seconds: v.seconds,
-        })
-        .select('id')
-        .single();
+      const insert = (taskId: string | null) =>
+        getSupabase()
+          .from('writing_submissions')
+          .insert({
+            language: v.language,
+            task_id: taskId,
+            title: v.title,
+            prompt: v.prompt,
+            target_words: v.targets,
+            body: v.body,
+            metrics: v.metrics as unknown as NonNullable<Json>,
+            duration_seconds: v.seconds,
+          })
+          .select('id')
+          .single();
+      let { data, error } = await insert(v.taskId);
+      // the prompt is not in the database yet (seed not re-run after an update): keep the text, without the link
+      if (error?.code === '23503') ({ data, error } = await insert(null));
       if (error) throw error;
-      return data.id;
+      return data!.id;
     },
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: keys.list(user.id) });

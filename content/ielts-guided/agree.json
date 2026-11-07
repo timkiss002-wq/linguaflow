@@ -1,0 +1,346 @@
+{
+  "prompts": [
+    {
+      "id": "g-tech",
+      "type": "agree",
+      "task": "en-w-ielts-tech",
+      "title": "Technology and social life",
+      "prompt": "Some people believe that modern technology has made people less social. To what extent do you agree or disagree?",
+      "prompt_vi": "Có ý kiến cho rằng công nghệ hiện đại đã khiến con người ít giao tiếp xã hội hơn. Bạn đồng ý hay không đồng ý ở mức độ nào?",
+      "ideas_vi": [
+        "Quan điểm: đồng ý hoàn toàn",
+        "Lý do 1: dành quá nhiều thời gian cho điện thoại → gia đình ít nói chuyện",
+        "Lý do 2: làm mọi việc online không cần gặp ai → mất kỹ năng giao tiếp, cô đơn",
+        "Đề xuất: giới hạn thời gian dùng thiết bị"
+      ],
+      "sentences": [
+        [
+          "a-i1",
+          "Người ta thường cho rằng công nghệ hiện đại đã khiến con người ít hòa đồng hơn và ngày càng xa cách nhau.",
+          "It is often argued that modern technology has made people less social and more distant from each other.",
+          "It is often argued that modern technology has made people less sociable and more isolated from one another.",
+          "It is often argued that modern technology has made people less sociable, leaving many increasingly isolated from those around them."
+        ],
+        [
+          "a-i2",
+          "Tôi hoàn toàn đồng ý với quan điểm này vì hai lý do chính.",
+          "I completely agree with this view for two main reasons.",
+          "I completely agree with this view for two main reasons.",
+          "I completely agree with this view for two main reasons."
+        ],
+        [
+          "a-b1",
+          "Lý do thứ nhất là nhiều người dành quá nhiều thời gian rảnh cho điện thoại thông minh thay vì nói chuyện trực tiếp với nhau.",
+          "The first reason is that many people spend too much free time on their smartphones instead of talking to each other face to face.",
+          "The first reason is that many people now spend a large part of their free time on smartphones rather than talking to each other face to face.",
+          "The first reason is that a growing number of people devote much of their leisure time to smartphones rather than engaging in face-to-face conversation."
+        ],
+        [
+          "a-b2",
+          "Điều này là vì mạng xã hội và trò chơi trực tuyến được thiết kế để thu hút sự chú ý của người dùng càng lâu càng tốt.",
+          "This is because social media and online games are made to keep users looking at their screens for as long as possible.",
+          "This is because social media platforms and online games are designed to hold users' attention for as long as possible.",
+          "This is because social media platforms and online games are deliberately designed to capture users' attention for as long as possible."
+        ],
+        [
+          "a-b3",
+          "Nói cách khác, càng dành nhiều thời gian cho màn hình thì càng có ít thời gian cho gia đình và bạn bè.",
+          "In other words, the more time people spend on screens, the less time they have for their family and friends.",
+          "In other words, the more time people spend in front of a screen, the less time they have for their family and friends.",
+          "In other words, every hour spent in front of a screen is an hour taken away from family and friends."
+        ],
+        [
+          "a-b4",
+          "Ví dụ, ở nhiều gia đình, cha mẹ và con cái ngồi cùng nhau trong bữa tối nhưng mỗi người lại nhìn vào điện thoại của riêng mình.",
+          "For example, in many families, parents and children sit together at dinner, but each person looks at their own phone.",
+          "For example, in many families, parents and children sit at the same dinner table, but each of them is looking at their own phone.",
+          "For example, it is common to see parents and children sitting at the same dinner table, each absorbed in their own phone."
+        ],
+        [
+          "a-b5",
+          "Kết quả là, các thành viên trong gia đình ít trò chuyện với nhau hơn và mối quan hệ giữa họ dần yếu đi.",
+          "As a result, family members talk to each other less and their relationships become weaker.",
+          "As a result, family members communicate less with each other and their relationships gradually become weaker.",
+          "As a result, meaningful communication within the family declines and relationships gradually weaken."
+        ],
+        [
+          "a-c1",
+          "Một lý do khác là công nghệ cho phép con người làm nhiều việc hằng ngày mà không cần tiếp xúc với người khác.",
+          "Another reason is that technology allows people to do many daily tasks without meeting other people.",
+          "Another reason is that technology allows people to complete many daily tasks without any contact with other people.",
+          "Another reason is that technology enables people to carry out many everyday tasks without any human contact at all."
+        ],
+        [
+          "a-c2",
+          "Điều này là vì ngày nay chúng ta có thể mua sắm, làm việc và thậm chí học tập trực tuyến ngay tại nhà.",
+          "This is because today we can shop, work and even study online at home.",
+          "This is because nowadays we can shop, work and even study online from the comfort of our homes.",
+          "This is because shopping, working and even studying can now be done online from the comfort of one's own home."
+        ],
+        [
+          "a-c3",
+          "Ngoài ra, nhiều dịch vụ như ngân hàng hay giao đồ ăn chỉ cần vài cú nhấp chuột.",
+          "In addition, many services such as banking or ordering food only need a few clicks.",
+          "In addition, many services such as banking and food delivery can be used with just a few clicks.",
+          "In addition, a wide range of services, from banking to food delivery, are now available at the click of a button."
+        ],
+        [
+          "a-c4",
+          "Chẳng hạn, một nhân viên làm việc tại nhà có thể cả ngày không nói chuyện trực tiếp với ai.",
+          "For instance, an office worker who works from home may not talk to anyone face to face for the whole day.",
+          "For instance, an office worker who works from home may go through an entire day without speaking to anyone in person.",
+          "For instance, an employee working remotely may go an entire day without having a single conversation in person."
+        ],
+        [
+          "a-c5",
+          "Vì vậy, con người dần mất đi kỹ năng giao tiếp và dễ cảm thấy cô đơn hơn.",
+          "Therefore, people slowly lose their communication skills and feel lonely more easily.",
+          "Therefore, people gradually lose their social skills and are more likely to feel lonely.",
+          "Therefore, people's social skills gradually deteriorate and feelings of loneliness become more widespread."
+        ],
+        [
+          "a-d1",
+          "Tóm lại, tôi tin chắc rằng công nghệ hiện đại đã khiến con người ít hòa đồng hơn vì nó lấy đi thời gian dành cho các mối quan hệ và làm giảm nhu cầu gặp gỡ trực tiếp.",
+          "In conclusion, I strongly believe that modern technology has made people less social because it takes away time for relationships and reduces the need to meet in person.",
+          "In conclusion, I strongly believe that modern technology has made people less sociable because it takes time away from relationships and reduces the need for face-to-face contact.",
+          "In conclusion, I strongly believe that modern technology has made people less sociable because it consumes time that would otherwise be spent on relationships and reduces the need for face-to-face contact."
+        ],
+        [
+          "a-d2",
+          "Vì lý do này, mỗi người nên giới hạn thời gian sử dụng thiết bị và cố gắng gắn kết nhiều hơn với những người xung quanh.",
+          "For this reason, everyone should limit their screen time and try to spend more time with the people around them.",
+          "For this reason, individuals should set limits on their screen time and make more effort to connect with the people around them.",
+          "For this reason, individuals should consciously limit their screen time and make a greater effort to connect with those around them."
+        ]
+      ]
+    },
+    {
+      "id": "g-health",
+      "type": "agree",
+      "task": "en-w-ielts-health",
+      "title": "Prevention or cure",
+      "prompt": "Some people say governments should spend more money on preventing illness than on treating it. To what extent do you agree or disagree?",
+      "prompt_vi": "Có ý kiến cho rằng chính phủ nên chi nhiều tiền cho việc phòng bệnh hơn là chữa bệnh. Bạn đồng ý hay không đồng ý ở mức độ nào?",
+      "ideas_vi": [
+        "Quan điểm: đồng ý hoàn toàn",
+        "Lý do 1: phòng bệnh rẻ hơn chữa bệnh → tiết kiệm tiền cho giáo dục…",
+        "Lý do 2: phòng bệnh giúp người dân khỏe mạnh, hạnh phúc → làm việc hiệu quả",
+        "Đề xuất: đầu tư vào tiêm chủng và giáo dục sức khỏe"
+      ],
+      "sentences": [
+        [
+          "a-i1",
+          "Người ta thường cho rằng chính phủ nên dành nhiều tiền hơn cho việc phòng bệnh thay vì chữa bệnh.",
+          "It is often argued that governments should spend more money on preventing diseases than on treating them.",
+          "It is often argued that governments should invest more money in preventing illness rather than in treating it.",
+          "It is often argued that governments should allocate a larger share of their health budgets to preventing illness rather than treating it."
+        ],
+        [
+          "a-i2",
+          "Tôi hoàn toàn đồng ý với quan điểm này vì hai lý do chính.",
+          "I completely agree with this view for two main reasons.",
+          "I completely agree with this view for two main reasons.",
+          "I completely agree with this view for two main reasons."
+        ],
+        [
+          "a-b1",
+          "Lý do thứ nhất là phòng bệnh rẻ hơn nhiều so với chữa bệnh, đặc biệt là đối với những căn bệnh nghiêm trọng.",
+          "The first reason is that preventing illness is much cheaper than treating it, especially when the illness is serious.",
+          "The first reason is that prevention is far less expensive than treatment, especially in the case of serious illnesses.",
+          "The first reason is that prevention is considerably more cost-effective than treatment, particularly when it comes to serious illnesses."
+        ],
+        [
+          "a-b2",
+          "Điều này là vì việc điều trị các bệnh nghiêm trọng như ung thư hay bệnh tim cần thuốc men, máy móc đắt tiền và thời gian nằm viện dài.",
+          "This is because treating serious diseases such as cancer or heart disease needs expensive medicine, machines and long stays in hospital.",
+          "This is because treating serious diseases such as cancer or heart disease requires expensive medicine, equipment and long stays in hospital.",
+          "This is because treating serious conditions such as cancer or heart disease requires costly medication, advanced equipment and lengthy hospital stays."
+        ],
+        [
+          "a-b3",
+          "Nói cách khác, cùng một số tiền có thể giúp được nhiều người hơn nếu được dùng để phòng bệnh.",
+          "In other words, the same amount of money can help more people if it is used to prevent illness.",
+          "In other words, the same amount of money can benefit far more people if it is spent on prevention.",
+          "In other words, the same budget can benefit a much larger proportion of the population when it is spent on prevention."
+        ],
+        [
+          "a-b4",
+          "Ví dụ, chi phí cho một chiến dịch tiêm chủng thấp hơn rất nhiều so với chi phí điều trị cho hàng nghìn bệnh nhân.",
+          "For example, a vaccination programme costs much less than the treatment of thousands of sick people.",
+          "For example, the cost of a vaccination campaign is much lower than the cost of treating thousands of patients.",
+          "For example, a nationwide vaccination campaign costs only a fraction of what it would take to treat thousands of patients."
+        ],
+        [
+          "a-b5",
+          "Kết quả là, chính phủ có thể tiết kiệm tiền và dùng nó cho những lĩnh vực quan trọng khác như giáo dục.",
+          "As a result, governments can save money and use it for other important areas such as education.",
+          "As a result, governments can save money and spend it on other important areas such as education.",
+          "As a result, governments can save substantial sums and redirect them to other vital areas such as education."
+        ],
+        [
+          "a-c1",
+          "Một lý do khác là phòng bệnh giúp người dân sống khỏe mạnh và hạnh phúc hơn, thay vì phải chịu đựng bệnh tật trong nhiều năm.",
+          "Another reason is that prevention helps people to live healthier and happier lives instead of suffering from illness for many years.",
+          "Another reason is that prevention allows people to lead healthier and happier lives instead of suffering from illness for many years.",
+          "Another reason is that prevention enables citizens to lead healthier and more fulfilling lives rather than enduring years of poor health."
+        ],
+        [
+          "a-c2",
+          "Điều này là vì nhiều bệnh mãn tính có thể tránh được nếu mọi người có lối sống lành mạnh.",
+          "This is because many long-term diseases can be avoided if people have a healthy lifestyle.",
+          "This is because many chronic diseases can be avoided if people follow a healthy lifestyle.",
+          "This is because a large number of chronic diseases can be prevented simply by maintaining a healthy lifestyle."
+        ],
+        [
+          "a-c3",
+          "Ngoài ra, các chiến dịch nâng cao nhận thức có thể khuyến khích mọi người ăn uống cân bằng và tập thể dục thường xuyên.",
+          "In addition, campaigns to raise awareness can encourage people to eat healthy food and do exercise regularly.",
+          "In addition, awareness campaigns can encourage people to eat a balanced diet and exercise regularly.",
+          "In addition, public awareness campaigns can encourage people to adopt a balanced diet and take regular exercise."
+        ],
+        [
+          "a-c4",
+          "Chẳng hạn, ở nhiều quốc gia, các chiến dịch chống hút thuốc lá đã làm giảm đáng kể số ca ung thư phổi trong vài thập kỷ qua.",
+          "For instance, in many countries, campaigns against smoking have reduced the number of people with lung cancer a lot in the last few decades.",
+          "For instance, in many countries, anti-smoking campaigns have significantly reduced the number of lung cancer cases over the past few decades.",
+          "For instance, anti-smoking campaigns in many countries have led to a significant fall in the number of lung cancer cases over the past few decades."
+        ],
+        [
+          "a-c5",
+          "Vì vậy, người dân ít bị ốm hơn, ít phải nghỉ làm hơn và có thể đóng góp nhiều hơn cho nền kinh tế.",
+          "Therefore, people get sick less often, take fewer days off work and can do more for the economy.",
+          "Therefore, people fall ill less often, take fewer days off work and can contribute more to the economy.",
+          "Therefore, people fall ill less frequently, take fewer sick days and are able to make a greater contribution to the economy."
+        ],
+        [
+          "a-d1",
+          "Tóm lại, tôi tin chắc rằng chính phủ nên chi nhiều tiền hơn cho phòng bệnh vì nó tiết kiệm chi phí và giúp người dân khỏe mạnh hơn.",
+          "In conclusion, I strongly believe that governments should spend more money on prevention because it saves money and helps people to stay healthier.",
+          "In conclusion, I strongly believe that governments should spend more on prevention because it reduces costs and keeps people healthier.",
+          "In conclusion, I strongly believe that governments should prioritise prevention because it is more cost-effective and keeps the population healthier."
+        ],
+        [
+          "a-d2",
+          "Vì lý do này, chính phủ nên đầu tư nhiều hơn vào các chương trình tiêm chủng, khám sức khỏe định kỳ và giáo dục sức khỏe trong trường học.",
+          "For this reason, governments should invest more in vaccinations, regular health checks and health education in schools.",
+          "For this reason, governments should invest more in vaccination programmes, regular health check-ups and health education in schools.",
+          "For this reason, governments should channel more funding into vaccination programmes, routine health screenings and health education in schools."
+        ]
+      ]
+    },
+    {
+      "id": "g-volunteer",
+      "type": "agree",
+      "task": "en-w-ielts-volunteer",
+      "title": "Students and community work",
+      "prompt": "Some people think that university students should be required to do unpaid work in their local community. To what extent do you agree or disagree?",
+      "prompt_vi": "Có ý kiến cho rằng sinh viên đại học nên bắt buộc làm công việc không lương cho cộng đồng nơi mình sống. Bạn đồng ý hay không đồng ý ở mức độ nào?",
+      "ideas_vi": [
+        "Quan điểm: đồng ý hoàn toàn",
+        "Lý do 1: phát triển kỹ năng thực tế (làm nhóm, giao tiếp) → tự tin, dễ tìm việc",
+        "Lý do 2: giúp người cần giúp đỡ, tổ chức từ thiện thiếu người",
+        "Đề xuất: trường đưa giờ tình nguyện vào chương trình học"
+      ],
+      "sentences": [
+        [
+          "a-i1",
+          "Người ta thường cho rằng sinh viên đại học nên bắt buộc làm công việc không lương để phục vụ cộng đồng nơi họ sống.",
+          "It is often argued that university students should have to do unpaid work to help the community where they live.",
+          "It is often argued that university students should be required to do unpaid work in their local community.",
+          "It is often argued that university students should be obliged to undertake unpaid work for the benefit of their local community."
+        ],
+        [
+          "a-i2",
+          "Tôi hoàn toàn đồng ý với quan điểm này vì hai lý do chính.",
+          "I completely agree with this view for two main reasons.",
+          "I completely agree with this view for two main reasons.",
+          "I completely agree with this view for two main reasons."
+        ],
+        [
+          "a-b1",
+          "Lý do thứ nhất là công việc tình nguyện giúp sinh viên phát triển những kỹ năng thực tế mà họ không thể học được trên giảng đường.",
+          "The first reason is that volunteer work helps students to develop practical skills that they cannot learn in the classroom.",
+          "The first reason is that voluntary work helps students to develop practical skills that cannot be learned in lecture halls.",
+          "The first reason is that voluntary work enables students to acquire practical skills that simply cannot be taught in lecture halls."
+        ],
+        [
+          "a-b2",
+          "Điều này là vì họ phải làm việc nhóm, giải quyết vấn đề thực tế và giao tiếp với nhiều kiểu người khác nhau.",
+          "This is because they have to work in teams, solve real problems and talk to many different kinds of people.",
+          "This is because they have to work in teams, solve real problems and communicate with many different kinds of people.",
+          "This is because they are required to work in teams, tackle real problems and communicate with people from all walks of life."
+        ],
+        [
+          "a-b3",
+          "Nói cách khác, cộng đồng trở thành một lớp học thứ hai của sinh viên, nơi họ có thể áp dụng kiến thức của mình vào thực tế.",
+          "In other words, the community becomes a second classroom for students, where they can put their knowledge into practice.",
+          "In other words, the local community becomes a second classroom for students, where they can put their knowledge into practice.",
+          "In other words, the local community effectively becomes a second classroom, where they can put their knowledge into practice."
+        ],
+        [
+          "a-b4",
+          "Ví dụ, một sinh viên dạy kèm miễn phí cho trẻ em nhà nghèo sẽ học được cách giải thích ý tưởng một cách rõ ràng và kiên nhẫn.",
+          "For example, a student who teaches poor children for free will learn how to explain ideas clearly and patiently.",
+          "For example, a student who gives free lessons to children from poor families learns how to explain ideas clearly and patiently.",
+          "For example, a student who tutors children from disadvantaged families free of charge learns to explain ideas clearly and with patience."
+        ],
+        [
+          "a-b5",
+          "Kết quả là, họ trở nên tự tin hơn và có nhiều cơ hội tìm được việc làm tốt sau khi tốt nghiệp.",
+          "As a result, they become more confident and have more chances to find a good job after they graduate.",
+          "As a result, they become more confident and have a better chance of finding a good job after graduation.",
+          "As a result, they gain confidence and significantly improve their prospects of finding a good job after graduation."
+        ],
+        [
+          "a-c1",
+          "Một lý do khác là công việc tình nguyện mang lại lợi ích cho những người cần được giúp đỡ nhất trong xã hội.",
+          "Another reason is that volunteer work is good for the people in society who need help the most.",
+          "Another reason is that voluntary work benefits the people in society who need help the most.",
+          "Another reason is that voluntary work benefits the most vulnerable members of society."
+        ],
+        [
+          "a-c2",
+          "Điều này là vì nhiều tổ chức từ thiện không có đủ tiền để thuê nhân viên.",
+          "This is because many charities do not have enough money to pay workers.",
+          "This is because many charities do not have enough money to employ staff.",
+          "This is because many charities lack the funds to employ paid staff."
+        ],
+        [
+          "a-c3",
+          "Ngoài ra, sinh viên thường có nhiều năng lượng và những ý tưởng mới có thể giúp các tổ chức này hoạt động hiệu quả hơn.",
+          "In addition, students often have a lot of energy and new ideas that can help these organisations to work better.",
+          "In addition, students often have plenty of energy and fresh ideas that can help these organisations to work more effectively.",
+          "In addition, students tend to bring energy and fresh ideas that can help these organisations to operate more effectively."
+        ],
+        [
+          "a-c4",
+          "Chẳng hạn, sinh viên có thể giúp người già học cách dùng điện thoại thông minh để giữ liên lạc với gia đình, những người có thể sống ở xa.",
+          "For instance, students can help old people to learn how to use smartphones to stay in contact with their families, who may live far away.",
+          "For instance, students can help elderly people learn how to use smartphones so that they can stay in touch with their families, who may live far away.",
+          "For instance, students could help elderly people learn to use smartphones, allowing them to stay in touch with their families, who may live far away."
+        ],
+        [
+          "a-c5",
+          "Vì vậy, cả sinh viên lẫn cộng đồng đều được hưởng lợi.",
+          "Therefore, both the students and the community get something good from it.",
+          "Therefore, both the students and the community benefit from this arrangement.",
+          "Therefore, the arrangement is mutually beneficial for students and the community alike."
+        ],
+        [
+          "a-d1",
+          "Tóm lại, tôi tin chắc rằng sinh viên nên làm công việc cộng đồng không lương vì nó giúp họ phát triển kỹ năng và hỗ trợ những người cần giúp đỡ.",
+          "In conclusion, I strongly believe that students should do unpaid community work because it helps them to develop skills and supports people who need help.",
+          "In conclusion, I strongly believe that students should do unpaid community work because it develops their skills and supports people in need.",
+          "In conclusion, I strongly believe that students should undertake unpaid community work because it develops their skills and supports those in need."
+        ],
+        [
+          "a-d2",
+          "Vì lý do này, các trường đại học nên đưa một số giờ làm tình nguyện vào chương trình học của mọi ngành để mọi sinh viên đều có được trải nghiệm quý giá này.",
+          "For this reason, universities should include some hours of volunteer work in every course so that every student can have this useful experience.",
+          "For this reason, universities should include a certain number of volunteering hours in every degree programme so that every student gains this valuable experience.",
+          "For this reason, universities should build a set number of volunteering hours into every degree programme so that every student gains this invaluable experience."
+        ]
+      ]
+    }
+  ]
+}

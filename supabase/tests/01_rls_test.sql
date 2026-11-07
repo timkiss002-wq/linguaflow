@@ -72,6 +72,8 @@ insert into daily_plans(day, items) values (current_date, '[{"key":"review","kin
 select set_plan_item_status(current_date, 'review', 'done');
 \echo '--- Alice saves a text (INSERT 0 1)'
 insert into writing_submissions(language, title, prompt, body) values ('en', 'T', 'P', 'My text.');
+\echo '--- Alice saves an IELTS practice attempt (INSERT 0 1)'
+insert into ielts_attempts(test_id, skill, parts, correct, total, results) values ('reading-1', 'reading', '{r1-p1}', 9, 13, '[]');
 \echo '--- Alice cannot store AI feedback herself (expect RLS error)'
 insert into writing_feedback(submission_id, user_id, model, feedback) select id, auth.uid(), 'fake', '{}' from writing_submissions limit 1;
 \echo '--- Alice cannot write ratings directly (expect RLS error)'
@@ -87,6 +89,10 @@ select set_plan_item_status(current_date, 'review', 'skipped');
 \echo '--- Bob sees no texts of Alice (expect 0) and cannot delete them (DELETE 0)'
 select count(*) from writing_submissions;
 delete from writing_submissions;
+\echo '--- Bob sees no IELTS attempts of Alice (expect 0), cannot delete them (DELETE 0) or save one as Alice (expect RLS error)'
+select count(*) from ielts_attempts;
+delete from ielts_attempts;
+insert into ielts_attempts(user_id, test_id, skill, parts, correct, total) values ('aaaaaaaa-0000-0000-0000-000000000001', 'reading-1', 'reading', '{r1-p1}', 13, 13);
 \echo '--- Bob (learner) cannot read admin statistics (expect admins only) or switch prompts off (UPDATE 0)'
 select admin_content_stats();
 update writing_tasks set is_active = false;

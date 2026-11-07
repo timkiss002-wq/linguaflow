@@ -1,0 +1,325 @@
+{
+  "prompts": [
+    {
+      "id": "g-transport",
+      "type": "discuss",
+      "task": "en-w-ielts-env",
+      "title": "Free public transport",
+      "prompt": "Some people think governments should make public transport free to reduce pollution. Others think this is a waste of public money. Discuss both views and give your own opinion.",
+      "prompt_vi": "Một số người cho rằng chính phủ nên miễn phí giao thông công cộng để giảm ô nhiễm. Những người khác cho rằng đây là sự lãng phí tiền công. Hãy thảo luận cả hai quan điểm và nêu ý kiến của bạn.",
+      "ideas_vi": [
+        "Ý kiến của bạn: ủng hộ miễn phí",
+        "Quan điểm 1 (lãng phí): tốn kém → thiếu tiền cho y tế, giáo dục",
+        "Quan điểm 2 (miễn phí): nhiều người bỏ xe riêng → ít khí thải, ít tắc đường",
+        "Kết: chi phí là có thật nhưng lợi ích môi trường lớn hơn"
+      ],
+      "sentences": [
+        [
+          "d-i1",
+          "Một số người cho rằng chính phủ nên miễn phí giao thông công cộng để giảm ô nhiễm, trong khi những người khác nghĩ rằng đây là sự lãng phí tiền công.",
+          "Some people believe that governments should make public transport free to reduce pollution, while others think that this is a waste of public money.",
+          "Some people believe that public transport should be free in order to cut pollution, while others think that this would be a waste of taxpayers' money.",
+          "Some people believe that public transport should be made free of charge in order to tackle pollution, while others think that this would be a misuse of public funds."
+        ],
+        [
+          "d-i2",
+          "Bài viết này sẽ thảo luận cả hai quan điểm trước khi giải thích vì sao tôi tin rằng giao thông công cộng miễn phí là một khoản đầu tư xứng đáng.",
+          "This essay will discuss both views before explaining why I believe that free public transport is worth the money.",
+          "This essay will discuss both views before explaining why I believe that free public transport is a worthwhile investment.",
+          "This essay will discuss both views before explaining why I believe that free public transport is a worthwhile long-term investment."
+        ],
+        [
+          "d-b1",
+          "Một mặt, một số người cho rằng tiền thuế nên được dùng cho những dịch vụ quan trọng hơn như y tế và giáo dục.",
+          "On the one hand, some people argue that tax money should be used for more important services such as health care and education.",
+          "On the one hand, some people argue that tax revenue should be spent on more essential services such as healthcare and education.",
+          "On the one hand, some people argue that tax revenue ought to be directed towards more essential services such as healthcare and education."
+        ],
+        [
+          "d-b2",
+          "Điều này là vì việc vận hành xe buýt và tàu điện rất tốn kém, và nếu không thu tiền vé thì chính phủ sẽ phải chi trả toàn bộ chi phí.",
+          "This is because running buses and trains is very expensive, and if passengers do not pay for tickets, the government has to pay all the costs.",
+          "This is because operating buses and trains is extremely costly, and without ticket sales the government would have to cover all of the costs.",
+          "This is because operating bus and rail networks is extremely costly, and without revenue from ticket sales the state would have to bear the entire expense."
+        ],
+        [
+          "d-b3",
+          "Nói cách khác, giao thông miễn phí có thể khiến các dịch vụ thiết yếu khác bị thiếu tiền.",
+          "In other words, free transport may mean that other necessary services do not have enough money.",
+          "In other words, free transport could leave other essential services without enough funding.",
+          "In other words, free transport could leave other essential public services seriously underfunded."
+        ],
+        [
+          "d-b4",
+          "Ví dụ, số tiền đó có thể được dùng để xây thêm bệnh viện hoặc tăng lương cho giáo viên.",
+          "For example, that money could be used to build more hospitals or to pay teachers higher salaries.",
+          "For example, the same money could be used to build new hospitals or to increase teachers' salaries.",
+          "For example, the same funds could be invested in new hospitals or used to raise teachers' salaries."
+        ],
+        [
+          "d-b5",
+          "Kết quả là, chất lượng của những dịch vụ quan trọng này có thể không được cải thiện.",
+          "As a result, the quality of these important services may not get better.",
+          "As a result, the quality of these important services might not improve as much as it should.",
+          "As a result, the quality of these vital services might fail to improve."
+        ],
+        [
+          "d-c1",
+          "Mặt khác, những người khác tin rằng giao thông công cộng miễn phí là một cách hiệu quả để bảo vệ môi trường.",
+          "On the other hand, others believe that free public transport is a good way to protect the environment.",
+          "On the other hand, others believe that free public transport is an effective way to protect the environment.",
+          "On the other hand, others believe that free public transport is one of the most effective ways to protect the environment."
+        ],
+        [
+          "d-c2",
+          "Lý do chính là nhiều người sẽ để ô tô và xe máy ở nhà nếu họ có thể đi xe buýt mà không mất tiền.",
+          "The main reason is that many people will leave their cars and motorbikes at home if they can take the bus for free.",
+          "The main reason is that many people would leave their cars and motorbikes at home if they could travel by bus for free.",
+          "The main reason is that many commuters would leave their cars and motorbikes at home if they could travel by bus at no cost."
+        ],
+        [
+          "d-c3",
+          "Chẳng hạn, sau khi một số thành phố châu Âu miễn phí xe buýt, số người sử dụng phương tiện công cộng đã tăng lên rõ rệt.",
+          "For instance, after some European cities made buses free, the number of people using public transport went up a lot.",
+          "For instance, after several European cities made their buses free, the number of passengers increased considerably.",
+          "For instance, when several European cities abolished bus fares, passenger numbers rose considerably."
+        ],
+        [
+          "d-c4",
+          "Vì vậy, cả lượng khí thải lẫn tình trạng tắc đường đều giảm, giúp không khí trong lành hơn.",
+          "Therefore, there was less pollution and less traffic, so the air became cleaner.",
+          "Therefore, both emissions and traffic congestion fell, which made the air much cleaner.",
+          "Therefore, both emissions and congestion fell, leading to noticeably cleaner air."
+        ],
+        [
+          "d-c5",
+          "Cá nhân tôi đồng ý với quan điểm này vì một môi trường sạch hơn sẽ mang lại lợi ích lâu dài cho sức khỏe của tất cả mọi người.",
+          "Personally, I agree with this view because a cleaner environment will be good for everyone's health in the long term.",
+          "Personally, I agree with this view because a cleaner environment brings long-term benefits to everyone's health.",
+          "Personally, I agree with this view because a cleaner environment delivers lasting benefits to the health of the whole population."
+        ],
+        [
+          "d-d1",
+          "Tóm lại, mặc dù có một số lý do chính đáng khiến người ta lo ngại về chi phí, tôi tin rằng giao thông công cộng miễn phí là xứng đáng vì nó giúp giảm cả ô nhiễm lẫn tắc đường.",
+          "In conclusion, although there are some good reasons why people worry about the cost, I believe that free public transport is worth it because it reduces pollution and traffic jams.",
+          "In conclusion, although there are some good reasons why people are concerned about the cost, I believe that free public transport is worthwhile because it reduces both pollution and congestion.",
+          "In conclusion, although there are some good reasons why people are concerned about the cost, I believe that free public transport is a worthwhile investment because it significantly reduces both pollution and congestion."
+        ]
+      ]
+    },
+    {
+      "id": "g-museums",
+      "type": "discuss",
+      "task": "en-w-ielts-museums",
+      "title": "Free museums",
+      "prompt": "Some people think museums should be free for everyone, while others believe visitors should pay. Discuss both views and give your opinion.",
+      "prompt_vi": "Một số người cho rằng bảo tàng nên miễn phí cho tất cả mọi người, trong khi những người khác cho rằng khách tham quan nên trả tiền. Hãy thảo luận cả hai quan điểm và nêu ý kiến của bạn.",
+      "ideas_vi": [
+        "Ý kiến của bạn: bảo tàng nên miễn phí",
+        "Quan điểm 1 (thu phí): chi phí vận hành cao → không có tiền vé thì có thể phải đóng cửa",
+        "Quan điểm 2 (miễn phí): giá vé ngăn người thu nhập thấp → miễn phí thì nhiều người tìm hiểu di sản hơn",
+        "Kết: văn hóa không nên chỉ dành cho người có tiền"
+      ],
+      "sentences": [
+        [
+          "d-i1",
+          "Một số người cho rằng bảo tàng nên miễn phí cho tất cả mọi người, trong khi những người khác nghĩ rằng khách tham quan nên trả tiền vé.",
+          "Some people believe that museums should be free for everyone, while others think that visitors should pay for their tickets.",
+          "Some people believe that museums should be free for everyone, while others think that visitors should pay an entrance fee.",
+          "Some people believe that museums should be open to everyone free of charge, while others think that visitors should pay an admission fee."
+        ],
+        [
+          "d-i2",
+          "Bài viết này sẽ thảo luận cả hai quan điểm trước khi giải thích vì sao tôi tin rằng miễn phí vào cửa là lựa chọn tốt hơn.",
+          "This essay will discuss both views before explaining why I believe that free entry is the better choice.",
+          "This essay will discuss both views before explaining why I believe that free entry is the better option.",
+          "This essay will discuss both views before explaining why I believe that free admission is the better option for society."
+        ],
+        [
+          "d-b1",
+          "Một mặt, một số người cho rằng thu phí là cần thiết để bảo tàng có đủ tiền hoạt động.",
+          "On the one hand, some people argue that museums need to charge visitors so that they have enough money to operate.",
+          "On the one hand, some people argue that charging visitors is necessary for museums to have enough money to operate.",
+          "On the one hand, some people argue that entrance fees are essential if museums are to remain financially sustainable."
+        ],
+        [
+          "d-b2",
+          "Điều này là vì bảo tàng phải trả nhiều khoản chi phí như lương nhân viên, tiền điện nước và việc bảo quản hiện vật.",
+          "This is because museums have to pay many costs such as staff salaries, electricity and water bills, and the care of old objects.",
+          "This is because museums have many expenses, such as staff salaries, electricity bills and the cost of looking after their collections.",
+          "This is because museums face considerable running costs, including staff salaries, utility bills and the conservation of their collections."
+        ],
+        [
+          "d-b3",
+          "Nói cách khác, nếu không có tiền vé, bảo tàng sẽ phải phụ thuộc hoàn toàn vào ngân sách nhà nước.",
+          "In other words, without money from tickets, museums will have to depend completely on the government's budget.",
+          "In other words, without ticket sales, museums would have to rely completely on government funding.",
+          "In other words, without income from ticket sales, museums would be entirely dependent on government funding."
+        ],
+        [
+          "d-b4",
+          "Ví dụ, nhiều bảo tàng tư nhân nhỏ sẽ không thể tồn tại nếu họ không thu phí vào cửa, vì họ không nhận được hỗ trợ từ chính phủ.",
+          "For example, many small private museums cannot survive if they do not charge an entrance fee, because they get no help from the government.",
+          "For example, many small private museums would not be able to survive without charging an entrance fee, as they receive no government support.",
+          "For example, many small, privately run museums would simply be unable to survive without charging for admission, since they receive no state support."
+        ],
+        [
+          "d-b5",
+          "Kết quả là, một số bảo tàng có thể phải đóng cửa hoặc cắt giảm các hoạt động của mình.",
+          "As a result, some museums may have to close or do fewer activities.",
+          "As a result, some museums might have to close down or reduce their activities.",
+          "As a result, some museums might be forced to close or scale back their activities."
+        ],
+        [
+          "d-c1",
+          "Mặt khác, những người khác tin rằng bảo tàng nên miễn phí để mọi người đều có thể tiếp cận văn hóa và lịch sử.",
+          "On the other hand, others believe that museums should be free so that everyone can learn about culture and history.",
+          "On the other hand, others believe that museums should be free so that everyone has access to culture and history.",
+          "On the other hand, others believe that museums should be free so that culture and history are accessible to all."
+        ],
+        [
+          "d-c2",
+          "Lý do chính là giá vé có thể ngăn cản những người có thu nhập thấp đến thăm bảo tàng.",
+          "The main reason is that ticket prices can stop people with low incomes from visiting museums.",
+          "The main reason is that entrance fees can prevent people on low incomes from visiting museums.",
+          "The main reason is that admission charges can discourage people on low incomes from visiting museums at all."
+        ],
+        [
+          "d-c3",
+          "Chẳng hạn, sau khi nhiều bảo tàng lớn ở Anh bỏ thu phí, số lượng khách tham quan đã tăng lên đáng kể.",
+          "For instance, after many big museums in the UK stopped charging visitors, the number of visitors went up a lot.",
+          "For instance, after many major museums in the UK stopped charging for entry, the number of visitors rose significantly.",
+          "For instance, when many major museums in the UK abolished admission charges, visitor numbers rose significantly."
+        ],
+        [
+          "d-c4",
+          "Vì vậy, nhiều gia đình và học sinh có thêm cơ hội tìm hiểu về di sản của đất nước mình và tự hào về nó hơn.",
+          "Therefore, more families and students had the chance to learn about their country's heritage and feel proud of it.",
+          "Therefore, more families and students had the opportunity to learn about their national heritage and feel prouder of it.",
+          "Therefore, a far wider range of families and students were able to explore their national heritage and develop a stronger sense of pride in it."
+        ],
+        [
+          "d-c5",
+          "Cá nhân tôi đồng ý với quan điểm này vì kiến thức về lịch sử và văn hóa không nên chỉ dành cho những người có tiền.",
+          "Personally, I agree with this view because knowledge about history and culture should not only be for rich people.",
+          "Personally, I agree with this view because knowledge of history and culture should not be available only to those who can afford it.",
+          "Personally, I agree with this view because access to history and culture should not be a privilege reserved for those who can afford it."
+        ],
+        [
+          "d-d1",
+          "Tóm lại, mặc dù có một số lý do chính đáng khiến bảo tàng thu phí, tôi tin rằng bảo tàng nên miễn phí vì điều đó giúp mọi người đều được tiếp cận di sản văn hóa.",
+          "In conclusion, although there are some good reasons why museums charge visitors, I believe that museums should be free because this helps everyone to see their cultural heritage.",
+          "In conclusion, although there are some good reasons why museums charge visitors, I believe that they should be free because this gives everyone access to their cultural heritage.",
+          "In conclusion, although there are some good reasons why museums charge for admission, I believe that they should be free because this ensures that everyone can enjoy their cultural heritage."
+        ]
+      ]
+    },
+    {
+      "id": "g-languages",
+      "type": "discuss",
+      "task": "en-w-ielts-languages",
+      "title": "When to start a foreign language",
+      "prompt": "Some people believe that children should start learning a foreign language at primary school, while others think they should wait until secondary school. Discuss both views and give your own opinion.",
+      "prompt_vi": "Một số người cho rằng trẻ em nên bắt đầu học ngoại ngữ từ cấp một, trong khi những người khác nghĩ nên đợi đến cấp hai. Hãy thảo luận cả hai quan điểm và nêu ý kiến của bạn.",
+      "ideas_vi": [
+        "Ý kiến của bạn: nên bắt đầu từ cấp một",
+        "Quan điểm 1 (đợi): tập trung tiếng mẹ đẻ trước; giáo viên tiểu học chưa được đào tạo tốt",
+        "Quan điểm 2 (học sớm): trẻ bắt chước âm thanh tự nhiên, không sợ sai → phát âm tốt",
+        "Kết: vấn đề giáo viên giải quyết được bằng đào tạo"
+      ],
+      "sentences": [
+        [
+          "d-i1",
+          "Một số người cho rằng trẻ em nên đợi đến cấp hai mới học ngoại ngữ, trong khi những người khác nghĩ rằng nên bắt đầu ngay từ cấp một.",
+          "Some people believe that children should wait until secondary school to learn a foreign language, while others think that they should start at primary school.",
+          "Some people believe that children should wait until secondary school to learn a foreign language, while others think that they should begin at primary school.",
+          "Some people believe that children should not study a foreign language until secondary school, while others think that they should begin at primary school."
+        ],
+        [
+          "d-i2",
+          "Bài viết này sẽ thảo luận cả hai quan điểm trước khi giải thích vì sao tôi tin rằng bắt đầu sớm thì tốt hơn.",
+          "This essay will discuss both views before explaining why I believe that starting early is better.",
+          "This essay will discuss both views before explaining why I believe that an early start is more beneficial.",
+          "This essay will discuss both views before explaining why I believe that an early start is preferable."
+        ],
+        [
+          "d-b1",
+          "Một mặt, một số người cho rằng trẻ nhỏ nên tập trung vào tiếng mẹ đẻ trước.",
+          "On the one hand, some people argue that young children should focus on their first language first.",
+          "On the one hand, some people argue that young children should concentrate on their mother tongue first.",
+          "On the one hand, some people argue that young children ought to master their mother tongue first."
+        ],
+        [
+          "d-b2",
+          "Điều này là vì học hai ngôn ngữ cùng lúc có thể khiến một số trẻ bị bối rối và làm chậm sự phát triển tiếng mẹ đẻ của các em.",
+          "This is because learning two languages at the same time can make some children confused and slow down the development of their first language.",
+          "This is because learning two languages at the same time may confuse some children and slow down the development of their mother tongue.",
+          "This is because learning two languages simultaneously may confuse some children and hold back the development of their mother tongue."
+        ],
+        [
+          "d-b3",
+          "Nói cách khác, trẻ cần có nền tảng vững chắc về đọc và viết trước khi học một ngôn ngữ mới.",
+          "In other words, children need to be good at reading and writing before they learn a new language.",
+          "In other words, children need a strong foundation in reading and writing before they study a new language.",
+          "In other words, children need a solid foundation in literacy before they take on a new language."
+        ],
+        [
+          "d-b4",
+          "Ví dụ, ở nhiều trường tiểu học, giáo viên tiếng Anh chưa được đào tạo tốt nên học sinh có thể học phát âm sai.",
+          "For example, in many primary schools, English teachers are not well trained, so pupils may learn the wrong pronunciation.",
+          "For example, in many primary schools, English teachers are not properly trained, so pupils may pick up incorrect pronunciation.",
+          "For example, many primary schools lack properly trained English teachers, so pupils may pick up incorrect pronunciation."
+        ],
+        [
+          "d-b5",
+          "Kết quả là, việc học sớm đôi khi gây hại nhiều hơn có lợi, và học sinh có thể khó sửa những lỗi này về sau.",
+          "As a result, learning early can sometimes do more harm than good, and pupils may find it hard to correct these mistakes later.",
+          "As a result, learning early can sometimes do more harm than good, and pupils may find it difficult to correct these mistakes later.",
+          "As a result, an early start can sometimes do more harm than good, as pupils may struggle to correct these mistakes later on."
+        ],
+        [
+          "d-c1",
+          "Mặt khác, những người khác tin rằng trẻ em học ngoại ngữ dễ nhất khi còn nhỏ.",
+          "On the other hand, others believe that children learn foreign languages best when they are young.",
+          "On the other hand, others believe that children learn foreign languages most easily when they are young.",
+          "On the other hand, others believe that children acquire foreign languages most easily at a young age."
+        ],
+        [
+          "d-c2",
+          "Lý do chính là trẻ nhỏ có thể bắt chước âm thanh mới một cách tự nhiên và không ngại mắc lỗi.",
+          "The main reason is that young children can copy new sounds naturally and are not afraid of making mistakes.",
+          "The main reason is that young children can imitate new sounds naturally and are not afraid of making mistakes.",
+          "The main reason is that young children imitate new sounds effortlessly and are not afraid of making mistakes."
+        ],
+        [
+          "d-c3",
+          "Chẳng hạn, nhiều trẻ học tiếng Anh qua bài hát và trò chơi từ năm sáu tuổi có thể phát âm gần giống người bản xứ.",
+          "For instance, many children who learn English through songs and games from the age of six can speak with an almost native accent.",
+          "For instance, many children who learn English through songs and games from the age of six develop an almost native-like accent.",
+          "For instance, children who learn English through songs and games from the age of six often develop a near-native accent."
+        ],
+        [
+          "d-c4",
+          "Vì vậy, các em có lợi thế lớn khi học lên những cấp cao hơn vì các em đã có kiến thức cơ bản tốt về ngôn ngữ đó.",
+          "Therefore, they have a big advantage when they study at higher levels because they already know the basics of the language well.",
+          "Therefore, they have a significant advantage when they move on to higher levels because they already have a good basic knowledge of the language.",
+          "Therefore, they enjoy a considerable advantage at later stages of their education because they already have a solid grasp of the basics."
+        ],
+        [
+          "d-c5",
+          "Cá nhân tôi đồng ý với quan điểm này vì vấn đề về giáo viên có thể giải quyết được bằng cách đào tạo tốt hơn.",
+          "Personally, I agree with this view because the problems with teachers can be solved with better training.",
+          "Personally, I agree with this view because the problems with teachers can be solved through better training.",
+          "Personally, I agree with this view because the shortage of qualified teachers is a problem that better training can solve."
+        ],
+        [
+          "d-d1",
+          "Tóm lại, mặc dù có một số lý do chính đáng để trì hoãn việc học ngoại ngữ, tôi tin rằng trẻ em nên bắt đầu từ cấp một vì đó là lúc các em học ngôn ngữ dễ dàng nhất.",
+          "In conclusion, although there are some good reasons why children could wait, I believe that they should start at primary school because that is when they learn languages most easily.",
+          "In conclusion, although there are some good reasons why learning could be delayed, I believe that children should start at primary school because this is when they learn languages most easily.",
+          "In conclusion, although there are some good reasons why language learning might be postponed, I believe that children should begin at primary school because this is when they learn languages most readily."
+        ]
+      ]
+    }
+  ]
+}

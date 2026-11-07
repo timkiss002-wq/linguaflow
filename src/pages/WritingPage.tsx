@@ -14,6 +14,7 @@ import { levelLabel } from '@/lib/personal/levels';
 import type { Lang } from '@/lib/writing/analyze';
 import { pickTasks, type WritingTask } from '@/lib/writing/tasks';
 import { cn } from '@/lib/utils';
+import { visiblePrompt } from '@/lib/writing/guided';
 
 const LANGS: { value: Lang; name: string; blurb: string }[] = [
   { value: 'en', name: 'English', blurb: 'Paragraphs, emails and IELTS-style letters and essays.' },
@@ -66,6 +67,28 @@ function LanguageView({ lang }: { lang: Lang }) {
 
   return (
     <div className="space-y-6">
+      {lang === 'en' && (
+        <div
+          className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-rose-200 bg-rose-50 p-4 dark:border-rose-500/30 dark:bg-rose-500/10"
+          data-testid="guided-entry"
+        >
+          <span>
+            <span className="block font-semibold">IELTS Writing Task 2</span>
+            <span className="text-sm text-muted-foreground">Chưa biết viết? Học khung cố định cho mỗi dạng đề và dịch bài mẫu band 5.5 / 6.5 / 7.5 từng câu. Viết được rồi? Thi thử 40 phút và để AI chấm band.</span>
+          </span>
+          <span className="flex flex-wrap gap-2">
+            <Button asChild size="sm">
+              <Link to="/writing/guided">Viết theo khung</Link>
+            </Button>
+            <Button asChild size="sm" variant="outline">
+              <Link to="/writing/guided#exam">Thi thử 40′</Link>
+            </Button>
+            <Button asChild size="sm" variant="ghost">
+              <Link to="/writing/mistakes">Lỗi hay lặp lại</Link>
+            </Button>
+          </span>
+        </div>
+      )}
       <section aria-labelledby="for-you">
         <h2 id="for-you" className="text-lg font-semibold">
           Prompts for you
@@ -157,16 +180,23 @@ function TaskCard({ task, reasons, lang }: { task: WritingTask; reasons: string[
       <CardContent className="flex flex-1 flex-col justify-between gap-3">
         <div className="space-y-2">
           <p className="line-clamp-3 text-sm" lang={lang === 'zh' ? 'zh-CN' : 'en'}>
-            {task.prompt}
+            {visiblePrompt(task.prompt)}
           </p>
           <p className="text-xs text-muted-foreground">
             {task.min_length}
             {task.max_length ? `–${task.max_length}` : '+'} {lang === 'zh' ? 'characters' : 'words'} · {reasons.join(' · ')}
           </p>
         </div>
-        <Button asChild size="sm" className="self-start">
-          <Link to={`/writing/new/${task.id}`}>Write</Link>
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button asChild size="sm">
+            <Link to={`/writing/new/${task.id}`}>Write</Link>
+          </Button>
+          {task.exam === 'ielts' && task.kind === 'essay' && (
+            <Button asChild size="sm" variant="outline">
+              <Link to={`/writing/new/${task.id}?exam=1`}>Thi thử {task.min_length <= 150 ? 20 : 40}′</Link>
+            </Button>
+          )}
+        </div>
       </CardContent>
     </Card>
   );

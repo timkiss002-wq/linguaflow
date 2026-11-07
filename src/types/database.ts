@@ -203,6 +203,26 @@ isOneToOne: false
                   Relationships: [
                     
                   ]
+                },"ielts_attempts": {
+                  Row: {
+                    "answers": NonNullable<Json>,"band": number | null,"correct": number,"created_at": string,"duration_seconds": number | null,"id": string,"mode": string,"parts": (string)[],"results": NonNullable<Json>,"skill": string,"test_id": string,"total": number,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "answers"?: NonNullable<Json>,"band"?: number | null,"correct": number,"created_at"?: string,"duration_seconds"?: number | null,"id"?: string,"mode"?: string,"parts": (string)[],"results"?: NonNullable<Json>,"skill": string,"test_id": string,"total": number,"user_id"?: string
+                  }
+                  Update: {
+                    "answers"?: NonNullable<Json>,"band"?: number | null,"correct"?: number,"created_at"?: string,"duration_seconds"?: number | null,"id"?: string,"mode"?: string,"parts"?: (string)[],"results"?: NonNullable<Json>,"skill"?: string,"test_id"?: string,"total"?: number,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "ielts_attempts_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"learner_profiles": {
                   Row: {
                     "habit_analysis": boolean,"interests": (string)[],"onboarded_at": string | null,"preferred_time": string | null,"study_days": (number)[],"updated_at": string,"user_id": string

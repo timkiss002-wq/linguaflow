@@ -52,3 +52,33 @@ export function pickVoice<T extends VoiceInfo>(voices: T[], language: SpeechLang
   }
   return (voicesFor(voices, language)[0] as T | undefined) ?? null;
 }
+
+/* ───────────── several speakers (IELTS listening) ───────────── */
+
+const FEMALE = /female|woman|zira|aria|jenny|samantha|sonia|libby|susan|hazel|karen|moira|tessa|victoria|fiona|serena|emma|ava|allison|natasha|clara|michelle|elizabeth|catherine|kate|joanna|salli|kimberly|ivy|amy|olivia|ruth|maisie|sara|heera|neerja|linda|eva/i;
+const MALE = /\bmale\b|\bman\b|david|mark|guy|daniel|george|ryan|james|alex|fred|thomas|oliver|arthur|christopher|eric|roger|brian|matthew|joey|justin|william|liam|aaron|rishi|prabhat|andrew|richard|sean/i;
+
+/** Best guess from the voice name; null when it says nothing. */
+export function voiceGender(name: string): 'male' | 'female' | null {
+  if (FEMALE.test(name)) return 'female';
+  if (MALE.test(name)) return 'male';
+  return null;
+}
+
+/**
+ * One English voice per speaker: the best voice of the right gender that no other speaker uses yet.
+ * When the device has too few voices, speakers share one and are told apart by pitch.
+ */
+export function assignVoices<T extends VoiceInfo>(voices: T[], speakers: { key: string; voice: 'male' | 'female' }[]): Record<string, { voice: T | null; pitch: number }> {
+  const english = voicesFor(voices, 'en') as T[];
+  const used = new Set<string>();
+  const out: Record<string, { voice: T | null; pitch: number }> = {};
+  for (const s of speakers) {
+    const free = english.filter((v) => !used.has(v.name));
+    const voice = free.find((v) => voiceGender(v.name) === s.voice) ?? free.find((v) => voiceGender(v.name) === null) ?? free[0] ?? english[0] ?? null;
+    if (voice) used.add(voice.name);
+    const fits = voice && voiceGender(voice.name) === s.voice;
+    out[s.key] = { voice, pitch: fits ? 1 : s.voice === 'male' ? 0.8 : 1.2 };
+  }
+  return out;
+}

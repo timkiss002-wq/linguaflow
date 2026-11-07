@@ -1,4 +1,4 @@
-import { pickVoice, voicesFor, type VoiceInfo } from './voices';
+import { assignVoices, pickVoice, voiceGender, voicesFor, type VoiceInfo } from './voices';
 
 const v = (name: string, lang: string, extra: Partial<VoiceInfo> = {}): VoiceInfo => ({ name, lang, localService: true, ...extra });
 
@@ -33,5 +33,32 @@ describe('pickVoice', () => {
   it('handles Android-style underscores and missing voices', () => {
     expect(pickVoice([v('cmn', 'zh_CN')], 'zh')?.name).toBe('cmn');
     expect(pickVoice([v('Thomas', 'fr-FR')], 'zh')).toBeNull();
+  });
+});
+
+describe('voices for several speakers', () => {
+  const v = (name: string, lang = 'en-GB'): VoiceInfo => ({ name, lang, localService: true });
+  it('guesses gender from common voice names', () => {
+    expect(voiceGender('Microsoft Zira - English (United States)')).toBe('female');
+    expect(voiceGender('Google UK English Female')).toBe('female');
+    expect(voiceGender('Google UK English Male')).toBe('male');
+    expect(voiceGender('Microsoft David - English (United States)')).toBe('male');
+    expect(voiceGender('English Voice 3')).toBeNull();
+  });
+  it('gives each speaker a different voice of the right gender', () => {
+    const a = assignVoices([v('Microsoft David'), v('Microsoft Zira'), v('Microsoft Mark'), v('Vietnamese An', 'vi-VN')], [
+      { key: 'M', voice: 'male' },
+      { key: 'W', voice: 'female' },
+      { key: 'L', voice: 'male' },
+    ]);
+    expect(a.W!.voice!.name).toBe('Microsoft Zira');
+    expect(new Set([a.M!.voice!.name, a.L!.voice!.name])).toEqual(new Set(['Microsoft David', 'Microsoft Mark']));
+    expect(a.M!.pitch).toBe(1);
+  });
+  it('shares one voice and changes the pitch when there are too few', () => {
+    const a = assignVoices([v('Microsoft David')], [{ key: 'M', voice: 'male' }, { key: 'W', voice: 'female' }]);
+    expect(a.M).toMatchObject({ pitch: 1 });
+    expect(a.W!.voice!.name).toBe('Microsoft David');
+    expect(a.W!.pitch).toBeGreaterThan(1);
   });
 });

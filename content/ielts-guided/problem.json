@@ -1,0 +1,367 @@
+{
+  "prompts": [
+    {
+      "id": "g-traffic",
+      "type": "problem",
+      "task": "en-w-ielts-traffic",
+      "title": "Traffic congestion",
+      "prompt": "Traffic congestion is becoming a serious problem in many large cities. What are the causes of this problem, and what measures could be taken to solve it?",
+      "prompt_vi": "Tắc đường đang trở thành vấn đề nghiêm trọng ở nhiều thành phố lớn. Nguyên nhân của vấn đề này là gì, và có thể dùng những biện pháp nào để giải quyết?",
+      "ideas_vi": [
+        "Nguyên nhân 1: xe cá nhân tăng nhanh, đường không mở rộng (ví dụ TP.HCM)",
+        "Nguyên nhân 2: giao thông công cộng chưa thuận tiện → người dân vẫn đi xe riêng",
+        "Giải pháp 1: chính phủ đầu tư xe buýt, metro",
+        "Giải pháp 2: công ty cho bắt đầu làm việc vào các giờ khác nhau"
+      ],
+      "sentences": [
+        [
+          "p-i1",
+          "Ngày nay, tình trạng tắc đường ở nhiều thành phố lớn đang ngày càng trở nên nghiêm trọng.",
+          "These days, traffic jams in many big cities are getting worse and worse.",
+          "These days, traffic congestion in many large cities is becoming increasingly serious.",
+          "These days, traffic congestion in many major cities has become an increasingly serious problem."
+        ],
+        [
+          "p-i2",
+          "Bài viết này sẽ giải thích những nguyên nhân chính của vấn đề này và đề xuất một số giải pháp hiệu quả.",
+          "This essay will explain the main causes of this problem and suggest some effective solutions.",
+          "This essay will explain the main causes of this problem and suggest some effective solutions.",
+          "This essay will explain the main causes of this problem and suggest some effective solutions."
+        ],
+        [
+          "p-b1",
+          "Có hai nguyên nhân chính dẫn đến vấn đề này.",
+          "There are two main causes of this problem.",
+          "There are two main causes of this problem.",
+          "There are two main causes of this problem."
+        ],
+        [
+          "p-b2",
+          "Nguyên nhân thứ nhất là số lượng xe cá nhân đã tăng rất nhanh trong những năm gần đây, trong khi hệ thống đường sá gần như không thay đổi.",
+          "The first cause is that the number of private vehicles has increased very quickly in recent years, while the roads have almost not changed.",
+          "The first cause is that the number of private vehicles has risen rapidly in recent years, while the road system has hardly changed.",
+          "The first cause is that the number of private vehicles has soared in recent years, while the road network has remained largely unchanged."
+        ],
+        [
+          "p-b2e",
+          "Điều này là vì xe máy và ô tô ngày càng rẻ hơn, trong khi việc mở rộng đường ở trung tâm thành phố lại rất khó khăn và tốn kém.",
+          "This is because motorbikes and cars are cheaper than before, while making roads wider in the city centre is very difficult and expensive.",
+          "This is because motorbikes and cars have become more affordable, while widening roads in the city centre is difficult and expensive.",
+          "This is because vehicles have become increasingly affordable, whereas widening roads in densely populated city centres is both difficult and costly."
+        ],
+        [
+          "p-b3",
+          "Ví dụ, ở Thành phố Hồ Chí Minh, hàng triệu xe máy và ô tô di chuyển trên những con đường được xây dựng từ nhiều thập kỷ trước.",
+          "For example, in Ho Chi Minh City, there are millions of motorbikes and cars on roads that were built many years ago.",
+          "For example, in Ho Chi Minh City, millions of motorbikes and cars travel on roads that were built decades ago.",
+          "For example, Ho Chi Minh City has millions of motorbikes and cars competing for space on roads that were designed decades ago."
+        ],
+        [
+          "p-b4",
+          "Nguyên nhân khác là hệ thống giao thông công cộng chưa thuận tiện và chưa đáng tin cậy, nên nhiều người vẫn thích đi bằng phương tiện riêng.",
+          "Another cause is that public transport is not convenient or reliable, so many people still like to use their own vehicles.",
+          "Another cause is that public transport is still inconvenient and unreliable, so many people prefer to travel by private vehicle.",
+          "Another cause is that public transport remains inconvenient and unreliable, so many commuters still prefer to use their own vehicles."
+        ],
+        [
+          "p-b5",
+          "Kết quả là, đường phố bị quá tải vào giờ cao điểm và mọi người mất rất nhiều thời gian để đi lại mỗi ngày.",
+          "As a result, the streets are too crowded at rush hour and people waste a lot of time travelling every day.",
+          "As a result, the roads become overloaded during rush hour and people waste a great deal of time travelling every day.",
+          "As a result, the roads become severely overloaded at peak times and commuters lose a great deal of time every day."
+        ],
+        [
+          "p-c1",
+          "Tuy nhiên, có một số giải pháp cho vấn đề này.",
+          "However, there are several solutions to this problem.",
+          "However, there are several solutions to this problem.",
+          "However, there are several solutions to this problem."
+        ],
+        [
+          "p-c2",
+          "Thứ nhất, chính phủ nên đầu tư nhiều hơn vào xe buýt, tàu điện ngầm và các tuyến đường sắt đô thị.",
+          "Firstly, the government should invest more in buses, underground trains and city railways.",
+          "Firstly, the government should invest more in buses, metro lines and urban railways.",
+          "Firstly, the government should invest more heavily in bus services, metro lines and urban rail networks."
+        ],
+        [
+          "p-c3",
+          "Điều này sẽ khuyến khích người dân để xe ở nhà và làm giảm số lượng phương tiện trên đường.",
+          "This would encourage people to leave their vehicles at home and reduce the number of vehicles on the roads.",
+          "This would encourage people to leave their vehicles at home and reduce the number of vehicles on the roads.",
+          "This would encourage residents to leave their vehicles at home and significantly reduce the volume of traffic."
+        ],
+        [
+          "p-c4",
+          "Thứ hai, các công ty có thể cho phép nhân viên bắt đầu làm việc vào những giờ khác nhau.",
+          "Secondly, companies could let their workers start work at different times.",
+          "Secondly, companies could allow their employees to start work at different times.",
+          "Secondly, employers could introduce flexible working hours so that staff start work at different times."
+        ],
+        [
+          "p-c5",
+          "Chẳng hạn, nếu một nửa số nhân viên bắt đầu lúc 7 giờ sáng và nửa còn lại lúc 9 giờ sáng, lượng xe trong giờ cao điểm sẽ giảm đáng kể.",
+          "For instance, if half of the workers start at 7 a.m. and the other half start at 9 a.m., there will be much less traffic at rush hour.",
+          "For instance, if half of the staff start at 7 a.m. and the other half at 9 a.m., the amount of traffic at rush hour will fall considerably.",
+          "For instance, if half of the workforce started at 7 a.m. and the rest at 9 a.m., traffic volumes during the rush hour would fall considerably."
+        ],
+        [
+          "p-c6",
+          "Bằng cách này, đường phố sẽ bớt đông đúc và mọi người có thể đi làm nhanh hơn.",
+          "In this way, the streets will be less crowded and people can get to work faster.",
+          "In this way, the roads would be less crowded and people could get to work more quickly.",
+          "In this way, the roads would become far less crowded and journey times would be considerably shorter."
+        ],
+        [
+          "p-d1",
+          "Tóm lại, tắc đường là do số lượng xe cá nhân tăng nhanh và giao thông công cộng chưa tốt, nhưng vấn đề này có thể được giải quyết nếu chính phủ và các công ty cùng hành động.",
+          "In conclusion, traffic jams are caused by the fast increase in private vehicles and poor public transport, but this problem can be solved if the government and companies work together.",
+          "In conclusion, traffic congestion is caused by the rapid rise in private vehicles and poor public transport, but this problem can be solved if the government and businesses take action together.",
+          "In conclusion, traffic congestion is caused by the rapid growth in private vehicle ownership and inadequate public transport, but this problem can be solved if the government and businesses take coordinated action."
+        ]
+      ]
+    },
+    {
+      "id": "g-social",
+      "type": "problem",
+      "task": "en-w-ielts-social",
+      "title": "Young people and social media",
+      "prompt": "Many young people today spend too much time on social media. What problems does this cause, and what can be done to solve them?",
+      "prompt_vi": "Ngày nay nhiều người trẻ dành quá nhiều thời gian cho mạng xã hội. Điều này gây ra những vấn đề gì, và có thể làm gì để giải quyết chúng?",
+      "ideas_vi": [
+        "Vấn đề 1: ảnh hưởng việc học (thức khuya lướt điện thoại → mệt, không tập trung)",
+        "Vấn đề 2: so sánh với hình ảnh hoàn hảo trên mạng → tự ti, lo âu",
+        "Giải pháp 1: cha mẹ đặt quy tắc thời gian dùng điện thoại",
+        "Giải pháp 2: nhà trường dạy dùng mạng xã hội an toàn, có trách nhiệm"
+      ],
+      "sentences": [
+        [
+          "p-i1",
+          "Ngày nay, nhiều người trẻ dành quá nhiều thời gian cho các mạng xã hội như Facebook và TikTok.",
+          "These days, many young people spend too much time on social media such as Facebook and TikTok.",
+          "These days, many young people spend an excessive amount of time on social media platforms such as Facebook and TikTok.",
+          "These days, a large number of young people spend an excessive amount of time on social media platforms such as Facebook and TikTok."
+        ],
+        [
+          "p-i2",
+          "Bài viết này sẽ giải thích những vấn đề chính mà điều này gây ra và đề xuất một số giải pháp hiệu quả.",
+          "This essay will explain the main problems that this causes and suggest some effective solutions.",
+          "This essay will explain the main problems that this causes and suggest some effective solutions.",
+          "This essay will explain the main problems that this causes and suggest some effective solutions."
+        ],
+        [
+          "p-b1",
+          "Có hai vấn đề chính mà thói quen này gây ra.",
+          "There are two main problems that this habit causes.",
+          "There are two main problems that this habit causes.",
+          "There are two main problems that this habit creates."
+        ],
+        [
+          "p-b2",
+          "Vấn đề thứ nhất là việc dùng mạng xã hội quá nhiều có thể ảnh hưởng xấu đến kết quả học tập của học sinh, sinh viên.",
+          "The first problem is that using social media too much can have a bad effect on students' studies.",
+          "The first problem is that excessive use of social media can have a negative impact on students' academic performance.",
+          "The first problem is that excessive use of social media can seriously harm students' academic performance."
+        ],
+        [
+          "p-b2e",
+          "Điều này là vì các ứng dụng này rất dễ gây nghiện, nên học sinh thường dùng điện thoại thay vì làm bài tập.",
+          "This is because these apps are very addictive, so students often use their phones instead of doing their homework.",
+          "This is because these apps are highly addictive, so students often use their phones instead of doing their homework.",
+          "This is because these apps are designed to be highly addictive, so students often reach for their phones instead of doing their homework."
+        ],
+        [
+          "p-b3",
+          "Ví dụ, nhiều học sinh lướt điện thoại đến tận nửa đêm, nên các em mệt mỏi và khó tập trung trên lớp vào ngày hôm sau.",
+          "For example, many students use their phones until midnight, so they feel tired and cannot concentrate in class the next day.",
+          "For example, many students scroll through their phones until midnight, so they feel tired and find it hard to concentrate in class the next day.",
+          "For example, many students scroll through their feeds until well after midnight, leaving them exhausted and unable to concentrate in class the following day."
+        ],
+        [
+          "p-b4",
+          "Vấn đề khác là người trẻ thường so sánh cuộc sống của mình với những hình ảnh hoàn hảo mà họ thấy trên mạng.",
+          "Another problem is that young people often compare their lives with the perfect pictures they see online.",
+          "Another problem is that young people often compare their own lives with the perfect images they see online.",
+          "Another problem is that young people tend to compare their own lives with the idealised images they see online."
+        ],
+        [
+          "p-b5",
+          "Kết quả là, nhiều bạn trẻ cảm thấy tự ti, lo âu và không hài lòng với bản thân.",
+          "As a result, many young people have low confidence, feel worried and are unhappy with themselves.",
+          "As a result, many young people suffer from low self-esteem and anxiety and feel dissatisfied with themselves.",
+          "As a result, many young people develop low self-esteem and anxiety and become dissatisfied with who they are."
+        ],
+        [
+          "p-c1",
+          "Tuy nhiên, có một số giải pháp cho vấn đề này.",
+          "However, there are several solutions to this problem.",
+          "However, there are several solutions to this problem.",
+          "However, there are several solutions to this problem."
+        ],
+        [
+          "p-c2",
+          "Thứ nhất, cha mẹ nên đặt ra những quy tắc rõ ràng về thời gian con cái được dùng điện thoại ở nhà.",
+          "Firstly, parents should make clear rules about how long their children can use their phones at home.",
+          "Firstly, parents should set clear rules about how much time their children can spend on their phones at home.",
+          "Firstly, parents should establish clear rules about how much time their children are allowed to spend on their phones at home."
+        ],
+        [
+          "p-c3",
+          "Điều này sẽ giúp con cái có nhiều thời gian hơn cho việc học, ngủ và các hoạt động ngoài trời.",
+          "This would help children to have more time for studying, sleeping and outdoor activities.",
+          "This would give children more time for studying, sleeping and outdoor activities.",
+          "This would free up more time for studying, sleep and outdoor activities."
+        ],
+        [
+          "p-c4",
+          "Thứ hai, nhà trường có thể dạy học sinh cách sử dụng mạng xã hội một cách an toàn và có trách nhiệm.",
+          "Secondly, schools could teach students how to use social media safely and responsibly.",
+          "Secondly, schools could teach students how to use social media safely and responsibly.",
+          "Secondly, schools could teach students how to use social media in a safe and responsible way."
+        ],
+        [
+          "p-c5",
+          "Chẳng hạn, giáo viên có thể giải thích rằng nhiều bức ảnh trên mạng đã được chỉnh sửa và không phản ánh cuộc sống thật.",
+          "For instance, teachers could explain that many photos online have been edited and do not show real life.",
+          "For instance, teachers could explain that many photos on social media have been edited and do not reflect real life.",
+          "For instance, teachers could point out that many photos on social media are heavily edited and bear little resemblance to real life."
+        ],
+        [
+          "p-c6",
+          "Bằng cách này, người trẻ sẽ sử dụng mạng xã hội lành mạnh hơn và cảm thấy tự tin hơn về bản thân.",
+          "In this way, young people will use social media in a healthier way and feel more confident about themselves.",
+          "In this way, young people would use social media more sensibly and feel more confident about themselves.",
+          "In this way, young people would develop a healthier relationship with social media and greater confidence in themselves."
+        ],
+        [
+          "p-d1",
+          "Tóm lại, việc dùng mạng xã hội quá nhiều gây ra các vấn đề về học tập và sức khỏe tinh thần, nhưng vấn đề này có thể được giải quyết nếu cha mẹ và nhà trường cùng hỗ trợ người trẻ.",
+          "In conclusion, using social media too much causes problems with studying and mental health, but this problem can be solved if parents and schools help young people together.",
+          "In conclusion, spending too much time on social media causes problems with studies and mental health, but this problem can be solved if parents and schools support young people together.",
+          "In conclusion, excessive social media use undermines both academic performance and mental health, but this problem can be solved if parents and schools work together to support young people."
+        ]
+      ]
+    },
+    {
+      "id": "g-housing",
+      "type": "problem",
+      "task": "en-w-ielts-housing",
+      "title": "Young people and housing",
+      "prompt": "In many countries, it is becoming very difficult for young people to buy a home. What are the causes of this problem, and what solutions can you suggest?",
+      "prompt_vi": "Ở nhiều quốc gia, người trẻ ngày càng khó mua nhà. Nguyên nhân của vấn đề này là gì, và bạn có thể đề xuất những giải pháp nào?",
+      "ideas_vi": [
+        "Nguyên nhân 1: giá nhà tăng nhanh hơn thu nhập (xây ít nhà ở thành phố lớn)",
+        "Nguyên nhân 2: người giàu mua nhà để đầu tư → nhà bỏ trống",
+        "Giải pháp 1: chính phủ xây nhà giá rẻ cho người mua lần đầu",
+        "Giải pháp 2: đánh thuế nhà bỏ trống (ví dụ Canada)"
+      ],
+      "sentences": [
+        [
+          "p-i1",
+          "Ngày nay, ở nhiều quốc gia, người trẻ gặp rất nhiều khó khăn khi muốn mua nhà.",
+          "These days, in many countries, young people find it very difficult to buy a home.",
+          "These days, young people in many countries find it extremely difficult to buy a home.",
+          "These days, young people in many countries face serious difficulties in buying a home."
+        ],
+        [
+          "p-i2",
+          "Bài viết này sẽ giải thích những nguyên nhân chính của vấn đề này và đề xuất một số giải pháp hiệu quả.",
+          "This essay will explain the main causes of this problem and suggest some effective solutions.",
+          "This essay will explain the main causes of this problem and suggest some effective solutions.",
+          "This essay will explain the main causes of this problem and suggest some effective solutions."
+        ],
+        [
+          "p-b1",
+          "Có hai nguyên nhân chính dẫn đến vấn đề này.",
+          "There are two main causes of this problem.",
+          "There are two main causes of this problem.",
+          "There are two main causes of this problem."
+        ],
+        [
+          "p-b2",
+          "Nguyên nhân thứ nhất là giá nhà đã tăng nhanh hơn nhiều so với thu nhập.",
+          "The first cause is that house prices have gone up much faster than salaries.",
+          "The first cause is that house prices have risen much faster than incomes.",
+          "The first cause is that house prices have risen far more rapidly than incomes."
+        ],
+        [
+          "p-b2e",
+          "Điều này là vì có quá ít nhà mới được xây ở các thành phố lớn, nơi có nhiều việc làm nhất.",
+          "This is because too few new homes are built in big cities, where there are the most jobs.",
+          "This is because too few new homes are being built in large cities, where most jobs are located.",
+          "This is because too few new homes are being built in major cities, where most jobs are concentrated."
+        ],
+        [
+          "p-b3",
+          "Ví dụ, ở Hà Nội, một căn hộ nhỏ có thể có giá gấp hai mươi lần thu nhập một năm của một người trẻ.",
+          "For example, in Hanoi, a small flat can cost twenty times more than a young person earns in a year.",
+          "For example, in Hanoi, a small flat can cost twenty times the annual income of a young worker.",
+          "For example, in Hanoi, a small flat may cost as much as twenty times a young worker's annual salary."
+        ],
+        [
+          "p-b4",
+          "Nguyên nhân khác là nhiều người giàu mua nhà để đầu tư chứ không phải để ở, đặc biệt là ở trung tâm các thành phố.",
+          "Another cause is that many rich people buy houses to make money, not to live in them, especially in city centres.",
+          "Another cause is that many wealthy people buy property as an investment rather than to live in, especially in city centres.",
+          "Another cause is that many wealthy individuals purchase property as an investment rather than as a home, particularly in city centres."
+        ],
+        [
+          "p-b5",
+          "Kết quả là, nhiều căn hộ bị bỏ trống trong khi người trẻ phải đi thuê nhà với giá cao, khiến họ càng khó tiết kiệm tiền để đặt cọc mua nhà.",
+          "As a result, many flats are empty while young people have to pay high rents, so it is even harder for them to save money for a deposit.",
+          "As a result, many flats are left empty while young people are forced to pay high rents, which makes it even harder for them to save for a deposit.",
+          "As a result, many properties remain empty while young people are forced to pay high rents, making it even harder for them to save for a deposit."
+        ],
+        [
+          "p-c1",
+          "Tuy nhiên, có một số giải pháp cho vấn đề này.",
+          "However, there are several solutions to this problem.",
+          "However, there are several solutions to this problem.",
+          "However, there are several solutions to this problem."
+        ],
+        [
+          "p-c2",
+          "Thứ nhất, chính phủ nên xây thêm nhà ở giá rẻ dành cho những người mua nhà lần đầu.",
+          "Firstly, the government should build more cheap homes for people who are buying their first home.",
+          "Firstly, the government should build more affordable homes for first-time buyers.",
+          "Firstly, the government should invest in affordable housing reserved for first-time buyers."
+        ],
+        [
+          "p-c3",
+          "Điều này sẽ tăng nguồn cung nhà ở và giúp người trẻ có cơ hội thực sự để sở hữu nhà riêng thay vì phải dành phần lớn thu nhập để trả tiền thuê nhà.",
+          "This would increase the number of homes and give young people a real chance to own a home instead of spending most of their income on rent.",
+          "This would increase the supply of housing and give young people a realistic chance of owning a home rather than spending most of their income on rent.",
+          "This would boost the supply of housing and give young people a realistic prospect of home ownership rather than having to spend most of their income on rent."
+        ],
+        [
+          "p-c4",
+          "Thứ hai, chính quyền có thể đánh thuế cao hơn đối với những căn nhà bị bỏ trống.",
+          "Secondly, the government could put higher taxes on homes that are empty.",
+          "Secondly, the authorities could introduce higher taxes on empty homes.",
+          "Secondly, the authorities could impose higher taxes on properties that are left empty."
+        ],
+        [
+          "p-c5",
+          "Chẳng hạn, một số thành phố ở Canada đã áp dụng thuế nhà bỏ trống, và sau đó nhiều căn hộ đã được đưa ra cho thuê.",
+          "For instance, some cities in Canada have a tax on empty homes, and after that many flats were offered for rent.",
+          "For instance, some Canadian cities have introduced a tax on empty homes, and many flats have since become available to rent.",
+          "For instance, several Canadian cities have introduced a vacant homes tax, and many flats have since become available to rent."
+        ],
+        [
+          "p-c6",
+          "Bằng cách này, giá nhà và giá thuê nhà sẽ trở nên hợp lý hơn với người trẻ.",
+          "In this way, the prices of houses and rents will be more reasonable for young people.",
+          "In this way, house prices and rents would become more affordable for young people.",
+          "In this way, both house prices and rents would become more affordable for the younger generation."
+        ],
+        [
+          "p-d1",
+          "Tóm lại, tình trạng khó mua nhà là do giá nhà tăng nhanh và hoạt động đầu tư bất động sản, nhưng vấn đề này có thể được giải quyết nếu chính phủ xây thêm nhà giá rẻ và đánh thuế nhà bỏ trống.",
+          "In conclusion, this problem is caused by fast-rising house prices and people buying homes to make money, but this problem can be solved if the government builds cheap homes and taxes empty ones.",
+          "In conclusion, the housing problem is caused by rapidly rising prices and property investment, but this problem can be solved if the government builds affordable homes and taxes empty ones.",
+          "In conclusion, the housing crisis is caused by soaring prices and property speculation, but this problem can be solved if the government builds affordable homes and taxes empty ones."
+        ]
+      ]
+    }
+  ]
+}

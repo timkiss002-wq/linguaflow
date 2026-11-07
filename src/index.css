@@ -34,6 +34,11 @@
     /* Chart series colour, validated (dataviz checks) against the light card surface. */
     --chart-1: #008c7c;
     --chart-grid: #ebe6dd;
+    /* categorical series for figures (IELTS Task 1), validated light-mode set: blue, orange, aqua, yellow */
+    --viz-1: #2a78d6;
+    --viz-2: #eb6834;
+    --viz-3: #1baf7a;
+    --viz-4: #eda100;
   }
 
   .dark {
@@ -65,6 +70,10 @@
     /* Dark step of the same hue, validated against the dark card surface. */
     --chart-1: #14a394;
     --chart-grid: #263041;
+    --viz-1: #3987e5;
+    --viz-2: #d95926;
+    --viz-3: #199e70;
+    --viz-4: #c98500;
   }
 
   /* Each area tints buttons, focus rings and highlights with its own colour (contrast-checked with white text). */

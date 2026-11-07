@@ -1,0 +1,1836 @@
+{
+  "_note": "IELTS Writing Task 1 (Academic) and Task 2 frames for the guided (translate-by-frame) mode. One frame per question type, reused by every prompt of that type, so the learner memorises it by repetition. Each slot: id, p (paragraph 1-4), role / role_vi (what the sentence does), t (template, ___ = your content), fixed (phrases that must appear; each inner list = alternatives, any one is enough). Prompts live in the other files of this folder; every model sentence must contain its slot's fixed phrases (checked by src/lib/writing/guided.test.ts). Task 1 types also have paras (paragraph names) and their prompts a chart.",
+  "types": [
+    {
+      "id": "line",
+      "task": 1,
+      "name": "Line graph",
+      "name_vi": "Biểu đồ đường",
+      "spot": "The graph below shows … between [year] and [year].",
+      "paras": [
+        "Mở bài",
+        "Tổng quan (Overview)",
+        "Chi tiết 1",
+        "Chi tiết 2"
+      ],
+      "plan_vi": "Mở bài: viết lại đề. Overview: 2 xu hướng chính, không có số. Chi tiết 1: đường thứ nhất — điểm đầu, thay đổi, điểm cuối. Chi tiết 2: các đường còn lại, so sánh.",
+      "frame": [
+        {
+          "id": "l-i1",
+          "p": 1,
+          "role": "Paraphrase the task",
+          "role_vi": "Viết lại đề: biểu đồ cho thấy gì",
+          "t": "The line graph illustrates ___ between ___ and ___.",
+          "fixed": [
+            [
+              "The line graph illustrates"
+            ],
+            [
+              "between"
+            ]
+          ]
+        },
+        {
+          "id": "l-o1",
+          "p": 2,
+          "role": "Overview: main feature",
+          "role_vi": "Tổng quan: đặc điểm nổi bật nhất (không có số liệu)",
+          "t": "Overall, ___ rose ___, while ___ fell ___.",
+          "fixed": [
+            [
+              "Overall"
+            ],
+            [
+              "while"
+            ]
+          ]
+        },
+        {
+          "id": "l-o2",
+          "p": 2,
+          "role": "Overview: second feature",
+          "role_vi": "Tổng quan: đặc điểm thứ hai",
+          "t": "It is also clear that ___.",
+          "fixed": [
+            [
+              "It is also clear that"
+            ]
+          ]
+        },
+        {
+          "id": "l-b1",
+          "p": 3,
+          "role": "Starting point",
+          "role_vi": "Điểm bắt đầu của đường thứ nhất",
+          "t": "In ___, ___ stood at ___.",
+          "fixed": [
+            [
+              "stood at"
+            ]
+          ]
+        },
+        {
+          "id": "l-b2",
+          "p": 3,
+          "role": "Change",
+          "role_vi": "Thay đổi trong giai đoạn giữa",
+          "t": "Over the following ___, this figure rose ___ to ___.",
+          "fixed": [
+            [
+              "this figure"
+            ]
+          ]
+        },
+        {
+          "id": "l-b3",
+          "p": 3,
+          "role": "End point",
+          "role_vi": "Điểm kết thúc",
+          "t": "By ___, it had reached ___.",
+          "fixed": [
+            [
+              "it had reached"
+            ]
+          ]
+        },
+        {
+          "id": "l-b4",
+          "p": 3,
+          "role": "What it means",
+          "role_vi": "Nhận xét: con số đó có nghĩa là gì (gấp mấy lần, bao nhiêu phần…)",
+          "t": "This means that ___.",
+          "fixed": [
+            [
+              "This means that"
+            ]
+          ]
+        },
+        {
+          "id": "l-c1",
+          "p": 4,
+          "role": "Second line",
+          "role_vi": "Đường thứ hai: điểm bắt đầu",
+          "t": "By contrast, ___ began at ___.",
+          "fixed": [
+            [
+              "By contrast"
+            ]
+          ]
+        },
+        {
+          "id": "l-c2",
+          "p": 4,
+          "role": "Its change",
+          "role_vi": "Thay đổi của đường thứ hai",
+          "t": "After that, ___ fell ___, reaching ___ in ___.",
+          "fixed": [
+            [
+              "After that"
+            ],
+            [
+              "reaching"
+            ]
+          ]
+        },
+        {
+          "id": "l-c3",
+          "p": 4,
+          "role": "Third line",
+          "role_vi": "Đường thứ ba",
+          "t": "Meanwhile, ___ fluctuated around ___.",
+          "fixed": [
+            [
+              "Meanwhile"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "task": 1,
+      "name": "Bar chart",
+      "name_vi": "Biểu đồ cột",
+      "spot": "The bar chart below compares …",
+      "paras": [
+        "Mở bài",
+        "Tổng quan (Overview)",
+        "Chi tiết 1",
+        "Chi tiết 2"
+      ],
+      "plan_vi": "Mở bài: viết lại đề. Overview: nhóm cao nhất / thấp nhất + một điểm chung. Chi tiết 1: các nhóm có số liệu cao. Chi tiết 2: các nhóm có số liệu thấp.",
+      "frame": [
+        {
+          "id": "b-i1",
+          "p": 1,
+          "role": "Paraphrase the task",
+          "role_vi": "Viết lại đề: biểu đồ cho thấy gì",
+          "t": "The bar chart compares ___ in ___.",
+          "fixed": [
+            [
+              "The bar chart compares"
+            ]
+          ]
+        },
+        {
+          "id": "b-o1",
+          "p": 2,
+          "role": "Overview: main feature",
+          "role_vi": "Tổng quan: đặc điểm nổi bật nhất (không có số liệu)",
+          "t": "Overall, ___ was the most ___, whereas ___ was the least ___.",
+          "fixed": [
+            [
+              "Overall"
+            ],
+            [
+              "whereas"
+            ]
+          ]
+        },
+        {
+          "id": "b-o2",
+          "p": 2,
+          "role": "Overview: second feature",
+          "role_vi": "Tổng quan: đặc điểm thứ hai",
+          "t": "It is also clear that ___.",
+          "fixed": [
+            [
+              "It is also clear that"
+            ]
+          ]
+        },
+        {
+          "id": "b-b1",
+          "p": 3,
+          "role": "Highest figure",
+          "role_vi": "Số liệu cao nhất",
+          "t": "Looking at ___ in more detail, ___ had the highest ___, at ___.",
+          "fixed": [
+            [
+              "in more detail"
+            ]
+          ]
+        },
+        {
+          "id": "b-b2",
+          "p": 3,
+          "role": "Next figure",
+          "role_vi": "Số liệu tiếp theo",
+          "t": "This was followed by ___, with ___.",
+          "fixed": [
+            [
+              "This was followed by"
+            ]
+          ]
+        },
+        {
+          "id": "b-b3",
+          "p": 3,
+          "role": "Comparison",
+          "role_vi": "So sánh",
+          "t": "In comparison, ___.",
+          "fixed": [
+            [
+              "In comparison"
+            ]
+          ]
+        },
+        {
+          "id": "b-b4",
+          "p": 3,
+          "role": "What it means",
+          "role_vi": "Nhận xét: con số đó có nghĩa là gì (gấp mấy lần, bao nhiêu phần…)",
+          "t": "This means that ___.",
+          "fixed": [
+            [
+              "This means that"
+            ]
+          ]
+        },
+        {
+          "id": "b-c1",
+          "p": 4,
+          "role": "The other side",
+          "role_vi": "Phía có số liệu thấp",
+          "t": "By contrast, ___.",
+          "fixed": [
+            [
+              "By contrast"
+            ]
+          ]
+        },
+        {
+          "id": "b-c2",
+          "p": 4,
+          "role": "Compare two figures",
+          "role_vi": "So sánh hai số liệu",
+          "t": "Only ___, compared with ___.",
+          "fixed": [
+            [
+              "compared with"
+            ]
+          ]
+        },
+        {
+          "id": "b-c3",
+          "p": 4,
+          "role": "Lowest figure",
+          "role_vi": "Số liệu thấp nhất",
+          "t": "Finally, ___ had the lowest figures, at ___.",
+          "fixed": [
+            [
+              "Finally"
+            ],
+            [
+              "the lowest"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pie",
+      "task": 1,
+      "name": "Pie charts",
+      "name_vi": "Biểu đồ tròn",
+      "spot": "The pie charts below show the proportion of …",
+      "paras": [
+        "Mở bài",
+        "Tổng quan (Overview)",
+        "Chi tiết 1",
+        "Chi tiết 2"
+      ],
+      "plan_vi": "Mở bài: viết lại đề. Overview: phần lớn nhất + thay đổi lớn nhất. Chi tiết 1: biểu đồ năm đầu, từ lớn đến nhỏ. Chi tiết 2: biểu đồ năm sau, nêu tăng / giảm.",
+      "frame": [
+        {
+          "id": "pc-i1",
+          "p": 1,
+          "role": "Paraphrase the task",
+          "role_vi": "Viết lại đề: biểu đồ cho thấy gì",
+          "t": "The pie charts show ___ in ___ and ___.",
+          "fixed": [
+            [
+              "The pie charts show"
+            ]
+          ]
+        },
+        {
+          "id": "pc-o1",
+          "p": 2,
+          "role": "Overview: main feature",
+          "role_vi": "Tổng quan: đặc điểm nổi bật nhất (không có số liệu)",
+          "t": "Overall, ___ was the main ___ in both years, although ___.",
+          "fixed": [
+            [
+              "Overall"
+            ],
+            [
+              "in both years"
+            ]
+          ]
+        },
+        {
+          "id": "pc-o2",
+          "p": 2,
+          "role": "Overview: second feature",
+          "role_vi": "Tổng quan: đặc điểm thứ hai",
+          "t": "It is also clear that ___.",
+          "fixed": [
+            [
+              "It is also clear that"
+            ]
+          ]
+        },
+        {
+          "id": "pc-b1",
+          "p": 3,
+          "role": "Largest share",
+          "role_vi": "Phần lớn nhất năm đầu",
+          "t": "In ___, ___ made up ___ of ___.",
+          "fixed": [
+            [
+              "made up"
+            ]
+          ]
+        },
+        {
+          "id": "pc-b2",
+          "p": 3,
+          "role": "Next shares",
+          "role_vi": "Các phần tiếp theo",
+          "t": "This was followed by ___, which accounted for ___.",
+          "fixed": [
+            [
+              "This was followed by"
+            ],
+            [
+              "accounted for"
+            ]
+          ]
+        },
+        {
+          "id": "pc-b3",
+          "p": 3,
+          "role": "Smallest share",
+          "role_vi": "Phần nhỏ nhất",
+          "t": "The smallest proportion was ___, at only ___.",
+          "fixed": [
+            [
+              "The smallest proportion"
+            ]
+          ]
+        },
+        {
+          "id": "pc-b4",
+          "p": 3,
+          "role": "What it means",
+          "role_vi": "Nhận xét: con số đó có nghĩa là gì (gấp mấy lần, bao nhiêu phần…)",
+          "t": "This means that ___.",
+          "fixed": [
+            [
+              "This means that"
+            ]
+          ]
+        },
+        {
+          "id": "pc-c1",
+          "p": 4,
+          "role": "What fell",
+          "role_vi": "Phần giảm",
+          "t": "By ___, the share of ___ had fallen to ___.",
+          "fixed": [
+            [
+              "the share of"
+            ],
+            [
+              "had fallen to"
+            ]
+          ]
+        },
+        {
+          "id": "pc-c2",
+          "p": 4,
+          "role": "What rose",
+          "role_vi": "Phần tăng",
+          "t": "By contrast, ___.",
+          "fixed": [
+            [
+              "By contrast"
+            ]
+          ]
+        },
+        {
+          "id": "pc-c3",
+          "p": 4,
+          "role": "The rest",
+          "role_vi": "Các phần còn lại",
+          "t": "Meanwhile, ___.",
+          "fixed": [
+            [
+              "Meanwhile"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "task": 1,
+      "name": "Table",
+      "name_vi": "Bảng số liệu",
+      "spot": "The table below gives information about …",
+      "paras": [
+        "Mở bài",
+        "Tổng quan (Overview)",
+        "Chi tiết 1",
+        "Chi tiết 2"
+      ],
+      "plan_vi": "Mở bài: viết lại đề. Overview: cao nhất / thấp nhất + một điểm đáng chú ý. Chi tiết 1: cột số liệu thứ nhất. Chi tiết 2: cột thứ hai và so sánh.",
+      "frame": [
+        {
+          "id": "t1-i1",
+          "p": 1,
+          "role": "Paraphrase the task",
+          "role_vi": "Viết lại đề: biểu đồ cho thấy gì",
+          "t": "The table gives information about ___.",
+          "fixed": [
+            [
+              "The table gives information about"
+            ]
+          ]
+        },
+        {
+          "id": "t1-o1",
+          "p": 2,
+          "role": "Overview: main feature",
+          "role_vi": "Tổng quan: đặc điểm nổi bật nhất (không có số liệu)",
+          "t": "Overall, ___ had the highest ___, while ___ had the lowest.",
+          "fixed": [
+            [
+              "Overall"
+            ],
+            [
+              "the highest"
+            ],
+            [
+              "the lowest"
+            ]
+          ]
+        },
+        {
+          "id": "t1-o2",
+          "p": 2,
+          "role": "Overview: second feature",
+          "role_vi": "Tổng quan: đặc điểm thứ hai",
+          "t": "It is also clear that ___.",
+          "fixed": [
+            [
+              "It is also clear that"
+            ]
+          ]
+        },
+        {
+          "id": "t1-b1",
+          "p": 3,
+          "role": "First column",
+          "role_vi": "Cột số liệu thứ nhất",
+          "t": "Looking at ___ in more detail, ___.",
+          "fixed": [
+            [
+              "in more detail"
+            ]
+          ]
+        },
+        {
+          "id": "t1-b2",
+          "p": 3,
+          "role": "Next figures",
+          "role_vi": "Số liệu tiếp theo",
+          "t": "This was followed by ___, at ___.",
+          "fixed": [
+            [
+              "This was followed by"
+            ]
+          ]
+        },
+        {
+          "id": "t1-b3",
+          "p": 3,
+          "role": "Comparison",
+          "role_vi": "So sánh",
+          "t": "In comparison, ___.",
+          "fixed": [
+            [
+              "In comparison"
+            ]
+          ]
+        },
+        {
+          "id": "t1-b4",
+          "p": 3,
+          "role": "What it means",
+          "role_vi": "Nhận xét: con số đó có nghĩa là gì (gấp mấy lần, bao nhiêu phần…)",
+          "t": "This means that ___.",
+          "fixed": [
+            [
+              "This means that"
+            ]
+          ]
+        },
+        {
+          "id": "t1-c1",
+          "p": 4,
+          "role": "Second column",
+          "role_vi": "Cột số liệu thứ hai",
+          "t": "Turning to ___, ___.",
+          "fixed": [
+            [
+              "Turning to"
+            ]
+          ]
+        },
+        {
+          "id": "t1-c2",
+          "p": 4,
+          "role": "Another figure",
+          "role_vi": "Số liệu khác",
+          "t": "Meanwhile, ___.",
+          "fixed": [
+            [
+              "Meanwhile"
+            ]
+          ]
+        },
+        {
+          "id": "t1-c3",
+          "p": 4,
+          "role": "Final point",
+          "role_vi": "Điểm cuối",
+          "t": "Finally, ___.",
+          "fixed": [
+            [
+              "Finally"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "task": 1,
+      "name": "Process diagram",
+      "name_vi": "Sơ đồ quy trình",
+      "spot": "The diagram below shows how … is made / produced.",
+      "paras": [
+        "Mở bài",
+        "Tổng quan (Overview)",
+        "Các giai đoạn đầu",
+        "Các giai đoạn sau"
+      ],
+      "plan_vi": "Mở bài: viết lại đề. Overview: số giai đoạn, bắt đầu và kết thúc. Chi tiết 1: nửa đầu quy trình. Chi tiết 2: nửa sau. Dùng câu bị động (is collected, are washed…).",
+      "frame": [
+        {
+          "id": "r-i1",
+          "p": 1,
+          "role": "Paraphrase the task",
+          "role_vi": "Viết lại đề: biểu đồ cho thấy gì",
+          "t": "The diagram illustrates how ___.",
+          "fixed": [
+            [
+              "The diagram illustrates how"
+            ]
+          ]
+        },
+        {
+          "id": "r-o1",
+          "p": 2,
+          "role": "Overview: main feature",
+          "role_vi": "Tổng quan: đặc điểm nổi bật nhất (không có số liệu)",
+          "t": "Overall, there are ___ stages in the process, beginning with ___ and ending with ___.",
+          "fixed": [
+            [
+              "Overall, there are"
+            ],
+            [
+              "stages in the process, beginning with"
+            ],
+            [
+              "and ending with"
+            ]
+          ]
+        },
+        {
+          "id": "r-o2",
+          "p": 2,
+          "role": "Overview: second feature",
+          "role_vi": "Tổng quan: đặc điểm thứ hai",
+          "t": "It is also clear that ___.",
+          "fixed": [
+            [
+              "It is also clear that"
+            ]
+          ]
+        },
+        {
+          "id": "r-b1",
+          "p": 3,
+          "role": "First stage",
+          "role_vi": "Giai đoạn đầu tiên",
+          "t": "At the first stage, ___.",
+          "fixed": [
+            [
+              "At the first stage"
+            ]
+          ]
+        },
+        {
+          "id": "r-b2",
+          "p": 3,
+          "role": "Next stage",
+          "role_vi": "Giai đoạn tiếp",
+          "t": "After that, ___.",
+          "fixed": [
+            [
+              "After that"
+            ]
+          ]
+        },
+        {
+          "id": "r-b3",
+          "p": 3,
+          "role": "Next stage",
+          "role_vi": "Giai đoạn tiếp",
+          "t": "Next, ___.",
+          "fixed": [
+            [
+              "Next"
+            ]
+          ]
+        },
+        {
+          "id": "r-c1",
+          "p": 4,
+          "role": "Next stage",
+          "role_vi": "Giai đoạn tiếp",
+          "t": "In the following stage, ___.",
+          "fixed": [
+            [
+              "In the following stage"
+            ]
+          ]
+        },
+        {
+          "id": "r-c2",
+          "p": 4,
+          "role": "Next stage",
+          "role_vi": "Giai đoạn tiếp",
+          "t": "Once ___, ___.",
+          "fixed": [
+            [
+              "Once"
+            ]
+          ]
+        },
+        {
+          "id": "r-c3",
+          "p": 4,
+          "role": "Last stage",
+          "role_vi": "Giai đoạn cuối",
+          "t": "Finally, ___.",
+          "fixed": [
+            [
+              "Finally"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "task": 1,
+      "name": "Maps",
+      "name_vi": "Bản đồ (so sánh trước – sau)",
+      "spot": "The maps below show … in [year] and [year] / before and after …",
+      "paras": [
+        "Mở bài",
+        "Tổng quan (Overview)",
+        "Chi tiết 1 (bản đồ trước)",
+        "Chi tiết 2 (bản đồ sau)"
+      ],
+      "plan_vi": "Mở bài: viết lại đề. Overview: thay đổi lớn nhất (từ… thành…), không cần chi tiết. Chi tiết 1: mô tả bản đồ trước theo vị trí (phía bắc, phía nam…). Chi tiết 2: những gì bị thay thế, được xây mới, và những gì giữ nguyên. Dùng bị động: was built, had been replaced by…",
+      "frame": [
+        {
+          "id": "m-i1",
+          "p": 1,
+          "role": "Paraphrase the task",
+          "role_vi": "Viết lại đề: hai bản đồ cho thấy gì",
+          "t": "The maps illustrate the changes that took place in ___ between ___ and ___.",
+          "fixed": [
+            [
+              "The maps illustrate"
+            ],
+            [
+              "between"
+            ]
+          ]
+        },
+        {
+          "id": "m-o1",
+          "p": 2,
+          "role": "Overview: the biggest change",
+          "role_vi": "Tổng quan: thay đổi lớn nhất (từ… thành…)",
+          "t": "Overall, ___ was transformed from ___ into ___.",
+          "fixed": [
+            [
+              "Overall"
+            ],
+            [
+              "was transformed from"
+            ],
+            [
+              "into"
+            ]
+          ]
+        },
+        {
+          "id": "m-o2",
+          "p": 2,
+          "role": "Overview: second feature",
+          "role_vi": "Tổng quan: đặc điểm thứ hai",
+          "t": "It is also clear that ___.",
+          "fixed": [
+            [
+              "It is also clear that"
+            ]
+          ]
+        },
+        {
+          "id": "m-b1",
+          "p": 3,
+          "role": "First map: main area and where it was",
+          "role_vi": "Bản đồ trước: khu vực chính và vị trí",
+          "t": "In ___, ___ was located in the ___ of ___.",
+          "fixed": [
+            [
+              "was located in",
+              "were located in"
+            ]
+          ]
+        },
+        {
+          "id": "m-b2",
+          "p": 3,
+          "role": "First map: what was next to it",
+          "role_vi": "Bản đồ trước: bên cạnh có gì",
+          "t": "To the ___ of ___, there was ___.",
+          "fixed": [
+            [
+              "To the"
+            ],
+            [
+              "there was",
+              "there were"
+            ]
+          ]
+        },
+        {
+          "id": "m-b3",
+          "p": 3,
+          "role": "First map: the other features",
+          "role_vi": "Bản đồ trước: các đặc điểm còn lại",
+          "t": "There were also ___.",
+          "fixed": [
+            [
+              "There were also",
+              "There was also"
+            ]
+          ]
+        },
+        {
+          "id": "m-b4",
+          "p": 3,
+          "role": "First map: what this shows",
+          "role_vi": "Ý nghĩa: khu vực lúc đó như thế nào",
+          "t": "This means that ___.",
+          "fixed": [
+            [
+              "This means that"
+            ]
+          ]
+        },
+        {
+          "id": "m-c1",
+          "p": 4,
+          "role": "Second map: what was replaced",
+          "role_vi": "Bản đồ sau: cái gì bị thay thế",
+          "t": "By ___, ___ had been replaced by ___.",
+          "fixed": [
+            [
+              "had been replaced by"
+            ]
+          ]
+        },
+        {
+          "id": "m-c2",
+          "p": 4,
+          "role": "Second map: what was built",
+          "role_vi": "Bản đồ sau: cái gì được xây mới",
+          "t": "___ was built ___.",
+          "fixed": [
+            [
+              "was built",
+              "were built",
+              "was constructed",
+              "were constructed"
+            ]
+          ]
+        },
+        {
+          "id": "m-c3",
+          "p": 4,
+          "role": "Second map: other changes",
+          "role_vi": "Bản đồ sau: các thay đổi khác",
+          "t": "In addition, ___.",
+          "fixed": [
+            [
+              "In addition"
+            ]
+          ]
+        },
+        {
+          "id": "m-c4",
+          "p": 4,
+          "role": "What did not change",
+          "role_vi": "Những gì giữ nguyên",
+          "t": "Finally, ___ remained unchanged.",
+          "fixed": [
+            [
+              "Finally"
+            ],
+            [
+              "remained unchanged"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agree",
+      "name": "Agree / Disagree",
+      "name_vi": "Đồng ý / Không đồng ý",
+      "spot": "To what extent do you agree or disagree? · Do you agree or disagree?",
+      "plan_vi": "Mở bài: viết lại đề + nêu rõ quan điểm. Thân 1: lý do 1 + giải thích + ví dụ + kết quả. Thân 2: lý do 2, cùng cách viết. Kết bài: nhắc lại quan điểm và 2 lý do, thêm một đề xuất.",
+      "frame": [
+        {
+          "id": "a-i1",
+          "p": 1,
+          "role": "Paraphrase the question",
+          "role_vi": "Viết lại đề bằng từ của bạn",
+          "t": "It is often argued that ___.",
+          "fixed": [
+            [
+              "It is often argued that"
+            ]
+          ]
+        },
+        {
+          "id": "a-i2",
+          "p": 1,
+          "role": "Your opinion",
+          "role_vi": "Nêu quan điểm (đồng ý / không đồng ý)",
+          "t": "I completely agree with this view for two main reasons.",
+          "fixed": [
+            [
+              "I completely agree with this view",
+              "I completely disagree with this view"
+            ],
+            [
+              "for two main reasons"
+            ]
+          ]
+        },
+        {
+          "id": "a-b1",
+          "p": 2,
+          "role": "Reason 1",
+          "role_vi": "Lý do 1 (câu chủ đề)",
+          "t": "The first reason is that ___.",
+          "fixed": [
+            [
+              "The first reason is that"
+            ]
+          ]
+        },
+        {
+          "id": "a-b2",
+          "p": 2,
+          "role": "Explain",
+          "role_vi": "Giải thích vì sao",
+          "t": "This is because ___.",
+          "fixed": [
+            [
+              "This is because"
+            ]
+          ]
+        },
+        {
+          "id": "a-b3",
+          "p": 2,
+          "role": "Say it another way",
+          "role_vi": "Nói rõ thêm ý vừa nêu",
+          "t": "In other words, ___.",
+          "fixed": [
+            [
+              "In other words"
+            ]
+          ]
+        },
+        {
+          "id": "a-b4",
+          "p": 2,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For example, ___.",
+          "fixed": [
+            [
+              "For example"
+            ]
+          ]
+        },
+        {
+          "id": "a-b5",
+          "p": 2,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "As a result, ___.",
+          "fixed": [
+            [
+              "As a result"
+            ]
+          ]
+        },
+        {
+          "id": "a-c1",
+          "p": 3,
+          "role": "Reason 2",
+          "role_vi": "Lý do 2 (câu chủ đề)",
+          "t": "Another reason is that ___.",
+          "fixed": [
+            [
+              "Another reason is that"
+            ]
+          ]
+        },
+        {
+          "id": "a-c2",
+          "p": 3,
+          "role": "Explain",
+          "role_vi": "Giải thích vì sao",
+          "t": "This is because ___.",
+          "fixed": [
+            [
+              "This is because"
+            ]
+          ]
+        },
+        {
+          "id": "a-c3",
+          "p": 3,
+          "role": "Add a point",
+          "role_vi": "Bổ sung thêm ý",
+          "t": "In addition, ___.",
+          "fixed": [
+            [
+              "In addition"
+            ]
+          ]
+        },
+        {
+          "id": "a-c4",
+          "p": 3,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For instance, ___.",
+          "fixed": [
+            [
+              "For instance"
+            ]
+          ]
+        },
+        {
+          "id": "a-c5",
+          "p": 3,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "Therefore, ___.",
+          "fixed": [
+            [
+              "Therefore"
+            ]
+          ]
+        },
+        {
+          "id": "a-d1",
+          "p": 4,
+          "role": "Conclusion",
+          "role_vi": "Kết luận: nhắc lại quan điểm + 2 lý do",
+          "t": "In conclusion, I strongly believe that ___ because ___ and ___.",
+          "fixed": [
+            [
+              "In conclusion, I strongly believe that"
+            ]
+          ]
+        },
+        {
+          "id": "a-d2",
+          "p": 4,
+          "role": "Recommendation",
+          "role_vi": "Đề xuất",
+          "t": "For this reason, ___ should ___.",
+          "fixed": [
+            [
+              "For this reason"
+            ],
+            [
+              "should"
+            ]
+          ]
+        }
+      ],
+      "task": 2
+    },
+    {
+      "id": "discuss",
+      "name": "Discuss both views",
+      "name_vi": "Thảo luận hai quan điểm",
+      "spot": "Discuss both views and give your own opinion.",
+      "plan_vi": "Mở bài: nêu 2 quan điểm + ý kiến của bạn. Thân 1: quan điểm bạn KHÔNG chọn (lý do + ví dụ + kết quả). Thân 2: quan điểm bạn chọn (lý do + ví dụ + kết quả + vì sao bạn đồng ý). Kết bài: thừa nhận quan điểm 1 nhưng khẳng định quan điểm 2.",
+      "frame": [
+        {
+          "id": "d-i1",
+          "p": 1,
+          "role": "The two views",
+          "role_vi": "Nêu hai quan điểm",
+          "t": "Some people believe that ___, while others think that ___.",
+          "fixed": [
+            [
+              "Some people believe that"
+            ],
+            [
+              "while others think that"
+            ]
+          ]
+        },
+        {
+          "id": "d-i2",
+          "p": 1,
+          "role": "Your opinion",
+          "role_vi": "Nói bài sẽ làm gì + ý kiến của bạn",
+          "t": "This essay will discuss both views before explaining why I believe that ___.",
+          "fixed": [
+            [
+              "This essay will discuss both views before explaining why I believe that"
+            ]
+          ]
+        },
+        {
+          "id": "d-b1",
+          "p": 2,
+          "role": "View 1",
+          "role_vi": "Quan điểm 1 (bạn không chọn)",
+          "t": "On the one hand, some people argue that ___.",
+          "fixed": [
+            [
+              "On the one hand, some people argue that"
+            ]
+          ]
+        },
+        {
+          "id": "d-b2",
+          "p": 2,
+          "role": "Explain",
+          "role_vi": "Giải thích vì sao",
+          "t": "This is because ___.",
+          "fixed": [
+            [
+              "This is because"
+            ]
+          ]
+        },
+        {
+          "id": "d-b3",
+          "p": 2,
+          "role": "Say it another way",
+          "role_vi": "Nói rõ thêm ý vừa nêu",
+          "t": "In other words, ___.",
+          "fixed": [
+            [
+              "In other words"
+            ]
+          ]
+        },
+        {
+          "id": "d-b4",
+          "p": 2,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For example, ___.",
+          "fixed": [
+            [
+              "For example"
+            ]
+          ]
+        },
+        {
+          "id": "d-b5",
+          "p": 2,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "As a result, ___.",
+          "fixed": [
+            [
+              "As a result"
+            ]
+          ]
+        },
+        {
+          "id": "d-c1",
+          "p": 3,
+          "role": "View 2",
+          "role_vi": "Quan điểm 2 (bạn chọn)",
+          "t": "On the other hand, others believe that ___.",
+          "fixed": [
+            [
+              "On the other hand, others believe that"
+            ]
+          ]
+        },
+        {
+          "id": "d-c2",
+          "p": 3,
+          "role": "Main reason",
+          "role_vi": "Lý do chính",
+          "t": "The main reason is that ___.",
+          "fixed": [
+            [
+              "The main reason is that"
+            ]
+          ]
+        },
+        {
+          "id": "d-c3",
+          "p": 3,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For instance, ___.",
+          "fixed": [
+            [
+              "For instance"
+            ]
+          ]
+        },
+        {
+          "id": "d-c4",
+          "p": 3,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "Therefore, ___.",
+          "fixed": [
+            [
+              "Therefore"
+            ]
+          ]
+        },
+        {
+          "id": "d-c5",
+          "p": 3,
+          "role": "Your view",
+          "role_vi": "Vì sao bạn đồng ý với quan điểm này",
+          "t": "Personally, I agree with this view because ___.",
+          "fixed": [
+            [
+              "Personally, I agree with this view because"
+            ]
+          ]
+        },
+        {
+          "id": "d-d1",
+          "p": 4,
+          "role": "Conclusion",
+          "role_vi": "Kết luận: thừa nhận quan điểm 1, khẳng định quan điểm 2",
+          "t": "In conclusion, although there are some good reasons why ___, I believe that ___.",
+          "fixed": [
+            [
+              "In conclusion, although there are some good reasons why"
+            ],
+            [
+              "I believe that"
+            ]
+          ]
+        }
+      ],
+      "task": 2
+    },
+    {
+      "id": "advantages",
+      "name": "Advantages outweigh disadvantages?",
+      "name_vi": "Lợi ích có lớn hơn bất lợi?",
+      "spot": "Do the advantages of this trend outweigh the disadvantages?",
+      "plan_vi": "Mở bài: viết lại xu hướng + nêu bên nào lớn hơn. Thân 1: bất lợi chính + giải thích + ví dụ + hệ quả + cách khắc phục. Thân 2: các lợi ích (lớn hơn) — lợi ích 1 + ví dụ, lợi ích 2 + nói rõ + kết quả. Kết bài: nhắc lại + đề xuất.",
+      "frame": [
+        {
+          "id": "v-i1",
+          "p": 1,
+          "role": "Paraphrase the trend",
+          "role_vi": "Viết lại xu hướng trong đề",
+          "t": "Nowadays, ___.",
+          "fixed": [
+            [
+              "Nowadays"
+            ]
+          ]
+        },
+        {
+          "id": "v-i2",
+          "p": 1,
+          "role": "Your opinion",
+          "role_vi": "Nêu bên nào lớn hơn",
+          "t": "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages.",
+          "fixed": [
+            [
+              "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages",
+              "Although this trend has some benefits, I believe that the disadvantages outweigh the advantages"
+            ]
+          ]
+        },
+        {
+          "id": "v-b1",
+          "p": 2,
+          "role": "Main disadvantage",
+          "role_vi": "Bất lợi chính",
+          "t": "On the one hand, the main disadvantage of ___ is that ___.",
+          "fixed": [
+            [
+              "On the one hand, the main disadvantage of"
+            ],
+            [
+              "is that"
+            ]
+          ]
+        },
+        {
+          "id": "v-b2",
+          "p": 2,
+          "role": "Explain",
+          "role_vi": "Giải thích vì sao",
+          "t": "This is because ___.",
+          "fixed": [
+            [
+              "This is because"
+            ]
+          ]
+        },
+        {
+          "id": "v-b3",
+          "p": 2,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For example, ___.",
+          "fixed": [
+            [
+              "For example"
+            ]
+          ]
+        },
+        {
+          "id": "v-b5",
+          "p": 2,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "Consequently, ___.",
+          "fixed": [
+            [
+              "Consequently"
+            ]
+          ]
+        },
+        {
+          "id": "v-b4",
+          "p": 2,
+          "role": "Solution",
+          "role_vi": "Bất lợi này khắc phục được",
+          "t": "However, this problem can be solved if ___.",
+          "fixed": [
+            [
+              "However, this problem can be solved if"
+            ]
+          ]
+        },
+        {
+          "id": "v-c1",
+          "p": 3,
+          "role": "The benefits",
+          "role_vi": "Lợi ích (quan trọng hơn)",
+          "t": "On the other hand, the benefits of ___ are much more significant.",
+          "fixed": [
+            [
+              "On the other hand, the benefits of"
+            ],
+            [
+              "are much more significant"
+            ]
+          ]
+        },
+        {
+          "id": "v-c2",
+          "p": 3,
+          "role": "Benefit 1",
+          "role_vi": "Lợi ích 1",
+          "t": "Firstly, ___.",
+          "fixed": [
+            [
+              "Firstly"
+            ]
+          ]
+        },
+        {
+          "id": "v-c3",
+          "p": 3,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For instance, ___.",
+          "fixed": [
+            [
+              "For instance"
+            ]
+          ]
+        },
+        {
+          "id": "v-c4",
+          "p": 3,
+          "role": "Benefit 2",
+          "role_vi": "Lợi ích 2",
+          "t": "Secondly, ___.",
+          "fixed": [
+            [
+              "Secondly"
+            ]
+          ]
+        },
+        {
+          "id": "v-c6",
+          "p": 3,
+          "role": "Say what it means",
+          "role_vi": "Nói rõ lợi ích 2 nghĩa là gì",
+          "t": "This means that ___.",
+          "fixed": [
+            [
+              "This means that"
+            ]
+          ]
+        },
+        {
+          "id": "v-c5",
+          "p": 3,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "As a result, ___.",
+          "fixed": [
+            [
+              "As a result"
+            ]
+          ]
+        },
+        {
+          "id": "v-d1",
+          "p": 4,
+          "role": "Conclusion",
+          "role_vi": "Kết luận",
+          "t": "In conclusion, although ___ may cause some problems, I believe that its advantages are far greater.",
+          "fixed": [
+            [
+              "In conclusion, although"
+            ],
+            [
+              "may cause some problems, I believe that its advantages are far greater",
+              "may bring some benefits, I believe that its disadvantages are far greater"
+            ]
+          ]
+        },
+        {
+          "id": "v-d2",
+          "p": 4,
+          "role": "Recommendation",
+          "role_vi": "Đề xuất",
+          "t": "For this reason, ___ should ___.",
+          "fixed": [
+            [
+              "For this reason"
+            ],
+            [
+              "should"
+            ]
+          ]
+        }
+      ],
+      "task": 2
+    },
+    {
+      "id": "problem",
+      "name": "Causes / Problems & Solutions",
+      "name_vi": "Nguyên nhân / Vấn đề & Giải pháp",
+      "spot": "What are the causes (problems)? What can be done to solve them?",
+      "plan_vi": "Mở bài: viết lại vấn đề + nói bài sẽ nêu nguyên nhân (vấn đề) và giải pháp. Thân 1: nguyên nhân 1 + giải thích + ví dụ, nguyên nhân 2 + kết quả. Thân 2: 2 giải pháp, mỗi giải pháp nói ai làm gì và hiệu quả ra sao. Kết bài: tóm tắt nguyên nhân + giải pháp.",
+      "frame": [
+        {
+          "id": "p-i1",
+          "p": 1,
+          "role": "Paraphrase the problem",
+          "role_vi": "Viết lại vấn đề trong đề",
+          "t": "These days, ___.",
+          "fixed": [
+            [
+              "These days"
+            ]
+          ]
+        },
+        {
+          "id": "p-i2",
+          "p": 1,
+          "role": "What the essay does",
+          "role_vi": "Nói bài sẽ làm gì",
+          "t": "This essay will explain the main causes of this problem and suggest some effective solutions.",
+          "fixed": [
+            [
+              "This essay will explain the main"
+            ],
+            [
+              "and suggest some effective solutions"
+            ]
+          ]
+        },
+        {
+          "id": "p-b1",
+          "p": 2,
+          "role": "Topic sentence",
+          "role_vi": "Câu chủ đề đoạn 1",
+          "t": "There are two main causes of this problem.",
+          "fixed": [
+            [
+              "There are two main"
+            ]
+          ]
+        },
+        {
+          "id": "p-b2",
+          "p": 2,
+          "role": "Cause 1",
+          "role_vi": "Nguyên nhân (vấn đề) 1",
+          "t": "The first cause is that ___.",
+          "fixed": [
+            [
+              "The first cause is that",
+              "The first problem is that"
+            ]
+          ]
+        },
+        {
+          "id": "p-b2e",
+          "p": 2,
+          "role": "Explain",
+          "role_vi": "Giải thích vì sao",
+          "t": "This is because ___.",
+          "fixed": [
+            [
+              "This is because"
+            ]
+          ]
+        },
+        {
+          "id": "p-b3",
+          "p": 2,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For example, ___.",
+          "fixed": [
+            [
+              "For example"
+            ]
+          ]
+        },
+        {
+          "id": "p-b4",
+          "p": 2,
+          "role": "Cause 2",
+          "role_vi": "Nguyên nhân (vấn đề) 2",
+          "t": "Another cause is that ___.",
+          "fixed": [
+            [
+              "Another cause is that",
+              "Another problem is that"
+            ]
+          ]
+        },
+        {
+          "id": "p-b5",
+          "p": 2,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "As a result, ___.",
+          "fixed": [
+            [
+              "As a result"
+            ]
+          ]
+        },
+        {
+          "id": "p-c1",
+          "p": 3,
+          "role": "Topic sentence",
+          "role_vi": "Câu chủ đề đoạn 2",
+          "t": "However, there are several solutions to this problem.",
+          "fixed": [
+            [
+              "However, there are several solutions to this problem"
+            ]
+          ]
+        },
+        {
+          "id": "p-c2",
+          "p": 3,
+          "role": "Solution 1",
+          "role_vi": "Giải pháp 1: ai nên làm gì",
+          "t": "Firstly, ___ should ___.",
+          "fixed": [
+            [
+              "Firstly"
+            ],
+            [
+              "should"
+            ]
+          ]
+        },
+        {
+          "id": "p-c3",
+          "p": 3,
+          "role": "Effect",
+          "role_vi": "Hiệu quả của giải pháp 1",
+          "t": "This would ___.",
+          "fixed": [
+            [
+              "This would"
+            ]
+          ]
+        },
+        {
+          "id": "p-c4",
+          "p": 3,
+          "role": "Solution 2",
+          "role_vi": "Giải pháp 2: ai có thể làm gì",
+          "t": "Secondly, ___ could ___.",
+          "fixed": [
+            [
+              "Secondly"
+            ],
+            [
+              "could"
+            ]
+          ]
+        },
+        {
+          "id": "p-c5",
+          "p": 3,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For instance, ___.",
+          "fixed": [
+            [
+              "For instance"
+            ]
+          ]
+        },
+        {
+          "id": "p-c6",
+          "p": 3,
+          "role": "Effect",
+          "role_vi": "Hiệu quả chung của các giải pháp",
+          "t": "In this way, ___.",
+          "fixed": [
+            [
+              "In this way"
+            ]
+          ]
+        },
+        {
+          "id": "p-d1",
+          "p": 4,
+          "role": "Conclusion",
+          "role_vi": "Kết luận: nguyên nhân + giải pháp",
+          "t": "In conclusion, ___ is caused by ___ and ___, but this problem can be solved if ___.",
+          "fixed": [
+            [
+              "In conclusion"
+            ],
+            [
+              "but this problem can be solved if"
+            ]
+          ]
+        }
+      ],
+      "task": 2
+    },
+    {
+      "id": "twopart",
+      "name": "Two-part question",
+      "name_vi": "Câu hỏi hai phần",
+      "spot": "Why is this happening? Is it a positive or negative development? · Why…? What can be done…?",
+      "plan_vi": "Mở bài: viết lại đề + nói bài sẽ trả lời 2 câu hỏi. Thân 1: trả lời câu hỏi 1 (2 lý do, có ví dụ và kết quả). Thân 2: trả lời câu hỏi 2 (ý kiến + giải thích + ví dụ + bổ sung). Kết bài: tóm tắt cả hai câu trả lời.",
+      "frame": [
+        {
+          "id": "t-i1",
+          "p": 1,
+          "role": "Paraphrase the question",
+          "role_vi": "Viết lại đề bằng từ của bạn",
+          "t": "In recent years, ___.",
+          "fixed": [
+            [
+              "In recent years"
+            ]
+          ]
+        },
+        {
+          "id": "t-i2",
+          "p": 1,
+          "role": "What the essay does",
+          "role_vi": "Nói bài sẽ trả lời gì",
+          "t": "This essay will first explain why this is happening and then ___.",
+          "fixed": [
+            [
+              "This essay will first explain why this is happening and then"
+            ]
+          ]
+        },
+        {
+          "id": "t-b1",
+          "p": 2,
+          "role": "Answer question 1",
+          "role_vi": "Trả lời câu hỏi 1 (câu chủ đề)",
+          "t": "There are several reasons why ___.",
+          "fixed": [
+            [
+              "There are several reasons why"
+            ]
+          ]
+        },
+        {
+          "id": "t-b2",
+          "p": 2,
+          "role": "Reason 1",
+          "role_vi": "Lý do 1",
+          "t": "Firstly, ___.",
+          "fixed": [
+            [
+              "Firstly"
+            ]
+          ]
+        },
+        {
+          "id": "t-b2e",
+          "p": 2,
+          "role": "Say what it means",
+          "role_vi": "Nói rõ lý do 1 nghĩa là gì",
+          "t": "This means that ___.",
+          "fixed": [
+            [
+              "This means that"
+            ]
+          ]
+        },
+        {
+          "id": "t-b3",
+          "p": 2,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For example, ___.",
+          "fixed": [
+            [
+              "For example"
+            ]
+          ]
+        },
+        {
+          "id": "t-b4",
+          "p": 2,
+          "role": "Reason 2",
+          "role_vi": "Lý do 2",
+          "t": "Secondly, ___.",
+          "fixed": [
+            [
+              "Secondly"
+            ]
+          ]
+        },
+        {
+          "id": "t-b4e",
+          "p": 2,
+          "role": "Say it another way",
+          "role_vi": "Nói rõ thêm lý do 2",
+          "t": "In other words, ___.",
+          "fixed": [
+            [
+              "In other words"
+            ]
+          ]
+        },
+        {
+          "id": "t-b5",
+          "p": 2,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "As a result, ___.",
+          "fixed": [
+            [
+              "As a result"
+            ]
+          ]
+        },
+        {
+          "id": "t-c1",
+          "p": 3,
+          "role": "Answer question 2",
+          "role_vi": "Trả lời câu hỏi 2 (câu chủ đề)",
+          "t": "Regarding the second question, I believe that ___.",
+          "fixed": [
+            [
+              "Regarding the second question, I believe that"
+            ]
+          ]
+        },
+        {
+          "id": "t-c2",
+          "p": 3,
+          "role": "Explain",
+          "role_vi": "Giải thích vì sao",
+          "t": "This is because ___.",
+          "fixed": [
+            [
+              "This is because"
+            ]
+          ]
+        },
+        {
+          "id": "t-c3",
+          "p": 3,
+          "role": "Example",
+          "role_vi": "Ví dụ cụ thể",
+          "t": "For instance, ___.",
+          "fixed": [
+            [
+              "For instance"
+            ]
+          ]
+        },
+        {
+          "id": "t-c4",
+          "p": 3,
+          "role": "Add a point",
+          "role_vi": "Bổ sung thêm ý",
+          "t": "Moreover, ___.",
+          "fixed": [
+            [
+              "Moreover"
+            ]
+          ]
+        },
+        {
+          "id": "t-c5",
+          "p": 3,
+          "role": "Result",
+          "role_vi": "Kết quả / hệ quả",
+          "t": "Therefore, ___.",
+          "fixed": [
+            [
+              "Therefore"
+            ]
+          ]
+        },
+        {
+          "id": "t-d1",
+          "p": 4,
+          "role": "Conclusion",
+          "role_vi": "Kết luận: tóm tắt hai câu trả lời",
+          "t": "In conclusion, ___ because ___, and I believe that ___.",
+          "fixed": [
+            [
+              "In conclusion"
+            ],
+            [
+              "and I believe that"
+            ]
+          ]
+        }
+      ],
+      "task": 2
+    }
+  ]
+}

@@ -1,0 +1,1435 @@
+{
+  "prompts": [
+    {
+      "id": "g1-transport",
+      "type": "line",
+      "task": "en-w-ielts1-transport",
+      "title": "Passengers by type of transport",
+      "prompt": "The line graph below shows the number of passengers using three types of public transport in a city between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Biểu đồ đường cho thấy số lượt hành khách sử dụng ba loại phương tiện công cộng ở một thành phố từ năm 2000 đến 2020. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: tàu điện ngầm tăng mạnh, xe buýt giảm dần; tàu điện vượt xe buýt",
+        "Chi tiết 1: tàu điện 20 → 80 (2010) → 140 triệu (2020)",
+        "Chi tiết 2: xe buýt 120 → 70 triệu; taxi dao động quanh 30 triệu"
+      ],
+      "chart": {
+        "kind": "line",
+        "title": "Passengers using public transport in a city, 2000–2020",
+        "unit": "millions of passengers per year",
+        "x": [
+          "2000",
+          "2005",
+          "2010",
+          "2015",
+          "2020"
+        ],
+        "series": [
+          {
+            "name": "Bus",
+            "values": [
+              120,
+              115,
+              100,
+              85,
+              70
+            ]
+          },
+          {
+            "name": "Metro",
+            "values": [
+              20,
+              45,
+              80,
+              110,
+              140
+            ]
+          },
+          {
+            "name": "Taxi",
+            "values": [
+              30,
+              34,
+              28,
+              32,
+              30
+            ]
+          }
+        ]
+      },
+      "sentences": [
+        [
+          "l-i1",
+          "Biểu đồ đường minh họa số lượt hành khách sử dụng ba loại phương tiện công cộng ở một thành phố trong giai đoạn từ năm 2000 đến năm 2020.",
+          "The line graph illustrates the number of passengers who used three types of public transport in a city between 2000 and 2020.",
+          "The line graph illustrates the number of passengers using three types of public transport in a city between 2000 and 2020.",
+          "The line graph illustrates how many passengers travelled by three different modes of public transport in a city between 2000 and 2020."
+        ],
+        [
+          "l-o1",
+          "Nhìn chung, số người đi tàu điện ngầm tăng mạnh, trong khi số người đi xe buýt giảm dần.",
+          "Overall, the number of metro passengers increased a lot, while the number of bus passengers went down slowly.",
+          "Overall, the number of metro passengers rose sharply, while bus use declined steadily.",
+          "Overall, metro use rose dramatically over the period, while bus use saw a steady decline."
+        ],
+        [
+          "l-o2",
+          "Cũng có thể thấy rằng tàu điện ngầm đã vượt xe buýt để trở thành phương tiện phổ biến nhất vào cuối giai đoạn.",
+          "It is also clear that the metro became more popular than the bus by the end of the period.",
+          "It is also clear that the metro overtook the bus to become the most popular form of transport by the end of the period.",
+          "It is also clear that the metro overtook the bus as the most widely used form of transport by the end of the period."
+        ],
+        [
+          "l-b1",
+          "Năm 2000, số lượt hành khách đi tàu điện ngầm chỉ ở mức 20 triệu.",
+          "In 2000, the number of metro passengers stood at only 20 million.",
+          "In 2000, the figure for metro passengers stood at just 20 million.",
+          "In 2000, metro passenger numbers stood at a mere 20 million."
+        ],
+        [
+          "l-b2",
+          "Trong mười năm tiếp theo, con số này tăng đều lên 80 triệu, gấp bốn lần mức ban đầu.",
+          "Over the next ten years, this figure went up steadily to 80 million, four times the first figure.",
+          "Over the following decade, this figure rose steadily to 80 million, four times the starting figure.",
+          "Over the following decade, this figure climbed steadily to 80 million, four times its initial level."
+        ],
+        [
+          "l-b3",
+          "Đến năm 2020, con số này đã đạt 140 triệu, cao nhất trên biểu đồ.",
+          "By 2020, it had reached 140 million, which was the highest number on the graph.",
+          "By 2020, it had reached 140 million, the highest figure on the graph.",
+          "By 2020, it had reached 140 million, the highest figure shown on the graph."
+        ],
+        [
+          "l-b4",
+          "Điều này có nghĩa là số lượt hành khách đi tàu điện ngầm năm 2020 cao gấp bảy lần năm 2000.",
+          "This means that the number of metro passengers in 2020 was seven times higher than in 2000.",
+          "This means that the number of metro passengers increased sevenfold between 2000 and 2020.",
+          "This means that metro passenger numbers grew sevenfold over the twenty-year period."
+        ],
+        [
+          "l-c1",
+          "Ngược lại, số lượt hành khách đi xe buýt bắt đầu ở mức cao hơn nhiều, 120 triệu vào năm 2000.",
+          "By contrast, the number of bus passengers began much higher, at 120 million in 2000.",
+          "By contrast, bus passenger numbers began much higher, at 120 million in 2000.",
+          "By contrast, bus passenger numbers began the period much higher, at 120 million in 2000."
+        ],
+        [
+          "l-c2",
+          "Sau đó, con số này giảm dần, chỉ còn 70 triệu vào năm 2020.",
+          "After that, this number went down slowly, reaching only 70 million in 2020.",
+          "After that, the figure fell gradually, reaching just 70 million in 2020.",
+          "After that, the figure decreased gradually, reaching a low of 70 million in 2020."
+        ],
+        [
+          "l-c3",
+          "Trong khi đó, số người đi taxi chỉ thay đổi nhẹ và dao động quanh mức 30 triệu trong suốt giai đoạn.",
+          "Meanwhile, the number of taxi passengers changed a little but stayed at around 30 million during the whole period.",
+          "Meanwhile, the number of taxi passengers changed only slightly and fluctuated around 30 million throughout the period.",
+          "Meanwhile, taxi use fluctuated only slightly, remaining at around 30 million throughout the period."
+        ]
+      ]
+    },
+    {
+      "id": "g1-exercise",
+      "type": "bar",
+      "task": "en-w-ielts1-exercise",
+      "title": "Regular exercise by age and gender",
+      "prompt": "The bar chart below shows the percentage of men and women in four age groups who did regular exercise in one country in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Biểu đồ cột cho thấy tỷ lệ nam và nữ thuộc bốn nhóm tuổi tập thể dục thường xuyên ở một quốc gia năm 2024. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: người trẻ nhất năng động nhất, trên 65 tuổi ít nhất; nam – nữ chênh lệch nhỏ",
+        "Chi tiết 1: 16–24 (nam 62%, nữ 55%), 25–44 (nữ 50% > nam 48%)",
+        "Chi tiết 2: 45–64 (40% / 38%), 65+ (25% / 28%)"
+      ],
+      "chart": {
+        "kind": "bar",
+        "title": "People who did regular exercise, by age group, 2024",
+        "unit": "%",
+        "categories": [
+          "16–24",
+          "25–44",
+          "45–64",
+          "65+"
+        ],
+        "series": [
+          {
+            "name": "Men",
+            "values": [
+              62,
+              48,
+              40,
+              25
+            ]
+          },
+          {
+            "name": "Women",
+            "values": [
+              55,
+              50,
+              38,
+              28
+            ]
+          }
+        ]
+      },
+      "sentences": [
+        [
+          "b-i1",
+          "Biểu đồ cột so sánh tỷ lệ nam và nữ tập thể dục thường xuyên theo bốn nhóm tuổi ở một quốc gia vào năm 2024.",
+          "The bar chart compares the percentage of men and women who did exercise regularly in four age groups in one country in 2024.",
+          "The bar chart compares the proportion of men and women in four age groups who exercised regularly in one country in 2024.",
+          "The bar chart compares the proportions of men and women across four age groups who took regular exercise in one country in 2024."
+        ],
+        [
+          "b-o1",
+          "Nhìn chung, nhóm trẻ nhất là nhóm năng động nhất, trong khi những người trên 65 tuổi là nhóm ít vận động nhất.",
+          "Overall, the youngest people were the most active, whereas people over 65 were the least active.",
+          "Overall, the youngest age group was the most active, whereas those aged over 65 were the least active.",
+          "Overall, the youngest age group was by far the most active, whereas the over-65s were the least active."
+        ],
+        [
+          "b-o2",
+          "Cũng có thể thấy rằng sự chênh lệch giữa nam và nữ là khá nhỏ ở hầu hết các nhóm tuổi.",
+          "It is also clear that the difference between men and women was quite small in most age groups.",
+          "It is also clear that the gap between men and women was relatively small in most age groups.",
+          "It is also clear that the gender gap was relatively narrow in most age groups."
+        ],
+        [
+          "b-b1",
+          "Xem xét chi tiết hơn nhóm 16–24 tuổi, nam giới có tỷ lệ cao nhất trên biểu đồ, ở mức 62%.",
+          "Looking at the 16–24 group in more detail, men had the highest percentage on the chart, at 62%.",
+          "Looking at the 16–24 age group in more detail, men had the highest rate on the chart, at 62%.",
+          "Looking at the 16–24 age group in more detail, men recorded the highest rate of all, at 62%."
+        ],
+        [
+          "b-b2",
+          "Tiếp theo là nữ giới cùng nhóm tuổi, với 55%.",
+          "This was followed by women in the same age group, with 55%.",
+          "This was followed by women in the same age group, with 55%.",
+          "This was followed by women of the same age, with 55%."
+        ],
+        [
+          "b-b3",
+          "Để so sánh, ở nhóm 25–44 tuổi, tỷ lệ nữ giới (50%) cao hơn một chút so với nam giới (48%).",
+          "In comparison, in the 25–44 group, the percentage of women (50%) was a little higher than that of men (48%).",
+          "In comparison, in the 25–44 age group, the figure for women (50%) was slightly higher than that for men (48%).",
+          "In comparison, among 25- to 44-year-olds, women (50%) were marginally more active than men (48%)."
+        ],
+        [
+          "b-b4",
+          "Điều này có nghĩa là nam giới năng động hơn nữ giới ở nhóm trẻ nhất, nhưng không phải ở nhóm 25–44 tuổi.",
+          "This means that men were more active than women in the youngest group, but not in the 25–44 group.",
+          "This means that men were more active than women in the youngest group, but not in the 25–44 group.",
+          "This means that men were more active than women in the youngest group, but this pattern was reversed among 25- to 44-year-olds."
+        ],
+        [
+          "b-c1",
+          "Ngược lại, tỷ lệ này thấp hơn nhiều ở các nhóm lớn tuổi.",
+          "By contrast, the percentages were much lower in the older groups.",
+          "By contrast, the figures were much lower for the older age groups.",
+          "By contrast, participation was considerably lower among older people."
+        ],
+        [
+          "b-c2",
+          "Chỉ 40% nam giới từ 45 đến 64 tuổi tập thể dục thường xuyên, so với 38% nữ giới.",
+          "Only 40% of men aged 45 to 64 did regular exercise, compared with 38% of women.",
+          "Only 40% of men aged 45 to 64 exercised regularly, compared with 38% of women.",
+          "Only 40% of men aged between 45 and 64 exercised regularly, compared with 38% of women."
+        ],
+        [
+          "b-c3",
+          "Cuối cùng, nhóm trên 65 tuổi có tỷ lệ thấp nhất, chỉ 25% ở nam và 28% ở nữ.",
+          "Finally, people over 65 had the lowest figures, with only 25% for men and 28% for women.",
+          "Finally, the over-65s had the lowest figures, at just 25% for men and 28% for women.",
+          "Finally, the over-65s had the lowest figures of all, at just 25% for men and 28% for women."
+        ]
+      ]
+    },
+    {
+      "id": "g1-energy",
+      "type": "pie",
+      "task": "en-w-ielts1-energy",
+      "title": "Sources of electricity",
+      "prompt": "The pie charts below show the sources of electricity in one country in 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Hai biểu đồ tròn cho thấy các nguồn sản xuất điện ở một quốc gia vào năm 2000 và năm 2020. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: than đá là nguồn chính cả hai năm nhưng giảm; mặt trời + gió tăng mạnh nhất",
+        "Chi tiết 1 (2000): than 55%, khí đốt 20%, thủy điện 20%, mặt trời + gió 5%",
+        "Chi tiết 2 (2020): than 35%, mặt trời + gió 22%, khí đốt 25%, thủy điện 18%"
+      ],
+      "chart": {
+        "kind": "pie",
+        "title": "Sources of electricity in one country (%)",
+        "unit": "%",
+        "pies": [
+          {
+            "label": "2000",
+            "slices": [
+              {
+                "name": "Coal",
+                "value": 55
+              },
+              {
+                "name": "Gas",
+                "value": 20
+              },
+              {
+                "name": "Hydropower",
+                "value": 20
+              },
+              {
+                "name": "Solar & wind",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "label": "2020",
+            "slices": [
+              {
+                "name": "Coal",
+                "value": 35
+              },
+              {
+                "name": "Gas",
+                "value": 25
+              },
+              {
+                "name": "Hydropower",
+                "value": 18
+              },
+              {
+                "name": "Solar & wind",
+                "value": 22
+              }
+            ]
+          }
+        ]
+      },
+      "sentences": [
+        [
+          "pc-i1",
+          "Các biểu đồ tròn cho thấy tỷ trọng điện được sản xuất từ các nguồn khác nhau ở một quốc gia vào năm 2000 và năm 2020.",
+          "The pie charts show the percentage of electricity that came from different sources in one country in 2000 and 2020.",
+          "The pie charts show the proportion of electricity generated from different sources in one country in 2000 and 2020.",
+          "The pie charts show how electricity generation in one country was divided between different sources in 2000 and 2020."
+        ],
+        [
+          "pc-o1",
+          "Nhìn chung, than đá là nguồn điện chính trong cả hai năm, mặc dù tỷ trọng của nó giảm đáng kể.",
+          "Overall, coal was the main source of electricity in both years, although its share went down a lot.",
+          "Overall, coal was the main source of electricity in both years, although its share fell considerably.",
+          "Overall, coal remained the dominant source of electricity in both years, although its share fell considerably."
+        ],
+        [
+          "pc-o2",
+          "Cũng có thể thấy rằng điện mặt trời và điện gió có mức tăng lớn nhất trong hai mươi năm.",
+          "It is also clear that solar and wind power increased the most over the twenty years.",
+          "It is also clear that solar and wind power saw the biggest increase over the twenty-year period.",
+          "It is also clear that solar and wind power experienced the most dramatic growth over the twenty-year period."
+        ],
+        [
+          "pc-b1",
+          "Năm 2000, than đá chiếm hơn một nửa tổng lượng điện, ở mức 55%.",
+          "In 2000, coal made up more than half of all electricity, at 55%.",
+          "In 2000, coal made up over half of all electricity production, at 55%.",
+          "In 2000, coal made up well over half of total electricity generation, at 55%."
+        ],
+        [
+          "pc-b2",
+          "Tiếp theo là khí đốt và thủy điện, mỗi nguồn chiếm 20%.",
+          "This was followed by gas and hydropower, which each accounted for 20%.",
+          "This was followed by gas and hydropower, which each accounted for 20%.",
+          "This was followed by gas and hydropower, which each accounted for a fifth of the total."
+        ],
+        [
+          "pc-b3",
+          "Tỷ trọng nhỏ nhất là điện mặt trời và điện gió, chỉ 5%.",
+          "The smallest proportion was solar and wind power, at only 5%.",
+          "The smallest proportion came from solar and wind power, at only 5%.",
+          "The smallest proportion came from solar and wind power, at a mere 5%."
+        ],
+        [
+          "pc-b4",
+          "Điều này có nghĩa là các nhiên liệu hóa thạch (than đá và khí đốt) tạo ra tới ba phần tư tổng lượng điện vào năm 2000.",
+          "This means that fossil fuels, coal and gas, made three quarters of all the electricity in 2000.",
+          "This means that fossil fuels, namely coal and gas, produced three quarters of all electricity in 2000.",
+          "This means that fossil fuels, namely coal and gas, were responsible for three quarters of all the electricity generated in 2000."
+        ],
+        [
+          "pc-c1",
+          "Đến năm 2020, tỷ trọng của than đá đã giảm xuống còn 35%.",
+          "By 2020, the share of coal had fallen to 35%.",
+          "By 2020, the share of coal had fallen to 35%, although it was still the largest.",
+          "By 2020, the share of coal had fallen to 35%, a considerable drop, although it was still the largest single source."
+        ],
+        [
+          "pc-c2",
+          "Ngược lại, tỷ trọng điện mặt trời và điện gió tăng hơn bốn lần, lên 22%.",
+          "By contrast, the share of solar and wind power went up more than four times, to 22%.",
+          "By contrast, the share of solar and wind power more than quadrupled, rising to 22%.",
+          "By contrast, the share of solar and wind power more than quadrupled to 22%."
+        ],
+        [
+          "pc-c3",
+          "Trong khi đó, tỷ trọng khí đốt tăng nhẹ lên 25%, còn thủy điện giảm nhẹ xuống 18%.",
+          "Meanwhile, the share of gas went up a little to 25%, and hydropower went down a little to 18%.",
+          "Meanwhile, the share of gas rose slightly to 25%, while hydropower dropped slightly to 18%.",
+          "Meanwhile, the share of gas rose modestly to 25%, whereas hydropower dipped slightly to 18%."
+        ]
+      ]
+    },
+    {
+      "id": "g1-rent",
+      "type": "table",
+      "task": "en-w-ielts1-rent",
+      "title": "Rents and salaries in four cities",
+      "prompt": "The table below gives information about the average monthly rent for a one-bedroom flat and the average monthly salary in four Asian cities in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Bảng cung cấp thông tin về giá thuê trung bình hằng tháng của căn hộ một phòng ngủ và mức lương trung bình hằng tháng ở bốn thành phố châu Á năm 2025. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: Singapore cao nhất cả hai, Hà Nội thấp nhất; Seoul — tiền thuê chiếm tỷ lệ lương thấp nhất",
+        "Chi tiết 1 (tiền thuê): Singapore 2.500, Seoul 900, Bangkok 600, Hà Nội 450",
+        "Chi tiết 2 (lương): Singapore 4.800, Seoul 2.700; tiền thuê ≈ 1/2 lương ở 3 thành phố, 1/3 ở Seoul"
+      ],
+      "chart": {
+        "kind": "table",
+        "title": "Average monthly rent and salary in four cities, 2025 (US dollars)",
+        "columns": [
+          "City",
+          "Rent (one-bedroom flat)",
+          "Average salary",
+          "Rent as % of salary"
+        ],
+        "rows": [
+          [
+            "Hanoi",
+            "450",
+            "900",
+            "50%"
+          ],
+          [
+            "Bangkok",
+            "600",
+            "1,100",
+            "55%"
+          ],
+          [
+            "Singapore",
+            "2,500",
+            "4,800",
+            "52%"
+          ],
+          [
+            "Seoul",
+            "900",
+            "2,700",
+            "33%"
+          ]
+        ]
+      },
+      "sentences": [
+        [
+          "t1-i1",
+          "Bảng cung cấp thông tin về giá thuê nhà trung bình hằng tháng và mức lương trung bình ở bốn thành phố châu Á vào năm 2025.",
+          "The table gives information about the average monthly rent and the average salary in four Asian cities in 2025.",
+          "The table gives information about average monthly rents and salaries in four Asian cities in 2025.",
+          "The table gives information about average monthly rents and earnings in four Asian cities in 2025."
+        ],
+        [
+          "t1-o1",
+          "Nhìn chung, Singapore có giá thuê nhà và mức lương cao nhất, trong khi Hà Nội có mức thấp nhất.",
+          "Overall, Singapore had the highest rent and salary, while Hanoi had the lowest.",
+          "Overall, Singapore had the highest rents and salaries, while Hanoi had the lowest.",
+          "Overall, Singapore had by far the highest rents and salaries, while Hanoi had the lowest figures in both categories."
+        ],
+        [
+          "t1-o2",
+          "Cũng có thể thấy rằng ở Seoul, tiền thuê nhà chiếm tỷ lệ nhỏ nhất trong thu nhập.",
+          "It is also clear that rent took the smallest part of people's salary in Seoul.",
+          "It is also clear that rent took up the smallest share of income in Seoul.",
+          "It is also clear that rent accounted for the smallest proportion of income in Seoul."
+        ],
+        [
+          "t1-b1",
+          "Xem xét chi tiết hơn về giá thuê, một căn hộ một phòng ngủ ở Singapore có giá 2.500 đô la mỗi tháng, cao hơn nhiều so với các thành phố khác.",
+          "Looking at rent in more detail, a one-bedroom flat in Singapore cost 2,500 dollars a month, much more than in the other cities.",
+          "Looking at rents in more detail, a one-bedroom flat in Singapore cost $2,500 per month, much higher than in the other cities.",
+          "Looking at rents in more detail, a one-bedroom flat in Singapore cost $2,500 a month, far more than in the other cities."
+        ],
+        [
+          "t1-b2",
+          "Tiếp theo là Seoul với 900 đô la và Bangkok với 600 đô la.",
+          "This was followed by Seoul, at 900 dollars, and Bangkok, at 600 dollars.",
+          "This was followed by Seoul, at $900, and Bangkok, at $600.",
+          "This was followed by Seoul, at $900, and Bangkok, at $600."
+        ],
+        [
+          "t1-b3",
+          "Để so sánh, giá thuê một căn hộ tương tự ở Hà Nội chỉ là 450 đô la.",
+          "In comparison, the rent for a similar flat in Hanoi was only 450 dollars.",
+          "In comparison, the rent for a similar flat in Hanoi was just $450.",
+          "In comparison, renting a similar flat in Hanoi cost just $450."
+        ],
+        [
+          "t1-b4",
+          "Điều này có nghĩa là giá thuê nhà ở Singapore cao gần gấp sáu lần so với ở Hà Nội.",
+          "This means that rent in Singapore was almost six times higher than rent in Hanoi.",
+          "This means that rents in Singapore were nearly six times higher than those in Hanoi.",
+          "This means that renting a flat in Singapore cost nearly six times as much as in Hanoi."
+        ],
+        [
+          "t1-c1",
+          "Chuyển sang mức lương, người lao động ở Singapore kiếm trung bình 4.800 đô la mỗi tháng.",
+          "Turning to salaries, workers in Singapore earned 4,800 dollars a month on average.",
+          "Turning to salaries, workers in Singapore earned an average of $4,800 per month.",
+          "Turning to salaries, the average worker in Singapore earned $4,800 a month."
+        ],
+        [
+          "t1-c2",
+          "Trong khi đó, mức lương trung bình ở Seoul là 2.700 đô la, cao gấp ba lần ở Hà Nội.",
+          "Meanwhile, the average salary in Seoul was 2,700 dollars, three times higher than in Hanoi.",
+          "Meanwhile, the average salary in Seoul was $2,700, three times the figure for Hanoi.",
+          "Meanwhile, the average salary in Seoul stood at $2,700, three times the figure for Hanoi."
+        ],
+        [
+          "t1-c3",
+          "Cuối cùng, tiền thuê nhà chiếm khoảng một nửa thu nhập ở Hà Nội, Bangkok và Singapore, nhưng chỉ khoảng một phần ba ở Seoul.",
+          "Finally, rent was about half of people's income in Hanoi, Bangkok and Singapore, but only about one third in Seoul.",
+          "Finally, rent took up about half of the average income in Hanoi, Bangkok and Singapore, but only about a third in Seoul.",
+          "Finally, rent absorbed roughly half of average earnings in Hanoi, Bangkok and Singapore, compared with only about a third in Seoul."
+        ]
+      ]
+    },
+    {
+      "id": "g1-glass",
+      "type": "process",
+      "task": "en-w-ielts1-glass",
+      "title": "Recycling glass bottles",
+      "prompt": "The diagram below shows how used glass bottles are recycled. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Sơ đồ cho thấy chai thủy tinh đã qua sử dụng được tái chế như thế nào. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: 7 giai đoạn, bắt đầu bằng thu gom, kết thúc bằng chai mới đến cửa hàng; quy trình khép kín",
+        "Chi tiết 1: thu gom → chở đến nhà máy, phân loại màu → rửa, nghiền",
+        "Chi tiết 2: nung chảy 1.500°C → đổ khuôn → đóng chai, dán nhãn, đến cửa hàng",
+        "Dùng câu bị động: are collected, are washed…"
+      ],
+      "chart": {
+        "kind": "process",
+        "title": "Recycling glass bottles",
+        "steps": [
+          "Used bottles collected from recycling bins",
+          "Taken by lorry to a recycling plant",
+          "Sorted by colour",
+          "Washed and crushed into small pieces",
+          "Melted in a furnace at 1,500°C",
+          "Poured into moulds to form new bottles",
+          "Filled, labelled and delivered to shops"
+        ]
+      },
+      "sentences": [
+        [
+          "r-i1",
+          "Sơ đồ minh họa cách những chai thủy tinh đã qua sử dụng được tái chế thành những chiếc chai mới.",
+          "The diagram illustrates how used glass bottles are recycled to make new bottles.",
+          "The diagram illustrates how used glass bottles are recycled into new ones.",
+          "The diagram illustrates how used glass bottles are turned into new ones through recycling."
+        ],
+        [
+          "r-o1",
+          "Nhìn chung, quy trình gồm bảy giai đoạn, bắt đầu bằng việc thu gom chai cũ và kết thúc khi chai mới được đưa đến các cửa hàng.",
+          "Overall, there are seven stages in the process, beginning with the collection of old bottles and ending with the new bottles going to shops.",
+          "Overall, there are seven stages in the process, beginning with the collection of used bottles and ending with the delivery of new bottles to shops.",
+          "Overall, there are seven stages in the process, beginning with the collection of used bottles and ending with the distribution of new bottles to shops."
+        ],
+        [
+          "r-o2",
+          "Cũng có thể thấy rằng đây là một chu trình khép kín, nên cùng một lượng thủy tinh có thể được tái chế nhiều lần.",
+          "It is also clear that this is a closed cycle, so the same glass can be recycled many times.",
+          "It is also clear that the process is a closed cycle, so the same glass can be recycled many times.",
+          "It is also clear that the process is cyclical, allowing the same glass to be reused again and again."
+        ],
+        [
+          "r-b1",
+          "Ở giai đoạn đầu tiên, chai đã qua sử dụng được thu gom từ các thùng tái chế đặt ở nơi công cộng như đường phố và công viên.",
+          "At the first stage, used bottles are collected from recycling bins in public places such as streets and parks.",
+          "At the first stage, used bottles are collected from recycling bins in public places such as streets and parks.",
+          "At the first stage, used bottles are gathered from recycling bins located in public places such as streets and parks."
+        ],
+        [
+          "r-b2",
+          "Sau đó, chúng được chở bằng xe tải đến nhà máy tái chế, nơi chúng được phân loại theo màu sắc.",
+          "After that, they are taken by lorry to a recycling plant, and they are sorted by colour there.",
+          "After that, they are transported by lorry to a recycling plant, where they are sorted by colour.",
+          "After that, they are transported by lorry to a recycling plant, where they are sorted according to colour."
+        ],
+        [
+          "r-b3",
+          "Tiếp theo, những chiếc chai được rửa sạch và nghiền thành những mảnh nhỏ.",
+          "Next, the bottles are washed and broken into small pieces.",
+          "Next, the bottles are washed and crushed into small pieces.",
+          "Next, the bottles are cleaned thoroughly and crushed into small fragments."
+        ],
+        [
+          "r-c1",
+          "Ở giai đoạn tiếp theo, những mảnh thủy tinh này được nung chảy trong lò ở nhiệt độ 1.500 độ C.",
+          "In the following stage, these pieces of glass are melted in a furnace at 1,500 degrees Celsius.",
+          "In the following stage, the pieces of glass are melted in a furnace at a temperature of 1,500 degrees Celsius.",
+          "In the following stage, the crushed glass is melted down in a furnace at a temperature of 1,500 degrees Celsius."
+        ],
+        [
+          "r-c2",
+          "Khi thủy tinh đã nóng chảy, nó được đổ vào khuôn để tạo thành những chiếc chai mới.",
+          "Once the glass is melted, it is put into moulds to make new bottles.",
+          "Once the glass has melted, it is poured into moulds to form new bottles.",
+          "Once the glass has melted, it is poured into moulds and shaped into new bottles."
+        ],
+        [
+          "r-c3",
+          "Cuối cùng, những chiếc chai mới được đóng đầy, dán nhãn và chuyển đến các cửa hàng, nơi chúng được bán lại cho khách hàng.",
+          "Finally, the new bottles are filled, labelled and sent to shops, where they are sold to customers again.",
+          "Finally, the new bottles are filled, labelled and delivered to shops, where they are sold to customers once again.",
+          "Finally, the new bottles are filled, labelled and distributed to shops, where they are once again sold to consumers."
+        ]
+      ]
+    },
+    {
+      "id": "g1-drinks",
+      "type": "line",
+      "task": "en-w-ielts1-drinks",
+      "title": "Coffee, tea and soft drinks",
+      "prompt": "The line graph below shows the average amount of coffee, tea and soft drinks consumed per person in one country between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Biểu đồ đường cho thấy lượng cà phê, trà và nước ngọt trung bình mỗi người tiêu thụ ở một quốc gia từ năm 2000 đến 2020. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: cà phê tăng mạnh, nước ngọt giảm dần; cà phê vượt nước ngọt",
+        "Chi tiết 1: cà phê 20 → 38 (2010) → 60 lít (2020), gấp ba",
+        "Chi tiết 2: nước ngọt 80 → 45 lít; trà dao động quanh 30 lít"
+      ],
+      "chart": {
+        "kind": "line",
+        "title": "Drinks consumed per person in one country, 2000–2020",
+        "unit": "litres per person per year",
+        "x": [
+          "2000",
+          "2005",
+          "2010",
+          "2015",
+          "2020"
+        ],
+        "series": [
+          {
+            "name": "Coffee",
+            "values": [
+              20,
+              28,
+              38,
+              50,
+              60
+            ]
+          },
+          {
+            "name": "Soft drinks",
+            "values": [
+              80,
+              78,
+              66,
+              55,
+              45
+            ]
+          },
+          {
+            "name": "Tea",
+            "values": [
+              30,
+              33,
+              29,
+              31,
+              30
+            ]
+          }
+        ]
+      },
+      "sentences": [
+        [
+          "l-i1",
+          "Biểu đồ đường minh họa lượng cà phê, trà và nước ngọt trung bình mà mỗi người ở một quốc gia uống mỗi năm trong giai đoạn từ năm 2000 đến năm 2020.",
+          "The line graph illustrates the amount of coffee, tea and soft drinks that each person in one country drank every year between 2000 and 2020.",
+          "The line graph illustrates the average amount of coffee, tea and soft drinks consumed per person each year in one country between 2000 and 2020.",
+          "The line graph illustrates how much coffee, tea and soft drinks the average person in one country consumed annually between 2000 and 2020."
+        ],
+        [
+          "l-o1",
+          "Nhìn chung, lượng cà phê được tiêu thụ tăng mạnh, trong khi lượng nước ngọt giảm đều đặn.",
+          "Overall, the amount of coffee that people drank went up a lot, while the amount of soft drinks went down steadily.",
+          "Overall, coffee consumption rose significantly, while the consumption of soft drinks fell steadily.",
+          "Overall, coffee consumption rose markedly over the period, while the consumption of soft drinks fell steadily."
+        ],
+        [
+          "l-o2",
+          "Cũng có thể thấy rằng cà phê đã vượt nước ngọt để trở thành loại đồ uống phổ biến nhất trong ba loại vào cuối giai đoạn.",
+          "It is also clear that coffee became more popular than soft drinks and was the most popular of the three drinks at the end of the period.",
+          "It is also clear that coffee overtook soft drinks to become the most popular of the three drinks by the end of the period.",
+          "It is also clear that coffee overtook soft drinks as the most widely consumed of the three drinks by the end of the period."
+        ],
+        [
+          "l-b1",
+          "Năm 2000, lượng cà phê mỗi người uống chỉ ở mức 20 lít mỗi năm.",
+          "In 2000, the amount of coffee each person drank stood at only 20 litres a year.",
+          "In 2000, coffee consumption stood at just 20 litres per person per year.",
+          "In 2000, coffee consumption stood at a mere 20 litres per person per year."
+        ],
+        [
+          "l-b2",
+          "Trong mười năm tiếp theo, con số này tăng đều lên 38 lít, gần gấp đôi mức ban đầu.",
+          "Over the next ten years, this figure went up steadily to 38 litres, almost two times the first figure.",
+          "Over the following decade, this figure rose steadily to 38 litres, almost double the starting figure.",
+          "Over the following decade, this figure climbed steadily to 38 litres, almost double its initial level."
+        ],
+        [
+          "l-b3",
+          "Đến năm 2020, con số này đã đạt 60 lít, mức cao nhất của bất kỳ loại đồ uống nào trong năm đó.",
+          "By 2020, it had reached 60 litres, which was the highest number for any drink in that year.",
+          "By 2020, it had reached 60 litres, the highest figure for any of the drinks in that year.",
+          "By 2020, it had reached 60 litres, the highest figure recorded for any of the drinks in that year."
+        ],
+        [
+          "l-b4",
+          "Điều này có nghĩa là lượng cà phê được tiêu thụ đã tăng gấp ba lần sau hai mươi năm.",
+          "This means that the amount of coffee people drank was three times higher after twenty years.",
+          "This means that coffee consumption tripled between 2000 and 2020.",
+          "This means that coffee consumption tripled over the twenty-year period."
+        ],
+        [
+          "l-c1",
+          "Ngược lại, lượng nước ngọt được tiêu thụ bắt đầu ở mức cao hơn nhiều, 80 lít mỗi người vào năm 2000, cao nhất trên biểu đồ.",
+          "By contrast, the amount of soft drinks began much higher, at 80 litres per person in 2000, which was the highest number on the graph.",
+          "By contrast, soft drink consumption began much higher, at 80 litres per person in 2000, the highest figure on the graph.",
+          "By contrast, soft drink consumption began the period considerably higher, at 80 litres per person, the highest figure shown on the graph."
+        ],
+        [
+          "l-c2",
+          "Sau đó, con số này giảm dần, chỉ còn 45 lít vào năm 2020.",
+          "After that, this number went down slowly, reaching only 45 litres in 2020.",
+          "After that, the figure fell gradually, reaching just 45 litres in 2020.",
+          "After that, the figure declined gradually, reaching a low of 45 litres in 2020."
+        ],
+        [
+          "l-c3",
+          "Trong khi đó, lượng trà được tiêu thụ chỉ thay đổi nhẹ và dao động quanh mức 30 lít mỗi người trong suốt giai đoạn.",
+          "Meanwhile, the amount of tea changed a little but stayed at around 30 litres per person during the whole period.",
+          "Meanwhile, tea consumption changed only slightly and fluctuated around 30 litres per person throughout the period.",
+          "Meanwhile, tea consumption fluctuated only slightly, remaining at around 30 litres per person throughout the period."
+        ]
+      ]
+    },
+    {
+      "id": "g1-leisure",
+      "type": "bar",
+      "task": "en-w-ielts1-leisure",
+      "title": "Leisure time of teenagers and adults",
+      "prompt": "The bar chart below shows the average number of hours per week that teenagers and adults in one country spent on four leisure activities in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Biểu đồ cột cho thấy số giờ trung bình mỗi tuần mà thanh thiếu niên và người lớn ở một quốc gia dành cho bốn hoạt động giải trí năm 2024. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: xem video phổ biến nhất với cả hai nhóm, đọc sách ít nhất; thanh thiếu niên dành nhiều thời gian hơn",
+        "Chi tiết 1 (thanh thiếu niên): video 14, chơi game 10, thể thao 6, đọc sách 2 giờ",
+        "Chi tiết 2 (người lớn): video 10, thể thao 4, game 3, đọc sách 2 giờ"
+      ],
+      "chart": {
+        "kind": "bar",
+        "title": "Hours per week spent on leisure activities, 2024",
+        "unit": "hours per week",
+        "categories": [
+          "Videos",
+          "Games",
+          "Sport",
+          "Reading"
+        ],
+        "series": [
+          {
+            "name": "Teenagers",
+            "values": [
+              14,
+              10,
+              6,
+              2
+            ]
+          },
+          {
+            "name": "Adults",
+            "values": [
+              10,
+              3,
+              4,
+              2
+            ]
+          }
+        ]
+      },
+      "sentences": [
+        [
+          "b-i1",
+          "Biểu đồ cột so sánh số giờ trung bình mỗi tuần mà thanh thiếu niên và người lớn ở một quốc gia dành cho bốn hoạt động giải trí khác nhau vào năm 2024.",
+          "The bar chart compares the number of hours per week that teenagers and adults in one country spent on four different free-time activities in 2024.",
+          "The bar chart compares the average number of hours per week that teenagers and adults in one country spent on four different leisure activities in 2024.",
+          "The bar chart compares the average weekly time that teenagers and adults in one country devoted to four different leisure activities in 2024."
+        ],
+        [
+          "b-o1",
+          "Nhìn chung, xem video là hoạt động phổ biến nhất đối với cả hai nhóm, trong khi đọc sách là hoạt động ít phổ biến nhất.",
+          "Overall, watching videos was the most popular activity for both groups, whereas reading was the least popular one.",
+          "Overall, watching videos was the most popular activity for both groups, whereas reading was the least popular.",
+          "Overall, watching videos was the most popular pastime for both age groups, whereas reading was the least popular."
+        ],
+        [
+          "b-o2",
+          "Cũng có thể thấy rằng thanh thiếu niên dành nhiều thời gian hơn người lớn cho mọi hoạt động, trừ đọc sách.",
+          "It is also clear that teenagers spent more time than adults on all of the activities except reading.",
+          "It is also clear that teenagers spent more time than adults on every activity except reading.",
+          "It is also clear that teenagers spent more time than adults on every activity apart from reading."
+        ],
+        [
+          "b-b1",
+          "Xem xét chi tiết hơn về thanh thiếu niên, xem video có con số cao nhất, ở mức 14 giờ mỗi tuần.",
+          "Looking at teenagers in more detail, watching videos had the highest number, at 14 hours a week.",
+          "Looking at teenagers in more detail, watching videos had the highest figure, at 14 hours per week.",
+          "Looking at teenagers in more detail, watching videos accounted for the most time, at 14 hours per week."
+        ],
+        [
+          "b-b2",
+          "Tiếp theo là chơi trò chơi điện tử với 10 giờ, và chơi thể thao với 6 giờ.",
+          "This was followed by playing computer games, with 10 hours, and doing sport, with 6 hours.",
+          "This was followed by playing computer games, with 10 hours, and doing sport, with 6 hours.",
+          "This was followed by gaming, with 10 hours, and sport, with 6 hours."
+        ],
+        [
+          "b-b3",
+          "Để so sánh, thanh thiếu niên chỉ dành 2 giờ mỗi tuần để đọc sách.",
+          "In comparison, teenagers spent only 2 hours a week reading books.",
+          "In comparison, teenagers spent only 2 hours per week reading.",
+          "In comparison, teenagers devoted a mere 2 hours per week to reading."
+        ],
+        [
+          "b-b4",
+          "Điều này có nghĩa là các em dành thời gian xem video nhiều gấp bảy lần thời gian đọc sách.",
+          "This means that they spent seven times more time watching videos than reading.",
+          "This means that they spent seven times as long watching videos as reading.",
+          "This means that they spent seven times as long watching videos as they did reading."
+        ],
+        [
+          "b-c1",
+          "Ngược lại, người lớn dành ít thời gian hơn cho hầu hết các hoạt động giải trí.",
+          "By contrast, adults spent less time on most of the free-time activities.",
+          "By contrast, adults spent less time on most leisure activities.",
+          "By contrast, adults spent noticeably less time on most leisure activities."
+        ],
+        [
+          "b-c2",
+          "Người lớn chỉ dành 10 giờ mỗi tuần để xem video, so với 14 giờ của thanh thiếu niên.",
+          "Only 10 hours per week were spent on watching videos by adults, compared with 14 hours for teenagers.",
+          "Only 10 hours per week were spent watching videos by adults, compared with 14 hours for teenagers.",
+          "Only 10 hours per week were spent watching videos by adults, compared with 14 hours among teenagers."
+        ],
+        [
+          "b-c3",
+          "Cuối cùng, đọc sách và chơi game có con số thấp nhất ở người lớn, lần lượt là 2 và 3 giờ, trong khi thể thao chiếm 4 giờ.",
+          "Finally, reading and playing games had the lowest numbers for adults, at 2 and 3 hours, and sport was 4 hours.",
+          "Finally, reading and playing games had the lowest figures for adults, at 2 and 3 hours respectively, while sport took up 4 hours.",
+          "Finally, reading and gaming had the lowest figures for adults, at 2 and 3 hours respectively, while sport occupied 4 hours."
+        ]
+      ]
+    },
+    {
+      "id": "g1-spending",
+      "type": "pie",
+      "task": "en-w-ielts1-spending",
+      "title": "Household spending",
+      "prompt": "The pie charts below show how the average household in one country spent its money in 1990 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Hai biểu đồ tròn cho thấy một hộ gia đình trung bình ở một quốc gia chi tiêu như thế nào vào năm 1990 và năm 2020. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: nhà ở là khoản chi lớn nhất cả hai năm; tỷ lệ chi cho ăn uống giảm mạnh nhất",
+        "Chi tiết 1 (1990): nhà ở 40%, ăn uống 35%, đi lại 15%, giải trí 10%",
+        "Chi tiết 2 (2020): ăn uống 22%, nhà ở 42%, đi lại 20%, giải trí 16%"
+      ],
+      "chart": {
+        "kind": "pie",
+        "title": "Average household spending in one country (%)",
+        "unit": "%",
+        "pies": [
+          {
+            "label": "1990",
+            "slices": [
+              {
+                "name": "Housing",
+                "value": 40
+              },
+              {
+                "name": "Food",
+                "value": 35
+              },
+              {
+                "name": "Transport",
+                "value": 15
+              },
+              {
+                "name": "Leisure",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "label": "2020",
+            "slices": [
+              {
+                "name": "Housing",
+                "value": 42
+              },
+              {
+                "name": "Food",
+                "value": 22
+              },
+              {
+                "name": "Transport",
+                "value": 20
+              },
+              {
+                "name": "Leisure",
+                "value": 16
+              }
+            ]
+          }
+        ]
+      },
+      "sentences": [
+        [
+          "pc-i1",
+          "Hai biểu đồ tròn cho thấy cách một hộ gia đình trung bình ở một quốc gia phân chia chi tiêu cho bốn nhóm chính vào năm 1990 và năm 2020.",
+          "The pie charts show how the average family in one country spent its money on four main things in 1990 and 2020.",
+          "The pie charts show how the average household in one country divided its spending between four main categories in 1990 and 2020.",
+          "The pie charts show how the average household budget in one country was divided between four main categories of expenditure in 1990 and 2020."
+        ],
+        [
+          "pc-o1",
+          "Nhìn chung, nhà ở là khoản chi lớn nhất trong cả hai năm, mặc dù tỷ lệ chi cho ăn uống đã giảm đáng kể.",
+          "Overall, housing was the main cost in both years, although the share of money spent on food fell a lot.",
+          "Overall, housing was the main expense in both years, although the share spent on food fell considerably.",
+          "Overall, housing was the main expense in both years, although the proportion spent on food fell considerably."
+        ],
+        [
+          "pc-o2",
+          "Cũng có thể thấy rằng tỷ lệ chi cho đi lại và giải trí đều tăng trong giai đoạn ba mươi năm.",
+          "It is also clear that the share of money for transport and leisure both went up in the thirty years.",
+          "It is also clear that the shares spent on transport and leisure both rose over the thirty-year period.",
+          "It is also clear that the shares devoted to transport and leisure both grew over the thirty-year period."
+        ],
+        [
+          "pc-b1",
+          "Năm 1990, nhà ở chiếm 40% tổng chi tiêu của một hộ gia đình.",
+          "In 1990, housing made up 40% of the total money that a family spent.",
+          "In 1990, housing made up 40% of total household spending.",
+          "In 1990, housing made up two fifths of total household expenditure, at 40%."
+        ],
+        [
+          "pc-b2",
+          "Tiếp theo là ăn uống, chiếm 35%.",
+          "This was followed by food, which accounted for 35%.",
+          "This was followed by food, which accounted for 35%.",
+          "This was followed by food, which accounted for just over a third, at 35%."
+        ],
+        [
+          "pc-b3",
+          "Tỷ lệ nhỏ nhất được chi cho giải trí, chỉ 10%, trong khi đi lại chiếm 15%.",
+          "The smallest proportion was for leisure, at only 10%, while transport was 15%.",
+          "The smallest proportion was spent on leisure, at only 10%, while transport took up 15%.",
+          "The smallest proportion went on leisure, at only 10%, while transport took up 15%."
+        ],
+        [
+          "pc-b4",
+          "Điều này có nghĩa là nhà ở và ăn uống cộng lại chiếm ba phần tư ngân sách của các gia đình vào năm 1990.",
+          "This means that housing and food together were three quarters of the money families spent in 1990.",
+          "This means that housing and food together took up three quarters of household budgets in 1990.",
+          "This means that housing and food together consumed three quarters of household budgets in 1990."
+        ],
+        [
+          "pc-c1",
+          "Đến năm 2020, tỷ lệ chi cho ăn uống đã giảm xuống còn 22%, giảm 13 điểm phần trăm.",
+          "By 2020, the share of food had fallen to 22%, which was 13 percentage points lower.",
+          "By 2020, the share of food had fallen to 22%, a drop of 13 percentage points.",
+          "By 2020, the share of food had fallen to 22%, a decline of 13 percentage points."
+        ],
+        [
+          "pc-c2",
+          "Ngược lại, tỷ lệ chi cho nhà ở tăng nhẹ lên 42%, vì vậy nó vẫn là khoản chi lớn nhất.",
+          "By contrast, the share of housing went up a little to 42%, so it was still the biggest cost.",
+          "By contrast, the share of housing rose slightly to 42%, so it remained the largest expense.",
+          "By contrast, the share of housing edged up to 42%, so it remained by far the largest expense."
+        ],
+        [
+          "pc-c3",
+          "Trong khi đó, tỷ lệ chi cho đi lại và giải trí đều tăng, lần lượt lên 20% và 16%.",
+          "Meanwhile, the shares of transport and leisure both went up, to 20% and 16%.",
+          "Meanwhile, the shares of transport and leisure both increased, to 20% and 16% respectively.",
+          "Meanwhile, the shares of transport and leisure both increased, reaching 20% and 16% respectively."
+        ]
+      ]
+    },
+    {
+      "id": "g1-tourism",
+      "type": "table",
+      "task": "en-w-ielts1-tourism",
+      "title": "International tourists in four countries",
+      "prompt": "The table below gives information about the number of international tourists, the average length of stay and the average spending per tourist in four Asian countries in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Bảng cung cấp thông tin về số lượng khách du lịch quốc tế, thời gian lưu trú trung bình và mức chi tiêu trung bình của mỗi du khách ở bốn quốc gia châu Á năm 2025. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: Thái Lan đông khách nhất, Việt Nam ít nhất; khách ở Nhật chi tiêu nhiều nhất",
+        "Chi tiết 1 (số khách): Thái Lan 32, Nhật 30, Malaysia 25, Việt Nam 18 triệu",
+        "Chi tiết 2 (chi tiêu, lưu trú): Nhật 1.800 USD, Thái Lan 1.200, Việt Nam 900, Malaysia 700; ở lâu nhất Thái Lan 9 đêm, ngắn nhất Malaysia 5 đêm"
+      ],
+      "chart": {
+        "kind": "table",
+        "title": "International tourism in four countries, 2025 (example data)",
+        "columns": [
+          "Country",
+          "Tourists (millions)",
+          "Average stay (nights)",
+          "Average spending per tourist (US$)"
+        ],
+        "rows": [
+          [
+            "Thailand",
+            "32",
+            "9",
+            "1,200"
+          ],
+          [
+            "Japan",
+            "30",
+            "7",
+            "1,800"
+          ],
+          [
+            "Malaysia",
+            "25",
+            "5",
+            "700"
+          ],
+          [
+            "Vietnam",
+            "18",
+            "8",
+            "900"
+          ]
+        ]
+      },
+      "sentences": [
+        [
+          "t1-i1",
+          "Bảng cung cấp thông tin về số lượng khách du lịch quốc tế, thời gian lưu trú trung bình và mức chi tiêu trung bình của mỗi du khách ở bốn quốc gia châu Á vào năm 2025.",
+          "The table gives information about the number of international tourists, how long they stayed and how much each tourist spent in four Asian countries in 2025.",
+          "The table gives information about the number of international tourists, their average length of stay and their average spending in four Asian countries in 2025.",
+          "The table gives information about international visitor numbers, the average length of stay and average spending per visitor in four Asian countries in 2025."
+        ],
+        [
+          "t1-o1",
+          "Nhìn chung, Thái Lan có số khách du lịch cao nhất, trong khi Việt Nam có số khách thấp nhất.",
+          "Overall, Thailand had the highest number of tourists, while Vietnam had the lowest.",
+          "Overall, Thailand had the highest number of visitors, while Vietnam had the lowest.",
+          "Overall, Thailand had the highest number of visitors, while Vietnam had the lowest."
+        ],
+        [
+          "t1-o2",
+          "Cũng có thể thấy rằng du khách đến Nhật Bản chi tiêu nhiều tiền nhất, mặc dù họ không phải là người ở lâu nhất.",
+          "It is also clear that tourists in Japan spent the most money, but they did not stay the longest.",
+          "It is also clear that tourists in Japan spent the most money, even though they did not stay the longest.",
+          "It is also clear that visitors to Japan were the biggest spenders, even though they did not stay the longest."
+        ],
+        [
+          "t1-b1",
+          "Xem xét chi tiết hơn về số lượng khách, Thái Lan đón 32 triệu khách du lịch quốc tế, nhiều hơn một chút so với Nhật Bản.",
+          "Looking at the number of tourists in more detail, Thailand had 32 million international tourists, a little more than Japan.",
+          "Looking at visitor numbers in more detail, Thailand welcomed 32 million international tourists, slightly more than Japan.",
+          "Looking at visitor numbers in more detail, Thailand welcomed 32 million international tourists, marginally more than Japan."
+        ],
+        [
+          "t1-b2",
+          "Tiếp theo là Nhật Bản với 30 triệu khách, và Malaysia với 25 triệu khách.",
+          "This was followed by Japan, at 30 million, and Malaysia, at 25 million.",
+          "This was followed by Japan, at 30 million, and Malaysia, at 25 million.",
+          "This was followed by Japan, at 30 million, and Malaysia, at 25 million."
+        ],
+        [
+          "t1-b3",
+          "Để so sánh, Việt Nam chỉ đón 18 triệu khách du lịch quốc tế.",
+          "In comparison, Vietnam had only 18 million international tourists.",
+          "In comparison, Vietnam received only 18 million international visitors.",
+          "In comparison, Vietnam received a comparatively modest 18 million international visitors."
+        ],
+        [
+          "t1-b4",
+          "Điều này có nghĩa là Thái Lan thu hút gần gấp đôi số khách du lịch so với Việt Nam.",
+          "This means that Thailand had almost two times as many tourists as Vietnam.",
+          "This means that Thailand attracted nearly twice as many tourists as Vietnam.",
+          "This means that Thailand attracted almost twice as many tourists as Vietnam."
+        ],
+        [
+          "t1-c1",
+          "Chuyển sang mức chi tiêu, du khách ở Nhật Bản chi trung bình 1.800 đô la mỗi chuyến, con số cao nhất trong bảng.",
+          "Turning to spending, tourists in Japan spent $1,800 on average for each trip, which was the highest number in the table.",
+          "Turning to spending, tourists in Japan spent an average of $1,800 per trip, the highest figure in the table.",
+          "Turning to spending, visitors to Japan spent an average of $1,800 per trip, the highest figure in the table."
+        ],
+        [
+          "t1-c2",
+          "Trong khi đó, một du khách trung bình chi 1.200 đô la ở Thái Lan, 900 đô la ở Việt Nam và chỉ 700 đô la ở Malaysia.",
+          "Meanwhile, the average tourist spent $1,200 in Thailand, $900 in Vietnam and only $700 in Malaysia.",
+          "Meanwhile, the average tourist spent $1,200 in Thailand, $900 in Vietnam and just $700 in Malaysia.",
+          "Meanwhile, the average tourist spent $1,200 in Thailand, $900 in Vietnam and a mere $700 in Malaysia."
+        ],
+        [
+          "t1-c3",
+          "Cuối cùng, du khách ở lâu nhất tại Thái Lan, trung bình chín đêm, so với chỉ năm đêm tại Malaysia.",
+          "Finally, tourists stayed longest in Thailand, for nine nights on average, but only five nights in Malaysia.",
+          "Finally, tourists stayed longest in Thailand, at nine nights on average, compared with only five nights in Malaysia.",
+          "Finally, the average stay was longest in Thailand, at nine nights, compared with only five nights in Malaysia."
+        ]
+      ]
+    },
+    {
+      "id": "g1-tea",
+      "type": "process",
+      "task": "en-w-ielts1-tea",
+      "title": "How black tea is produced",
+      "prompt": "The diagram below shows how black tea is produced. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Sơ đồ cho thấy trà đen được sản xuất như thế nào. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: 7 giai đoạn, bắt đầu bằng hái lá, kết thúc bằng đóng gói và vận chuyển; phần lớn các bước là làm khô hoặc làm nóng lá",
+        "Chi tiết 1: hái lá → làm héo trên khay 12 giờ → vò bằng máy",
+        "Chi tiết 2: oxy hóa trong phòng ấm, ẩm → sấy 100°C → phân loại, đóng gói → chở đến cửa hàng",
+        "Dùng câu bị động: are picked, are rolled…"
+      ],
+      "chart": {
+        "kind": "process",
+        "title": "Producing black tea",
+        "steps": [
+          "Fresh leaves picked by hand",
+          "Withered on trays for 12 hours",
+          "Rolled by machines",
+          "Oxidised in a warm, humid room",
+          "Dried in ovens at 100°C",
+          "Sorted by size and packed",
+          "Transported to shops"
+        ]
+      },
+      "sentences": [
+        [
+          "r-i1",
+          "Sơ đồ minh họa cách trà đen được sản xuất, từ khi hái lá cho đến khi đóng gói sản phẩm cuối cùng.",
+          "The diagram illustrates how black tea is made, from picking the leaves to packing the final product.",
+          "The diagram illustrates how black tea is produced, from picking the leaves to packing the final product.",
+          "The diagram illustrates how black tea is produced, from the picking of the leaves to the packing of the finished product."
+        ],
+        [
+          "r-o1",
+          "Nhìn chung, quy trình có bảy giai đoạn, bắt đầu bằng việc hái lá trà và kết thúc bằng việc đóng gói và vận chuyển trà đến các cửa hàng.",
+          "Overall, there are seven stages in the process, beginning with picking the tea leaves and ending with packing the tea and taking it to shops.",
+          "Overall, there are seven stages in the process, beginning with picking the tea leaves and ending with packing the tea and transporting it to shops.",
+          "Overall, there are seven stages in the process, beginning with the picking of the tea leaves and ending with the packing and transport of the tea to shops."
+        ],
+        [
+          "r-o2",
+          "Cũng có thể thấy rằng phần lớn các giai đoạn liên quan đến việc làm khô hoặc làm nóng lá trà.",
+          "It is also clear that most of the stages are about drying or heating the tea leaves.",
+          "It is also clear that most of the stages involve drying or heating the tea leaves.",
+          "It is also clear that the majority of the stages involve drying or heating the leaves."
+        ],
+        [
+          "r-b1",
+          "Ở giai đoạn đầu tiên, lá trà tươi được hái bằng tay ở các đồn điền, thường là vào sáng sớm.",
+          "At the first stage, fresh tea leaves are picked by hand on farms, usually early in the morning.",
+          "At the first stage, fresh tea leaves are picked by hand on plantations, usually early in the morning.",
+          "At the first stage, fresh tea leaves are hand-picked on plantations, typically early in the morning."
+        ],
+        [
+          "r-b2",
+          "Sau đó, lá được trải ra trên những chiếc khay lớn và để héo trong khoảng 12 giờ để chúng mất bớt một phần nước.",
+          "After that, the leaves are put on large trays and left for about 12 hours so that they lose some of their water.",
+          "After that, the leaves are spread out on large trays and left to wither for about 12 hours so that they lose some of their water.",
+          "After that, the leaves are spread out on large trays and left to wither for around 12 hours, during which they lose some of their moisture."
+        ],
+        [
+          "r-b3",
+          "Tiếp theo, lá được vò bằng máy, việc này làm lá dập ra và tiết ra nước tự nhiên bên trong.",
+          "Next, the leaves are rolled by machines, and this breaks them and lets out their natural juices.",
+          "Next, the leaves are rolled by machines, which breaks them and releases their natural juices.",
+          "Next, the leaves are rolled by machines, which breaks them open and releases their natural juices."
+        ],
+        [
+          "r-c1",
+          "Ở giai đoạn tiếp theo, lá đã vò được để trong một căn phòng ấm và ẩm để oxy hóa, quá trình này làm lá chuyển sang màu nâu sẫm.",
+          "In the following stage, the rolled leaves are kept in a warm and wet room to oxidise, and this makes them dark brown.",
+          "In the following stage, the rolled leaves are left in a warm, humid room to oxidise, which turns them dark brown.",
+          "In the following stage, the rolled leaves are left in a warm, humid room to oxidise, a process which turns them dark brown."
+        ],
+        [
+          "r-c2",
+          "Khi lá đã oxy hóa xong, chúng được sấy khô trong lò nóng ở nhiệt độ khoảng 100 độ C.",
+          "Once the leaves have oxidised, they are dried in hot ovens at about 100 degrees Celsius.",
+          "Once the leaves have oxidised, they are dried in hot ovens at around 100 degrees Celsius.",
+          "Once the leaves have oxidised, they are dried in hot ovens at a temperature of around 100 degrees Celsius."
+        ],
+        [
+          "r-c3",
+          "Cuối cùng, trà khô được phân loại theo kích cỡ, đóng vào túi hoặc hộp và vận chuyển đến các cửa hàng, nơi trà được bán cho khách hàng.",
+          "Finally, the dry tea is sorted by size, put into bags or boxes and taken to shops, where it is sold to customers.",
+          "Finally, the dry tea is sorted by size, packed into bags or boxes and transported to shops, where it is sold to customers.",
+          "Finally, the dried tea is sorted by size, packed into bags or boxes and transported to shops, where it is sold to consumers."
+        ]
+      ]
+    },
+    {
+      "id": "g1-village",
+      "type": "map",
+      "task": "en-w-ielts1-village",
+      "title": "Changes to a village",
+      "prompt": "The maps below show the village of Riverside in 2000 and in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_vi": "Hai bản đồ cho thấy làng Riverside vào năm 2000 và năm 2025. Hãy tóm tắt thông tin bằng cách chọn và nêu các đặc điểm chính, và so sánh khi cần.",
+      "ideas_vi": [
+        "Overview: từ làng nông nghiệp yên tĩnh thành khu dân cư nhộn nhịp; đất nông nghiệp và rừng ở phía bắc mất dần",
+        "2000: đất nông nghiệp (tây bắc), rừng (đông bắc); nhà, trường, cửa hàng ở phía nam đường chính; sông ở rìa phía nam",
+        "2025: khu nhà ở + trung tâm mua sắm thay đất nông nghiệp; bãi đỗ xe trên nửa rừng; trường mở rộng, cửa hàng → quán cà phê, cầu mới",
+        "Giữ nguyên: nhà ở phía tây nam, đường chính, sông"
+      ],
+      "chart": {
+        "kind": "map",
+        "title": "The village of Riverside, 2000 and 2025",
+        "maps": [
+          {
+            "label": "2000",
+            "features": [
+              {
+                "name": "Farmland",
+                "kind": "field",
+                "x": 3,
+                "y": 3,
+                "w": 57,
+                "h": 22
+              },
+              {
+                "name": "Forest",
+                "kind": "green",
+                "x": 63,
+                "y": 3,
+                "w": 34,
+                "h": 22
+              },
+              {
+                "name": "Main road",
+                "kind": "road",
+                "x": 0,
+                "y": 28,
+                "w": 100,
+                "h": 4
+              },
+              {
+                "name": "Houses",
+                "kind": "building",
+                "x": 5,
+                "y": 36,
+                "w": 24,
+                "h": 14
+              },
+              {
+                "name": "School",
+                "kind": "building",
+                "x": 36,
+                "y": 36,
+                "w": 16,
+                "h": 14
+              },
+              {
+                "name": "Shop",
+                "kind": "building",
+                "x": 62,
+                "y": 38,
+                "w": 12,
+                "h": 10
+              },
+              {
+                "name": "River",
+                "kind": "water",
+                "x": 0,
+                "y": 56,
+                "w": 100,
+                "h": 14
+              }
+            ]
+          },
+          {
+            "label": "2025",
+            "features": [
+              {
+                "name": "Housing estate",
+                "kind": "building",
+                "x": 3,
+                "y": 3,
+                "w": 34,
+                "h": 22
+              },
+              {
+                "name": "Shopping centre",
+                "kind": "building",
+                "x": 40,
+                "y": 3,
+                "w": 20,
+                "h": 22
+              },
+              {
+                "name": "Car park",
+                "kind": "paved",
+                "x": 63,
+                "y": 3,
+                "w": 17,
+                "h": 22
+              },
+              {
+                "name": "Forest",
+                "kind": "green",
+                "x": 82,
+                "y": 3,
+                "w": 15,
+                "h": 22
+              },
+              {
+                "name": "Main road",
+                "kind": "road",
+                "x": 0,
+                "y": 28,
+                "w": 100,
+                "h": 4
+              },
+              {
+                "name": "Houses",
+                "kind": "building",
+                "x": 5,
+                "y": 36,
+                "w": 24,
+                "h": 14
+              },
+              {
+                "name": "School",
+                "kind": "building",
+                "x": 36,
+                "y": 36,
+                "w": 24,
+                "h": 14
+              },
+              {
+                "name": "Café",
+                "kind": "building",
+                "x": 66,
+                "y": 38,
+                "w": 12,
+                "h": 10
+              },
+              {
+                "name": "River",
+                "kind": "water",
+                "x": 0,
+                "y": 56,
+                "w": 100,
+                "h": 14
+              },
+              {
+                "name": "Bridge",
+                "kind": "road",
+                "x": 84,
+                "y": 32,
+                "w": 5,
+                "h": 38,
+                "lx": 94.5,
+                "ly": 50
+              }
+            ]
+          }
+        ]
+      },
+      "sentences": [
+        [
+          "m-i1",
+          "Hai bản đồ minh họa những thay đổi đã diễn ra ở làng Riverside từ năm 2000 đến năm 2025.",
+          "The maps illustrate the changes that happened in the village of Riverside between 2000 and 2025.",
+          "The maps illustrate the changes that took place in the village of Riverside between 2000 and 2025.",
+          "The maps illustrate the changes that took place in the village of Riverside over the twenty-five years between 2000 and 2025."
+        ],
+        [
+          "m-o1",
+          "Nhìn chung, Riverside đã được biến đổi từ một ngôi làng nông nghiệp yên tĩnh thành một khu dân cư nhộn nhịp với nhiều tiện ích hơn.",
+          "Overall, Riverside was transformed from a quiet farming village into a busy town with more services.",
+          "Overall, Riverside was transformed from a quiet farming village into a busy residential area with more facilities.",
+          "Overall, Riverside was transformed from a quiet agricultural village into a busy residential area with a far wider range of facilities."
+        ],
+        [
+          "m-o2",
+          "Cũng có thể thấy rằng phần lớn đất nông nghiệp và rừng ở phía bắc đã nhường chỗ cho các công trình mới.",
+          "It is also clear that most of the farmland and forest in the north were replaced with new buildings.",
+          "It is also clear that most of the farmland and forest in the north made way for new buildings.",
+          "It is also clear that much of the farmland and woodland in the north gave way to new developments."
+        ],
+        [
+          "m-b1",
+          "Năm 2000, một khu đất nông nghiệp rộng lớn nằm ở phía tây bắc của làng, ngay phía bắc con đường chính.",
+          "In 2000, a big area of farmland was located in the north-west of the village, to the north of the main road.",
+          "In 2000, a large area of farmland was located in the north-west of the village, just north of the main road.",
+          "In 2000, a large expanse of farmland was located in the north-west of the village, immediately north of the main road."
+        ],
+        [
+          "m-b2",
+          "Ở phía đông của khu đất nông nghiệp có một khu rừng bao phủ toàn bộ góc đông bắc.",
+          "To the east of the farmland, there was a forest which covered all of the north-east corner.",
+          "To the east of the farmland, there was a forest which covered the whole north-eastern corner.",
+          "To the east of the farmland, there was a forest which occupied the entire north-eastern corner."
+        ],
+        [
+          "m-b3",
+          "Ngoài ra còn có một số ngôi nhà, một trường học và một cửa hàng nhỏ ở phía nam con đường chính, trong khi một con sông chảy dọc theo rìa phía nam của làng.",
+          "There were also some houses, a school and a small shop to the south of the main road, and a river ran along the south side of the village.",
+          "There were also some houses, a school and a small shop south of the main road, while a river ran along the southern edge of the village.",
+          "There were also several houses, a school and a small shop south of the main road, while a river flowed along the village's southern edge."
+        ],
+        [
+          "m-b4",
+          "Điều này có nghĩa là vào thời điểm đó, Riverside chủ yếu là một vùng nông thôn với rất ít dịch vụ.",
+          "This means that Riverside was mostly a countryside area with very few services at that time.",
+          "This means that Riverside was mainly a rural area with very few services at that time.",
+          "This means that Riverside was essentially a rural community with very few amenities at that time."
+        ],
+        [
+          "m-c1",
+          "Đến năm 2025, khu đất nông nghiệp đã được thay thế bằng một khu nhà ở mới và một trung tâm mua sắm.",
+          "By 2025, the farmland had been replaced by a new group of houses and a shopping centre.",
+          "By 2025, the farmland had been replaced by a housing estate and a shopping centre.",
+          "By 2025, the farmland had been replaced by a modern housing estate and a shopping centre."
+        ],
+        [
+          "m-c2",
+          "Một bãi đỗ xe được xây trên nửa phía tây của khu rừng, vì vậy chỉ còn lại một khu rừng nhỏ ở góc đông bắc.",
+          "A car park was built on the west part of the forest, so only a small area of trees was left in the north-east corner.",
+          "A car park was built on the western half of the forest, so only a small area of trees was left in the north-east.",
+          "A car park was built on the western half of the forest, leaving only a small cluster of trees in the north-east."
+        ],
+        [
+          "m-c3",
+          "Ngoài ra, trường học được mở rộng về phía đông, cửa hàng được chuyển thành quán cà phê, và một cây cầu mới được xây qua sông.",
+          "In addition, the school was made bigger on the east side, the shop became a café, and a new bridge was built over the river.",
+          "In addition, the school was extended to the east, the shop was converted into a café, and a new bridge was built across the river.",
+          "In addition, the school was extended eastwards, the shop was converted into a café, and a new bridge was constructed across the river."
+        ],
+        [
+          "m-c4",
+          "Cuối cùng, những ngôi nhà ở phía tây nam, con đường chính và dòng sông vẫn giữ nguyên.",
+          "Finally, the houses in the south-west, the main road and the river remained unchanged.",
+          "Finally, the houses in the south-west, the main road and the river remained unchanged.",
+          "Finally, the houses in the south-west, the main road and the river remained unchanged throughout the period."
+        ]
+      ]
+    }
+  ]
+}

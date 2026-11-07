@@ -1,0 +1,160 @@
+{
+  "_note": "Original IELTS-style Academic Reading test written for LinguaFlow (not taken from any published test). Same format as reading-1.json.",
+  "id": "reading-2",
+  "skill": "reading",
+  "title": "Academic Reading — Practice test 2",
+  "minutes": 60,
+  "parts": [
+    {
+      "id": "r2-p1",
+      "title": "Passage 1",
+      "heading": "The Return of the Tram",
+      "paragraphs": [
+        [null, "In the first half of the twentieth century, trams were a familiar sight in hundreds of cities around the world. By the 1960s, however, most of them had disappeared. Cars had become affordable for ordinary families, and city planners regarded trams as slow, noisy relics that blocked the roads. In Britain alone, more than 200 tram networks were closed, and the rails were either removed or simply covered with asphalt."],
+        [null, "Today, the tram is making a remarkable comeback. Since the 1980s, more than 150 new systems have opened in Europe, and cities as different as Dubai, Casablanca and Sydney have followed. The modern vehicles bear little resemblance to their predecessors. They are quiet, run on electricity and have low floors, which means that passengers with pushchairs or wheelchairs can board without climbing steps."],
+        [null, "Part of the attraction for city authorities is cost. A tram line is considerably cheaper to build than an underground railway, typically costing between a quarter and a third as much per kilometre, because there is no need to dig tunnels. At the same time, a tram can carry far more passengers than a bus. A single modern tram may hold up to 300 people, roughly three times the capacity of a large bus, and it requires only one driver."],
+        [null, "Trams also have an effect on how people perceive public transport. Researchers have noticed that the opening of a tram line often attracts car drivers who would never consider taking a bus. Because the rails are permanent and visible, residents and businesses feel confident that the service will continue, and property values near tram stops frequently rise. In the French city of Strasbourg, for example, shops along the new tram route reported an increase in customers within two years of its opening."],
+        [null, "Nevertheless, building a tram network is rarely straightforward. Construction can take several years and causes considerable disruption to traffic and local businesses. Underground pipes and cables often have to be moved before the rails can be laid, and this work is frequently more complicated than expected. In Edinburgh, the first line opened in 2014, three years late and well over its original budget, and it was much shorter than originally planned."],
+        [null, "Critics also point out that trams are inflexible. A bus route can be changed overnight if a new housing estate is built, whereas a tram line is fixed for decades. Some transport experts therefore argue that modern electric buses running in their own dedicated lanes can offer many of the same benefits at a fraction of the cost. Supporters of trams reply that such bus lanes are often given back to cars when political priorities change, something that is far less likely to happen to rails."]
+      ],
+      "groups": [
+        {
+          "type": "tfng",
+          "instructions": "Do the following statements agree with the information given in Reading Passage 1? Choose TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+          "questions": [
+            { "n": 1, "text": "In the 1960s, many planners believed that trams slowed down other traffic.", "answer": "TRUE", "evidence": "city planners regarded trams as slow, noisy relics that blocked the roads", "explain_vi": "'blocked the roads' = cản trở đường sá, tức làm chậm giao thông khác → TRUE." },
+            { "n": 2, "text": "All the old tram rails in Britain were taken out of the streets.", "answer": "FALSE", "evidence": "the rails were either removed or simply covered with asphalt", "explain_vi": "Đường ray hoặc bị gỡ bỏ, HOẶC bị phủ nhựa đường — không phải tất cả đều bị gỡ → FALSE." },
+            { "n": 3, "text": "Modern trams are easier to get on for people using wheelchairs.", "answer": "TRUE", "evidence": "passengers with pushchairs or wheelchairs can board without climbing steps", "explain_vi": "Sàn thấp nên người đi xe lăn lên tàu không cần bước bậc → TRUE." },
+            { "n": 4, "text": "Building a tram line usually costs about half as much as building an underground railway.", "answer": "FALSE", "evidence": "typically costing between a quarter and a third as much per kilometre", "explain_vi": "Chi phí chỉ bằng 1/4 đến 1/3, không phải 1/2 → FALSE. Chú ý con số trong câu hỏi." },
+            { "n": 5, "text": "Tram tickets are usually cheaper than bus tickets.", "answer": "NOT GIVEN", "evidence": "a tram can carry far more passengers than a bus", "explain_vi": "Bài so sánh SỨC CHỨA của tàu điện và xe buýt, không nói gì về giá vé → NOT GIVEN." },
+            { "n": 6, "text": "Some people who do not use buses are willing to travel by tram.", "answer": "TRUE", "evidence": "the opening of a tram line often attracts car drivers who would never consider taking a bus", "explain_vi": "Tàu điện thu hút những người lái ô tô vốn không bao giờ đi xe buýt → TRUE." },
+            { "n": 7, "text": "The tram line in Edinburgh was completed on time.", "answer": "FALSE", "evidence": "the first line opened in 2014, three years late and well over its original budget", "explain_vi": "'three years late' = trễ ba năm → FALSE." }
+          ]
+        },
+        {
+          "type": "gap",
+          "maxWords": 2,
+          "allowNumber": true,
+          "instructions": "Complete the notes below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.",
+          "title": "Trams today",
+          "questions": [
+            { "n": 8, "text": "Since the 1980s, over ___ new tram systems have opened in Europe.", "answer": ["150"], "evidence": "more than 150 new systems have opened in Europe", "explain_vi": "'more than 150 new systems' → 150." },
+            { "n": 9, "text": "Trams are cheaper to build than underground railways because no ___ are needed.", "answer": ["tunnels"], "evidence": "because there is no need to dig tunnels", "explain_vi": "'no need to dig tunnels' → tunnels." },
+            { "n": 10, "text": "A modern tram can carry about three times as many people as a large ___.", "answer": ["bus"], "evidence": "roughly three times the capacity of a large bus", "explain_vi": "'three times the capacity of a large bus' → bus." },
+            { "n": 11, "text": "Near tram stops, ___ often go up.", "answer": ["property values"], "evidence": "property values near tram stops frequently rise", "explain_vi": "'property values … frequently rise' → property values (giá trị bất động sản)." },
+            { "n": 12, "text": "Before rails are laid, pipes and ___ may have to be moved.", "answer": ["cables"], "evidence": "Underground pipes and cables often have to be moved", "explain_vi": "'pipes and cables often have to be moved' → cables." },
+            { "n": 13, "text": "Some experts prefer electric buses that run in their own ___.", "answer": ["dedicated lanes", "lanes"], "evidence": "modern electric buses running in their own dedicated lanes", "explain_vi": "'in their own dedicated lanes' → dedicated lanes (làn đường riêng)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2-p2",
+      "title": "Passage 2",
+      "heading": "Do Plants Communicate?",
+      "paragraphs": [
+        ["A", "The idea that plants might communicate with one another was, until recently, dismissed by most botanists as fanciful. Plants have no brain and no nervous system, and they cannot move from place to place. Yet over the past four decades, a series of carefully designed experiments has shown that plants are far from passive. They sense their surroundings, respond to threats and, it now appears, exchange information with their neighbours."],
+        ["B", "The first clues came from studies of trees under attack by insects. In the early 1980s, researchers noticed that willow trees growing near trees infested with caterpillars produced chemicals that made their leaves harder to digest, even though they themselves had not been attacked. Their findings were widely criticised at the time, partly because the experiments were difficult to repeat, but similar results have since been obtained with many different species."],
+        ["C", "The most widely accepted channel of communication is the air. When a plant is damaged, it releases a mixture of volatile chemicals into the atmosphere. Neighbouring plants that detect these chemicals begin to strengthen their own defences before any insect arrives. In one field experiment, tobacco plants growing next to clipped sagebrush suffered significantly less damage from insects over the following season than plants growing next to undamaged sagebrush."],
+        ["D", "Some of these airborne signals also work on other creatures. Certain plants, when eaten by caterpillars, release chemicals that attract wasps which lay their eggs inside the caterpillars, eventually killing them. In effect, the plant is calling for help. Farmers in East Africa have used this knowledge in a system known as push-pull, in which plants that repel pests are grown among crops, while plants that attract them are grown around the edge of the field."],
+        ["E", "A more controversial suggestion is that plants communicate below ground. The roots of most plants are connected to networks of fungi, which supply them with water and minerals in exchange for sugars. Some scientists claim that these networks also carry warning signals and even nutrients from one plant to another, so that older trees can support young seedlings growing in their shade. Others argue that the evidence is weaker than popular accounts suggest, and that many studies have been too small to draw firm conclusions."],
+        ["F", "Whatever the mechanism, researchers are careful about the words they use. To say that plants talk or have feelings, they warn, is misleading. A plant does not intend to warn its neighbours; it simply releases chemicals, and other plants have evolved to take advantage of them. Most botanists therefore prefer to speak of signalling rather than communication in the human sense."],
+        ["G", "The practical applications could nevertheless be significant. If crops could be encouraged to raise their defences before pests arrive, farmers might be able to use far fewer pesticides. Several research groups are now testing sprays that imitate the chemicals released by damaged plants, although so far the results in large fields have been less impressive than those obtained in laboratories."]
+      ],
+      "groups": [
+        {
+          "type": "headings",
+          "instructions": "Reading Passage 2 has seven paragraphs, A–G. Choose the correct heading for paragraphs B–G from the list of headings below.",
+          "options": [
+            ["i", "A debate about hidden underground links"],
+            ["ii", "Why scientists avoid human language"],
+            ["iii", "Early evidence that was not immediately accepted"],
+            ["iv", "How plants grow towards the light"],
+            ["v", "Messages carried through the air"],
+            ["vi", "Possible benefits for agriculture"],
+            ["vii", "Asking other species for help"],
+            ["viii", "The cost of producing chemical defences"]
+          ],
+          "questions": [
+            { "n": 14, "text": "Paragraph B", "answer": "iii", "evidence": "Their findings were widely criticised at the time", "explain_vi": "Đoạn B: nghiên cứu đầu tiên về cây liễu, lúc đầu bị chỉ trích → iii (bằng chứng ban đầu chưa được chấp nhận)." },
+            { "n": 15, "text": "Paragraph C", "answer": "v", "evidence": "The most widely accepted channel of communication is the air.", "explain_vi": "Đoạn C: chất hóa học bay vào không khí, cây bên cạnh nhận được → v." },
+            { "n": 16, "text": "Paragraph D", "answer": "vii", "evidence": "In effect, the plant is calling for help.", "explain_vi": "Đoạn D: cây thu hút ong bắp cày để diệt sâu — 'calling for help' → vii." },
+            { "n": 17, "text": "Paragraph E", "answer": "i", "evidence": "A more controversial suggestion is that plants communicate below ground.", "explain_vi": "Đoạn E: mạng nấm dưới đất, còn tranh cãi → i." },
+            { "n": 18, "text": "Paragraph F", "answer": "ii", "evidence": "To say that plants talk or have feelings, they warn, is misleading.", "explain_vi": "Đoạn F: nhà khoa học tránh nói cây 'talk' theo nghĩa của con người → ii." },
+            { "n": 19, "text": "Paragraph G", "answer": "vi", "evidence": "farmers might be able to use far fewer pesticides", "explain_vi": "Đoạn G: ứng dụng — nông dân dùng ít thuốc trừ sâu hơn → vi." }
+          ]
+        },
+        {
+          "type": "mcq",
+          "instructions": "Choose the correct letter, A, B, C or D.",
+          "questions": [
+            { "n": 20, "text": "What did the willow trees in the 1980s study do?", "options": [["A", "They were attacked by fewer caterpillars than other trees."], ["B", "They changed their leaves although they had not been attacked."], ["C", "They released chemicals that killed caterpillars."], ["D", "They stopped growing new leaves."]], "answer": "B", "evidence": "produced chemicals that made their leaves harder to digest, even though they themselves had not been attacked", "explain_vi": "Cây liễu chưa bị tấn công vẫn làm lá khó tiêu hóa hơn → B." },
+            { "n": 21, "text": "In the tobacco experiment, which plants suffered less damage?", "options": [["A", "plants that had been clipped"], ["B", "plants growing next to undamaged sagebrush"], ["C", "plants growing next to damaged sagebrush"], ["D", "plants grown in a laboratory"]], "answer": "C", "evidence": "tobacco plants growing next to clipped sagebrush suffered significantly less damage", "explain_vi": "Cây thuốc lá mọc cạnh cây ngải đã bị cắt (clipped = damaged) bị hại ít hơn → C." },
+            { "n": 22, "text": "In the push-pull system, plants that attract pests are grown", "options": [["A", "among the crops."], ["B", "around the edge of the field."], ["C", "in a separate field."], ["D", "after the crop has been harvested."]], "answer": "B", "evidence": "plants that attract them are grown around the edge of the field", "explain_vi": "Cây đẩy sâu trồng giữa ruộng, cây hút sâu trồng quanh mép ruộng → B." },
+            { "n": 23, "text": "What does the writer say about sprays that imitate plant chemicals?", "options": [["A", "They are already widely used by farmers."], ["B", "They work better in fields than in laboratories."], ["C", "Their results in large fields have been disappointing so far."], ["D", "They are more harmful than pesticides."]], "answer": "C", "evidence": "so far the results in large fields have been less impressive than those obtained in laboratories", "explain_vi": "'less impressive than … in laboratories' = kết quả ngoài đồng chưa tốt bằng → C." }
+          ]
+        },
+        {
+          "type": "gap",
+          "maxWords": 1,
+          "instructions": "Complete the summary below. Choose ONE WORD ONLY from the passage for each answer.",
+          "title": "Underground networks",
+          "questions": [
+            { "n": 24, "text": "Most plant roots are linked to networks of ___.", "answer": ["fungi"], "evidence": "The roots of most plants are connected to networks of fungi", "explain_vi": "'networks of fungi' → fungi (nấm)." },
+            { "n": 25, "text": "In return for water and minerals, plants give these networks ___.", "answer": ["sugars", "sugar"], "evidence": "which supply them with water and minerals in exchange for sugars", "explain_vi": "'in exchange for sugars' → sugars." },
+            { "n": 26, "text": "Some scientists believe older trees can help young ___ that grow in their shade.", "answer": ["seedlings"], "evidence": "older trees can support young seedlings growing in their shade", "explain_vi": "'support young seedlings' → seedlings (cây con)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2-p3",
+      "title": "Passage 3",
+      "heading": "Why We Put Things Off",
+      "paragraphs": [
+        ["A", "Almost everyone procrastinates at least occasionally, but for a significant minority the habit is chronic. Surveys suggest that around 20 per cent of adults regularly delay important tasks to the point where it harms their work, finances or health, and the figure among university students is considerably higher. Procrastination, in other words, is not a minor quirk but a problem with real consequences."],
+        ["B", "For a long time it was assumed that procrastinators were simply lazy or bad at managing their time. Psychologists now believe this explanation is largely mistaken. Many chronic procrastinators work extremely hard on tasks they enjoy, and teaching them to use diaries and to-do lists makes surprisingly little difference. The problem, it seems, lies not in how people organise their time but in how they manage their emotions."],
+        ["C", "According to this view, we put off tasks that make us feel bad, whether because they are boring, difficult or associated with the fear of failure. Delaying the task brings immediate relief, and this relief makes it more likely that we will delay again next time. The pattern resembles other short-term coping strategies: it feels good now but creates greater stress later, when the deadline approaches."],
+        ["D", "Interestingly, perfectionism appears to play a part. People who set impossibly high standards for themselves may avoid starting a task because any result is likely to fall short. I find this one of the more convincing findings in the field, because it explains why some of the most capable students are also the worst procrastinators. For them, an unfinished essay can never be judged a failure."],
+        ["E", "Another factor is the way we think about our future selves. Brain-imaging studies have found that when people think about themselves in ten years' time, the pattern of activity resembles the one produced when they think about a stranger. If the future self feels like someone else, it becomes easier to leave the hard work to that person. Exercises that help people imagine their future selves in vivid detail have been shown to increase saving for retirement, and some researchers believe they might reduce procrastination too."],
+        ["F", "What, then, can be done? Simply telling procrastinators to try harder is unlikely to work. More promising approaches involve reducing the unpleasant feelings attached to a task, for example by breaking it into very small steps or by agreeing to work on it for just five minutes. Once started, people often find the task less unpleasant than they expected and continue. Being kind to oneself also seems to help: in one study, students who forgave themselves for procrastinating before a first exam procrastinated less before the next one."],
+        ["G", "None of this means that every delay is harmful. Some writers claim that a short period of delay allows ideas to develop, and there may be some truth in this. However, it would be wrong to treat chronic procrastination as a creative strategy. For most people who struggle with it, the cost in stress and missed opportunities is far greater than any benefit, and the sooner they understand its emotional roots, the better."]
+      ],
+      "groups": [
+        {
+          "type": "ynng",
+          "instructions": "Do the following statements agree with the claims of the writer in Reading Passage 3? Choose YES if the statement agrees with the claims of the writer, NO if the statement contradicts the claims of the writer, NOT GIVEN if it is impossible to say what the writer thinks about this.",
+          "questions": [
+            { "n": 27, "text": "Procrastination is a minor problem for most people who suffer from it chronically.", "answer": "NO", "evidence": "Procrastination, in other words, is not a minor quirk but a problem with real consequences.", "explain_vi": "Tác giả nói đây 'not a minor quirk' mà có hậu quả thật → NO." },
+            { "n": 28, "text": "Poor time management is the main cause of procrastination.", "answer": "NO", "evidence": "The problem, it seems, lies not in how people organise their time but in how they manage their emotions.", "explain_vi": "Vấn đề không nằm ở cách sắp xếp thời gian mà ở cảm xúc → NO." },
+            { "n": 29, "text": "The link between perfectionism and procrastination is persuasive.", "answer": "YES", "evidence": "I find this one of the more convincing findings in the field", "explain_vi": "'I find this … convincing' = tác giả thấy thuyết phục → YES (persuasive = convincing)." },
+            { "n": 30, "text": "Students procrastinate more in their final year than in their first year.", "answer": "NOT GIVEN", "evidence": "the figure among university students is considerably higher", "explain_vi": "Bài chỉ nói tỷ lệ ở sinh viên cao hơn người lớn, không so sánh năm nhất với năm cuối → NOT GIVEN." },
+            { "n": 31, "text": "Forgiving yourself can reduce later procrastination.", "answer": "YES", "evidence": "students who forgave themselves for procrastinating before a first exam procrastinated less before the next one", "explain_vi": "Sinh viên tha thứ cho bản thân thì lần sau ít trì hoãn hơn, và tác giả trình bày điều này như cách 'seems to help' → YES." },
+            { "n": 32, "text": "Chronic procrastination should be seen as a useful creative strategy.", "answer": "NO", "evidence": "it would be wrong to treat chronic procrastination as a creative strategy", "explain_vi": "'it would be wrong to treat … as a creative strategy' → NO. Bẫy: tác giả có thừa nhận trì hoãn NGẮN có thể giúp ý tưởng phát triển." }
+          ]
+        },
+        {
+          "type": "matching",
+          "instructions": "Reading Passage 3 has seven paragraphs, A–G. Which paragraph contains the following information? You may use any letter more than once.",
+          "options": [["A", "Paragraph A"], ["B", "Paragraph B"], ["C", "Paragraph C"], ["D", "Paragraph D"], ["E", "Paragraph E"], ["F", "Paragraph F"], ["G", "Paragraph G"]],
+          "questions": [
+            { "n": 33, "text": "a description of how delaying a task becomes a habit", "answer": "C", "evidence": "this relief makes it more likely that we will delay again next time", "explain_vi": "Cảm giác nhẹ nhõm khi trì hoãn khiến lần sau dễ trì hoãn tiếp → đoạn C." },
+            { "n": 34, "text": "a reference to research on the brain", "answer": "E", "evidence": "Brain-imaging studies have found", "explain_vi": "'Brain-imaging studies' → đoạn E." },
+            { "n": 35, "text": "an explanation that was once common but is now rejected", "answer": "B", "evidence": "Psychologists now believe this explanation is largely mistaken.", "explain_vi": "Quan niệm cũ 'lười / quản lý thời gian kém' nay bị bác bỏ → đoạn B." },
+            { "n": 36, "text": "an estimate of how many adults are seriously affected", "answer": "A", "evidence": "around 20 per cent of adults regularly delay important tasks", "explain_vi": "'around 20 per cent of adults' → đoạn A." }
+          ]
+        },
+        {
+          "type": "mcq",
+          "instructions": "Choose the correct letter, A, B, C or D.",
+          "questions": [
+            { "n": 37, "text": "According to paragraph C, why do people delay unpleasant tasks?", "options": [["A", "because they have too much work"], ["B", "because delaying makes them feel better at once"], ["C", "because they forget about deadlines"], ["D", "because they want to do the task perfectly"]], "answer": "B", "evidence": "Delaying the task brings immediate relief", "explain_vi": "'immediate relief' = nhẹ nhõm ngay lập tức → B. D là ý của đoạn D (perfectionism), không phải đoạn C." },
+            { "n": 38, "text": "Why might capable students be the worst procrastinators?", "options": [["A", "They find their courses too easy."], ["B", "They are afraid that their work will not meet their high standards."], ["C", "They have more activities outside their studies."], ["D", "They are less interested in their results."]], "answer": "B", "evidence": "People who set impossibly high standards for themselves may avoid starting a task because any result is likely to fall short.", "explain_vi": "Người cầu toàn sợ kết quả không đạt tiêu chuẩn cao → B." },
+            { "n": 39, "text": "What do exercises that make people imagine their future selves appear to do?", "options": [["A", "make people save more money"], ["B", "improve people's memory"], ["C", "make people more creative"], ["D", "reduce people's stress"]], "answer": "A", "evidence": "have been shown to increase saving for retirement", "explain_vi": "Đã được chứng minh làm tăng tiết kiệm cho tuổi hưu → A. Việc giảm trì hoãn mới chỉ là 'might'." },
+            { "n": 40, "text": "Which method does the writer suggest for starting an unpleasant task?", "options": [["A", "working on it for a short time only"], ["B", "doing it together with a friend"], ["C", "rewarding yourself when it is finished"], ["D", "doing it first thing in the morning"]], "answer": "A", "evidence": "by agreeing to work on it for just five minutes", "explain_vi": "'work on it for just five minutes' → A." }
+          ]
+        }
+      ]
+    }
+  ]
+}

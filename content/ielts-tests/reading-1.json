@@ -1,0 +1,159 @@
+{
+  "_note": "Original IELTS-style Academic Reading test written for LinguaFlow (not taken from any published test). parts[].paragraphs = [label or null, text]. groups[].type: tfng | ynng | mcq | headings | matching | gap. Choice answers are option keys; gap answers list every accepted spelling. evidence must be an exact quote from the passage (checked by src/lib/ielts/tests.test.ts).",
+  "id": "reading-1",
+  "skill": "reading",
+  "title": "Academic Reading — Practice test 1",
+  "minutes": 60,
+  "parts": [
+    {
+      "id": "r1-p1",
+      "title": "Passage 1",
+      "heading": "Bees on the Rooftops",
+      "paragraphs": [
+        [null, "Ten years ago, the idea of keeping bees in the middle of a large city would have struck most people as eccentric. Today, hives can be found on the roofs of hotels, office blocks and even fire stations in cities from London to Tokyo. In Paris alone, the number of registered hives rose from around 300 in 2010 to more than 2,000 a decade later. Supporters see urban beekeeping as a small but meaningful response to the well-publicised decline of bee populations in the countryside."],
+        [null, "Cities turn out to be surprisingly good places for bees. Because parks, gardens, balconies and roadside verges are planted with a wide variety of species, flowers are available for much of the year, whereas farmland is often dominated by a single crop that blooms for only a few weeks. Urban areas are also, on average, two or three degrees warmer than the surrounding countryside, which allows colonies to remain active for longer. Perhaps most importantly, city gardeners use far fewer pesticides than commercial farmers, and these chemicals are widely believed to be one of the main causes of colony losses."],
+        [null, "The honey produced in cities has its own character. Beekeepers in Berlin, for example, report that their honey has a distinctive minty flavour, which they attribute to the lime trees that line many of the city's streets. Laboratory tests carried out in several European capitals have found that urban honey generally contains lower levels of pesticide residue than honey from rural areas, although it can contain small amounts of heavy metals from traffic. In most cases these levels are well below the limits set by food safety authorities."],
+        [null, "However, not everyone is convinced that the trend is entirely positive. Some ecologists point out that the honeybee is only one of more than 20,000 bee species, and it is by no means the most endangered. Wild bees, many of which live alone rather than in colonies, are far more vulnerable to the loss of habitat. Because honeybees forage in large numbers, a high density of hives can leave less nectar and pollen for these wild species. A study in London found that the amount of food available per hive in the city had fallen sharply as the number of hives grew, and the researchers warned that the city may already be approaching its limit."],
+        [null, "Keeping bees responsibly also requires more skill than many newcomers expect. Colonies must be inspected regularly for disease, and a poorly managed hive can spread infections to neighbouring colonies. Swarming, when part of a colony leaves the hive to establish a new one, is a natural process, but a swarm of several thousand bees landing on a busy shopping street can cause alarm. For this reason, beekeeping associations in many cities now require members to complete a training course before they are allowed to install a hive, and some recommend that beginners spend a season helping an experienced keeper first."],
+        [null, "Many specialists argue that the most useful thing city dwellers can do for bees is not to keep hives at all, but to plant flowers. Councils in several cities have stopped mowing some grass verges so that wild flowers can grow, and the results have been encouraging: in one trial in Bristol, the number of bees recorded on unmown verges was nearly three times higher than on regularly cut ones. Such measures benefit all pollinators, not just honeybees, and they cost less than the conventional maintenance they replace."]
+      ],
+      "groups": [
+        {
+          "type": "tfng",
+          "instructions": "Do the following statements agree with the information given in Reading Passage 1? Choose TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+          "questions": [
+            { "n": 1, "text": "The number of registered hives in Paris increased more than six times between 2010 and 2020.", "answer": "TRUE", "evidence": "rose from around 300 in 2010 to more than 2,000 a decade later", "explain_vi": "Từ khoảng 300 lên hơn 2.000 sau mười năm — tức là tăng hơn 6 lần. Khớp với câu hỏi → TRUE." },
+            { "n": 2, "text": "Farmland usually offers bees a wider variety of flowers than cities do.", "answer": "FALSE", "evidence": "farmland is often dominated by a single crop that blooms for only a few weeks", "explain_vi": "Bài nói thành phố có nhiều loại hoa, còn đất nông nghiệp thường chỉ có một loại cây trồng nở hoa vài tuần — ngược với câu hỏi → FALSE." },
+            { "n": 3, "text": "Hives in cities produce more honey than hives in the countryside.", "answer": "NOT GIVEN", "evidence": "The honey produced in cities has its own character.", "explain_vi": "Bài chỉ nói mật ong thành phố có hương vị riêng và ít thuốc trừ sâu, không so sánh SẢN LƯỢNG mật → NOT GIVEN. Bẫy: đừng suy ra từ việc thành phố 'tốt cho ong'." },
+            { "n": 4, "text": "Urban honey contains lower levels of every type of chemical than rural honey.", "answer": "FALSE", "evidence": "although it can contain small amounts of heavy metals from traffic", "explain_vi": "Mật ong thành phố ít thuốc trừ sâu hơn, NHƯNG có thể chứa kim loại nặng từ xe cộ — nên không phải 'mọi loại hóa chất' đều thấp hơn → FALSE. Chú ý từ tuyệt đối như every / always." },
+            { "n": 5, "text": "The honeybee is the most endangered species of bee.", "answer": "FALSE", "evidence": "it is by no means the most endangered", "explain_vi": "'by no means the most endangered' = hoàn toàn không phải loài nguy cấp nhất → FALSE." },
+            { "n": 6, "text": "The researchers in London recommended removing some of the city's hives.", "answer": "NOT GIVEN", "evidence": "the researchers warned that the city may already be approaching its limit", "explain_vi": "Các nhà nghiên cứu chỉ CẢNH BÁO thành phố có thể sắp đạt giới hạn, không nói đề xuất bỏ bớt tổ ong → NOT GIVEN." }
+          ]
+        },
+        {
+          "type": "gap",
+          "maxWords": 2,
+          "instructions": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+          "title": "Urban beekeeping",
+          "questions": [
+            { "n": 7, "text": "Cities suit bees because flowers bloom for longer, temperatures are higher and gardeners use fewer ___.", "answer": ["pesticides"], "evidence": "city gardeners use far fewer pesticides than commercial farmers", "explain_vi": "'use far fewer pesticides' → đáp án pesticides (giữ nguyên dạng số nhiều)." },
+            { "n": 8, "text": "Honey from Berlin has a ___ taste, thought to come from lime trees.", "answer": ["minty"], "evidence": "their honey has a distinctive minty flavour, which they attribute to the lime trees", "explain_vi": "Chỗ trống cần một tính từ chỉ vị: 'minty flavour' → minty." },
+            { "n": 9, "text": "Urban honey may contain small amounts of ___ caused by traffic.", "answer": ["heavy metals"], "evidence": "small amounts of heavy metals from traffic", "explain_vi": "'heavy metals from traffic' → heavy metals (2 từ, đúng giới hạn)." },
+            { "n": 10, "text": "Too many hives can reduce the food available to ___.", "answer": ["wild bees", "wild species"], "evidence": "can leave less nectar and pollen for these wild species", "explain_vi": "Mật độ tổ ong cao làm giảm mật hoa và phấn cho 'these wild species', tức là ong hoang dã → wild bees / wild species." },
+            { "n": 11, "text": "The natural process in which part of a colony leaves to start a new one is called ___.", "answer": ["swarming"], "evidence": "Swarming, when part of a colony leaves the hive to establish a new one", "explain_vi": "Câu định nghĩa: 'Swarming, when part of a colony leaves the hive…' → swarming." },
+            { "n": 12, "text": "Many beekeeping associations require a ___ before members can install a hive.", "answer": ["training course"], "evidence": "require members to complete a training course before they are allowed to install a hive", "explain_vi": "'complete a training course before they are allowed to install a hive' → training course." },
+            { "n": 13, "text": "In Bristol, there were nearly three times as many bees on unmown ___.", "answer": ["verges", "grass verges"], "evidence": "the number of bees recorded on unmown verges was nearly three times higher", "explain_vi": "'on unmown verges' → verges (hoặc grass verges, cũng trong giới hạn 2 từ)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1-p2",
+      "title": "Passage 2",
+      "heading": "Sleep and Memory",
+      "paragraphs": [
+        ["A", "For most of the twentieth century, sleep was regarded by scientists as a passive state, a period in which the brain simply switched off to rest. That view has changed dramatically. Recordings of brain activity show that during certain stages of sleep the brain is extremely busy, and a growing body of research suggests that much of this activity is devoted to processing the experiences of the previous day."],
+        ["B", "Sleep is not a single, uniform state. Over the course of a night, the sleeper passes through a cycle of stages roughly every ninety minutes. In deep, or slow-wave, sleep, brain waves become large and slow, and the body is very difficult to wake. During rapid eye movement (REM) sleep, by contrast, the brain is almost as active as when awake, the eyes move quickly beneath closed lids, and most vivid dreaming takes place. Deep sleep dominates the early part of the night, while REM periods become longer towards morning."],
+        ["C", "Evidence that sleep strengthens memory comes from experiments in which volunteers learn a task and are then tested after a period of either sleep or wakefulness. In a typical study, participants who learned a list of word pairs in the evening and slept before being tested remembered around 20 per cent more than those who learned the same list in the morning and were tested after a day awake. Importantly, the advantage remained even when the researchers controlled for the time of day at which testing took place."],
+        ["D", "Researchers believe that different stages of sleep support different kinds of memory. Deep sleep appears to be particularly important for facts and events, the kind of knowledge that can be put into words. During this stage, the hippocampus, a small structure that acts as a temporary store for new information, seems to replay the day's experiences and gradually transfer them to the cortex for long-term storage. REM sleep, on the other hand, has been linked to skills such as playing a musical instrument, and to the ability to find hidden connections between pieces of information."],
+        ["E", "This last finding has intriguing implications for creativity. In one well-known experiment, volunteers were given a mathematical problem that could be solved slowly by following a set of rules, or almost instantly if a hidden shortcut was noticed. After a night's sleep, nearly 60 per cent of participants discovered the shortcut, compared with only about 23 per cent of those who had spent the same period awake. The researchers concluded that sleep does not merely preserve memories but can also reorganise them."],
+        ["F", "These findings matter because many people, students in particular, routinely sacrifice sleep. Surveys suggest that a large proportion of university students sleep less than seven hours a night during examination periods, often in order to revise. The research suggests that this may be counterproductive: staying up late to study may mean that less of what is learned is retained. Some universities have begun to include information about sleep in their study-skills programmes, encouraging students to treat a good night's sleep as part of their preparation rather than as time lost."]
+      ],
+      "groups": [
+        {
+          "type": "headings",
+          "instructions": "Reading Passage 2 has six paragraphs, A–F. Choose the correct heading for each paragraph from the list of headings below.",
+          "options": [
+            ["i", "The changing view of what the sleeping brain does"],
+            ["ii", "How sleep can help us to solve problems"],
+            ["iii", "Comparing learning followed by sleep with learning followed by a day awake"],
+            ["iv", "Why some people need more sleep than others"],
+            ["v", "The structure of a night's sleep"],
+            ["vi", "Linking stages of sleep to types of memory"],
+            ["vii", "A lesson from sleep research for learners"],
+            ["viii", "The risks of using sleeping pills"]
+          ],
+          "questions": [
+            { "n": 14, "text": "Paragraph A", "answer": "i", "evidence": "That view has changed dramatically.", "explain_vi": "Đoạn A: trước đây coi giấc ngủ là thụ động, nay quan điểm đã thay đổi → i (quan điểm thay đổi về việc não làm gì khi ngủ)." },
+            { "n": 15, "text": "Paragraph B", "answer": "v", "evidence": "the sleeper passes through a cycle of stages roughly every ninety minutes", "explain_vi": "Đoạn B mô tả các giai đoạn và chu kỳ 90 phút của một đêm ngủ → v (cấu trúc của giấc ngủ)." },
+            { "n": 16, "text": "Paragraph C", "answer": "iii", "evidence": "tested after a period of either sleep or wakefulness", "explain_vi": "Đoạn C so sánh nhóm học rồi ngủ với nhóm học rồi thức cả ngày → iii." },
+            { "n": 17, "text": "Paragraph D", "answer": "vi", "evidence": "different stages of sleep support different kinds of memory", "explain_vi": "Đoạn D: giai đoạn ngủ sâu ↔ kiến thức sự kiện, REM ↔ kỹ năng → vi." },
+            { "n": 18, "text": "Paragraph E", "answer": "ii", "evidence": "nearly 60 per cent of participants discovered the shortcut", "explain_vi": "Đoạn E: thí nghiệm bài toán có lối tắt — ngủ giúp tìm ra cách giải → ii. Lưu ý: chữ 'creativity' ở đầu đoạn chỉ là dẫn ý." },
+            { "n": 19, "text": "Paragraph F", "answer": "vii", "evidence": "encouraging students to treat a good night's sleep as part of their preparation", "explain_vi": "Đoạn F: sinh viên thức khuya ôn thi là phản tác dụng, các trường khuyên ngủ đủ → vii (bài học cho người học)." }
+          ]
+        },
+        {
+          "type": "mcq",
+          "instructions": "Choose the correct letter, A, B, C or D.",
+          "questions": [
+            { "n": 20, "text": "According to paragraph B, during REM sleep", "options": [["A", "the sleeper is very hard to wake."], ["B", "brain waves become large and slow."], ["C", "the brain is nearly as active as when awake."], ["D", "periods are longest at the start of the night."]], "answer": "C", "evidence": "the brain is almost as active as when awake", "explain_vi": "'almost as active as when awake' = gần như hoạt động như khi thức → C. A và B là đặc điểm của ngủ sâu; D sai vì REM dài hơn về sáng." },
+            { "n": 21, "text": "In the word-pair study described in paragraph C, the researchers", "options": [["A", "tested all participants in the evening."], ["B", "found that the advantage of sleep disappeared over time."], ["C", "took into account the time of day of the test."], ["D", "only studied people who learned in the morning."]], "answer": "C", "evidence": "the advantage remained even when the researchers controlled for the time of day at which testing took place", "explain_vi": "'controlled for the time of day' = đã tính đến yếu tố giờ làm bài kiểm tra → C." },
+            { "n": 22, "text": "The hippocampus is described as", "options": [["A", "the place where long-term memories are kept."], ["B", "a temporary store for new information."], ["C", "active only during REM sleep."], ["D", "the part of the brain responsible for dreams."]], "answer": "B", "evidence": "acts as a temporary store for new information", "explain_vi": "Câu trong bài: 'acts as a temporary store for new information' → B. Trí nhớ dài hạn được chuyển sang cortex, nên A sai." },
+            { "n": 23, "text": "In the experiment in paragraph E, about what proportion of people who stayed awake found the shortcut?", "options": [["A", "20 per cent"], ["B", "23 per cent"], ["C", "60 per cent"], ["D", "90 per cent"]], "answer": "B", "evidence": "compared with only about 23 per cent of those who had spent the same period awake", "explain_vi": "Người thức: khoảng 23%; người ngủ: gần 60% → B. Bẫy: 60% là của nhóm ngủ." }
+          ]
+        },
+        {
+          "type": "gap",
+          "maxWords": 2,
+          "instructions": "Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.",
+          "questions": [
+            { "n": 24, "text": "One complete cycle of sleep stages lasts about ___ minutes.", "answer": ["ninety", "90"], "evidence": "roughly every ninety minutes", "explain_vi": "'roughly every ninety minutes' → ninety / 90." },
+            { "n": 25, "text": "REM sleep has been connected with skills such as ___ a musical instrument.", "answer": ["playing"], "evidence": "skills such as playing a musical instrument", "explain_vi": "Chỗ trống đứng trước 'a musical instrument' → cần động từ dạng -ing: playing." },
+            { "n": 26, "text": "Some universities now teach students about sleep as part of their ___ programmes.", "answer": ["study-skills", "study skills"], "evidence": "include information about sleep in their study-skills programmes", "explain_vi": "'their study-skills programmes' → study-skills." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1-p3",
+      "title": "Passage 3",
+      "heading": "Saving the World's Languages",
+      "paragraphs": [
+        ["A", "Of the roughly 7,000 languages spoken in the world today, linguists estimate that around 40 per cent are endangered, and that one language falls silent, on average, every few months. A language is generally considered endangered when children are no longer learning it at home. Once that happens, the number of speakers can only decline as the older generation passes away."],
+        ["B", "The causes of language loss are rarely sudden. In most cases, speakers of a minority language gradually shift to a more widely used language because it offers better access to education, employment and public life. Parents who struggled because they spoke only the local language may decide, with the best of intentions, to raise their children in the national language instead. Within two or three generations, the minority language may survive only among the elderly."],
+        ["C", "Why should this matter to anyone other than the speakers themselves? I would argue that each language represents a unique way of organising human experience. Some languages, for instance, have no words for 'left' and 'right' and describe all positions in terms of compass directions, so that speakers might say that a cup is to the north of a plate. Studies have found that speakers of such languages are remarkably good at keeping track of direction, even in unfamiliar buildings. When a language disappears, insights of this kind may be lost before anyone has had the chance to study them."],
+        ["D", "Languages also carry practical knowledge. Many indigenous languages contain detailed vocabularies for local plants, animals and weather patterns, built up over centuries of close observation. Biologists working in the Pacific have, on several occasions, identified new species only after local speakers pointed out distinctions that scientists had overlooked. It would be naive, however, to imagine that this knowledge can always be saved simply by writing down word lists; much of it is embedded in stories, songs and everyday practices that a dictionary cannot capture."],
+        ["E", "Efforts to reverse language decline have had mixed results. The most frequently cited success is Hebrew, which was revived as an everyday spoken language in the late nineteenth and early twentieth centuries after being used for many centuries mainly in religious and written contexts. In New Zealand, so-called language nests, preschools in which young children are looked after entirely in Māori, helped to create a new generation of speakers from the 1980s onwards. Welsh, too, has benefited from its use in schools and on television and radio, and the number of young people who can speak it has risen."],
+        ["F", "Yet for every success there are many cases in which revival programmes have struggled. Classes for adults often attract enthusiastic learners who nonetheless never reach fluency, and a language that is taught at school but not used at home or in the community may remain a school subject rather than a living language. Funding is another problem: programmes frequently depend on short-term grants, and when these come to an end, progress can be lost."],
+        ["G", "Technology offers new possibilities. Smartphone apps, online dictionaries and social media allow scattered speakers to communicate and allow learners to hear the language spoken. Recordings made today will be available to future generations, even if the language ceases to be spoken. In my view, though, technology cannot replace the one factor that matters most: a community that chooses to use its language in daily life. Without that commitment, even the most sophisticated tools will produce archives rather than speakers."]
+      ],
+      "groups": [
+        {
+          "type": "ynng",
+          "instructions": "Do the following statements agree with the claims of the writer in Reading Passage 3? Choose YES if the statement agrees with the claims of the writer, NO if the statement contradicts the claims of the writer, NOT GIVEN if it is impossible to say what the writer thinks about this.",
+          "questions": [
+            { "n": 27, "text": "Languages usually disappear very quickly.", "answer": "NO", "evidence": "The causes of language loss are rarely sudden.", "explain_vi": "'rarely sudden' = hiếm khi đột ngột → trái với 'very quickly' → NO." },
+            { "n": 28, "text": "Parents who bring up their children in the national language generally mean well.", "answer": "YES", "evidence": "may decide, with the best of intentions, to raise their children in the national language instead", "explain_vi": "'with the best of intentions' = với ý định tốt nhất → 'mean well' → YES." },
+            { "n": 29, "text": "When a language dies, knowledge that has never been studied may be lost.", "answer": "YES", "evidence": "insights of this kind may be lost before anyone has had the chance to study them", "explain_vi": "Tác giả nói những hiểu biết này có thể mất trước khi ai kịp nghiên cứu → YES." },
+            { "n": 30, "text": "Writing down lists of words is usually enough to preserve traditional knowledge.", "answer": "NO", "evidence": "It would be naive, however, to imagine that this knowledge can always be saved simply by writing down word lists", "explain_vi": "Tác giả cho rằng nghĩ như vậy là 'naive' (ngây thơ) → NO." },
+            { "n": 31, "text": "Welsh now has more speakers than Māori.", "answer": "NOT GIVEN", "evidence": "the number of young people who can speak it has risen", "explain_vi": "Bài chỉ nói số người trẻ nói tiếng Wales tăng, không so sánh với tiếng Māori → NOT GIVEN." }
+          ]
+        },
+        {
+          "type": "matching",
+          "instructions": "Reading Passage 3 has seven paragraphs, A–G. Which paragraph contains the following information? You may use any letter more than once.",
+          "options": [["A", "Paragraph A"], ["B", "Paragraph B"], ["C", "Paragraph C"], ["D", "Paragraph D"], ["E", "Paragraph E"], ["F", "Paragraph F"], ["G", "Paragraph G"]],
+          "questions": [
+            { "n": 32, "text": "an example of a language that returned to everyday use after mainly religious use", "answer": "E", "evidence": "after being used for many centuries mainly in religious and written contexts", "explain_vi": "Tiếng Hebrew được hồi sinh sau nhiều thế kỷ chủ yếu dùng trong tôn giáo → đoạn E." },
+            { "n": 33, "text": "the point at which a language is considered to be at risk", "answer": "A", "evidence": "A language is generally considered endangered when children are no longer learning it at home.", "explain_vi": "Định nghĩa 'endangered': khi trẻ em không còn học ngôn ngữ ở nhà → đoạn A." },
+            { "n": 34, "text": "a reference to scientists learning from local people", "answer": "D", "evidence": "identified new species only after local speakers pointed out distinctions that scientists had overlooked", "explain_vi": "Nhà sinh vật học phát hiện loài mới nhờ người bản địa chỉ ra → đoạn D." },
+            { "n": 35, "text": "a reason why progress in some revival programmes is lost", "answer": "F", "evidence": "programmes frequently depend on short-term grants, and when these come to an end, progress can be lost", "explain_vi": "Kinh phí ngắn hạn hết thì tiến bộ mất đi → đoạn F." },
+            { "n": 36, "text": "an example of how a language may affect a particular mental skill", "answer": "C", "evidence": "speakers of such languages are remarkably good at keeping track of direction", "explain_vi": "Người nói ngôn ngữ dùng phương hướng la bàn định hướng rất giỏi → đoạn C." }
+          ]
+        },
+        {
+          "type": "gap",
+          "maxWords": 2,
+          "instructions": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+          "title": "Language loss and revival",
+          "questions": [
+            { "n": 37, "text": "People often move to a more widely used language because it gives better access to education, employment and ___.", "answer": ["public life"], "evidence": "better access to education, employment and public life", "explain_vi": "Liệt kê ba thứ: education, employment and public life → public life." },
+            { "n": 38, "text": "In New Zealand, preschools known as ___ helped to produce new speakers of Māori.", "answer": ["language nests"], "evidence": "so-called language nests, preschools in which young children are looked after entirely in Māori", "explain_vi": "'so-called language nests' → language nests." },
+            { "n": 39, "text": "A language taught only in schools may become just a ___.", "answer": ["school subject"], "evidence": "may remain a school subject rather than a living language", "explain_vi": "'remain a school subject rather than a living language' → school subject." },
+            { "n": 40, "text": "The writer believes that, without a community's commitment, technology will only create ___.", "answer": ["archives"], "evidence": "even the most sophisticated tools will produce archives rather than speakers", "explain_vi": "'produce archives rather than speakers' → archives (kho lưu trữ, không phải người nói)." }
+          ]
+        }
+      ]
+    }
+  ]
+}

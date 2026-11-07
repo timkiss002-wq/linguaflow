@@ -1,0 +1,367 @@
+{
+  "prompts": [
+    {
+      "id": "g-alone",
+      "type": "twopart",
+      "task": "en-w-ielts-alone",
+      "title": "Living alone",
+      "prompt": "Nowadays, more and more people choose to live alone. Why is this happening? Is it a positive or negative development?",
+      "prompt_vi": "Ngày nay, ngày càng nhiều người chọn sống một mình. Vì sao điều này xảy ra? Đây là xu hướng tích cực hay tiêu cực?",
+      "ideas_vi": [
+        "Câu hỏi 1 — lý do: thu nhập cao hơn → tự thuê/mua nhà; kết hôn muộn để tập trung sự nghiệp",
+        "Câu hỏi 2 — ý kiến: phần lớn là tích cực",
+        "Vì: tự lập, có trách nhiệm (tự nấu ăn, quản lý tiền); tự do theo đuổi sở thích",
+        "Kết: có thể cô đơn nhưng trưởng thành, tự tin hơn"
+      ],
+      "sentences": [
+        [
+          "t-i1",
+          "Trong những năm gần đây, ngày càng nhiều người lựa chọn sống một mình, đặc biệt là ở các thành phố lớn.",
+          "In recent years, more and more people have chosen to live alone, especially in big cities.",
+          "In recent years, an increasing number of people have chosen to live alone, especially in large cities.",
+          "In recent years, a growing number of people have opted to live alone, particularly in major cities."
+        ],
+        [
+          "t-i2",
+          "Bài viết này trước tiên sẽ giải thích vì sao điều này đang xảy ra, sau đó lập luận rằng đây phần lớn là một xu hướng tích cực.",
+          "This essay will first explain why this is happening and then argue that it is mostly a positive change.",
+          "This essay will first explain why this is happening and then argue that it is largely a positive development.",
+          "This essay will first explain why this is happening and then argue that it is, on the whole, a positive development."
+        ],
+        [
+          "t-b1",
+          "Có nhiều lý do khiến người ta ngày nay chọn sống một mình.",
+          "There are several reasons why people today choose to live alone.",
+          "There are several reasons why people today decide to live on their own.",
+          "There are several reasons why people today decide to live independently."
+        ],
+        [
+          "t-b2",
+          "Thứ nhất, người trẻ ngày nay có thu nhập cao hơn nên họ có thể tự thuê hoặc mua một căn hộ riêng.",
+          "Firstly, young people today earn more money, so they can rent or buy their own flat.",
+          "Firstly, young people today have higher incomes, so they can afford to rent or buy their own flat.",
+          "Firstly, young adults today enjoy higher incomes, which allows them to rent or buy a flat of their own."
+        ],
+        [
+          "t-b2e",
+          "Điều này có nghĩa là họ không còn phải sống cùng cha mẹ vì lý do tài chính.",
+          "This means that they do not need to live with their parents because of money any more.",
+          "This means that they no longer have to live with their parents for financial reasons.",
+          "This means that they are no longer forced to live with their parents for financial reasons."
+        ],
+        [
+          "t-b3",
+          "Ví dụ, nhiều nhân viên văn phòng ở Hà Nội chuyển ra sống riêng ngay sau khi tìm được một công việc ổn định.",
+          "For example, many office workers in Hanoi move out and live alone soon after they find a stable job.",
+          "For example, many office workers in Hanoi move into their own flats soon after they find a stable job.",
+          "For example, many office workers in Hanoi move into a place of their own as soon as they secure a stable job."
+        ],
+        [
+          "t-b4",
+          "Thứ hai, nhiều người kết hôn muộn hơn vì họ muốn tập trung vào sự nghiệp.",
+          "Secondly, many people get married later because they want to focus on their careers.",
+          "Secondly, many people now marry later in life because they want to focus on their careers.",
+          "Secondly, many people are postponing marriage in order to concentrate on their careers."
+        ],
+        [
+          "t-b4e",
+          "Nói cách khác, họ muốn có một công việc tốt và tài chính ổn định trước khi bắt đầu một mối quan hệ lâu dài.",
+          "In other words, they want to have a good job and enough money before they start a long relationship.",
+          "In other words, they want to have a good job and financial security before committing to a long-term relationship.",
+          "In other words, they wish to establish a successful career and financial security before committing to a long-term relationship."
+        ],
+        [
+          "t-b5",
+          "Kết quả là, họ dành nhiều năm sống tự lập trước khi lập gia đình.",
+          "As a result, they spend many years living alone and taking care of themselves before they start a family.",
+          "As a result, they spend many years living independently before they start a family.",
+          "As a result, they spend a considerable number of years living independently before settling down and starting a family."
+        ],
+        [
+          "t-c1",
+          "Đối với câu hỏi thứ hai, tôi tin rằng đây phần lớn là một xu hướng tích cực.",
+          "Regarding the second question, I believe that this is mostly a positive change.",
+          "Regarding the second question, I believe that this is largely a positive development.",
+          "Regarding the second question, I believe that this trend is, on balance, a positive one."
+        ],
+        [
+          "t-c2",
+          "Điều này là vì sống một mình giúp con người trở nên độc lập và có trách nhiệm hơn.",
+          "This is because living alone helps people to become more independent and responsible.",
+          "This is because living alone helps people to become more independent and responsible.",
+          "This is because living alone encourages people to become more self-reliant and responsible."
+        ],
+        [
+          "t-c3",
+          "Chẳng hạn, khi sống một mình, người ta phải tự nấu ăn, tự quản lý tiền bạc và tự giải quyết các vấn đề hằng ngày.",
+          "For instance, when people live alone, they have to cook for themselves, manage their money and solve daily problems.",
+          "For instance, people who live alone have to cook for themselves, manage their own finances and deal with everyday problems.",
+          "For instance, those who live alone must cook for themselves, manage their own finances and handle everyday problems without help."
+        ],
+        [
+          "t-c4",
+          "Hơn nữa, họ có nhiều tự do hơn để theo đuổi sở thích và sắp xếp cuộc sống theo cách mình muốn.",
+          "Moreover, they have more freedom to follow their hobbies and live the way they want.",
+          "Moreover, they have more freedom to pursue their interests and organise their lives as they wish.",
+          "Moreover, they enjoy greater freedom to pursue their interests and arrange their lives as they see fit."
+        ],
+        [
+          "t-c5",
+          "Vì vậy, mặc dù đôi khi một số người có thể cảm thấy cô đơn, phần lớn đều trở nên trưởng thành và tự tin hơn.",
+          "Therefore, although some people may feel lonely sometimes, most of them become more mature and confident.",
+          "Therefore, although some people may feel lonely at times, most become more mature and confident.",
+          "Therefore, although some may experience loneliness at times, the majority become more mature and self-confident."
+        ],
+        [
+          "t-d1",
+          "Tóm lại, ngày càng nhiều người sống một mình vì thu nhập cao hơn và kết hôn muộn hơn, và tôi tin rằng đây là một xu hướng tích cực vì nó giúp con người độc lập hơn.",
+          "In conclusion, more people live alone because they earn more and get married later, and I believe that this is a positive change because it makes people more independent.",
+          "In conclusion, more people are living alone because of higher incomes and later marriages, and I believe that this is a positive development because it makes people more independent.",
+          "In conclusion, more people are living alone because of rising incomes and later marriages, and I believe that this is a positive development because it fosters independence and maturity."
+        ]
+      ]
+    },
+    {
+      "id": "g-reading",
+      "type": "twopart",
+      "task": "en-w-ielts-reading",
+      "title": "Reading for pleasure",
+      "prompt": "Fewer and fewer people read books for pleasure. Why is this? What can be done to encourage people to read more?",
+      "prompt_vi": "Ngày càng ít người đọc sách để giải trí. Vì sao lại như vậy? Có thể làm gì để khuyến khích mọi người đọc nhiều hơn?",
+      "ideas_vi": [
+        "Câu hỏi 1 — lý do: video ngắn, game hấp dẫn và dễ tiếp cận hơn; quá bận rộn",
+        "Câu hỏi 2 — giải pháp: gia đình và nhà trường (đọc truyện cho con, câu lạc bộ sách)",
+        "Bổ sung: sách điện tử, sách nói cho người bận rộn",
+        "Kết: gia đình, nhà trường và công nghệ cùng khuyến khích"
+      ],
+      "sentences": [
+        [
+          "t-i1",
+          "Trong những năm gần đây, số người đọc sách để giải trí ngày càng giảm.",
+          "In recent years, fewer and fewer people have been reading books for fun.",
+          "In recent years, the number of people who read books for pleasure has fallen steadily.",
+          "In recent years, there has been a steady decline in the number of people who read books for pleasure."
+        ],
+        [
+          "t-i2",
+          "Bài viết này trước tiên sẽ giải thích vì sao điều này đang xảy ra, sau đó đề xuất một số cách khuyến khích mọi người đọc nhiều hơn.",
+          "This essay will first explain why this is happening and then suggest some ways to make people read more.",
+          "This essay will first explain why this is happening and then suggest some ways to encourage people to read more.",
+          "This essay will first explain why this is happening and then propose several ways to encourage people to read more."
+        ],
+        [
+          "t-b1",
+          "Có nhiều lý do khiến người ta đọc sách ít hơn trước đây.",
+          "There are several reasons why people read fewer books than before.",
+          "There are several reasons why people read less than they used to.",
+          "There are several reasons why people now read far less than they used to."
+        ],
+        [
+          "t-b2",
+          "Thứ nhất, các hình thức giải trí khác như video ngắn và trò chơi điện tử hấp dẫn và dễ tiếp cận hơn.",
+          "Firstly, other kinds of entertainment such as short videos and video games are more attractive and easier to access.",
+          "Firstly, other forms of entertainment such as short videos and video games are more attractive and easier to access.",
+          "Firstly, other forms of entertainment, such as short videos and video games, are more appealing and far more accessible."
+        ],
+        [
+          "t-b2e",
+          "Điều này có nghĩa là người ta có thể giải trí ngay lập tức mà không cần phải tập trung lâu.",
+          "This means that people can have fun immediately without needing to concentrate for a long time.",
+          "This means that people can be entertained instantly without having to concentrate for long.",
+          "This means that people can be entertained instantly without having to sustain their concentration."
+        ],
+        [
+          "t-b3",
+          "Ví dụ, người ta có thể xem hàng chục video trên điện thoại chỉ trong khoảng thời gian đọc vài trang sách.",
+          "For example, people can watch dozens of videos on their phones in the time it takes to read a few pages of a book.",
+          "For example, people can watch dozens of videos on their phones in the time it takes to read a few pages of a book.",
+          "For example, people can watch dozens of clips on their phones in the time it would take to read just a few pages of a book."
+        ],
+        [
+          "t-b4",
+          "Thứ hai, nhiều người quá bận rộn với công việc và học tập nên không còn thời gian để đọc sách.",
+          "Secondly, many people are too busy with work and study, so they do not have time to read.",
+          "Secondly, many people are so busy with work and study that they have no time left for reading.",
+          "Secondly, many people are so preoccupied with work and study that they have little time left for reading."
+        ],
+        [
+          "t-b4e",
+          "Nói cách khác, sau một ngày dài, họ thường quá mệt để có thể tập trung vào một cuốn sách.",
+          "In other words, after a long day, they are often too tired to focus on a book.",
+          "In other words, after a long day, they are often too tired to concentrate on a book.",
+          "In other words, by the end of a long day, they are often too exhausted to give a book their full attention."
+        ],
+        [
+          "t-b5",
+          "Kết quả là, đọc sách dần trở thành một thói quen hiếm gặp, đặc biệt là ở giới trẻ.",
+          "As a result, reading books is slowly becoming a rare habit, especially among young people.",
+          "As a result, reading is gradually becoming a rare habit, especially among young people.",
+          "As a result, reading for pleasure is gradually becoming an uncommon habit, particularly among the younger generation."
+        ],
+        [
+          "t-c1",
+          "Đối với câu hỏi thứ hai, tôi tin rằng gia đình và nhà trường có thể giúp mọi người yêu thích việc đọc trở lại.",
+          "Regarding the second question, I believe that families and schools can help people to love reading again.",
+          "Regarding the second question, I believe that families and schools can help people to rediscover a love of reading.",
+          "Regarding the second question, I believe that families and schools have a key role to play in reviving people's love of reading."
+        ],
+        [
+          "t-c2",
+          "Điều này là vì thói quen đọc sách thường được hình thành từ khi còn nhỏ.",
+          "This is because the habit of reading usually starts when people are young.",
+          "This is because a reading habit is usually formed in childhood.",
+          "This is because a lifelong reading habit is usually formed in early childhood."
+        ],
+        [
+          "t-c3",
+          "Chẳng hạn, cha mẹ có thể đọc truyện cho con mỗi tối và nhà trường có thể tổ chức các câu lạc bộ đọc sách.",
+          "For instance, parents can read stories to their children every night, and schools can start book clubs.",
+          "For instance, parents can read stories to their children every evening, and schools can organise book clubs.",
+          "For instance, parents can read bedtime stories to their children every evening, while schools can run book clubs."
+        ],
+        [
+          "t-c4",
+          "Hơn nữa, sách điện tử và sách nói có thể giúp những người bận rộn đọc sách ở bất cứ đâu và bất cứ lúc nào.",
+          "Moreover, e-books and audiobooks can help busy people to read anywhere and at any time.",
+          "Moreover, e-books and audiobooks allow busy people to enjoy books anywhere and at any time.",
+          "Moreover, e-books and audiobooks make it possible for busy people to enjoy books wherever they are and whenever they like."
+        ],
+        [
+          "t-c5",
+          "Vì vậy, nhiều người sẽ đọc sách nhiều hơn mà không cần thay đổi lịch trình hằng ngày của họ.",
+          "Therefore, many people will read more without changing their daily plans.",
+          "Therefore, many people would read more without having to change their daily routines.",
+          "Therefore, many people would read more without having to make major changes to their daily routines."
+        ],
+        [
+          "t-d1",
+          "Tóm lại, người ta đọc sách ít hơn vì có nhiều hình thức giải trí khác và cuộc sống bận rộn, và tôi tin rằng gia đình, nhà trường và công nghệ có thể khuyến khích mọi người đọc nhiều hơn.",
+          "In conclusion, people read less because there are many other kinds of entertainment and their lives are busy, and I believe that families, schools and technology can encourage people to read more.",
+          "In conclusion, people read less because of other forms of entertainment and their busy lifestyles, and I believe that families, schools and technology can encourage them to read more.",
+          "In conclusion, people read less because of competing forms of entertainment and increasingly busy lifestyles, and I believe that families, schools and technology can all help to encourage them to read more."
+        ]
+      ]
+    },
+    {
+      "id": "g-freelance",
+      "type": "twopart",
+      "task": "en-w-ielts-freelance",
+      "title": "Working for yourself",
+      "prompt": "Nowadays, more and more people choose to work for themselves rather than for a company. Why is this happening? Is it a positive or negative development?",
+      "prompt_vi": "Ngày nay, ngày càng nhiều người chọn tự làm chủ thay vì làm cho công ty. Vì sao điều này xảy ra? Đây là xu hướng tích cực hay tiêu cực?",
+      "ideas_vi": [
+        "Câu hỏi 1 — lý do: internet giúp tìm khách và làm từ xa; muốn tự quyết thời gian, không bị sếp giám sát",
+        "Câu hỏi 2 — ý kiến: phần lớn tích cực",
+        "Vì: hài lòng hơn với công việc, có thời gian cho gia đình; tạo nhiều doanh nghiệp nhỏ",
+        "Kết: thu nhập có thể không ổn định nhưng lợi ích lớn hơn"
+      ],
+      "sentences": [
+        [
+          "t-i1",
+          "Trong những năm gần đây, ngày càng nhiều người chọn tự làm chủ thay vì làm việc cho một công ty.",
+          "In recent years, more and more people have chosen to work for themselves instead of working for a company.",
+          "In recent years, an increasing number of people have chosen to be self-employed rather than work for a company.",
+          "In recent years, a growing number of people have opted for self-employment rather than working for a company."
+        ],
+        [
+          "t-i2",
+          "Bài viết này trước tiên sẽ giải thích vì sao điều này đang xảy ra, sau đó lập luận rằng đây phần lớn là một xu hướng tích cực.",
+          "This essay will first explain why this is happening and then argue that it is mostly a positive change.",
+          "This essay will first explain why this is happening and then argue that it is largely a positive development.",
+          "This essay will first explain why this is happening and then argue that it is, on the whole, a positive development."
+        ],
+        [
+          "t-b1",
+          "Có nhiều lý do khiến người ta chọn tự làm chủ.",
+          "There are several reasons why people choose to work for themselves.",
+          "There are several reasons why people decide to become self-employed.",
+          "There are several reasons why people are turning to self-employment."
+        ],
+        [
+          "t-b2",
+          "Thứ nhất, internet đã giúp việc tìm khách hàng và làm việc từ xa trở nên dễ dàng hơn bao giờ hết.",
+          "Firstly, the internet has made it easier than ever to find customers and work remotely.",
+          "Firstly, the internet has made it easier than ever before to find clients and work remotely.",
+          "Firstly, the internet has made it easier than ever to find clients and work remotely."
+        ],
+        [
+          "t-b2e",
+          "Điều này có nghĩa là một người chỉ cần một chiếc máy tính xách tay là có thể bắt đầu kinh doanh.",
+          "This means that a person only needs a laptop to start a business.",
+          "This means that a person needs little more than a laptop to start a business.",
+          "This means that little more than a laptop is needed to launch a business."
+        ],
+        [
+          "t-b3",
+          "Ví dụ, nhiều nhà thiết kế đồ họa ở Việt Nam làm việc cho khách hàng ở châu Âu và Mỹ qua các trang web việc làm tự do.",
+          "For example, many graphic designers in Vietnam work for customers in Europe and America through freelance websites.",
+          "For example, many graphic designers in Vietnam work for clients in Europe and the United States through freelance websites.",
+          "For example, many Vietnamese graphic designers serve clients in Europe and the United States via freelance platforms."
+        ],
+        [
+          "t-b4",
+          "Thứ hai, nhiều người muốn tự quyết định thời gian và công việc của mình.",
+          "Secondly, many people want to decide for themselves when and how they work.",
+          "Secondly, many people want to have control over their own time and work.",
+          "Secondly, many people want greater control over their working hours and the projects they take on."
+        ],
+        [
+          "t-b4e",
+          "Nói cách khác, họ không muốn ngồi văn phòng tám tiếng mỗi ngày với một người quản lý luôn giám sát.",
+          "In other words, they do not want to work eight hours a day in an office with a boss watching them all the time.",
+          "In other words, they do not want to spend eight hours a day in an office with a manager constantly watching them.",
+          "In other words, they no longer wish to spend eight hours a day in an office under the constant supervision of a manager."
+        ],
+        [
+          "t-b5",
+          "Kết quả là, tự làm chủ ngày càng trở nên hấp dẫn, đặc biệt là với người trẻ.",
+          "As a result, working for yourself is becoming more and more attractive, especially to young people.",
+          "As a result, self-employment is becoming increasingly attractive, especially to young people.",
+          "As a result, self-employment is becoming increasingly appealing, particularly to younger workers."
+        ],
+        [
+          "t-c1",
+          "Đối với câu hỏi thứ hai, tôi tin rằng đây phần lớn là một xu hướng tích cực.",
+          "Regarding the second question, I believe that this is mostly a positive change.",
+          "Regarding the second question, I believe that this is largely a positive development.",
+          "Regarding the second question, I believe that this trend is, on balance, a positive one."
+        ],
+        [
+          "t-c2",
+          "Điều này là vì người tự làm chủ thường cảm thấy hài lòng hơn với công việc của mình.",
+          "This is because self-employed people often feel happier with their work.",
+          "This is because self-employed people often feel more satisfied with their work.",
+          "This is because self-employed people generally report higher levels of job satisfaction."
+        ],
+        [
+          "t-c3",
+          "Chẳng hạn, họ có thể chọn những dự án mình yêu thích và dành nhiều thời gian hơn cho gia đình.",
+          "For instance, they can choose the projects they like and spend more time with their families.",
+          "For instance, they can choose projects that interest them and spend more time with their families.",
+          "For instance, they are free to choose projects that interest them and to spend more time with their families."
+        ],
+        [
+          "t-c4",
+          "Hơn nữa, xu hướng này khuyến khích sự sáng tạo và tạo ra nhiều doanh nghiệp nhỏ mới, điều này có lợi cho nền kinh tế.",
+          "Moreover, this trend encourages new ideas and creates many new small businesses, which is good for the economy.",
+          "Moreover, this trend encourages creativity and creates many new small businesses, which helps the economy.",
+          "Moreover, this trend fosters creativity and gives rise to many new small businesses, which benefits the economy."
+        ],
+        [
+          "t-c5",
+          "Vì vậy, mặc dù thu nhập của người tự làm chủ có thể không ổn định, lợi ích của xu hướng này vẫn lớn hơn.",
+          "Therefore, although the income of self-employed people may not be stable, the good sides of this trend are bigger.",
+          "Therefore, although self-employed people may have an unstable income, the benefits of this trend are greater.",
+          "Therefore, although self-employment may bring an irregular income, the benefits of the trend outweigh this drawback."
+        ],
+        [
+          "t-d1",
+          "Tóm lại, nhiều người tự làm chủ vì internet giúp việc này dễ dàng hơn và vì họ muốn được tự do, và tôi tin rằng đây là một xu hướng tích cực vì nó mang lại sự hài lòng và sáng tạo.",
+          "In conclusion, more people work for themselves because the internet makes it easier and because they want freedom, and I believe that this is a positive change because it brings satisfaction and creativity.",
+          "In conclusion, more people are becoming self-employed because the internet makes it easier and because they want freedom, and I believe that this is a positive development because it brings satisfaction and creativity.",
+          "In conclusion, self-employment is growing because the internet has made it easier and people value their independence, and I believe that this is a positive development because it promotes both job satisfaction and creativity."
+        ]
+      ]
+    }
+  ]
+}

@@ -73,7 +73,7 @@ export const SLOT_LABEL: Record<Slot, string> = { morning: 'morning', afternoon:
 export interface Insight {
   id: string;
   kind: 'strength' | 'weakness' | 'info';
-  area: 'listening' | 'sounds' | 'characters' | 'english' | 'vocabulary' | 'word-forms' | 'writing' | 'habits';
+  area: 'listening' | 'sounds' | 'characters' | 'english' | 'vocabulary' | 'word-forms' | 'writing' | 'ielts' | 'habits';
   language?: 'en' | 'zh';
   title: string;
   detail: string;
@@ -84,7 +84,16 @@ export interface Insight {
 }
 
 /** Minimum evidence before saying anything — avoids conclusions from one bad day. */
-export const MIN = { sentences: 10, pattern: 3, reviews: 20, typing: 10, wordForms: 10, habitAnswers: 5 };
+export const MIN = { sentences: 10, pattern: 3, reviews: 20, typing: 10, wordForms: 10, habitAnswers: 5, ielts: 5 };
+
+const IELTS_TYPE_LABEL: Record<string, string> = {
+  tfng: 'True / False / Not Given',
+  ynng: 'Yes / No / Not Given',
+  mcq: 'multiple choice',
+  headings: 'matching headings',
+  matching: 'matching',
+  gap: 'completion (gap fill)',
+};
 
 const pct = (a: number, b: number) => Math.round((a / b) * 100);
 
@@ -108,6 +117,8 @@ export function buildInsights(
     plannedDays: number;
     /** AI writing feedback (P6): the corrections of each reviewed text. */
     writing?: { language: 'en' | 'zh'; corrections: { category: string; original: string; corrected: string }[] }[];
+    /** IELTS practice tests (W2): every marked question, with its skill and question type. */
+    ielts?: { skill: 'reading' | 'listening'; type: string; mark: string }[];
   },
 ): Insight[] {
   const out: Insight[] = [];
@@ -273,6 +284,29 @@ export function buildInsights(
         action: { label: 'Write another text', href: `/writing?lang=${lang}` },
       });
     }
+  }
+
+  /* IELTS practice tests: question types (W2) */
+  for (const skill of ['reading', 'listening'] as const) {
+    const rs = (opts.ielts ?? []).filter((r) => r.skill === skill);
+    const name = skill === 'reading' ? 'Reading' : 'Listening';
+    const types = topGroups(rs, (r) => r.type, () => 1);
+    for (const g of types) {
+      const right = g.items.filter((r) => r.mark === 'correct').length;
+      const p = pct(right, g.n);
+      const label = IELTS_TYPE_LABEL[g.key] ?? g.key;
+      const base = { id: `ielts-${skill}-${g.key}`, area: 'ielts' as const, language: 'en' as const, title: `IELTS ${name}: ${label}`, evidence: `${right} of ${g.n} questions right` };
+      if (g.n >= MIN.ielts && p < 60)
+        out.push({ ...base, kind: 'weakness', detail: `${p}% right — below the level needed for band 6.5. Read the explanation of every wrong answer and find the evidence in the text.`, action: { label: 'Practise', href: '/ielts' } });
+      else if (g.n >= MIN.ielts + 3 && p >= 85) out.push({ ...base, kind: 'strength', detail: `${p}% right.` });
+    }
+    const form = rs.filter((r) => r.type === 'gap' && (r.mark === 'spelling' || r.mark === 'too_long')).length;
+    if (form >= MIN.pattern)
+      out.push({
+        id: `ielts-${skill}-form`, kind: 'weakness', area: 'ielts', language: 'en', title: `IELTS ${name}: spelling and word limits`,
+        detail: 'Answers lost to spelling or to writing more words than allowed — in the exam these are simply wrong.',
+        evidence: `${form} completion answers`, action: { label: 'Practise', href: '/ielts' },
+      });
   }
 
   /* Habits (only with consent) */

@@ -30,10 +30,11 @@ export const SECTIONS: Section[] = [
     to: '/lessons',
     icon: Headphones,
     tone: 'teal',
-    match: ['/lessons', '/my-learning'],
+    match: ['/lessons', '/my-learning', '/ielts'],
     tabs: [
       { to: '/lessons', label: 'Explore' },
       { to: '/my-learning', label: 'My lessons' },
+      { to: '/ielts', label: 'IELTS tests' },
     ],
   },
   {
@@ -50,7 +51,20 @@ export const SECTIONS: Section[] = [
       { to: '/word-forms', label: 'Word forms' },
     ],
   },
-  { id: 'writing', label: 'Writing', hint: 'Write & get feedback', to: '/writing', icon: PenLine, tone: 'rose', match: ['/writing'] },
+  {
+    id: 'writing',
+    label: 'Writing',
+    hint: 'Write & get feedback',
+    to: '/writing',
+    icon: PenLine,
+    tone: 'rose',
+    match: ['/writing'],
+    tabs: [
+      { to: '/writing', label: 'Prompts' },
+      { to: '/writing/guided', label: 'IELTS frames' },
+      { to: '/writing/mistakes', label: 'My mistakes' },
+    ],
+  },
   {
     id: 'progress',
     label: 'Progress',
@@ -72,5 +86,5 @@ export function sectionFor(pathname: string): Section | undefined {
 }
 
 /** Pages where the learner is doing one task: no menu, nothing else competing for attention. */
-const FOCUS_ROUTES = ['/lessons/:lessonId/practice', '/level-test/:testId', '/writing/new/:taskId', '/vocabulary/practice'];
+const FOCUS_ROUTES = ['/lessons/:lessonId/practice', '/level-test/:testId', '/writing/new/:taskId', '/writing/guided/frame/:typeId', '/writing/guided/:promptId', '/ielts/:testId', '/vocabulary/practice'];
 export const isFocusRoute = (pathname: string) => FOCUS_ROUTES.some((p) => matchPath(p, pathname));

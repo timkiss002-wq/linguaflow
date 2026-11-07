@@ -1,0 +1,206 @@
+{
+  "_note": "Original IELTS-style Listening test written for LinguaFlow (not taken from any published test). The audio is read by the browser's text-to-speech: script = [speaker, line]; speakers say which kind of voice to use. evidence must be an exact quote from the script (checked by src/lib/ielts/tests.test.ts).",
+  "id": "listening-1",
+  "skill": "listening",
+  "title": "Listening — Practice test 1",
+  "minutes": 30,
+  "parts": [
+    {
+      "id": "l1-p1",
+      "title": "Part 1",
+      "heading": "Booking a kayaking course",
+      "context": "A woman is phoning a kayak centre to book a course.",
+      "speakers": { "M": { "name": "Receptionist", "voice": "male" }, "W": { "name": "Anna", "voice": "female" } },
+      "script": [
+        ["M", "Good morning, Riverside Kayak Centre. How can I help?"],
+        ["W", "Hi. I'm calling about your beginners' kayaking course. I saw that you run it on weekday evenings."],
+        ["M", "That's right. We have groups on Tuesday and Thursday evenings, from six thirty to eight thirty."],
+        ["W", "Is there still space on Tuesdays?"],
+        ["M", "I'm afraid the Tuesday group is full until July. But there are a few places left on Thursday."],
+        ["W", "OK, Thursday is fine."],
+        ["M", "The next Thursday course starts on the seventh of May. Oh, sorry, no, that group has already been filled. The one after that begins on the fourteenth of May and runs for six weeks."],
+        ["W", "Great. And how much does it cost?"],
+        ["M", "The full price is ninety-five pounds, but if you book more than two weeks in advance, it's eighty-five, so you'd get the lower price."],
+        ["W", "Perfect."],
+        ["M", "Can I take your name, please?"],
+        ["W", "Yes, it's Anna Kowalski. That's K, O, W, A, L, S, K, I."],
+        ["M", "Thank you. And a phone number?"],
+        ["W", "It's oh seven nine four six, three eight two, six one five."],
+        ["M", "Lovely. Now, you don't need any equipment. We provide kayaks, paddles and life jackets. But you should bring a towel, and you'll need a pair of old trainers. Please don't wear sandals, because they tend to come off in the water."],
+        ["W", "Right, a towel and trainers."],
+        ["M", "Do you have any medical conditions we should know about?"],
+        ["W", "Well, I have mild asthma, but it's well controlled. I always carry an inhaler."],
+        ["M", "That's fine. Just let the instructor know on the first evening."],
+        ["W", "And where exactly do we meet?"],
+        ["M", "Not at the boathouse itself, because it's quite crowded in the evenings. Please wait in the café next to the boathouse, and the instructor will collect you from there."],
+        ["W", "And is there parking?"],
+        ["M", "There's a small car park by the river, but it's expensive. The car park on Mill Road is free after six o'clock. That's Mill, M, I, L, L."],
+        ["W", "Great."],
+        ["M", "Just one last question. How did you hear about us? Was it our website?"],
+        ["W", "Actually, no. A friend mentioned you once, but I first saw your advert in the local newspaper."],
+        ["M", "That's helpful to know. Thanks, Anna. I'll send you a confirmation by text message."]
+      ],
+      "groups": [
+        {
+          "type": "gap",
+          "maxWords": 1,
+          "allowNumber": true,
+          "instructions": "Complete the form below. Write ONE WORD AND/OR A NUMBER for each answer.",
+          "title": "Riverside Kayak Centre — Booking form",
+          "questions": [
+            { "n": 1, "text": "Course day: ___ evenings", "answer": ["Thursday", "Thursdays"], "evidence": "But there are a few places left on Thursday.", "explain_vi": "Nhóm thứ Ba đã kín đến tháng Bảy, chỉ còn chỗ thứ Năm → Thursday. Bẫy: Tuesday được nhắc trước." },
+            { "n": 2, "text": "Start date: ___ May", "answer": ["14", "14th", "fourteenth"], "evidence": "The one after that begins on the fourteenth of May", "explain_vi": "Ngày 7/5 đã kín (người nói tự sửa 'Oh, sorry, no'), khóa sau bắt đầu 14/5 → 14. Chú ý những câu tự sửa lại." },
+            { "n": 3, "text": "Cost per person: £___", "answer": ["85", "eighty-five"], "evidence": "if you book more than two weeks in advance, it's eighty-five, so you'd get the lower price", "explain_vi": "Giá gốc 95 bảng, nhưng đặt trước hơn 2 tuần là 85 và chị ấy được giá thấp → 85." },
+            { "n": 4, "text": "Name: Anna ___", "answer": ["Kowalski"], "evidence": "That's K, O, W, A, L, S, K, I.", "explain_vi": "Tên được đánh vần từng chữ: K-O-W-A-L-S-K-I. Phần đánh vần trong Part 1 phải viết đúng chính tả từng chữ." },
+            { "n": 5, "text": "Phone number: 07946 ___", "answer": ["382615", "382 615"], "evidence": "three eight two, six one five", "explain_vi": "Số đọc theo nhóm: three eight two, six one five → 382615." },
+            { "n": 6, "text": "Bring: a towel and old ___", "answer": ["trainers"], "evidence": "you'll need a pair of old trainers", "explain_vi": "Cần mang khăn và đôi giày thể thao cũ (trainers). Bẫy: sandals bị cấm." },
+            { "n": 7, "text": "Medical condition: mild ___", "answer": ["asthma"], "evidence": "I have mild asthma", "explain_vi": "'mild asthma' → asthma (hen suyễn)." },
+            { "n": 8, "text": "Meeting place: the ___ next to the boathouse", "answer": ["café", "cafe"], "evidence": "Please wait in the café next to the boathouse", "explain_vi": "Không gặp ở boathouse mà ở quán café bên cạnh → café / cafe. Bẫy: boathouse được nhắc trước." },
+            { "n": 9, "text": "Free parking after 6 pm: ___ Road", "answer": ["Mill"], "evidence": "The car park on Mill Road is free after six o'clock.", "explain_vi": "Bãi xe cạnh sông đắt; bãi trên Mill Road miễn phí sau 6 giờ → Mill (được đánh vần M-I-L-L)." },
+            { "n": 10, "text": "Found out about the centre from an advert in the local ___", "answer": ["newspaper", "paper"], "evidence": "I first saw your advert in the local newspaper", "explain_vi": "Không phải website, bạn bè chỉ nhắc qua; lần đầu thấy quảng cáo trên báo địa phương → newspaper." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-p2",
+      "title": "Part 2",
+      "heading": "The reopened Harbour Museum",
+      "context": "A radio presenter is talking about a museum that has just reopened.",
+      "speakers": { "S": { "name": "Presenter", "voice": "female" } },
+      "script": [
+        ["S", "Good afternoon, and welcome to What's On. Today I'm going to tell you about the newly reopened Harbour Museum, which has just finished an eighteen-month renovation."],
+        ["S", "The building itself is more than a hundred and fifty years old. It was originally a warehouse for storing tea. The main aim of the renovation was not to make it bigger, but to make it easier for visitors to move around. There are now lifts to every floor, and the entrance has been moved from the narrow side street to the main square."],
+        ["S", "Entry to the permanent collection is still free, as it has always been. However, there is now a charge of six pounds for the special exhibitions, which change every three months. Children under twelve can visit these for free, and on the first Monday of every month, entry is free for everyone."],
+        ["S", "The museum is open from ten until five every day except Tuesday, when it is closed for cleaning and maintenance. During the summer school holidays, it will also stay open until eight on Fridays."],
+        ["S", "Now, something that has already proved very popular is the new audio guide. Rather than renting a device at the desk, visitors simply download a free app to their own phones. The guide is available in eight languages, and the commentary was recorded by former dock workers and their families, which gives it a very personal feel."],
+        ["S", "If you're planning to eat there, the rooftop café has wonderful views of the harbour, but it's quite small, so I'd recommend booking a table online, particularly at weekends. There's also a picnic area in the garden if you'd prefer to bring your own food."],
+        ["S", "Let me give you a quick guide to the layout. On the ground floor, you'll find the shop and the ticket desk, as well as the large model of the harbour as it looked in 1900, which children love."],
+        ["S", "The first floor is home to the permanent collection on the history of the port, including the ship's figureheads that were on display before the renovation."],
+        ["S", "The temporary exhibitions are on the second floor. The current one is about the history of tea, appropriately enough. Also on the second floor is a new interactive area where you can try loading cargo onto a ship using a crane simulator."],
+        ["S", "And finally, if you go back down to the first floor, you'll find the family room, where younger visitors can dress up in sailors' costumes."]
+      ],
+      "groups": [
+        {
+          "type": "mcq",
+          "instructions": "Choose the correct letter, A, B or C.",
+          "questions": [
+            { "n": 11, "text": "What was the main aim of the renovation?", "options": [["A", "to make the museum larger"], ["B", "to make it easier for visitors to move around"], ["C", "to restore the original tea warehouse"]], "answer": "B", "evidence": "The main aim of the renovation was not to make it bigger, but to make it easier for visitors to move around.", "explain_vi": "'not to make it bigger, but to make it easier…' → B. A là bẫy (bị phủ định bằng 'not')." },
+            { "n": 12, "text": "Which statement about tickets is correct?", "options": [["A", "There is now a fee for the permanent collection."], ["B", "Children under twelve can see the special exhibitions free."], ["C", "Everyone can visit free every Monday."]], "answer": "B", "evidence": "Children under twelve can visit these for free", "explain_vi": "Triển lãm đặc biệt 6 bảng, trẻ dưới 12 tuổi miễn phí → B. C sai vì chỉ thứ Hai ĐẦU TIÊN của tháng." },
+            { "n": 13, "text": "On which day is the museum closed?", "options": [["A", "Monday"], ["B", "Tuesday"], ["C", "Friday"]], "answer": "B", "evidence": "every day except Tuesday, when it is closed for cleaning and maintenance", "explain_vi": "'every day except Tuesday' → đóng cửa thứ Ba → B." },
+            { "n": 14, "text": "What is special about the audio guide?", "options": [["A", "It must be rented at the ticket desk."], ["B", "It was recorded by people connected with the docks."], ["C", "It is available in five languages."]], "answer": "B", "evidence": "the commentary was recorded by former dock workers and their families", "explain_vi": "Lời thuyết minh do cựu công nhân bến cảng và gia đình họ thu âm → B. Không thuê máy (A sai), có 8 ngôn ngữ (C sai)." },
+            { "n": 15, "text": "What does the speaker recommend?", "options": [["A", "booking a table at the café"], ["B", "bringing a picnic"], ["C", "visiting the café on weekdays"]], "answer": "A", "evidence": "I'd recommend booking a table online, particularly at weekends", "explain_vi": "'I'd recommend booking a table online' → A. Khu picnic chỉ là lựa chọn khác, không phải lời khuyên." }
+          ]
+        },
+        {
+          "type": "matching",
+          "instructions": "Where in the museum can visitors find each of the following? Choose A, B or C. You may use any letter more than once.",
+          "options": [["A", "ground floor"], ["B", "first floor"], ["C", "second floor"]],
+          "questions": [
+            { "n": 16, "text": "a model of the harbour", "answer": "A", "evidence": "the large model of the harbour as it looked in 1900", "explain_vi": "Mô hình bến cảng ở tầng trệt (ground floor) cùng cửa hàng và quầy vé → A." },
+            { "n": 17, "text": "ship's figureheads", "answer": "B", "evidence": "including the ship's figureheads that were on display before the renovation", "explain_vi": "Bộ sưu tập thường trực ở tầng một, gồm tượng mũi tàu → B." },
+            { "n": 18, "text": "an exhibition about tea", "answer": "C", "evidence": "The current one is about the history of tea", "explain_vi": "Triển lãm tạm thời (hiện về lịch sử trà) ở tầng hai → C." },
+            { "n": 19, "text": "a crane simulator", "answer": "C", "evidence": "Also on the second floor is a new interactive area", "explain_vi": "'Also on the second floor' — khu tương tác có mô phỏng cần cẩu → C." },
+            { "n": 20, "text": "sailors' costumes", "answer": "B", "evidence": "if you go back down to the first floor, you'll find the family room", "explain_vi": "'go back down to the first floor' — phòng gia đình có trang phục thủy thủ → B. Bẫy: ngay trước đó đang nói tầng hai." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-p3",
+      "title": "Part 3",
+      "heading": "Planning a project on food waste",
+      "context": "Two students, Leo and Mia, are planning a research project.",
+      "speakers": { "L": { "name": "Leo", "voice": "male" }, "M": { "name": "Mia", "voice": "female" } },
+      "script": [
+        ["L", "So, Mia, we need to decide on the focus of our project on food waste. I was thinking we could look at supermarkets."],
+        ["M", "Supermarkets have been studied a lot, though. What about the university canteen? We could actually collect our own data there."],
+        ["L", "That's true, and the canteen manager has already said she'd be happy to help. OK, let's go with the canteen."],
+        ["M", "How should we collect the data? I thought about a questionnaire for students."],
+        ["L", "People don't always report their behaviour accurately, especially about waste. I think it would be better to weigh the food left on plates."],
+        ["M", "Hmm, that's more work, but you're right that it would be more reliable. Let's do that, and maybe add a few short interviews later if we have time."],
+        ["L", "When should we collect it? Lunchtime is busiest."],
+        ["M", "Yes, but the menu at lunch changes every day, so the results would be hard to compare. In the evening there's a fixed menu."],
+        ["L", "Good point. Evenings, then, Monday to Thursday, for two weeks."],
+        ["M", "What surprised me in the reading was how much of the waste comes from bread."],
+        ["L", "Really? I'd have guessed vegetables."],
+        ["M", "Vegetables are second, but in most studies of canteens, bread is the largest single category, because it's often served free and people take more than they need."],
+        ["L", "What do you think the main challenge will be?"],
+        ["M", "Honestly, I'm not worried about the weighing. It's getting permission to put up a sign about the project. The canteen manager has to ask the catering company first, and that could take weeks."],
+        ["L", "Let's email her today, then. Now, let's go through the reading list. The government report on household waste?"],
+        ["M", "It's very detailed, but it's about homes, not canteens. It's useful for the introduction, though, to give the national picture."],
+        ["L", "Then there's the article by Chen and Ross."],
+        ["M", "That's the one about university canteens in Canada. Their method is almost the same as ours, so we should refer to it throughout."],
+        ["L", "The website of the Zero Waste Campaign?"],
+        ["M", "It's not academic, and some of the figures aren't referenced. I'd leave it out."],
+        ["L", "What about the book on consumer psychology?"],
+        ["M", "Only one chapter is relevant, the one about portion sizes. We could mention it briefly when we discuss why people take too much."],
+        ["L", "And the survey by the student union from last year?"],
+        ["M", "It asked students about their eating habits on campus, which is exactly our population. Let's use it as one of our key sources."]
+      ],
+      "groups": [
+        {
+          "type": "mcq",
+          "instructions": "Choose the correct letter, A, B or C.",
+          "questions": [
+            { "n": 21, "text": "What will the project focus on?", "options": [["A", "supermarkets"], ["B", "the university canteen"], ["C", "students' homes"]], "answer": "B", "evidence": "OK, let's go with the canteen.", "explain_vi": "Leo gợi ý siêu thị nhưng Mia nói đã được nghiên cứu nhiều; hai bạn chốt căng tin trường → B." },
+            { "n": 22, "text": "How will they collect their data?", "options": [["A", "by giving students a questionnaire"], ["B", "by weighing food left on plates"], ["C", "by interviewing students"]], "answer": "B", "evidence": "I think it would be better to weigh the food left on plates.", "explain_vi": "Bảng hỏi bị loại vì người ta khai không chính xác; chọn cân đồ ăn thừa → B. Phỏng vấn chỉ 'maybe… if we have time'." },
+            { "n": 23, "text": "When will they collect the data?", "options": [["A", "at lunchtime"], ["B", "in the evenings"], ["C", "at weekends"]], "answer": "B", "evidence": "Evenings, then, Monday to Thursday, for two weeks.", "explain_vi": "Bữa trưa thực đơn thay đổi nên khó so sánh; buổi tối thực đơn cố định → B." },
+            { "n": 24, "text": "According to Mia, what is the largest category of canteen waste?", "options": [["A", "vegetables"], ["B", "meat"], ["C", "bread"]], "answer": "C", "evidence": "bread is the largest single category", "explain_vi": "Rau đứng thứ hai, bánh mì nhiều nhất vì thường được phát miễn phí → C." },
+            { "n": 25, "text": "What does Mia think will be the main difficulty?", "options": [["A", "weighing the food"], ["B", "getting permission for a sign"], ["C", "analysing the data"]], "answer": "B", "evidence": "It's getting permission to put up a sign about the project.", "explain_vi": "'I'm not worried about the weighing' — cái khó là xin phép treo biển → B." }
+          ]
+        },
+        {
+          "type": "matching",
+          "instructions": "What do the students decide to do with each source? Choose A, B or C. You may use any letter more than once.",
+          "options": [["A", "use it as a main source"], ["B", "use it for background only"], ["C", "not use it"]],
+          "questions": [
+            { "n": 26, "text": "the government report on household waste", "answer": "B", "evidence": "It's useful for the introduction, though, to give the national picture.", "explain_vi": "Báo cáo về hộ gia đình, không phải căng tin — chỉ dùng cho phần mở đầu → B (nền)." },
+            { "n": 27, "text": "the article by Chen and Ross", "answer": "A", "evidence": "so we should refer to it throughout", "explain_vi": "Phương pháp gần giống, 'refer to it throughout' → A (nguồn chính)." },
+            { "n": 28, "text": "the Zero Waste Campaign website", "answer": "C", "evidence": "I'd leave it out.", "explain_vi": "Không mang tính học thuật, số liệu không có nguồn → 'leave it out' → C." },
+            { "n": 29, "text": "the book on consumer psychology", "answer": "B", "evidence": "We could mention it briefly when we discuss why people take too much.", "explain_vi": "Chỉ một chương liên quan, nhắc qua → B." },
+            { "n": 30, "text": "the student union survey", "answer": "A", "evidence": "Let's use it as one of our key sources.", "explain_vi": "'one of our key sources' → A." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-p4",
+      "title": "Part 4",
+      "heading": "A short history of glass",
+      "context": "A lecturer is giving a talk about the history of glass.",
+      "speakers": { "T": { "name": "Lecturer", "voice": "male" } },
+      "script": [
+        ["T", "Today I'd like to talk about glass, a material that we take for granted but which has a remarkably long history."],
+        ["T", "Natural glass, such as obsidian, which is formed when volcanic lava cools quickly, was used by early humans to make sharp tools and weapons."],
+        ["T", "Manufactured glass first appears around four and a half thousand years ago in Mesopotamia, in what is now Iraq. The earliest objects were not windows or containers but beads, which were valued as highly as precious stones."],
+        ["T", "For many centuries, glass vessels were made by winding threads of hot glass around a core made of clay and sand. It was a slow process, and it made glass a luxury."],
+        ["T", "This changed dramatically in the first century BC, when craftsmen in the eastern Mediterranean discovered glassblowing. By blowing air through a tube into a ball of molten glass, a worker could produce a vessel in minutes rather than hours. As a result, glass became cheap enough for ordinary households, and the Romans used it for storing everything from oil to medicine."],
+        ["T", "The Romans were also the first to use glass in windows, although Roman window glass was thick and not very clear, so it let in light but did not give a clear view."],
+        ["T", "In the Middle Ages, the most impressive use of glass was in the stained-glass windows of cathedrals. Colour was added by mixing metal oxides into the glass. Cobalt, for example, produced a deep blue."],
+        ["T", "Venice became the centre of European glassmaking in the thirteenth century. In 1291, the city's glassmakers were ordered to move to the island of Murano. The official reason was the danger of fire, but it also helped the city to protect its trade secrets, since glassmakers were not allowed to leave."],
+        ["T", "The next great step came in the 1950s, when the British engineer Alastair Pilkington developed the float glass process, in which molten glass is poured onto a bed of liquid tin. The glass spreads out to form a perfectly flat surface without the need for grinding or polishing. Today, almost all the flat glass in the world, from windows to smartphone screens, is made this way."]
+      ],
+      "groups": [
+        {
+          "type": "gap",
+          "maxWords": 1,
+          "instructions": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+          "title": "The history of glass",
+          "questions": [
+            { "n": 31, "text": "Early humans made tools from natural glass, for example ___.", "answer": ["obsidian"], "evidence": "Natural glass, such as obsidian", "explain_vi": "'such as obsidian' → obsidian (đá vỏ chai từ dung nham nguội nhanh)." },
+            { "n": 32, "text": "The first manufactured glass objects were ___.", "answer": ["beads"], "evidence": "The earliest objects were not windows or containers but beads", "explain_vi": "'not windows or containers but beads' → beads (hạt cườm). Bẫy: windows, containers bị phủ định." },
+            { "n": 33, "text": "In the first century BC, the discovery of ___ made glass much cheaper.", "answer": ["glassblowing", "glass-blowing"], "evidence": "craftsmen in the eastern Mediterranean discovered glassblowing", "explain_vi": "Thổi thủy tinh giúp làm bình trong vài phút → glassblowing." },
+            { "n": 34, "text": "The Romans stored oil and ___ in glass containers.", "answer": ["medicine", "medicines"], "evidence": "storing everything from oil to medicine", "explain_vi": "'from oil to medicine' → medicine." },
+            { "n": 35, "text": "Roman window glass let in ___ but was not clear.", "answer": ["light"], "evidence": "it let in light but did not give a clear view", "explain_vi": "'let in light but did not give a clear view' → light." },
+            { "n": 36, "text": "Metal oxides were mixed into medieval glass to add ___.", "answer": ["colour", "color"], "evidence": "Colour was added by mixing metal oxides into the glass.", "explain_vi": "'Colour was added by mixing metal oxides' → colour (chấp nhận cả color)." },
+            { "n": 37, "text": "___ was used to make a deep blue.", "answer": ["cobalt"], "evidence": "Cobalt, for example, produced a deep blue.", "explain_vi": "'Cobalt … produced a deep blue' → cobalt." },
+            { "n": 38, "text": "Venetian glassmakers moved to Murano officially because of the risk of ___.", "answer": ["fire", "fires"], "evidence": "The official reason was the danger of fire", "explain_vi": "Lý do chính thức là nguy cơ hỏa hoạn → fire. Lý do thực sự (giữ bí mật nghề) không phải đáp án." },
+            { "n": 39, "text": "In the float process, molten glass is poured onto liquid ___.", "answer": ["tin"], "evidence": "molten glass is poured onto a bed of liquid tin", "explain_vi": "'a bed of liquid tin' → tin (thiếc)." },
+            { "n": 40, "text": "Float glass is flat without any grinding or ___.", "answer": ["polishing"], "evidence": "without the need for grinding or polishing", "explain_vi": "'without the need for grinding or polishing' → polishing." }
+          ]
+        }
+      ]
+    }
+  ]
+}

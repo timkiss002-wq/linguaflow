@@ -1,5 +1,5 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
@@ -14,7 +14,8 @@ import { CATEGORIES, type Feedback } from '../../../supabase/functions/_shared/w
 import { FEEDBACK_ERRORS, FeedbackError, useRequestFeedback, useWritingFeedback } from './feedback';
 
 /** "AI feedback" card on a writing result: asks for consent once, then calls the Edge Function. */
-export function AiFeedback({ submissionId, language, level }: { submissionId: string; language: 'en' | 'zh'; level: number }) {
+/** autoStart: ask the AI straight away (after an exam), if the learner has already agreed to AI feedback. */
+export function AiFeedback({ submissionId, language, level, autoStart = false }: { submissionId: string; language: 'en' | 'zh'; level: number; autoStart?: boolean }) {
   const stored = useWritingFeedback(submissionId);
   const request = useRequestFeedback(submissionId);
   const profile = useProfile();
@@ -34,6 +35,12 @@ export function AiFeedback({ submissionId, language, level }: { submissionId: st
         },
       },
     );
+  const auto = useRef(false);
+  useEffect(() => {
+    if (!autoStart || auto.current || stored.isPending || stored.data || !profile.data || !settings.aiFeedback) return;
+    auto.current = true;
+    request.mutate(level);
+  }, [autoStart, stored.isPending, stored.data, profile.data, settings.aiFeedback, request, level]);
   const err = request.error instanceof FeedbackError ? request.error : request.error ? new FeedbackError('ai_failed') : null;
 
   if (stored.isPending) return <Skeleton className="h-40" />;

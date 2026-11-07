@@ -4,6 +4,7 @@
  */
 import { EN_FUNCTION_WORDS } from '@/lib/personal/insights';
 import { splitWords } from '@/lib/vocab/words';
+import type { GuidedRecord } from './guided';
 
 export type Lang = 'en' | 'zh';
 export type TaskKind = 'sentences' | 'paragraph' | 'letter' | 'essay';
@@ -37,6 +38,10 @@ export interface Metrics {
   issues: Issue[];
   /** words or characters per minute, when the time is known */
   speed?: number;
+  /** set when the text was written in the guided IELTS mode (sentence by sentence from a frame) */
+  guided?: GuidedRecord;
+  /** set when the text was written under exam conditions (timed, no help) */
+  exam?: { minutes: number; timeUp: boolean };
 }
 
 /* ───────────── linking words ───────────── */

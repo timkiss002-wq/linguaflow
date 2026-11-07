@@ -27,6 +27,11 @@ const WritingPage = lazy(() => import('@/pages/WritingPage'));
 const AdminPage = lazy(() => import('@/pages/AdminPage'));
 const WritingEditorPage = lazy(() => import('@/pages/WritingEditorPage'));
 const WritingResultPage = lazy(() => import('@/pages/WritingResultPage'));
+const GuidedWritingPage = lazy(() => import('@/pages/GuidedWritingPage'));
+const WritingMistakesPage = lazy(() => import('@/pages/WritingMistakesPage'));
+const GuidedPracticePage = lazy(() => import('@/pages/GuidedPracticePage'));
+const IeltsTestsPage = lazy(() => import('@/pages/IeltsTestsPage'));
+const IeltsTestPage = lazy(() => import('@/pages/IeltsTestPage'));
 const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'));
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
@@ -56,6 +61,8 @@ export const router = createBrowserRouter([
           { path: '/lessons/:lessonId', element: page(<LessonDetailPage />) },
           { path: '/lessons/:lessonId/practice', element: page(<DictationPage />) },
           { path: '/my-learning', element: page(<MyLearningPage />) },
+          { path: '/ielts', element: page(<IeltsTestsPage />) },
+          { path: '/ielts/:testId', element: page(<IeltsTestPage />) },
           { path: '/vocabulary', element: page(<VocabularyPage />) },
           { path: '/vocabulary/practice', element: page(<VocabularyPracticePage />) },
           { path: '/word-forms', element: page(<WordFormsPage />) },
@@ -63,6 +70,10 @@ export const router = createBrowserRouter([
           { path: '/statistics', element: page(<StatisticsPage />) },
           { path: '/writing', element: page(<WritingPage />) },
           { path: '/writing/new/:taskId', element: page(<WritingEditorPage />) },
+          { path: '/writing/guided', element: page(<GuidedWritingPage />) },
+          { path: '/writing/mistakes', element: page(<WritingMistakesPage />) },
+          { path: '/writing/guided/frame/:typeId', element: page(<GuidedPracticePage />) },
+          { path: '/writing/guided/:promptId', element: page(<GuidedPracticePage />) },
           { path: '/writing/:submissionId', element: page(<WritingResultPage />) },
           { path: '/level-test', element: page(<LevelTestPage />) },
           { path: '/level-test/:testId', element: page(<AssessmentPage />) },

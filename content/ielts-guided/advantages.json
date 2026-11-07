@@ -1,0 +1,370 @@
+{
+  "prompts": [
+    {
+      "id": "g-wfh",
+      "type": "advantages",
+      "task": "en-w-ielts-work",
+      "title": "Working from home",
+      "prompt": "More and more people work from home. Do the advantages of this trend outweigh the disadvantages?",
+      "prompt_vi": "Ngày càng nhiều người làm việc tại nhà. Lợi ích của xu hướng này có lớn hơn bất lợi không?",
+      "ideas_vi": [
+        "Ý kiến: lợi ích lớn hơn",
+        "Bất lợi: cô lập với đồng nghiệp → khắc phục bằng họp online, gặp mặt hằng tháng",
+        "Lợi ích 1: không phải đi lại → tiết kiệm thời gian, tiền",
+        "Lợi ích 2: cân bằng công việc – gia đình → ít căng thẳng, làm việc hiệu quả",
+        "Đề xuất: công ty cho làm tại nhà vài ngày mỗi tuần"
+      ],
+      "sentences": [
+        [
+          "v-i1",
+          "Ngày nay, ngày càng nhiều nhân viên làm việc tại nhà thay vì đến văn phòng mỗi ngày.",
+          "Nowadays, more and more employees work from home instead of going to the office every day.",
+          "Nowadays, an increasing number of employees work from home rather than travelling to the office every day.",
+          "Nowadays, a growing proportion of the workforce works remotely rather than commuting to an office every day."
+        ],
+        [
+          "v-i2",
+          "Mặc dù xu hướng này có một số hạn chế, tôi tin rằng lợi ích lớn hơn bất lợi.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages."
+        ],
+        [
+          "v-b1",
+          "Một mặt, bất lợi chính của việc làm việc tại nhà là nhân viên có thể cảm thấy cô lập, xa cách với đồng nghiệp.",
+          "On the one hand, the main disadvantage of working from home is that employees may feel alone and far from their colleagues.",
+          "On the one hand, the main disadvantage of working from home is that employees may feel isolated from their colleagues.",
+          "On the one hand, the main disadvantage of remote working is that employees may feel cut off from their colleagues."
+        ],
+        [
+          "v-b2",
+          "Điều này là vì họ không còn những cuộc trò chuyện hằng ngày ở văn phòng, vốn giúp xây dựng tinh thần đồng đội.",
+          "This is because they no longer have the daily chats in the office which help to build team spirit.",
+          "This is because they miss out on the everyday conversations in the office that help to build team spirit.",
+          "This is because they miss out on the informal everyday interactions in the office that foster a strong team spirit."
+        ],
+        [
+          "v-b3",
+          "Ví dụ, một nhân viên mới làm việc tại nhà có thể mất nhiều thời gian hơn để hiểu công việc và làm quen với đồng nghiệp.",
+          "For example, a new employee who works at home may need more time to understand the job and get to know the other workers.",
+          "For example, a new employee working from home may take longer to understand the job and get to know their colleagues.",
+          "For example, a newly recruited employee working remotely may take considerably longer to learn the job and build relationships with colleagues."
+        ],
+        [
+          "v-b5",
+          "Do đó, họ có thể cảm thấy ít động lực hơn và kém gắn bó với công ty.",
+          "Consequently, they may feel less motivated and less connected to the company.",
+          "Consequently, they may feel less motivated and less attached to the company.",
+          "Consequently, they may become less motivated and feel a weaker sense of belonging to the organisation."
+        ],
+        [
+          "v-b4",
+          "Tuy nhiên, vấn đề này có thể được giải quyết nếu các công ty tổ chức họp trực tuyến thường xuyên và gặp mặt trực tiếp hằng tháng.",
+          "However, this problem can be solved if companies have regular online meetings and meet in person every month.",
+          "However, this problem can be solved if companies organise regular online meetings and monthly face-to-face gatherings.",
+          "However, this problem can be solved if companies hold regular video meetings and arrange monthly face-to-face gatherings."
+        ],
+        [
+          "v-c1",
+          "Mặt khác, những lợi ích của việc làm việc tại nhà quan trọng hơn nhiều.",
+          "On the other hand, the benefits of working from home are much more significant.",
+          "On the other hand, the benefits of working from home are much more significant.",
+          "On the other hand, the benefits of remote working are much more significant."
+        ],
+        [
+          "v-c2",
+          "Thứ nhất, nhân viên tiết kiệm được thời gian và tiền bạc vì không phải đi làm mỗi ngày.",
+          "Firstly, employees save time and money because they do not have to travel to work every day.",
+          "Firstly, employees save both time and money because they no longer have to commute every day.",
+          "Firstly, employees save a considerable amount of time and money as they no longer need to commute on a daily basis."
+        ],
+        [
+          "v-c3",
+          "Chẳng hạn, ở những thành phố đông đúc như Hà Nội, nhiều người mất hơn một tiếng mỗi ngày để đi làm và về nhà.",
+          "For instance, in busy cities like Hanoi, many people spend more than one hour every day going to work and coming home.",
+          "For instance, in crowded cities such as Hanoi, many people spend over an hour a day travelling to and from work.",
+          "For instance, in congested cities such as Hanoi, many people spend more than an hour every day travelling to and from work."
+        ],
+        [
+          "v-c4",
+          "Thứ hai, làm việc tại nhà giúp mọi người cân bằng tốt hơn giữa công việc và cuộc sống gia đình.",
+          "Secondly, working from home helps people to balance their work and family life better.",
+          "Secondly, working from home allows people to achieve a better balance between work and family life.",
+          "Secondly, remote working enables people to strike a healthier balance between their professional and family lives."
+        ],
+        [
+          "v-c6",
+          "Điều này có nghĩa là cha mẹ có thể dành nhiều thời gian hơn cho con cái, ví dụ như đưa đón con đi học.",
+          "This means that parents can spend more time with their children, for example taking them to school and picking them up.",
+          "This means that parents can spend more time with their children, for example by taking them to and from school.",
+          "This means that parents are able to spend more time with their children, such as by taking them to and from school."
+        ],
+        [
+          "v-c5",
+          "Kết quả là, nhân viên cảm thấy ít căng thẳng hơn và thường làm việc hiệu quả hơn, điều này cũng có lợi cho công ty.",
+          "As a result, employees feel less stressed and often work better, which is also good for their companies.",
+          "As a result, employees feel less stressed and are often more productive, which also benefits their companies.",
+          "As a result, employees experience less stress and often become more productive, which ultimately benefits their employers as well."
+        ],
+        [
+          "v-d1",
+          "Tóm lại, mặc dù làm việc tại nhà có thể gây ra một số vấn đề, tôi tin rằng lợi ích của nó lớn hơn nhiều.",
+          "In conclusion, although working from home may cause some problems, I believe that its advantages are far greater.",
+          "In conclusion, although working from home may cause some problems, I believe that its advantages are far greater.",
+          "In conclusion, although remote working may cause some problems, I believe that its advantages are far greater."
+        ],
+        [
+          "v-d2",
+          "Vì lý do này, các công ty nên cho phép nhân viên làm việc tại nhà ít nhất vài ngày mỗi tuần.",
+          "For this reason, companies should let their staff work from home for at least a few days a week.",
+          "For this reason, companies should allow their employees to work from home for at least a few days a week.",
+          "For this reason, employers should give their staff the option of working from home for at least part of the week."
+        ]
+      ]
+    },
+    {
+      "id": "g-tourism",
+      "type": "advantages",
+      "task": "en-w-ielts-tourism",
+      "title": "International tourism",
+      "prompt": "International tourism has grown rapidly in recent decades. Do the advantages of this development outweigh the disadvantages?",
+      "prompt_vi": "Du lịch quốc tế đã phát triển nhanh chóng trong những thập kỷ gần đây. Lợi ích của sự phát triển này có lớn hơn bất lợi không?",
+      "ideas_vi": [
+        "Ý kiến: lợi ích lớn hơn",
+        "Bất lợi: hại môi trường (rác, nước, giao thông) → khắc phục bằng giới hạn du khách, xử lý rác",
+        "Lợi ích 1: việc làm, thu nhập cho người dân địa phương (ví dụ Hội An)",
+        "Lợi ích 2: các dân tộc hiểu và tôn trọng văn hóa của nhau → thế giới hòa bình hơn",
+        "Đề xuất: phát triển du lịch nhưng bảo vệ môi trường"
+      ],
+      "sentences": [
+        [
+          "v-i1",
+          "Ngày nay, ngày càng nhiều người đi du lịch nước ngoài nhờ vé máy bay rẻ hơn và thu nhập cao hơn.",
+          "Nowadays, more and more people travel abroad because plane tickets are cheaper and people earn more money.",
+          "Nowadays, more and more people travel abroad thanks to cheaper flights and higher incomes.",
+          "Nowadays, international travel has become far more common as a result of cheaper flights and rising incomes."
+        ],
+        [
+          "v-i2",
+          "Mặc dù xu hướng này có một số hạn chế, tôi tin rằng lợi ích lớn hơn bất lợi.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages."
+        ],
+        [
+          "v-b1",
+          "Một mặt, bất lợi chính của du lịch quốc tế là nó có thể gây hại cho môi trường tại các điểm đến nổi tiếng.",
+          "On the one hand, the main disadvantage of international tourism is that it can damage the environment in popular places.",
+          "On the one hand, the main disadvantage of international tourism is that it can harm the environment in popular destinations.",
+          "On the one hand, the main disadvantage of international tourism is that it can cause serious environmental damage in popular destinations."
+        ],
+        [
+          "v-b2",
+          "Điều này là vì một lượng lớn du khách tạo ra nhiều rác thải và gây áp lực lên nguồn nước và hệ thống giao thông địa phương.",
+          "This is because a large number of tourists make a lot of rubbish and put pressure on local water and transport.",
+          "This is because large numbers of tourists produce a lot of waste and put pressure on local water supplies and transport systems.",
+          "This is because huge numbers of visitors generate vast amounts of waste and place a strain on local water supplies and transport networks."
+        ],
+        [
+          "v-b3",
+          "Ví dụ, một số bãi biển ở Đông Nam Á đã phải đóng cửa tạm thời vì bị ô nhiễm nặng do có quá nhiều khách du lịch.",
+          "For example, some beaches in Southeast Asia had to close for a while because too many tourists made them very dirty.",
+          "For example, some beaches in Southeast Asia have had to close temporarily because they were badly polluted by too many tourists.",
+          "For example, several beaches in Southeast Asia have been forced to close temporarily after being severely polluted by mass tourism."
+        ],
+        [
+          "v-b5",
+          "Do đó, cả người dân địa phương lẫn du khách đều không thể tận hưởng những nơi này nữa.",
+          "Consequently, neither local people nor tourists could enjoy these places any more.",
+          "Consequently, neither local residents nor tourists were able to enjoy these places any longer.",
+          "Consequently, neither local residents nor visitors were able to enjoy these once beautiful places any longer."
+        ],
+        [
+          "v-b4",
+          "Tuy nhiên, vấn đề này có thể được giải quyết nếu chính quyền địa phương giới hạn số lượng du khách, thu phí bảo vệ môi trường và đầu tư vào việc xử lý rác thải.",
+          "However, this problem can be solved if the local government limits the number of visitors, asks them to pay an environmental fee and spends money on rubbish collection.",
+          "However, this problem can be solved if local authorities limit the number of visitors, charge an environmental fee and invest in waste management.",
+          "However, this problem can be solved if local authorities impose limits on visitor numbers, introduce an environmental fee and invest in proper waste management."
+        ],
+        [
+          "v-c1",
+          "Mặt khác, những lợi ích của du lịch quốc tế quan trọng hơn nhiều.",
+          "On the other hand, the benefits of international tourism are much more significant.",
+          "On the other hand, the benefits of international tourism are much more significant.",
+          "On the other hand, the benefits of international tourism are much more significant."
+        ],
+        [
+          "v-c2",
+          "Thứ nhất, du lịch tạo ra rất nhiều việc làm và mang lại thu nhập cho người dân địa phương.",
+          "Firstly, tourism creates a lot of jobs and brings money to local people.",
+          "Firstly, tourism creates a large number of jobs and provides income for local people.",
+          "Firstly, tourism generates a wide range of employment opportunities and provides a vital source of income for local communities."
+        ],
+        [
+          "v-c3",
+          "Chẳng hạn, ở Hội An, hàng nghìn người kiếm sống nhờ làm việc trong các khách sạn, nhà hàng và cửa hàng lưu niệm.",
+          "For instance, in Hoi An, thousands of people earn money by working in hotels, restaurants and souvenir shops.",
+          "For instance, in Hoi An, thousands of people make a living by working in hotels, restaurants and souvenir shops.",
+          "For instance, in Hoi An, thousands of residents earn their living from hotels, restaurants and souvenir shops."
+        ],
+        [
+          "v-c4",
+          "Thứ hai, du lịch giúp con người từ các quốc gia khác nhau hiểu và tôn trọng văn hóa của nhau hơn.",
+          "Secondly, tourism helps people from different countries to understand and respect each other's cultures more.",
+          "Secondly, tourism helps people from different countries to understand and respect each other's cultures.",
+          "Secondly, tourism fosters mutual understanding and respect between people from different cultural backgrounds."
+        ],
+        [
+          "v-c6",
+          "Điều này có nghĩa là du khách có thể học hỏi về lịch sử, ẩm thực và phong tục của nơi họ đến thăm.",
+          "This means that tourists can learn about the history, food and customs of the places they visit.",
+          "This means that tourists can learn about the history, cuisine and traditions of the places they visit.",
+          "This means that travellers gain first-hand knowledge of the history, cuisine and customs of the places they visit."
+        ],
+        [
+          "v-c5",
+          "Kết quả là, mối quan hệ giữa các quốc gia trở nên tốt đẹp hơn và thế giới trở nên hòa bình hơn.",
+          "As a result, the relationships between countries become better and the world becomes more peaceful.",
+          "As a result, relations between countries improve and the world becomes a more peaceful place.",
+          "As a result, relations between nations improve, which contributes to a more peaceful world."
+        ],
+        [
+          "v-d1",
+          "Tóm lại, mặc dù du lịch quốc tế có thể gây ra một số vấn đề, tôi tin rằng lợi ích của nó lớn hơn nhiều.",
+          "In conclusion, although international tourism may cause some problems, I believe that its advantages are far greater.",
+          "In conclusion, although international tourism may cause some problems, I believe that its advantages are far greater.",
+          "In conclusion, although international tourism may cause some problems, I believe that its advantages are far greater."
+        ],
+        [
+          "v-d2",
+          "Vì lý do này, chính phủ nên tiếp tục phát triển du lịch nhưng đồng thời phải bảo vệ môi trường.",
+          "For this reason, governments should continue to develop tourism but also protect the environment.",
+          "For this reason, governments should continue to promote tourism while also protecting the environment.",
+          "For this reason, governments should continue to promote tourism while taking firm steps to protect the environment."
+        ]
+      ]
+    },
+    {
+      "id": "g-shopping",
+      "type": "advantages",
+      "task": "en-w-ielts-shopping",
+      "title": "Shopping online",
+      "prompt": "Many people now buy products online rather than in shops. Do the advantages of this trend outweigh the disadvantages?",
+      "prompt_vi": "Ngày nay nhiều người mua hàng trực tuyến thay vì ở cửa hàng. Lợi ích của xu hướng này có lớn hơn bất lợi không?",
+      "ideas_vi": [
+        "Ý kiến: lợi ích lớn hơn",
+        "Bất lợi: không xem/thử được sản phẩm → phải gửi trả; khắc phục: đổi trả miễn phí, đánh giá thật",
+        "Lợi ích 1: tiện lợi, mua mọi lúc mọi nơi",
+        "Lợi ích 2: giá rẻ hơn, dễ so sánh giá → tiết kiệm thời gian và tiền",
+        "Đề xuất: chỉ mua từ người bán uy tín"
+      ],
+      "sentences": [
+        [
+          "v-i1",
+          "Ngày nay, ngày càng nhiều người mua sắm trực tuyến thay vì đến các cửa hàng.",
+          "Nowadays, more and more people buy things online instead of going to shops.",
+          "Nowadays, an increasing number of people shop online rather than visiting stores.",
+          "Nowadays, a growing number of consumers choose to shop online rather than in physical stores."
+        ],
+        [
+          "v-i2",
+          "Mặc dù xu hướng này có một số hạn chế, tôi tin rằng lợi ích lớn hơn bất lợi.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages.",
+          "Although this trend has some drawbacks, I believe that the advantages outweigh the disadvantages."
+        ],
+        [
+          "v-b1",
+          "Một mặt, bất lợi chính của mua sắm trực tuyến là khách hàng không thể xem và thử sản phẩm trước khi mua.",
+          "On the one hand, the main disadvantage of online shopping is that customers cannot see or try products before they buy them.",
+          "On the one hand, the main disadvantage of online shopping is that customers cannot see or try products before buying them.",
+          "On the one hand, the main disadvantage of online shopping is that customers are unable to examine or try on products before purchasing them."
+        ],
+        [
+          "v-b2",
+          "Điều này là vì hình ảnh trên mạng không phải lúc nào cũng cho thấy đúng màu sắc, kích cỡ hay chất lượng của sản phẩm.",
+          "This is because the pictures online do not always show the real colour, size or quality of a product.",
+          "This is because online photos do not always show the true colour, size or quality of an item.",
+          "This is because online images do not always reflect the true colour, size or quality of an item."
+        ],
+        [
+          "v-b3",
+          "Ví dụ, nhiều người mua quần áo trên mạng rồi phát hiện ra chúng quá chật hoặc làm bằng chất liệu kém.",
+          "For example, many people buy clothes online and then find that they are too small or made of poor material.",
+          "For example, many people buy clothes online only to find that they are too tight or made of poor-quality material.",
+          "For example, many people order clothes online only to discover that they are too tight or made of inferior material."
+        ],
+        [
+          "v-b5",
+          "Do đó, họ phải mất thời gian gửi trả hàng, việc này vừa phiền phức vừa tốn kém.",
+          "Consequently, they have to spend time sending the items back, which is both annoying and expensive.",
+          "Consequently, they have to waste time returning the items, which can be both annoying and costly.",
+          "Consequently, they have to go to the trouble of returning the items, which can be both frustrating and costly."
+        ],
+        [
+          "v-b4",
+          "Tuy nhiên, vấn đề này có thể được giải quyết nếu các cửa hàng trực tuyến cho phép đổi trả miễn phí và đăng đánh giá thật của khách hàng.",
+          "However, this problem can be solved if online shops allow free returns and show real reviews from customers.",
+          "However, this problem can be solved if online stores offer free returns and publish genuine customer reviews.",
+          "However, this problem can be solved if online retailers offer free returns and publish genuine customer reviews."
+        ],
+        [
+          "v-c1",
+          "Mặt khác, những lợi ích của mua sắm trực tuyến quan trọng hơn nhiều.",
+          "On the other hand, the benefits of online shopping are much more significant.",
+          "On the other hand, the benefits of online shopping are much more significant.",
+          "On the other hand, the benefits of online shopping are much more significant."
+        ],
+        [
+          "v-c2",
+          "Thứ nhất, mua sắm trực tuyến rất tiện lợi vì mọi người có thể mua hàng bất cứ lúc nào và ở bất cứ đâu.",
+          "Firstly, online shopping is very convenient because people can buy things at any time and in any place.",
+          "Firstly, online shopping is extremely convenient because people can buy things at any time and from anywhere.",
+          "Firstly, online shopping offers great convenience, as people can make purchases at any time and from anywhere."
+        ],
+        [
+          "v-c3",
+          "Chẳng hạn, một người mẹ bận rộn có thể đặt đồ ăn cho cả tuần chỉ trong mười phút vào buổi tối mà không cần rời khỏi nhà.",
+          "For instance, a busy mother can order food for the whole week in only ten minutes in the evening without leaving the house.",
+          "For instance, a busy mother can order a week's groceries in just ten minutes in the evening without leaving the house.",
+          "For instance, a busy parent can order a whole week's groceries in a mere ten minutes in the evening without leaving home."
+        ],
+        [
+          "v-c4",
+          "Thứ hai, giá trên mạng thường rẻ hơn ở cửa hàng vì người bán trên mạng không phải trả tiền thuê cửa hàng.",
+          "Secondly, prices online are often cheaper than in shops because online sellers do not have to pay rent for a shop.",
+          "Secondly, prices online are often lower than in physical stores because online sellers do not need to pay rent for a shop.",
+          "Secondly, online prices tend to be lower than those in physical stores because online retailers do not have to pay rent for physical premises."
+        ],
+        [
+          "v-c6",
+          "Điều này có nghĩa là khách hàng có thể dễ dàng so sánh giá của nhiều người bán chỉ bằng vài cú nhấp chuột.",
+          "This means that customers can compare the prices of many sellers easily with only a few clicks.",
+          "This means that customers can easily compare prices from different sellers with just a few clicks.",
+          "This means that consumers can easily compare prices across a range of sellers with just a few clicks."
+        ],
+        [
+          "v-c5",
+          "Kết quả là, mọi người tiết kiệm được cả thời gian lẫn tiền bạc, điều này quan trọng với hầu hết các gia đình.",
+          "As a result, people save both time and money, which is important for most families.",
+          "As a result, people save both time and money, which matters to most families.",
+          "As a result, consumers save both time and money, which matters a great deal to most households."
+        ],
+        [
+          "v-d1",
+          "Tóm lại, mặc dù mua sắm trực tuyến có thể gây ra một số vấn đề, tôi tin rằng lợi ích của nó lớn hơn nhiều.",
+          "In conclusion, although online shopping may cause some problems, I believe that its advantages are far greater.",
+          "In conclusion, although online shopping may cause some problems, I believe that its advantages are far greater.",
+          "In conclusion, although online shopping may cause some problems, I believe that its advantages are far greater."
+        ],
+        [
+          "v-d2",
+          "Vì lý do này, người tiêu dùng nên tận dụng mua sắm trực tuyến nhưng chỉ nên mua từ những người bán đáng tin cậy.",
+          "For this reason, people should use online shopping but should only buy from sellers they can trust.",
+          "For this reason, consumers should make use of online shopping but should only buy from reliable sellers.",
+          "For this reason, consumers should take advantage of online shopping while buying only from reputable sellers."
+        ]
+      ]
+    }
+  ]
+}
