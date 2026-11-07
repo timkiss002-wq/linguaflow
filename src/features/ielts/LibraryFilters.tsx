@@ -26,9 +26,9 @@ export function FilterPanel({ active, children }: { active: number; children: Re
 
 export function FilterBox({ title, icon, highlight, children }: { title: string; icon?: ReactNode; highlight?: boolean; children: ReactNode }) {
   return (
-    <fieldset className={cn('rounded-xl border bg-card p-3', highlight && 'border-primary/40 ring-1 ring-primary/20')}>
+    <fieldset className={cn('rounded-xl border bg-card p-3', highlight && 'border-amber-300 ring-1 ring-amber-200 dark:border-amber-500/40 dark:ring-amber-500/20')}>
       <legend className="sr-only">{title}</legend>
-      <p className={cn('mb-2 flex items-center gap-2 text-sm font-semibold', highlight && 'text-primary')} aria-hidden>
+      <p className={cn('mb-2 flex items-center gap-2 text-sm font-semibold', highlight && 'text-amber-800 dark:text-amber-300')} aria-hidden>
         {icon}
         {title}
       </p>
@@ -40,7 +40,7 @@ export function FilterBox({ title, icon, highlight, children }: { title: string;
 export function Radio({ name, checked, onChange, label, hint }: { name: string; checked: boolean; onChange: () => void; label: string; hint?: string }) {
   return (
     <label className="flex cursor-pointer items-center gap-2.5 text-sm">
-      <input type="radio" name={name} className="size-4 accent-[hsl(var(--primary))]" checked={checked} onChange={onChange} />
+      <input type="radio" name={name} className="size-4 accent-amber-600" checked={checked} onChange={onChange} />
       <span>
         {label}
         {hint && <span className="ml-1.5 text-xs text-muted-foreground">{hint}</span>}
@@ -53,7 +53,7 @@ export function Radio({ name, checked, onChange, label, hint }: { name: string; 
 export function Check({ checked, onChange, label }: { checked: boolean; onChange: (on: boolean) => void; label: ReactNode }) {
   return (
     <label className="flex cursor-pointer items-start gap-2.5 text-sm">
-      <input type="checkbox" className="mt-0.5 size-4 accent-[hsl(var(--primary))]" checked={checked} onChange={(e) => onChange(e.target.checked)} />
+      <input type="checkbox" className="mt-0.5 size-4 accent-amber-600" checked={checked} onChange={(e) => onChange(e.target.checked)} />
       <span>{label}</span>
     </label>
   );

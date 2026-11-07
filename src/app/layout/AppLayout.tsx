@@ -109,7 +109,7 @@ function Shell() {
             <StudySwitch compact />
             {/* the home page shows streak and minutes in its own hero — don't show them twice */}
             {pathname !== '/dashboard' && (
-              <span className="hidden sm:block">
+              <span className="hidden sm:block lg:hidden xl:block">
                 <TodayChip />
               </span>
             )}
