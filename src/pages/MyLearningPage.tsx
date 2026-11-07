@@ -57,7 +57,7 @@ export default function MyLearningPage() {
 
   return (
     <>
-      <PageHeader title="My Learning" description="Your lessons in progress, finished, and saved for later." />
+      <PageHeader title="Bài của tôi" description="Bài nghe đang học, đã xong và đã lưu để học sau." />
       <div className="mb-6 flex gap-1 overflow-x-auto border-b" role="tablist">
         {TABS.map(({ id, label, icon: Icon }) => (
           <button

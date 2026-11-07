@@ -18,7 +18,7 @@ export default function GrammarPage() {
             <Languages className="size-5" aria-hidden />
           </span>
           <div className="text-sm">
-            <h1 className="text-lg font-bold">Luyện dịch theo ngữ pháp</h1>
+            <h1 className="text-lg font-bold">Ngữ pháp & dịch câu</h1>
             <p className="text-muted-foreground">
               Mỗi chủ điểm: xem hình minh hoạ và công thức, rồi dịch 8 câu tiếng Việt sang tiếng Anh. Câu dịch được chấm từng từ và so với nhiều đáp án đúng. Dành cho band 4.5 → 5.5 — nền để viết Task 1 và Task 2.
             </p>

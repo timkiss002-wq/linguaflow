@@ -50,7 +50,7 @@ export const TONE: Record<Tone, { tile: string; soft: string; text: string; soli
     tile: 'bg-amber-100 text-amber-800 dark:bg-amber-500/15 dark:text-amber-300',
     soft: 'bg-amber-50 dark:bg-amber-500/10',
     text: 'text-amber-800 dark:text-amber-300',
-    solid: 'bg-amber-500 text-white',
+    solid: 'bg-amber-700 text-white',
     ring: 'ring-amber-200 dark:ring-amber-500/30',
     bar: 'bg-amber-500',
   },

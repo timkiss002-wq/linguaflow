@@ -1,3 +1,4 @@
+import { ConfirmDialog } from '@/components/ConfirmDialog';
 import { BookOpen, Download, Eye, EyeOff, Keyboard, Search, Trash2 } from 'lucide-react';
 import { useStudyLanguage } from '@/features/study/context';
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -38,6 +39,7 @@ export default function VocabularyPage() {
   const [search, setSearch] = useState(filters.q);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [hideWords, setHideWords] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(false);
 
   useEffect(() => {
     if (search === filters.q) return;
@@ -66,7 +68,6 @@ export default function VocabularyPage() {
   };
 
   const deleteSelected = () => {
-    if (!window.confirm(`Delete ${selectedIds.length} word(s)? Their typing and review history is deleted too.`)) return;
     remove.mutate(selectedIds, {
       onSuccess: (ids) => {
         toast.success(`Deleted ${ids.length} word(s)`);
@@ -163,7 +164,7 @@ export default function VocabularyPage() {
                 <Keyboard /> Practise these
               </Link>
             </Button>
-            <Button size="sm" variant="outline" onClick={deleteSelected} disabled={remove.isPending}>
+            <Button size="sm" variant="outline" onClick={() => setConfirmDelete(true)} disabled={remove.isPending}>
               <Trash2 /> Delete
             </Button>
             <Button size="sm" variant="ghost" onClick={() => setSelected(new Set())} className="ml-auto">
@@ -208,6 +209,15 @@ export default function VocabularyPage() {
           </>
         )}
       </div>
+      <ConfirmDialog
+        open={confirmDelete}
+        onOpenChange={setConfirmDelete}
+        title={`Xoá ${selectedIds.length} từ?`}
+        description="Lịch sử gõ và ôn tập của các từ này cũng bị xoá."
+        confirmLabel="Xoá"
+        destructive
+        onConfirm={deleteSelected}
+      />
     </>
   );
 }

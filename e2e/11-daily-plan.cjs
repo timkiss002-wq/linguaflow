@@ -49,7 +49,7 @@ const FAKE_TTS = () => {
   await page.screenshot({ path: `${SHOTS}/p4-01-plan.png`, fullPage: true });
 
   // ── reviews tick off automatically ──
-  await plan.locator('[data-plan-item=review]').getByRole('link', { name: 'Start' }).click();
+  await plan.locator('[data-plan-item=review]').getByRole('link', { name: 'Bắt đầu' }).click();
   await page.waitForURL(/review\?lang=zh/);
   await page.getByRole('button', { name: /Start review · 10 cards/ }).click();
   for (let i = 0; i < 10; i++) {
@@ -66,7 +66,7 @@ const FAKE_TTS = () => {
   const lessonKey = keys[2];
   const lessonId = lessonKey.replace('lesson-', '');
   const sentences = sql(`select string_agg(text, '|' order by position) from lesson_sentences where lesson_id='${lessonId}'`).split('|');
-  await plan.locator(`[data-plan-item="${lessonKey}"]`).getByRole('link', { name: 'Start' }).click();
+  await plan.locator(`[data-plan-item="${lessonKey}"]`).getByRole('link', { name: 'Bắt đầu' }).click();
   await page.waitForURL(/practice/);
   const box = page.getByLabel('Type what you hear');
   for (let i = 0; i < 2; i++) {
@@ -81,10 +81,10 @@ const FAKE_TTS = () => {
   check('lesson progress shows half done', (await plan.locator(`[data-plan-item="${lessonKey}"]`).getAttribute('data-state')) === 'todo' && (await plan.locator(`[data-plan-item="${lessonKey}"] [role=progressbar]`).count()) === 1);
 
   // ── skip / undo ──
-  await plan.getByRole('button', { name: /Skip: Chinese placement test/ }).click();
+  await plan.getByRole('button', { name: /Bỏ qua: Chinese placement test/ }).click();
   await plan.locator('[data-plan-item=test-zh][data-state=skipped]').waitFor();
   check('skip is saved', sql(`select status->>'test-zh' from daily_plans where user_id='${uid}'`) === 'skipped');
-  await plan.locator('[data-plan-item=test-zh]').getByRole('button', { name: 'Undo' }).click();
+  await plan.locator('[data-plan-item=test-zh]').getByRole('button', { name: 'Hoàn tác' }).click();
   await plan.locator('[data-plan-item=test-zh][data-state=todo]').waitFor();
   check('undo clears it', sql(`select coalesce(status->>'test-zh', 'none') from daily_plans where user_id='${uid}'`) === 'none');
 
@@ -92,14 +92,14 @@ const FAKE_TTS = () => {
   for (const d of [1, 2, 3]) {
     sql(`insert into daily_plans (user_id, day, items, status) values ('${uid}', current_date - ${d}, '[{\"key\":\"lesson-x\",\"kind\":\"lesson\"}]', '{\"lesson-x\":\"skipped\"}')`);
   }
-  await plan.getByRole('button', { name: 'Rebuild' }).click();
+  await plan.getByRole('button', { name: 'Lập lại' }).click();
   await page.getByTestId('plan-notes').getByText(/often skip the lesson/).waitFor({ timeout: 8000 }).then(() => check('often-skipped lesson → note after rebuild', true), () => check('often-skipped lesson → note after rebuild', false));
   check('rebuilt plan keeps done reviews done', (await plan.locator('[data-plan-item=review]').count()) === 0 || (await plan.locator('[data-plan-item=review]').getAttribute('data-state')) === 'done');
 
   // ── rest day ──
   sql(`update learner_profiles set study_days = array_remove('{0,1,2,3,4,5,6}'::smallint[], extract(dow from (now() at time zone (select timezone from profiles where id='${uid}')))::smallint) where user_id='${uid}'`);
-  await plan.getByRole('button', { name: 'Rebuild' }).click();
-  await plan.getByText('Rest day', { exact: true }).waitFor({ timeout: 8000 }).then(() => check('rest day: light plan', true), () => check('rest day: light plan', false));
+  await plan.getByRole('button', { name: 'Lập lại' }).click();
+  await plan.getByText('Ngày nghỉ', { exact: true }).waitFor({ timeout: 8000 }).then(() => check('rest day: light plan', true), () => check('rest day: light plan', false));
   check('rest day: no lesson or test', (await plan.locator('[data-plan-item^=lesson], [data-plan-item^=test]').count()) === 0);
 
   // ── dictation keeps the listening level up to date (after a level test) ──

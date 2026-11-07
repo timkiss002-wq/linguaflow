@@ -2,7 +2,7 @@ import { AlertTriangle, RotateCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toUserMessage } from '@/lib/errors';
 
-export function ErrorState({ error, onRetry, title = 'Could not load this' }: { error: unknown; onRetry?: () => void; title?: string }) {
+export function ErrorState({ error, onRetry, title = 'Không tải được nội dung' }: { error: unknown; onRetry?: () => void; title?: string }) {
   return (
     <div className="flex flex-col items-center justify-center gap-3 rounded-lg border border-dashed p-8 text-center" role="alert">
       <AlertTriangle className="size-6 text-destructive" aria-hidden />
@@ -12,7 +12,7 @@ export function ErrorState({ error, onRetry, title = 'Could not load this' }: { 
       </div>
       {onRetry && (
         <Button variant="outline" size="sm" onClick={onRetry}>
-          <RotateCw /> Try again
+          <RotateCw /> Thử lại
         </Button>
       )}
     </div>

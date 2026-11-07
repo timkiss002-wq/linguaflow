@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import { sectionFor } from '@/app/layout/nav';
+import { sectionFor, tabFor } from '@/app/layout/nav';
 import { cn } from '@/lib/utils';
 import { STUDY_LABEL, useStudyLanguage, type StudyLanguage } from './context';
 
@@ -13,12 +13,12 @@ export function StudySwitch({ compact = false }: { compact?: boolean }) {
     setLang(l);
     // a page that only exists for the other language (IELTS, word forms…) → home
     const s = sectionFor(pathname);
-    const tab = s?.tabs?.find((t) => pathname === t.to || pathname.startsWith(`${t.to}/`));
+    const tab = tabFor(s, pathname);
     if ((s?.only && s.only !== l) || (tab?.only && tab.only !== l)) navigate('/dashboard');
   };
   return (
     <div className="flex items-center gap-2" data-testid="study-switch">
-      {!compact && <span className="hidden text-sm font-medium text-muted-foreground md:inline">Hôm nay học</span>}
+      <span className={cn('hidden text-sm font-medium text-muted-foreground', compact ? '2xl:inline' : 'md:inline')}>Hôm nay học</span>
       <div className="flex rounded-full border bg-muted/60 p-0.5" role="radiogroup" aria-label="Hôm nay học ngôn ngữ nào">
         {(['en', 'zh'] as const).map((l) => (
           <button

@@ -27,8 +27,8 @@ export default function LevelTestPage() {
   return (
     <>
       <PageHeader
-        title="Level test"
-        description="Short adaptive tests: each question is chosen from how you answered the last one, so the test finds your level per skill quickly."
+        title="Kiểm tra trình độ"
+        description="Bài kiểm tra ngắn, thích ứng: mỗi câu được chọn theo cách bạn trả lời câu trước, nên nhanh chóng tìm ra trình độ từng kỹ năng."
       />
       {overview.isError ? (
         <ErrorState error={overview.error} onRetry={() => overview.refetch()} />

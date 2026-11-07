@@ -63,7 +63,7 @@ export default function WordFormsPage() {
 
   return (
     <>
-      <PageHeader title="Word Forms" description="Noun, verb, adjective or adverb? Practise choosing the right form — the IELTS way." />
+      <PageHeader title="Dạng từ" description="Danh từ, động từ, tính từ hay trạng từ? Luyện chọn đúng dạng từ theo kiểu IELTS." />
       <div className="mb-6 flex gap-1 border-b" role="tablist">
         {TABS.map((t) => (
           <button

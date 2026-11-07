@@ -76,46 +76,34 @@
     --viz-4: #c98500;
   }
 
-  /* Each area tints buttons, focus rings and highlights with its own colour (contrast-checked with white text). */
-  [data-section='words'] {
-    --primary: 262 83% 58%;
-    --ring: 262 83% 58%;
-    --accent: 250 100% 97%;
-    --accent-foreground: 263 70% 42%;
+  /* Exam room colour options (as in the computer-delivered IELTS settings). */
+  [data-exam-theme='cream'] {
+    --background: 42 50% 90%;
+    --card: 42 60% 94%;
+    --foreground: 30 30% 12%;
+    --card-foreground: 30 30% 12%;
+    --muted: 42 35% 86%;
+    --muted-foreground: 30 15% 30%;
+    --border: 38 25% 74%;
+    --input: 38 25% 66%;
   }
-  [data-section='writing'] {
-    --primary: 347 77% 50%;
-    --ring: 347 77% 50%;
-    --accent: 356 100% 97%;
-    --accent-foreground: 345 83% 41%;
+  [data-exam-theme='contrast'] {
+    --background: 0 0% 0%;
+    --card: 0 0% 4%;
+    --foreground: 54 100% 62%;
+    --card-foreground: 54 100% 62%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 54 70% 75%;
+    --border: 54 60% 40%;
+    --input: 54 60% 50%;
+    --primary: 54 100% 62%;
+    --primary-foreground: 0 0% 0%;
+    --accent: 54 50% 18%;
+    --accent-foreground: 54 100% 75%;
+    --ring: 54 100% 62%;
   }
-  [data-section='progress'] {
-    --primary: 201 96% 32%;
-    --ring: 201 96% 32%;
-    --accent: 204 100% 97%;
-    --accent-foreground: 201 90% 27%;
-  }
-  .dark [data-section='words'] {
-    --primary: 255 92% 76%;
-    --primary-foreground: 224 33% 10%;
-    --ring: 255 92% 76%;
-    --accent: 263 40% 20%;
-    --accent-foreground: 255 92% 85%;
-  }
-  .dark [data-section='writing'] {
-    --primary: 351 95% 71%;
-    --primary-foreground: 224 33% 10%;
-    --ring: 351 95% 71%;
-    --accent: 345 40% 20%;
-    --accent-foreground: 351 95% 85%;
-  }
-  .dark [data-section='progress'] {
-    --primary: 198 93% 60%;
-    --primary-foreground: 224 33% 10%;
-    --ring: 198 93% 60%;
-    --accent: 201 50% 18%;
-    --accent-foreground: 198 93% 80%;
-  }
+
+  /* One accent colour (teal) across all areas: fewer competing colours, and it is contrast-checked. */
 
   * {
     @apply border-border;

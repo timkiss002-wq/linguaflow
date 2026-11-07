@@ -26,7 +26,7 @@ export default function WritingPage() {
   const l = LANGS.find((x) => x.value === lang)!;
   return (
     <>
-      <PageHeader title={lang === 'zh' ? 'Viết tiếng Trung' : 'Viết tiếng Anh'} description={`${l.blurb} Pick a prompt, write — then get your score and an analysis of your text.`} />
+      <PageHeader title={lang === 'zh' ? 'Viết tự do — tiếng Trung' : 'Viết tự do — tiếng Anh'} description={`${l.blurb} Chọn đề, viết, rồi nhận điểm và phân tích bài viết.`} />
       <LanguageView key={lang} lang={lang} />
     </>
   );

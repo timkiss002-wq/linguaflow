@@ -1,112 +1,112 @@
-import { BookOpen, GraduationCap, Headphones, Home, LineChart, PenLine, type LucideIcon } from 'lucide-react';
+import { BookOpen, GraduationCap, Headphones, Home, LineChart, type LucideIcon } from 'lucide-react';
 import { matchPath } from 'react-router-dom';
-import type { Tone } from '@/lib/ui/tones';
 
 export interface SectionTab {
   to: string;
+  /** Same words as the page's own title, so the menu and the page never disagree. */
   label: string;
   /** shown only while studying this language */
   only?: 'en' | 'zh';
 }
 
-/** The six areas of the app, shown as the top menu. Each groups related pages, shown as tabs under the menu. */
+/**
+ * The five areas of the app, in one row at the top. The pages of each area open from a drop-down on that area
+ * (desktop) or a row of tabs under the header (phone). Labels are Vietnamese; exam terms (Reading, Writing…) stay English.
+ */
 export interface Section {
-  id: 'home' | 'ielts' | 'lessons' | 'words' | 'writing' | 'progress';
+  id: 'home' | 'practice' | 'lessons' | 'words' | 'progress';
   label: string;
+  /** label while studying Chinese, when it differs (no IELTS for Chinese) */
+  labelZh?: string;
   /** Shorter label for the phone tab bar. */
   short?: string;
-  /** One line under the label in the menu, so learners know what's inside. */
+  /** One line describing what's inside (tooltip). */
   hint: string;
   to: string;
+  /** first page while studying Chinese, when it differs */
+  toZh?: string;
   icon: LucideIcon;
-  tone: Tone;
   /** Path prefixes that belong to this area (for the active state). */
   match: string[];
   tabs?: SectionTab[];
-  /** the whole area exists for one language only (IELTS → English) */
+  /** the whole area exists for one language only */
   only?: 'en' | 'zh';
 }
 
 export const SECTIONS: Section[] = [
-  { id: 'home', label: 'Home', hint: "Today's plan", to: '/dashboard', icon: Home, tone: 'orange', match: ['/dashboard', '/onboarding'] },
+  { id: 'home', label: 'Trang chủ', hint: 'Kế hoạch hôm nay', to: '/dashboard', icon: Home, match: ['/dashboard', '/onboarding'] },
   {
-    // All IELTS practice in one place, one tab per skill (Reading · Listening · Writing).
-    // Listed before Writing so /writing/guided belongs here, not to free writing.
-    id: 'ielts',
-    only: 'en',
-    label: 'Luyện đề IELTS',
-    short: 'IELTS',
+    // All exam practice in one place: IELTS Reading · Listening · Writing, grammar, free writing and its mistakes.
+    id: 'practice',
+    label: 'Luyện thi',
+    labelZh: 'Luyện viết',
     hint: 'Reading · Listening · Writing · Ngữ pháp',
     to: '/ielts/reading',
+    toZh: '/writing',
     icon: GraduationCap,
-    tone: 'amber',
-    match: ['/ielts', '/writing/guided', '/grammar'],
+    match: ['/ielts', '/writing', '/grammar'],
     tabs: [
-      { to: '/ielts/reading', label: 'Reading' },
-      { to: '/ielts/listening', label: 'Listening' },
-      { to: '/writing/guided', label: 'Writing' },
-      { to: '/grammar', label: 'Ngữ pháp & dịch câu' },
+      { to: '/ielts/reading', label: 'Reading', only: 'en' },
+      { to: '/ielts/listening', label: 'Listening', only: 'en' },
+      { to: '/writing/guided', label: 'Writing', only: 'en' },
+      { to: '/writing', label: 'Viết tự do' },
+      { to: '/writing/mistakes', label: 'Lỗi hay lặp lại', only: 'en' },
+      { to: '/grammar', label: 'Ngữ pháp & dịch câu', only: 'en' },
     ],
   },
   {
     id: 'lessons',
-    label: 'Lessons',
-    hint: 'Listen & type',
+    label: 'Bài nghe',
+    hint: 'Nghe và chép chính tả',
     to: '/lessons',
     icon: Headphones,
-    tone: 'teal',
     match: ['/lessons', '/my-learning'],
     tabs: [
-      { to: '/lessons', label: 'Explore' },
-      { to: '/my-learning', label: 'My lessons' },
+      { to: '/lessons', label: 'Kho bài nghe' },
+      { to: '/my-learning', label: 'Bài của tôi' },
     ],
   },
   {
     id: 'words',
-    label: 'Words',
-    hint: 'Notebook & review',
+    label: 'Từ vựng',
+    hint: 'Sổ từ và ôn tập',
     to: '/vocabulary',
     icon: BookOpen,
-    tone: 'violet',
     match: ['/vocabulary', '/review', '/word-forms'],
     tabs: [
-      { to: '/vocabulary', label: 'Notebook' },
-      { to: '/review', label: 'Review' },
-      { to: '/word-forms', label: 'Word forms', only: 'en' },
-    ],
-  },
-  {
-    id: 'writing',
-    label: 'Writing',
-    hint: 'Write & get feedback',
-    to: '/writing',
-    icon: PenLine,
-    tone: 'rose',
-    match: ['/writing'],
-    tabs: [
-      { to: '/writing', label: 'Prompts' },
-      { to: '/writing/mistakes', label: 'My mistakes', only: 'en' },
+      { to: '/vocabulary', label: 'Sổ từ' },
+      { to: '/review', label: 'Ôn tập' },
+      { to: '/word-forms', label: 'Dạng từ', only: 'en' },
     ],
   },
   {
     id: 'progress',
-    label: 'Progress',
-    hint: 'Stats, level, weak spots',
+    label: 'Tiến độ',
+    hint: 'Thống kê, trình độ, điểm yếu',
     to: '/statistics',
     icon: LineChart,
-    tone: 'sky',
     match: ['/statistics', '/insights', '/level-test'],
     tabs: [
-      { to: '/statistics', label: 'Statistics' },
-      { to: '/insights', label: 'Strengths & Weaknesses' },
-      { to: '/level-test', label: 'Level test' },
+      { to: '/statistics', label: 'Thống kê' },
+      { to: '/insights', label: 'Điểm mạnh & yếu' },
+      { to: '/level-test', label: 'Kiểm tra trình độ' },
     ],
   },
 ];
 
 /** The areas (and their tabs) for the language being studied. */
 export function sectionsFor(lang: 'en' | 'zh'): Section[] {
-  return SECTIONS.filter((s) => !s.only || s.only === lang).map((s) => ({ ...s, tabs: s.tabs?.filter((t) => !t.only || t.only === lang) }));
+  return SECTIONS.filter((s) => !s.only || s.only === lang).map((s) => ({
+    ...s,
+    label: lang === 'zh' ? (s.labelZh ?? s.label) : s.label,
+    to: lang === 'zh' ? (s.toZh ?? s.to) : s.to,
+    tabs: s.tabs?.filter((t) => !t.only || t.only === lang),
+  }));
+}
+
+/** The tab (page) of an area that a path belongs to: the longest matching prefix, so /writing/guided/x → Writing, not Viết tự do. */
+export function tabFor(section: Section | undefined, pathname: string): SectionTab | undefined {
+  return section?.tabs?.filter((t) => pathname === t.to || pathname.startsWith(`${t.to}/`)).sort((a, b) => b.to.length - a.to.length)[0];
 }
 
 export function sectionFor(pathname: string): Section | undefined {

@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, CalendarCheck, ClipboardCheck, Ear, Headphones, Keyboard, PenLine, Sparkles, Volume2, type LucideIcon } from 'lucide-react';
+import { ArrowRight, BookOpen, CalendarCheck, ClipboardCheck, Ear, Keyboard, Languages, PenLine, Sparkles, Target, type LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
@@ -7,18 +7,18 @@ import { TONE, type Tone } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
 
 const STEPS: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
-  { icon: Headphones, tone: 'teal', title: 'Listen', text: 'Hear one natural sentence read aloud. Slow it down and replay it as often as you need.' },
-  { icon: Keyboard, tone: 'violet', title: 'Type', text: 'Write down exactly what you hear — English words or Chinese characters.' },
-  { icon: Ear, tone: 'orange', title: 'Check', text: 'See every missing, extra or misspelled word, and whether a Chinese mistake was hearing or writing.' },
+  { icon: ClipboardCheck, tone: 'teal', title: 'Làm đề như thi thật', text: 'Phòng thi giống bài thi IELTS trên máy: bài đọc bên trái, câu hỏi bên phải, đồng hồ, đánh dấu câu xem lại.' },
+  { icon: Languages, tone: 'violet', title: 'Hiểu vì sao sai', text: 'Mỗi câu có giải thích bằng tiếng Việt và tô màu đúng chỗ chứa đáp án trong bài.' },
+  { icon: Target, tone: 'orange', title: 'Luyện đúng chỗ yếu', text: 'Thống kê dạng câu hay sai, lỗi Writing hay lặp, rồi đưa vào kế hoạch học mỗi ngày.' },
 ];
 
 const FEATURES: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
-  { icon: Keyboard, title: 'Dictation Room', text: 'Sentence-by-sentence listening with slow replay, hints and a clear breakdown of every mistake.', tone: 'teal' },
-  { icon: Sparkles, title: 'Built for Chinese too', text: 'Pinyin on demand, HSK levels, and checking that tells a wrong tone or a same-sound 汉字 apart from mishearing.', tone: 'teal' },
-  { icon: BookOpen, title: 'Your word notebook', text: 'Save words with the sentence you met them in, flashcards with spaced repetition, IELTS word forms and typing practice.', tone: 'violet' },
-  { icon: PenLine, title: 'Writing with feedback', text: 'Prompts for your level and interests, an instant analysis, and optional AI corrections explained in Vietnamese.', tone: 'rose' },
-  { icon: ClipboardCheck, title: 'Level test & weak spots', text: 'A short adaptive test per skill, then the exact mistakes you repeat — tones, word endings, grammar points.', tone: 'sky' },
-  { icon: CalendarCheck, title: 'A plan for every day', text: 'Reviews, one weak spot and a lesson just above your level — sized to the minutes you have.', tone: 'orange' },
+  { icon: BookOpen, title: 'IELTS Reading & Listening', text: 'Đề soạn theo format IELTS Academic, chấm tự động, band ước lượng, giải thích tiếng Việt từng câu.', tone: 'teal' },
+  { icon: PenLine, title: 'Writing có AI chấm band', text: 'Khung bài cho từng dạng đề, thi thử 20/40 phút, AI chấm theo 4 tiêu chí và chỉ ra từng lỗi.', tone: 'rose' },
+  { icon: Keyboard, title: 'Nghe – chép chính tả', text: 'Nghe từng câu, gõ lại, thấy ngay từ thiếu, thừa hay sai chính tả. Có cả tiếng Trung (HSK, pinyin).', tone: 'teal' },
+  { icon: Sparkles, title: 'Sổ từ thông minh', text: 'Lưu từ kèm câu gặp nó, ôn bằng thẻ lặp lại ngắt quãng, luyện dạng từ kiểu IELTS.', tone: 'violet' },
+  { icon: Ear, title: 'Kiểm tra trình độ', text: 'Bài kiểm tra ngắn, thích ứng, cho từng kỹ năng — rồi chỉ ra đúng lỗi bạn hay lặp lại.', tone: 'sky' },
+  { icon: CalendarCheck, title: 'Kế hoạch mỗi ngày', text: 'Ôn từ, một điểm yếu và một bài vừa sức — vừa đủ số phút bạn có.', tone: 'orange' },
 ];
 
 export default function LandingPage() {
@@ -31,15 +31,15 @@ export default function LandingPage() {
         <nav className="flex items-center gap-2">
           {user ? (
             <Button asChild>
-              <Link to="/dashboard">Go to dashboard</Link>
+              <Link to="/dashboard">Vào trang học</Link>
             </Button>
           ) : (
             <>
               <Button variant="ghost" asChild>
-                <Link to="/login">Sign in</Link>
+                <Link to="/login">Đăng nhập</Link>
               </Button>
               <Button asChild>
-                <Link to="/register">Get started</Link>
+                <Link to="/register">Đăng ký miễn phí</Link>
               </Button>
             </>
           )}
@@ -53,41 +53,41 @@ export default function LandingPage() {
         <div className="container relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
           <div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-              English · 中文 (Simplified, with Pinyin)
+              Luyện thi IELTS · có cả tiếng Trung (HSK)
             </p>
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-              Learn languages by listening, typing and writing.
+              Luyện đề IELTS như thi thật, hiểu từng lỗi bằng tiếng Việt.
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-              Practise English and Chinese (HSK 3–6) with short listening lessons. Hear a sentence, type it, and see exactly what you missed — then keep the new words with spaced repetition.
+              Reading, Listening và Writing theo đúng format bài thi trên máy. Sau khi nộp: đáp án được tô ngay trong bài, giải thích tiếng Việt từng câu, và AI chấm band Writing theo 4 tiêu chí.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" asChild>
                 <Link to={user ? '/dashboard' : '/register'}>
-                  Start learning free <ArrowRight />
+                  Bắt đầu miễn phí <ArrowRight />
                 </Link>
               </Button>
               {!user && (
                 <Button size="lg" variant="outline" asChild>
-                  <Link to="/login">I already have an account</Link>
+                  <Link to="/login">Tôi đã có tài khoản</Link>
                 </Button>
               )}
             </div>
           </div>
-          <DictationPreview />
+          <IeltsPreview />
         </div>
         </section>
 
         <section className="border-y bg-card py-16">
           <div className="container">
-            <h2 className="text-center text-2xl font-bold tracking-tight sm:text-3xl">How it works</h2>
+            <h2 className="text-center text-2xl font-bold tracking-tight sm:text-3xl">Học thế nào</h2>
             <div className="mt-10 grid gap-8 sm:grid-cols-3">
               {STEPS.map(({ icon: Icon, title, text, tone }, i) => (
                 <div key={title} className="text-center">
                   <div className={cn('mx-auto flex size-14 items-center justify-center rounded-2xl', TONE[tone].tile)}>
                     <Icon className="size-5" aria-hidden />
                   </div>
-                  <p className="mt-4 text-sm font-medium text-muted-foreground">Step {i + 1}</p>
+                  <p className="mt-4 text-sm font-medium text-muted-foreground">Bước {i + 1}</p>
                   <h3 className="mt-1 font-semibold">{title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{text}</p>
                 </div>
@@ -97,7 +97,7 @@ export default function LandingPage() {
         </section>
 
         <section className="container py-16">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Everything you need to practise daily</h2>
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Đủ để luyện mỗi ngày</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map(({ icon: Icon, title, text, tone }) => (
               <div key={title} className="rounded-xl border border-border/70 bg-card p-6 shadow-soft transition-transform hover:-translate-y-0.5">
@@ -115,63 +115,56 @@ export default function LandingPage() {
       <footer className="border-t py-8">
         <div className="container flex flex-col items-center justify-between gap-2 text-sm text-muted-foreground sm:flex-row">
           <span>© {new Date().getFullYear()} LinguaFlow</span>
-          <span>Audio is generated on your device with text-to-speech.</span>
+          <span>Âm thanh được đọc ngay trên máy bạn bằng giọng đọc của trình duyệt.</span>
         </div>
       </footer>
     </div>
   );
 }
 
-const WAVE = [30, 55, 80, 45, 90, 60, 35, 70, 95, 50, 40, 75, 85, 45, 30, 65, 90, 55, 35, 60, 80, 40, 25, 50, 70, 45, 30, 55];
-
-const ZH_PREVIEW: [string, string, 'ok' | 'char'][] = [
-  ['今', 'jīn', 'ok'],
-  ['天', 'tiān', 'ok'],
-  ['天', 'tiān', 'ok'],
-  ['汽', 'qì', 'char'],
-  ['很', 'hěn', 'ok'],
-  ['好', 'hǎo', 'ok'],
-];
-
-/** Static illustration of the Dictation Room result view (not interactive). */
-function DictationPreview() {
+/** Static illustration of a Reading test after submitting: the answer found in the passage, explained in Vietnamese, and a Writing band. */
+function IeltsPreview() {
   return (
-    <div aria-hidden className="rotate-1 rounded-2xl border bg-card p-5 shadow-lift">
-      <div className="flex items-center gap-4 rounded-lg bg-gradient-to-br from-teal-700 via-teal-600 to-emerald-600 p-5 text-white">
-        <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-white/15">
-          <Volume2 className="size-5" />
+    <div aria-hidden className="rotate-1 space-y-3 rounded-2xl border bg-card p-5 shadow-lift">
+      <div className="flex items-center justify-between rounded-lg border px-3 py-1.5 text-xs">
+        <span className="font-semibold">Reading Passage 1</span>
+        <span className="rounded-full border px-2 py-0.5 font-mono">18:42</span>
+        <span className="rounded-md bg-primary px-2 py-0.5 font-semibold text-primary-foreground">Nộp bài</span>
+      </div>
+      <div className="grid grid-cols-2 gap-3 text-[13px] leading-6" lang="en">
+        <p className="rounded-md border p-3">
+          <strong className="mr-1 text-amber-700">B</strong> By 1900, most large cities had{' '}
+          <mark className="rounded-sm bg-warning/25 px-0.5 text-foreground ring-2 ring-warning">
+            <sup className="mr-0.5 font-bold text-warning">3</sup>replaced gas lamps with electric light
+          </mark>
+          , although rural areas waited decades longer.
+        </p>
+        <div className="space-y-2 rounded-md border p-3">
+          <p>
+            <span className="mr-1 inline-flex size-5 items-center justify-center rounded-full bg-destructive text-[10px] font-bold text-white">3</span>
+            Cities kept gas lighting until 1920.
+          </p>
+          <p className="text-xs font-medium text-destructive" lang="vi">
+            Sai · Đáp án: <b className="text-foreground">FALSE</b>
+          </p>
+          <p className="text-xs text-muted-foreground" lang="vi">
+            Bài nói năm 1900 các thành phố lớn đã thay đèn khí bằng đèn điện, trái với câu hỏi.
+          </p>
         </div>
-        <div className="flex h-10 flex-1 items-center gap-[3px]">
-          {WAVE.map((h, i) => (
-            <span key={i} className="w-1 rounded-full bg-white/70" style={{ height: `${h}%` }} />
-          ))}
-        </div>
       </div>
-      <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-        <span>Sentence 4 / 18</span>
-        <span>0.75x · Replay</span>
+      <div className="flex items-center gap-3 rounded-md border p-3 text-sm">
+        <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-rose-700 text-lg font-bold text-white">6.0</span>
+        <span>
+          <span className="font-semibold">Writing Task 2 · AI chấm band</span>
+          <span className="block text-xs text-muted-foreground">Task Response 6 · Coherence 6 · Lexical 5.5 · Grammar 6</span>
+        </span>
       </div>
-      <div className="mt-2 h-1.5 rounded-full bg-muted">
-        <div className="h-full w-1/4 rounded-full bg-primary" />
-      </div>
-      <div className="mt-4 rounded-md border p-3 text-sm leading-7">
-        <span className="text-success">I've been</span>{' '}
-        <span className="rounded bg-destructive/10 px-1 text-destructive line-through">walking</span>{' '}
-        <span className="rounded bg-success/10 px-1 text-success">working</span>{' '}
-        <span className="text-success">here for</span>{' '}
-        <span className="rounded border border-dashed border-warning px-1 text-warning">almost</span>{' '}
-        <span className="text-success">three years.</span>
-      </div>
-      <div className="mt-3 flex flex-wrap items-end gap-x-3 gap-y-1 rounded-md border p-3" lang="zh">
-        <div className="flex items-end">
-          {ZH_PREVIEW.map(([char, py, state], i) => (
-            <ruby key={i} className={cn('px-[1px] text-lg', state === 'ok' ? 'text-success' : 'rounded-sm bg-warning/15 text-warning')}>
-              {char}
-              <rt className="pb-0.5 text-[10px] font-normal text-muted-foreground">{py}</rt>
-            </ruby>
-          ))}
-        </div>
-        <span className="pb-1 text-xs text-muted-foreground">汽 → 气 · same sound, wrong character</span>
+      <div className="flex gap-1">
+        {Array.from({ length: 13 }, (_, i) => (
+          <span key={i} className={cn('flex h-6 flex-1 items-center justify-center rounded text-[10px] font-semibold', i === 2 ? 'bg-destructive text-white' : i < 9 ? 'bg-success text-white' : 'border')}>
+            {i + 1}
+          </span>
+        ))}
       </div>
     </div>
   );

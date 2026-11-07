@@ -16,7 +16,7 @@ export default function SettingsPage() {
 
   return (
     <>
-      <PageHeader title="Settings" description="Manage your profile and how lessons behave." />
+      <PageHeader title="Cài đặt" description="Hồ sơ của bạn và cách các bài học hoạt động." />
       {profile.isPending ? (
         <div className="space-y-4">
           <Skeleton className="h-72 w-full" />

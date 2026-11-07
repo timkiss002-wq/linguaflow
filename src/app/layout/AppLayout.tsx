@@ -1,27 +1,26 @@
 import { X } from 'lucide-react';
-import { useEffect } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { DailyGoalReminder } from '@/features/review/DailyGoalReminder';
-import { useStudyLanguage } from '@/features/study/context';
-import { DailyChoice } from '@/features/study/DailyChoice';
+import { STUDY_LABEL, useStudyLanguage } from '@/features/study/context';
 import { StudyLanguageProvider } from '@/features/study/StudyLanguageProvider';
 import { StudySwitch } from '@/features/study/StudySwitch';
 import { BottomNav } from './BottomNav';
-import { isFocusRoute, sectionFor } from './nav';
+import { isFocusRoute, sectionFor, tabFor } from './nav';
 import { SectionTabs } from './SectionTabs';
 import { TopNav } from './TopNav';
 import { TodayChip } from './TodayMini';
 import { UserMenu } from './UserMenu';
 
 /**
- * Top-menu layout (no sidebar), so pages get the full width:
- *   row 1 — logo, today's streak, account
- *   row 2 — the six areas as tabs (desktop; phones use the bottom bar)
- *   row 3 — the pages of the current area (Reading · Listening · Writing …)
- * All three rows stick to the top while scrolling.
+ * Top-menu layout (no sidebar), so pages get the full width.
+ * Desktop: ONE row — logo · the five areas (pages in a drop-down) · language · today · account.
+ * It slides away while scrolling down and comes back on scroll up, so content gets the screen.
+ * Phones: logo row + the area's pages as tabs; areas in the bottom bar.
  */
 export function AppLayout() {
   return (
@@ -31,23 +30,49 @@ export function AppLayout() {
   );
 }
 
+/** Hide the header while the learner scrolls down; show it again as soon as they scroll up. */
+function useHideOnScroll() {
+  const [hidden, setHidden] = useState(false);
+  const last = useRef(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (Math.abs(y - last.current) < 6) return;
+      setHidden(y > 120 && y > last.current);
+      last.current = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  return hidden;
+}
+
 function Shell() {
   const { pathname, search } = useLocation();
+  const navigate = useNavigate();
   const area = sectionFor(pathname)?.id;
   const { lang, setLang } = useStudyLanguage();
+  const hidden = useHideOnScroll();
   // old links such as /writing?lang=zh open in that language
   const linked = new URLSearchParams(search).get('lang');
   useEffect(() => {
     if ((linked === 'en' || linked === 'zh') && linked !== lang) setLang(linked);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [linked]);
-  // A link straight to a page of the other language (e.g. an IELTS test while studying Chinese) switches the language.
+  // A link straight to a page of the other language (e.g. an IELTS test while studying Chinese) switches the language —
+  // and says so, with a way back, instead of changing the whole app silently.
   useEffect(() => {
     const s = sectionFor(pathname);
-    const tab = s?.tabs?.find((t) => pathname === t.to || pathname.startsWith(`${t.to}/`));
-    const only = s?.only ?? tab?.only;
-    if (only && only !== lang) setLang(only);
-  }, [pathname, lang, setLang]);
+    const only = s?.only ?? tabFor(s, pathname)?.only;
+    if (!only || only === lang) return;
+    const from = lang;
+    setLang(only);
+    toast(`Đã chuyển sang học ${STUDY_LABEL[only].name.toLowerCase()}`, {
+      id: 'study-switch',
+      description: `Trang này chỉ có cho ${STUDY_LABEL[only].name.toLowerCase()}.`,
+      action: { label: `Về ${STUDY_LABEL[from].name}`, onClick: () => (setLang(from), navigate('/dashboard')) },
+    });
+  }, [pathname, lang, setLang, navigate]);
 
   // Doing one task (dictation, a test, writing, typing practice): no menu, just a way out.
   if (isFocusRoute(pathname)) {
@@ -59,12 +84,12 @@ function Shell() {
         <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b bg-background/90 px-4 backdrop-blur sm:px-6">
           <Logo to="/dashboard" />
           <Button asChild variant="ghost" size="sm">
-            <Link to={exit} aria-label="Leave focus mode">
-              <X /> Exit
+            <Link to={exit} aria-label="Thoát chế độ tập trung">
+              <X /> Thoát
             </Link>
           </Button>
         </header>
-        {/* IELTS tests get the whole screen: passage and questions side by side. */}
+        {/* The exam rooms (IELTS tests, Writing exam) cover this whole layout with their own full-screen frame. */}
         <main className={cn('mx-auto w-full px-4 py-6 sm:px-6 lg:py-8', pathname.startsWith('/ielts/') ? 'max-w-[1600px] lg:py-5' : 'max-w-5xl')}>
           <Outlet />
         </main>
@@ -74,32 +99,30 @@ function Shell() {
 
   return (
     <div className="min-h-screen bg-muted/30">
-      <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
+      <header className={cn('sticky top-0 z-40 border-b bg-background/95 backdrop-blur transition-transform duration-200', hidden && '-translate-y-full')} data-testid="app-header">
         <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 sm:px-6">
-          <Logo to="/dashboard" className="[&>span]:hidden sm:[&>span]:inline" />
-          <div className="mx-auto">
-            <StudySwitch />
+          <Logo to="/dashboard" className="shrink-0 [&>span]:hidden sm:[&>span]:inline lg:[&>span]:hidden xl:[&>span]:inline" />
+          <div className="hidden min-w-0 flex-1 lg:block">
+            <TopNav />
           </div>
-          <div className="flex items-center gap-2">
-            <span className="hidden sm:block">
-              <TodayChip />
-            </span>
+          <div className="ml-auto flex shrink-0 items-center gap-2">
+            <StudySwitch compact />
+            {/* the home page shows streak and minutes in its own hero — don't show them twice */}
+            {pathname !== '/dashboard' && (
+              <span className="hidden sm:block">
+                <TodayChip />
+              </span>
+            )}
             <div className="w-10">
               <UserMenu compact />
             </div>
           </div>
         </div>
-        <div className="hidden border-t lg:block">
-          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
-            <TopNav />
-          </div>
-        </div>
         <SectionTabs />
       </header>
-      {/* Daily vocabulary goal: shown everywhere until 10 new words are learned (the Review page has its own card). */}
-      {pathname !== '/review' && <DailyGoalReminder />}
+      {/* Daily vocabulary goal: only on the home page (the Review page has its own card), not on every page. */}
+      {pathname === '/dashboard' && <DailyGoalReminder />}
       <BottomNav />
-      <DailyChoice />
 
       <main className="min-w-0 pb-24 lg:pb-0" data-section={area}>
         <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:py-8">

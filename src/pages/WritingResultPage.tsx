@@ -1,7 +1,8 @@
 import { AlertTriangle, CheckCircle2, PenLine, Trash2 } from 'lucide-react';
-import { Fragment, useMemo } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
+import { ConfirmDialog } from '@/components/ConfirmDialog';
 import { EmptyState } from '@/components/EmptyState';
 import { ErrorState } from '@/components/ErrorState';
 import { PageHeader } from '@/components/PageHeader';
@@ -37,6 +38,7 @@ export default function WritingResultPage() {
   const list = useSubmissions();
   const navigate = useNavigate();
   const del = useDeleteSubmission();
+  const [confirmDelete, setConfirmDelete] = useState(false);
   const s = sub.data;
   const profile = useWritingProfile(s?.language ?? 'en');
 
@@ -65,7 +67,6 @@ export default function WritingResultPage() {
   const zh = s.language === 'zh';
   const unit = zh ? 'characters' : 'words';
   const remove = () => {
-    if (!window.confirm('Delete this text and its analysis?')) return;
     del.mutate(s.id, { onSuccess: () => navigate(`/writing?lang=${s.language}`), onError: (e) => toast.error(toUserMessage(e)) });
   };
 
@@ -84,7 +85,7 @@ export default function WritingResultPage() {
             <Button asChild variant="outline">
               <Link to={`/writing?lang=${s.language}`}>Other prompts</Link>
             </Button>
-            <Button variant="ghost" size="icon" onClick={remove} aria-label="Delete this text">
+            <Button variant="ghost" size="icon" onClick={() => setConfirmDelete(true)} aria-label="Xoá bài viết này">
               <Trash2 className="size-4" />
             </Button>
           </>
@@ -196,6 +197,7 @@ export default function WritingResultPage() {
         </div>
       </div>
 
+      <ConfirmDialog open={confirmDelete} onOpenChange={setConfirmDelete} title="Xoá bài viết này?" description="Bài viết và phần phân tích, chấm điểm sẽ bị xoá vĩnh viễn." confirmLabel="Xoá" destructive onConfirm={remove} />
     </>
   );
 }
