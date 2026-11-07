@@ -1,8 +1,9 @@
-import { BookOpen, Clock, Filter, Headphones, Play, RotateCcw, Target } from 'lucide-react';
-import { useMemo } from 'react';
+import { BookOpen, Clock, Filter, Headphones, History as HistoryIcon, Play, RotateCcw, Target } from 'lucide-react';
+import { useMemo, type ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
 import { ErrorState } from '@/components/ErrorState';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -25,6 +26,13 @@ const SKILL = {
   reading: { label: 'Reading', unit: 'Passage', icon: BookOpen, intro: 'Đề soạn riêng theo đúng format IELTS Academic. Chấm tự động, giải thích từng câu bằng tiếng Việt và chỉ ra chỗ chứa đáp án trong bài.' },
   listening: { label: 'Listening', unit: 'Part', icon: Headphones, intro: 'Bài nghe theo format IELTS: 4 phần, 40 câu. Luyện tập thì nghe lại thoải mái; thi thử thì mỗi phần chỉ nghe một lần.' },
 } as const;
+
+/** Card header colours per part number, so Passage 1/2/3 are told apart at a glance. */
+const PART_COLOR = ['bg-orange-700', 'bg-violet-700', 'bg-sky-700', 'bg-emerald-700']; // 700: white text passes WCAG AA
+const COVER = {
+  reading: 'from-amber-100 via-orange-50 to-rose-100 dark:from-amber-500/15 dark:via-orange-500/5 dark:to-rose-500/15',
+  listening: 'from-teal-100 via-cyan-50 to-sky-100 dark:from-teal-500/15 dark:via-cyan-500/5 dark:to-sky-500/15',
+};
 
 const typesOf = (p: TestPart) => [...new Set(partQuestions(p).map(({ group }) => group.type as QuestionType))];
 
@@ -93,7 +101,7 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
           <label key={ty} className="flex cursor-pointer items-start gap-2.5 text-sm">
             <input
               type="checkbox"
-              className="mt-0.5 size-4 accent-[hsl(var(--primary))]"
+              className="mt-0.5 size-4 accent-amber-600"
               checked={picked.includes(ty)}
               onChange={(e) => set('type', (e.target.checked ? [...picked, ty] : picked.filter((x) => x !== ty)).join(',') || null)}
             />
@@ -120,7 +128,7 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
         <section aria-label={`Đề ${S.label}`} className="min-w-0">
           <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
             <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
-              IELTS {S.label}
+              Luyện đề IELTS {S.label}
               <span className="ml-2 text-sm font-normal text-muted-foreground">{count} {format === 'full' ? 'đề' : 'bài'}</span>
             </h1>
             <p className="max-w-xl text-sm text-muted-foreground">{S.intro}</p>
@@ -129,9 +137,17 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
           {count === 0 ? (
             <EmptyState icon={Filter} title="Không có bài nào khớp bộ lọc" description="Bỏ bớt dạng câu hỏi hoặc đổi trạng thái để xem thêm." />
           ) : format === 'part' ? (
-            <PartTable rows={partCards} unit={S.unit} stats={partStats} loading={attempts.isPending} />
+            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              {partCards.map(({ t, p, i }) => (
+                <PartCard key={p.id} test={t} part={p} index={i} unit={S.unit} stat={partStats.get(p.id)} loading={attempts.isPending} />
+              ))}
+            </div>
           ) : (
-            <FullTable tests={fullCards} attempts={mine} loading={attempts.isPending} />
+            <div className="grid gap-4 md:grid-cols-2">
+              {fullCards.map((t) => (
+                <FullCard key={t.id} test={t} attempts={mine.filter((a) => a.test_id === t.id)} loading={attempts.isPending} />
+              ))}
+            </div>
           )}
 
           {attempts.isError && (
@@ -161,19 +177,14 @@ function GoalBanner({ skill, attempts }: { skill: Skill; attempts: IeltsAttempt[
   const bands = attempts.filter((a) => a.band !== null).map((a) => Number(a.band));
   const best = bands.length ? Math.max(...bands) : null;
   return (
-    <div className="mb-5 flex flex-col gap-3 rounded-xl border bg-card p-3 sm:flex-row sm:items-center sm:justify-between sm:px-4">
+    <div className="mb-6 flex flex-col gap-3 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-orange-50 to-rose-50 p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5 dark:border-amber-500/30 dark:from-amber-500/10 dark:via-orange-500/5 dark:to-rose-500/10">
       <div className="flex items-start gap-3">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+        <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-amber-700 text-white">
           <Target className="size-5" aria-hidden />
         </span>
         <div className="text-sm">
           <p className="font-semibold">
             Mục tiêu band {fmtBand(goal.band)} · {skill === 'reading' ? 'Reading' : 'Listening'}
-            {goal.isDefault && (
-              <Link to="/onboarding" className="ml-2 text-xs font-normal text-primary hover:underline">
-                Đặt mục tiêu của bạn
-              </Link>
-            )}
             {best !== null && <span className="ml-2 font-normal text-muted-foreground">Band tốt nhất: {fmtBand(best)}</span>}
           </p>
           <p className="text-muted-foreground">
@@ -190,122 +201,93 @@ function GoalBanner({ skill, attempts }: { skill: Skill; attempts: IeltsAttempt[
   );
 }
 
-/** Minutes for one part: the test's time shared evenly (Reading 60 min / 3 passages = 20). */
-const partMinutes = (t: PracticeTest) => Math.round(t.minutes / t.parts.length);
-
-const TH = 'px-3 py-2 text-left text-xs font-medium text-muted-foreground';
-const TD = 'px-3 py-2.5 align-top';
-
-/**
- * Single passages / parts as a compact table — on a desktop a table is quicker to scan than a grid of cards.
- * "Lần làm" is the learner's own attempts, not everyone's.
- */
-function PartTable({ rows, unit, stats, loading }: { rows: { t: PracticeTest; p: TestPart; i: number }[]; unit: string; stats: Map<string, PartStat>; loading: boolean }) {
+function Cover({ skill, children }: { skill: Skill; children: ReactNode }) {
+  const Icon = skill === 'reading' ? BookOpen : Headphones;
   return (
-    <div className="overflow-x-auto rounded-xl border bg-card">
-      <table className="w-full text-sm" data-testid="part-table">
-        <thead className="border-b bg-muted/40">
-          <tr>
-            <th className={TH}>Bài</th>
-            <th className={TH}>Dạng câu hỏi</th>
-            <th className={cn(TH, 'text-right')}>Thời lượng</th>
-            <th className={cn(TH, 'text-right')}>Điểm gần nhất</th>
-            <th className={cn(TH, 'text-right')}>Bạn đã làm</th>
-            <th className={TH}>
-              <span className="sr-only">Làm bài</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody className="divide-y">
-          {rows.map(({ t, p, i }) => {
-            const stat = stats.get(p.id);
-            const pct = stat && stat.total ? Math.round((stat.correct / stat.total) * 100) : null;
-            const to = `/ielts/${t.id}?parts=${p.id}&mode=practice`;
-            return (
-              <tr key={p.id} className="group hover:bg-muted/40" data-part={p.id}>
-                <td className={TD}>
-                  <Link to={to} className="font-semibold hover:text-primary hover:underline">
-                    {p.heading}
-                  </Link>
-                  <p className="text-xs text-muted-foreground">
-                    {t.title.replace(/^.*—\s*/, '')} · {unit} {i + 1} · {partQuestions(p).length} câu
-                  </p>
-                </td>
-                <td className={cn(TD, 'text-xs text-muted-foreground')}>{typesOf(p).map((ty) => TYPE_LABEL[ty].en).join(' · ')}</td>
-                <td className={cn(TD, 'whitespace-nowrap text-right tabular-nums')}>{partMinutes(t)} phút</td>
-                <td className={cn(TD, 'text-right tabular-nums')}>
-                  {loading ? '…' : pct === null ? <span className="text-muted-foreground">—</span> : <span className={cn('font-semibold', pct >= 70 ? 'text-success' : '')}>{pct}%</span>}
-                </td>
-                <td className={cn(TD, 'whitespace-nowrap text-right tabular-nums text-muted-foreground')}>{loading ? '…' : stat ? `${stat.tries} lần` : 'Chưa làm'}</td>
-                <td className={cn(TD, 'text-right')}>
-                  <Button asChild size="sm" variant={stat ? 'outline' : 'default'}>
-                    <Link to={to}>{stat ? 'Làm lại' : 'Làm bài'}</Link>
-                  </Button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+    <div className={cn('relative flex h-28 items-center justify-center overflow-hidden bg-gradient-to-br', COVER[skill])}>
+      <Icon className="size-14 text-foreground/10" aria-hidden />
+      {children}
     </div>
   );
 }
 
-function FullTable({ tests, attempts, loading }: { tests: PracticeTest[]; attempts: IeltsAttempt[]; loading: boolean }) {
+function PartCard({ test, part, index, unit, stat, loading }: { test: PracticeTest; part: TestPart; index: number; unit: string; stat?: PartStat; loading: boolean }) {
+  const n = partQuestions(part).length;
+  const pct = stat && stat.total ? Math.round((stat.correct / stat.total) * 100) : null;
   return (
-    <div className="overflow-x-auto rounded-xl border bg-card">
-      <table className="w-full text-sm" data-testid="full-table">
-        <thead className="border-b bg-muted/40">
-          <tr>
-            <th className={TH}>Đề</th>
-            <th className={TH}>Các phần</th>
-            <th className={cn(TH, 'text-right')}>Thời lượng</th>
-            <th className={cn(TH, 'text-right')}>Band tốt nhất</th>
-            <th className={cn(TH, 'text-right')}>Bạn đã làm</th>
-            <th className={TH}>
-              <span className="sr-only">Làm bài</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody className="divide-y">
-          {tests.map((t) => {
-            const mine = attempts.filter((a) => a.test_id === t.id);
-            const best = mine.filter((a) => a.band !== null).sort((a, b) => Number(b.band) - Number(a.band))[0];
-            const all = t.parts.map((p) => p.id).join(',');
-            return (
-              <tr key={t.id} className="hover:bg-muted/40" data-test={t.id}>
-                <td className={cn(TD, 'font-semibold')}>{t.title}</td>
-                <td className={cn(TD, 'text-xs text-muted-foreground')}>
-                  {t.parts.map((p) => (
-                    <span key={p.id} className="block">
-                      {p.title}: {p.heading}
-                    </span>
-                  ))}
-                </td>
-                <td className={cn(TD, 'whitespace-nowrap text-right tabular-nums')}>
-                  <Clock className="mr-1 inline size-3.5 text-muted-foreground" aria-hidden />
-                  {t.minutes} phút
-                </td>
-                <td className={cn(TD, 'text-right font-semibold tabular-nums')}>{loading ? '…' : best ? fmtBand(Number(best.band)) : <span className="font-normal text-muted-foreground">—</span>}</td>
-                <td className={cn(TD, 'whitespace-nowrap text-right tabular-nums text-muted-foreground')}>{loading ? '…' : mine.length ? `${mine.length} lần` : 'Chưa làm'}</td>
-                <td className={cn(TD, 'whitespace-nowrap text-right')}>
-                  <div className="flex justify-end gap-1.5">
-                    <Button asChild size="sm">
-                      <Link to={`/ielts/${t.id}?parts=${all}&mode=exam`}>
-                        <Play /> Thi thử
-                      </Link>
-                    </Button>
-                    <Button asChild size="sm" variant="outline">
-                      <Link to={`/ielts/${t.id}?parts=${all}&mode=practice`}>Luyện tập</Link>
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+    <Link
+      to={`/ielts/${test.id}?parts=${part.id}&mode=practice`}
+      className="group flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      data-part={part.id}
+    >
+      <Cover skill={test.skill}>
+        <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-medium text-white">
+          <HistoryIcon className="size-3" aria-hidden /> {loading ? '…' : stat ? `Bạn đã làm ${stat.tries} lần` : 'Bạn chưa làm'}
+        </span>
+        <span className={cn('absolute bottom-0 left-0 rounded-tr-lg px-2.5 py-1 text-xs font-semibold text-white', PART_COLOR[index % PART_COLOR.length])}>
+          {unit} {index + 1}
+        </span>
+        {pct !== null && (
+          <span className={cn('absolute right-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold', pct >= 70 ? 'bg-emerald-700 text-white' : 'bg-white/90 text-slate-900')}>{pct}% đúng</span>
+        )}
+      </Cover>
+      <div className="flex flex-1 flex-col gap-2 p-3">
+        <p className="line-clamp-2 text-sm font-semibold group-hover:text-amber-700 dark:group-hover:text-amber-300">
+          <span className="text-muted-foreground">[{test.title.replace(/^.*—\s*/, '')}]</span> {part.heading}
+        </p>
+        <ul className="space-y-0.5 text-xs text-muted-foreground">
+          {typesOf(part).map((ty) => (
+            <li key={ty}>· {TYPE_LABEL[ty].en}</li>
+          ))}
+        </ul>
+        <p className="mt-auto flex items-center justify-between pt-1 text-xs text-muted-foreground">
+          <span>{n} câu</span>
+          <span className="font-medium text-amber-700 dark:text-amber-300">{stat ? 'Làm lại →' : 'Làm bài →'}</span>
+        </p>
+      </div>
+    </Link>
+  );
+}
+
+function FullCard({ test, attempts, loading }: { test: PracticeTest; attempts: IeltsAttempt[]; loading: boolean }) {
+  const best = attempts.filter((a) => a.band !== null).sort((a, b) => Number(b.band) - Number(a.band))[0];
+  const all = test.parts.map((p) => p.id).join(',');
+  return (
+    <Card className="flex flex-col overflow-hidden" data-test={test.id}>
+      <Cover skill={test.skill}>
+        <span className="absolute bottom-0 left-0 rounded-tr-lg bg-amber-700 px-2.5 py-1 text-xs font-semibold text-white">Full đề</span>
+        {loading ? null : best ? (
+          <Badge className="absolute right-2 top-2">Band tốt nhất {fmtBand(Number(best.band))}</Badge>
+        ) : (
+          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[11px] font-medium text-foreground">{attempts.length ? `${attempts.length} lần luyện` : 'Chưa làm'}</span>
+        )}
+      </Cover>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base">{test.title}</CardTitle>
+        <CardDescription className="flex items-center gap-1.5">
+          <Clock className="size-3.5" aria-hidden /> {test.minutes} phút · 40 câu · {test.parts.length} {test.skill === 'reading' ? 'passages' : 'parts'}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-1 flex-col justify-between gap-4">
+        <ul className="space-y-0.5 text-sm text-muted-foreground">
+          {test.parts.map((p) => (
+            <li key={p.id}>
+              {p.title}: {p.heading}
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-wrap gap-2">
+          <Button asChild>
+            <Link to={`/ielts/${test.id}?parts=${all}&mode=exam`}>
+              <Play /> Thi thử
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to={`/ielts/${test.id}?parts=${all}&mode=practice`}>Luyện tập</Link>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
   );
 }
 

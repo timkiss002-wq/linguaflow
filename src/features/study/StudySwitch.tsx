@@ -18,7 +18,7 @@ export function StudySwitch({ compact = false }: { compact?: boolean }) {
   };
   return (
     <div className="flex items-center gap-2" data-testid="study-switch">
-      <span className={cn('hidden text-sm font-medium text-muted-foreground', compact ? '2xl:inline' : 'md:inline')}>Hôm nay học</span>
+      {!compact && <span className="hidden text-sm font-medium text-muted-foreground md:inline">Hôm nay học</span>}
       <div className="flex rounded-full border bg-muted/60 p-0.5" role="radiogroup" aria-label="Hôm nay học ngôn ngữ nào">
         {(['en', 'zh'] as const).map((l) => (
           <button

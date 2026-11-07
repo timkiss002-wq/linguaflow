@@ -19,7 +19,7 @@ export function TopNav() {
   const sections = sectionsFor(lang);
   const due = useDueToday();
   return (
-    <nav aria-label="Menu chính" className="flex min-w-0 items-center gap-0.5">
+    <nav aria-label="Menu chính" className="flex min-w-0 items-center gap-0.5 whitespace-nowrap">
       {sections.map((s) => {
         const on = found?.id === s.id;
         const tab = on ? tabFor(s, pathname) : undefined;
@@ -27,9 +27,9 @@ export function TopNav() {
         return (
           <div key={s.id} className={cn('flex shrink-0 items-center rounded-full transition-colors', on ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground')}>
             <NavLink to={s.to} title={s.hint} aria-current={on ? 'page' : undefined} className={cn('flex items-center gap-1.5 py-1.5 pl-3 text-sm font-medium', many ? 'pr-1' : 'pr-3', on && 'font-semibold')}>
-              <s.icon className="size-4" aria-hidden />
+              <s.icon className="hidden size-4 xl:block" aria-hidden />
               {s.label}
-              {on && tab && many && <span className="font-normal text-primary/80">· {tab.label}</span>}
+              {on && tab && many && <span className="hidden font-normal text-primary/80 2xl:inline">· {tab.label}</span>}
               {s.id === 'words' && !!due && (
                 <span className="rounded-full bg-primary px-1.5 text-[11px] font-semibold leading-[18px] text-primary-foreground tabular-nums" title={`${due} thẻ cần ôn hôm nay`}>
                   {due}
