@@ -32,6 +32,9 @@ const WritingMistakesPage = lazy(() => import('@/pages/WritingMistakesPage'));
 const GuidedPracticePage = lazy(() => import('@/pages/GuidedPracticePage'));
 const IeltsTestsPage = lazy(() => import('@/pages/IeltsTestsPage'));
 const IeltsTestPage = lazy(() => import('@/pages/IeltsTestPage'));
+const Passage3Page = lazy(() => import('@/pages/Passage3Page'));
+const Passage3PracticePage = lazy(() => import('@/pages/Passage3PracticePage'));
+const Passage3ImportPage = lazy(() => import('@/pages/Passage3ImportPage'));
 const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'));
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'));
 const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
@@ -66,6 +69,9 @@ export const router = createBrowserRouter([
           { path: '/ielts', element: <Navigate to="/ielts/reading" replace /> },
           { path: '/ielts/reading', element: page(<IeltsTestsPage skill="reading" />) },
           { path: '/ielts/listening', element: page(<IeltsTestsPage skill="listening" />) },
+          { path: '/ielts/passage3', element: page(<Passage3Page />) },
+          { path: '/ielts/passage3/edit/:key', element: page(<Passage3ImportPage />) },
+          { path: '/ielts/passage3/:setId', element: page(<Passage3PracticePage />) },
           { path: '/ielts/:testId', element: page(<IeltsTestPage />) },
           { path: '/grammar', element: page(<GrammarPage />) },
           { path: '/grammar/:topicId', element: page(<GrammarDrillPage />) },
