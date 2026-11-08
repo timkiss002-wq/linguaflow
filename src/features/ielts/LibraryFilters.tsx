@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 export function FilterPanel({ active, children }: { active: number; children: ReactNode }) {
   const wide = useMediaQuery('(min-width: 1024px)');
   return wide ? (
-    <aside className="space-y-4 lg:sticky lg:top-40 lg:self-start" aria-label="Bộ lọc">
+    <aside className="space-y-4 lg:sticky lg:top-16 lg:max-h-[calc(100vh-5rem)] lg:self-start lg:overflow-y-auto lg:pb-4 lg:pr-1" aria-label="Bộ lọc">
       <p className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
         <Filter className="size-4" aria-hidden /> Bộ lọc
       </p>

@@ -101,8 +101,8 @@ export default function TodayPage() {
             {date} · {left ? `còn ${left} việc` : 'đã xong cả 3 việc'}
           </p>
         </div>
-        <Link to="/ielts/passage3" className="text-sm font-medium text-primary hover:underline">
-          Thư viện Passage 3 →
+        <Link to="/ielts/reading?format=p3" className="text-sm font-medium text-primary hover:underline">
+          Thư viện Reading →
         </Link>
       </header>
 
@@ -286,7 +286,7 @@ function ReadingPreview({ set, pick, onPick, done }: { set: P3Set | undefined; p
               <Link to={`/ielts/passage3/${set.id}`}>{sum && sum.checked > 0 && !fin ? 'Làm tiếp' : 'Bắt đầu'}</Link>
             </Button>
             <Button asChild variant="ghost" className="ml-auto">
-              <Link to="/ielts/passage3">Chọn bài khác</Link>
+              <Link to="/ielts/reading?format=p3">Chọn bài khác</Link>
             </Button>
           </Actions>
         </>
@@ -295,7 +295,7 @@ function ReadingPreview({ set, pick, onPick, done }: { set: P3Set | undefined; p
           <p className="text-sm text-muted-foreground">Mở sách Cambridge, dán Passage 3 và 4–5 câu hỏi là luyện được ngay.</p>
           <Actions>
             <Button asChild variant="outline">
-              <Link to="/ielts/passage3?tab=cambridge">Chọn đề Cambridge</Link>
+              <Link to="/ielts/reading?format=cam">Chọn đề Cambridge</Link>
             </Button>
           </Actions>
         </>

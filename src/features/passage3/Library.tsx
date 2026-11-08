@@ -1,25 +1,23 @@
 import { BookMarked, CheckCircle2, Copy, Download, Flame, HelpCircle, NotebookPen, Plus, Upload } from 'lucide-react';
-import { useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { useRef, useState, useSyncExternalStore } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Applied, SetCard } from '@/features/passage3/SetCard';
+import { SetCard } from '@/features/passage3/SetCard';
 import { useImportWords, useVocabulary } from '@/features/vocabulary/api';
-import { SkillPanel } from '@/features/passage3/SkillPanel';
-import { SKILLS, skillById, skillProgress } from '@/lib/ielts/skills';
 import { useP3Store } from '@/features/passage3/useP3Store';
 import { activeDays, dailyDone, dailyVersion, subscribeDaily } from '@/lib/daily';
 import {
   CAM_BOOKS,
   CAM_INDEX,
-  OWN_SETS,
   TYPE_INFO,
   exportBackup,
   getImports,
   getProgress,
   importBackup,
   importFor,
+  filterSets,
   notebook,
   notesToVocab,
   setSummary,
@@ -31,150 +29,35 @@ import {
 } from '@/lib/ielts/passage3';
 import { cn } from '@/lib/utils';
 
-type Tab = 'sets' | 'cambridge' | 'notes' | 'skill';
-type TypeFilter = 'all' | P3Type;
-type StatusFilter = 'all' | 'todo' | 'done';
-
 /**
- * /ielts/passage3 — the Reading Passage 3 library. Filters sit in a left column (source, question type, status), the
- * sets fill a grid on the right. Today's three tasks live on "Hôm nay" (/dashboard).
+ * Pieces of the Passage 3 library, shown inside Luyện thi → Reading (/ielts/reading?format=p3|cam|notes):
+ * the set grid, the Cambridge 10–20 index, the paraphrase notebook, the streak chip and the how-to dialog.
  */
-export default function Passage3Page() {
+
+/** Streak of days with a finished set or daily task. */
+export function P3Streak() {
   useP3Store();
   useSyncExternalStore(subscribeDaily, dailyVersion);
-  const [params, setParams] = useSearchParams();
-  const skill = skillById(params.get('skill'));
-  const tab = (skill ? 'skill' : ['sets', 'cambridge', 'notes'].includes(params.get('tab') ?? '') ? params.get('tab') : 'sets') as Tab;
-  const setTab = (t: Tab) => setParams(t === 'sets' ? {} : { tab: t }, { replace: true });
-  const openSkill = (id: string) => setParams({ skill: id }, { replace: true });
-  const sp = skillProgress();
-  const [type, setType] = useState<TypeFilter>('all');
-  const [status, setStatus] = useState<StatusFilter>('all');
   const p = getProgress();
-  const notes = notebook();
   const done = dailyDone();
   const days = [...new Set([...p.days, ...activeDays()])];
-  const doneCount = OWN_SETS.filter((s) => p.done[s.id]).length;
-
   return (
-    <div className="space-y-5">
-      <header className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight">Reading Passage 3</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Mỗi ngày 4–5 câu, tô cặp từ đồng nghĩa giữa câu hỏi và bài đọc · đã làm {doneCount}/{OWN_SETS.length} bài
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1.5 text-sm" title="Số ngày luyện liên tiếp">
-            <Flame className={cn('size-4', done.length ? 'text-orange-500' : 'text-muted-foreground')} aria-hidden />
-            <b>{streak(days)}</b> ngày
-          </span>
-          <HowTo />
-        </div>
-      </header>
-
-      <div className="grid items-start gap-6 lg:grid-cols-[248px_minmax(0,1fr)]">
-        <aside className="space-y-5 lg:sticky lg:top-16" aria-label="Bộ lọc">
-          <FilterGroup title="Nguồn">
-            <FilterItem on={tab === 'sets'} onClick={() => setTab('sets')} n={OWN_SETS.length}>
-              Bài soạn sẵn
-            </FilterItem>
-            <FilterItem on={tab === 'cambridge'} onClick={() => setTab('cambridge')} n={`${getImports().filter((s) => s.camId).length}/${CAM_INDEX.length}`}>
-              Cambridge 10–20
-            </FilterItem>
-            <FilterItem on={tab === 'notes'} onClick={() => setTab('notes')} n={notes.length}>
-              Sổ paraphrase
-            </FilterItem>
-            <Link to="/ielts/reading" className="flex items-center justify-between rounded-md px-2.5 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">
-              Đề Reading đầy đủ <span aria-hidden>→</span>
-            </Link>
-          </FilterGroup>
-          {tab === 'sets' && (
-            <>
-              <FilterGroup title="Dạng câu hỏi">
-                {(['all', 'tfng', 'ynng', 'mcq', 'gap'] as TypeFilter[]).map((t) => (
-                  <FilterItem key={t} on={type === t} onClick={() => setType(t)} n={t === 'all' ? OWN_SETS.length : OWN_SETS.filter((s) => s.type === t).length}>
-                    {t === 'all' ? 'Tất cả' : TYPE_INFO[t].label}
-                  </FilterItem>
-                ))}
-              </FilterGroup>
-            </>
-          )}
-          <FilterGroup title="Kỹ năng nên học">
-            {SKILLS.map((k) => (
-              <FilterItem key={k.id} on={skill?.id === k.id} onClick={() => openSkill(k.id)} n={sp[k.id] ? `${sp[k.id]!.best}/${sp[k.id]!.total}` : k.drills.length}>
-                {k.name}
-              </FilterItem>
-            ))}
-          </FilterGroup>
-          {tab === 'sets' && (
-            <>
-              <FilterGroup title="Trạng thái">
-                {(
-                  [
-                    ['all', 'Tất cả', OWN_SETS.length],
-                    ['todo', 'Chưa làm', OWN_SETS.length - doneCount],
-                    ['done', 'Đã làm', doneCount],
-                  ] as [StatusFilter, string, number][]
-                ).map(([k, label, n]) => (
-                  <FilterItem key={k} on={status === k} onClick={() => setStatus(k)} n={n}>
-                    {label}
-                  </FilterItem>
-                ))}
-              </FilterGroup>
-            </>
-          )}
-        </aside>
-        <div className="min-w-0">
-          {tab === 'sets' && <OwnSets type={type} status={status} />}
-          {tab === 'cambridge' && <Cambridge />}
-          {tab === 'notes' && <Notes />}
-          {skill && <SkillPanel skill={skill} applied={<Applied types={skill.types} />} />}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function FilterGroup({ title, children }: { title: string; children: ReactNode }) {
-  return (
-    <div>
-      <p className="mb-1 px-2.5 text-xs font-semibold text-muted-foreground">{title}</p>
-      <div className="space-y-0.5">{children}</div>
-    </div>
-  );
-}
-
-function FilterItem({ on, onClick, n, children }: { on: boolean; onClick: () => void; n: number | string; children: ReactNode }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={on}
-      className={cn(
-        'flex w-full items-center justify-between gap-2 rounded-md px-2.5 py-1.5 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-        on ? 'bg-accent font-semibold text-foreground' : 'text-muted-foreground hover:bg-muted hover:text-foreground',
-      )}
-    >
-      <span className="truncate">{children}</span>
-      <span className="shrink-0 text-xs tabular-nums text-muted-foreground">{n}</span>
-    </button>
+    <span className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1.5 text-sm" title="Số ngày luyện liên tiếp">
+      <Flame className={cn('size-4', done.length ? 'text-orange-500' : 'text-muted-foreground')} aria-hidden />
+      <b>{streak(days)}</b> ngày
+    </span>
   );
 }
 
 /** cards shown before "Xem thêm" (five rows of three) */
 const PAGE = 15;
 
-function OwnSets({ type, status }: { type: TypeFilter; status: StatusFilter }) {
+export function P3Sets({ types, status }: { types: P3Type[]; status: 'all' | 'todo' | 'done' }) {
+  useP3Store();
   const [shown, setShown] = useState(PAGE);
-  const p = getProgress();
-  const list = OWN_SETS.filter((s) => (type === 'all' || s.type === type) && (status === 'all' || (status === 'done') === !!p.done[s.id]));
+  const list = filterSets(types, status);
   return (
-    <div className="space-y-4" key={`${type}-${status}`}>
-      <p className="text-sm text-muted-foreground">
-        <b className="text-foreground">{list.length}</b> bài · soạn riêng theo độ khó Passage 3, có key từng cặp từ và giải thích tiếng Việt
-      </p>
+    <div className="space-y-4" key={`${types.join()}-${status}`}>
       {list.length ? (
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 2xl:grid-cols-4">
           {list.slice(0, shown).map((s) => (
@@ -218,7 +101,8 @@ function SetRow({ set }: { set: P3Set }) {
   );
 }
 
-function Cambridge() {
+export function Cambridge() {
+  useP3Store();
   const [book, setBook] = useState<number>(() => {
     // the book last worked on, else the newest book whose titles are all listed
     const last = getImports()
@@ -347,7 +231,8 @@ function Cambridge() {
   );
 }
 
-function Notes() {
+export function Notes() {
+  useP3Store();
   const rows = notebook();
   const vocab = useVocabulary();
   const imp = useImportWords();
@@ -445,7 +330,7 @@ function Notes() {
   );
 }
 
-function HowTo() {
+export function HowTo() {
   return (
     <Dialog>
       <DialogTrigger asChild>

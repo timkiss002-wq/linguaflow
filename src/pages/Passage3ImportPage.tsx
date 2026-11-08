@@ -1,6 +1,6 @@
 import { AlertTriangle, ArrowLeft, CheckCircle2, Trash2 } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -19,6 +19,8 @@ const EXAMPLE: Record<P3Type, string> = {
 /** /ielts/passage3/edit/:key — paste a Passage 3 from the learner's own Cambridge book (key = cam10-t1…, "new", or a saved set id). */
 export default function Passage3ImportPage() {
   const { key = 'new' } = useParams();
+  // ?from=YouPass — the site the learner is copying from ("Đề trên web khác")
+  const from = new URLSearchParams(useLocation().search).get('from');
   const navigate = useNavigate();
   const cam = CAM_INDEX.find((c) => c.id === key);
   const existing = cam ? importFor(cam.id) : getImports().find((s) => s.id === key);
@@ -41,12 +43,12 @@ export default function Passage3ImportPage() {
 
   return (
     <div className="mx-auto max-w-5xl space-y-5">
-      <Link to="/ielts/passage3?tab=cambridge" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-3.5" aria-hidden /> Cambridge 10–20
+      <Link to={from ? '/ielts/reading?format=web' : '/ielts/reading?format=cam'} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-3.5" aria-hidden /> {from ? 'Đề trên web khác' : 'Cambridge 10–20'}
       </Link>
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{cam ? `Cambridge ${cam.book} · Test ${cam.test} · Passage 3` : 'Đề khác'}</p>
-        <h1 className="text-2xl font-bold tracking-tight">{existing ? 'Sửa đề' : 'Nhập đề từ sách của bạn'}</h1>
+        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{cam ? `Cambridge ${cam.book} · Test ${cam.test} · Passage 3` : from ? `Đề từ ${from}` : 'Đề khác'}</p>
+        <h1 className="text-2xl font-bold tracking-tight">{existing ? 'Sửa đề' : from ? 'Dán đề bạn đang làm' : 'Nhập đề từ sách của bạn'}</h1>
         <p className="mt-1 text-sm text-muted-foreground">Chỉ cần một đoạn của Passage 3 và 4–5 câu hỏi liên quan đến đoạn đó. Đề được lưu trên trình duyệt này, không gửi lên server.</p>
       </div>
 
@@ -114,7 +116,7 @@ export default function Passage3ImportPage() {
                 onClick={() => {
                   deleteImport(existing.id);
                   toast('Đã xoá đề.');
-                  navigate('/ielts/passage3?tab=cambridge');
+                  navigate("/ielts/reading?format=cam");
                 }}
               >
                 <Trash2 /> Xoá đề

@@ -1,6 +1,6 @@
 import { BookOpen, Clock, Filter, Headphones, History as HistoryIcon, Play, RotateCcw, Target } from 'lucide-react';
 import { useMemo, type ReactNode } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
 import { ErrorState } from '@/components/ErrorState';
 import { Badge } from '@/components/ui/badge';
@@ -12,6 +12,10 @@ import { TESTS, TYPE_LABEL, fmtBand, partQuestions, statsByType, testById, type 
 import { FilterBox, FilterPanel, Radio } from '@/features/ielts/LibraryFilters';
 import { useIeltsTarget } from '@/features/learner/useIeltsTarget';
 import { Applied } from '@/features/passage3/SetCard';
+import { Cambridge, HowTo, Notes, P3Sets, P3Streak } from '@/features/passage3/Library';
+import { useP3Store } from '@/features/passage3/useP3Store';
+import { WebSources } from '@/features/passage3/WebSources';
+import { CAM_INDEX, OWN_SETS, TYPE_INFO as P3_TYPE, filterSets, getImports, notebook, type P3Type } from '@/lib/ielts/passage3';
 import { SkillPanel } from '@/features/passage3/SkillPanel';
 import { SKILLS, skillById, skillProgress } from '@/lib/ielts/skills';
 import { cn } from '@/lib/utils';
@@ -22,7 +26,9 @@ import { cn } from '@/lib/utils';
  * Filters live in the URL (?format=full&status=todo&type=tfng,gap) so a filtered list can be bookmarked.
  */
 
-type Format = 'part' | 'full';
+/** part/full: tests from the bank; p3: short Passage 3 sets; cam: Cambridge 10–20 pasted by the learner; web: other sites; notes: paraphrase notebook */
+type Format = 'part' | 'full' | 'p3' | 'cam' | 'web' | 'notes';
+const READING_ONLY: Format[] = ['p3', 'cam', 'web', 'notes'];
 type Status = 'all' | 'todo' | 'done';
 
 const SKILL = {
@@ -48,11 +54,12 @@ interface PartStat {
 export default function IeltsTestsPage({ skill }: { skill: Skill }) {
   const attempts = useIeltsAttempts();
   const [params, setParams] = useSearchParams();
-  const navigate = useNavigate();
   // Reading only: a skill from "Kỹ năng nên học" replaces the library on the right (?skill=pairing)
   const learn = skill === 'reading' ? skillById(params.get('skill')) : undefined;
   const sp = skillProgress();
-  const format: Format = params.get('format') === 'full' ? 'full' : 'part';
+  useP3Store();
+  const raw = params.get('format') as Format | null;
+  const format: Format = raw === 'full' || (skill === 'reading' && raw && READING_ONLY.includes(raw)) ? raw : 'part';
   const status: Status = params.get('status') === 'todo' ? 'todo' : params.get('status') === 'done' ? 'done' : 'all';
   const picked = (params.get('type') ?? '').split(',').filter(Boolean) as QuestionType[];
   const set = (k: string, v: string | null) =>
@@ -87,62 +94,96 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
 
   const partCards = tests.flatMap((t) => t.parts.map((p, i) => ({ t, p, i }))).filter(({ p }) => keepType(typesOf(p)) && keepStatus(partStats.has(p.id)));
   const fullCards = tests.filter((t) => !t.pack && keepType(t.parts.flatMap(typesOf)) && keepStatus(mine.some((a) => a.test_id === t.id && a.parts.length === t.parts.length)));
-  const count = format === 'full' ? fullCards.length : partCards.length;
+  const p3Types = picked.filter((t) => t in P3_TYPE) as unknown as P3Type[];
+  const p3List = format === 'p3' ? filterSets(p3Types, status) : [];
+  const count = format === 'full' ? fullCards.length : format === 'p3' ? p3List.length : partCards.length;
   const filtered = status !== 'all' || picked.length > 0;
   const S = SKILL[skill];
-  const active = (format === 'full' ? 1 : 0) + (status !== 'all' ? 1 : 0) + picked.length;
+  const active = (format === 'part' ? 0 : 1) + (status !== 'all' ? 1 : 0) + picked.length;
+  const notes = skill === 'reading' ? notebook() : [];
+  const view = learn ? 'skill' : format;
+  const listView = !learn && (format === 'part' || format === 'full' || format === 'p3');
+  const go = (f: Format) => setParams(f === 'part' ? {} : { format: f }, { replace: true });
+  const typeOptions: [string, string][] = format === 'p3' ? (Object.keys(P3_TYPE) as P3Type[]).map((t) => [t, P3_TYPE[t].label]) : allTypes.map((t) => [t, TYPE_LABEL[t].en]);
 
   const filterBody = (
     <>
-          <FilterBox title={`${S.label}`} icon={<S.icon className="size-4" aria-hidden />} highlight>
-        <Radio name="format" checked={!learn && format === 'part'} onChange={() => setParams({}, { replace: true })} label="Bài lẻ" hint={`Từng ${S.unit.toLowerCase()}`} />
-        <Radio name="format" checked={!learn && format === 'full'} onChange={() => setParams({ format: 'full' }, { replace: true })} label="Full đề" hint="40 câu, có band" />
-        {skill === 'reading' && <Radio name="format" checked={false} onChange={() => navigate('/ielts/passage3')} label="Passage 3 hằng ngày" />}
+      <FilterBox title={skill === 'reading' ? 'Luyện đề' : S.label} icon={<S.icon className="size-4" aria-hidden />} highlight>
+        <Radio name="format" checked={view === 'part'} onChange={() => go('part')} label="Bài lẻ" hint={`Từng ${S.unit.toLowerCase()}`} />
+        <Radio name="format" checked={view === 'full'} onChange={() => go('full')} label="Full đề" hint="40 câu, có band" />
+        {skill === 'reading' && (
+          <>
+            <Radio name="format" checked={view === 'p3'} onChange={() => go('p3')} label="Passage 3 ngắn" hint={`${OWN_SETS.length} bài`} />
+            <Radio name="format" checked={view === 'cam'} onChange={() => go('cam')} label="Cambridge 10–20" />
+            <Radio name="format" checked={view === 'web'} onChange={() => go('web')} label="Đề trên web khác" />
+          </>
+        )}
       </FilterBox>
-      <FilterBox title="Trạng thái">
-        <Radio name="status" checked={status === 'all'} onChange={() => set('status', null)} label="Tất cả" />
-        <Radio name="status" checked={status === 'todo'} onChange={() => set('status', 'todo')} label="Chưa làm" />
-        <Radio name="status" checked={status === 'done'} onChange={() => set('status', 'done')} label="Đã làm" />
-      </FilterBox>
-      <FilterBox title="Dạng câu hỏi">
-        {allTypes.map((ty) => (
-          <label key={ty} className="flex cursor-pointer items-start gap-2.5 text-sm">
-            <input
-              type="checkbox"
-              className="mt-0.5 size-4 accent-amber-600"
-              checked={picked.includes(ty)}
-              onChange={(e) => set('type', (e.target.checked ? [...picked, ty] : picked.filter((x) => x !== ty)).join(',') || null)}
-            />
-            <span>{TYPE_LABEL[ty].en}</span>
-          </label>
-        ))}
-      </FilterBox>
+      {listView && (
+        <FilterBox title="Trạng thái">
+          <Radio name="status" checked={status === 'all'} onChange={() => set('status', null)} label="Tất cả" />
+          <Radio name="status" checked={status === 'todo'} onChange={() => set('status', 'todo')} label="Chưa làm" />
+          <Radio name="status" checked={status === 'done'} onChange={() => set('status', 'done')} label="Đã làm" />
+        </FilterBox>
+      )}
+      {listView && (
+        <FilterBox title="Dạng câu hỏi">
+          {typeOptions.map(([ty, label]) => (
+            <label key={ty} className="flex cursor-pointer items-start gap-2.5 text-sm">
+              <input
+                type="checkbox"
+                className="mt-0.5 size-4 accent-amber-600"
+                checked={(picked as string[]).includes(ty)}
+                onChange={(e) => set('type', (e.target.checked ? [...picked, ty] : picked.filter((x) => x !== ty)).join(',') || null)}
+              />
+              <span>{label}</span>
+            </label>
+          ))}
+        </FilterBox>
+      )}
       {skill === 'reading' && (
         <FilterBox title="Kỹ năng nên học">
           {SKILLS.map((k) => (
             <Radio
               key={k.id}
-              name="skill"
+              name="format"
               checked={learn?.id === k.id}
-              onChange={() => set('skill', k.id)}
+              onChange={() => setParams({ skill: k.id }, { replace: true })}
               label={k.name}
               hint={sp[k.id] ? `${sp[k.id]!.best}/${sp[k.id]!.total}` : undefined}
             />
           ))}
-          {learn && (
-            <Button variant="ghost" size="sm" className="w-full" onClick={() => set('skill', null)}>
-              Quay lại danh sách đề
-            </Button>
-          )}
         </FilterBox>
       )}
-      {filtered && (
-        <Button variant="ghost" size="sm" className="w-full" onClick={() => setParams(format === 'full' ? { format: 'full' } : {}, { replace: true })}>
+      {skill === 'reading' && (
+        <FilterBox title="Ôn lại">
+          <Radio
+            name="format"
+            checked={view === 'notes'}
+            onChange={() => go('notes')}
+            label="Sổ paraphrase"
+            hint={notes.length ? `${notes.length} cặp · ${notes.filter((n) => n.missed).length} sai` : 'trống'}
+          />
+        </FilterBox>
+      )}
+      {listView && filtered && (
+        <Button variant="ghost" size="sm" className="w-full" onClick={() => go(format)}>
           <RotateCcw /> Xoá bộ lọc
         </Button>
       )}
     </>
   );
+
+  const HEAD: Record<string, { title: string; intro: string; count?: string }> = {
+    part: { title: `Luyện đề IELTS ${S.label}`, intro: S.intro, count: `${count} bài` },
+    full: { title: `Luyện đề IELTS ${S.label}`, intro: S.intro, count: `${count} đề` },
+    p3: { title: 'Passage 3 ngắn', intro: 'Mỗi bài 4–5 câu: ghép từng từ khóa của câu hỏi với cụm cùng nghĩa trong bài, rồi mới chọn đáp án. Có key từng cặp và giải thích tiếng Việt.', count: `${count} bài` },
+    cam: { title: 'Cambridge 10–20', intro: 'Mục lục Passage 3 của Cambridge 10–20. Dán đoạn văn và câu hỏi từ sách của bạn để luyện ghép cặp từ khóa.', count: `${getImports().filter((x) => x.camId).length}/${CAM_INDEX.length} đã dán` },
+    web: { title: 'Đề trên web khác', intro: 'Các trang luyện Reading miễn phí. Làm đề ở đó, hoặc dán một đoạn vào app để luyện ghép cặp từ khóa.' },
+    notes: { title: 'Sổ paraphrase', intro: 'Mọi cặp từ (câu hỏi ⇄ bài đọc) của những bài bạn đã làm xong; cặp ghép sai nằm trên cùng. Thêm vào Sổ từ để ôn theo lịch.' },
+    skill: { title: 'Kỹ năng Reading', intro: 'Học từng kỹ năng: đọc cách làm, luyện nhanh vài câu có giải thích, rồi áp dụng vào bài Passage 3.' },
+  };
+  const head = HEAD[view]!;
 
   return (
     <>
@@ -155,24 +196,28 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
         <section aria-label={`Đề ${S.label}`} className="min-w-0">
           <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
             <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
-              {learn ? 'Kỹ năng Reading' : `Luyện đề IELTS ${S.label}`}
-              {!learn && <span className="ml-2 text-sm font-normal text-muted-foreground">{count} {format === 'full' ? 'đề' : 'bài'}</span>}
+              {head.title}
+              {head.count && <span className="ml-2 text-sm font-normal text-muted-foreground">{head.count}</span>}
             </h1>
-            <p className="max-w-xl text-sm text-muted-foreground">{learn ? 'Học từng kỹ năng: đọc cách làm, luyện nhanh vài câu có giải thích, rồi áp dụng vào bài Passage 3.' : S.intro}</p>
+            {view === 'p3' ? (
+              <div className="flex items-center gap-2">
+                <P3Streak />
+                <HowTo />
+              </div>
+            ) : null}
+            <p className="w-full max-w-3xl text-sm text-muted-foreground">{head.intro}</p>
           </div>
 
           {learn ? (
-            <SkillPanel
-              skill={learn}
-              applied={
-                <>
-                  <Applied types={learn.types} />
-                  <Link to="/ielts/passage3" className="mt-3 inline-block text-sm font-medium text-primary hover:underline">
-                    Xem cả thư viện Passage 3 →
-                  </Link>
-                </>
-              }
-            />
+            <SkillPanel skill={learn} applied={<Applied types={learn.types} />} />
+          ) : format === 'p3' ? (
+            <P3Sets types={p3Types} status={status} />
+          ) : format === 'cam' ? (
+            <Cambridge />
+          ) : format === 'web' ? (
+            <WebSources />
+          ) : format === 'notes' ? (
+            <Notes />
           ) : count === 0 ? (
             <EmptyState icon={Filter} title="Không có bài nào khớp bộ lọc" description="Bỏ bớt dạng câu hỏi hoặc đổi trạng thái để xem thêm." />
           ) : format === 'part' ? (
@@ -194,7 +239,7 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
               <ErrorState error={attempts.error} onRetry={() => attempts.refetch()} />
             </div>
           )}
-          {mine.length > 0 && (
+          {listView && format !== 'p3' && mine.length > 0 && (
             <div className="mt-10 space-y-4">
               <h2 className="text-lg font-semibold">Kết quả của bạn</h2>
               <div className="grid gap-4 lg:grid-cols-2">

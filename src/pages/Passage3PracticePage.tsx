@@ -40,7 +40,7 @@ export default function Passage3PracticePage() {
         description="Bài tự nhập chỉ có trên thiết bị đã nhập nó."
         action={
           <Button asChild variant="outline">
-            <Link to="/ielts/passage3">Về Bài tập hằng ngày</Link>
+            <Link to="/ielts/reading?format=p3">Về Passage 3 ngắn</Link>
           </Button>
         }
       />
@@ -116,8 +116,8 @@ function Session({ set }: { set: P3Set }) {
     <div className="space-y-4" data-p3-session={set.id}>
       {/* top bar */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <Link to="/ielts/passage3" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-3.5" aria-hidden /> Bài tập hằng ngày
+        <Link to="/ielts/reading?format=p3" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-3.5" aria-hidden /> Passage 3 ngắn
         </Link>
         <CoverArt id={set.id} art={set.art} className="hidden h-10 w-12 shrink-0 rounded-md sm:block" />
         <div className="order-last min-w-0 basis-full sm:order-none sm:basis-auto sm:flex-1">
@@ -271,7 +271,7 @@ function Session({ set }: { set: P3Set }) {
               >
                 <RotateCcw /> Làm lại
               </Button>
-              <Button size="sm" variant="secondary" onClick={() => navigate('/ielts/passage3')}>
+              <Button size="sm" variant="secondary" onClick={() => navigate('/ielts/reading?format=p3')}>
                 Về trang chính
               </Button>
             </div>
