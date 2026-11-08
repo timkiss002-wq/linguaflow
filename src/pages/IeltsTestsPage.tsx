@@ -1,6 +1,6 @@
 import { BookOpen, Clock, Filter, Headphones, History as HistoryIcon, Play, RotateCcw, Target } from 'lucide-react';
 import { useMemo, type ReactNode } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
 import { ErrorState } from '@/components/ErrorState';
 import { Badge } from '@/components/ui/badge';
@@ -11,6 +11,9 @@ import { useIeltsAttempts, type IeltsAttempt } from '@/features/ielts/api';
 import { TESTS, TYPE_LABEL, fmtBand, partQuestions, statsByType, testById, type PracticeTest, type QuestionType, type Skill, type TestPart } from '@/lib/ielts/tests';
 import { FilterBox, FilterPanel, Radio } from '@/features/ielts/LibraryFilters';
 import { useIeltsTarget } from '@/features/learner/useIeltsTarget';
+import { Applied } from '@/features/passage3/SetCard';
+import { SkillPanel } from '@/features/passage3/SkillPanel';
+import { SKILLS, skillById, skillProgress } from '@/lib/ielts/skills';
 import { cn } from '@/lib/utils';
 
 /**
@@ -45,6 +48,10 @@ interface PartStat {
 export default function IeltsTestsPage({ skill }: { skill: Skill }) {
   const attempts = useIeltsAttempts();
   const [params, setParams] = useSearchParams();
+  const navigate = useNavigate();
+  // Reading only: a skill from "Kỹ năng nên học" replaces the library on the right (?skill=pairing)
+  const learn = skill === 'reading' ? skillById(params.get('skill')) : undefined;
+  const sp = skillProgress();
   const format: Format = params.get('format') === 'full' ? 'full' : 'part';
   const status: Status = params.get('status') === 'todo' ? 'todo' : params.get('status') === 'done' ? 'done' : 'all';
   const picked = (params.get('type') ?? '').split(',').filter(Boolean) as QuestionType[];
@@ -88,8 +95,9 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
   const filterBody = (
     <>
           <FilterBox title={`${S.label}`} icon={<S.icon className="size-4" aria-hidden />} highlight>
-        <Radio name="format" checked={format === 'part'} onChange={() => set('format', null)} label="Bài lẻ" hint={`Từng ${S.unit.toLowerCase()}`} />
-        <Radio name="format" checked={format === 'full'} onChange={() => set('format', 'full')} label="Full đề" hint="40 câu, có band" />
+        <Radio name="format" checked={!learn && format === 'part'} onChange={() => setParams({}, { replace: true })} label="Bài lẻ" hint={`Từng ${S.unit.toLowerCase()}`} />
+        <Radio name="format" checked={!learn && format === 'full'} onChange={() => setParams({ format: 'full' }, { replace: true })} label="Full đề" hint="40 câu, có band" />
+        {skill === 'reading' && <Radio name="format" checked={false} onChange={() => navigate('/ielts/passage3')} label="Passage 3 hằng ngày" />}
       </FilterBox>
       <FilterBox title="Trạng thái">
         <Radio name="status" checked={status === 'all'} onChange={() => set('status', null)} label="Tất cả" />
@@ -109,6 +117,25 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
           </label>
         ))}
       </FilterBox>
+      {skill === 'reading' && (
+        <FilterBox title="Kỹ năng nên học">
+          {SKILLS.map((k) => (
+            <Radio
+              key={k.id}
+              name="skill"
+              checked={learn?.id === k.id}
+              onChange={() => set('skill', k.id)}
+              label={k.name}
+              hint={sp[k.id] ? `${sp[k.id]!.best}/${sp[k.id]!.total}` : undefined}
+            />
+          ))}
+          {learn && (
+            <Button variant="ghost" size="sm" className="w-full" onClick={() => set('skill', null)}>
+              Quay lại danh sách đề
+            </Button>
+          )}
+        </FilterBox>
+      )}
       {filtered && (
         <Button variant="ghost" size="sm" className="w-full" onClick={() => setParams(format === 'full' ? { format: 'full' } : {}, { replace: true })}>
           <RotateCcw /> Xoá bộ lọc
@@ -128,13 +155,25 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
         <section aria-label={`Đề ${S.label}`} className="min-w-0">
           <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
             <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
-              Luyện đề IELTS {S.label}
-              <span className="ml-2 text-sm font-normal text-muted-foreground">{count} {format === 'full' ? 'đề' : 'bài'}</span>
+              {learn ? 'Kỹ năng Reading' : `Luyện đề IELTS ${S.label}`}
+              {!learn && <span className="ml-2 text-sm font-normal text-muted-foreground">{count} {format === 'full' ? 'đề' : 'bài'}</span>}
             </h1>
-            <p className="max-w-xl text-sm text-muted-foreground">{S.intro}</p>
+            <p className="max-w-xl text-sm text-muted-foreground">{learn ? 'Học từng kỹ năng: đọc cách làm, luyện nhanh vài câu có giải thích, rồi áp dụng vào bài Passage 3.' : S.intro}</p>
           </div>
 
-          {count === 0 ? (
+          {learn ? (
+            <SkillPanel
+              skill={learn}
+              applied={
+                <>
+                  <Applied types={learn.types} />
+                  <Link to="/ielts/passage3" className="mt-3 inline-block text-sm font-medium text-primary hover:underline">
+                    Xem cả thư viện Passage 3 →
+                  </Link>
+                </>
+              }
+            />
+          ) : count === 0 ? (
             <EmptyState icon={Filter} title="Không có bài nào khớp bộ lọc" description="Bỏ bớt dạng câu hỏi hoặc đổi trạng thái để xem thêm." />
           ) : format === 'part' ? (
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
