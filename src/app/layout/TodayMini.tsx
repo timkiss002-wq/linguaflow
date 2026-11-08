@@ -13,12 +13,12 @@ export function TodayChip() {
   const done = minutes >= goal;
   return (
     <span
-      className="flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1 text-xs ring-1 ring-orange-100 dark:bg-orange-500/10 dark:ring-orange-500/20"
+      className="flex h-8 items-center gap-2 rounded-full border bg-card px-3 text-xs"
       data-testid="today-mini"
       title={`Chuỗi ${streak} ngày · hôm nay ${minutes}/${goal} phút`}
     >
-      <span className="flex items-center gap-1 font-semibold text-orange-700 dark:text-orange-300">
-        <Flame className="size-3.5" aria-hidden /> {streak}
+      <span className="flex items-center gap-1 font-semibold">
+        <Flame className="size-3.5 text-orange-500" aria-hidden /> {streak}
       </span>
       <span className={done ? 'font-medium text-emerald-700 dark:text-emerald-400' : 'text-muted-foreground tabular-nums'}>
         {minutes}/{goal} phút

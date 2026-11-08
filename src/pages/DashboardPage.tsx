@@ -20,6 +20,7 @@ import { cn } from '@/lib/utils';
 import { useQuery } from '@tanstack/react-query';
 import { useStudyLanguage } from '@/features/study/context';
 import { getSupabase } from '@/lib/supabase';
+import TodayPage from '@/pages/TodayPage';
 
 function greeting(hour: number) {
   if (hour < 11) return 'Chào buổi sáng';
@@ -84,7 +85,13 @@ function LanguageCard({ language }: { language: 'en' | 'zh' }) {
   );
 }
 
+/** English opens on "Hôm nay" (today's three tasks); Chinese keeps the stats dashboard. */
 export default function DashboardPage() {
+  const { lang } = useStudyLanguage();
+  return lang === 'en' ? <TodayPage /> : <ClassicDashboard />;
+}
+
+function ClassicDashboard() {
   const profile = useProfile();
   const summary = useDashboardSummary();
   const [lang] = useStatsLanguage();
@@ -105,15 +112,15 @@ export default function DashboardPage() {
   // the language being studied lives in the header switch.
   return (
     <>
-      <section className="mb-6 flex flex-col gap-5 rounded-2xl bg-gradient-to-br from-teal-700 via-teal-700 to-emerald-700 p-6 text-white shadow-lift sm:flex-row sm:items-center sm:justify-between sm:p-7 dark:from-teal-800 dark:via-teal-800 dark:to-emerald-700">
+      <section className="mb-6 flex flex-col gap-5 rounded-xl border bg-card p-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">
-          <p className="text-sm font-medium text-teal-50/90">{new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}</p>
+          <p className="text-sm font-medium text-muted-foreground">{new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}</p>
           <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{profile.data ? `${greeting(new Date().getHours())}, ${profile.data.display_name}` : 'Trang chủ'}</h1>
           <div className="mt-4">
             {next === 'error' ? null : next === undefined ? (
-              <Skeleton className="h-11 w-72 bg-white/20" />
+              <Skeleton className="h-11 w-72" />
             ) : next ? (
-              <Button asChild size="lg" className="max-w-full bg-white text-teal-800 shadow-none hover:bg-teal-50" data-testid="hero-next">
+              <Button asChild size="lg" className="max-w-full" data-testid="hero-next">
                 <Link to={next.href}>
                   <PlayCircle className="size-5" />
                   <span className="truncate">Tiếp tục: {next.title}</span>
@@ -126,13 +133,13 @@ export default function DashboardPage() {
             )}
           </div>
         </div>
-        <div className="flex shrink-0 items-center gap-4 rounded-xl bg-white/15 px-4 py-3 backdrop-blur">
+        <div className="flex shrink-0 items-center gap-4 rounded-lg bg-muted px-4 py-3">
           <GoalRing value={todayMinutes} goal={goal} />
           <div className="text-sm">
             <p className="text-lg font-bold tabular-nums" data-testid="goal">
               {todayMinutes} / {goal} phút
             </p>
-            <p className="text-teal-50/90">{todayMinutes >= goal ? 'Đạt mục tiêu hôm nay 🎉' : `còn ${goal - todayMinutes} phút`}</p>
+            <p className="text-muted-foreground">{todayMinutes >= goal ? 'Đạt mục tiêu hôm nay 🎉' : `còn ${goal - todayMinutes} phút`}</p>
             <p className="mt-1 flex items-center gap-1 font-semibold" data-testid="streak" title="Số ngày học liên tiếp">
               <Flame className="size-4" aria-hidden /> {summary.isPending ? '…' : `Chuỗi ${streak} ngày`}
             </p>

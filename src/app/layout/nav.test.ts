@@ -11,9 +11,11 @@ it('shows only the areas and tabs of the language being studied', () => {
   expect(en.find((s) => s.id === 'words')!.tabs!.map((t) => t.to)).toContain('/word-forms');
 });
 
-it('has five areas, and a page belongs to the tab with the longest matching path', async () => {
+it('has four areas, and a page belongs to the tab with the longest matching path', async () => {
   const { SECTIONS, sectionFor, tabFor } = await import('./nav');
-  expect(SECTIONS).toHaveLength(5);
+  expect(SECTIONS).toHaveLength(4);
+  expect(tabFor(sectionFor('/ielts/passage3'), '/ielts/passage3')?.label).toBe('Reading');
+  expect(sectionFor('/lessons')?.id).toBe('words');
   const s = sectionFor('/writing/guided/abc');
   expect(s?.id).toBe('practice');
   expect(tabFor(s, '/writing/guided/abc')?.label).toBe('Writing');

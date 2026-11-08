@@ -1,4 +1,4 @@
-import { BookOpen, GraduationCap, Headphones, Home, LineChart, type LucideIcon } from 'lucide-react';
+import { BookA, GraduationCap, LineChart, Sun, type LucideIcon } from 'lucide-react';
 import { matchPath } from 'react-router-dom';
 
 export interface SectionTab {
@@ -7,14 +7,16 @@ export interface SectionTab {
   label: string;
   /** shown only while studying this language */
   only?: 'en' | 'zh';
+  /** other paths that belong to this tab (e.g. the Passage 3 library belongs to Reading) */
+  also?: string[];
 }
 
 /**
- * The five areas of the app, in one row at the top. The pages of each area open from a drop-down on that area
- * (desktop) or a row of tabs under the header (phone). Labels are Vietnamese; exam terms (Reading, Writing…) stay English.
+ * The four areas of the app: a rail of icons with labels on the left (desktop), a bar at the bottom (phone).
+ * The pages of an area are tabs at the top of the content. Labels are Vietnamese; exam terms (Reading, Writing…) stay English.
  */
 export interface Section {
-  id: 'home' | 'practice' | 'lessons' | 'words' | 'progress';
+  id: 'home' | 'practice' | 'words' | 'progress';
   label: string;
   /** label while studying Chinese, when it differs (no IELTS for Chinese) */
   labelZh?: string;
@@ -34,7 +36,7 @@ export interface Section {
 }
 
 export const SECTIONS: Section[] = [
-  { id: 'home', label: 'Trang chủ', hint: 'Kế hoạch hôm nay', to: '/dashboard', icon: Home, match: ['/dashboard', '/onboarding'] },
+  { id: 'home', label: 'Hôm nay', hint: 'Việc cần làm hôm nay', to: '/dashboard', icon: Sun, match: ['/dashboard', '/onboarding'] },
   {
     // All exam practice in one place: IELTS Reading · Listening · Writing, grammar, free writing and its mistakes.
     id: 'practice',
@@ -46,8 +48,7 @@ export const SECTIONS: Section[] = [
     icon: GraduationCap,
     match: ['/ielts', '/writing', '/grammar'],
     tabs: [
-      { to: '/ielts/reading', label: 'Reading', only: 'en' },
-      { to: '/ielts/passage3', label: 'Bài tập hằng ngày', only: 'en' },
+      { to: '/ielts/reading', label: 'Reading', only: 'en', also: ['/ielts/passage3'] },
       { to: '/ielts/listening', label: 'Listening', only: 'en' },
       { to: '/writing/guided', label: 'Writing', only: 'en' },
       { to: '/writing', label: 'Viết tự do' },
@@ -56,28 +57,18 @@ export const SECTIONS: Section[] = [
     ],
   },
   {
-    id: 'lessons',
-    label: 'Bài nghe',
-    hint: 'Nghe và chép chính tả',
-    to: '/lessons',
-    icon: Headphones,
-    match: ['/lessons', '/my-learning'],
-    tabs: [
-      { to: '/lessons', label: 'Kho bài nghe' },
-      { to: '/my-learning', label: 'Bài của tôi' },
-    ],
-  },
-  {
     id: 'words',
     label: 'Từ vựng',
-    hint: 'Sổ từ và ôn tập',
+    hint: 'Sổ từ, ôn tập, nghe chép',
     to: '/vocabulary',
-    icon: BookOpen,
-    match: ['/vocabulary', '/review', '/word-forms'],
+    icon: BookA,
+    match: ['/vocabulary', '/review', '/word-forms', '/lessons', '/my-learning'],
     tabs: [
       { to: '/vocabulary', label: 'Sổ từ' },
       { to: '/review', label: 'Ôn tập' },
       { to: '/word-forms', label: 'Dạng từ', only: 'en' },
+      { to: '/lessons', label: 'Nghe chép' },
+      { to: '/my-learning', label: 'Bài nghe của tôi' },
     ],
   },
   {
@@ -107,7 +98,8 @@ export function sectionsFor(lang: 'en' | 'zh'): Section[] {
 
 /** The tab (page) of an area that a path belongs to: the longest matching prefix, so /writing/guided/x → Writing, not Viết tự do. */
 export function tabFor(section: Section | undefined, pathname: string): SectionTab | undefined {
-  return section?.tabs?.filter((t) => pathname === t.to || pathname.startsWith(`${t.to}/`)).sort((a, b) => b.to.length - a.to.length)[0];
+  const hits = (section?.tabs ?? []).flatMap((t) => [t.to, ...(t.also ?? [])].filter((p) => pathname === p || pathname.startsWith(`${p}/`)).map((p) => ({ t, len: p.length })));
+  return hits.sort((a, b) => b.len - a.len)[0]?.t;
 }
 
 export function sectionFor(pathname: string): Section | undefined {

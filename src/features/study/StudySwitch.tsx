@@ -29,10 +29,10 @@ export function StudySwitch({ compact = false }: { compact?: boolean }) {
             onClick={() => pick(l)}
             className={cn(
               'flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold transition',
-              lang === l ? (l === 'en' ? 'bg-sky-600 text-white shadow-sm' : 'bg-red-600 text-white shadow-sm') : 'text-muted-foreground hover:text-foreground',
+              lang === l ? 'bg-card text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground',
             )}
           >
-            <span aria-hidden className={cn('rounded px-1 text-[11px] font-bold leading-4', lang === l ? 'bg-white/25' : l === 'en' ? 'bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300' : 'bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300')}>
+            <span aria-hidden className="rounded bg-muted px-1 text-[11px] font-bold leading-4 text-muted-foreground">
               {STUDY_LABEL[l].flag}
             </span>
             <span className={cn(compact && lang !== l && 'sr-only sm:not-sr-only')}>{compact ? STUDY_LABEL[l].native : STUDY_LABEL[l].name}</span>
