@@ -5,6 +5,8 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { CoverArt } from '@/features/passage3/CoverArt';
+import { SkillPanel } from '@/features/passage3/SkillPanel';
+import { SKILLS, skillById, skillProgress } from '@/lib/ielts/skills';
 import { useP3Store } from '@/features/passage3/useP3Store';
 import { activeDays, dailyDone, dailyVersion, subscribeDaily } from '@/lib/daily';
 import {
@@ -26,7 +28,7 @@ import {
 } from '@/lib/ielts/passage3';
 import { cn } from '@/lib/utils';
 
-type Tab = 'sets' | 'cambridge' | 'notes';
+type Tab = 'sets' | 'cambridge' | 'notes' | 'skill';
 type TypeFilter = 'all' | P3Type;
 type StatusFilter = 'all' | 'todo' | 'done';
 
@@ -38,8 +40,11 @@ export default function Passage3Page() {
   useP3Store();
   useSyncExternalStore(subscribeDaily, dailyVersion);
   const [params, setParams] = useSearchParams();
-  const tab = (['sets', 'cambridge', 'notes'].includes(params.get('tab') ?? '') ? params.get('tab') : 'sets') as Tab;
+  const skill = skillById(params.get('skill'));
+  const tab = (skill ? 'skill' : ['sets', 'cambridge', 'notes'].includes(params.get('tab') ?? '') ? params.get('tab') : 'sets') as Tab;
   const setTab = (t: Tab) => setParams(t === 'sets' ? {} : { tab: t }, { replace: true });
+  const openSkill = (id: string) => setParams({ skill: id }, { replace: true });
+  const sp = skillProgress();
   const [type, setType] = useState<TypeFilter>('all');
   const [status, setStatus] = useState<StatusFilter>('all');
   const p = getProgress();
@@ -91,6 +96,17 @@ export default function Passage3Page() {
                   </FilterItem>
                 ))}
               </FilterGroup>
+            </>
+          )}
+          <FilterGroup title="Kỹ năng nên học">
+            {SKILLS.map((k) => (
+              <FilterItem key={k.id} on={skill?.id === k.id} onClick={() => openSkill(k.id)} n={sp[k.id] ? `${sp[k.id]!.best}/${sp[k.id]!.total}` : k.drills.length}>
+                {k.name}
+              </FilterItem>
+            ))}
+          </FilterGroup>
+          {tab === 'sets' && (
+            <>
               <FilterGroup title="Trạng thái">
                 {(
                   [
@@ -111,8 +127,24 @@ export default function Passage3Page() {
           {tab === 'sets' && <OwnSets type={type} status={status} />}
           {tab === 'cambridge' && <Cambridge />}
           {tab === 'notes' && <Notes />}
+          {skill && <SkillPanel skill={skill} applied={<Applied types={skill.types} />} />}
         </div>
       </div>
+    </div>
+  );
+}
+
+/** Sets that use a skill: unfinished ones first, six at most. */
+function Applied({ types }: { types: P3Type[] }) {
+  const p = getProgress();
+  const list = OWN_SETS.filter((s) => types.includes(s.type))
+    .sort((a, b) => Number(!!p.done[a.id]) - Number(!!p.done[b.id]))
+    .slice(0, 6);
+  return (
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+      {list.map((s) => (
+        <SetCard key={s.id} set={s} />
+      ))}
     </div>
   );
 }
