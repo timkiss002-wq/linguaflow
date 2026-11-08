@@ -1,0 +1,1048 @@
+{
+ "_note": "Original IELTS-style Listening Part 1 conversations written for LinguaFlow (not taken from any published test), used one at a time for daily practice. Same format as listening-1.json; pack = true means the parts are separate exercises, not one 40-question test.",
+ "id": "listening-part1",
+ "skill": "listening",
+ "pack": true,
+ "title": "Listening — Bộ Part 1",
+ "minutes": 10,
+ "parts": [
+  {
+   "id": "lp1-gym",
+   "title": "Part 1",
+   "heading": "Joining a fitness centre",
+   "context": "A man is phoning a fitness centre to ask about membership.",
+   "speakers": {
+    "W": {
+     "name": "Receptionist",
+     "voice": "female"
+    },
+    "M": {
+     "name": "David",
+     "voice": "male"
+    }
+   },
+   "script": [
+    [
+     "W",
+     "Good afternoon, Parkside Fitness Centre. Sarah speaking."
+    ],
+    [
+     "M",
+     "Hello. I've just moved to the area and I'm thinking of joining. Could you tell me about the membership options?"
+    ],
+    [
+     "W",
+     "Of course. We have three types. The basic membership is twenty-eight pounds a month and lets you use the gym and the pool. The full membership is forty pounds and also includes all the classes."
+    ],
+    [
+     "M",
+     "And the third one?"
+    ],
+    [
+     "W",
+     "That's off-peak membership. It's the cheapest, at nineteen pounds, but you can only come before four in the afternoon on weekdays."
+    ],
+    [
+     "M",
+     "I work during the day, so that won't suit me. I think I'll go for the full membership, because I'd like to try the yoga classes."
+    ],
+    [
+     "W",
+     "Good choice. There's also a joining fee of fifteen pounds, but it's waived this month, so you won't need to pay it."
+    ],
+    [
+     "M",
+     "Great. What do you need from me?"
+    ],
+    [
+     "W",
+     "Your name first, please."
+    ],
+    [
+     "M",
+     "It's David Thornbury. That's T, H, O, R, N, B, U, R, Y."
+    ],
+    [
+     "W",
+     "Thank you. And your address?"
+    ],
+    [
+     "M",
+     "Flat two, forty-seven Hillcrest Road."
+    ],
+    [
+     "W",
+     "Forty-seven Hillcrest Road. And what's the best way to contact you?"
+    ],
+    [
+     "M",
+     "Email is best. It's dthornbury at mailbox dot com."
+    ],
+    [
+     "W",
+     "Lovely. Before you start, every new member has a free induction session with one of our trainers. They'll show you how to use the equipment safely."
+    ],
+    [
+     "M",
+     "When can I do that?"
+    ],
+    [
+     "W",
+     "We have sessions on Monday at six, but that one's full, I'm afraid. There's a place on Wednesday at seven in the evening."
+    ],
+    [
+     "M",
+     "Wednesday's fine."
+    ],
+    [
+     "W",
+     "Please bring a padlock for the lockers. We don't provide them, and we've had a few problems with things going missing."
+    ],
+    [
+     "M",
+     "OK, a padlock. Is there parking?"
+    ],
+    [
+     "W",
+     "There's a small car park behind the building, but it's usually full in the evenings, so most people use the one at the library across the road. It's free after six."
+    ],
+    [
+     "M",
+     "Perfect. Thanks very much for your help."
+    ]
+   ],
+   "groups": [
+    {
+     "type": "gap",
+     "maxWords": 1,
+     "allowNumber": true,
+     "instructions": "Complete the form below. Write ONE WORD AND/OR A NUMBER for each answer.",
+     "title": "Parkside Fitness Centre — New member",
+     "questions": [
+      {
+       "n": 1,
+       "text": "Type of membership: ___",
+       "answer": [
+        "full"
+       ],
+       "evidence": "I think I'll go for the full membership",
+       "explain_vi": "Anh ấy làm việc ban ngày nên không chọn off-peak, và chọn gói full vì muốn học yoga → full."
+      },
+      {
+       "n": 2,
+       "text": "Monthly cost: £___",
+       "answer": [
+        "40",
+        "forty"
+       ],
+       "evidence": "The full membership is forty pounds",
+       "explain_vi": "Gói full giá 40 bảng. Bẫy: 28 (basic) và 19 (off-peak)."
+      },
+      {
+       "n": 3,
+       "text": "Classes he wants to try: ___",
+       "answer": [
+        "yoga"
+       ],
+       "evidence": "I'd like to try the yoga classes",
+       "explain_vi": "Câu chứa đáp án: “I'd like to try the yoga classes” → yoga."
+      },
+      {
+       "n": 4,
+       "text": "Joining fee: £0 (normally £___)",
+       "answer": [
+        "15",
+        "fifteen"
+       ],
+       "evidence": "There's also a joining fee of fifteen pounds, but it's waived this month",
+       "explain_vi": "Phí 15 bảng được miễn tháng này → bình thường là 15. 'Waived' = được miễn."
+      },
+      {
+       "n": 5,
+       "text": "Surname: David ___",
+       "answer": [
+        "Thornbury"
+       ],
+       "evidence": "That's T, H, O, R, N, B, U, R, Y.",
+       "explain_vi": "Nghe đánh vần từng chữ: T-H-O-R-N-B-U-R-Y."
+      },
+      {
+       "n": 6,
+       "text": "Address: Flat 2, 47 ___ Road",
+       "answer": [
+        "Hillcrest"
+       ],
+       "evidence": "Flat two, forty-seven Hillcrest Road.",
+       "explain_vi": "Câu chứa đáp án: “Flat two, forty-seven Hillcrest Road.” → Hillcrest."
+      },
+      {
+       "n": 7,
+       "text": "Preferred contact: ___",
+       "answer": [
+        "email",
+        "e-mail"
+       ],
+       "evidence": "Email is best.",
+       "explain_vi": "Câu chứa đáp án: “Email is best.” → email."
+      },
+      {
+       "n": 8,
+       "text": "Induction session: ___ at 7 pm",
+       "answer": [
+        "Wednesday"
+       ],
+       "evidence": "There's a place on Wednesday at seven in the evening.",
+       "explain_vi": "Thứ Hai đã kín → Wednesday."
+      },
+      {
+       "n": 9,
+       "text": "Must bring: a ___",
+       "answer": [
+        "padlock"
+       ],
+       "evidence": "Please bring a padlock for the lockers.",
+       "explain_vi": "Câu chứa đáp án: “Please bring a padlock for the lockers.” → padlock."
+      },
+      {
+       "n": 10,
+       "text": "Parking: use the car park at the ___",
+       "answer": [
+        "library"
+       ],
+       "evidence": "most people use the one at the library across the road",
+       "explain_vi": "Bãi xe sau tòa nhà thường kín buổi tối → dùng bãi ở library."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp1-flat",
+   "title": "Part 1",
+   "heading": "Renting a flat",
+   "context": "A student is calling a letting agency about a flat.",
+   "speakers": {
+    "M": {
+     "name": "Agent",
+     "voice": "male"
+    },
+    "W": {
+     "name": "Mei",
+     "voice": "female"
+    }
+   },
+   "script": [
+    [
+     "M",
+     "Hello, Greenway Lettings. How can I help you?"
+    ],
+    [
+     "W",
+     "Hi. I'm calling about the flat you advertised on Station Street. Is it still available?"
+    ],
+    [
+     "M",
+     "Let me check. Yes, it is. It's a two-bedroom flat on the third floor."
+    ],
+    [
+     "W",
+     "Is there a lift?"
+    ],
+    [
+     "M",
+     "Unfortunately not, but the stairs are quite wide."
+    ],
+    [
+     "W",
+     "OK. And how much is the rent?"
+    ],
+    [
+     "M",
+     "It's eight hundred and fifty pounds a month. That includes water, but not electricity or internet."
+    ],
+    [
+     "W",
+     "And is it furnished?"
+    ],
+    [
+     "M",
+     "Partly. There are beds, wardrobes and a sofa, but you'd need to bring your own desk."
+    ],
+    [
+     "W",
+     "That's fine. I'm a student, so I'll be sharing with a friend. Are there any rules about pets?"
+    ],
+    [
+     "M",
+     "Pets aren't allowed, I'm afraid. And the landlord asks that tenants don't smoke inside."
+    ],
+    [
+     "W",
+     "Neither of us smokes, so that's no problem. What about the deposit?"
+    ],
+    [
+     "M",
+     "The deposit is one month's rent, so the same amount, eight hundred and fifty pounds, and it's held by a government scheme, so it's protected."
+    ],
+    [
+     "W",
+     "When could we move in?"
+    ],
+    [
+     "M",
+     "The current tenants leave at the end of August, so from the first of September."
+    ],
+    [
+     "W",
+     "Could we see it this week?"
+    ],
+    [
+     "M",
+     "Let me look. Thursday morning is booked, but I could show you around on Friday at half past four."
+    ],
+    [
+     "W",
+     "Friday works. Can I give you my name?"
+    ],
+    [
+     "M",
+     "Please."
+    ],
+    [
+     "W",
+     "It's Mei Lin Okafor. Okafor is O, K, A, F, O, R."
+    ],
+    [
+     "M",
+     "Thank you. And it would help if you could bring a reference from your university, just to confirm you're a student there."
+    ],
+    [
+     "W",
+     "OK, I'll ask the student office. Thank you."
+    ]
+   ],
+   "groups": [
+    {
+     "type": "gap",
+     "maxWords": 1,
+     "allowNumber": true,
+     "instructions": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+     "title": "Flat on Station Street",
+     "questions": [
+      {
+       "n": 1,
+       "text": "Floor: ___",
+       "answer": [
+        "third",
+        "3rd",
+        "3"
+       ],
+       "evidence": "It's a two-bedroom flat on the third floor.",
+       "explain_vi": "Câu chứa đáp án: “It's a two-bedroom flat on the third floor.” → third."
+      },
+      {
+       "n": 2,
+       "text": "Rent: £___ per month",
+       "answer": [
+        "850"
+       ],
+       "evidence": "It's eight hundred and fifty pounds a month.",
+       "explain_vi": "Câu chứa đáp án: “It's eight hundred and fifty pounds a month.” → 850."
+      },
+      {
+       "n": 3,
+       "text": "Rent includes: ___",
+       "answer": [
+        "water"
+       ],
+       "evidence": "That includes water, but not electricity or internet.",
+       "explain_vi": "Chỉ bao gồm nước → water. Điện và internet không bao gồm."
+      },
+      {
+       "n": 4,
+       "text": "Tenants must provide their own ___",
+       "answer": [
+        "desk"
+       ],
+       "evidence": "you'd need to bring your own desk",
+       "explain_vi": "Câu chứa đáp án: “you'd need to bring your own desk” → desk."
+      },
+      {
+       "n": 5,
+       "text": "Not allowed: pets and ___ indoors",
+       "answer": [
+        "smoking"
+       ],
+       "evidence": "the landlord asks that tenants don't smoke inside",
+       "explain_vi": "Không hút thuốc trong nhà → smoking."
+      },
+      {
+       "n": 6,
+       "text": "Deposit: £___",
+       "answer": [
+        "850"
+       ],
+       "evidence": "so the same amount, eight hundred and fifty pounds",
+       "explain_vi": "Tiền cọc bằng một tháng → 850."
+      },
+      {
+       "n": 7,
+       "text": "Available from: 1st ___",
+       "answer": [
+        "September",
+        "Sept"
+       ],
+       "evidence": "so from the first of September",
+       "explain_vi": "Người thuê cũ đi cuối tháng 8 → từ 1/9."
+      },
+      {
+       "n": 8,
+       "text": "Viewing: Friday at ___ pm",
+       "answer": [
+        "4.30",
+        "4:30"
+       ],
+       "evidence": "I could show you around on Friday at half past four",
+       "explain_vi": "Sáng thứ Năm đã kín → thứ Sáu 4:30."
+      },
+      {
+       "n": 9,
+       "text": "Name: Mei Lin ___",
+       "answer": [
+        "Okafor"
+       ],
+       "evidence": "Okafor is O, K, A, F, O, R.",
+       "explain_vi": "Câu chứa đáp án: “Okafor is O, K, A, F, O, R.” → Okafor."
+      },
+      {
+       "n": 10,
+       "text": "Bring: a ___ from the university",
+       "answer": [
+        "reference"
+       ],
+       "evidence": "it would help if you could bring a reference from your university",
+       "explain_vi": "→ reference (thư xác nhận)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp1-lost",
+   "title": "Part 1",
+   "heading": "Reporting lost property",
+   "context": "A woman is reporting a lost bag at a railway station.",
+   "speakers": {
+    "M": {
+     "name": "Officer",
+     "voice": "male"
+    },
+    "W": {
+     "name": "Passenger",
+     "voice": "female"
+    }
+   },
+   "script": [
+    [
+     "M",
+     "Lost property office. How can I help?"
+    ],
+    [
+     "W",
+     "Hi. I think I left my bag on a train this morning."
+    ],
+    [
+     "M",
+     "I'm sorry to hear that. Let me take some details. Which train were you on?"
+    ],
+    [
+     "W",
+     "The eight fifteen from Oxford. It arrived here at about nine."
+    ],
+    [
+     "M",
+     "And where were you sitting?"
+    ],
+    [
+     "W",
+     "In the second carriage, I think. Yes, the second, near the doors."
+    ],
+    [
+     "M",
+     "Can you describe the bag?"
+    ],
+    [
+     "W",
+     "It's a small backpack. It's grey, not black – people always think it's black – with a red stripe on the front."
+    ],
+    [
+     "M",
+     "And what was inside?"
+    ],
+    [
+     "W",
+     "My laptop, a scarf and some books. Oh, and an umbrella, but that's not important."
+    ],
+    [
+     "M",
+     "Was there anything with your name on it?"
+    ],
+    [
+     "W",
+     "Yes, the laptop has a sticker with my name. It's Joanna Pryce. P, R, Y, C, E."
+    ],
+    [
+     "M",
+     "Thank you. And a phone number we can call you on?"
+    ],
+    [
+     "W",
+     "It's oh seven seven one two, four five nine, three three eight."
+    ],
+    [
+     "M",
+     "Right. Items found on trains are usually brought here by the end of the day, but sometimes they go to the depot first, which can take up to three days."
+    ],
+    [
+     "W",
+     "Is there a charge to collect it?"
+    ],
+    [
+     "M",
+     "There's a small handling fee of three pounds. And you'll need to bring some photo ID, such as your passport or driving licence."
+    ],
+    [
+     "W",
+     "Can someone else collect it for me?"
+    ],
+    [
+     "M",
+     "Yes, but they'd need a signed letter from you."
+    ],
+    [
+     "W",
+     "OK. Thank you so much."
+    ]
+   ],
+   "groups": [
+    {
+     "type": "gap",
+     "maxWords": 2,
+     "allowNumber": true,
+     "instructions": "Complete the form below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+     "title": "Lost property report",
+     "questions": [
+      {
+       "n": 1,
+       "text": "Train: 8.15 from ___",
+       "answer": [
+        "Oxford"
+       ],
+       "evidence": "The eight fifteen from Oxford.",
+       "explain_vi": "Câu chứa đáp án: “The eight fifteen from Oxford.” → Oxford."
+      },
+      {
+       "n": 2,
+       "text": "Seat: ___ carriage",
+       "answer": [
+        "second",
+        "2nd"
+       ],
+       "evidence": "Yes, the second, near the doors.",
+       "explain_vi": "Câu chứa đáp án: “Yes, the second, near the doors.” → second."
+      },
+      {
+       "n": 3,
+       "text": "Item: a small ___",
+       "answer": [
+        "backpack",
+        "back pack"
+       ],
+       "evidence": "It's a small backpack.",
+       "explain_vi": "Câu chứa đáp án: “It's a small backpack.” → backpack."
+      },
+      {
+       "n": 4,
+       "text": "Colour: ___ with a red stripe",
+       "answer": [
+        "grey",
+        "gray"
+       ],
+       "evidence": "It's grey, not black",
+       "explain_vi": "Câu chứa đáp án: “It's grey, not black” → grey."
+      },
+      {
+       "n": 5,
+       "text": "Contents: laptop, scarf and ___",
+       "answer": [
+        "books",
+        "some books"
+       ],
+       "evidence": "My laptop, a scarf and some books.",
+       "explain_vi": "→ books. Umbrella được nhắc nhưng chị nói không quan trọng — đề chỉ có một chỗ trống sau scarf."
+      },
+      {
+       "n": 6,
+       "text": "Name: Joanna ___",
+       "answer": [
+        "Pryce"
+       ],
+       "evidence": "It's Joanna Pryce. P, R, Y, C, E.",
+       "explain_vi": "Đánh vần P-R-Y-C-E (không phải Price)."
+      },
+      {
+       "n": 7,
+       "text": "Phone: 07712 459 ___",
+       "answer": [
+        "338"
+       ],
+       "evidence": "four five nine, three three eight",
+       "explain_vi": "Câu chứa đáp án: “four five nine, three three eight” → 338."
+      },
+      {
+       "n": 8,
+       "text": "Items sent to the depot may take up to ___ days",
+       "answer": [
+        "3",
+        "three"
+       ],
+       "evidence": "which can take up to three days",
+       "explain_vi": "Câu chứa đáp án: “which can take up to three days” → 3."
+      },
+      {
+       "n": 9,
+       "text": "Handling fee: £___",
+       "answer": [
+        "3",
+        "three"
+       ],
+       "evidence": "There's a small handling fee of three pounds.",
+       "explain_vi": "Câu chứa đáp án: “There's a small handling fee of three pounds.” → 3."
+      },
+      {
+       "n": 10,
+       "text": "To collect: bring photo ___",
+       "answer": [
+        "ID",
+        "identification"
+       ],
+       "evidence": "you'll need to bring some photo ID",
+       "explain_vi": "Câu chứa đáp án: “you'll need to bring some photo ID” → ID."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp1-cooking",
+   "title": "Part 1",
+   "heading": "Enrolling on a cookery course",
+   "context": "A man is asking about evening cookery courses at a community college.",
+   "speakers": {
+    "W": {
+     "name": "Course adviser",
+     "voice": "female"
+    },
+    "M": {
+     "name": "Tom",
+     "voice": "male"
+    }
+   },
+   "script": [
+    [
+     "W",
+     "Westfield Community College, adult courses. How can I help?"
+    ],
+    [
+     "M",
+     "Hi. I'd like some information about your cookery courses, please."
+    ],
+    [
+     "W",
+     "Certainly. We run three this term. There's Italian cooking on Mondays, baking on Tuesdays and a vegetarian course on Thursdays."
+    ],
+    [
+     "M",
+     "I'm interested in the vegetarian one. How long does it last?"
+    ],
+    [
+     "W",
+     "It runs for eight weeks, starting on the twelfth of October."
+    ],
+    [
+     "M",
+     "And what time are the classes?"
+    ],
+    [
+     "W",
+     "From seven until nine. Oh, wait – this term they start a bit earlier, at half past six, because the building closes at half eight."
+    ],
+    [
+     "M",
+     "OK. How much is it?"
+    ],
+    [
+     "W",
+     "The course fee is one hundred and twenty pounds, and that includes all the ingredients. Students and people over sixty get a discount of twenty per cent."
+    ],
+    [
+     "M",
+     "I'm not a student, unfortunately. Do I need to bring anything?"
+    ],
+    [
+     "W",
+     "We provide all the equipment, but we ask everyone to bring an apron and some containers to take food home."
+    ],
+    [
+     "M",
+     "Who teaches the course?"
+    ],
+    [
+     "W",
+     "It's a chef called Luis Baptista. He used to run a restaurant in the city centre."
+    ],
+    [
+     "M",
+     "Sounds good. Where exactly are the classes held?"
+    ],
+    [
+     "W",
+     "In the kitchen in the Harbour Building, room fourteen. The main entrance is on Mill Lane."
+    ],
+    [
+     "M",
+     "Can I book now?"
+    ],
+    [
+     "W",
+     "Yes, but places are limited to twelve, so I'd recommend booking soon. You can pay online or by card over the phone."
+    ],
+    [
+     "M",
+     "I'll do it online tonight. Thanks."
+    ]
+   ],
+   "groups": [
+    {
+     "type": "gap",
+     "maxWords": 1,
+     "allowNumber": true,
+     "instructions": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+     "title": "Westfield Community College — Cookery",
+     "questions": [
+      {
+       "n": 1,
+       "text": "Course chosen: ___ cooking",
+       "answer": [
+        "vegetarian"
+       ],
+       "evidence": "I'm interested in the vegetarian one.",
+       "explain_vi": "Câu chứa đáp án: “I'm interested in the vegetarian one.” → vegetarian."
+      },
+      {
+       "n": 2,
+       "text": "Day: ___",
+       "answer": [
+        "Thursday",
+        "Thursdays"
+       ],
+       "evidence": "a vegetarian course on Thursdays",
+       "explain_vi": "Khóa chay vào thứ Năm. Bẫy: Monday (Italian), Tuesday (baking)."
+      },
+      {
+       "n": 3,
+       "text": "Length: ___ weeks",
+       "answer": [
+        "8",
+        "eight"
+       ],
+       "evidence": "It runs for eight weeks",
+       "explain_vi": "Câu chứa đáp án: “It runs for eight weeks” → 8."
+      },
+      {
+       "n": 4,
+       "text": "Classes start at: ___ pm",
+       "answer": [
+        "6.30",
+        "6:30"
+       ],
+       "evidence": "this term they start a bit earlier, at half past six",
+       "explain_vi": "Người nói tự sửa: không phải 7 mà 6:30."
+      },
+      {
+       "n": 5,
+       "text": "Fee: £___ (including ingredients)",
+       "answer": [
+        "120"
+       ],
+       "evidence": "The course fee is one hundred and twenty pounds",
+       "explain_vi": "→ 120. Anh ấy không phải sinh viên nên không được giảm."
+      },
+      {
+       "n": 6,
+       "text": "Bring: an ___ and containers",
+       "answer": [
+        "apron"
+       ],
+       "evidence": "bring an apron and some containers",
+       "explain_vi": "Câu chứa đáp án: “bring an apron and some containers” → apron."
+      },
+      {
+       "n": 7,
+       "text": "Teacher: Luis ___",
+       "answer": [
+        "Baptista"
+       ],
+       "evidence": "It's a chef called Luis Baptista.",
+       "explain_vi": "Câu chứa đáp án: “It's a chef called Luis Baptista.” → Baptista."
+      },
+      {
+       "n": 8,
+       "text": "Place: Harbour Building, room ___",
+       "answer": [
+        "14",
+        "fourteen"
+       ],
+       "evidence": "In the kitchen in the Harbour Building, room fourteen.",
+       "explain_vi": "Câu chứa đáp án: “In the kitchen in the Harbour Building, room fourteen.” → 14."
+      },
+      {
+       "n": 9,
+       "text": "Entrance on ___ Lane",
+       "answer": [
+        "Mill"
+       ],
+       "evidence": "The main entrance is on Mill Lane.",
+       "explain_vi": "Câu chứa đáp án: “The main entrance is on Mill Lane.” → Mill."
+      },
+      {
+       "n": 10,
+       "text": "Maximum number of places: ___",
+       "answer": [
+        "12",
+        "twelve"
+       ],
+       "evidence": "places are limited to twelve",
+       "explain_vi": "Câu chứa đáp án: “places are limited to twelve” → 12."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp1-carhire",
+   "title": "Part 1",
+   "heading": "Hiring a car",
+   "context": "A woman is booking a hire car for a holiday.",
+   "speakers": {
+    "M": {
+     "name": "Agent",
+     "voice": "male"
+    },
+    "W": {
+     "name": "Customer",
+     "voice": "female"
+    }
+   },
+   "script": [
+    [
+     "M",
+     "Good morning, Coastline Car Hire."
+    ],
+    [
+     "W",
+     "Morning. I'd like to book a car for a week in July."
+    ],
+    [
+     "M",
+     "Certainly. Which dates?"
+    ],
+    [
+     "W",
+     "From the fourteenth to the twenty-first."
+    ],
+    [
+     "M",
+     "And where would you like to collect it? We have offices at the airport and in the town centre."
+    ],
+    [
+     "W",
+     "The airport, please. Our flight lands at eleven in the morning."
+    ],
+    [
+     "M",
+     "What size of car do you need?"
+    ],
+    [
+     "W",
+     "There are four of us, with quite a lot of luggage, so something medium-sized. We were thinking about an estate car."
+    ],
+    [
+     "M",
+     "An estate is ninety pounds a day. A medium hatchback is a bit cheaper, at seventy-five, but the boot is much smaller."
+    ],
+    [
+     "W",
+     "We'll take the estate, then."
+    ],
+    [
+     "M",
+     "Would you like automatic or manual?"
+    ],
+    [
+     "W",
+     "Automatic, please. I'm not used to manual cars."
+    ],
+    [
+     "M",
+     "That's fine. Do you want to add a second driver? It's eight pounds a day extra."
+    ],
+    [
+     "W",
+     "No, I'll be the only driver."
+    ],
+    [
+     "M",
+     "And would you like a child seat?"
+    ],
+    [
+     "W",
+     "No, the children are teenagers now. But could we have a satellite navigation system?"
+    ],
+    [
+     "M",
+     "Yes, that's included free of charge this summer."
+    ],
+    [
+     "W",
+     "Great. Is insurance included?"
+    ],
+    [
+     "M",
+     "Basic insurance is included, but there's an excess of five hundred pounds. You can reduce that to zero for an extra twelve pounds a day."
+    ],
+    [
+     "W",
+     "I'll think about that and let you know when I collect the car."
+    ],
+    [
+     "M",
+     "No problem. And can I have your surname?"
+    ],
+    [
+     "W",
+     "It's Haldane. H, A, L, D, A, N, E."
+    ],
+    [
+     "M",
+     "Thank you, Mrs Haldane. Please remember to bring your driving licence and the credit card you booked with."
+    ]
+   ],
+   "groups": [
+    {
+     "type": "gap",
+     "maxWords": 1,
+     "allowNumber": true,
+     "instructions": "Complete the booking form below. Write ONE WORD AND/OR A NUMBER for each answer.",
+     "title": "Coastline Car Hire — Booking",
+     "questions": [
+      {
+       "n": 1,
+       "text": "Dates: 14th–___ July",
+       "answer": [
+        "21",
+        "21st",
+        "twenty-first"
+       ],
+       "evidence": "From the fourteenth to the twenty-first.",
+       "explain_vi": "Câu chứa đáp án: “From the fourteenth to the twenty-first.” → 21."
+      },
+      {
+       "n": 2,
+       "text": "Pick-up location: ___",
+       "answer": [
+        "airport"
+       ],
+       "evidence": "The airport, please.",
+       "explain_vi": "Câu chứa đáp án: “The airport, please.” → airport."
+      },
+      {
+       "n": 3,
+       "text": "Arrival time: ___ am",
+       "answer": [
+        "11",
+        "eleven"
+       ],
+       "evidence": "Our flight lands at eleven in the morning.",
+       "explain_vi": "Câu chứa đáp án: “Our flight lands at eleven in the morning.” → 11."
+      },
+      {
+       "n": 4,
+       "text": "Type of car: ___",
+       "answer": [
+        "estate"
+       ],
+       "evidence": "We'll take the estate, then.",
+       "explain_vi": "Chọn estate vì nhiều hành lý. Bẫy: hatchback rẻ hơn nhưng cốp nhỏ."
+      },
+      {
+       "n": 5,
+       "text": "Cost per day: £___",
+       "answer": [
+        "90",
+        "ninety"
+       ],
+       "evidence": "An estate is ninety pounds a day.",
+       "explain_vi": "→ 90. Bẫy: 75 là giá hatchback."
+      },
+      {
+       "n": 6,
+       "text": "Gearbox: ___",
+       "answer": [
+        "automatic"
+       ],
+       "evidence": "Automatic, please.",
+       "explain_vi": "Câu chứa đáp án: “Automatic, please.” → automatic."
+      },
+      {
+       "n": 7,
+       "text": "Extra included free: satellite ___",
+       "answer": [
+        "navigation"
+       ],
+       "evidence": "could we have a satellite navigation system?",
+       "explain_vi": "Câu chứa đáp án: “could we have a satellite navigation system?” → navigation."
+      },
+      {
+       "n": 8,
+       "text": "Insurance excess: £___",
+       "answer": [
+        "500"
+       ],
+       "evidence": "there's an excess of five hundred pounds",
+       "explain_vi": "Câu chứa đáp án: “there's an excess of five hundred pounds” → 500."
+      },
+      {
+       "n": 9,
+       "text": "Surname: ___",
+       "answer": [
+        "Haldane"
+       ],
+       "evidence": "It's Haldane. H, A, L, D, A, N, E.",
+       "explain_vi": "Câu chứa đáp án: “It's Haldane. H, A, L, D, A, N, E.” → Haldane."
+      },
+      {
+       "n": 10,
+       "text": "Bring: driving licence and ___ card",
+       "answer": [
+        "credit"
+       ],
+       "evidence": "the credit card you booked with",
+       "explain_vi": "Câu chứa đáp án: “the credit card you booked with” → credit."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

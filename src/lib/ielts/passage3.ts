@@ -1,8 +1,9 @@
 import daily from '../../../content/p3-daily.json';
 import camIndex from '../../../content/cambridge-p3.json';
+import { markDailyDone } from '@/lib/daily';
 
 /**
- * "Passage 3 hằng ngày": 4–5 questions a day on a short Passage-3-level text, answered the way a teacher marks a text by
+ * Reading part of "Bài tập hằng ngày": 4–5 questions a day on a short Passage-3-level text, answered the way a teacher marks a text by
  * hand — first pair every keyword of the question with its paraphrase in the passage (colour by colour), only then
  * choose the answer. A keyword with no partner in the passage is the classic sign of NOT GIVEN.
  *
@@ -46,6 +47,8 @@ export interface P3Set {
   passage: string;
   box?: string[];
   items: P3Item[];
+  /** illustration on the card (CoverArt motif) */
+  art?: string;
   /** pasted by the learner: no key for the pairs */
   keyless?: boolean;
   camId?: string;
@@ -293,6 +296,7 @@ export function saveItem(set: P3Set, i: number, st: ItemState) {
   if (sum.checked === set.items.length && !p.done[set.id]) {
     p.done[set.id] = { score: sum.right, total: set.items.length, pairs: `${sum.pairsOk}/${sum.pairsTotal}`, at: today() };
     if (!p.days.includes(today())) p.days.push(today());
+    markDailyDone('reading');
   }
   write(KEY, p);
   emit();

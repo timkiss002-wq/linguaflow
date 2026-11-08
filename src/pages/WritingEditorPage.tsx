@@ -17,6 +17,7 @@ import { analyze, usesWord, type Lang } from '@/lib/writing/analyze';
 import { targetWords, type WritingTask } from '@/lib/writing/tasks';
 import { guidedForTask, visiblePrompt } from '@/lib/writing/guided';
 import { TaskChart } from '@/features/writing/guided/TaskChart';
+import { markDailyDone } from '@/lib/daily';
 import { cn } from '@/lib/utils';
 
 const TIPS: Record<Lang, Record<WritingTask['kind'], string>> = {
@@ -121,6 +122,7 @@ function Editor({ task }: { task: WritingTask }) {
       const metrics = analyze(body, { language: lang, kind: task.kind, minLength: task.min_length, targets, hsk, level: profile?.level.value, seconds: seconds.current });
       const id = await save.mutateAsync({ language: lang, taskId: task.id, title: task.title, prompt: task.prompt, targets, body: body.trim(), metrics, seconds: seconds.current });
       writeDraft(task.id, null);
+      if (lang === 'en') markDailyDone('writing');
       navigate(`/writing/${id}?new=1`);
     } catch (e) {
       toast.error(toUserMessage(e));

@@ -33,6 +33,7 @@ import {
   type GuidedType,
   type Level,
 } from '@/lib/writing/guided';
+import { markDailyDone } from '@/lib/daily';
 import { cn } from '@/lib/utils';
 
 const BAND_INFO: Record<Band, string> = {
@@ -268,6 +269,7 @@ function Finish({
         seconds: session.seconds,
       });
       writeSession(storageKey, null);
+      markDailyDone('writing');
       navigate(`/writing/${id}?new=1`);
     } catch (e) {
       toast.error(toUserMessage(e));

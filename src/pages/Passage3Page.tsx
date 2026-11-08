@@ -1,10 +1,12 @@
-import { BookMarked, CheckCircle2, Copy, Download, Flame, HelpCircle, NotebookPen, Plus, Upload } from 'lucide-react';
-import { useRef, useState, type ReactNode } from 'react';
+import { BookMarked, BookOpen, CheckCircle2, Copy, Download, Flame, Headphones, HelpCircle, NotebookPen, PenLine, Plus, Shuffle, Upload } from 'lucide-react';
+import { useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { CoverArt } from '@/features/passage3/CoverArt';
 import { useP3Store } from '@/features/passage3/useP3Store';
+import { activeDays, dailyDone, dailyVersion, dayKey, pickForDay, subscribeDaily, type DailyTask } from '@/lib/daily';
 import {
   CAM_BOOKS,
   CAM_INDEX,
@@ -21,49 +23,65 @@ import {
   streak,
   today,
   type P3Set,
+  type P3Type,
 } from '@/lib/ielts/passage3';
+import { LISTENING_PART1 } from '@/lib/ielts/tests';
+import { GUIDED_PROMPTS } from '@/lib/writing/guided';
 import { cn } from '@/lib/utils';
 
 type Tab = 'sets' | 'cambridge' | 'notes';
 type Pick = 'A' | 'B' | 'cam';
 
-const PICKS: { id: Pick; label: string; hint: string }[] = [
-  { id: 'A', label: 'T/F/NG · MCQ', hint: 'Option 1' },
-  { id: 'B', label: 'Gap-filling', hint: 'Option 2' },
-  { id: 'cam', label: 'Cambridge', hint: 'Đề bạn nhập' },
+const PICKS: { id: Pick; label: string }[] = [
+  { id: 'A', label: 'T/F/NG · MCQ' },
+  { id: 'B', label: 'Gap-filling' },
+  { id: 'cam', label: 'Cambridge' },
 ];
 
+/** IELTS Writing prompts only (Task 1 and Task 2 with a frame). */
+const WRITING_POOL = GUIDED_PROMPTS;
+
 /**
- * /ielts/passage3 — one card says what to do today; everything else sits in three tabs
- * (ready-made sets · Cambridge 10–20 · paraphrase notebook).
+ * /ielts/passage3 — "Bài tập hằng ngày": three tasks for today (Reading Passage 3, one Writing prompt, one Listening
+ * Part 1), then the reading library in three tabs (ready-made sets · Cambridge 10–20 · paraphrase notebook).
  */
 export default function Passage3Page() {
   useP3Store();
+  useSyncExternalStore(subscribeDaily, dailyVersion);
   const [params, setParams] = useSearchParams();
   const tab = (['sets', 'cambridge', 'notes'].includes(params.get('tab') ?? '') ? params.get('tab') : 'sets') as Tab;
   const setTab = (t: Tab) => setParams(t === 'sets' ? {} : { tab: t }, { replace: true });
   const p = getProgress();
   const notes = notebook();
+  const done = dailyDone();
+  const days = [...new Set([...p.days, ...activeDays()])];
 
   return (
     <div className="space-y-6">
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Passage 3 hằng ngày</h1>
-          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">Mỗi ngày 4–5 câu. Ghép từ khóa trong câu hỏi với từ đồng nghĩa trong bài trước, rồi mới chọn đáp án.</p>
+          <h1 className="text-2xl font-bold tracking-tight">Bài tập hằng ngày</h1>
+          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+            Mỗi ngày ba việc nhỏ: 4–5 câu Reading Passage 3, một đề Writing và một bài Listening Part 1. Hôm nay xong <b className="text-foreground">{done.length}/3</b>.
+          </p>
         </div>
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1.5 text-sm" title="Số ngày luyện liên tiếp">
-            <Flame className={cn('size-4', p.days.includes(today()) ? 'text-orange-500' : 'text-muted-foreground')} aria-hidden />
-            <b>{streak(p.days)}</b> ngày
+            <Flame className={cn('size-4', done.length ? 'text-orange-500' : 'text-muted-foreground')} aria-hidden />
+            <b>{streak(days)}</b> ngày
           </span>
           <HowTo />
         </div>
       </header>
 
-      <Today />
+      <div className="grid gap-4 lg:grid-cols-3">
+        <ReadingToday done={done.includes('reading')} />
+        <WritingToday done={done.includes('writing')} />
+        <ListeningToday done={done.includes('listening')} />
+      </div>
 
       <div>
+        <h2 className="mb-2 text-lg font-bold tracking-tight">Thư viện Reading Passage 3</h2>
         <div role="tablist" className="-mx-1 mb-4 flex gap-1 overflow-x-auto border-b px-1">
           <TabButton on={tab === 'sets'} onClick={() => setTab('sets')}>
             Bài soạn sẵn <Count n={OWN_SETS.length} />
@@ -90,7 +108,10 @@ function TabButton({ on, onClick, children }: { on: boolean; onClick: () => void
       role="tab"
       aria-selected={on}
       onClick={onClick}
-      className={cn('-mb-px flex shrink-0 items-center gap-1.5 whitespace-nowrap border-b-2 px-3 py-2 text-sm font-medium transition', on ? 'border-primary text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground')}
+      className={cn(
+        '-mb-px flex shrink-0 items-center gap-1.5 whitespace-nowrap border-b-2 px-3 py-2 text-sm font-medium transition',
+        on ? 'border-primary text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground',
+      )}
     >
       {children}
     </button>
@@ -104,8 +125,62 @@ const Count = ({ n, of }: { n: number; of?: number }) => (
   </span>
 );
 
+function TaskCard({ icon: Icon, label, done, children }: { icon: typeof BookOpen; label: string; done: boolean; children: ReactNode }) {
+  return (
+    <section className={cn('flex flex-col overflow-hidden rounded-2xl border bg-card shadow-sm', done && 'border-emerald-300 dark:border-emerald-500/40')} aria-label={label}>
+      <div className="flex items-center gap-2 border-b px-4 py-2.5">
+        <Icon className="size-4 text-primary" aria-hidden />
+        <span className="text-sm font-semibold">{label}</span>
+        {done ? (
+          <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-300">
+            <CheckCircle2 className="size-3.5" aria-hidden /> Xong hôm nay
+          </span>
+        ) : (
+          <span className="ml-auto text-xs text-muted-foreground">Chưa làm</span>
+        )}
+      </div>
+      <div className="flex flex-1 flex-col gap-3 p-4">{children}</div>
+    </section>
+  );
+}
+
 const PICK_KEY = 'lf.p3daily.pick';
-function Today() {
+const SHIFT_KEY = 'lf.daily.shift';
+
+/** "Đổi bài khác": how many times today's pick was skipped, per task (resets each day). */
+function useShift(task: DailyTask) {
+  const read = () => {
+    try {
+      const v = JSON.parse(localStorage.getItem(SHIFT_KEY) ?? '{}') as {
+        day?: string;
+      } & Record<string, number>;
+      return v.day === dayKey() ? (v[task] ?? 0) : 0;
+    } catch {
+      return 0;
+    }
+  };
+  const [shift, setShift] = useState(read);
+  const next = () => {
+    const n = shift + 1;
+    setShift(n);
+    try {
+      const v = JSON.parse(localStorage.getItem(SHIFT_KEY) ?? '{}') as Record<string, unknown>;
+      localStorage.setItem(
+        SHIFT_KEY,
+        JSON.stringify({
+          ...(v.day === dayKey() ? v : {}),
+          day: dayKey(),
+          [task]: n,
+        }),
+      );
+    } catch {
+      /* private mode */
+    }
+  };
+  return [shift, next] as const;
+}
+
+function ReadingToday({ done }: { done: boolean }) {
   const [pick, setPickState] = useState<Pick>(() => {
     try {
       return (localStorage.getItem(PICK_KEY) as Pick) || 'A';
@@ -122,52 +197,198 @@ function Today() {
     }
   };
   const set = nextSet(pick);
-  const done = set ? getProgress().done[set.id] : undefined;
+  const fin = set ? getProgress().done[set.id] : undefined;
   const sum = set ? setSummary(set) : null;
-
   return (
-    <section className="overflow-hidden rounded-2xl border bg-gradient-to-br from-sky-50 via-background to-violet-50 shadow-sm dark:from-sky-500/10 dark:to-violet-500/10" aria-label="Bài hôm nay">
-      <div className="flex flex-wrap items-center gap-2 border-b bg-background/60 px-4 py-2.5 sm:px-5">
-        <span className="mr-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Hôm nay luyện</span>
-        <div className="grid w-full grid-cols-3 rounded-lg bg-muted p-0.5 sm:inline-grid sm:w-auto" role="radiogroup">
-          {PICKS.map((o) => (
-            <button
-              key={o.id}
-              type="button"
-              role="radio"
-              aria-checked={pick === o.id}
-              onClick={() => setPick(o.id)}
-              className={cn('whitespace-nowrap rounded-md px-2 py-1 text-xs font-medium transition sm:px-3 sm:text-sm', pick === o.id ? 'bg-background shadow-sm' : 'text-muted-foreground hover:text-foreground')}
-            >
-              {o.label}
-            </button>
-          ))}
-        </div>
+    <TaskCard icon={BookOpen} label="Reading · Passage 3" done={done}>
+      <div className="grid grid-cols-3 rounded-lg bg-muted p-0.5" role="radiogroup" aria-label="Dạng bài">
+        {PICKS.map((o) => (
+          <button
+            key={o.id}
+            type="button"
+            role="radio"
+            aria-checked={pick === o.id}
+            onClick={() => setPick(o.id)}
+            className={cn('whitespace-nowrap rounded-md px-1.5 py-1 text-xs font-medium transition', pick === o.id ? 'bg-background shadow-sm' : 'text-muted-foreground hover:text-foreground')}
+          >
+            {o.label}
+          </button>
+        ))}
       </div>
       {set ? (
-        <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:p-5">
-          <div className="min-w-0 flex-1">
-            <p className="text-xs text-muted-foreground">
-              {set.topic} · {TYPE_INFO[set.type].label} · {set.items.length} câu
-            </p>
-            <p className="mt-0.5 text-xl font-bold tracking-tight">{set.title}</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {done ? `Đã làm hết — ôn lại bài điểm thấp nhất (${done.score}/${done.total}).` : sum && sum.checked > 0 ? `Đang làm dở: ${sum.checked}/${set.items.length} câu.` : 'Bài mới.'}
-            </p>
+        <>
+          <div className="flex gap-3">
+            <CoverArt id={set.id} art={set.art} className="h-16 w-20 shrink-0 rounded-lg" />
+            <div className="min-w-0">
+              <p className="line-clamp-2 font-semibold leading-snug">{set.title}</p>
+              <p className="mt-0.5 text-xs text-muted-foreground">
+                {TYPE_INFO[set.type].short} · {set.items.length} câu · {fin ? `ôn lại (${fin.score}/${fin.total})` : sum && sum.checked ? `đang làm ${sum.checked}/${set.items.length}` : 'bài mới'}
+              </p>
+            </div>
           </div>
-          <Button asChild size="lg" className="shrink-0" data-start>
-            <Link to={`/ielts/passage3/${set.id}`}>{sum && sum.checked > 0 && !done ? 'Làm tiếp' : 'Bắt đầu'}</Link>
+          <Button asChild className="mt-auto" data-start>
+            <Link to={`/ielts/passage3/${set.id}`}>{sum && sum.checked > 0 && !fin ? 'Làm tiếp' : 'Bắt đầu'}</Link>
           </Button>
+        </>
+      ) : (
+        <>
+          <p className="text-sm text-muted-foreground">Chưa có đề Cambridge nào. Mở sách, dán Passage 3 và 4–5 câu hỏi là luyện được.</p>
+          <Button asChild variant="outline" className="mt-auto">
+            <Link to="/ielts/passage3?tab=cambridge">Chọn đề Cambridge</Link>
+          </Button>
+        </>
+      )}
+    </TaskCard>
+  );
+}
+
+function WritingToday({ done }: { done: boolean }) {
+  const [shift, next] = useShift('writing');
+  const prompt = pickForDay(WRITING_POOL, 'writing', shift);
+  if (!prompt) return null;
+  const task1 = !!prompt.chart;
+  return (
+    <TaskCard icon={PenLine} label={`Writing · ${task1 ? 'Task 1' : 'Task 2'}`} done={done}>
+      <div>
+        <p className="font-semibold leading-snug">{prompt.title}</p>
+        <p className="mt-1 line-clamp-3 text-sm text-muted-foreground" lang="en">
+          {prompt.prompt}
+        </p>
+      </div>
+      <div className="mt-auto flex flex-wrap gap-2">
+        <Button asChild className="flex-1">
+          <Link to={`/writing/guided/${prompt.id}`}>Viết theo khung</Link>
+        </Button>
+        <Button asChild variant="outline" className="flex-1">
+          <Link to={`/writing/new/${prompt.task}`}>Viết tự do</Link>
+        </Button>
+        <Button variant="ghost" size="icon" onClick={next} aria-label="Đổi đề khác" title="Đổi đề khác">
+          <Shuffle />
+        </Button>
+      </div>
+    </TaskCard>
+  );
+}
+
+function ListeningToday({ done }: { done: boolean }) {
+  const [shift, next] = useShift('listening');
+  const pick = pickForDay(LISTENING_PART1, 'listening', shift);
+  if (!pick) return null;
+  return (
+    <TaskCard icon={Headphones} label="Listening · Part 1" done={done}>
+      <div>
+        <p className="font-semibold leading-snug">{pick.part.heading}</p>
+        <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">{pick.part.context}</p>
+        <p className="mt-1 text-xs text-muted-foreground">10 câu điền từ · từ khóa được đọc nhấn rõ · nghe lại từng câu sau khi nộp</p>
+      </div>
+      <div className="mt-auto flex gap-2">
+        <Button asChild className="flex-1">
+          <Link to={`/ielts/${pick.test.id}?parts=${pick.part.id}&mode=practice`}>Bắt đầu nghe</Link>
+        </Button>
+        <Button variant="ghost" size="icon" onClick={next} aria-label="Đổi bài khác" title="Đổi bài khác">
+          <Shuffle />
+        </Button>
+      </div>
+    </TaskCard>
+  );
+}
+
+function SetCard({ set }: { set: P3Set }) {
+  const d = getProgress().done[set.id];
+  const sum = setSummary(set);
+  return (
+    <Link to={`/ielts/passage3/${set.id}`} className="group flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md" data-set={set.id}>
+      <div className="relative">
+        <CoverArt id={set.id} art={set.art} className="aspect-[4/3] w-full" />
+        <span className="absolute left-2 top-2 rounded-md bg-black/55 px-1.5 py-0.5 text-[10px] font-bold text-white">{TYPE_INFO[set.type].short}</span>
+        {d ? (
+          <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-emerald-600 px-2 py-0.5 text-[11px] font-semibold text-white">
+            <CheckCircle2 className="size-3" aria-hidden /> {d.score}/{d.total}
+          </span>
+        ) : sum.checked ? (
+          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-slate-900">
+            {sum.checked}/{set.items.length}
+          </span>
+        ) : null}
+      </div>
+      <div className="flex flex-1 flex-col gap-0.5 p-2.5">
+        <span className="line-clamp-2 text-sm font-semibold leading-snug group-hover:text-primary">{set.title}</span>
+        <span className="line-clamp-1 text-xs text-muted-foreground">{set.topic}</span>
+      </div>
+    </Link>
+  );
+}
+
+/** cards shown before "Xem thêm" (three rows on a wide screen) */
+const PAGE = 15;
+
+type TypeFilter = 'all' | P3Type;
+type StatusFilter = 'all' | 'todo' | 'done';
+
+function OwnSets() {
+  const [type, setType] = useState<TypeFilter>('all');
+  const [status, setStatus] = useState<StatusFilter>('all');
+  const [shown, setShown] = useState(PAGE);
+  const p = getProgress();
+  const list = OWN_SETS.filter((s) => (type === 'all' || s.type === type) && (status === 'all' || (status === 'done') === !!p.done[s.id]));
+  const chip = (on: boolean) => cn('rounded-full border px-3 py-1 text-xs font-medium transition', on ? 'border-primary bg-primary text-primary-foreground' : 'bg-card hover:border-primary/40');
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-wrap items-center gap-1.5">
+        {(['all', 'tfng', 'ynng', 'mcq', 'gap'] as TypeFilter[]).map((t) => (
+          <button
+            key={t}
+            type="button"
+            className={chip(type === t)}
+            onClick={() => {
+              setType(t);
+              setShown(PAGE);
+            }}
+            aria-pressed={type === t}
+          >
+            {t === 'all' ? 'Tất cả dạng' : TYPE_INFO[t].short} <span className="opacity-70">{t === 'all' ? OWN_SETS.length : OWN_SETS.filter((s) => s.type === t).length}</span>
+          </button>
+        ))}
+        <span className="mx-1 h-5 w-px bg-border" aria-hidden />
+        {(
+          [
+            ['all', 'Tất cả'],
+            ['todo', 'Chưa làm'],
+            ['done', 'Đã làm'],
+          ] as [StatusFilter, string][]
+        ).map(([k, label]) => (
+          <button
+            key={k}
+            type="button"
+            className={chip(status === k)}
+            onClick={() => {
+              setStatus(k);
+              setShown(PAGE);
+            }}
+            aria-pressed={status === k}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      {list.length ? (
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {list.slice(0, shown).map((s) => (
+            <SetCard key={s.id} set={s} />
+          ))}
         </div>
       ) : (
-        <div className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:p-5">
-          <p className="flex-1 text-sm text-muted-foreground">Bạn chưa nhập đề Cambridge nào. Mở sách, chọn Passage 3 của một test, dán đoạn văn và 4–5 câu hỏi vào là luyện được ngay.</p>
-          <Button asChild variant="outline">
-            <Link to="/ielts/passage3?tab=cambridge">Chọn đề Cambridge</Link>
+        <p className="rounded-xl border border-dashed p-6 text-center text-sm text-muted-foreground">Không có bài nào khớp bộ lọc.</p>
+      )}
+      {list.length > shown && (
+        <div className="flex justify-center">
+          <Button variant="outline" onClick={() => setShown((n) => n + PAGE)} data-more>
+            Xem thêm ({list.length - shown} bài)
           </Button>
         </div>
       )}
-    </section>
+      <p className="text-xs text-muted-foreground">Bài soạn riêng cho LinguaFlow theo độ khó Passage 3, có key cho từng cặp từ và giải thích tiếng Việt.</p>
+    </div>
   );
 }
 
@@ -194,32 +415,12 @@ function SetRow({ set }: { set: P3Set }) {
   );
 }
 
-function OwnSets() {
-  const cols: { track: 'A' | 'B'; title: string }[] = [
-    { track: 'A', title: 'Option 1 · T/F/NG, Y/N/NG, MCQ' },
-    { track: 'B', title: 'Option 2 · Gap-filling (word box)' },
-  ];
-  return (
-    <div className="grid gap-6 md:grid-cols-2">
-      {cols.map((c) => (
-        <section key={c.track} className="min-w-0">
-          <h2 className="mb-2 text-sm font-semibold text-muted-foreground">{c.title}</h2>
-          <div className="space-y-2">
-            {OWN_SETS.filter((s) => s.track === c.track).map((s) => (
-              <SetRow key={s.id} set={s} />
-            ))}
-          </div>
-        </section>
-      ))}
-      <p className="text-xs text-muted-foreground md:col-span-2">Bài soạn riêng cho LinguaFlow theo độ khó Passage 3, có key cho từng cặp từ và giải thích tiếng Việt.</p>
-    </div>
-  );
-}
-
 function Cambridge() {
   const [book, setBook] = useState<number>(() => {
     // the book last worked on, else the newest book whose titles are all listed
-    const last = getImports().filter((s) => s.camId).pop();
+    const last = getImports()
+      .filter((s) => s.camId)
+      .pop();
     const fromLast = CAM_INDEX.find((c) => c.id === last?.camId)?.book;
     return fromLast ?? [...CAM_BOOKS].reverse().find((b) => CAM_INDEX.filter((c) => c.book === b).every((c) => c.title)) ?? 20;
   });
@@ -256,10 +457,19 @@ function Cambridge() {
               role="radio"
               aria-checked={book === b}
               onClick={() => setBook(b)}
-              className={cn('relative rounded-lg border px-3 py-1.5 text-sm font-semibold transition', book === b ? 'border-primary bg-primary text-primary-foreground' : 'bg-card hover:border-primary/40')}
+              className={cn(
+                'relative rounded-lg border px-3 py-1.5 text-sm font-semibold transition',
+                book === b ? 'border-primary bg-primary text-primary-foreground' : 'bg-card hover:border-primary/40',
+              )}
             >
               Cam {b}
-              {n > 0 && <span className={cn('ml-1.5 rounded-full px-1.5 text-[10px]', book === b ? 'bg-primary-foreground/20' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200')}>{n}</span>}
+              {n > 0 && (
+                <span
+                  className={cn('ml-1.5 rounded-full px-1.5 text-[10px]', book === b ? 'bg-primary-foreground/20' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200')}
+                >
+                  {n}
+                </span>
+              )}
             </button>
           );
         })}
@@ -276,7 +486,8 @@ function Cambridge() {
                 <span className={cn('block truncate text-sm', !(mine?.title ?? c.title) && 'italic text-muted-foreground')}>{mine?.title ?? c.title ?? 'Tên bài: điền khi nhập'}</span>
                 {mine && (
                   <span className="text-xs text-muted-foreground">
-                    {TYPE_INFO[mine.type].short} · {mine.items.length} câu{d ? ` · ${d.score}/${d.total}` : ''}
+                    {TYPE_INFO[mine.type].short} · {mine.items.length} câu
+                    {d ? ` · ${d.score}/${d.total}` : ''}
                   </span>
                 )}
               </span>
@@ -399,7 +610,7 @@ function HowTo() {
       </DialogTrigger>
       <DialogContent className="max-w-lg">
         <DialogTitle className="flex items-center gap-2">
-          <BookMarked className="size-5" aria-hidden /> Tô cặp từ trước, chọn đáp án sau
+          <BookMarked className="size-5" aria-hidden /> Cách làm bài tập hằng ngày
         </DialogTitle>
         <DialogDescription asChild>
           <ol className="list-decimal space-y-2 pl-5 text-sm text-foreground">
@@ -416,7 +627,12 @@ function HowTo() {
               Cặp mang nghĩa <b>ngược</b> (indispensable ⇄ play no part) → <b>FALSE / NO</b>. Mọi cặp đều cùng nghĩa → <b>TRUE / YES</b>.
             </li>
             <li>
-              <b>Gap-filling</b>: chỗ trống cũng là một từ khóa — tìm cụm trong bài trước, rồi mới chọn từ trong word box có cùng nghĩa. Word box luôn có bẫy: từ trái nghĩa, hoặc từ có trong bài nhưng ở ý khác.
+              <b>Writing</b>: mỗi ngày một đề ngẫu nhiên — chọn <i>Viết theo khung</i> nếu muốn có câu gợi ý từng bước. <b>Listening Part 1</b>: từ khóa được đọc chậm và rõ hơn; nộp bài xong có thể
+              bấm ▶ để nghe lại từng câu.
+            </li>
+            <li>
+              <b>Gap-filling</b>: chỗ trống cũng là một từ khóa — tìm cụm trong bài trước, rồi mới chọn từ trong word box có cùng nghĩa. Word box luôn có bẫy: từ trái nghĩa, hoặc từ có trong bài nhưng
+              ở ý khác.
             </li>
           </ol>
         </DialogDescription>

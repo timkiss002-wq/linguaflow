@@ -1,5 +1,5 @@
 {
- "note": "Original IELTS Passage-3-style excerpts written for LinguaFlow. Markup: {id:text} = obvious pair (pre-highlighted), [id:text] = keyword the learner pairs, [g:____] = gap. pairs[id].p = phrase in the passage (null = not in the passage), n = which occurrence.",
+ "note": "Original IELTS Passage-3-style excerpts written for LinguaFlow. Markup: {id:text} = obvious pair (pre-highlighted), [id:text] = keyword the learner pairs, [g:____] = gap. pairs[id].p = phrase in the passage (null = not in the passage), n = which occurrence. art = illustration on the card (src/features/passage3/CoverArt.tsx).",
  "sets": [
   {
    "id": "A1",
@@ -106,7 +106,8 @@
      "ans": "T",
      "explain": "'The same publication' = việc công bố tỉ lệ tử vong. 'Decline high-risk patients' = 'avoid treating dangerous cases' → TRUE."
     }
-   ]
+   ],
+   "art": "chart"
   },
   {
    "id": "B1",
@@ -231,7 +232,8 @@
      "ans": 4,
      "explain": "'Inconsistent results' → mixed (lẫn lộn, lúc được lúc không). 'Conclusive' (có tính kết luận) là trái nghĩa."
     }
-   ]
+   ],
+   "art": "brain"
   },
   {
    "id": "A2",
@@ -390,7 +392,8 @@
      ],
      "explain": "'Far harder to persuade younger speakers that the effort is worthwhile' → C."
     }
-   ]
+   ],
+   "art": "people"
   },
   {
    "id": "B2",
@@ -530,7 +533,8 @@
      "ans": 7,
      "explain": "'Extract the underlying principle' → principle. 'Structure' là bẫy: có trong bài nhưng ở ý khác."
     }
-   ]
+   ],
+   "art": "leaf"
   },
   {
    "id": "A3",
@@ -629,7 +633,8 @@
      "ans": "NG",
      "explain": "Bài phê bình các cuốn sách phổ thông, nhưng không hề nói nhóm nghiên cứu gốc phản đối → NOT GIVEN. Đừng nhầm ý của TÁC GIẢ với ý của nhân vật khác."
     }
-   ]
+   ],
+   "art": "coin"
   },
   {
    "id": "B3",
@@ -751,7 +756,8 @@
      "ans": 7,
      "explain": "'Higher population densities' / 'multiplied them' → populations. 'Harvests' (mùa màng) không được nhắc."
     }
-   ]
+   ],
+   "art": "leaf"
   },
   {
    "id": "A4",
@@ -907,7 +913,8 @@
      ],
      "explain": "A bị phủ định bởi 'not ... seeking to discredit'. Ý chính: uy tín (authority) đến một phần từ nhu cầu thể chế → B."
     }
-   ]
+   ],
+   "art": "book"
   },
   {
    "id": "B4",
@@ -1025,7 +1032,8 @@
      "ans": 7,
      "explain": "'At regular intervals' → periodically. 'Permanently' sai vì chỉ là thỉnh thoảng định kỳ."
     }
-   ]
+   ],
+   "art": "chip"
   },
   {
    "id": "A5",
@@ -1125,7 +1133,8 @@
      "ans": "NG",
      "explain": "Bài nhắc cả hai loại đóng đường nhưng KHÔNG so sánh chúng → NOT GIVEN. Câu so sánh hơn mà bài không so sánh = dấu hiệu NG."
     }
-   ]
+   ],
+   "art": "road"
   },
   {
    "id": "A6",
@@ -1227,7 +1236,8 @@
      "ans": "N",
      "explain": "'I would not go so far as to recommend...' = tác giả KHÔNG khuyên như vậy → NO. Bẫy: từ 'recommend' có trong bài nhưng bị phủ định."
     }
-   ]
+   ],
+   "art": "clock"
   },
   {
    "id": "B5",
@@ -1353,7 +1363,8 @@
      "ans": 7,
      "explain": "'Confined to small trials' → experiments."
     }
-   ]
+   ],
+   "art": "ship"
   },
   {
    "id": "A7",
@@ -1504,7 +1515,8 @@
      ],
      "explain": "'This claim has so far received little systematic investigation' → B."
     }
-   ]
+   ],
+   "art": "star"
   },
   {
    "id": "B6",
@@ -1628,7 +1640,8 @@
      "ans": 7,
      "explain": "'Undermine' → damage. 'Improve' trái nghĩa."
     }
-   ]
+   ],
+   "art": "brain"
   },
   {
    "id": "A8",
@@ -1727,7 +1740,8 @@
      "ans": "F",
      "explain": "'Economists still disagree' → FALSE."
     }
-   ]
+   ],
+   "art": "ship"
   },
   {
    "id": "B7",
@@ -1856,7 +1870,8 @@
      "ans": 8,
      "explain": "'Label battery chemistry clearly' → identification (việc ghi rõ/nhận diện)."
     }
-   ]
+   ],
+   "art": "battery"
   },
   {
    "id": "A9",
@@ -1958,6 +1973,4163 @@
      },
      "ans": "NG",
      "explain": "Tác giả chỉ khuyên tổ chức NÊN hỏi ('would be wise to ask'), không nói hiện nay họ đã làm hay chưa → NOT GIVEN."
+    }
+   ],
+   "art": "brain"
+  },
+  {
+   "id": "A10",
+   "track": "A",
+   "type": "tfng",
+   "art": "city",
+   "title": "Why cities run hot",
+   "topic": "Đô thị · đảo nhiệt",
+   "passage": "On a still summer evening, the centre of a large city can be several degrees warmer than the surrounding countryside. This phenomenon, known as the urban heat island, arises chiefly because asphalt, brick and concrete absorb solar radiation during the day and release it slowly after dark. Waste heat from air-conditioning units and vehicles adds to the effect, while the scarcity of vegetation deprives streets of the cooling provided by evaporation. The consequences are not merely a matter of discomfort. During heatwaves, mortality rates in dense urban districts have been found to exceed those in nearby rural areas, and the elderly are disproportionately affected. Remedies range from planting street trees to painting roofs in reflective colours, a measure that is cheap to implement although its benefits diminish as the paint becomes dirty. Some planners argue that such piecemeal interventions are insufficient and that the layout of cities must itself be reconsidered to allow cooling breezes to circulate.",
+   "items": [
+    {
+     "stmt": "The heat island effect is [mn:mainly] caused by [bm:building materials] that [st:store] heat from the sun.",
+     "pairs": {
+      "mn": {
+       "p": "chiefly",
+       "vi": "chủ yếu"
+      },
+      "bm": {
+       "p": "asphalt, brick and concrete",
+       "vi": "nhựa đường, gạch, bê tông"
+      },
+      "st": {
+       "p": "absorb solar radiation",
+       "vi": "hấp thụ bức xạ mặt trời"
+      }
+     },
+     "ans": "T",
+     "explain": "'Arises chiefly because asphalt, brick and concrete absorb solar radiation' → TRUE."
+    },
+    {
+     "stmt": "[hw:During periods of extreme heat], [dr:death rates] are [lo:lower] in cities than in the countryside.",
+     "pairs": {
+      "hw": {
+       "p": "During heatwaves",
+       "vi": "trong các đợt nắng nóng"
+      },
+      "dr": {
+       "p": "mortality rates",
+       "vi": "tỷ lệ tử vong"
+      },
+      "lo": {
+       "p": "exceed",
+       "vi": "vượt quá"
+      }
+     },
+     "ans": "F",
+     "explain": "Tỷ lệ tử vong ở đô thị 'exceed' (cao hơn) nông thôn → FALSE."
+    },
+    {
+     "stmt": "Reflective roof paint [lc:loses some of its effect] over time.",
+     "pairs": {
+      "lc": {
+       "p": "its benefits diminish",
+       "vi": "lợi ích giảm dần"
+      }
+     },
+     "ans": "T",
+     "explain": "'Its benefits diminish as the paint becomes dirty' → TRUE."
+    },
+    {
+     "stmt": "[mo:Most] {pl:planners} believe that [st:street trees] are the [be:best solution].",
+     "pairs": {
+      "pl": {
+       "p": "planners"
+      },
+      "mo": {
+       "p": null,
+       "vi": "bài chỉ nói 'some planners'"
+      },
+      "st": {
+       "p": "planting street trees",
+       "vi": "trồng cây đường phố"
+      },
+      "be": {
+       "p": null,
+       "vi": "không có so sánh 'tốt nhất'"
+      }
+     },
+     "ans": "NG",
+     "explain": "Bài nói 'some planners' cho rằng các biện pháp nhỏ lẻ là chưa đủ; không nói đa số coi cây xanh là tốt nhất → NOT GIVEN."
+    }
+   ]
+  },
+  {
+   "id": "B8",
+   "track": "B",
+   "type": "gap",
+   "art": "leaf",
+   "title": "Farming upwards",
+   "topic": "Nông nghiệp · vertical farming",
+   "passage": "Vertical farms grow crops in stacked layers inside buildings, using artificial light and nutrient solutions instead of soil. Their supporters emphasise that such facilities can be located close to urban consumers, shortening supply chains and reducing spoilage. Because conditions are tightly controlled, pesticides are rarely needed, and water consumption can be a small fraction of that required in open fields, since moisture is captured and recycled. The principal obstacle is energy. Replacing sunlight with LEDs is expensive, and electricity typically accounts for the largest share of operating costs. As a result, the industry has concentrated on leafy greens and herbs, which grow quickly and command high prices, while staple crops such as wheat remain commercially unviable. Several prominent companies have collapsed in recent years, leading sceptics to conclude that the sector was overhyped; others maintain that falling LED prices will eventually make the model profitable.",
+   "box": [
+    "near",
+    "far from",
+    "chemicals",
+    "labour",
+    "lighting",
+    "rent",
+    "expensive",
+    "quick-growing",
+    "profitable"
+   ],
+   "items": [
+    {
+     "stmt": "Vertical farms can be built [g:____] the [cs:people who buy the food], which [rs:cuts down on] wasted produce.",
+     "pairs": {
+      "g": {
+       "p": "located close",
+       "vi": "đặt gần"
+      },
+      "cs": {
+       "p": "urban consumers",
+       "vi": "người tiêu dùng đô thị"
+      },
+      "rs": {
+       "p": "reducing spoilage",
+       "vi": "giảm hư hỏng"
+      }
+     },
+     "ans": 0,
+     "explain": "'Located close to urban consumers' → near. 'Far from' trái nghĩa."
+    },
+    {
+     "stmt": "Because the environment is [ct:carefully controlled], [g:____] such as pesticides are [ra:seldom] required.",
+     "pairs": {
+      "ct": {
+       "p": "tightly controlled",
+       "vi": "kiểm soát chặt"
+      },
+      "g": {
+       "p": "pesticides",
+       "vi": "thuốc trừ sâu"
+      },
+      "ra": {
+       "p": "rarely",
+       "vi": "hiếm khi"
+      }
+     },
+     "ans": 2,
+     "explain": "Pesticides là một loại hóa chất → chemicals."
+    },
+    {
+     "stmt": "The [bi:biggest] running cost is usually the [g:____], since [le:LEDs] replace sunlight.",
+     "pairs": {
+      "bi": {
+       "p": "largest share",
+       "vi": "phần lớn nhất"
+      },
+      "g": {
+       "p": "electricity",
+       "vi": "điện"
+      },
+      "le": {
+       "p": "Replacing sunlight with LEDs",
+       "vi": "thay ánh nắng bằng đèn LED"
+      }
+     },
+     "ans": 4,
+     "explain": "Điện dùng cho đèn LED → lighting (chiếu sáng). 'Rent' không có trong bài."
+    },
+    {
+     "stmt": "Most vertical farms grow [lg:leafy greens and herbs] because they are [g:____] and sell for [hp:a good price].",
+     "pairs": {
+      "lg": {
+       "p": "leafy greens and herbs",
+       "vi": "rau lá, rau thơm"
+      },
+      "g": {
+       "p": "grow quickly",
+       "vi": "lớn nhanh"
+      },
+      "hp": {
+       "p": "command high prices",
+       "vi": "bán được giá cao"
+      }
+     },
+     "ans": 7,
+     "explain": "'Grow quickly' → quick-growing."
+    }
+   ]
+  },
+  {
+   "id": "A11",
+   "track": "A",
+   "type": "mcq",
+   "art": "book",
+   "title": "The press and the spread of ideas",
+   "topic": "Lịch sử · in ấn",
+   "passage": "It is tempting to credit the printing press with an immediate revolution in European thought. The reality was more gradual. For several decades after movable type was introduced in the mid-fifteenth century, printers concentrated on texts for which demand was already assured – religious works, legal handbooks and classical authors – because producing books required substantial capital and unsold copies could ruin a business. What printing did change, almost at once, was the reliability of texts. Manuscripts copied by hand accumulated errors with each generation, whereas a printed edition gave hundreds of readers in different cities an identical version, enabling scholars to compare and correct one another's work. Historians have argued that this standardisation, rather than any sudden increase in literacy, was the press's most profound early contribution. Literacy itself rose only slowly and unevenly, remaining largely confined to towns for well over a century.",
+   "items": [
+    {
+     "stmt": "According to the writer, the [im:impact] of printing on European thought was",
+     "pairs": {
+      "im": {
+       "p": "revolution",
+       "vi": "cuộc cách mạng (tác động)"
+      }
+     },
+     "options": [
+      "sudden and dramatic",
+      "slower than is often assumed",
+      "limited to religious texts",
+      "greatest in rural areas"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "slower than is often assumed",
+       "The reality was more gradual"
+      ]
+     ],
+     "explain": "'It is tempting to credit... immediate revolution. The reality was more gradual' → B."
+    },
+    {
+     "stmt": "Why did early printers [fo:focus] on [ft:familiar types of book]?",
+     "pairs": {
+      "fo": {
+       "p": "concentrated",
+       "vi": "tập trung"
+      },
+      "ft": {
+       "p": "demand was already assured",
+       "vi": "nhu cầu đã được đảm bảo"
+      }
+     },
+     "options": [
+      "They were required to by the Church.",
+      "They lacked the skills to print new works.",
+      "Failing to sell books was financially risky.",
+      "Readers refused to buy new authors."
+     ],
+     "ans": 2,
+     "para": [
+      [
+       "financially risky",
+       "unsold copies could ruin a business"
+      ]
+     ],
+     "explain": "Sách tồn kho có thể làm phá sản → C."
+    },
+    {
+     "stmt": "What [ch:changed] [im:almost immediately] because of printing?",
+     "pairs": {
+      "ch": {
+       "p": "What printing did change",
+       "vi": "điều mà in ấn thực sự thay đổi"
+      },
+      "im": {
+       "p": "almost at once",
+       "vi": "gần như ngay lập tức"
+      }
+     },
+     "options": [
+      "Books became cheaper to buy.",
+      "Readers in different places had identical texts.",
+      "Most people learned to read.",
+      "Religious works became less popular."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "identical texts",
+       "an identical version"
+      ]
+     ],
+     "explain": "'A printed edition gave hundreds of readers in different cities an identical version' → B. C bị phủ định: literacy rose only slowly."
+    },
+    {
+     "stmt": "What do some {hi:historians} consider to be printing's [mp:most important early effect]?",
+     "pairs": {
+      "hi": {
+       "p": "Historians"
+      },
+      "mp": {
+       "p": "most profound early contribution",
+       "vi": "đóng góp sâu sắc nhất ban đầu"
+      }
+     },
+     "options": [
+      "a rapid rise in literacy",
+      "the growth of towns",
+      "the standardisation of texts",
+      "the decline of the Church"
+     ],
+     "ans": 2,
+     "para": [
+      [
+       "standardisation of texts",
+       "this standardisation"
+      ]
+     ],
+     "explain": "'This standardisation, rather than any sudden increase in literacy' → C. A là bẫy bị phủ định."
+    }
+   ]
+  },
+  {
+   "id": "A12",
+   "track": "A",
+   "type": "ynng",
+   "art": "flask",
+   "title": "In praise of failed experiments",
+   "topic": "Khoa học · quan điểm tác giả",
+   "passage": "Scientific journals overwhelmingly publish studies that report positive results, and researchers know it. The consequence, I would argue, is a distorted picture of the evidence. When an experiment fails to find the effect it was looking for, the findings are frequently left in a drawer, so that other scientists, unaware of the attempt, may waste years repeating it. Worse, a literature composed mainly of successes can make weak effects appear robust. Some journals now accept papers on the basis of their design before the results are known, a reform I regard as the single most promising development in recent decades. Critics object that such journals will fill with uninteresting work. This concern seems to me exaggerated: a carefully designed study that finds nothing is not trivial, since knowing where an effect is absent is itself valuable. Nevertheless, I accept that funding bodies, which still reward striking discoveries, must change their priorities if the reform is to succeed.",
+   "items": [
+    {
+     "stmt": "The writer believes the [pr:preference for positive results] [gi:gives a misleading impression] of the evidence.",
+     "pairs": {
+      "pr": {
+       "p": "overwhelmingly publish studies that report positive results",
+       "vi": "chủ yếu đăng nghiên cứu có kết quả tích cực"
+      },
+      "gi": {
+       "p": "distorted picture",
+       "vi": "bức tranh méo mó"
+      }
+     },
+     "ans": "Y",
+     "explain": "'The consequence, I would argue, is a distorted picture' → YES."
+    },
+    {
+     "stmt": "Accepting papers [bd:before results are known] is, in the writer's view, the [mp:most hopeful] recent change.",
+     "pairs": {
+      "bd": {
+       "p": "before the results are known",
+       "vi": "trước khi biết kết quả"
+      },
+      "mp": {
+       "p": "single most promising",
+       "vi": "hứa hẹn nhất"
+      }
+     },
+     "ans": "Y",
+     "explain": "'A reform I regard as the single most promising development' → YES."
+    },
+    {
+     "stmt": "The writer [ag:agrees] that studies finding no effect are [un:of little interest].",
+     "pairs": {
+      "ag": {
+       "p": "exaggerated",
+       "vi": "(lo ngại) bị thổi phồng"
+      },
+      "un": {
+       "p": "not trivial",
+       "vi": "không tầm thường"
+      }
+     },
+     "ans": "N",
+     "explain": "Tác giả cho rằng lo ngại này 'exaggerated', nghiên cứu không tìm thấy gì 'is not trivial' → NO."
+    },
+    {
+     "stmt": "{fb:Funding bodies} have [al:already] [ch:changed their priorities].",
+     "pairs": {
+      "fb": {
+       "p": "funding bodies"
+      },
+      "al": {
+       "p": "still",
+       "vi": "vẫn còn (chưa thay đổi)"
+      },
+      "ch": {
+       "p": "change their priorities",
+       "vi": "thay đổi ưu tiên"
+      }
+     },
+     "ans": "N",
+     "explain": "'Funding bodies, which still reward striking discoveries, must change' → họ CHƯA thay đổi → NO."
+    }
+   ]
+  },
+  {
+   "id": "B9",
+   "track": "B",
+   "type": "gap",
+   "art": "globe",
+   "title": "Maps that told stories",
+   "topic": "Lịch sử · bản đồ",
+   "passage": "Medieval world maps were rarely intended as tools for navigation. Large examples, displayed in cathedrals, arranged the known world around Jerusalem and filled its margins with biblical scenes and legendary creatures, functioning more as encyclopaedias of belief than as guides for travellers. Practical charts did exist: from the thirteenth century, Mediterranean sailors relied on portolan charts, which recorded coastlines in remarkable detail and were criss-crossed by lines indicating compass bearings. Yet these charts said almost nothing about the interior of continents, reflecting the priorities of the merchants who commissioned them. The gradual adoption of a mathematical grid of latitude and longitude, revived from ancient Greek geography in the fifteenth century, eventually allowed information from many sources to be combined on a single consistent framework, although accurate measurement of longitude at sea remained elusive until the eighteenth century.",
+   "box": [
+    "navigation",
+    "worship",
+    "beliefs",
+    "harbours",
+    "coastlines",
+    "inland areas",
+    "grid",
+    "telescope",
+    "longitude"
+   ],
+   "items": [
+    {
+     "stmt": "Large medieval maps were [sd:seldom] made to help with [g:____].",
+     "pairs": {
+      "sd": {
+       "p": "rarely",
+       "vi": "hiếm khi"
+      },
+      "g": {
+       "p": "tools for navigation",
+       "vi": "công cụ định hướng"
+      }
+     },
+     "ans": 0,
+     "explain": "'Rarely intended as tools for navigation' → navigation."
+    },
+    {
+     "stmt": "Instead, they [ac:acted as] a kind of encyclopaedia of religious [g:____].",
+     "pairs": {
+      "ac": {
+       "p": "functioning",
+       "vi": "đóng vai trò"
+      },
+      "g": {
+       "p": "belief",
+       "vi": "niềm tin"
+      }
+     },
+     "ans": 2,
+     "explain": "'Encyclopaedias of belief' → beliefs. 'Worship' là bẫy liên tưởng tới nhà thờ."
+    },
+    {
+     "stmt": "{po:Portolan charts} showed [g:____] [ac:very accurately] but gave [li:little information] about inland regions.",
+     "pairs": {
+      "po": {
+       "p": "portolan charts"
+      },
+      "g": {
+       "p": "coastlines",
+       "vi": "đường bờ biển"
+      },
+      "ac": {
+       "p": "remarkable detail",
+       "vi": "chi tiết đáng kinh ngạc"
+      },
+      "li": {
+       "p": "almost nothing",
+       "vi": "hầu như không gì"
+      }
+     },
+     "ans": 4,
+     "explain": "'Recorded coastlines in remarkable detail' → coastlines. 'Inland areas' là bẫy: đó là phần bản đồ KHÔNG nói đến."
+    },
+    {
+     "stmt": "A mathematical [g:____] [al:allowed] data from [ms:different sources] to be combined.",
+     "pairs": {
+      "g": {
+       "p": "grid of latitude and longitude",
+       "vi": "lưới kinh vĩ độ"
+      },
+      "al": {
+       "p": "allowed",
+       "vi": "cho phép"
+      },
+      "ms": {
+       "p": "many sources",
+       "vi": "nhiều nguồn"
+      }
+     },
+     "ans": 6,
+     "explain": "'A mathematical grid' → grid. 'Longitude' là bẫy: nó là một phần của lưới, và việc đo nó trên biển vẫn khó."
+    }
+   ]
+  },
+  {
+   "id": "A13",
+   "track": "A",
+   "type": "tfng",
+   "art": "leaf",
+   "title": "The quiet decline of pollinators",
+   "topic": "Sinh thái · loài thụ phấn",
+   "passage": "Roughly three-quarters of the world's leading food crops benefit to some degree from animal pollination, yet the insects that provide this service are under pressure. Wild bee populations in many regions have fallen, a decline attributed to a combination of habitat loss, pesticide exposure, disease and a changing climate. Disentangling these causes has proved difficult, since they interact: bees weakened by poor nutrition, for instance, appear more vulnerable to parasites. Commercial honeybee colonies, which farmers rent to pollinate orchards, have attracted the most public attention, but researchers caution that honeybees are a domesticated species whose numbers can be replenished by beekeepers. The greater concern, they argue, is the loss of wild pollinators, which are often more efficient at pollinating particular crops. Encouragingly, field trials suggest that leaving strips of wildflowers along the edges of farmland can substantially increase wild bee numbers within a few seasons.",
+   "items": [
+    {
+     "stmt": "[mo:Most] of the world's major food crops [rc:receive some benefit] from pollination by animals.",
+     "pairs": {
+      "mo": {
+       "p": "three-quarters",
+       "vi": "ba phần tư (= phần lớn)"
+      },
+      "rc": {
+       "p": "benefit to some degree",
+       "vi": "được lợi ở mức độ nào đó"
+      }
+     },
+     "ans": "T",
+     "explain": "Ba phần tư = phần lớn → TRUE."
+    },
+    {
+     "stmt": "Scientists have [ea:easily] [id:identified] the [sc:single cause] of the decline in wild bees.",
+     "pairs": {
+      "ea": {
+       "p": "proved difficult",
+       "vi": "tỏ ra khó khăn"
+      },
+      "id": {
+       "p": "Disentangling these causes",
+       "vi": "gỡ rối các nguyên nhân"
+      },
+      "sc": {
+       "p": "a combination",
+       "vi": "sự kết hợp (nhiều nguyên nhân)"
+      }
+     },
+     "ans": "F",
+     "explain": "Nhiều nguyên nhân kết hợp và việc tách chúng 'proved difficult' → FALSE."
+    },
+    {
+     "stmt": "{hb:Honeybee} numbers can be [rp:restored] by people who [kb:keep bees].",
+     "pairs": {
+      "hb": {
+       "p": "honeybees are"
+      },
+      "rp": {
+       "p": "replenished",
+       "vi": "bổ sung lại"
+      },
+      "kb": {
+       "p": "beekeepers",
+       "vi": "người nuôi ong"
+      }
+     },
+     "ans": "T",
+     "explain": "'Whose numbers can be replenished by beekeepers' → TRUE."
+    },
+    {
+     "stmt": "[wf:Wildflower strips] are [ch:cheaper] than [ot:other conservation methods].",
+     "pairs": {
+      "wf": {
+       "p": "strips of wildflowers",
+       "vi": "dải hoa dại"
+      },
+      "ch": {
+       "p": null,
+       "vi": "bài không nói chi phí"
+      },
+      "ot": {
+       "p": null,
+       "vi": "không so sánh với biện pháp khác"
+      }
+     },
+     "ans": "NG",
+     "explain": "Bài chỉ nói dải hoa dại làm tăng số ong; không nói về chi phí → NOT GIVEN."
+    }
+   ]
+  },
+  {
+   "id": "B10",
+   "track": "B",
+   "type": "gap",
+   "art": "city",
+   "title": "The cost of noise",
+   "topic": "Sức khỏe đô thị · ô nhiễm tiếng ồn",
+   "passage": "Noise is often dismissed as a nuisance rather than a genuine threat to health, but evidence assembled over several decades suggests otherwise. Prolonged exposure to traffic noise at night has been linked to disturbed sleep even when people do not consciously wake, and chronically disturbed sleep is associated with raised blood pressure and an increased risk of heart disease. Children attending schools beneath flight paths have, in several studies, performed less well on reading tests than comparable pupils in quieter areas, although the size of the effect varies. Part of the difficulty in tackling the problem is that noise, unlike chemical pollutants, leaves no residue and is therefore easily overlooked by regulators. Measures such as quieter road surfaces, lower speed limits and night-time restrictions on aircraft have all proved effective, yet they are frequently resisted on the grounds of cost or economic inconvenience.",
+   "box": [
+    "annoyance",
+    "danger",
+    "awake",
+    "asleep",
+    "comprehension",
+    "attendance",
+    "trace",
+    "smell",
+    "opposed"
+   ],
+   "items": [
+    {
+     "stmt": "Noise is frequently [dm:regarded as] [ju:merely] an [g:____].",
+     "pairs": {
+      "dm": {
+       "p": "dismissed as",
+       "vi": "bị gạt đi như là"
+      },
+      "ju": {
+       "p": "rather than a genuine threat",
+       "vi": "chứ không phải mối đe dọa thật"
+      },
+      "g": {
+       "p": "nuisance",
+       "vi": "điều phiền toái"
+      }
+     },
+     "ans": 0,
+     "explain": "'Nuisance' → annoyance. 'Danger' là trái nghĩa với ý được nêu."
+    },
+    {
+     "stmt": "Night-time traffic noise can [di:disturb] sleep even if people [nr:do not realise] they are [g:____].",
+     "pairs": {
+      "di": {
+       "p": "disturbed sleep",
+       "vi": "giấc ngủ bị xáo trộn"
+      },
+      "nr": {
+       "p": "not consciously",
+       "vi": "không có ý thức"
+      },
+      "g": {
+       "p": "wake",
+       "vi": "thức dậy"
+      }
+     },
+     "ans": 2,
+     "explain": "'Even when people do not consciously wake' → không nhận ra mình bị thức giấc → awake."
+    },
+    {
+     "stmt": "Pupils at schools under [fp:flight paths] did [wo:worse] in tests of reading [g:____].",
+     "pairs": {
+      "fp": {
+       "p": "flight paths",
+       "vi": "đường bay"
+      },
+      "wo": {
+       "p": "performed less well",
+       "vi": "làm kém hơn"
+      },
+      "g": {
+       "p": "reading tests",
+       "vi": "bài kiểm tra đọc (→ đọc hiểu)"
+      }
+     },
+     "ans": 4,
+     "explain": "Bài kiểm tra đọc → reading comprehension. 'Attendance' (chuyên cần) không được nhắc."
+    },
+    {
+     "stmt": "[re:Regulators] tend to [ov:ignore] noise because it leaves no [g:____].",
+     "pairs": {
+      "re": {
+       "p": "regulators",
+       "vi": "cơ quan quản lý"
+      },
+      "ov": {
+       "p": "overlooked",
+       "vi": "bị bỏ qua"
+      },
+      "g": {
+       "p": "residue",
+       "vi": "cặn, dấu vết"
+      }
+     },
+     "ans": 6,
+     "explain": "'Leaves no residue' → trace (dấu vết)."
+    }
+   ]
+  },
+  {
+   "id": "A14",
+   "track": "A",
+   "type": "mcq",
+   "art": "wave",
+   "title": "Mining the deep ocean",
+   "topic": "Môi trường · khai thác đáy biển",
+   "passage": "Scattered across parts of the deep ocean floor lie potato-sized nodules rich in manganese, nickel and cobalt, metals in growing demand for batteries. Mining companies argue that collecting them would be less environmentally damaging than digging new mines on land, since the nodules simply rest on the sediment and no forests or communities would be displaced. Marine biologists are less convinced. The abyssal plains, they point out, are home to a surprising diversity of organisms, many of which have never been described, and some of which depend on the nodules themselves as a surface on which to live. Because life at these depths grows and reproduces extremely slowly, disturbed areas may take decades or even centuries to recover. Experiments in which small patches of seabed were ploughed in the 1980s still show clear signs of damage today. An international authority is negotiating regulations, but several countries have called for a pause until the ecosystems are better understood.",
+   "items": [
+    {
+     "stmt": "Why are the {no:nodules} [va:attractive] to mining companies?",
+     "pairs": {
+      "no": {
+       "p": "nodules rich"
+      },
+      "va": {
+       "p": "growing demand",
+       "vi": "nhu cầu tăng"
+      }
+     },
+     "options": [
+      "They are easy to process.",
+      "They contain metals needed for batteries.",
+      "They lie in shallow water.",
+      "They are found near land."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "metals needed for batteries",
+       "metals in growing demand for batteries"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "What [ar:argument] do mining companies make?",
+     "pairs": {
+      "ar": {
+       "p": "argue",
+       "vi": "lập luận"
+      }
+     },
+     "options": [
+      "Deep-sea mining would harm fewer people and habitats than land mining.",
+      "The deep ocean contains no living organisms.",
+      "Land mines will soon be exhausted.",
+      "Mining would help scientists study the seabed."
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "harm fewer people and habitats",
+       "no forests or communities would be displaced"
+      ]
+     ],
+     "explain": "→ A. B bị biologists phản bác."
+    },
+    {
+     "stmt": "According to biologists, why would [da:damaged] areas [rc:recover] slowly?",
+     "pairs": {
+      "da": {
+       "p": "disturbed areas",
+       "vi": "khu vực bị xáo trộn"
+      },
+      "rc": {
+       "p": "recover",
+       "vi": "phục hồi"
+      }
+     },
+     "options": [
+      "The water is too cold for new life.",
+      "Organisms there grow and breed very slowly.",
+      "Sediment covers the area permanently.",
+      "The nodules cannot form again."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "grow and breed very slowly",
+       "grows and reproduces extremely slowly"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "What does the writer say about the [ex:experiments] in the [ei:1980s]?",
+     "pairs": {
+      "ex": {
+       "p": "Experiments",
+       "vi": "các thí nghiệm"
+      },
+      "ei": {
+       "p": "1980s",
+       "vi": "thập niên 1980"
+      }
+     },
+     "options": [
+      "They proved that mining is safe.",
+      "The damage they caused is still visible.",
+      "They were carried out by mining companies.",
+      "They covered very large areas."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "still visible",
+       "still show clear signs of damage today"
+      ]
+     ],
+     "explain": "→ B. D sai vì 'small patches'."
+    }
+   ]
+  },
+  {
+   "id": "A15",
+   "track": "A",
+   "type": "ynng",
+   "art": "chip",
+   "title": "Is the internet shortening our attention?",
+   "topic": "Công nghệ · sự chú ý",
+   "passage": "It has become commonplace to claim that digital technology is destroying our capacity to concentrate. I find the evidence for this more equivocal than the headlines suggest. Laboratory measures of sustained attention have not shown a clear decline over the past two decades, and the widely repeated assertion that human attention spans are now shorter than those of goldfish appears to have no credible scientific source. What does seem to have changed is the environment in which we try to concentrate. Notifications are deliberately designed to interrupt, and studies show that even the presence of a silent phone on a desk can modestly reduce performance on demanding tasks. The problem, in other words, may lie less in our brains than in our surroundings. That distinction matters, because it implies that the remedy is not to despair of human nature but to redesign the tools and habits that fragment our time.",
+   "items": [
+    {
+     "stmt": "The writer thinks the [ev:evidence] that technology [da:damages] concentration is [cl:conclusive].",
+     "pairs": {
+      "ev": {
+       "p": "the evidence",
+       "vi": "bằng chứng"
+      },
+      "da": {
+       "p": "destroying our capacity to concentrate",
+       "vi": "phá hủy khả năng tập trung"
+      },
+      "cl": {
+       "p": "more equivocal",
+       "vi": "mập mờ hơn"
+      }
+     },
+     "ans": "N",
+     "explain": "Tác giả thấy bằng chứng 'more equivocal' (không rõ ràng) → NO."
+    },
+    {
+     "stmt": "The claim about {gf:goldfish} [la:lacks a reliable scientific basis].",
+     "pairs": {
+      "gf": {
+       "p": "goldfish"
+      },
+      "la": {
+       "p": "no credible scientific source",
+       "vi": "không có nguồn khoa học đáng tin"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "[nt:Alerts on devices] are [in:intentionally] made to [di:distract] users.",
+     "pairs": {
+      "nt": {
+       "p": "Notifications",
+       "vi": "thông báo"
+      },
+      "in": {
+       "p": "deliberately",
+       "vi": "cố ý"
+      },
+      "di": {
+       "p": "interrupt",
+       "vi": "làm gián đoạn"
+      }
+     },
+     "ans": "Y",
+     "explain": "'Notifications are deliberately designed to interrupt' → YES."
+    },
+    {
+     "stmt": "The writer believes {hn:human nature} is [ma:mainly to blame] for [po:difficulty in concentrating].",
+     "pairs": {
+      "hn": {
+       "p": "human nature"
+      },
+      "ma": {
+       "p": "less in our brains than in our surroundings",
+       "vi": "ít ở bộ não hơn là ở môi trường xung quanh"
+      },
+      "po": {
+       "p": "try to concentrate",
+       "vi": "cố gắng tập trung"
+      }
+     },
+     "ans": "N",
+     "explain": "Tác giả cho rằng vấn đề nằm ở môi trường chứ không ở bộ não, và 'not to despair of human nature' → NO."
+    }
+   ]
+  },
+  {
+   "id": "A16",
+   "track": "A",
+   "type": "tfng",
+   "art": "ship",
+   "title": "Ports without people",
+   "topic": "Logistics · cảng tự động",
+   "passage": "At a growing number of container terminals, cranes are operated remotely from control rooms and containers are moved across the yard by driverless vehicles. Port authorities justify the investment by pointing to greater safety, more predictable performance and the ability to operate around the clock. The productivity gains, however, have been less impressive than promised. A study of automated terminals found that, on average, they handled no more containers per crane per hour than conventional ones, partly because automated equipment moves cautiously and struggles with irregular situations such as damaged boxes. Automation does reduce labour costs, but the capital required is enormous, and returns depend on high and stable volumes of traffic. Unsurprisingly, dock workers' unions have opposed several projects, and in some ports agreements have been reached that guarantee existing jobs in exchange for acceptance of new technology.",
+   "items": [
+    {
+     "stmt": "Automated ports can [wo:work] [rc:twenty-four hours a day].",
+     "pairs": {
+      "wo": {
+       "p": "ability to operate",
+       "vi": "khả năng vận hành"
+      },
+      "rc": {
+       "p": "around the clock",
+       "vi": "suốt ngày đêm"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "Automated terminals [ty:typically] [mv:move] [mo:more containers] per crane each hour than traditional terminals.",
+     "pairs": {
+      "ty": {
+       "p": "on average",
+       "vi": "trung bình"
+      },
+      "mv": {
+       "p": "handled",
+       "vi": "xử lý"
+      },
+      "mo": {
+       "p": "no more containers",
+       "vi": "không nhiều container hơn"
+      }
+     },
+     "ans": "F",
+     "explain": "'No more containers per crane per hour than conventional ones' → FALSE."
+    },
+    {
+     "stmt": "Automated machines [hd:have difficulty with] [un:unusual problems].",
+     "pairs": {
+      "hd": {
+       "p": "struggles with",
+       "vi": "vật lộn với"
+      },
+      "un": {
+       "p": "irregular situations",
+       "vi": "tình huống bất thường"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "[al:All] {un:unions} have [ac:accepted] job guarantees in return for automation.",
+     "pairs": {
+      "un": {
+       "p": "unions"
+      },
+      "al": {
+       "p": "in some ports",
+       "vi": "ở một số cảng"
+      },
+      "ac": {
+       "p": "agreements have been reached",
+       "vi": "đã đạt thỏa thuận"
+      }
+     },
+     "ans": "F",
+     "explain": "Chỉ 'in some ports'; nhiều công đoàn còn phản đối → FALSE."
+    }
+   ]
+  },
+  {
+   "id": "A17",
+   "track": "A",
+   "type": "mcq",
+   "art": "flask",
+   "title": "The power of an inert pill",
+   "topic": "Y học · hiệu ứng giả dược",
+   "passage": "For much of the twentieth century, the placebo effect was regarded mainly as a nuisance to be eliminated from clinical trials. More recently, researchers have begun to study it as a phenomenon in its own right. The improvements patients report after taking an inert pill are not simply imaginary: brain imaging has shown, for example, that placebo pain relief is accompanied by the release of the body's own pain-suppressing chemicals. The context of treatment appears crucial. Larger pills, injections and treatments delivered by a warm, attentive practitioner tend to produce stronger responses than those delivered briskly. Perhaps most surprisingly, several small studies have found that patients improve even when told openly that they are receiving a placebo. Researchers emphasise, however, that placebos chiefly influence symptoms such as pain and nausea; they do not shrink tumours or cure infections, and their use must never delay effective treatment.",
+   "items": [
+    {
+     "stmt": "How was the placebo effect [ma:mainly viewed] in the [tc:twentieth century]?",
+     "pairs": {
+      "ma": {
+       "p": "regarded mainly",
+       "vi": "chủ yếu được xem là"
+      },
+      "tc": {
+       "p": "twentieth century",
+       "vi": "thế kỷ 20"
+      }
+     },
+     "options": [
+      "as a useful form of treatment",
+      "as a problem to be removed from trials",
+      "as evidence of patients' dishonesty",
+      "as a recent scientific discovery"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "a problem to be removed",
+       "a nuisance to be eliminated"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "What does [bi:brain imaging] [sh:show] about placebo pain relief?",
+     "pairs": {
+      "bi": {
+       "p": "brain imaging",
+       "vi": "chụp ảnh não"
+      },
+      "sh": {
+       "p": "has shown",
+       "vi": "đã cho thấy"
+      }
+     },
+     "options": [
+      "It is entirely imaginary.",
+      "It works only for some patients.",
+      "It involves the body producing natural painkillers.",
+      "It lasts longer than real medicine."
+     ],
+     "ans": 2,
+     "para": [
+      [
+       "natural painkillers",
+       "the body's own pain-suppressing chemicals"
+      ]
+     ],
+     "explain": "→ C. A bị phủ định: 'not simply imaginary'."
+    },
+    {
+     "stmt": "Which [fa:factor] [st:strengthens] the placebo response?",
+     "pairs": {
+      "fa": {
+       "p": "context of treatment",
+       "vi": "bối cảnh điều trị"
+      },
+      "st": {
+       "p": "stronger responses",
+       "vi": "phản ứng mạnh hơn"
+      }
+     },
+     "options": [
+      "a doctor who is kind and attentive",
+      "a treatment that is quick",
+      "a smaller pill",
+      "a written explanation"
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "kind and attentive",
+       "warm, attentive practitioner"
+      ]
+     ],
+     "explain": "→ A. B sai: 'delivered briskly' cho kết quả yếu hơn; C sai: viên to hơn mới mạnh hơn."
+    },
+    {
+     "stmt": "What [li:limitation] of placebos do researchers [em:stress]?",
+     "pairs": {
+      "li": {
+       "p": "chiefly influence symptoms",
+       "vi": "chủ yếu tác động lên triệu chứng"
+      },
+      "em": {
+       "p": "emphasise",
+       "vi": "nhấn mạnh"
+      }
+     },
+     "options": [
+      "They only work when patients are deceived.",
+      "They affect symptoms rather than the disease itself.",
+      "They are too expensive to use widely.",
+      "They cause serious side effects."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "symptoms rather than the disease",
+       "chiefly influence symptoms... do not shrink tumours or cure infections"
+      ]
+     ],
+     "explain": "→ B. A sai: bệnh nhân vẫn cải thiện khi được nói thật."
+    }
+   ]
+  },
+  {
+   "id": "B11",
+   "track": "B",
+   "type": "gap",
+   "art": "building",
+   "title": "Concrete that mends itself",
+   "topic": "Vật liệu · bê tông tự phục hồi",
+   "passage": "Concrete is the most widely used construction material on Earth, but it has a persistent weakness: it cracks. Small fissures allow water and salts to penetrate, eventually corroding the steel reinforcement inside and weakening the structure. Repairing such damage is costly and often requires closing roads or bridges. Engineers have therefore developed concrete that can heal itself. In one approach, dormant bacterial spores and a source of nutrients are mixed into the concrete. When a crack forms and water seeps in, the bacteria are activated and produce limestone, which gradually seals the gap. Laboratory tests have shown that cracks up to roughly a millimetre wide can be closed within a few weeks. The material is currently considerably more expensive than ordinary concrete, so its use has been confined to structures that are difficult to inspect, such as tunnels and water tanks, where reduced maintenance can offset the higher initial price.",
+   "box": [
+    "popular",
+    "weakness",
+    "enter",
+    "escape",
+    "inactive",
+    "dangerous",
+    "fill",
+    "inspect",
+    "reach"
+   ],
+   "items": [
+    {
+     "stmt": "Concrete's [ma:main] [g:____] is that it tends to crack.",
+     "pairs": {
+      "ma": {
+       "p": "persistent",
+       "vi": "dai dẳng"
+      },
+      "g": {
+       "p": "weakness",
+       "vi": "điểm yếu"
+      }
+     },
+     "ans": 1,
+     "explain": "'A persistent weakness: it cracks' → weakness."
+    },
+    {
+     "stmt": "Cracks let water and salts [g:____], which [ev:in time] [da:damages] the steel inside.",
+     "pairs": {
+      "g": {
+       "p": "penetrate",
+       "vi": "thấm vào"
+      },
+      "ev": {
+       "p": "eventually",
+       "vi": "cuối cùng, theo thời gian"
+      },
+      "da": {
+       "p": "corroding",
+       "vi": "ăn mòn"
+      }
+     },
+     "ans": 2,
+     "explain": "'Penetrate' → enter."
+    },
+    {
+     "stmt": "In one method, [g:____] bacteria are [mi:added] to the concrete together with [fo:food] for them.",
+     "pairs": {
+      "g": {
+       "p": "dormant",
+       "vi": "ngủ đông"
+      },
+      "mi": {
+       "p": "mixed into",
+       "vi": "trộn vào"
+      },
+      "fo": {
+       "p": "nutrients",
+       "vi": "chất dinh dưỡng"
+      }
+     },
+     "ans": 4,
+     "explain": "'Dormant' → inactive (chưa hoạt động)."
+    },
+    {
+     "stmt": "It is [cu:currently] used mainly in structures that are hard to [g:____].",
+     "pairs": {
+      "cu": {
+       "p": "currently",
+       "vi": "hiện nay"
+      },
+      "g": {
+       "p": "difficult to inspect",
+       "vi": "khó kiểm tra"
+      }
+     },
+     "ans": 7,
+     "explain": "'Difficult to inspect' → inspect. 'Reach' nghe hợp lý (tunnel khó tiếp cận) nhưng bài dùng 'inspect'."
+    }
+   ]
+  },
+  {
+   "id": "A18",
+   "track": "A",
+   "type": "ynng",
+   "art": "mountain",
+   "title": "Loving places to death",
+   "topic": "Du lịch · di sản",
+   "passage": "The designation of a site as part of humanity's shared heritage is intended to protect it, yet the label frequently brings crowds that threaten the very qualities it celebrates. Historic city centres become theme parks for day visitors, and residents, priced out by holiday rentals, move away. I do not believe the answer is to discourage tourism altogether. Visitors fund conservation, sustain local employment and, at their best, foster genuine appreciation of other cultures. The difficulty lies in concentration: most tourists visit the same handful of famous sites at the same times of year. Measures such as timed entry tickets and daily limits have succeeded in some places, though they are unpopular with tour operators. In my view, the most effective policy would be to promote lesser-known destinations nearby, spreading visitors more evenly, but this requires a degree of coordination between authorities that is, regrettably, rare.",
+   "items": [
+    {
+     "stmt": "Heritage status [so:sometimes] [ha:harms] the places it is [in:meant] to protect.",
+     "pairs": {
+      "so": {
+       "p": "frequently",
+       "vi": "thường xuyên"
+      },
+      "ha": {
+       "p": "threaten",
+       "vi": "đe dọa"
+      },
+      "in": {
+       "p": "intended",
+       "vi": "nhằm mục đích"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "The writer thinks tourism should be [di:discouraged] in heritage sites.",
+     "pairs": {
+      "di": {
+       "p": "discourage tourism altogether",
+       "vi": "ngăn cản du lịch hoàn toàn"
+      }
+     },
+     "ans": "N",
+     "explain": "'I do not believe the answer is to discourage tourism altogether' → NO."
+    },
+    {
+     "stmt": "{to:Tour operators} [di:dislike] {te:timed entry tickets}.",
+     "pairs": {
+      "to": {
+       "p": "tour operators"
+      },
+      "te": {
+       "p": "timed entry tickets"
+      },
+      "di": {
+       "p": "unpopular with",
+       "vi": "không được ưa chuộng bởi"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES (đây là thông tin tác giả nêu)."
+    },
+    {
+     "stmt": "Cooperation between authorities on this issue is [co:common].",
+     "pairs": {
+      "co": {
+       "p": "rare",
+       "vi": "hiếm"
+      }
+     },
+     "ans": "N",
+     "explain": "'Coordination between authorities that is, regrettably, rare' → NO."
+    }
+   ]
+  },
+  {
+   "id": "A19",
+   "track": "A",
+   "type": "tfng",
+   "art": "wave",
+   "title": "Gardening the reef",
+   "topic": "Sinh thái biển · san hô",
+   "passage": "As rising sea temperatures cause repeated episodes of coral bleaching, scientists and volunteers have turned to coral gardening. Fragments of living coral are grown on underwater frames in nurseries and then transplanted onto degraded reefs. The technique can produce impressive results on a small scale: in some projects, transplanted corals have survived at high rates and begun to spawn. Critics, however, point to the mismatch in scale. The world's reefs cover hundreds of thousands of square kilometres, while even the largest restoration programmes have planted corals over areas measured in hectares. Moreover, if the underlying causes of bleaching are not addressed, transplanted corals face the same heat stress as those they replace. Researchers are therefore experimenting with breeding corals that tolerate higher temperatures, an approach that remains controversial because of uncertainty about its long-term ecological effects.",
+   "items": [
+    {
+     "stmt": "In coral gardening, [fr:pieces] of coral are [gr:cultivated] before being [mv:moved] to damaged reefs.",
+     "pairs": {
+      "fr": {
+       "p": "Fragments",
+       "vi": "mảnh"
+      },
+      "gr": {
+       "p": "grown",
+       "vi": "được nuôi"
+      },
+      "mv": {
+       "p": "transplanted",
+       "vi": "được cấy ghép"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "Transplanted corals have [sv:rarely survived].",
+     "pairs": {
+      "sv": {
+       "p": "survived at high rates",
+       "vi": "sống sót với tỷ lệ cao"
+      }
+     },
+     "ans": "F",
+     "explain": "'Transplanted corals have survived at high rates' → FALSE."
+    },
+    {
+     "stmt": "Restoration projects [co:cover] [sm:a tiny fraction] of the [to:total area of reefs].",
+     "pairs": {
+      "co": {
+       "p": "planted corals over areas",
+       "vi": "trồng san hô trên diện tích"
+      },
+      "sm": {
+       "p": "measured in hectares",
+       "vi": "tính bằng hecta"
+      },
+      "to": {
+       "p": "hundreds of thousands of square kilometres",
+       "vi": "hàng trăm nghìn km²"
+      }
+     },
+     "ans": "T",
+     "explain": "Hecta so với hàng trăm nghìn km² → rất nhỏ → TRUE."
+    },
+    {
+     "stmt": "[br:Breeding heat-tolerant corals] is [wa:widely accepted] by scientists.",
+     "pairs": {
+      "br": {
+       "p": "breeding corals that tolerate higher temperatures",
+       "vi": "lai tạo san hô chịu nhiệt"
+      },
+      "wa": {
+       "p": "remains controversial",
+       "vi": "vẫn gây tranh cãi"
+      }
+     },
+     "ans": "F",
+     "explain": "'Remains controversial' → không được chấp nhận rộng rãi → FALSE."
+    }
+   ]
+  },
+  {
+   "id": "B12",
+   "track": "B",
+   "type": "gap",
+   "art": "wave",
+   "title": "The mind of an octopus",
+   "topic": "Sinh học · trí thông minh bạch tuộc",
+   "passage": "Octopuses have long puzzled biologists. They are molluscs, related to snails and clams, yet they display problem-solving abilities usually associated with vertebrates such as birds and mammals. In laboratory studies, octopuses have learned to unscrew jar lids to reach food, navigated simple mazes and, in some cases, appeared to recognise individual human keepers. Their nervous system is organised very differently from ours: around two-thirds of their neurons are located not in the brain but in the arms, which can respond to touch and taste with considerable independence. This decentralised arrangement has led some researchers to suggest that octopus intelligence evolved entirely separately from that of vertebrates, offering a rare opportunity to study how complex minds can arise by different routes. Their short lifespans, typically one or two years, make their capacity for learning all the more striking.",
+   "box": [
+    "confused",
+    "impressed",
+    "shellfish",
+    "fish",
+    "open",
+    "close",
+    "limbs",
+    "head",
+    "long-lived"
+   ],
+   "items": [
+    {
+     "stmt": "Octopuses have [lo:long] [g:____] biologists.",
+     "pairs": {
+      "lo": {
+       "p": "long",
+       "vi": "từ lâu"
+      },
+      "g": {
+       "p": "puzzled",
+       "vi": "làm bối rối"
+      }
+     },
+     "ans": 0,
+     "explain": "'Puzzled' → confused."
+    },
+    {
+     "stmt": "Although they are related to snails and other [g:____], they [so:solve problems] like vertebrates.",
+     "pairs": {
+      "g": {
+       "p": "clams",
+       "vi": "con trai, nghêu (động vật có vỏ)"
+      },
+      "so": {
+       "p": "problem-solving abilities",
+       "vi": "khả năng giải quyết vấn đề"
+      }
+     },
+     "ans": 2,
+     "explain": "Clams là động vật có vỏ → shellfish. 'Fish' là bẫy."
+    },
+    {
+     "stmt": "In experiments, they have learned to [g:____] jars to [gf:get food].",
+     "pairs": {
+      "g": {
+       "p": "unscrew jar lids",
+       "vi": "vặn mở nắp lọ"
+      },
+      "gf": {
+       "p": "reach food",
+       "vi": "lấy thức ăn"
+      }
+     },
+     "ans": 4,
+     "explain": "Unscrew lids → open."
+    },
+    {
+     "stmt": "[tt:About two-thirds] of their neurons are found in their [g:____].",
+     "pairs": {
+      "tt": {
+       "p": "around two-thirds",
+       "vi": "khoảng hai phần ba"
+      },
+      "g": {
+       "p": "in the arms",
+       "vi": "trong các xúc tu"
+      }
+     },
+     "ans": 6,
+     "explain": "Arms → limbs (chi). 'Head' là bẫy."
+    }
+   ]
+  },
+  {
+   "id": "A20",
+   "track": "A",
+   "type": "mcq",
+   "art": "people",
+   "title": "How children crack the code of language",
+   "topic": "Ngôn ngữ học · trẻ em học nói",
+   "passage": "By the age of four, most children have mastered the basic grammar of their native language without any formal instruction. How they achieve this has been debated for decades. One influential view held that children possess an innate grammatical knowledge, since the speech they hear seemed too fragmentary to explain their rapid progress. More recent research has challenged this assumption by showing that infants are remarkably skilled statistical learners. In one well-known experiment, eight-month-old babies listened to a continuous stream of nonsense syllables for just two minutes and were afterwards able to distinguish 'words' – syllables that regularly occurred together – from random combinations. Such findings do not settle the debate, but they suggest that the input children receive is richer, and their capacity to extract patterns from it greater, than was once believed. Studies also indicate that the quantity of speech directed at a child, rather than speech merely overheard, predicts later vocabulary size.",
+   "items": [
+    {
+     "stmt": "What do [mo:most four-year-olds] [ac:achieve] without [te:being taught]?",
+     "pairs": {
+      "mo": {
+       "p": "most children",
+       "vi": "đa số trẻ"
+      },
+      "ac": {
+       "p": "mastered",
+       "vi": "thành thạo"
+      },
+      "te": {
+       "p": "without any formal instruction",
+       "vi": "không cần dạy chính thức"
+      }
+     },
+     "options": [
+      "a large vocabulary",
+      "the basic grammar of their language",
+      "the ability to read",
+      "a second language"
+     ],
+     "ans": 1,
+     "explain": "→ B."
+    },
+    {
+     "stmt": "Why did some researchers [be:believe] grammar was [in:inborn]?",
+     "pairs": {
+      "be": {
+       "p": "influential view held",
+       "vi": "quan điểm có ảnh hưởng cho rằng"
+      },
+      "in": {
+       "p": "innate",
+       "vi": "bẩm sinh"
+      }
+     },
+     "options": [
+      "The speech children heard seemed too incomplete to explain their learning.",
+      "Babies could recognise words at birth.",
+      "All languages share the same grammar.",
+      "Children learned faster when taught formally."
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "too incomplete",
+       "too fragmentary"
+      ]
+     ],
+     "explain": "→ A."
+    },
+    {
+     "stmt": "What did the [ex:experiment] with [ba:babies] show?",
+     "pairs": {
+      "ex": {
+       "p": "well-known experiment",
+       "vi": "thí nghiệm nổi tiếng"
+      },
+      "ba": {
+       "p": "eight-month-old babies",
+       "vi": "trẻ 8 tháng"
+      }
+     },
+     "options": [
+      "Babies prefer real words to nonsense.",
+      "Babies can detect which sounds regularly go together.",
+      "Babies need several days to learn new words.",
+      "Babies learn best from other children."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "regularly go together",
+       "syllables that regularly occurred together"
+      ]
+     ],
+     "explain": "→ B. C sai: chỉ 2 phút."
+    },
+    {
+     "stmt": "What [pr:predicts] a child's [vo:later vocabulary]?",
+     "pairs": {
+      "pr": {
+       "p": "predicts",
+       "vi": "dự đoán"
+      },
+      "vo": {
+       "p": "later vocabulary size",
+       "vi": "vốn từ sau này"
+      }
+     },
+     "options": [
+      "how much speech they overhear",
+      "how much speech is addressed to them",
+      "how many languages they hear",
+      "how early they start school"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "addressed to them",
+       "directed at a child"
+      ]
+     ],
+     "explain": "'Rather than speech merely overheard' loại A → B."
+    }
+   ]
+  },
+  {
+   "id": "A21",
+   "track": "A",
+   "type": "ynng",
+   "art": "chart",
+   "title": "The office after the pandemic",
+   "topic": "Kinh tế · làm việc từ xa",
+   "passage": "The debate about remote work has often generated more heat than light. Studies of its effect on productivity point in different directions, largely because they measure different things. Research on call-centre staff, whose output is easily counted, has found modest gains for those working from home, whereas studies of creative teams suggest that spontaneous collaboration suffers when colleagues rarely meet. I am persuaded that the hybrid arrangement now adopted by many firms – a few days in the office, the rest at home – is a reasonable compromise, provided that office days are coordinated so that teams are actually present together. What concerns me more is the effect on younger employees. Much of what newcomers learn comes from observing experienced colleagues informally, and there is evidence that junior staff working remotely receive less feedback. Firms that ignore this risk saving on office space at the cost of their future talent.",
+   "items": [
+    {
+     "stmt": "The writer feels the [de:debate on remote work] has been [cl:clear and well informed].",
+     "pairs": {
+      "de": {
+       "p": "debate about remote work",
+       "vi": "cuộc tranh luận về làm việc từ xa"
+      },
+      "cl": {
+       "p": "more heat than light",
+       "vi": "ồn ào hơn là sáng tỏ"
+      }
+     },
+     "ans": "N",
+     "explain": "'More heat than light' = nhiều tranh cãi, ít sáng tỏ → NO."
+    },
+    {
+     "stmt": "[cc:Call-centre workers] were [sl:slightly] [mo:more productive] at home.",
+     "pairs": {
+      "cc": {
+       "p": "call-centre staff",
+       "vi": "nhân viên tổng đài"
+      },
+      "sl": {
+       "p": "modest",
+       "vi": "khiêm tốn"
+      },
+      "mo": {
+       "p": "gains",
+       "vi": "sự tăng (năng suất)"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "The writer [su:supports] hybrid working [on:on condition that] teams [co:share the same office days].",
+     "pairs": {
+      "su": {
+       "p": "I am persuaded",
+       "vi": "tôi bị thuyết phục"
+      },
+      "on": {
+       "p": "provided that",
+       "vi": "với điều kiện là"
+      },
+      "co": {
+       "p": "office days are coordinated",
+       "vi": "ngày lên văn phòng được phối hợp"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "[ju:Junior employees] [pr:prefer] working from home.",
+     "pairs": {
+      "ju": {
+       "p": "junior staff",
+       "vi": "nhân viên cấp dưới"
+      },
+      "pr": {
+       "p": null,
+       "vi": "bài không nói sở thích của họ"
+      }
+     },
+     "ans": "NG",
+     "explain": "Bài nói họ nhận ít phản hồi hơn, không nói họ thích hay không → NOT GIVEN."
+    }
+   ]
+  },
+  {
+   "id": "B13",
+   "track": "B",
+   "type": "gap",
+   "art": "coin",
+   "title": "The true price of cheap clothes",
+   "topic": "Kinh tế · thời trang nhanh",
+   "passage": "Over the past two decades, the number of garments produced worldwide has roughly doubled, while the average number of times each item is worn before being discarded has fallen sharply. This model, known as fast fashion, relies on rapidly changing collections, low prices and production concentrated in countries where wages are low. Its environmental footprint is considerable. Growing cotton consumes large quantities of water, and synthetic fabrics shed tiny plastic fibres when washed, many of which pass through treatment plants and reach rivers and oceans. Only a small proportion of discarded clothing is recycled into new garments, partly because most fabrics are blends of different fibres that are difficult to separate. Some brands now offer repair services and resale platforms, and a number of governments are considering making producers financially responsible for the disposal of the clothes they sell.",
+   "box": [
+    "doubled",
+    "halved",
+    "worn",
+    "washed",
+    "inexpensive",
+    "durable",
+    "separated",
+    "mixtures",
+    "accountable"
+   ],
+   "items": [
+    {
+     "stmt": "Global clothing production has [g:____] in [tw:twenty years].",
+     "pairs": {
+      "g": {
+       "p": "roughly doubled",
+       "vi": "tăng khoảng gấp đôi"
+      },
+      "tw": {
+       "p": "two decades",
+       "vi": "hai thập kỷ"
+      }
+     },
+     "ans": 0,
+     "explain": "→ doubled. 'Halved' là bẫy: số lần mặc mỗi món mới giảm."
+    },
+    {
+     "stmt": "Fast fashion depends on [fr:frequent] new collections and [g:____] clothes.",
+     "pairs": {
+      "fr": {
+       "p": "rapidly changing collections",
+       "vi": "bộ sưu tập thay đổi nhanh"
+      },
+      "g": {
+       "p": "low prices",
+       "vi": "giá thấp"
+      }
+     },
+     "ans": 4,
+     "explain": "Low prices → inexpensive."
+    },
+    {
+     "stmt": "Little clothing is recycled because most fabrics are [g:____] of fibres that are [hd:hard to] [sp:pull apart].",
+     "pairs": {
+      "g": {
+       "p": "blends",
+       "vi": "hỗn hợp"
+      },
+      "hd": {
+       "p": "difficult to",
+       "vi": "khó"
+      },
+      "sp": {
+       "p": "separate",
+       "vi": "tách ra"
+      }
+     },
+     "ans": 7,
+     "explain": "Blends → mixtures. 'Separated' là bẫy ngữ pháp."
+    },
+    {
+     "stmt": "Some governments may make producers [fi:pay for] the disposal of clothes, making them financially [g:____].",
+     "pairs": {
+      "fi": {
+       "p": "financially",
+       "vi": "về tài chính"
+      },
+      "g": {
+       "p": "responsible",
+       "vi": "chịu trách nhiệm"
+      }
+     },
+     "ans": 8,
+     "explain": "Responsible → accountable."
+    }
+   ]
+  },
+  {
+   "id": "A22",
+   "track": "A",
+   "type": "tfng",
+   "art": "mountain",
+   "title": "Reading the ice",
+   "topic": "Khí hậu · lõi băng",
+   "passage": "Deep beneath the Antarctic ice sheet lies a record of the Earth's climate stretching back hundreds of thousands of years. As snow accumulates and is compressed into ice, it traps tiny bubbles of air, preserving samples of the atmosphere at the time the snow fell. By drilling cores several kilometres long and analysing these bubbles, scientists have reconstructed past concentrations of carbon dioxide and compared them with temperature estimates derived from the chemical composition of the ice itself. The two records rise and fall closely together. The oldest continuous core so far obtained covers around 800,000 years, and an international project is now drilling at a site where scientists hope to recover ice up to 1.5 million years old, which might explain why the rhythm of ice ages changed during that period. Drilling in such conditions is slow: crews can work only during the brief Antarctic summer.",
+   "items": [
+    {
+     "stmt": "Air bubbles in ice [pr:preserve] [sa:examples] of the [at:ancient atmosphere].",
+     "pairs": {
+      "pr": {
+       "p": "preserving",
+       "vi": "lưu giữ"
+      },
+      "sa": {
+       "p": "samples",
+       "vi": "mẫu"
+      },
+      "at": {
+       "p": "the atmosphere at the time",
+       "vi": "bầu khí quyển lúc đó"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "Carbon dioxide levels and temperatures in the past [mo:moved] [in:independently of each other].",
+     "pairs": {
+      "mo": {
+       "p": "rise and fall",
+       "vi": "tăng và giảm"
+      },
+      "in": {
+       "p": "closely together",
+       "vi": "sát cùng nhau"
+      }
+     },
+     "ans": "F",
+     "explain": "'Rise and fall closely together' → FALSE."
+    },
+    {
+     "stmt": "Scientists have [al:already] [ob:obtained] ice that is {mi:1.5 million years old}.",
+     "pairs": {
+      "al": {
+       "p": "hope to recover",
+       "vi": "hy vọng lấy được (chưa có)"
+      },
+      "ob": {
+       "p": "so far obtained",
+       "vi": "đã thu được đến nay"
+      },
+      "mi": {
+       "p": "1.5 million years old"
+      }
+     },
+     "ans": "F",
+     "explain": "Hiện mới có lõi 800.000 năm; 1,5 triệu năm là điều họ 'hope' → FALSE."
+    },
+    {
+     "stmt": "The new drilling project is [fu:funded] [ma:mainly] by [eu:European governments].",
+     "pairs": {
+      "fu": {
+       "p": null,
+       "vi": "bài không nói nguồn tài trợ"
+      },
+      "ma": {
+       "p": null,
+       "vi": "—"
+      },
+      "eu": {
+       "p": null,
+       "vi": "—"
+      }
+     },
+     "ans": "NG",
+     "explain": "Bài chỉ nói 'international project' → NOT GIVEN."
+    }
+   ]
+  },
+  {
+   "id": "A23",
+   "track": "A",
+   "type": "mcq",
+   "art": "ship",
+   "title": "Just in time, or just in case?",
+   "topic": "Logistics · chuỗi cung ứng",
+   "passage": "For several decades, manufacturers embraced 'just-in-time' production, holding minimal stocks of components and relying on suppliers to deliver exactly what was needed shortly before it was used. The approach freed capital that would otherwise have been tied up in warehouses and exposed inefficiencies in production. Its vulnerability became apparent when a single disruption – a factory fire, a blocked canal, a sudden surge in demand – could halt assembly lines thousands of kilometres away. Some commentators declared that firms would now switch to 'just-in-case' strategies, building up large buffers of inventory. In practice, most companies have pursued a more nuanced course. Rather than stockpiling everything, they have identified critical components with few alternative suppliers and increased reserves of those alone, while also seeking second sources and, in some cases, moving production closer to their main markets. These measures raise costs, and how far firms persist with them once memories of disruption fade remains to be seen.",
+   "items": [
+    {
+     "stmt": "What was one [be:benefit] of just-in-time production?",
+     "pairs": {
+      "be": {
+       "p": "freed capital",
+       "vi": "giải phóng vốn"
+      }
+     },
+     "options": [
+      "It reduced the money spent on storing goods.",
+      "It made supply chains more secure.",
+      "It increased the number of suppliers.",
+      "It allowed factories to grow larger."
+     ],
+     "ans": 0,
+     "para": [
+      [
+       "money spent on storing goods",
+       "capital that would otherwise have been tied up in warehouses"
+      ]
+     ],
+     "explain": "→ A."
+    },
+    {
+     "stmt": "What [we:weakness] of the system does the writer [de:describe]?",
+     "pairs": {
+      "we": {
+       "p": "vulnerability",
+       "vi": "điểm dễ tổn thương"
+      },
+      "de": {
+       "p": "became apparent",
+       "vi": "trở nên rõ ràng"
+      }
+     },
+     "options": [
+      "Suppliers often delivered faulty parts.",
+      "One problem could stop production far away.",
+      "Warehouses became too expensive.",
+      "Demand was too difficult to predict."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "stop production far away",
+       "halt assembly lines thousands of kilometres away"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "How have [mo:most firms] [re:responded]?",
+     "pairs": {
+      "mo": {
+       "p": "most companies",
+       "vi": "phần lớn công ty"
+      },
+      "re": {
+       "p": "pursued a more nuanced course",
+       "vi": "chọn hướng đi tinh tế hơn"
+      }
+     },
+     "options": [
+      "by stockpiling all their components",
+      "by abandoning just-in-time completely",
+      "by holding extra stocks only of key parts",
+      "by buying their suppliers"
+     ],
+     "ans": 2,
+     "para": [
+      [
+       "only of key parts",
+       "critical components... increased reserves of those alone"
+      ]
+     ],
+     "explain": "→ C. A là dự đoán của 'some commentators', không phải thực tế."
+    },
+    {
+     "stmt": "What does the writer say about the [fu:future]?",
+     "pairs": {
+      "fu": {
+       "p": "remains to be seen",
+       "vi": "còn phải chờ xem"
+      }
+     },
+     "options": [
+      "Firms will certainly keep the new measures.",
+      "Costs will soon fall.",
+      "It is uncertain whether firms will continue the changes.",
+      "Just-in-time will disappear."
+     ],
+     "ans": 2,
+     "explain": "'How far firms persist with them... remains to be seen' → C."
+    }
+   ]
+  },
+  {
+   "id": "B14",
+   "track": "B",
+   "type": "gap",
+   "art": "brain",
+   "title": "Two languages, one brain",
+   "topic": "Ngôn ngữ học · song ngữ",
+   "passage": "Bilingual speakers never completely switch off the language they are not using. Experiments that track eye movements show that when a Spanish–English bilingual hears an English word, words that sound similar in Spanish are briefly activated as well. Managing this constant competition, some researchers have proposed, exercises the brain's control systems, giving bilinguals an advantage on tasks that require ignoring irrelevant information. This so-called bilingual advantage attracted enormous publicity, but it has proved difficult to replicate. Large studies that carefully matched bilingual and monolingual participants for income and education have often found no difference at all. More robust is the evidence concerning ageing: several studies suggest that lifelong bilinguals tend to show the symptoms of dementia somewhat later than monolinguals with comparable brain damage, although this too remains under investigation. What is not in doubt is the practical value of speaking more than one language.",
+   "box": [
+    "inactive",
+    "active",
+    "compete",
+    "cooperate",
+    "attention",
+    "publicity",
+    "repeat",
+    "delay",
+    "practical"
+   ],
+   "items": [
+    {
+     "stmt": "In bilinguals, the language not being used [st:still remains] [g:____].",
+     "pairs": {
+      "st": {
+       "p": "never completely switch off",
+       "vi": "không bao giờ tắt hẳn"
+      },
+      "g": {
+       "p": "briefly activated",
+       "vi": "được kích hoạt thoáng qua"
+      }
+     },
+     "ans": 1,
+     "explain": "Không bao giờ tắt hẳn → vẫn active. 'Inactive' là trái nghĩa."
+    },
+    {
+     "stmt": "The so-called bilingual advantage [re:received] a great deal of [g:____].",
+     "pairs": {
+      "re": {
+       "p": "attracted",
+       "vi": "thu hút"
+      },
+      "g": {
+       "p": "enormous publicity",
+       "vi": "sự chú ý lớn của dư luận"
+      }
+     },
+     "ans": 5,
+     "explain": "→ publicity (từ có trong bài, ở đây là đáp án)."
+    },
+    {
+     "stmt": "However, other researchers have [of:often] been unable to [g:____] the findings.",
+     "pairs": {
+      "of": {
+       "p": "often found no difference",
+       "vi": "thường không thấy khác biệt"
+      },
+      "g": {
+       "p": "difficult to replicate",
+       "vi": "khó lặp lại"
+      }
+     },
+     "ans": 6,
+     "explain": "Replicate → repeat."
+    },
+    {
+     "stmt": "Speaking two languages over a lifetime may [g:____] the [sy:signs] of dementia.",
+     "pairs": {
+      "g": {
+       "p": "somewhat later",
+       "vi": "muộn hơn một chút"
+      },
+      "sy": {
+       "p": "symptoms",
+       "vi": "triệu chứng"
+      }
+     },
+     "ans": 7,
+     "explain": "Xuất hiện muộn hơn → delay (trì hoãn)."
+    }
+   ]
+  },
+  {
+   "id": "A24",
+   "track": "A",
+   "type": "ynng",
+   "art": "book",
+   "title": "What libraries are for",
+   "topic": "Xã hội · thư viện công cộng",
+   "passage": "Every few years, someone predicts that public libraries will be made obsolete by the internet. The prediction rests on a misunderstanding of what libraries do. Lending books remains important, but a modern library also provides free internet access to people who lack it at home, quiet space for students in crowded households, help with official forms that are increasingly available only online, and activities that bring isolated residents into contact with their neighbours. None of these functions is easily replaced by a search engine. I do not claim that every library is well run; some have been slow to adapt and have consequently lost users. But closing a branch to save money is a false economy, in my view, since the costs simply reappear elsewhere – in employment services, in social care and in the education system – where they are harder to see. Libraries are among the few remaining public spaces in which nobody is expected to spend money.",
+   "items": [
+    {
+     "stmt": "The writer thinks the claim that the internet will [re:replace] libraries is [mi:mistaken].",
+     "pairs": {
+      "re": {
+       "p": "made obsolete",
+       "vi": "trở nên lỗi thời"
+      },
+      "mi": {
+       "p": "misunderstanding",
+       "vi": "sự hiểu sai"
+      }
+     },
+     "ans": "Y",
+     "explain": "'The prediction rests on a misunderstanding' → YES."
+    },
+    {
+     "stmt": "The writer believes [al:all] libraries are [wr:well managed].",
+     "pairs": {
+      "al": {
+       "p": "every library",
+       "vi": "mọi thư viện"
+      },
+      "wr": {
+       "p": "well run",
+       "vi": "được quản lý tốt"
+      }
+     },
+     "ans": "N",
+     "explain": "'I do not claim that every library is well run' → NO."
+    },
+    {
+     "stmt": "[cl:Closing libraries] [sa:saves money] in the [lo:long run].",
+     "pairs": {
+      "cl": {
+       "p": "closing a branch",
+       "vi": "đóng cửa một chi nhánh"
+      },
+      "sa": {
+       "p": "false economy",
+       "vi": "tiết kiệm giả tạo"
+      },
+      "lo": {
+       "p": "costs simply reappear elsewhere",
+       "vi": "chi phí xuất hiện lại ở nơi khác"
+      }
+     },
+     "ans": "N",
+     "explain": "Tác giả gọi đó là 'false economy' → NO."
+    },
+    {
+     "stmt": "[mo:More people] use libraries today than [te:ten years ago].",
+     "pairs": {
+      "mo": {
+       "p": null,
+       "vi": "bài không có số liệu so sánh"
+      },
+      "te": {
+       "p": null,
+       "vi": "—"
+      }
+     },
+     "ans": "NG",
+     "explain": "Không có thông tin so sánh lượng người dùng → NOT GIVEN."
+    }
+   ]
+  },
+  {
+   "id": "A25",
+   "track": "A",
+   "type": "tfng",
+   "art": "bird",
+   "title": "How birds find their way",
+   "topic": "Sinh học · chim di cư",
+   "passage": "Each autumn, billions of birds migrate thousands of kilometres, many of them travelling at night and some returning to the very same nest the following spring. How they navigate has fascinated scientists for centuries. It is now clear that birds draw on several sources of information. Many species use the position of the sun during the day and the rotation of the night sky around the pole star, which young birds appear to learn before their first migration. Birds can also sense the Earth's magnetic field, although the mechanism remains disputed; one leading hypothesis proposes that a light-sensitive protein in the eye allows birds to 'see' magnetic lines. Smell may play a role too: seabirds whose sense of smell was temporarily blocked in experiments struggled to return home over open ocean. No single cue appears sufficient on its own, and birds probably cross-check several, much as a human navigator compares a compass with landmarks.",
+   "items": [
+    {
+     "stmt": "Some birds [re:come back] to [ex:exactly the same] nest every year.",
+     "pairs": {
+      "re": {
+       "p": "returning",
+       "vi": "quay trở lại"
+      },
+      "ex": {
+       "p": "the very same nest",
+       "vi": "đúng cái tổ cũ"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "Young birds [le:learn] star patterns [af:after] their first migration.",
+     "pairs": {
+      "le": {
+       "p": "learn",
+       "vi": "học"
+      },
+      "af": {
+       "p": "before their first migration",
+       "vi": "trước chuyến di cư đầu tiên"
+      }
+     },
+     "ans": "F",
+     "explain": "Học TRƯỚC chuyến đầu tiên → FALSE."
+    },
+    {
+     "stmt": "Scientists [ag:agree] on [ho:how] birds detect magnetic fields.",
+     "pairs": {
+      "ag": {
+       "p": "remains disputed",
+       "vi": "vẫn gây tranh cãi"
+      },
+      "ho": {
+       "p": "the mechanism",
+       "vi": "cơ chế"
+      }
+     },
+     "ans": "F",
+     "explain": "'The mechanism remains disputed' → FALSE."
+    },
+    {
+     "stmt": "{sb:Seabirds} [un:unable to smell] had [di:difficulty] finding their way home.",
+     "pairs": {
+      "sb": {
+       "p": "seabirds"
+      },
+      "un": {
+       "p": "sense of smell was temporarily blocked",
+       "vi": "khứu giác bị chặn tạm thời"
+      },
+      "di": {
+       "p": "struggled",
+       "vi": "chật vật"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    }
+   ]
+  },
+  {
+   "id": "B15",
+   "track": "B",
+   "type": "gap",
+   "art": "star",
+   "title": "Losing the night sky",
+   "topic": "Môi trường · ô nhiễm ánh sáng",
+   "passage": "For most of human history, a clear night revealed thousands of stars and the band of the Milky Way. Today, an estimated third of humanity can no longer see the Milky Way from home, because artificial light scattered by the atmosphere creates a glow over towns and cities. The problem extends beyond astronomy. Many nocturnal animals depend on darkness: newly hatched sea turtles, which instinctively crawl towards the brightest horizon, may head inland towards streetlights instead of the sea, and migrating birds can become disoriented by illuminated buildings. In humans, exposure to bright light late in the evening suppresses the hormone melatonin, which helps regulate sleep. Unlike many forms of pollution, light pollution can be reduced almost instantly, for example by shielding lamps so that they shine downwards, dimming them late at night, or choosing warmer colours, which scatter less.",
+   "box": [
+    "visible",
+    "hidden",
+    "daytime",
+    "night-time",
+    "confused",
+    "attracted",
+    "reduce",
+    "increase",
+    "immediately"
+   ],
+   "items": [
+    {
+     "stmt": "For about [tr:a third of people], the Milky Way is no longer [g:____] from where they live.",
+     "pairs": {
+      "tr": {
+       "p": "third of humanity",
+       "vi": "một phần ba nhân loại"
+      },
+      "g": {
+       "p": "can no longer see",
+       "vi": "không còn nhìn thấy"
+      }
+     },
+     "ans": 0,
+     "explain": "Không còn nhìn thấy → no longer visible."
+    },
+    {
+     "stmt": "Many [g:____] animals [ne:need] darkness.",
+     "pairs": {
+      "g": {
+       "p": "nocturnal",
+       "vi": "hoạt động về đêm"
+      },
+      "ne": {
+       "p": "depend on darkness",
+       "vi": "phụ thuộc vào bóng tối"
+      }
+     },
+     "ans": 3,
+     "explain": "Nocturnal → night-time."
+    },
+    {
+     "stmt": "Lit buildings can leave [mb:migrating birds] [g:____].",
+     "pairs": {
+      "mb": {
+       "p": "migrating birds",
+       "vi": "chim di cư"
+      },
+      "g": {
+       "p": "disoriented",
+       "vi": "mất phương hướng"
+      }
+     },
+     "ans": 4,
+     "explain": "Disoriented → confused. 'Attracted' là bẫy (hợp nghĩa nhưng bài không nói)."
+    },
+    {
+     "stmt": "Light pollution can be [g:____] reduced, for example by [sh:directing] lamps downwards.",
+     "pairs": {
+      "g": {
+       "p": "almost instantly",
+       "vi": "gần như tức thì"
+      },
+      "sh": {
+       "p": "shielding lamps so that they shine downwards",
+       "vi": "che chắn đèn để chiếu xuống"
+      }
+     },
+     "ans": 8,
+     "explain": "Instantly → immediately."
+    }
+   ]
+  },
+  {
+   "id": "A26",
+   "track": "A",
+   "type": "mcq",
+   "art": "music",
+   "title": "The songs we never forget",
+   "topic": "Tâm lý học · âm nhạc và trí nhớ",
+   "passage": "Musical memory appears to be unusually resilient. Patients with advanced Alzheimer's disease, who may no longer recognise close relatives, are often still able to sing the songs of their youth, a phenomenon that has prompted care homes to introduce personalised music programmes. Neuroscientists have offered a possible explanation: brain regions associated with long-known music seem to be among the last affected by the disease. Music also appears to act as a powerful cue for autobiographical memory. When people hear songs that were popular during their late teens and early twenties, they recall events from that period more vividly than when prompted by other means, a pattern sometimes called the 'reminiscence bump'. Claims that listening to music makes people more intelligent, however, have not survived scrutiny. The widely reported finding that classical music temporarily improved spatial reasoning was small, short-lived and difficult to reproduce.",
+   "items": [
+    {
+     "stmt": "What does the writer say about patients with [ad:advanced Alzheimer's]?",
+     "pairs": {
+      "ad": {
+       "p": "advanced Alzheimer's disease",
+       "vi": "Alzheimer giai đoạn nặng"
+      }
+     },
+     "options": [
+      "They lose the ability to sing before other skills.",
+      "They may remember old songs while forgetting family members.",
+      "They prefer new music to old music.",
+      "They cannot take part in music programmes."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "forgetting family members",
+       "no longer recognise close relatives"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "According to neuroscientists, why might musical memory [la:last]?",
+     "pairs": {
+      "la": {
+       "p": "among the last affected",
+       "vi": "thuộc nhóm bị ảnh hưởng sau cùng"
+      }
+     },
+     "options": [
+      "Music is stored in many different places.",
+      "The relevant brain areas are damaged late in the disease.",
+      "Patients practise singing every day.",
+      "Music is learned in early childhood."
+     ],
+     "ans": 1,
+     "explain": "→ B."
+    },
+    {
+     "stmt": "The 'reminiscence bump' [re:refers to] memories of",
+     "pairs": {
+      "re": {
+       "p": "sometimes called",
+       "vi": "đôi khi được gọi là"
+      }
+     },
+     "options": [
+      "early childhood",
+      "the late teens and early twenties",
+      "the most recent years",
+      "times of illness"
+     ],
+     "ans": 1,
+     "explain": "→ B."
+    },
+    {
+     "stmt": "What is the writer's view of the [cl:claim] that music [ra:raises intelligence]?",
+     "pairs": {
+      "cl": {
+       "p": "Claims",
+       "vi": "những tuyên bố"
+      },
+      "ra": {
+       "p": "makes people more intelligent",
+       "vi": "làm người ta thông minh hơn"
+      }
+     },
+     "options": [
+      "It is well supported.",
+      "It applies only to classical music.",
+      "It has not held up when tested.",
+      "It is true for children only."
+     ],
+     "ans": 2,
+     "para": [
+      [
+       "has not held up when tested",
+       "have not survived scrutiny"
+      ]
+     ],
+     "explain": "→ C."
+    }
+   ]
+  },
+  {
+   "id": "B16",
+   "track": "B",
+   "type": "gap",
+   "art": "ship",
+   "title": "Keeping it cold",
+   "topic": "Logistics · chuỗi lạnh",
+   "passage": "A large proportion of the food and medicines consumed today must be kept within narrow temperature ranges from the moment they are produced until they reach the consumer. This network of refrigerated warehouses, vehicles and containers is known as the cold chain. Its weakest points are usually transfers: when goods are unloaded at an airport or left on a loading dock, temperatures can rise rapidly. Data loggers that record temperature continuously throughout a journey now allow such lapses to be detected, and some send alerts in real time so that problems can be corrected before products are spoiled. In many lower-income countries, however, the cold chain is fragmented or absent, and a significant share of fruit, vegetables and fish is lost before it can be sold. Solar-powered cold rooms, installed at rural markets, are one promising response, as they do not depend on an unreliable electricity grid.",
+   "box": [
+    "ranges",
+    "limits",
+    "transfers",
+    "journeys",
+    "spot",
+    "prevent",
+    "incomplete",
+    "expensive",
+    "unstable"
+   ],
+   "items": [
+    {
+     "stmt": "Many foods and medicines must stay within [g:____] of temperature.",
+     "pairs": {
+      "g": {
+       "p": "narrow temperature ranges",
+       "vi": "khoảng nhiệt độ hẹp"
+      }
+     },
+     "ans": 0,
+     "explain": "→ ranges ('limits' sai ngữ pháp nghĩa)."
+    },
+    {
+     "stmt": "The cold chain is [mo:most vulnerable] during [g:____] of goods.",
+     "pairs": {
+      "mo": {
+       "p": "weakest points",
+       "vi": "điểm yếu nhất"
+      },
+      "g": {
+       "p": "transfers",
+       "vi": "chuyển giao"
+      }
+     },
+     "ans": 2,
+     "explain": "→ transfers. 'Journeys' là bẫy: bài nói nhiệt độ được ghi suốt hành trình."
+    },
+    {
+     "stmt": "[dl:Devices that log data] make it possible to [g:____] [la:failures] in temperature control.",
+     "pairs": {
+      "dl": {
+       "p": "Data loggers",
+       "vi": "thiết bị ghi dữ liệu"
+      },
+      "g": {
+       "p": "detected",
+       "vi": "được phát hiện"
+      },
+      "la": {
+       "p": "lapses",
+       "vi": "sự sơ suất, gián đoạn"
+      }
+     },
+     "ans": 4,
+     "explain": "Detect → spot. 'Prevent' sai: thiết bị phát hiện, không ngăn."
+    },
+    {
+     "stmt": "Solar cold rooms are useful where the [el:power supply] is [g:____].",
+     "pairs": {
+      "el": {
+       "p": "electricity grid",
+       "vi": "lưới điện"
+      },
+      "g": {
+       "p": "unreliable",
+       "vi": "không đáng tin"
+      }
+     },
+     "ans": 8,
+     "explain": "Unreliable → unstable."
+    }
+   ]
+  },
+  {
+   "id": "A27",
+   "track": "A",
+   "type": "ynng",
+   "art": "star",
+   "title": "Points, badges and learning",
+   "topic": "Giáo dục · gamification",
+   "passage": "Adding game elements such as points, badges and leaderboards to education has become fashionable, and the results are often presented as transformative. My own reading of the research is more cautious. Short-term studies frequently report increased engagement, but engagement is not the same as learning, and some of the reported gains fade once the novelty wears off. There is also a risk that external rewards shift attention away from the subject itself: a student who reads in order to earn a badge may stop reading when the badges stop. Leaderboards present a particular problem, since they motivate those near the top while discouraging those near the bottom, who are precisely the learners teachers most want to reach. That said, I would not dismiss game design entirely. Its most valuable insight, in my view, is not the rewards but the immediate feedback and carefully graded difficulty that good games provide.",
+   "items": [
+    {
+     "stmt": "The writer [sh:shares] the view that gamification is [tr:transformative].",
+     "pairs": {
+      "sh": {
+       "p": "more cautious",
+       "vi": "thận trọng hơn"
+      },
+      "tr": {
+       "p": "transformative",
+       "vi": "mang tính chuyển đổi"
+      }
+     },
+     "ans": "N",
+     "explain": "→ NO."
+    },
+    {
+     "stmt": "[in:Increased interest] [do:does not necessarily mean] [im:improved learning].",
+     "pairs": {
+      "in": {
+       "p": "increased engagement",
+       "vi": "tăng sự tham gia"
+      },
+      "do": {
+       "p": "is not the same as",
+       "vi": "không giống với"
+      },
+      "im": {
+       "p": "learning",
+       "vi": "việc học"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "{lb:Leaderboards} [he:help] the [we:weakest students] most.",
+     "pairs": {
+      "lb": {
+       "p": "Leaderboards"
+      },
+      "he": {
+       "p": "discouraging",
+       "vi": "làm nản lòng"
+      },
+      "we": {
+       "p": "those near the bottom",
+       "vi": "những người gần cuối"
+      }
+     },
+     "ans": "N",
+     "explain": "Làm nản lòng người đứng cuối → NO."
+    },
+    {
+     "stmt": "The writer considers [fe:quick feedback] the [va:most useful] lesson from game design.",
+     "pairs": {
+      "fe": {
+       "p": "immediate feedback",
+       "vi": "phản hồi tức thì"
+      },
+      "va": {
+       "p": "most valuable insight",
+       "vi": "bài học giá trị nhất"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    }
+   ]
+  },
+  {
+   "id": "A28",
+   "track": "A",
+   "type": "tfng",
+   "art": "road",
+   "title": "The return of the bicycle",
+   "topic": "Giao thông · thành phố xe đạp",
+   "passage": "In the 1960s and 1970s, the Dutch city of Amsterdam was as car-dominated as many others in Europe, and cycling was in decline. The shift towards today's cycling culture followed public protests over the number of children killed in traffic accidents, together with the oil crisis of 1973, which encouraged governments to reconsider dependence on cars. Cities gradually built separated cycle lanes, reduced speed limits and restricted through traffic in residential streets. Research suggests that the decisive factor in encouraging cycling is not enthusiasm or climate but perceived safety: when people feel protected from motor traffic, many who would never describe themselves as cyclists begin to ride. Other cities have tried to replicate this success with varying results. Painted lanes that offer no physical separation tend to attract relatively few new riders, whereas connected networks of protected routes have produced substantial increases.",
+   "items": [
+    {
+     "stmt": "Cycling in Amsterdam was [gr:growing] during the [si:1960s and 1970s].",
+     "pairs": {
+      "gr": {
+       "p": "in decline",
+       "vi": "đang suy giảm"
+      },
+      "si": {
+       "p": "1960s and 1970s",
+       "vi": "thập niên 60–70"
+      }
+     },
+     "ans": "F",
+     "explain": "→ FALSE."
+    },
+    {
+     "stmt": "[pu:Public anger] about [ch:child deaths] [co:contributed] to the change.",
+     "pairs": {
+      "pu": {
+       "p": "public protests",
+       "vi": "phản đối của công chúng"
+      },
+      "ch": {
+       "p": "children killed",
+       "vi": "trẻ em thiệt mạng"
+      },
+      "co": {
+       "p": "followed",
+       "vi": "diễn ra sau (là nguyên nhân)"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "[fe:Feeling safe] is [mo:more important] than [we:weather] in encouraging cycling.",
+     "pairs": {
+      "fe": {
+       "p": "perceived safety",
+       "vi": "cảm nhận an toàn"
+      },
+      "mo": {
+       "p": "decisive factor",
+       "vi": "yếu tố quyết định"
+      },
+      "we": {
+       "p": "climate",
+       "vi": "khí hậu"
+      }
+     },
+     "ans": "T",
+     "explain": "'The decisive factor... is not enthusiasm or climate but perceived safety' → TRUE."
+    },
+    {
+     "stmt": "[pa:Painted lanes] have [al:attracted] [la:large numbers] of new cyclists.",
+     "pairs": {
+      "pa": {
+       "p": "Painted lanes",
+       "vi": "làn sơn"
+      },
+      "al": {
+       "p": "tend to attract",
+       "vi": "có xu hướng thu hút"
+      },
+      "la": {
+       "p": "relatively few new riders",
+       "vi": "tương đối ít người mới"
+      }
+     },
+     "ans": "F",
+     "explain": "→ FALSE."
+    }
+   ]
+  },
+  {
+   "id": "A29",
+   "track": "A",
+   "type": "mcq",
+   "art": "wave",
+   "title": "Drinking the sea",
+   "topic": "Tài nguyên nước · khử mặn",
+   "passage": "Desalination, the removal of salt from seawater, now supplies a substantial share of drinking water in parts of the Middle East and is increasingly used in drought-prone regions elsewhere. The dominant technology, reverse osmosis, forces seawater through membranes that allow water molecules to pass but block salt. Improvements in membrane design and energy-recovery devices have reduced the energy required by more than half since the 1980s, yet desalination remains considerably more energy-intensive than treating river or ground water. A further concern is brine, the highly concentrated salt solution left over, which is usually discharged back into the sea. If it is not adequately diluted, brine can sink and harm organisms living on the seabed. For these reasons, many water experts regard desalination as a valuable insurance against drought rather than a replacement for conservation and the repair of leaking pipes, which in some cities waste a quarter of all treated water.",
+   "items": [
+    {
+     "stmt": "How does [ro:reverse osmosis] work?",
+     "pairs": {
+      "ro": {
+       "p": "reverse osmosis",
+       "vi": "thẩm thấu ngược"
+      }
+     },
+     "options": [
+      "by heating seawater until it evaporates",
+      "by passing seawater through membranes that hold back salt",
+      "by adding chemicals that remove salt",
+      "by freezing seawater"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "hold back salt",
+       "block salt"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "What has happened to the [en:energy needed] for desalination?",
+     "pairs": {
+      "en": {
+       "p": "energy required",
+       "vi": "năng lượng cần thiết"
+      }
+     },
+     "options": [
+      "It has increased.",
+      "It has fallen by over fifty per cent.",
+      "It is now lower than for river water.",
+      "It has stayed the same."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "by over fifty per cent",
+       "by more than half"
+      ]
+     ],
+     "explain": "→ B. C sai: vẫn tốn năng lượng hơn."
+    },
+    {
+     "stmt": "Why can {br:brine} be [ha:harmful]?",
+     "pairs": {
+      "br": {
+       "p": "brine"
+      },
+      "ha": {
+       "p": "harm organisms",
+       "vi": "gây hại sinh vật"
+      }
+     },
+     "options": [
+      "It contains toxic metals.",
+      "It can sink and affect creatures on the sea floor.",
+      "It warms the sea surface.",
+      "It attracts predators."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "sea floor",
+       "seabed"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "How do [mo:many water experts] view desalination?",
+     "pairs": {
+      "mo": {
+       "p": "many water experts",
+       "vi": "nhiều chuyên gia nước"
+      }
+     },
+     "options": [
+      "as the main solution to water shortages",
+      "as a useful back-up rather than a substitute for saving water",
+      "as too dangerous to use",
+      "as cheaper than repairing pipes"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "useful back-up",
+       "valuable insurance against drought"
+      ]
+     ],
+     "explain": "→ B."
+    }
+   ]
+  },
+  {
+   "id": "A30",
+   "track": "A",
+   "type": "ynng",
+   "art": "clock",
+   "title": "The uses of nostalgia",
+   "topic": "Tâm lý học · hoài niệm",
+   "passage": "Nostalgia was once classified as a medical disorder. Seventeenth-century physicians described it as a disease afflicting soldiers far from home, and as late as the twentieth century it was often treated as a symptom of depression. Contemporary psychologists take a more favourable view, and I believe they are right to do so. Experiments in which participants are asked to recall a cherished memory show that nostalgia tends to increase feelings of social connection and can make people more optimistic about the future, not less. It appears to be triggered especially by loneliness and by cold weather, suggesting that it may function as a psychological resource that people draw on when they need comfort. This is not to say that nostalgia is always benign. When it is directed towards an idealised national past rather than personal memories, it can be exploited for political purposes, and I suspect that this collective form deserves considerably more scrutiny than it has received.",
+   "items": [
+    {
+     "stmt": "Nostalgia was [on:at one time] [re:regarded as] an illness.",
+     "pairs": {
+      "on": {
+       "p": "once",
+       "vi": "đã từng"
+      },
+      "re": {
+       "p": "classified as a medical disorder",
+       "vi": "được xếp là rối loạn y khoa"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "The writer [di:disagrees] with modern psychologists' [po:positive view] of nostalgia.",
+     "pairs": {
+      "di": {
+       "p": "right to do so",
+       "vi": "đúng khi làm vậy (đồng tình)"
+      },
+      "po": {
+       "p": "more favourable view",
+       "vi": "cái nhìn tích cực hơn"
+      }
+     },
+     "ans": "N",
+     "explain": "'I believe they are right' → NO."
+    },
+    {
+     "stmt": "Nostalgia [ma:makes people] [pe:more pessimistic] about the future.",
+     "pairs": {
+      "ma": {
+       "p": "can make people",
+       "vi": "có thể khiến người ta"
+      },
+      "pe": {
+       "p": "more optimistic",
+       "vi": "lạc quan hơn"
+      }
+     },
+     "ans": "N",
+     "explain": "→ NO."
+    },
+    {
+     "stmt": "The writer feels [co:collective nostalgia] has been [st:studied enough].",
+     "pairs": {
+      "co": {
+       "p": "collective form",
+       "vi": "dạng tập thể"
+      },
+      "st": {
+       "p": "deserves considerably more scrutiny",
+       "vi": "đáng được xem xét kỹ hơn nhiều"
+      }
+     },
+     "ans": "N",
+     "explain": "→ NO."
+    }
+   ]
+  },
+  {
+   "id": "A31",
+   "track": "A",
+   "type": "tfng",
+   "art": "leaf",
+   "title": "Rice and the climate",
+   "topic": "Nông nghiệp · lúa gạo và khí metan",
+   "passage": "Rice feeds more than half the world's population, but flooded paddy fields are a significant source of methane, a greenhouse gas far more potent than carbon dioxide over short periods. The methane is produced by microbes that thrive in waterlogged soil where oxygen is scarce. One promising technique, known as alternate wetting and drying, involves allowing fields to dry out periodically instead of keeping them permanently flooded. Trials in several Asian countries have found that this can cut methane emissions substantially while also saving irrigation water, and in many cases yields are unaffected. Adoption has nevertheless been slow. Farmers who share irrigation canals cannot easily control when their own fields are drained, and some fear that a poorly timed drying period could damage the crop. Researchers argue that wider uptake will depend on reliable water management and on financial incentives that reward farmers for lowering emissions.",
+   "items": [
+    {
+     "stmt": "[mo:More than half] of the people in the world [ea:eat] rice.",
+     "pairs": {
+      "mo": {
+       "p": "more than half",
+       "vi": "hơn một nửa"
+      },
+      "ea": {
+       "p": "feeds",
+       "vi": "nuôi sống"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "The microbes that produce methane [ne:need] [pl:plenty of oxygen].",
+     "pairs": {
+      "ne": {
+       "p": "thrive",
+       "vi": "phát triển mạnh"
+      },
+      "pl": {
+       "p": "oxygen is scarce",
+       "vi": "oxy khan hiếm"
+      }
+     },
+     "ans": "F",
+     "explain": "Chúng phát triển ở nơi thiếu oxy → FALSE."
+    },
+    {
+     "stmt": "Alternate wetting and drying [us:usually] [re:reduces] the [ha:harvest].",
+     "pairs": {
+      "us": {
+       "p": "in many cases",
+       "vi": "trong nhiều trường hợp"
+      },
+      "re": {
+       "p": "unaffected",
+       "vi": "không bị ảnh hưởng"
+      },
+      "ha": {
+       "p": "yields",
+       "vi": "sản lượng"
+      }
+     },
+     "ans": "F",
+     "explain": "'Yields are unaffected' → FALSE."
+    },
+    {
+     "stmt": "[go:Governments] in Asia have [al:already] [in:introduced payments] for lower emissions.",
+     "pairs": {
+      "go": {
+       "p": null,
+       "vi": "không nhắc chính phủ"
+      },
+      "al": {
+       "p": null,
+       "vi": "—"
+      },
+      "in": {
+       "p": "financial incentives",
+       "vi": "ưu đãi tài chính (mới là đề xuất)"
+      }
+     },
+     "ans": "NG",
+     "explain": "Ưu đãi tài chính chỉ là điều kiện được đề xuất; bài không nói chính phủ đã áp dụng → NOT GIVEN."
+    }
+   ]
+  },
+  {
+   "id": "B17",
+   "track": "B",
+   "type": "gap",
+   "art": "building",
+   "title": "The secret of Roman concrete",
+   "topic": "Khảo cổ · vật liệu La Mã",
+   "passage": "Many Roman harbour walls and buildings have survived for two thousand years, while modern concrete structures sometimes deteriorate within decades. Researchers have long sought to understand why. Roman builders mixed lime with volcanic ash, which reacts with seawater to form rare minerals that strengthen the material over time rather than weakening it. More recently, scientists noticed small white lumps of lime scattered through Roman concrete, previously dismissed as evidence of careless mixing. Analysis suggests that these lumps may have been deliberate: when cracks form and water enters, the lime dissolves and recrystallises, effectively sealing the damage. The findings have prompted interest in incorporating similar processes into modern concrete, which could extend its lifespan and reduce the large carbon emissions associated with cement production. Roman concrete was, however, considerably weaker under compression than modern concrete, so it could not simply replace it in tall buildings.",
+   "box": [
+    "decades",
+    "centuries",
+    "seawater",
+    "rainwater",
+    "stronger",
+    "weaker",
+    "mistakes",
+    "features",
+    "repair"
+   ],
+   "items": [
+    {
+     "stmt": "Some Roman structures have [la:lasted] for [g:____], unlike some modern ones.",
+     "pairs": {
+      "la": {
+       "p": "survived",
+       "vi": "tồn tại"
+      },
+      "g": {
+       "p": "two thousand years",
+       "vi": "hai nghìn năm"
+      }
+     },
+     "ans": 1,
+     "explain": "Hai nghìn năm → nhiều thế kỷ = centuries. 'Decades' là bẫy (gắn với bê tông hiện đại)."
+    },
+    {
+     "stmt": "Volcanic ash reacts with [g:____] to form minerals that make the material [st:harder] [ov:over time].",
+     "pairs": {
+      "g": {
+       "p": "seawater",
+       "vi": "nước biển"
+      },
+      "st": {
+       "p": "strengthen",
+       "vi": "làm chắc hơn"
+      },
+      "ov": {
+       "p": "over time",
+       "vi": "theo thời gian"
+      }
+     },
+     "ans": 2,
+     "explain": "→ seawater."
+    },
+    {
+     "stmt": "White lumps of lime were [on:once] thought to be [g:____] made during mixing.",
+     "pairs": {
+      "on": {
+       "p": "previously dismissed",
+       "vi": "trước đây bị gạt đi"
+      },
+      "g": {
+       "p": "careless mixing",
+       "vi": "trộn cẩu thả"
+      }
+     },
+     "ans": 6,
+     "explain": "Dấu hiệu của trộn cẩu thả → mistakes."
+    },
+    {
+     "stmt": "These lumps may help the concrete to [g:____] cracks [it:by itself].",
+     "pairs": {
+      "g": {
+       "p": "sealing the damage",
+       "vi": "bịt kín hư hại"
+      },
+      "it": {
+       "p": "effectively",
+       "vi": "trên thực tế"
+      }
+     },
+     "ans": 8,
+     "explain": "Sealing the damage → repair."
+    }
+   ]
+  },
+  {
+   "id": "A32",
+   "track": "A",
+   "type": "mcq",
+   "art": "battery",
+   "title": "Storing the wind",
+   "topic": "Năng lượng · lưu trữ điện",
+   "passage": "Wind and solar power are now among the cheapest sources of electricity, but their output varies with the weather. As their share of supply grows, the challenge shifts from generating clean electricity to storing it for periods when the wind drops or the sun sets. Lithium-ion batteries have fallen dramatically in price and are well suited to smoothing short fluctuations of a few hours. They are less economical for storing energy over days or weeks. For longer durations, engineers are exploring alternatives: pumped hydro, which moves water uphill when power is abundant and releases it through turbines when needed, is a mature technology but requires suitable terrain. Other options include compressed air stored in underground caverns and hydrogen produced by electrolysis, which can be stored for months but loses a large proportion of the original energy when converted back to electricity. Most analysts expect future grids to combine several of these technologies rather than depend on one.",
+   "items": [
+    {
+     "stmt": "What [pr:problem] with wind and solar power does the writer [id:identify]?",
+     "pairs": {
+      "pr": {
+       "p": "challenge",
+       "vi": "thách thức"
+      },
+      "id": {
+       "p": "varies with the weather",
+       "vi": "thay đổi theo thời tiết"
+      }
+     },
+     "options": [
+      "They are expensive to build.",
+      "Their output depends on the weather.",
+      "They cannot be connected to the grid.",
+      "They take up too much land."
+     ],
+     "ans": 1,
+     "explain": "→ B."
+    },
+    {
+     "stmt": "Lithium-ion batteries are [be:best suited to]",
+     "pairs": {
+      "be": {
+       "p": "well suited to",
+       "vi": "phù hợp với"
+      }
+     },
+     "options": [
+      "storing energy for several weeks",
+      "covering short gaps of a few hours",
+      "replacing pumped hydro",
+      "producing hydrogen"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "short gaps of a few hours",
+       "short fluctuations of a few hours"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "What [li:limits] the use of {ph:pumped hydro}?",
+     "pairs": {
+      "li": {
+       "p": "requires suitable terrain",
+       "vi": "cần địa hình phù hợp"
+      },
+      "ph": {
+       "p": "pumped hydro"
+      }
+     },
+     "options": [
+      "It is a new and untested technology.",
+      "It needs the right kind of landscape.",
+      "It loses most of its energy.",
+      "It can only store energy for hours."
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "right kind of landscape",
+       "suitable terrain"
+      ]
+     ],
+     "explain": "→ B. A sai: 'mature technology'."
+    },
+    {
+     "stmt": "What is the [dr:drawback] of {hy:hydrogen} storage?",
+     "pairs": {
+      "dr": {
+       "p": "loses a large proportion",
+       "vi": "mất một tỷ lệ lớn"
+      },
+      "hy": {
+       "p": "hydrogen produced"
+      }
+     },
+     "options": [
+      "It cannot be stored for long.",
+      "Much energy is lost when it is turned back into electricity.",
+      "It requires underground caverns.",
+      "It is dangerous to transport."
+     ],
+     "ans": 1,
+     "explain": "→ B. A sai: lưu được nhiều tháng."
+    }
+   ]
+  },
+  {
+   "id": "A33",
+   "track": "A",
+   "type": "ynng",
+   "art": "book",
+   "title": "Pen versus keyboard",
+   "topic": "Giáo dục · viết tay",
+   "passage": "As schools increasingly replace exercise books with laptops, the question of whether handwriting still matters has become pressing. Several studies have found that students who take lecture notes by hand remember conceptual material better than those who type, apparently because the slowness of writing forces them to summarise rather than transcribe word for word. I find these results persuasive, although I recognise that some later attempts to replicate them have produced weaker effects. For young children, the case for handwriting seems stronger still: forming letters by hand appears to help them learn to recognise those letters when reading. None of this, in my view, justifies banning devices from classrooms. Typing is an essential skill, and for students with certain physical disabilities it may be the only practical way to write at length. The sensible approach is to treat handwriting and typing as complementary rather than as rivals.",
+   "items": [
+    {
+     "stmt": "Note-taking by hand [en:encourages] students to [su:summarise] information.",
+     "pairs": {
+      "en": {
+       "p": "forces them to",
+       "vi": "buộc họ phải"
+      },
+      "su": {
+       "p": "summarise rather than transcribe",
+       "vi": "tóm tắt thay vì chép nguyên văn"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "The writer [ig:ignores] research that [we:found smaller effects].",
+     "pairs": {
+      "ig": {
+       "p": "I recognise",
+       "vi": "tôi thừa nhận"
+      },
+      "we": {
+       "p": "weaker effects",
+       "vi": "hiệu ứng yếu hơn"
+      }
+     },
+     "ans": "N",
+     "explain": "Tác giả thừa nhận các nghiên cứu này → NO."
+    },
+    {
+     "stmt": "Devices should be [ba:banned] from classrooms.",
+     "pairs": {
+      "ba": {
+       "p": "banning devices",
+       "vi": "cấm thiết bị"
+      }
+     },
+     "ans": "N",
+     "explain": "'None of this justifies banning devices' → NO."
+    },
+    {
+     "stmt": "Handwriting and typing should be seen as [co:complementing each other].",
+     "pairs": {
+      "co": {
+       "p": "complementary rather than as rivals",
+       "vi": "bổ trợ chứ không đối đầu"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    }
+   ]
+  },
+  {
+   "id": "B18",
+   "track": "B",
+   "type": "gap",
+   "art": "sun",
+   "title": "Wind farms at sea",
+   "topic": "Năng lượng · điện gió ngoài khơi",
+   "passage": "Offshore wind farms benefit from stronger and more consistent winds than those on land, and because they are out of sight of most residents, they tend to face less local opposition. Turbines have grown enormously in size: the largest now have blades longer than a football pitch, and a single rotation can supply an average household for a day or more. Building at sea is, however, far more costly and technically demanding. Foundations must withstand storms and corrosive salt water, and maintenance crews can reach turbines only when conditions allow. Most existing farms are fixed to the seabed in relatively shallow water. To exploit the strong winds over deeper waters, engineers are developing floating turbines anchored to the sea floor by cables, a technology that has been demonstrated in pilot projects but is not yet produced on a large scale.",
+   "box": [
+    "steadier",
+    "weaker",
+    "complaints",
+    "support",
+    "giant",
+    "tiny",
+    "expensive",
+    "calm",
+    "experimental"
+   ],
+   "items": [
+    {
+     "stmt": "Winds at sea are stronger and [g:____] than on land.",
+     "pairs": {
+      "g": {
+       "p": "more consistent",
+       "vi": "ổn định hơn"
+      }
+     },
+     "ans": 0,
+     "explain": "More consistent → steadier."
+    },
+    {
+     "stmt": "Offshore farms [us:usually] meet fewer [g:____] from local people.",
+     "pairs": {
+      "us": {
+       "p": "tend to",
+       "vi": "có xu hướng"
+      },
+      "g": {
+       "p": "less local opposition",
+       "vi": "ít phản đối từ địa phương"
+      }
+     },
+     "ans": 2,
+     "explain": "Opposition → complaints (phản đối). 'Support' trái nghĩa."
+    },
+    {
+     "stmt": "Maintenance is only possible when the weather is [g:____] enough.",
+     "pairs": {
+      "g": {
+       "p": "when conditions allow",
+       "vi": "khi điều kiện cho phép"
+      }
+     },
+     "ans": 7,
+     "explain": "Điều kiện cho phép = biển lặng → calm."
+    },
+    {
+     "stmt": "[fl:Floating turbines] remain largely [g:____].",
+     "pairs": {
+      "fl": {
+       "p": "floating turbines",
+       "vi": "tua-bin nổi"
+      },
+      "g": {
+       "p": "demonstrated in pilot projects",
+       "vi": "được thử nghiệm ở dự án thí điểm"
+      }
+     },
+     "ans": 8,
+     "explain": "Chỉ mới ở dự án thí điểm → experimental."
+    }
+   ]
+  },
+  {
+   "id": "A34",
+   "track": "A",
+   "type": "tfng",
+   "art": "mountain",
+   "title": "Living beside a volcano",
+   "topic": "Địa lý · đất núi lửa",
+   "passage": "It may seem surprising that some of the world's most densely populated agricultural regions lie on the slopes of active volcanoes. The explanation lies in the soil. Volcanic ash weathers into soils rich in minerals such as potassium and phosphorus, and these soils retain water well, supporting abundant harvests of rice, coffee and vegetables. On the Indonesian island of Java, for instance, population densities in some volcanic areas exceed those of many cities. The benefits come with obvious risks. Eruptions can bury fields and villages, and mudflows triggered by heavy rain on loose ash can travel many kilometres at high speed. Monitoring has improved considerably: networks of seismometers and gas sensors can now detect warning signs days or weeks in advance. Nevertheless, residents are often reluctant to evacuate, fearing that their livestock and possessions will be stolen or that the warning will prove to be a false alarm.",
+   "items": [
+    {
+     "stmt": "Volcanic soils are [ri:rich] in minerals and [ho:hold water] [ef:effectively].",
+     "pairs": {
+      "ri": {
+       "p": "rich in minerals",
+       "vi": "giàu khoáng chất"
+      },
+      "ho": {
+       "p": "retain water",
+       "vi": "giữ nước"
+      },
+      "ef": {
+       "p": "well",
+       "vi": "tốt"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "Some volcanic areas of Java are [mo:more crowded] than [ma:many cities].",
+     "pairs": {
+      "mo": {
+       "p": "exceed",
+       "vi": "vượt quá"
+      },
+      "ma": {
+       "p": "many cities",
+       "vi": "nhiều thành phố"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "{mf:Mudflows} [on:only] occur [du:during eruptions].",
+     "pairs": {
+      "mf": {
+       "p": "mudflows"
+      },
+      "on": {
+       "p": null,
+       "vi": "—"
+      },
+      "du": {
+       "p": "triggered by heavy rain on loose ash",
+       "vi": "do mưa lớn trên lớp tro"
+      }
+     },
+     "ans": "F",
+     "explain": "Dòng bùn có thể do mưa lớn gây ra, không chỉ khi phun trào → FALSE."
+    },
+    {
+     "stmt": "[re:Residents] [us:usually] leave [qu:as soon as] a warning is given.",
+     "pairs": {
+      "re": {
+       "p": "residents",
+       "vi": "cư dân"
+      },
+      "us": {
+       "p": "often reluctant",
+       "vi": "thường miễn cưỡng"
+      },
+      "qu": {
+       "p": "evacuate",
+       "vi": "sơ tán"
+      }
+     },
+     "ans": "F",
+     "explain": "Họ thường miễn cưỡng sơ tán → FALSE."
+    }
+   ]
+  },
+  {
+   "id": "A35",
+   "track": "A",
+   "type": "mcq",
+   "art": "wave",
+   "title": "Plastic too small to see",
+   "topic": "Môi trường · vi nhựa",
+   "passage": "Microplastics – fragments smaller than five millimetres – have been found almost everywhere scientists have looked, from Arctic sea ice to the deepest ocean trenches and, more recently, in human blood and lungs. Some are manufactured at that size, such as the microbeads once common in cosmetics, but most result from the breakdown of larger items, including tyres, synthetic textiles and packaging. Establishing their effects on human health has proved far harder than documenting their presence. Laboratory studies have shown that high doses can cause inflammation in cells, yet the concentrations used are often much higher than those people actually encounter, and measuring real exposure is complicated by the ease with which samples become contaminated by plastic in the laboratory itself. Several countries have banned microbeads, but researchers stress that the larger sources, especially tyre wear and clothing fibres, will be much harder to control.",
+   "items": [
+    {
+     "stmt": "Where have microplastics [re:recently] been [de:detected]?",
+     "pairs": {
+      "re": {
+       "p": "more recently",
+       "vi": "gần đây hơn"
+      },
+      "de": {
+       "p": "found",
+       "vi": "được tìm thấy"
+      }
+     },
+     "options": [
+      "only in coastal waters",
+      "in the human body",
+      "only in manufactured products",
+      "in drinking water alone"
+     ],
+     "ans": 1,
+     "para": [
+      [
+       "in the human body",
+       "in human blood and lungs"
+      ]
+     ],
+     "explain": "→ B."
+    },
+    {
+     "stmt": "Where do [mo:most] microplastics [co:come from]?",
+     "pairs": {
+      "mo": {
+       "p": "most result from",
+       "vi": "phần lớn đến từ"
+      },
+      "co": {
+       "p": "breakdown",
+       "vi": "sự phân rã"
+      }
+     },
+     "options": [
+      "cosmetics",
+      "larger plastic items that break apart",
+      "factories that produce them deliberately",
+      "sea ice"
+     ],
+     "ans": 1,
+     "explain": "→ B. A là bẫy: microbeads chỉ là một phần nhỏ."
+    },
+    {
+     "stmt": "Why is it [di:difficult] to [me:measure] human exposure?",
+     "pairs": {
+      "di": {
+       "p": "complicated by",
+       "vi": "bị làm phức tạp bởi"
+      },
+      "me": {
+       "p": "measuring real exposure",
+       "vi": "đo mức phơi nhiễm thực"
+      }
+     },
+     "options": [
+      "People refuse to give samples.",
+      "Samples are easily contaminated in laboratories.",
+      "The particles dissolve quickly.",
+      "There are no suitable instruments."
+     ],
+     "ans": 1,
+     "explain": "→ B."
+    },
+    {
+     "stmt": "According to researchers, which sources will be [ha:hardest to control]?",
+     "pairs": {
+      "ha": {
+       "p": "much harder to control",
+       "vi": "khó kiểm soát hơn nhiều"
+      }
+     },
+     "options": [
+      "microbeads in cosmetics",
+      "tyre wear and clothing fibres",
+      "plastic bottles",
+      "fishing nets"
+     ],
+     "ans": 1,
+     "explain": "→ B."
+    }
+   ]
+  },
+  {
+   "id": "B19",
+   "track": "B",
+   "type": "gap",
+   "art": "leaf",
+   "title": "Forests at the water's edge",
+   "topic": "Sinh thái · rừng ngập mặn",
+   "passage": "Mangrove forests grow along tropical coastlines where few other trees can survive, their tangled roots tolerating salt water and regular flooding by the tide. They provide remarkable benefits. The dense roots slow incoming waves, reducing the damage caused by storms to coastal villages, and they trap sediment, helping coastlines keep pace with rising sea levels. Mangrove soils store large quantities of carbon, often several times more per hectare than tropical rainforests on land. They also serve as nurseries for many species of fish, which shelter among the roots when young before moving to the open sea. Despite this, large areas of mangrove have been cleared, particularly for shrimp farms and coastal development. Replanting projects have multiplied, but many have failed because seedlings were planted in places where mangroves had never naturally grown, such as mudflats that are flooded for too long each day.",
+   "box": [
+    "salt",
+    "fresh",
+    "weaken",
+    "strengthen",
+    "carbon",
+    "oxygen",
+    "shelter",
+    "food",
+    "unsuitable"
+   ],
+   "items": [
+    {
+     "stmt": "Mangrove roots can [to:tolerate] [g:____] water.",
+     "pairs": {
+      "to": {
+       "p": "tolerating",
+       "vi": "chịu được"
+      },
+      "g": {
+       "p": "salt water",
+       "vi": "nước mặn"
+      }
+     },
+     "ans": 0,
+     "explain": "→ salt."
+    },
+    {
+     "stmt": "They [sl:slow] waves and so [g:____] the impact of storms.",
+     "pairs": {
+      "sl": {
+       "p": "slow incoming waves",
+       "vi": "làm chậm sóng"
+      },
+      "g": {
+       "p": "reducing the damage",
+       "vi": "giảm thiệt hại"
+      }
+     },
+     "ans": 2,
+     "explain": "Reduce damage → weaken the impact."
+    },
+    {
+     "stmt": "Young fish use the roots for [g:____].",
+     "pairs": {
+      "g": {
+       "p": "shelter among the roots",
+       "vi": "trú ẩn giữa rễ"
+      }
+     },
+     "ans": 6,
+     "explain": "→ shelter. 'Food' là bẫy."
+    },
+    {
+     "stmt": "Many replanting projects [fa:failed] because seedlings were put in [g:____] locations.",
+     "pairs": {
+      "fa": {
+       "p": "have failed",
+       "vi": "đã thất bại"
+      },
+      "g": {
+       "p": "never naturally grown",
+       "vi": "chưa bao giờ mọc tự nhiên"
+      }
+     },
+     "ans": 8,
+     "explain": "Nơi mangrove chưa từng mọc → unsuitable."
+    }
+   ]
+  },
+  {
+   "id": "A36",
+   "track": "A",
+   "type": "ynng",
+   "art": "clock",
+   "title": "Let teenagers sleep",
+   "topic": "Giáo dục · giờ vào học",
+   "passage": "During adolescence, the body's internal clock shifts later, so that teenagers naturally fall asleep and wake up later than younger children or adults. This is a biological change, not a sign of laziness, and early school start times force many adolescents to learn while chronically short of sleep. Districts that have delayed the start of the school day by even half an hour have reported that students sleep longer, attend more regularly and, in some cases, achieve modestly better grades. I find this evidence strong enough to justify later start times in most secondary schools. The objections are largely practical: bus schedules, after-school sports and parents' working hours would all need adjusting. These difficulties are real, but I do not think they outweigh the benefits. It is worth noting, too, that later starts help only if teenagers do not simply stay up later, which is why schools should also teach students about the effects of evening screen use.",
+   "items": [
+    {
+     "stmt": "Teenagers' late sleeping is [ca:caused by] [la:laziness].",
+     "pairs": {
+      "ca": {
+       "p": "biological change",
+       "vi": "thay đổi sinh học"
+      },
+      "la": {
+       "p": "not a sign of laziness",
+       "vi": "không phải dấu hiệu lười biếng"
+      }
+     },
+     "ans": "N",
+     "explain": "→ NO."
+    },
+    {
+     "stmt": "[de:Delaying school] by [ha:thirty minutes] can [im:improve attendance].",
+     "pairs": {
+      "de": {
+       "p": "delayed the start",
+       "vi": "lùi giờ bắt đầu"
+      },
+      "ha": {
+       "p": "half an hour",
+       "vi": "nửa tiếng"
+      },
+      "im": {
+       "p": "attend more regularly",
+       "vi": "đi học đều hơn"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    },
+    {
+     "stmt": "The writer believes the [pr:practical problems] are [mo:more important] than the advantages.",
+     "pairs": {
+      "pr": {
+       "p": "objections are largely practical",
+       "vi": "các phản đối chủ yếu mang tính thực tế"
+      },
+      "mo": {
+       "p": "do not think they outweigh",
+       "vi": "không nghĩ chúng nặng hơn"
+      }
+     },
+     "ans": "N",
+     "explain": "→ NO."
+    },
+    {
+     "stmt": "Schools should [ed:educate] students about [sc:using screens at night].",
+     "pairs": {
+      "ed": {
+       "p": "teach students",
+       "vi": "dạy học sinh"
+      },
+      "sc": {
+       "p": "evening screen use",
+       "vi": "dùng màn hình buổi tối"
+      }
+     },
+     "ans": "Y",
+     "explain": "→ YES."
+    }
+   ]
+  },
+  {
+   "id": "A37",
+   "track": "A",
+   "type": "tfng",
+   "art": "chip",
+   "title": "Parcels from the sky",
+   "topic": "Logistics · giao hàng bằng drone",
+   "passage": "Delivery by drone has moved from science fiction to limited commercial reality. In parts of Africa, drones have for several years carried blood supplies and vaccines to remote clinics, cutting journeys that took hours by road to a matter of minutes. In wealthier countries, retailers have run trials delivering small parcels to suburban homes. The economics, however, remain uncertain. Drones can carry only light loads, typically a few kilograms, and each flight usually delivers a single package, whereas a van can drop off over a hundred. Noise, privacy and the risk of collisions also concern residents and regulators. Most experts therefore expect drones to occupy a niche, serving urgent medical deliveries and hard-to-reach locations, rather than replacing vans on ordinary urban routes. Battery improvements could extend their range, but rules requiring operators to keep drones within sight have so far limited long-distance flights in many countries.",
+   "items": [
+    {
+     "stmt": "In Africa, drones have [cu:reduced] [jo:delivery times] to remote clinics.",
+     "pairs": {
+      "cu": {
+       "p": "cutting",
+       "vi": "rút ngắn"
+      },
+      "jo": {
+       "p": "journeys that took hours",
+       "vi": "những chuyến đi mất hàng giờ"
+      }
+     },
+     "ans": "T",
+     "explain": "→ TRUE."
+    },
+    {
+     "stmt": "A drone can [ca:carry] [mo:more parcels] per trip than a van.",
+     "pairs": {
+      "ca": {
+       "p": "each flight usually delivers a single package",
+       "vi": "mỗi chuyến thường giao một gói"
+      },
+      "mo": {
+       "p": "over a hundred",
+       "vi": "hơn một trăm (xe tải)"
+      }
+     },
+     "ans": "F",
+     "explain": "→ FALSE."
+    },
+    {
+     "stmt": "[mo:Most experts] expect drones to [re:replace] vans in cities.",
+     "pairs": {
+      "mo": {
+       "p": "Most experts",
+       "vi": "phần lớn chuyên gia"
+      },
+      "re": {
+       "p": "rather than replacing vans",
+       "vi": "thay vì thay thế xe tải"
+      }
+     },
+     "ans": "F",
+     "explain": "→ FALSE."
+    },
+    {
+     "stmt": "Drone delivery is [ch:cheaper] than van delivery for [me:medical supplies].",
+     "pairs": {
+      "ch": {
+       "p": null,
+       "vi": "bài không so sánh chi phí"
+      },
+      "me": {
+       "p": "blood supplies and vaccines",
+       "vi": "máu và vắc-xin"
+      }
+     },
+     "ans": "NG",
+     "explain": "Bài nói 'the economics remain uncertain', không so sánh giá cho vật tư y tế → NOT GIVEN."
+    }
+   ]
+  },
+  {
+   "id": "B20",
+   "track": "B",
+   "type": "gap",
+   "art": "brain",
+   "title": "Too many decisions",
+   "topic": "Tâm lý học · mệt mỏi quyết định",
+   "passage": "The idea that making many decisions gradually depletes a limited supply of mental energy became popular in the 2000s, supported by experiments in which participants who had resisted a temptation subsequently gave up sooner on difficult puzzles. The theory, often called ego depletion, was widely cited in business and self-help books. Later, however, a large coordinated attempt by dozens of laboratories to reproduce the basic effect found it to be close to zero. This does not mean that people never tire of choosing; rather, the mechanism may have been misunderstood. Some researchers now argue that fatigue reflects shifting motivation rather than an exhausted resource: after a period of effort, the mind becomes less willing to invest further effort in tasks that seem unrewarding. On this view, breaks, variety and a sense of purpose may matter more than glucose or rest alone.",
+   "box": [
+    "exhausts",
+    "restores",
+    "fashionable",
+    "forgotten",
+    "repeat",
+    "reject",
+    "tiny",
+    "enormous",
+    "motivation"
+   ],
+   "items": [
+    {
+     "stmt": "The theory suggested that making decisions [g:____] a [li:limited] store of mental energy.",
+     "pairs": {
+      "g": {
+       "p": "depletes",
+       "vi": "làm cạn kiệt"
+      },
+      "li": {
+       "p": "limited supply",
+       "vi": "nguồn cung hạn chế"
+      }
+     },
+     "ans": 0,
+     "explain": "Depletes → exhausts."
+    },
+    {
+     "stmt": "The idea became [g:____] in the 2000s.",
+     "pairs": {
+      "g": {
+       "p": "became popular",
+       "vi": "trở nên phổ biến"
+      }
+     },
+     "ans": 2,
+     "explain": "Popular → fashionable."
+    },
+    {
+     "stmt": "When many laboratories tried to [g:____] the effect, they found it was [ne:almost nonexistent].",
+     "pairs": {
+      "g": {
+       "p": "reproduce",
+       "vi": "tái tạo"
+      },
+      "ne": {
+       "p": "close to zero",
+       "vi": "gần bằng không"
+      }
+     },
+     "ans": 4,
+     "explain": "Reproduce → repeat."
+    },
+    {
+     "stmt": "Some researchers think tiredness is really a change in [g:____].",
+     "pairs": {
+      "g": {
+       "p": "shifting motivation",
+       "vi": "động lực thay đổi"
+      }
+     },
+     "ans": 8,
+     "explain": "→ motivation."
+    }
+   ]
+  },
+  {
+   "id": "B21",
+   "track": "B",
+   "type": "gap",
+   "art": "coin",
+   "title": "Before coins",
+   "topic": "Kinh tế · nguồn gốc tiền tệ",
+   "passage": "A familiar story holds that money was invented to overcome the inconvenience of barter: a farmer with grain who wanted shoes had to find a shoemaker who wanted grain. Anthropologists, however, have found little evidence of societies that relied primarily on barter. In small communities, people more commonly exchanged goods on credit, keeping informal track of who owed what to whom. Written records from ancient Mesopotamia, dating back thousands of years before the first coins, show temple administrators recording debts in units of silver and barley, even though physical silver rarely changed hands. Coins themselves, first minted in the region of Lydia in present-day Turkey around the seventh century BCE, may have spread largely because they were convenient for paying soldiers. On this account, money began not as a medium of barter but as a means of keeping accounts.",
+   "box": [
+    "exchange",
+    "credit",
+    "rare",
+    "common",
+    "debts",
+    "taxes",
+    "soldiers",
+    "merchants",
+    "records"
+   ],
+   "items": [
+    {
+     "stmt": "According to a popular account, money replaced the [di:inconvenient] system of direct [g:____].",
+     "pairs": {
+      "di": {
+       "p": "inconvenience",
+       "vi": "sự bất tiện"
+      },
+      "g": {
+       "p": "barter",
+       "vi": "trao đổi hàng lấy hàng"
+      }
+     },
+     "ans": 0,
+     "explain": "Barter = trao đổi trực tiếp → exchange."
+    },
+    {
+     "stmt": "In reality, people in small communities often traded on [g:____].",
+     "pairs": {
+      "g": {
+       "p": "on credit",
+       "vi": "ghi nợ"
+      }
+     },
+     "ans": 1,
+     "explain": "→ credit."
+    },
+    {
+     "stmt": "Mesopotamian officials [re:recorded] [g:____] in units of silver and barley.",
+     "pairs": {
+      "re": {
+       "p": "recording",
+       "vi": "ghi chép"
+      },
+      "g": {
+       "p": "debts",
+       "vi": "các khoản nợ"
+      }
+     },
+     "ans": 4,
+     "explain": "→ debts. 'Taxes' là bẫy."
+    },
+    {
+     "stmt": "Coins may have [sp:spread] because they made it easy to pay [g:____].",
+     "pairs": {
+      "sp": {
+       "p": "spread largely because",
+       "vi": "lan rộng chủ yếu vì"
+      },
+      "g": {
+       "p": "paying soldiers",
+       "vi": "trả lương binh lính"
+      }
+     },
+     "ans": 6,
+     "explain": "→ soldiers. 'Merchants' là bẫy."
+    }
+   ]
+  },
+  {
+   "id": "B22",
+   "track": "B",
+   "type": "gap",
+   "art": "chip",
+   "title": "Printing a house",
+   "topic": "Xây dựng · in 3D",
+   "passage": "Large-scale 3D printers can now build the walls of a small house in a matter of days by extruding layers of a specially formulated concrete according to a digital design. Proponents claim the technology could reduce construction costs and waste, since material is deposited only where it is needed, and could allow curved shapes that would be expensive to produce with conventional formwork. It may also help to address shortages of skilled labour. However, current printers handle only part of the job. Roofs, windows, plumbing and electrical systems still have to be installed by conventional methods, and building regulations in many countries were not written with printed structures in mind, which can delay approval. Questions also remain about long-term durability, since few printed buildings are more than a decade old.",
+   "box": [
+    "weeks",
+    "days",
+    "needed",
+    "wasted",
+    "curved",
+    "straight",
+    "shortages",
+    "surpluses",
+    "approval"
+   ],
+   "items": [
+    {
+     "stmt": "Printers can produce the walls of a small house in a few [g:____].",
+     "pairs": {
+      "g": {
+       "p": "in a matter of days",
+       "vi": "trong vài ngày"
+      }
+     },
+     "ans": 1,
+     "explain": "→ days."
+    },
+    {
+     "stmt": "Less material is wasted because it is placed only where it is [g:____].",
+     "pairs": {
+      "g": {
+       "p": "only where it is needed",
+       "vi": "chỉ nơi cần"
+      }
+     },
+     "ans": 2,
+     "explain": "→ needed."
+    },
+    {
+     "stmt": "The technology could make it cheaper to create [g:____] forms.",
+     "pairs": {
+      "g": {
+       "p": "curved shapes",
+       "vi": "hình dạng cong"
+      }
+     },
+     "ans": 4,
+     "explain": "→ curved."
+    },
+    {
+     "stmt": "Outdated regulations may [de:slow down] [g:____] of printed buildings.",
+     "pairs": {
+      "de": {
+       "p": "delay",
+       "vi": "làm chậm"
+      },
+      "g": {
+       "p": "approval",
+       "vi": "sự phê duyệt"
+      }
+     },
+     "ans": 8,
+     "explain": "→ approval."
+    }
+   ]
+  },
+  {
+   "id": "B23",
+   "track": "B",
+   "type": "gap",
+   "art": "mountain",
+   "title": "Water towers of ice",
+   "topic": "Khí hậu · sông băng",
+   "passage": "Mountain glaciers act as natural reservoirs, storing water as ice during cold seasons and releasing it as meltwater during warm, dry periods when rivers would otherwise run low. Hundreds of millions of people in Asia and South America depend partly on this seasonal supply for drinking water, irrigation and hydroelectric power. As temperatures rise, many glaciers are shrinking. Paradoxically, this can initially increase the volume of meltwater, giving a misleading impression of abundance. Once a glacier has shrunk beyond a certain point, however, its contribution declines, a turning point sometimes called 'peak water'. Some river basins may already have passed it. Adapting will require building new storage, improving the efficiency of irrigation, which accounts for most water use in these regions, and coordinating among countries that share the same rivers.",
+   "box": [
+    "stores",
+    "releases",
+    "rise",
+    "fall",
+    "abundance",
+    "scarcity",
+    "farming",
+    "drinking",
+    "cooperation"
+   ],
+   "items": [
+    {
+     "stmt": "Glaciers release water when rivers would otherwise [g:____].",
+     "pairs": {
+      "g": {
+       "p": "run low",
+       "vi": "cạn"
+      }
+     },
+     "ans": 3,
+     "explain": "Run low → fall (mực nước giảm)."
+    },
+    {
+     "stmt": "At first, melting glaciers may create a [fa:false] sense of [g:____].",
+     "pairs": {
+      "fa": {
+       "p": "misleading impression",
+       "vi": "ấn tượng sai lệch"
+      },
+      "g": {
+       "p": "abundance",
+       "vi": "sự dồi dào"
+      }
+     },
+     "ans": 4,
+     "explain": "→ abundance."
+    },
+    {
+     "stmt": "In these regions, [g:____] uses the [la:largest share] of water.",
+     "pairs": {
+      "g": {
+       "p": "irrigation",
+       "vi": "thủy lợi, tưới tiêu"
+      },
+      "la": {
+       "p": "most water use",
+       "vi": "phần lớn lượng nước"
+      }
+     },
+     "ans": 6,
+     "explain": "Irrigation → farming."
+    },
+    {
+     "stmt": "Countries sharing rivers will need greater [g:____].",
+     "pairs": {
+      "g": {
+       "p": "coordinating among countries",
+       "vi": "phối hợp giữa các nước"
+      }
+     },
+     "ans": 8,
+     "explain": "Coordinating → cooperation."
+    }
+   ]
+  },
+  {
+   "id": "B24",
+   "track": "B",
+   "type": "gap",
+   "art": "people",
+   "title": "The myth of panic",
+   "topic": "Tâm lý học · đám đông khi thảm họa",
+   "passage": "Films often depict crowds in emergencies as panicking mobs in which everyone pushes selfishly towards the exits. Research on real disasters paints a different picture. Survivors' accounts of fires, bombings and earthquakes repeatedly describe strangers helping one another, sharing information and waiting their turn. Psychologists suggest that a shared sense of identity tends to emerge in such situations, encouraging cooperation. Where people do die in crowds, the cause is usually not panic but density: when too many people are packed into a confined space, pressure can build up to dangerous levels even if everyone behaves calmly. These findings have practical consequences. Emergency planners who assume the public will panic may withhold information, whereas clear and timely instructions generally make evacuations faster and safer.",
+   "box": [
+    "selfish",
+    "helpful",
+    "identity",
+    "fear",
+    "crowding",
+    "panic",
+    "conceal",
+    "share",
+    "quicker"
+   ],
+   "items": [
+    {
+     "stmt": "Films [ty:typically] show crowds behaving in a [g:____] way.",
+     "pairs": {
+      "ty": {
+       "p": "often depict",
+       "vi": "thường miêu tả"
+      },
+      "g": {
+       "p": "pushes selfishly",
+       "vi": "chen lấn ích kỷ"
+      }
+     },
+     "ans": 0,
+     "explain": "→ selfish."
+    },
+    {
+     "stmt": "[su:Accounts by survivors] [re:frequently] describe strangers being [g:____] to one another.",
+     "pairs": {
+      "su": {
+       "p": "Survivors' accounts",
+       "vi": "lời kể của người sống sót"
+      },
+      "re": {
+       "p": "repeatedly",
+       "vi": "lặp đi lặp lại"
+      },
+      "g": {
+       "p": "strangers helping one another",
+       "vi": "người lạ giúp đỡ nhau"
+      }
+     },
+     "ans": 1,
+     "explain": "Helping one another → helpful. 'Selfish' là hình ảnh trong phim, không phải thực tế."
+    },
+    {
+     "stmt": "Deaths in crowds are usually caused by [g:____] rather than panic.",
+     "pairs": {
+      "g": {
+       "p": "density",
+       "vi": "mật độ đông"
+      }
+     },
+     "ans": 4,
+     "explain": "Density → crowding. 'Panic' bị phủ định."
+    },
+    {
+     "stmt": "Planners who expect panic may [g:____] information from the public.",
+     "pairs": {
+      "g": {
+       "p": "withhold information",
+       "vi": "giữ lại thông tin"
+      }
+     },
+     "ans": 6,
+     "explain": "Withhold → conceal."
+    }
+   ]
+  },
+  {
+   "id": "B25",
+   "track": "B",
+   "type": "gap",
+   "art": "leaf",
+   "title": "The value of a street tree",
+   "topic": "Đô thị · cây xanh",
+   "passage": "Street trees are often treated as decoration, the first item to be cut when municipal budgets are tight. Studies that attempt to put a value on their services suggest this is a false economy. A mature tree can intercept substantial amounts of rainfall, reducing pressure on drains during storms, and its shade lowers the temperature of pavements and buildings, cutting the need for air-conditioning. Trees also remove some pollutants from the air, although their effect on overall air quality in a busy city is modest. Less easily measured are the psychological benefits: several studies have linked greener neighbourhoods with lower stress levels. The benefits depend heavily on age, since a young sapling provides only a fraction of the services of a large mature tree. For this reason, many experts argue that protecting existing trees is more effective than planting new ones.",
+   "box": [
+    "decoration",
+    "necessity",
+    "drains",
+    "rivers",
+    "cooling",
+    "heating",
+    "limited",
+    "significant",
+    "existing"
+   ],
+   "items": [
+    {
+     "stmt": "Street trees are often regarded as mere [g:____].",
+     "pairs": {
+      "g": {
+       "p": "decoration",
+       "vi": "đồ trang trí"
+      }
+     },
+     "ans": 0,
+     "explain": "→ decoration."
+    },
+    {
+     "stmt": "By catching rain, trees reduce the load on [g:____].",
+     "pairs": {
+      "g": {
+       "p": "pressure on drains",
+       "vi": "áp lực lên cống"
+      }
+     },
+     "ans": 2,
+     "explain": "→ drains."
+    },
+    {
+     "stmt": "Their shade reduces the demand for [g:____] in buildings.",
+     "pairs": {
+      "g": {
+       "p": "air-conditioning",
+       "vi": "điều hòa"
+      }
+     },
+     "ans": 4,
+     "explain": "Air-conditioning → cooling."
+    },
+    {
+     "stmt": "Their effect on air quality in busy cities is [g:____].",
+     "pairs": {
+      "g": {
+       "p": "modest",
+       "vi": "khiêm tốn"
+      }
+     },
+     "ans": 6,
+     "explain": "Modest → limited."
+    }
+   ]
+  },
+  {
+   "id": "B26",
+   "track": "B",
+   "type": "gap",
+   "art": "clock",
+   "title": "When every town had its own time",
+   "topic": "Lịch sử · giờ đường sắt",
+   "passage": "Until the mid-nineteenth century, most towns set their clocks by the sun, so that noon occurred when the sun was highest in the sky. Because the sun appears to move westwards, a town only a few dozen kilometres to the west kept time a minute or two behind its eastern neighbour. For travellers on horseback this hardly mattered. The arrival of railways changed that. Timetables that listed dozens of local times were confusing, and the risk of collisions on single-track lines made precise coordination essential. British railway companies therefore adopted a single standard time, transmitted by telegraph from the Royal Observatory at Greenwich. Many towns resisted at first, and for some years public clocks displayed two minute hands, one for local time and one for railway time. Standard time zones were eventually adopted internationally in the decades that followed.",
+   "box": [
+    "sun",
+    "moon",
+    "behind",
+    "ahead",
+    "coordination",
+    "speed",
+    "telegraph",
+    "post",
+    "reluctant"
+   ],
+   "items": [
+    {
+     "stmt": "Towns used to set their clocks according to the [g:____].",
+     "pairs": {
+      "g": {
+       "p": "set their clocks by the sun",
+       "vi": "chỉnh đồng hồ theo mặt trời"
+      }
+     },
+     "ans": 0,
+     "explain": "→ sun."
+    },
+    {
+     "stmt": "A town further west kept time slightly [g:____] its eastern neighbour.",
+     "pairs": {
+      "g": {
+       "p": "a minute or two behind",
+       "vi": "chậm một hai phút"
+      }
+     },
+     "ans": 2,
+     "explain": "→ behind."
+    },
+    {
+     "stmt": "Railways needed precise [g:____] to avoid accidents.",
+     "pairs": {
+      "g": {
+       "p": "precise coordination",
+       "vi": "phối hợp chính xác"
+      }
+     },
+     "ans": 4,
+     "explain": "→ coordination."
+    },
+    {
+     "stmt": "Standard time was sent from Greenwich by [g:____].",
+     "pairs": {
+      "g": {
+       "p": "transmitted by telegraph",
+       "vi": "truyền bằng điện báo"
+      }
+     },
+     "ans": 6,
+     "explain": "→ telegraph."
+    }
+   ]
+  },
+  {
+   "id": "B27",
+   "track": "B",
+   "type": "gap",
+   "art": "battery",
+   "title": "The mountain of old electronics",
+   "topic": "Môi trường · rác thải điện tử",
+   "passage": "Discarded electronic devices are among the fastest-growing categories of waste worldwide, and only a small proportion is formally collected and recycled. This represents a lost opportunity as well as a hazard. A tonne of old mobile phones contains considerably more gold than a tonne of typical gold ore, along with copper, silver and rare elements. Yet extracting these materials safely requires specialised facilities. Much electronic waste is instead exported to countries where informal workers dismantle devices by hand and burn cables to recover copper, exposing themselves and nearby communities to toxic fumes. Manufacturers have been criticised for designs that make repair difficult, such as glued-in batteries. Some governments have responded with 'right to repair' laws requiring that spare parts and repair manuals be made available, which could extend the lifespan of devices and reduce the volume of waste.",
+   "box": [
+    "collected",
+    "burned",
+    "gold",
+    "plastic",
+    "specialised",
+    "simple",
+    "toxic",
+    "harmless",
+    "available"
+   ],
+   "items": [
+    {
+     "stmt": "Only a small part of electronic waste is officially [g:____] for recycling.",
+     "pairs": {
+      "g": {
+       "p": "formally collected",
+       "vi": "được thu gom chính thức"
+      }
+     },
+     "ans": 0,
+     "explain": "→ collected."
+    },
+    {
+     "stmt": "Old phones contain more [g:____] per tonne than typical ore.",
+     "pairs": {
+      "g": {
+       "p": "more gold",
+       "vi": "nhiều vàng hơn"
+      }
+     },
+     "ans": 2,
+     "explain": "→ gold."
+    },
+    {
+     "stmt": "Informal workers are exposed to [g:____] smoke when burning cables.",
+     "pairs": {
+      "g": {
+       "p": "toxic fumes",
+       "vi": "khói độc"
+      }
+     },
+     "ans": 6,
+     "explain": "→ toxic."
+    },
+    {
+     "stmt": "New laws require spare parts and manuals to be made [g:____].",
+     "pairs": {
+      "g": {
+       "p": "be made available",
+       "vi": "được cung cấp"
+      }
+     },
+     "ans": 8,
+     "explain": "→ available."
+    }
+   ]
+  },
+  {
+   "id": "B28",
+   "track": "B",
+   "type": "gap",
+   "art": "flask",
+   "title": "The old science of fermentation",
+   "topic": "Thực phẩm · lên men",
+   "passage": "Long before anyone knew that microorganisms existed, people fermented food to preserve it. Yogurt, cheese, kimchi, soy sauce and bread all depend on bacteria or yeasts that convert sugars into acids, gases or alcohol. The acids produced by fermentation prevent the growth of many harmful organisms, which is why fermented vegetables can be stored for months without refrigeration. Fermentation can also make foods easier to digest and increase the availability of certain vitamins. In recent years, fermented foods have been promoted for their supposed benefits to gut health. Some studies have reported that diets rich in fermented foods are associated with a greater diversity of gut microbes, but researchers caution that the evidence for specific health claims made by manufacturers remains limited, and that live cultures in many commercial products do not survive processing.",
+   "box": [
+    "preserve",
+    "flavour",
+    "acids",
+    "salts",
+    "months",
+    "weeks",
+    "digest",
+    "limited",
+    "strong"
+   ],
+   "items": [
+    {
+     "stmt": "People originally fermented food in order to [g:____] it.",
+     "pairs": {
+      "g": {
+       "p": "to preserve it",
+       "vi": "để bảo quản"
+      }
+     },
+     "ans": 0,
+     "explain": "→ preserve."
+    },
+    {
+     "stmt": "Microbes turn sugars into [g:____], gases or alcohol.",
+     "pairs": {
+      "g": {
+       "p": "into acids",
+       "vi": "thành axit"
+      }
+     },
+     "ans": 2,
+     "explain": "→ acids."
+    },
+    {
+     "stmt": "Fermented vegetables can be kept for [g:____] without a fridge.",
+     "pairs": {
+      "g": {
+       "p": "stored for months",
+       "vi": "bảo quản hàng tháng"
+      }
+     },
+     "ans": 4,
+     "explain": "→ months."
+    },
+    {
+     "stmt": "Evidence for many manufacturers' health claims is still [g:____].",
+     "pairs": {
+      "g": {
+       "p": "remains limited",
+       "vi": "vẫn còn hạn chế"
+      }
+     },
+     "ans": 7,
+     "explain": "→ limited."
+    }
+   ]
+  },
+  {
+   "id": "B29",
+   "track": "B",
+   "type": "gap",
+   "art": "ship",
+   "title": "A port in the computer",
+   "topic": "Logistics · bản sao số (digital twin)",
+   "passage": "Several large ports have built so-called digital twins: detailed virtual models that mirror the movements of ships, cranes, trucks and containers in real time, using data from sensors and tracking systems. Operators can use these models to test changes before implementing them, for example simulating how a new berth schedule would affect queues of trucks at the gates. During disruptions, such as a storm that closes the port for a day, the model can help planners decide which ships to prioritise once operations resume. The benefits depend heavily on the quality of the data. Many ports rely on information supplied by shipping lines, trucking firms and customs authorities, which is often incomplete or delayed, and persuading these organisations to share data in a common format has proved one of the main obstacles.",
+   "box": [
+    "virtual",
+    "physical",
+    "test",
+    "ignore",
+    "queues",
+    "costs",
+    "prioritise",
+    "delay",
+    "sharing"
+   ],
+   "items": [
+    {
+     "stmt": "A digital twin is a [g:____] model of a port that updates in real time.",
+     "pairs": {
+      "g": {
+       "p": "detailed virtual models",
+       "vi": "mô hình ảo chi tiết"
+      }
+     },
+     "ans": 0,
+     "explain": "→ virtual."
+    },
+    {
+     "stmt": "Operators can [g:____] changes before introducing them.",
+     "pairs": {
+      "g": {
+       "p": "test changes",
+       "vi": "thử nghiệm thay đổi"
+      }
+     },
+     "ans": 2,
+     "explain": "→ test."
+    },
+    {
+     "stmt": "For example, they can see how schedules affect [g:____] of trucks.",
+     "pairs": {
+      "g": {
+       "p": "queues of trucks",
+       "vi": "hàng xe tải chờ"
+      }
+     },
+     "ans": 4,
+     "explain": "→ queues."
+    },
+    {
+     "stmt": "A major obstacle is getting organisations to agree to data [g:____].",
+     "pairs": {
+      "g": {
+       "p": "share data",
+       "vi": "chia sẻ dữ liệu"
+      }
+     },
+     "ans": 8,
+     "explain": "→ sharing."
     }
    ]
   }
