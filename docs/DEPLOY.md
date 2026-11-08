@@ -94,7 +94,14 @@ Writing vẫn dùng được khi chưa làm bước này (phân tích tự độ
 
    ```bash
    npx supabase functions deploy writing-feedback
+   npx supabase functions deploy p3-pairs
    ```
+
+   `p3-pairs` là nút **Tự ghép cặp** khi dán đề Passage 3 (Luyện thi → Reading → Cambridge 10–20 / Đề trên web khác):
+   AI tìm từ khóa của từng câu hỏi và cụm cùng nghĩa trong bài. Dùng chung `GEMINI_API_KEY`; tuỳ chọn
+   `P3_PAIRS_DAILY_LIMIT` (mặc định 20 lượt/người/24 giờ). Function không lưu đề, chỉ ghi một dòng mỗi lượt vào
+   `p3_pair_calls` để đếm giới hạn (cần chạy migration `20261116000000_p3_pair_calls.sql`). Chưa deploy thì nút vẫn
+   chạy: app tự đánh dấu từ khóa theo quy tắc, chỉ không có đáp án cho từng cặp.
 
 4. Thử: viết một bài → **Get AI feedback** → đồng ý → sau 10–30 giây có điểm theo tiêu chí, các câu sửa kèm giải
    thích tiếng Việt và bản viết lại.
