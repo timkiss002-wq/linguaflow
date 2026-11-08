@@ -1,31 +1,50 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { StudySwitch } from '@/features/study/StudySwitch';
 import { useStudyLanguage } from '@/features/study/context';
-import { sectionFor, sectionsFor } from './nav';
+import { cn } from '@/lib/utils';
+import { sectionFor, sectionsFor, tabFor } from './nav';
+import { TodayChip } from './TodayMini';
 
-/** Phones and tablets only: the pages of the current area as tabs under the header (desktop uses the drop-down in the menu). */
-export function SectionTabs() {
+/**
+ * The bar at the top of the content: the pages of the current area as tabs on the left, and on the right the
+ * language being studied and today's streak. An area with one page shows its name instead of tabs.
+ */
+export function TopBar() {
   const { pathname } = useLocation();
   const { lang } = useStudyLanguage();
   const found = sectionFor(pathname);
   const section = found && sectionsFor(lang).find((s) => s.id === found.id);
-  if (!section?.tabs || section.tabs.length < 2 || !section.tabs.some((t) => t.to === pathname)) return null;
+  const current = tabFor(section, pathname);
+  const tabs = section?.tabs ?? [];
   return (
-    <div className="border-t bg-background lg:hidden">
-      <nav aria-label={`Các trang trong ${section.label}`} className="mx-auto flex w-full max-w-7xl justify-start gap-1 overflow-x-auto px-4 sm:px-6">
-        {section.tabs.map((t) => (
-          <NavLink
-            key={t.to}
-            to={t.to}
-            end
-            className={({ isActive }) =>
-              cn('-mb-px shrink-0 border-b-2 px-4 py-2.5 text-sm font-medium transition-colors', isActive ? 'border-current text-primary' : 'border-transparent text-muted-foreground hover:text-foreground')
-            }
-          >
-            {t.label}
-          </NavLink>
-        ))}
-      </nav>
+    <div className="sticky top-0 z-30 border-b bg-card/95 backdrop-blur" data-testid="top-bar">
+      <div className="flex h-12 items-center gap-4 px-4 sm:px-6 lg:px-8">
+        {tabs.length > 1 ? (
+          <nav aria-label={`Các trang trong ${section!.label}`} className="-mb-px flex h-full min-w-0 flex-1 gap-1 overflow-x-auto">
+            {tabs.map((t) => (
+              <NavLink
+                key={t.to}
+                to={t.to}
+                aria-current={current?.to === t.to ? 'page' : undefined}
+                className={cn(
+                  'flex shrink-0 items-center border-b-2 px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring',
+                  current?.to === t.to ? 'border-primary text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground',
+                )}
+              >
+                {t.label}
+              </NavLink>
+            ))}
+          </nav>
+        ) : (
+          <p className="flex-1 text-sm font-semibold">{section?.label ?? ''}</p>
+        )}
+        <div className="flex shrink-0 items-center gap-3">
+          <StudySwitch compact />
+          <span className="hidden sm:block">
+            <TodayChip />
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

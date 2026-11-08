@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Logo } from '@/components/Logo';
@@ -8,19 +8,15 @@ import { cn } from '@/lib/utils';
 import { DailyGoalReminder } from '@/features/review/DailyGoalReminder';
 import { STUDY_LABEL, useStudyLanguage } from '@/features/study/context';
 import { StudyLanguageProvider } from '@/features/study/StudyLanguageProvider';
-import { StudySwitch } from '@/features/study/StudySwitch';
 import { BottomNav } from './BottomNav';
 import { isFocusRoute, sectionFor, tabFor } from './nav';
-import { SectionTabs } from './SectionTabs';
-import { TopNav } from './TopNav';
-import { TodayChip } from './TodayMini';
+import { Rail } from './Rail';
+import { TopBar } from './SectionTabs';
 import { UserMenu } from './UserMenu';
 
 /**
- * Top-menu layout (no sidebar), so pages get the full width.
- * Desktop: ONE row — logo · the five areas (pages in a drop-down) · language · today · account.
- * It slides away while scrolling down and comes back on scroll up, so content gets the screen.
- * Phones: logo row + the area's pages as tabs; areas in the bottom bar.
+ * Desktop: a rail of the four areas on the left (icon + label), and a bar on top of the content with the area's pages
+ * as tabs, the study language and today's streak. Phones: logo row, the same tab bar, areas in the bottom bar.
  */
 export function AppLayout() {
   return (
@@ -30,29 +26,11 @@ export function AppLayout() {
   );
 }
 
-/** Hide the header while the learner scrolls down; show it again as soon as they scroll up. */
-function useHideOnScroll() {
-  const [hidden, setHidden] = useState(false);
-  const last = useRef(0);
-  useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      if (Math.abs(y - last.current) < 6) return;
-      setHidden(y > 120 && y > last.current);
-      last.current = y;
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-  return hidden;
-}
-
 function Shell() {
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
   const area = sectionFor(pathname)?.id;
   const { lang, setLang } = useStudyLanguage();
-  const hidden = useHideOnScroll();
   // old links such as /writing?lang=zh open in that language
   const linked = new URLSearchParams(search).get('lang');
   useEffect(() => {
@@ -98,37 +76,26 @@ function Shell() {
   }
 
   return (
-    <div className="min-h-screen bg-muted/30">
-      <header className={cn('sticky top-0 z-40 border-b bg-background/95 backdrop-blur transition-transform duration-200', hidden && '-translate-y-full')} data-testid="app-header">
-        <div className="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 px-4 sm:px-6">
-          <Logo to="/dashboard" className="shrink-0 [&>span]:hidden sm:[&>span]:inline lg:[&>span]:hidden xl:[&>span]:inline" />
-          <div className="hidden min-w-0 flex-1 lg:block">
-            <TopNav />
-          </div>
-          <div className="ml-auto flex shrink-0 items-center gap-2">
-            <StudySwitch compact />
-            {/* the home page shows streak and minutes in its own hero — don't show them twice */}
-            {pathname !== '/dashboard' && (
-              <span className="hidden sm:block lg:hidden xl:block">
-                <TodayChip />
-              </span>
-            )}
-            <div className="w-10">
-              <UserMenu compact />
-            </div>
-          </div>
+    <div className="min-h-screen bg-background">
+      <Rail />
+      {/* phones and tablets: logo and account on top, the areas in the bottom bar */}
+      <header className="flex h-14 items-center gap-3 border-b bg-card px-4 sm:px-6 lg:hidden" data-testid="app-header">
+        <Logo to="/dashboard" />
+        <div className="ml-auto w-10">
+          <UserMenu compact />
         </div>
-        <SectionTabs />
       </header>
-      {/* Daily vocabulary goal: only on the home page (the Review page has its own card), not on every page. */}
-      {pathname === '/dashboard' && <DailyGoalReminder />}
+      <div className="lg:pl-20">
+        <TopBar />
+        {/* Daily vocabulary goal: only on the home page (the Review page has its own card), not on every page. */}
+        {pathname === '/dashboard' && <DailyGoalReminder />}
+        <main className="min-w-0 pb-24 lg:pb-0" data-section={area}>
+          <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <Outlet />
+          </div>
+        </main>
+      </div>
       <BottomNav />
-
-      <main className="min-w-0 pb-24 lg:pb-0" data-section={area}>
-        <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:py-8">
-          <Outlet />
-        </div>
-      </main>
     </div>
   );
 }

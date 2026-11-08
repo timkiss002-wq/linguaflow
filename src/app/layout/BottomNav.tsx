@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { useStudyLanguage } from '@/features/study/context';
 import { sectionFor, sectionsFor } from './nav';
 
-/** Phone navigation: the five areas as a tab bar at the bottom, within thumb reach. */
+/** Phone navigation: the four areas as a tab bar at the bottom, within thumb reach. */
 export function BottomNav() {
   const { pathname } = useLocation();
   const active = sectionFor(pathname)?.id;
@@ -11,7 +11,7 @@ export function BottomNav() {
   const sections = sectionsFor(lang);
   return (
     <nav aria-label="Menu chính" className="fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden">
-      <ul className="grid grid-cols-5">
+      <ul className="grid grid-cols-4">
         {sections.map((s) => {
           const on = active === s.id;
           return (
