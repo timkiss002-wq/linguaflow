@@ -279,6 +279,12 @@ export function getImports(): P3Set[] {
   return imports;
 }
 
+/** The sets matching the filters (no type picked = every type). */
+export function filterSets(types: P3Type[], status: 'all' | 'todo' | 'done') {
+  const p = getProgress();
+  return OWN_SETS.filter((s) => (!types.length || types.includes(s.type)) && (status === 'all' || (status === 'done') === !!p.done[s.id]));
+}
+
 export const allSets = () => [...OWN_SETS, ...getImports()];
 export const setById = (id: string) => allSets().find((s) => s.id === id);
 export const importFor = (camId: string) => getImports().find((s) => s.camId === camId);
