@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowLeft, CheckCircle2, Loader2, Sparkles, Trash2 } from 'lucide-react';
+import { AlertTriangle, ArrowLeft, Bot, CheckCircle2, Copy, Loader2, Sparkles, Trash2 } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -8,14 +8,15 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { CAM_INDEX, TYPE_INFO, deleteImport, getImports, importFor, parseImport, saveImport, toImportInput, type ImportInput, type P3Type } from '@/lib/ielts/passage3';
 import { PAIR_ERRORS, PairError, useAutoPairs } from '@/features/passage3/autoPairs';
+import { aiPrompt } from '@/lib/ielts/aiPrompt';
 import { applyPairs, guessAll } from '@/lib/ielts/autopair';
 import { cn } from '@/lib/utils';
 
 const EXAMPLE: Record<P3Type, string> = {
-  tfng: 'The reviewer [accepts] that [earlier ethical thinking] about happiness is now [out of date]. || FALSE',
+  tfng: '[Talking = conversation] while [driving = -] [does less harm = tolerates conversation better] on a [quiet motorway = empty motorway] than in [heavy traffic = crowded junction]. || TRUE',
   ynng: 'The writer [believes] that boredom is [necessary for] creativity. || NOT GIVEN',
   mcq: 'What does the writer [suggest] about [early journals]? || They printed little research. || Editors chose what to publish. || Experts reviewed every paper. || They were rarely read. || B',
-  gap: 'Engineers should [draw out] the ____ behind a design and [adapt] it. || H',
+  gap: 'Engineers should [draw out = extract] the [____ = underlying principle] behind a design and [adapt = modify] it. || H',
 };
 
 /** /ielts/passage3/edit/:key — paste a Passage 3 from the learner's own Cambridge book (key = cam10-t1…, "new", or a saved set id). */
@@ -34,6 +35,15 @@ export default function Passage3ImportPage() {
   const set = <K extends keyof ImportInput>(k: K, v: ImportInput[K]) => setForm((f) => ({ ...f, [k]: v }));
   const nQuestions = form.questions.split('\n').filter((l) => l.trim()).length;
   const auto = useAutoPairs();
+  const prompt = aiPrompt(form);
+  const copyPrompt = async () => {
+    try {
+      await navigator.clipboard.writeText(prompt);
+      toast.success(form.passage.trim() && form.questions.trim() ? 'Đã sao chép lời nhắc kèm đoạn văn và câu hỏi.' : 'Đã sao chép — nhớ thay phần <DÁN …> bằng đoạn văn và câu hỏi.');
+    } catch {
+      toast.error('Trình duyệt không cho sao chép — mở “Xem lời nhắc” và chép tay.');
+    }
+  };
   const keyed = parsed.set && !parsed.set.keyless;
 
   /** Marks the keywords of every question and, with AI, finds their partners in the passage. */
@@ -171,7 +181,11 @@ export default function Passage3ImportPage() {
                 Không cần tự đánh dấu: bấm <b>Tự ghép cặp</b>. Muốn tự chọn thì đặt từ khóa trong <code className="rounded bg-muted px-1">[ngoặc vuông]</code> — đó chính là các từ thầy bảo tô màu.
               </li>
               <li>
-                Chỗ trống viết <code className="rounded bg-muted px-1">____</code>.
+                Muốn app chấm cả từng cặp: ghi luôn cụm trong bài sau dấu <code className="rounded bg-muted px-1">=</code>, ví dụ <code className="rounded bg-muted px-1">[quiet motorway = empty motorway]</code>. Không có cặp (NOT GIVEN):{' '}
+                <code className="rounded bg-muted px-1">[driving = -]</code>. Thêm nghĩa: <code className="rounded bg-muted px-1">[talking = conversation = cuộc trò chuyện]</code>.
+              </li>
+              <li>
+                Chỗ trống viết <code className="rounded bg-muted px-1">____</code> (kèm đáp án trong bài: <code className="rounded bg-muted px-1">[____ = permanent form]</code>).
               </li>
               <li>
                 Đáp án ở cuối, sau <code className="rounded bg-muted px-1">||</code>: TRUE/FALSE/NOT GIVEN, YES/NO/NOT GIVEN, chữ cái (MCQ, word box) hoặc từ cần điền (nhiều đáp án: <code className="rounded bg-muted px-1">a / b</code>).
@@ -179,9 +193,24 @@ export default function Passage3ImportPage() {
               <li>MCQ: các phương án cũng cách nhau bằng ||.</li>
             </ul>
           </div>
-          <div className="rounded-xl border bg-muted/40 p-4">
-            <p className="mb-1 font-semibold">Ví dụ ({TYPE_INFO[form.type].short})</p>
-            <p className="break-words font-mono text-xs leading-relaxed" lang="en">
+          <div className="rounded-xl border bg-muted/40 p-4" data-ai-prompt>
+            <p className="mb-1 flex items-center gap-1.5 font-semibold">
+              <Bot className="size-4" aria-hidden /> Nhờ AI khác soạn đề
+            </p>
+            <ol className="mb-3 list-decimal space-y-1 pl-4 text-muted-foreground">
+              <li>Dán đoạn văn và câu hỏi (có đáp án thì càng tốt) vào hai ô bên trái.</li>
+              <li>Bấm <b>Sao chép lời nhắc</b>, dán vào ChatGPT, Claude hoặc Gemini.</li>
+              <li>Chép các dòng AI trả về, dán đè vào ô Câu hỏi rồi bấm Lưu.</li>
+            </ol>
+            <Button size="sm" className="w-full" onClick={copyPrompt}>
+              <Copy /> Sao chép lời nhắc
+            </Button>
+            <details className="mt-3">
+              <summary className="cursor-pointer text-xs text-muted-foreground">Xem lời nhắc</summary>
+              <pre className="mt-2 max-h-64 overflow-auto whitespace-pre-wrap rounded-lg bg-background p-2 font-mono text-[11px] leading-relaxed">{prompt}</pre>
+            </details>
+            <p className="mt-3 text-xs text-muted-foreground">Ví dụ một dòng đúng định dạng ({TYPE_INFO[form.type].short}):</p>
+            <p className="mt-1 break-words font-mono text-xs leading-relaxed" lang="en">
               {EXAMPLE[form.type]}
             </p>
           </div>

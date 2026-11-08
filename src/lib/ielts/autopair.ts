@@ -1,5 +1,5 @@
 import type { AutoPair } from '../../../supabase/functions/_shared/p3-pairs.ts';
-import { lineKey, normalize, type AutoKey } from './passage3';
+import { inPassage, lineKey, normalize, type AutoKey } from './passage3';
 
 export { lineKey, type AutoKey };
 
@@ -10,12 +10,7 @@ export { lineKey, type AutoKey };
  */
 
 /** `p` as it is written in the passage (same words, original spacing and case), or null. */
-export function locate(passage: string, p: string): string | null {
-  const words = p.trim().split(/\s+/).map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-  if (!words.length || !words[0]) return null;
-  const m = new RegExp(words.join('\\s+'), 'i').exec(passage);
-  return m ? m[0] : null;
-}
+export const locate = (passage: string, p: string) => inPassage(passage, p);
 
 const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
