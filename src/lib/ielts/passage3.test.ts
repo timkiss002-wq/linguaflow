@@ -2,6 +2,8 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import {
   CAM_INDEX,
   OWN_SETS,
+  notesToVocab,
+  sentenceWith,
   __resetForTests,
   findRange,
   grade,
@@ -130,5 +132,23 @@ describe('importing from the learner’s book', () => {
     const again = toImportInput(set!);
     expect(again.questions).toBe('The writer [agrees] with it || YES\nIt is [new] || NOT GIVEN');
     expect(nextSet('cam')!.id).toBe('my-cam19-t4');
+  });
+});
+
+describe('notebook → vocabulary', () => {
+  it('finds the passage sentence holding a phrase', () => {
+    const text = 'Mills were rare. Most of them belonged to monasteries, which had capital! Later, towns built more.';
+    expect(sentenceWith(text, 'Monasteries')).toBe('Most of them belonged to monasteries, which had capital!');
+    expect(sentenceWith(text, 'castles')).toBe('');
+  });
+
+  it('turns pairs into notebook rows, one per passage phrase', () => {
+    const rows = notesToVocab([
+      { question: 'religious communities', passage: 'monasteries', vi: 'tu viện', setId: 's', missed: true, sentence: 'Most belonged to monasteries.' },
+      { question: 'abbeys', passage: 'Monasteries ', vi: '', setId: 's', missed: false, sentence: '' },
+    ]);
+    expect(rows).toHaveLength(1);
+    expect(rows[0]).toMatchObject({ term: 'monasteries', meaning_vi: 'tu viện', topic: 'IELTS paraphrase', context_sentence: 'Most belonged to monasteries.' });
+    expect(rows[0]!.examples[0]).toContain('religious communities');
   });
 });

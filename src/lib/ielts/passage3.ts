@@ -360,6 +360,32 @@ export interface NoteRow {
   vi: string;
   setId: string;
   missed: boolean;
+  /** the passage sentence the pair was found in (for review cards) */
+  sentence: string;
+}
+
+/** The sentence of `text` containing `phrase` (case-insensitive), or '' if none. */
+export function sentenceWith(text: string, phrase: string): string {
+  const needle = phrase.trim().toLowerCase();
+  if (!needle) return '';
+  const sentences = text.replace(/\s+/g, ' ').match(/[^.!?]+[.!?]+["')\]]?|[^.!?]+$/g) ?? [];
+  return sentences.find((x) => x.toLowerCase().includes(needle))?.trim() ?? '';
+}
+
+/** Pairs as rows for the vocabulary notebook: the passage phrase is the word to learn, the question wording its paraphrase. */
+export function notesToVocab(rows: NoteRow[]) {
+  const seen = new Set<string>();
+  return rows
+    .filter((r) => r.passage.trim() && !seen.has(r.passage.trim().toLowerCase()) && seen.add(r.passage.trim().toLowerCase()))
+    .map((r) => ({
+      term: r.passage.trim(),
+      meaning_vi: r.vi || null,
+      topic: 'IELTS paraphrase',
+      part_of_speech: null,
+      reading: null,
+      context_sentence: r.sentence || null,
+      examples: r.question ? [`Paraphrase in the question: ${r.question}`] : [],
+    }));
 }
 
 /** Paraphrase notebook: every pair of a finished set (the learner's own pairs for pasted sets), missed ones first. */
@@ -376,13 +402,13 @@ export function notebook(): NoteRow[] {
         const q = part.id === 'g' ? (set.box && typeof item.ans === 'number' ? (set.box[item.ans] ?? '') : String(item.ans)) : part.v;
         if (set.keyless) {
           const picked = (st?.sel[part.id] ?? []).map((k) => toks[k]?.w).join(' ');
-          if (picked) rows.push({ question: q, passage: picked, vi: '', setId: set.id, missed: false });
+          if (picked) rows.push({ question: q, passage: picked, vi: '', setId: set.id, missed: false, sentence: sentenceWith(set.passage, picked) });
           continue;
         }
         const pr = item.pairs[part.id];
         if (!pr?.p) continue;
         const missed = !!st?.res && st.res.pairs.find((x) => x.id === part.id)?.ok === false;
-        rows.push({ question: q, passage: pr.p, vi: pr.vi ?? '', setId: set.id, missed });
+        rows.push({ question: q, passage: pr.p, vi: pr.vi ?? '', setId: set.id, missed, sentence: sentenceWith(set.passage, pr.p) });
       }
     });
   }

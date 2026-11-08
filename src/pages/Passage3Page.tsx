@@ -1,10 +1,11 @@
 import { BookMarked, CheckCircle2, Copy, Download, Flame, HelpCircle, NotebookPen, Plus, Upload } from 'lucide-react';
 import { useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Applied, SetCard } from '@/features/passage3/SetCard';
+import { useImportWords, useVocabulary } from '@/features/vocabulary/api';
 import { SkillPanel } from '@/features/passage3/SkillPanel';
 import { SKILLS, skillById, skillProgress } from '@/lib/ielts/skills';
 import { useP3Store } from '@/features/passage3/useP3Store';
@@ -20,9 +21,11 @@ import {
   importBackup,
   importFor,
   notebook,
+  notesToVocab,
   setSummary,
   streak,
   today,
+  type NoteRow,
   type P3Set,
   type P3Type,
 } from '@/lib/ielts/passage3';
@@ -346,6 +349,10 @@ function Cambridge() {
 
 function Notes() {
   const rows = notebook();
+  const vocab = useVocabulary();
+  const imp = useImportWords();
+  const [onlyMissed, setOnlyMissed] = useState(false);
+  const navigate = useNavigate();
   if (!rows.length)
     return (
       <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed bg-card px-6 py-10 text-center text-sm text-muted-foreground">
@@ -353,8 +360,25 @@ function Notes() {
         Làm xong một bài, các cặp từ đồng nghĩa (từ trong câu hỏi ⇄ từ trong bài) sẽ được gom vào đây. Cặp bạn ghép sai nằm trên cùng.
       </div>
     );
+  const have = new Set((vocab.data ?? []).filter((w) => w.language === 'en').map((w) => w.term.trim().toLowerCase()));
+  const inDeck = (r: NoteRow) => have.has(r.passage.trim().toLowerCase());
+  const missed = rows.filter((r) => r.missed);
+  const missedNew = missed.filter((r) => !inDeck(r));
+  const shown = onlyMissed ? missed : rows;
+
+  const add = async (list: NoteRow[]) => {
+    if (!list.length) return;
+    try {
+      const { inserted, duplicates } = await imp.mutateAsync({ rows: notesToVocab(list), language: 'en' });
+      toast.success(`Đã thêm ${inserted} từ vào Sổ từ${duplicates ? ` (${duplicates} từ đã có sẵn)` : ''}. Chúng sẽ xuất hiện trong Ôn tập.`, {
+        action: { label: 'Mở Sổ từ', onClick: () => navigate('/vocabulary') },
+      });
+    } catch {
+      toast.error('Chưa thêm được — kiểm tra kết nối rồi thử lại.');
+    }
+  };
   const copy = async () => {
-    const text = rows.map((r) => [r.question, r.passage, r.vi].join('\t')).join('\n');
+    const text = shown.map((r) => [r.question, r.passage, r.vi].join('\t')).join('\n');
     try {
       await navigator.clipboard.writeText(text);
       toast.success('Đã sao chép — dán vào Excel hoặc Anki.');
@@ -364,14 +388,23 @@ function Notes() {
   };
   return (
     <div className="space-y-3">
-      <div className="flex items-center justify-between gap-2">
-        <p className="text-sm text-muted-foreground">
-          {rows.length} cặp · <span className="text-rose-600 dark:text-rose-400">{rows.filter((r) => r.missed).length} cặp bạn ghép sai</span>
+      <div className="flex flex-wrap items-center gap-2 rounded-xl border bg-card p-3">
+        <p className="mr-auto text-sm text-muted-foreground">
+          {rows.length} cặp ·{' '}
+          <button type="button" onClick={() => setOnlyMissed((v) => !v)} className={cn('rounded font-medium text-rose-600 underline-offset-2 hover:underline dark:text-rose-400', onlyMissed && 'underline')} aria-pressed={onlyMissed}>
+            {missed.length} cặp bạn ghép sai{onlyMissed ? ' (đang lọc)' : ''}
+          </button>
         </p>
+        <Button size="sm" onClick={() => add(missed)} disabled={!missedNew.length || imp.isPending} data-add-missed>
+          <Plus /> {missedNew.length ? `Thêm ${missedNew.length} từ ghép sai vào Sổ từ` : 'Các từ ghép sai đã có trong Sổ từ'}
+        </Button>
         <Button size="sm" variant="outline" onClick={copy}>
           <Copy /> Sao chép
         </Button>
       </div>
+      <p className="text-xs text-muted-foreground">
+        Từ được thêm là cụm trong passage (kèm nghĩa, câu gốc trong bài và cách đề viết lại) với chủ đề <i>IELTS paraphrase</i>, rồi vào lịch Ôn tập như các từ khác. Sổ này lưu trên máy bạn đang dùng.
+      </p>
       <div className="overflow-x-auto rounded-xl border bg-card">
         <table className="w-full text-sm">
           <thead className="bg-muted/60 text-left text-xs uppercase tracking-wide text-muted-foreground">
@@ -379,10 +412,11 @@ function Notes() {
               <th className="px-3 py-2">Trong câu hỏi</th>
               <th className="px-3 py-2">Trong passage</th>
               <th className="px-3 py-2">Nghĩa</th>
+              <th className="w-32 px-3 py-2 text-right">Sổ từ</th>
             </tr>
           </thead>
           <tbody className="divide-y">
-            {rows.map((r, k) => (
+            {shown.map((r, k) => (
               <tr key={k} className={cn(r.missed && 'bg-rose-50/60 dark:bg-rose-500/5')}>
                 <td className={cn('px-3 py-2', r.missed && 'border-l-4 border-rose-400')} lang="en">
                   {r.question}
@@ -391,6 +425,17 @@ function Notes() {
                   {r.passage}
                 </td>
                 <td className="px-3 py-2 text-muted-foreground">{r.vi}</td>
+                <td className="px-3 py-2 text-right">
+                  {inDeck(r) ? (
+                    <span className="inline-flex items-center gap-1 text-xs text-success">
+                      <CheckCircle2 className="size-3.5" aria-hidden /> Đã có
+                    </span>
+                  ) : (
+                    <Button size="sm" variant="ghost" className="h-7 px-2" onClick={() => add([r])} disabled={imp.isPending} aria-label={`Thêm "${r.passage}" vào Sổ từ`}>
+                      <Plus /> Thêm
+                    </Button>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
