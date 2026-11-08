@@ -15,6 +15,7 @@ import type { Highlight } from '@/features/ielts/highlights';
 import { Passage, type TextSize } from '@/features/ielts/Passage';
 import { Highlighted, QuestionGroups } from '@/features/ielts/QuestionGroups';
 import { useScriptPlayer } from '@/features/ielts/useScriptPlayer';
+import { markDailyDone } from '@/lib/daily';
 import { toUserMessage } from '@/lib/errors';
 import {
   TYPE_LABEL,
@@ -92,27 +93,29 @@ function Setup({ test }: { test: PracticeTest }) {
   return (
     <>
       <PageHeader title={test.title} description={<BackLink skill={test.skill} />} />
-      <div className="grid gap-4 md:grid-cols-2">
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="flex items-center gap-2 text-base">
-              <Icon className="size-5 text-teal-600" aria-hidden /> Cả bài — 40 câu
-            </CardTitle>
-            <CardDescription>Làm như thi thật để biết band ước lượng.</CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-2">
-            <Button className="h-auto flex-col items-start whitespace-normal py-2.5 text-left" onClick={() => setParams({ parts: all, mode: 'exam' })} data-start="exam">
-              <span className="font-semibold">Thi thử ({test.minutes} phút)</span>
-              <span className="text-xs font-normal opacity-90">
-                {test.skill === 'listening' ? 'Mỗi phần chỉ nghe một lần, hết giờ tự nộp bài.' : 'Đếm ngược, hết giờ tự nộp bài.'}
-              </span>
-            </Button>
-            <Button variant="outline" className="h-auto flex-col items-start whitespace-normal py-2.5 text-left" onClick={() => setParams({ parts: all, mode: 'practice' })} data-start="practice">
-              <span className="font-semibold">Luyện tập (không giới hạn giờ)</span>
-              <span className="text-xs font-normal text-muted-foreground">{test.skill === 'listening' ? 'Nghe lại, tạm dừng, chỉnh tốc độ thoải mái.' : 'Làm thong thả, vẫn chấm và giải thích đầy đủ.'}</span>
-            </Button>
-          </CardContent>
-        </Card>
+      <div className={cn('grid gap-4', !test.pack && 'md:grid-cols-2')}>
+        {!test.pack && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="flex items-center gap-2 text-base">
+                <Icon className="size-5 text-teal-600" aria-hidden /> Cả bài — 40 câu
+              </CardTitle>
+              <CardDescription>Làm như thi thật để biết band ước lượng.</CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-2">
+              <Button className="h-auto flex-col items-start whitespace-normal py-2.5 text-left" onClick={() => setParams({ parts: all, mode: 'exam' })} data-start="exam">
+                <span className="font-semibold">Thi thử ({test.minutes} phút)</span>
+                <span className="text-xs font-normal opacity-90">
+                  {test.skill === 'listening' ? 'Mỗi phần chỉ nghe một lần, hết giờ tự nộp bài.' : 'Đếm ngược, hết giờ tự nộp bài.'}
+                </span>
+              </Button>
+              <Button variant="outline" className="h-auto flex-col items-start whitespace-normal py-2.5 text-left" onClick={() => setParams({ parts: all, mode: 'practice' })} data-start="practice">
+                <span className="font-semibold">Luyện tập (không giới hạn giờ)</span>
+                <span className="text-xs font-normal text-muted-foreground">{test.skill === 'listening' ? 'Nghe lại, tạm dừng, chỉnh tốc độ thoải mái.' : 'Làm thong thả, vẫn chấm và giải thích đầy đủ.'}</span>
+              </Button>
+            </CardContent>
+          </Card>
+        )}
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base">Từng phần</CardTitle>
@@ -211,6 +214,8 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
     write(key, { answers, seconds: seconds.current, results: r, highlights });
     window.scrollTo({ top: 0 });
     const correct = r.filter((x) => x.mark === 'correct').length;
+    // a listening Part 1 on its own counts as today's listening task
+    if (test.skill === 'listening' && partIds.length === 1 && (test.pack || test.parts[0]?.id === partIds[0])) markDailyDone('listening');
     try {
       await save.mutateAsync({ testId: test.id, skill: test.skill, parts: partIds, mode, results: r, answers, band: bandFor(test.skill, correct, r.length), seconds: seconds.current });
     } catch (e) {
@@ -328,8 +333,7 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
         </>
       ) : (
         <div className="space-y-4">
-          <AudioPanel key={part.id} part={part} mode={mode} finished={Boolean(results)} />
-          {results && <Transcript part={part} active={active} />}
+          <ListeningAudio key={part.id} part={part} mode={mode} finished={Boolean(results)} active={active} />
           <Card>
             <CardContent className="pt-5">
               <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={results ? { marks, active, onShowEvidence: showEvidence } : undefined} />
@@ -383,10 +387,58 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
   );
 }
 
-function AudioPanel({ part, mode, finished }: { part: TestPart; mode: Mode; finished: boolean }) {
+const STRESS_KEY = 'lf.listening.stress';
+
+/** The audio player and, after marking, the transcript — sharing one player so any line can be replayed. */
+function ListeningAudio({ part, mode, finished, active }: { part: TestPart; mode: Mode; finished: boolean; active: number | null }) {
   const [rate, setRate] = useState(1);
-  const p = useScriptPlayer(part, rate);
+  const [stress, setStressState] = useState(() => {
+    try {
+      return localStorage.getItem(STRESS_KEY) !== 'off';
+    } catch {
+      return true;
+    }
+  });
+  const setStress = (v: boolean) => {
+    setStressState(v);
+    try {
+      localStorage.setItem(STRESS_KEY, v ? 'on' : 'off');
+    } catch {
+      /* private mode */
+    }
+  };
+  const p = useScriptPlayer(part, rate, 1, stress);
+  return (
+    <>
+      <AudioPanel part={part} mode={mode} finished={finished} p={p} rate={rate} onRate={setRate} stress={stress} onStress={setStress} />
+      {finished && <Transcript part={part} active={active} p={p} />}
+    </>
+  );
+}
+
+type Player = ReturnType<typeof useScriptPlayer>;
+
+function AudioPanel({
+  part,
+  mode,
+  finished,
+  p,
+  rate,
+  onRate,
+  stress,
+  onStress,
+}: {
+  part: TestPart;
+  mode: Mode;
+  finished: boolean;
+  p: Player;
+  rate: number;
+  onRate: (r: number) => void;
+  stress: boolean;
+  onStress: (v: boolean) => void;
+}) {
   const examLocked = mode === 'exam' && !finished && p.plays >= 1 && p.state !== 'playing';
+  const free = mode === 'practice' || finished;
   return (
     <Card>
       <CardContent className="space-y-3 pt-5">
@@ -398,7 +450,7 @@ function AudioPanel({ part, mode, finished }: { part: TestPart; mode: Mode; fini
           </div>
           <div className="flex flex-wrap items-center gap-2">
             {p.state === 'playing' ? (
-              mode === 'practice' || finished ? (
+              free ? (
                 <Button variant="outline" onClick={p.pause}>
                   <Pause className="size-4" /> Tạm dừng
                 </Button>
@@ -410,13 +462,13 @@ function AudioPanel({ part, mode, finished }: { part: TestPart; mode: Mode; fini
                 <Play className="size-4" /> {p.state === 'paused' ? 'Nghe tiếp' : p.state === 'done' || p.plays > 0 ? 'Nghe lại' : 'Bắt đầu nghe'}
               </Button>
             )}
-            {(mode === 'practice' || finished) && p.state !== 'idle' && (
+            {free && p.state !== 'idle' && (
               <Button variant="ghost" size="sm" onClick={p.restart}>
                 <RotateCcw className="size-4" /> Từ đầu
               </Button>
             )}
-            {(mode === 'practice' || finished) && (
-              <select aria-label="Speed" value={rate} onChange={(e) => setRate(Number(e.target.value))} className="h-8 rounded-md border bg-card px-2 text-xs">
+            {free && (
+              <select aria-label="Speed" value={rate} onChange={(e) => onRate(Number(e.target.value))} className="h-8 rounded-md border bg-card px-2 text-xs">
                 {[0.8, 0.9, 1, 1.1].map((r) => (
                   <option key={r} value={r}>
                     {r}×
@@ -427,25 +479,69 @@ function AudioPanel({ part, mode, finished }: { part: TestPart; mode: Mode; fini
           </div>
         </div>
         <Progress value={p.total ? (p.line / p.total) * 100 : 0} label="Audio progress" />
-        <p className="text-xs text-muted-foreground">
-          {examLocked ? 'Thi thử: mỗi phần chỉ được nghe một lần.' : mode === 'exam' && !finished ? 'Đọc trước câu hỏi, rồi bấm nghe — chỉ được nghe một lần.' : 'Giọng đọc của trình duyệt. Transcript hiện sau khi nộp bài.'}
-          {p.error && <span className="ml-1 text-destructive">{p.error}</span>}
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-xs text-muted-foreground">
+            {examLocked
+              ? 'Thi thử: mỗi phần chỉ được nghe một lần.'
+              : mode === 'exam' && !finished
+                ? 'Đọc trước câu hỏi, rồi bấm nghe — chỉ được nghe một lần.'
+                : 'Giọng đọc của trình duyệt. Sau khi nộp bài: transcript, nghe lại từng câu.'}
+            {p.error && <span className="ml-1 text-destructive">{p.error}</span>}
+          </p>
+          <label
+            className="flex cursor-pointer items-center gap-2 text-xs"
+            title="Đọc chậm lại và ngắt nhẹ trước từ khóa, tên được đánh vần và con số — như cách bài thi thật nhấn rõ thông tin quan trọng"
+          >
+            <input type="checkbox" className="size-4 accent-teal-600" checked={stress} onChange={(e) => onStress(e.target.checked)} data-testid="stress" />
+            Nhấn rõ từ khóa
+          </label>
+        </div>
       </CardContent>
     </Card>
   );
 }
 
-function Transcript({ part, active }: { part: TestPart; active: number | null }) {
-  const marks = partQuestions(part).map(({ q }) => ({ n: q.n, quote: q.evidence }));
+function Transcript({ part, active, p }: { part: TestPart; active: number | null; p: Player }) {
+  const marks = partQuestions(part).map(({ q }) => ({
+    n: q.n,
+    quote: q.evidence,
+  }));
+  const evidence = partQuestions(part).find(({ q }) => q.n === active)?.q.evidence;
+  const evLine = evidence ? part.script!.findIndex(([, t]) => t?.includes(evidence)) : -1;
+  const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+  useEffect(() => {
+    if (evLine >= 0)
+      lineRefs.current[evLine]?.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth',
+      });
+  }, [evLine]);
+  const playingLine = p.state === 'playing' ? (p.single ?? p.line) : -1;
   return (
     <details className="rounded-lg border bg-card p-4" open>
-      <summary className="cursor-pointer font-medium">Transcript</summary>
-      <div className="mt-3 space-y-1.5 text-sm leading-relaxed" lang="en" data-testid="transcript">
+      <summary className="cursor-pointer font-medium">Transcript · bấm ▶ để nghe lại từng câu</summary>
+      <div className="mt-3 max-h-[60vh] space-y-1 overflow-y-auto pr-1 text-sm leading-relaxed" lang="en" data-testid="transcript">
         {part.script!.map(([who, text], i) => (
-          <p key={i}>
-            <span className="mr-1 font-semibold text-muted-foreground">{part.speakers?.[who!]?.name}:</span>
-            <Highlighted text={text!} marks={marks} active={active} />
+          <p
+            key={i}
+            ref={(el) => {
+              lineRefs.current[i] = el;
+            }}
+            className={cn('flex gap-2 rounded-md px-1.5 py-1 transition-colors', i === playingLine && 'bg-teal-50 dark:bg-teal-500/10', i === evLine && 'ring-1 ring-amber-400')}
+          >
+            <button
+              type="button"
+              onClick={() => p.playLine(i)}
+              className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full border text-muted-foreground hover:border-teal-600 hover:text-teal-700"
+              aria-label={`Nghe lại câu ${i + 1}`}
+              data-line={i}
+            >
+              <Play className="size-3" aria-hidden />
+            </button>
+            <span>
+              <span className="mr-1 font-semibold text-muted-foreground">{part.speakers?.[who!]?.name}:</span>
+              <Highlighted text={text!} marks={marks} active={active} />
+            </span>
           </p>
         ))}
       </div>

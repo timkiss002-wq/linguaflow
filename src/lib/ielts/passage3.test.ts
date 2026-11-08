@@ -25,7 +25,8 @@ beforeEach(() => {
 
 describe('content', () => {
   it('every keyword of every ready-made set has a pair, and every pair is found in its passage', () => {
-    expect(OWN_SETS.length).toBeGreaterThanOrEqual(16);
+    expect(OWN_SETS.length).toBeGreaterThanOrEqual(66);
+    expect(OWN_SETS.every((s) => s.art), 'every set has an illustration').toBe(true);
     for (const set of OWN_SETS) {
       expect(set.items.length, set.id).toBeGreaterThanOrEqual(4);
       set.items.forEach((item, i) => {

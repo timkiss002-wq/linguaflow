@@ -5,6 +5,7 @@
 import { spellingSimilarity } from '@/lib/compare/align';
 import listening1 from '../../../content/ielts-tests/listening-1.json';
 import listening2 from '../../../content/ielts-tests/listening-2.json';
+import listeningPart1 from '../../../content/ielts-tests/listening-part1.json';
 import reading1 from '../../../content/ielts-tests/reading-1.json';
 import reading2 from '../../../content/ielts-tests/reading-2.json';
 
@@ -50,10 +51,15 @@ export interface PracticeTest {
   skill: Skill;
   title: string;
   minutes: number;
+  /** separate short exercises (e.g. a bank of Part 1s), not one 40-question test */
+  pack?: boolean;
   parts: TestPart[];
 }
 
-export const TESTS: PracticeTest[] = [reading1, listening1, reading2, listening2] as unknown as PracticeTest[];
+export const TESTS: PracticeTest[] = [reading1, listening1, reading2, listening2, listeningPart1] as unknown as PracticeTest[];
+
+/** Every listening Part 1 (from the full tests and the Part 1 bank), for the daily task. */
+export const LISTENING_PART1 = TESTS.filter((t) => t.skill === 'listening').flatMap((t) => (t.pack ? t.parts : t.parts.slice(0, 1)).map((part) => ({ test: t, part })));
 export const testById = (id: string) => TESTS.find((t) => t.id === id);
 
 export const TYPE_LABEL: Record<QuestionType, { en: string; vi: string }> = {

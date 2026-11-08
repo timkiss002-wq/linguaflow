@@ -47,7 +47,7 @@ export const SECTIONS: Section[] = [
     match: ['/ielts', '/writing', '/grammar'],
     tabs: [
       { to: '/ielts/reading', label: 'Reading', only: 'en' },
-      { to: '/ielts/passage3', label: 'Passage 3 hằng ngày', only: 'en' },
+      { to: '/ielts/passage3', label: 'Bài tập hằng ngày', only: 'en' },
       { to: '/ielts/listening', label: 'Listening', only: 'en' },
       { to: '/writing/guided', label: 'Writing', only: 'en' },
       { to: '/writing', label: 'Viết tự do' },

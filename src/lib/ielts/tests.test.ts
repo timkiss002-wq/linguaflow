@@ -14,10 +14,15 @@ import {
 } from './tests';
 
 describe('test content', () => {
-  it.each(TESTS.map((t) => [t.id, t] as const))('%s is a complete 40-question test', (_id, t) => {
-    const ns = t.parts.flatMap((p) => partQuestions(p).map(({ q }) => q.n));
-    expect(ns).toEqual(Array.from({ length: 40 }, (_, i) => i + 1));
-    expect(t.parts).toHaveLength(t.skill === 'reading' ? 3 : 4);
+  it.each(TESTS.map((t) => [t.id, t] as const))('%s is a complete 40-question test (or a bank of Part 1s)', (_id, t) => {
+    if (t.pack) {
+      // each Part 1 in the bank is its own 10-question exercise
+      for (const p of t.parts) expect(partQuestions(p).map(({ q }) => q.n), p.id).toEqual(Array.from({ length: 10 }, (_, i) => i + 1));
+    } else {
+      const ns = t.parts.flatMap((p) => partQuestions(p).map(({ q }) => q.n));
+      expect(ns).toEqual(Array.from({ length: 40 }, (_, i) => i + 1));
+      expect(t.parts).toHaveLength(t.skill === 'reading' ? 3 : 4);
+    }
     for (const p of t.parts) {
       if (t.skill === 'reading') expect(p.paragraphs?.length).toBeGreaterThan(3);
       else {

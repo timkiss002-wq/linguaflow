@@ -79,7 +79,7 @@ export default function IeltsTestsPage({ skill }: { skill: Skill }) {
   const keepStatus = (done: boolean) => status === 'all' || (status === 'done') === done;
 
   const partCards = tests.flatMap((t) => t.parts.map((p, i) => ({ t, p, i }))).filter(({ p }) => keepType(typesOf(p)) && keepStatus(partStats.has(p.id)));
-  const fullCards = tests.filter((t) => keepType(t.parts.flatMap(typesOf)) && keepStatus(mine.some((a) => a.test_id === t.id && a.parts.length === t.parts.length)));
+  const fullCards = tests.filter((t) => !t.pack && keepType(t.parts.flatMap(typesOf)) && keepStatus(mine.some((a) => a.test_id === t.id && a.parts.length === t.parts.length)));
   const count = format === 'full' ? fullCards.length : partCards.length;
   const filtered = status !== 'all' || picked.length > 0;
   const S = SKILL[skill];
@@ -225,7 +225,7 @@ function PartCard({ test, part, index, unit, stat, loading }: { test: PracticeTe
           <HistoryIcon className="size-3" aria-hidden /> {loading ? '…' : stat ? `Bạn đã làm ${stat.tries} lần` : 'Bạn chưa làm'}
         </span>
         <span className={cn('absolute bottom-0 left-0 rounded-tr-lg px-2.5 py-1 text-xs font-semibold text-white', PART_COLOR[index % PART_COLOR.length])}>
-          {unit} {index + 1}
+          {test.pack ? `${part.title} · ${index + 1}` : `${unit} ${index + 1}`}
         </span>
         {pct !== null && (
           <span className={cn('absolute right-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold', pct >= 70 ? 'bg-emerald-700 text-white' : 'bg-white/90 text-slate-900')}>{pct}% đúng</span>

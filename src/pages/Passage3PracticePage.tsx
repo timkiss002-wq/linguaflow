@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { CoverArt } from '@/features/passage3/CoverArt';
 import { PassageText, type TokenLook } from '@/features/passage3/PassageText';
 import { useP3Store } from '@/features/passage3/useP3Store';
 import {
@@ -39,7 +40,7 @@ export default function Passage3PracticePage() {
         description="Bài tự nhập chỉ có trên thiết bị đã nhập nó."
         action={
           <Button asChild variant="outline">
-            <Link to="/ielts/passage3">Về Passage 3 hằng ngày</Link>
+            <Link to="/ielts/passage3">Về Bài tập hằng ngày</Link>
           </Button>
         }
       />
@@ -116,8 +117,9 @@ function Session({ set }: { set: P3Set }) {
       {/* top bar */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         <Link to="/ielts/passage3" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-3.5" aria-hidden /> Passage 3
+          <ArrowLeft className="size-3.5" aria-hidden /> Bài tập hằng ngày
         </Link>
+        <CoverArt id={set.id} art={set.art} className="hidden h-10 w-12 shrink-0 rounded-md sm:block" />
         <div className="order-last min-w-0 basis-full sm:order-none sm:basis-auto sm:flex-1">
           <p className="truncate text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
             {set.topic} · {TYPE_INFO[set.type].label}
