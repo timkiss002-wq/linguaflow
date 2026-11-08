@@ -437,6 +437,14 @@ export interface ImportInput {
 /** question text → keyword → partner in the passage (null = no partner); "____" is the gap */
 export type AutoKey = Record<string, Record<string, { p: string | null; vi?: string }>>;
 
+/** `p` as written in the passage (any spacing or case), or null. */
+export function inPassage(passage: string, p: string): string | null {
+  const words = p.trim().split(/\s+/).filter(Boolean).map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  if (!words.length) return null;
+  const m = new RegExp(words.join('\\s+'), 'i').exec(passage);
+  return m ? m[0] : null;
+}
+
 /** The key of a question line: its stem without markup, answer or options. */
 export const lineKey = (line: string) => normalize((line.split('||')[0] ?? '').replace(/[[\]{}]/g, '').replace(/_{3,}/g, ' gap '));
 
@@ -480,12 +488,35 @@ export function parseImport(input: ImportInput): { set: P3Set | null; errors: st
       unkeyed++;
       return { p: null };
     };
-    let text = (cells[0] ?? '').replace(/_{3,}/, () => {
-      pairs.g = partner('____');
-      return '[g:____]';
-    });
+    /** "[keyword = phrase in the passage = nghĩa]" written by the learner; "= -" means no partner (→ NOT GIVEN) */
+    const manual = (w: string): { q: string; pair: P3Pair } => {
+      const [q = '', p = '', vi = ''] = w.split('=').map((x) => x.trim());
+      if (!p || p === '-') return { q, pair: { p: null, vi: vi || undefined } };
+      const found = inPassage(input.passage, p);
+      if (!found) {
+        errors.push(`Câu ${n}: không thấy “${p}” trong đoạn văn — kiểm tra chính tả (vẫn lưu được, cặp này sẽ không được chấm).`);
+        unkeyed++;
+        return { q, pair: { p: null } };
+      }
+      return { q, pair: { p: found, vi: vi || undefined } };
+    };
+    let text = cells[0] ?? '';
+    const gapKey = /\[\s*_{3,}\s*=([^\]]+)\]/.exec(text);
+    if (gapKey) {
+      pairs.g = manual(`____=${gapKey[1]}`).pair;
+      text = text.replace(gapKey[0], '[g:____]');
+    } else
+      text = text.replace(/_{3,}/, () => {
+        pairs.g = partner('____');
+        return '[g:____]';
+      });
     text = text.replace(/\[([^\]:]+)\]/g, (_m, w: string) => {
       const id = `k${++k}`;
+      if (w.includes('=')) {
+        const { q, pair } = manual(w);
+        pairs[id] = pair;
+        return `[${id}:${q}]`;
+      }
       pairs[id] = partner(w.trim());
       return `[${id}:${w.trim()}]`;
     });
@@ -569,15 +600,16 @@ export function parseImport(input: ImportInput): { set: P3Set | null; errors: st
 
 /** The import form's text for a saved set, so it can be edited. */
 export function toImportInput(set: P3Set): ImportInput {
-  const key: AutoKey = {};
+  // a set with a key shows each partner in the brackets ("[keyword = phrase = nghĩa]") so it can be checked and edited
   const questions = set.items
     .map((it) => {
-      const stmt = it.stmt.replace(/\[g:____\]/g, '____').replace(/\[\w+:([^\]]+)\]/g, '[$1]').replace(/\{\w+:([^}]+)\}/g, '{$1}');
-      if (!set.keyless) {
-        const entry: AutoKey[string] = {};
-        for (const part of parseStmt(it.stmt)) if (part.t !== 'txt') entry[part.id === 'g' ? '____' : normalize(part.v)] = { p: it.pairs[part.id]?.p ?? null, vi: it.pairs[part.id]?.vi };
-        key[lineKey(stmt)] = entry;
-      }
+      const show = (id: string, q: string) => {
+        if (set.keyless) return id === 'g' ? '____' : `[${q}]`;
+        const pr = it.pairs[id];
+        const tail = `${pr?.p ?? '-'}${pr?.vi ? ` = ${pr.vi}` : ''}`;
+        return id === 'g' ? `[____ = ${tail}]` : `[${q} = ${tail}]`;
+      };
+      const stmt = it.stmt.replace(/\[(\w+):([^\]]+)\]/g, (_m, id: string, q: string) => show(id, q)).replace(/\{\w+:([^}]+)\}/g, '{$1}');
       let ans: string;
       if (set.type === 'tfng' || set.type === 'ynng') ans = JUDGE[set.type].find(([k]) => k === it.ans)?.[1] ?? String(it.ans);
       else if (set.type === 'mcq') return [stmt, ...(it.options ?? []), LETTERS[Number(it.ans)]].join(' || ');
@@ -585,7 +617,7 @@ export function toImportInput(set: P3Set): ImportInput {
       return `${stmt} || ${ans}`;
     })
     .join('\n');
-  return { camId: set.camId, title: set.title, type: set.type, passage: set.passage, questions, box: (set.box ?? []).join('\n'), key: set.keyless ? undefined : key };
+  return { camId: set.camId, title: set.title, type: set.type, passage: set.passage, questions, box: (set.box ?? []).join('\n') };
 }
 
 export function saveImport(set: P3Set) {

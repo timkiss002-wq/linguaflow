@@ -12,7 +12,7 @@ import { applyPairs, guessAll } from '@/lib/ielts/autopair';
 import { cn } from '@/lib/utils';
 
 const EXAMPLE: Record<P3Type, string> = {
-  tfng: 'The reviewer [accepts] that [earlier ethical thinking] about happiness is now [out of date]. || FALSE',
+  tfng: '[Talking = conversation] while [driving = -] [does less harm = tolerates conversation better] on a [quiet motorway = empty motorway] than in [heavy traffic = crowded junction]. || TRUE',
   ynng: 'The writer [believes] that boredom is [necessary for] creativity. || NOT GIVEN',
   mcq: 'What does the writer [suggest] about [early journals]? || They printed little research. || Editors chose what to publish. || Experts reviewed every paper. || They were rarely read. || B',
   gap: 'Engineers should [draw out] the ____ behind a design and [adapt] it. || H',
@@ -171,7 +171,11 @@ export default function Passage3ImportPage() {
                 Không cần tự đánh dấu: bấm <b>Tự ghép cặp</b>. Muốn tự chọn thì đặt từ khóa trong <code className="rounded bg-muted px-1">[ngoặc vuông]</code> — đó chính là các từ thầy bảo tô màu.
               </li>
               <li>
-                Chỗ trống viết <code className="rounded bg-muted px-1">____</code>.
+                Muốn app chấm cả từng cặp: ghi luôn cụm trong bài sau dấu <code className="rounded bg-muted px-1">=</code>, ví dụ <code className="rounded bg-muted px-1">[quiet motorway = empty motorway]</code>. Không có cặp (NOT GIVEN):{' '}
+                <code className="rounded bg-muted px-1">[driving = -]</code>. Thêm nghĩa: <code className="rounded bg-muted px-1">[talking = conversation = cuộc trò chuyện]</code>.
+              </li>
+              <li>
+                Chỗ trống viết <code className="rounded bg-muted px-1">____</code> (kèm đáp án trong bài: <code className="rounded bg-muted px-1">[____ = permanent form]</code>).
               </li>
               <li>
                 Đáp án ở cuối, sau <code className="rounded bg-muted px-1">||</code>: TRUE/FALSE/NOT GIVEN, YES/NO/NOT GIVEN, chữ cái (MCQ, word box) hoặc từ cần điền (nhiều đáp án: <code className="rounded bg-muted px-1">a / b</code>).
