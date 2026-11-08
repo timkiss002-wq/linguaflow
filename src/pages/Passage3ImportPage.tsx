@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowLeft, CheckCircle2, Trash2 } from 'lucide-react';
+import { AlertTriangle, ArrowLeft, CheckCircle2, Loader2, Sparkles, Trash2 } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -7,6 +7,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { CAM_INDEX, TYPE_INFO, deleteImport, getImports, importFor, parseImport, saveImport, toImportInput, type ImportInput, type P3Type } from '@/lib/ielts/passage3';
+import { PAIR_ERRORS, PairError, useAutoPairs } from '@/features/passage3/autoPairs';
+import { applyPairs, guessAll } from '@/lib/ielts/autopair';
 import { cn } from '@/lib/utils';
 
 const EXAMPLE: Record<P3Type, string> = {
@@ -31,6 +33,32 @@ export default function Passage3ImportPage() {
   const parsed = useMemo(() => parseImport(form), [form]);
   const set = <K extends keyof ImportInput>(k: K, v: ImportInput[K]) => setForm((f) => ({ ...f, [k]: v }));
   const nQuestions = form.questions.split('\n').filter((l) => l.trim()).length;
+  const auto = useAutoPairs();
+  const keyed = parsed.set && !parsed.set.keyless;
+
+  /** Marks the keywords of every question and, with AI, finds their partners in the passage. */
+  const autoPair = async () => {
+    const lines = form.questions.split('\n').filter((l) => l.trim());
+    if (!lines.length || form.passage.trim().length < 50) {
+      toast.error('Dán đoạn văn và câu hỏi trước đã.');
+      return;
+    }
+    // AI sees the question and, for MCQ, the options — never the answer
+    const questions = lines.map((l) => {
+      const cells = l.split('||').map((c) => c.trim());
+      return form.type === 'mcq' ? cells.slice(0, -1).join(' || ') : (cells[0] ?? '');
+    });
+    try {
+      const res = await auto.mutateAsync({ type: form.type, passage: form.passage, questions });
+      const { text, key } = applyPairs(form.questions, form.passage, res.pairs);
+      setForm((f) => ({ ...f, questions: text, key }));
+      toast.success(`Đã ghép cặp từ khóa cho ${Object.keys(key).length}/${lines.length} câu.${res.remaining !== undefined ? ` Còn ${res.remaining} lượt hôm nay.` : ''}`);
+    } catch (e) {
+      const code = e instanceof PairError ? e.code : 'ai_failed';
+      setForm((f) => ({ ...f, questions: guessAll(f.questions, f.passage) }));
+      toast.warning(`${PAIR_ERRORS[code] ?? PAIR_ERRORS.ai_failed} Đã tự đánh dấu từ khóa theo quy tắc (không có đáp án cho từng cặp).`);
+    }
+  };
 
   const save = () => {
     setTried(true);
@@ -49,7 +77,7 @@ export default function Passage3ImportPage() {
       <div>
         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{cam ? `Cambridge ${cam.book} · Test ${cam.test} · Passage 3` : from ? `Đề từ ${from}` : 'Đề khác'}</p>
         <h1 className="text-2xl font-bold tracking-tight">{existing ? 'Sửa đề' : from ? 'Dán đề bạn đang làm' : 'Nhập đề từ sách của bạn'}</h1>
-        <p className="mt-1 text-sm text-muted-foreground">Chỉ cần một đoạn của Passage 3 và 4–5 câu hỏi liên quan đến đoạn đó. Đề được lưu trên trình duyệt này, không gửi lên server.</p>
+        <p className="mt-1 text-sm text-muted-foreground">Chỉ cần một đoạn của Passage 3 và 4–5 câu hỏi liên quan đến đoạn đó. Đề được lưu trên trình duyệt này; khi bấm Tự ghép cặp, đoạn văn và câu hỏi (không kèm đáp án) được gửi cho AI để tìm cặp từ, không lưu lại trên server.</p>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
@@ -91,8 +119,18 @@ export default function Passage3ImportPage() {
           )}
 
           <div className="space-y-1.5">
-            <Label htmlFor="p3-q">Câu hỏi — mỗi dòng một câu, đáp án sau dấu ||</Label>
-            <Textarea id="p3-q" rows={7} value={form.questions} onChange={(e) => set('questions', e.target.value)} placeholder={EXAMPLE[form.type]} lang="en" />
+            <div className="flex flex-wrap items-end justify-between gap-2">
+              <Label htmlFor="p3-q">Câu hỏi — mỗi dòng một câu, đáp án sau dấu ||</Label>
+              <Button type="button" size="sm" variant="secondary" onClick={autoPair} disabled={auto.isPending} data-autopair>
+                {auto.isPending ? <Loader2 className="animate-spin" /> : <Sparkles />} {auto.isPending ? 'Đang ghép cặp…' : 'Tự ghép cặp'}
+              </Button>
+            </div>
+            <Textarea id="p3-q" rows={7} value={form.questions} onChange={(e) => setForm((f) => ({ ...f, questions: e.target.value }))} placeholder={EXAMPLE[form.type]} lang="en" />
+            <p className="text-xs text-muted-foreground">
+              Chỉ cần dán câu hỏi và đáp án. Bấm <b>Tự ghép cặp</b>: từ khóa được đánh dấu, <code className="rounded bg-muted px-1">{'{…}'}</code> là cặp hiển nhiên (tên, số, từ lặp lại),{' '}
+              <code className="rounded bg-muted px-1">[…]</code> là từ bạn cần tìm cặp trong bài.
+              {nQuestions > 0 && (keyed ? <span className="ml-1 font-medium text-success">Đã có đáp án cho mọi cặp — app sẽ chấm từng cặp.</span> : <span className="ml-1">Chưa có đáp án cho mọi cặp: app chấm câu trả lời, còn cặp từ bạn tự đối chiếu.</span>)}
+            </p>
           </div>
 
           {(tried || nQuestions > 0) && parsed.errors.length > 0 && (
@@ -130,7 +168,7 @@ export default function Passage3ImportPage() {
             <p className="mb-2 font-semibold">Cách ghi câu hỏi</p>
             <ul className="list-disc space-y-1.5 pl-4 text-muted-foreground">
               <li>
-                Đặt từ khóa cần ghép trong <code className="rounded bg-muted px-1">[ngoặc vuông]</code> — đó chính là các từ thầy bảo tô màu.
+                Không cần tự đánh dấu: bấm <b>Tự ghép cặp</b>. Muốn tự chọn thì đặt từ khóa trong <code className="rounded bg-muted px-1">[ngoặc vuông]</code> — đó chính là các từ thầy bảo tô màu.
               </li>
               <li>
                 Chỗ trống viết <code className="rounded bg-muted px-1">____</code>.

@@ -430,7 +430,15 @@ export interface ImportInput {
   passage: string;
   questions: string;
   box: string;
+  /** partners of the keywords, found automatically ("Tự ghép cặp") or kept from a saved set */
+  key?: AutoKey;
 }
+
+/** question text → keyword → partner in the passage (null = no partner); "____" is the gap */
+export type AutoKey = Record<string, Record<string, { p: string | null; vi?: string }>>;
+
+/** The key of a question line: its stem without markup, answer or options. */
+export const lineKey = (line: string) => normalize((line.split('||')[0] ?? '').replace(/[[\]{}]/g, '').replace(/_{3,}/g, ' gap '));
 
 const JUDGE_WORDS: Record<string, string> = { TRUE: 'T', T: 'T', FALSE: 'F', F: 'F', YES: 'Y', Y: 'Y', NO: 'N', N: 'N', 'NOT GIVEN': 'NG', NG: 'NG' };
 
@@ -454,6 +462,7 @@ export function parseImport(input: ImportInput): { set: P3Set | null; errors: st
     .filter(Boolean);
   if (!lines.length) errors.push('Chưa có câu hỏi nào.');
   const items: P3Item[] = [];
+  let allKeyed = true;
   lines.forEach((line, li) => {
     const n = li + 1;
     const cells = line.split('||').map((c) => c.trim());
@@ -463,15 +472,33 @@ export function parseImport(input: ImportInput): { set: P3Set | null; errors: st
     }
     let k = 0;
     const pairs: Record<string, P3Pair> = {};
+    const lk = input.key?.[lineKey(cells[0] ?? '')];
+    let unkeyed = 0;
+    const partner = (w: string) => {
+      const hit = lk?.[w === '____' ? '____' : normalize(w)];
+      if (hit) return { p: hit.p, vi: hit.vi };
+      unkeyed++;
+      return { p: null };
+    };
     let text = (cells[0] ?? '').replace(/_{3,}/, () => {
-      pairs.g = { p: null };
+      pairs.g = partner('____');
       return '[g:____]';
     });
     text = text.replace(/\[([^\]:]+)\]/g, (_m, w: string) => {
       const id = `k${++k}`;
-      pairs[id] = { p: null };
+      pairs[id] = partner(w.trim());
       return `[${id}:${w.trim()}]`;
     });
+    // {obvious} keywords: names, numbers, repeated words — paired with the same words in the passage
+    text = text.replace(/\{([^}:]+)\}/g, (_m, w: string) => {
+      const id = `k${++k}`;
+      const hit = lk?.[normalize(w)];
+      const same = findRange(input.passage, w.trim()) ? w.trim() : null;
+      pairs[id] = hit ? { p: hit.p, vi: hit.vi } : { p: same };
+      if (!hit && !same) unkeyed++;
+      return `{${id}:${w.trim()}}`;
+    });
+    if (unkeyed) allKeyed = false;
     const rawAns = cells[cells.length - 1] ?? '';
     let ans: string | number;
     let options: string[] | undefined;
@@ -515,7 +542,10 @@ export function parseImport(input: ImportInput): { set: P3Set | null; errors: st
         ans = accept[0] ?? rawAns;
       }
     }
-    if (!Object.keys(pairs).length) errors.push(`Câu ${n}: chưa đánh dấu từ khóa nào bằng [ngoặc vuông] — vẫn lưu được, nhưng nên đánh dấu để luyện ghép cặp.`);
+    if (!Object.keys(pairs).length) {
+      allKeyed = false;
+      errors.push(`Câu ${n}: chưa có từ khóa — bấm “Tự ghép cặp” hoặc đặt từ khóa trong [ngoặc vuông]. Vẫn lưu được.`);
+    }
     items.push({ stmt: text, pairs, ans, options, accept });
   });
   const blocking = errors.filter((e) => !e.includes('vẫn lưu được'));
@@ -530,7 +560,8 @@ export function parseImport(input: ImportInput): { set: P3Set | null; errors: st
     passage: input.passage.trim(),
     box: input.type === 'gap' && box.length ? box : undefined,
     items,
-    keyless: true,
+    // with a partner for every keyword the set is graded like the ready-made ones; otherwise the learner's pairs are kept as they are
+    keyless: !allKeyed,
     camId: input.camId,
   };
   return { set, errors };
@@ -538,9 +569,15 @@ export function parseImport(input: ImportInput): { set: P3Set | null; errors: st
 
 /** The import form's text for a saved set, so it can be edited. */
 export function toImportInput(set: P3Set): ImportInput {
+  const key: AutoKey = {};
   const questions = set.items
     .map((it) => {
-      const stmt = it.stmt.replace(/\[g:____\]/g, '____').replace(/\[\w+:([^\]]+)\]/g, '[$1]').replace(/\{\w+:([^}]+)\}/g, '$1');
+      const stmt = it.stmt.replace(/\[g:____\]/g, '____').replace(/\[\w+:([^\]]+)\]/g, '[$1]').replace(/\{\w+:([^}]+)\}/g, '{$1}');
+      if (!set.keyless) {
+        const entry: AutoKey[string] = {};
+        for (const part of parseStmt(it.stmt)) if (part.t !== 'txt') entry[part.id === 'g' ? '____' : normalize(part.v)] = { p: it.pairs[part.id]?.p ?? null, vi: it.pairs[part.id]?.vi };
+        key[lineKey(stmt)] = entry;
+      }
       let ans: string;
       if (set.type === 'tfng' || set.type === 'ynng') ans = JUDGE[set.type].find(([k]) => k === it.ans)?.[1] ?? String(it.ans);
       else if (set.type === 'mcq') return [stmt, ...(it.options ?? []), LETTERS[Number(it.ans)]].join(' || ');
@@ -548,7 +585,7 @@ export function toImportInput(set: P3Set): ImportInput {
       return `${stmt} || ${ans}`;
     })
     .join('\n');
-  return { camId: set.camId, title: set.title, type: set.type, passage: set.passage, questions, box: (set.box ?? []).join('\n') };
+  return { camId: set.camId, title: set.title, type: set.type, passage: set.passage, questions, box: (set.box ?? []).join('\n'), key: set.keyless ? undefined : key };
 }
 
 export function saveImport(set: P3Set) {
@@ -574,7 +611,7 @@ export function importBackup(json: string): number {
   const data = JSON.parse(json) as { app?: string; imports?: P3Set[]; progress?: P3Progress };
   if (data.app !== 'linguaflow-p3' || !Array.isArray(data.imports)) throw new Error('File không phải bản sao lưu Passage 3 của LinguaFlow.');
   const byId = new Map(getImports().map((s) => [s.id, s]));
-  for (const s of data.imports) if (s && typeof s.id === 'string' && typeof s.passage === 'string' && Array.isArray(s.items)) byId.set(s.id, { ...s, keyless: true });
+  for (const s of data.imports) if (s && typeof s.id === 'string' && typeof s.passage === 'string' && Array.isArray(s.items)) byId.set(s.id, { ...s, keyless: s.keyless !== false });
   imports = [...byId.values()];
   write(IMPORTS, imports);
   if (data.progress) {
