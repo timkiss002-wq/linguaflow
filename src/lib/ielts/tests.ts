@@ -22,6 +22,21 @@ export interface Question {
   /** exact quote from the passage / script that gives the answer */
   evidence: string;
   explain_vi: string;
+  /** Vietnamese translation of the sentence that gives the answer */
+  evidence_vi?: string;
+  /** paraphrase pairs: [phrase in the question, phrase in the passage sentence], shown in matching colours */
+  keys?: [string, string][];
+  /** gap questions: what kind of word the gap needs ("Danh từ số nhiều…") */
+  pos_hint?: string;
+}
+/** A word worth learning from a passage, with its example quoted from the passage (like a coursebook's vocabulary table). */
+export interface PartVocab {
+  w: string;
+  pos: string;
+  ipa?: string;
+  vi: string;
+  syn?: string[];
+  ex: string;
 }
 export interface QuestionGroup {
   type: QuestionType;
@@ -45,6 +60,8 @@ export interface TestPart {
   speakers?: Record<string, { name: string; voice: 'male' | 'female' }>;
   script?: string[][];
   groups: QuestionGroup[];
+  /** reading: vocabulary from this passage */
+  vocab?: PartVocab[];
 }
 export interface PracticeTest {
   id: string;

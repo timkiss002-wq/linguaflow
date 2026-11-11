@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpen, Clock, Headphones, Highlighter, Pause, Play, RotateCcw, Send } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronRight, Clock, Filter, Headphones, Highlighter, Pause, Play, RotateCcw, Send } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -13,8 +13,10 @@ import { useSaveIeltsAttempt } from '@/features/ielts/api';
 import { useIeltsTarget } from '@/features/learner/useIeltsTarget';
 import type { Highlight } from '@/features/ielts/highlights';
 import { Passage, type TextSize } from '@/features/ielts/Passage';
+import { PartVocabulary } from '@/features/ielts/PartVocabulary';
 import { Highlighted, QuestionGroups } from '@/features/ielts/QuestionGroups';
 import { useScriptPlayer } from '@/features/ielts/useScriptPlayer';
+import { locateQuote } from '@/lib/ielts/locate';
 import { markDailyDone } from '@/lib/daily';
 import { toUserMessage } from '@/lib/errors';
 import {
@@ -28,6 +30,7 @@ import {
   testById,
   type Mark,
   type PracticeTest,
+  type Question,
   type QuestionResult,
   type TestPart,
 } from '@/lib/ielts/tests';
@@ -183,6 +186,7 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
   const [active, setActive] = useState<number | null>(null);
   const [confirming, setConfirming] = useState(false);
   const [highlights, setHighlights] = useState<Record<string, Highlight[]>>(initial?.highlights ?? {});
+  const [onlyWrong, setOnlyWrong] = useState(false);
   const [size, setSize] = useState<TextSize>(() => {
     try {
       return (localStorage.getItem('ielts:text-size') as TextSize | null) ?? 'md';
@@ -257,6 +261,20 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
   const marks: Record<number, Mark> = Object.fromEntries((results ?? []).map((r) => [r.n, r.mark]));
   const left = limit - seconds.current;
 
+  // review: where each reading answer sits ("Đoạn B, câu 3"), and stepping through the wrong ones
+  const wrong = (results ?? []).filter((r) => r.mark !== 'correct').map((r) => r.n);
+  const locate = (q: Question) => (part.paragraphs ? locateQuote(part.paragraphs, q.evidence) : null);
+  const goTo = (n: number) => {
+    showEvidence(n);
+    setTimeout(() => document.getElementById(`q-${n}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
+  };
+  const nextWrong = () => {
+    if (!wrong.length) return;
+    const i = active === null ? -1 : wrong.indexOf(active);
+    goTo(wrong[(i + 1) % wrong.length]!);
+  };
+  const review = results ? { marks, active, onShowEvidence: showEvidence, locate, onlyWrong } : undefined;
+
   return (
     <>
       <PageHeader
@@ -285,6 +303,26 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
       />
 
       {results && <Summary test={test} results={results} onReset={reset} />}
+      {results && wrong.length > 0 && (
+        <div className="mb-4 flex flex-wrap items-center gap-2 rounded-lg border bg-card px-3 py-2 text-sm" data-testid="review-bar">
+          <span className="text-muted-foreground">
+            Xem lại <strong className="text-foreground">{wrong.length}</strong> câu chưa đúng
+          </span>
+          <Button variant={onlyWrong ? 'default' : 'outline'} size="sm" aria-pressed={onlyWrong} onClick={() => setOnlyWrong((v) => !v)}>
+            <Filter className="size-4" /> Chỉ câu sai
+          </Button>
+          <Button variant="outline" size="sm" onClick={nextWrong}>
+            Câu sai tiếp theo <ChevronRight className="size-4" />
+          </Button>
+          <div className="flex flex-wrap gap-1">
+            {wrong.map((n) => (
+              <button key={n} type="button" onClick={() => goTo(n)} aria-current={active === n} className={cn('inline-flex h-7 min-w-7 items-center justify-center rounded-md border px-1 text-xs font-semibold tabular-nums hover:border-primary', active === n ? 'border-warning bg-warning/15' : 'border-destructive/40 text-destructive')}>
+                {n}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {parts.length > 1 && (
         <nav aria-label="Parts" className="mb-4 flex gap-1 overflow-x-auto pb-1">
@@ -326,7 +364,12 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
             </Card>
             <Card className="lg:overflow-y-auto">
               <CardContent className={cn('px-5 pt-6 sm:px-6', size === 'lg' ? 'text-[17px]' : size === 'md' ? 'text-[15.5px]' : 'text-sm')}>
-                <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={results ? { marks, active, onShowEvidence: showEvidence } : undefined} />
+                <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={review} />
+                {results && part.vocab && part.vocab.length > 0 && (
+                  <div className="mt-8 border-t pt-6">
+                    <PartVocabulary vocab={part.vocab} source={part.heading} />
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>
@@ -336,7 +379,7 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
           <ListeningAudio key={part.id} part={part} mode={mode} finished={Boolean(results)} active={active} />
           <Card>
             <CardContent className="pt-5">
-              <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={results ? { marks, active, onShowEvidence: showEvidence } : undefined} />
+              <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={review} />
             </CardContent>
           </Card>
         </div>
@@ -598,7 +641,7 @@ function Summary({ test, results, onReset }: { test: PracticeTest; results: Ques
               <Link to={`/ielts/${test.skill}`}>Chọn bài khác</Link>
             </Button>
           </div>
-          <p className="text-xs text-muted-foreground">Bấm “Xem chỗ có đáp án trong bài” dưới mỗi câu để thấy câu chứa đáp án được tô màu.</p>
+          <p className="text-xs text-muted-foreground">Dưới mỗi câu có đáp án, vị trí (“Đoạn B, câu 3” — bấm để cuộn bài đọc tới đó), câu trích dẫn và lời giải thích. Bấm vào từ trong câu trích để tra và lưu.</p>
         </div>
       </CardContent>
     </Card>

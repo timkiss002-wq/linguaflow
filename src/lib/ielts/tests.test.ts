@@ -37,6 +37,11 @@ describe('test content', () => {
     for (const { group, q } of partQuestions(p)) {
       expect(findEvidence(text, q.evidence), `Q${q.n} evidence not found: ${q.evidence}`).not.toBeNull();
       expect(q.explain_vi.length, `Q${q.n}`).toBeGreaterThan(10);
+      for (const [a, b] of q.keys ?? []) {
+        expect(q.text, `Q${q.n} key "${a}" not in the question`).toContain(a);
+        expect(text, `Q${q.n} key "${b}" not in the text`).toContain(b);
+      }
+      if (q.pos_hint !== undefined) expect(group.type, `Q${q.n}: pos_hint is for gap questions`).toBe('gap');
       if (group.type === 'gap') {
         expect(Array.isArray(q.answer), `Q${q.n}`).toBe(true);
         expect(q.text, `Q${q.n} needs a ___ gap`).toContain('___');
@@ -46,6 +51,16 @@ describe('test content', () => {
         expect(keys, `Q${q.n}`).toContain(q.answer);
       }
     }
+  });
+
+  it('quotes vocabulary examples from the passage itself', () => {
+    for (const t of TESTS)
+      for (const p of t.parts)
+        for (const v of p.vocab ?? []) {
+          const text = p.paragraphs!.map((x) => x[1]).join('\n');
+          expect(text, `${p.id} ${v.w}`).toContain(v.ex);
+          expect(v.vi.length, `${p.id} ${v.w}`).toBeGreaterThan(1);
+        }
   });
 
   it('has unique test, part and question ids', () => {

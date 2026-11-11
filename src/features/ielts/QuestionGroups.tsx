@@ -1,6 +1,9 @@
-import { Check, Flag, Search, X } from 'lucide-react';
+import { Check, Flag, MapPin, X } from 'lucide-react';
 import { Fragment } from 'react';
 import { NativeSelect } from '@/components/ui/native-select';
+import { useWordLookup } from '@/features/vocabulary/useWordLookup';
+import { locationLabel, type Location } from '@/lib/ielts/locate';
+import { PAIR_COLORS } from '@/lib/ielts/passage3';
 import { optionsFor, type Mark, type Question, type QuestionGroup } from '@/lib/ielts/tests';
 import { cn } from '@/lib/utils';
 
@@ -15,6 +18,10 @@ export interface Review {
   marks: Record<number, Mark>;
   active: number | null;
   onShowEvidence: (n: number) => void;
+  /** where a question's evidence sits (reading): paragraph + sentence; null when unknown */
+  locate?: (q: Question) => Location | null;
+  /** hide the questions answered correctly */
+  onlyWrong?: boolean;
 }
 
 /** All question groups of one part: instructions, the questions, and (after marking) answers + explanations. */
@@ -36,11 +43,15 @@ export function QuestionGroups({
   onCurrent?: (n: number) => void;
   flagged?: Set<number>;
 }) {
+  const lookup = useWordLookup('en');
   return (
     <div className="space-y-6">
+      {review && lookup.popover}
       {groups.map((g) => {
         const first = g.questions[0]?.n;
         const last = g.questions[g.questions.length - 1]?.n;
+        const shown = review?.onlyWrong ? g.questions.filter((q) => review.marks[q.n] !== 'correct') : g.questions;
+        if (!shown.length) return null;
         return (
           <section key={first} aria-label={`Questions ${first}–${last}`} className="space-y-3">
             <div>
@@ -61,7 +72,7 @@ export function QuestionGroups({
             )}
             {g.title && <p className="font-medium">{g.title}</p>}
             <ol className="space-y-3">
-              {g.questions.map((q) => (
+              {shown.map((q) => (
                 <li
                   key={q.n}
                   id={`q-${q.n}`}
@@ -71,7 +82,7 @@ export function QuestionGroups({
                 >
                   {flagged?.has(q.n) && <Flag className="absolute -left-1 -top-1 size-3.5 fill-warning text-warning" aria-label="Đánh dấu xem lại" />}
                   <QuestionInput group={g} q={q} value={answers[q.n] ?? ''} onChange={(v) => onAnswer(q.n, v)} disabled={Boolean(review)} mark={review?.marks[q.n]} />
-                  {review && <Feedback q={q} mark={review.marks[q.n] ?? 'empty'} onShowEvidence={() => review.onShowEvidence(q.n)} />}
+                  {review && <Feedback q={q} type={g.type} mark={review.marks[q.n] ?? 'empty'} location={review.locate?.(q) ?? null} onShowEvidence={() => review.onShowEvidence(q.n)} onWord={lookup.open} />}
                 </li>
               ))}
             </ol>
@@ -191,26 +202,156 @@ function QuestionInput({ group, q, value, onChange, disabled, mark }: { group: Q
   );
 }
 
-function Feedback({ q, mark, onShowEvidence }: { q: Question; mark: Mark; onShowEvidence: () => void }) {
-  const answer = Array.isArray(q.answer) ? q.answer[0] : q.answer;
+/** Colour of an answer chip: TRUE/YES green, FALSE/NO red, NOT GIVEN neutral, everything else brand. */
+function answerTone(answer: string) {
+  if (answer === 'TRUE' || answer === 'YES') return 'bg-success text-success-foreground';
+  if (answer === 'FALSE' || answer === 'NO') return 'bg-destructive text-destructive-foreground';
+  if (answer === 'NOT GIVEN') return 'bg-muted-foreground/80 text-background';
+  return 'bg-primary text-primary-foreground';
+}
+
+const TYPE_HINT: Partial<Record<QuestionGroup['type'], string>> = {
+  tfng: 'TRUE = bài nói đúng như vậy · FALSE = bài nói ngược lại · NOT GIVEN = bài không nhắc tới ý này',
+  ynng: 'YES = tác giả nghĩ vậy · NO = tác giả nghĩ ngược lại · NOT GIVEN = tác giả không nêu quan điểm',
+};
+
+/**
+ * One word per click: the quoted sentence (and the question) as clickable words so the learner can
+ * look a word up and save it with this sentence as its context.
+ */
+function Words({ text, sentence = text, onWord, className }: { text: string; sentence?: string; onWord: (t: { word: string; element: HTMLElement; sentence: string }) => void; className?: string }) {
+  const parts = text.split(/(\s+)/);
   return (
-    <div className="mt-2 space-y-1.5 pl-8 text-sm" data-mark={mark}>
-      <p className={cn('flex flex-wrap items-center gap-1.5 font-medium', mark === 'correct' ? 'text-success' : 'text-destructive')}>
-        {mark === 'correct' ? <Check className="size-4" aria-hidden /> : <X className="size-4" aria-hidden />}
-        {mark === 'correct' ? 'Đúng' : MARK_TEXT[mark]}
-        {mark !== 'correct' && (
-          <span className="text-foreground">
-            · Đáp án: <strong>{answer}</strong>
-            {Array.isArray(q.answer) && q.answer.length > 1 && <span className="text-muted-foreground"> (chấp nhận: {q.answer.join(' / ')})</span>}
+    <span lang="en" className={className}>
+      {parts.map((p, i) => {
+        if (!p.trim()) return <Fragment key={i}>{p}</Fragment>;
+        const word = p.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
+        if (!word) return <Fragment key={i}>{p}</Fragment>;
+        return (
+          <span key={i} role="button" tabIndex={-1} className="cursor-pointer rounded-[3px] hover:bg-accent hover:text-accent-foreground" onClick={(e) => onWord({ word, element: e.currentTarget, sentence })}>
+            {p}
           </span>
+        );
+      })}
+    </span>
+  );
+}
+
+type OnWord = (t: { word: string; element: HTMLElement; sentence: string }) => void;
+interface Tint {
+  phrase: string;
+  /** background colour of a paraphrase pair; omitted = the evidence fragment (underlined / marked) */
+  color?: string;
+}
+
+/**
+ * A sentence with phrases tinted: each paraphrase pair in its own colour (the same colour in the
+ * question and in the quote, as IELTS teachers mark them) and the exact evidence underlined.
+ * Words stay clickable for the dictionary.
+ */
+function Tinted({ text, sentence = text, tints, onWord }: { text: string; sentence?: string; tints: Tint[]; onWord: OnWord }) {
+  const ranges = tints
+    .map((t) => ({ ...t, start: text.indexOf(t.phrase), end: text.indexOf(t.phrase) + t.phrase.length }))
+    .filter((r) => r.start >= 0 && r.phrase.length > 0);
+  const edges = [...new Set([0, text.length, ...ranges.flatMap((r) => [r.start, r.end])])].sort((a, b) => a - b);
+  const slices: React.ReactNode[] = [];
+  for (let i = 0; i < edges.length - 1; i++) {
+    const [a, b] = [edges[i]!, edges[i + 1]!];
+    const piece = text.slice(a, b);
+    if (!piece) continue;
+    const color = ranges.find((r) => r.color && r.start <= a && r.end >= b)?.color;
+    const evidence = ranges.some((r) => !r.color && r.start <= a && r.end >= b);
+    const words = <Words text={piece} sentence={sentence} onWord={onWord} />;
+    if (!color && !evidence) {
+      slices.push(<Fragment key={a}>{words}</Fragment>);
+      continue;
+    }
+    slices.push(
+      <span
+        key={a}
+        className={cn('rounded-[3px] px-0.5', color && 'text-neutral-900', !color && evidence && 'bg-warning/20 text-foreground', color && evidence && 'underline decoration-warning decoration-2 underline-offset-4')}
+        style={color ? { background: color } : undefined}
+      >
+        {words}
+      </span>,
+    );
+  }
+  return <>{slices}</>;
+}
+
+/**
+ * After marking: the answer, where it is in the text, the sentence that gives it, and why —
+ * the same fixed order for every question, so the eye learns where to look.
+ */
+function Feedback({
+  q,
+  type,
+  mark,
+  location,
+  onShowEvidence,
+  onWord,
+}: {
+  q: Question;
+  type: QuestionGroup['type'];
+  mark: Mark;
+  location: Location | null;
+  onShowEvidence: () => void;
+  onWord: (t: { word: string; element: HTMLElement; sentence: string }) => void;
+}) {
+  const answer = Array.isArray(q.answer) ? q.answer[0]! : q.answer;
+  const ok = mark === 'correct';
+  const quote = location?.sentence ?? q.evidence;
+  const keys = q.keys ?? [];
+  const inQuestion: Tint[] = keys.map(([a], k) => ({ phrase: a, color: PAIR_COLORS[k % PAIR_COLORS.length] }));
+  const inQuote: Tint[] = [...keys.map(([, b], k) => ({ phrase: b, color: PAIR_COLORS[k % PAIR_COLORS.length] })), ...(q.evidence.length < quote.length - 2 ? [{ phrase: q.evidence }] : [])];
+  return (
+    <div className={cn('mt-3 space-y-2.5 rounded-lg border-l-4 bg-muted/40 p-3 text-sm', ok ? 'border-success' : 'border-destructive')} data-mark={mark}>
+      <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        <span className={cn('inline-flex items-center gap-1 font-semibold', ok ? 'text-success' : 'text-destructive')}>
+          {ok ? <Check className="size-4" aria-hidden /> : <X className="size-4" aria-hidden />}
+          {ok ? 'Đúng' : MARK_TEXT[mark]}
+        </span>
+        <span className="text-muted-foreground">·</span>
+        <span className="text-muted-foreground">Đáp án</span>
+        <span className={cn('rounded-md px-2 py-0.5 text-xs font-bold tracking-wide', answerTone(answer))}>{answer}</span>
+        {Array.isArray(q.answer) && q.answer.length > 1 && <span className="text-xs text-muted-foreground">(chấp nhận: {q.answer.join(' / ')})</span>}
+        <button type="button" onClick={onShowEvidence} className="ml-auto inline-flex items-center gap-1 rounded-md border bg-card px-2 py-0.5 text-xs font-medium text-primary hover:bg-accent" title="Cuộn bài đọc tới câu chứa đáp án">
+          <MapPin className="size-3.5" aria-hidden />
+          {location ? locationLabel(location) : 'Xem trong bài'}
+        </button>
+      </p>
+
+      <blockquote className="space-y-1 border-l-2 border-warning/60 pl-3 leading-relaxed">
+        <p className="italic text-foreground/90">
+          <Tinted text={quote} tints={inQuote} onWord={onWord} />
+        </p>
+        {q.evidence_vi && (
+          <p className="text-[0.95em] text-muted-foreground" lang="vi">
+            <span className="font-medium not-italic">Dịch: </span>
+            {q.evidence_vi}
+          </p>
         )}
-      </p>
-      <p className="text-muted-foreground" lang="vi">
-        {q.explain_vi}
-      </p>
-      <button type="button" onClick={onShowEvidence} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline">
-        <Search className="size-3.5" aria-hidden /> Xem chỗ có đáp án trong bài
-      </button>
+      </blockquote>
+
+      <div className="space-y-1" lang="vi">
+        {keys.length > 0 && (
+          <p>
+            <span className="font-medium">Câu hỏi: </span>
+            <Tinted text={q.text} tints={inQuestion} onWord={onWord} />
+          </p>
+        )}
+        {q.pos_hint && (
+          <p>
+            <span className="font-medium">Từ cần điền: </span>
+            {q.pos_hint}
+          </p>
+        )}
+        <p>
+          <span className="font-medium">Giải thích: </span>
+          {q.explain_vi}
+        </p>
+        {!ok && TYPE_HINT[type] && <p className="text-xs text-muted-foreground">{TYPE_HINT[type]}</p>}
+      </div>
     </div>
   );
 }

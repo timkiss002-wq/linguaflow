@@ -54,6 +54,15 @@ On phones the areas are a bottom tab bar and the filters fold into one panel.
 
 **Reading tests** show passage and questions side by side, each scrolling on its own, with three text sizes. Select text
 in the passage to highlight it (click a highlight to remove it); highlights are saved with the answers.
+After marking, every question gets the same explanation block: the answer (coloured by type), its place in the text
+(“Đoạn B, câu 3” — click to scroll the passage there), the whole sentence that gives the answer with the exact evidence
+marked inside it, and the Vietnamese explanation; words in the quoted sentence can be clicked to look up and save. A review
+bar lists the wrong questions, steps through them and can hide the correct ones. Short Passage 3 sets quote the sentence
+holding the answer with each keyword pair in its own colour.
+Where the content provides them, a question also shows its paraphrase pairs tinted in matching colours in the question and
+in the quote, the Vietnamese translation of the quoted sentence, and for gaps the kind of word needed; a passage can end
+with a “Từ vựng trong bài” table (word, type, IPA, meaning, synonyms, example from the passage) with one-click saving to
+the notebook. Done so far for Practice test 1, Passage 1 (`content/ielts-tests/reading-1.json` — see its `_note`).
 
 **Vocabulary goal and review.** The daily goal is 10 new words (first review of a new card); until it is met a banner
 shows on every page, and — if the learner clicks “Nhắc tôi” — a system notification appears at 12:00 and 20:00 while

@@ -25,6 +25,7 @@ import {
   type ItemState,
   type P3Set,
 } from '@/lib/ielts/passage3';
+import { sentenceWith } from '@/lib/ielts/locate';
 import { cn } from '@/lib/utils';
 
 /** /ielts/passage3/:setId — one short passage, 4–5 questions: pair the keywords first, then answer. */
@@ -354,6 +355,26 @@ function Feedback({ set, i, st, meta }: { set: P3Set; i: number; st: ItemState; 
   const item = set.items[i]!;
   const res = st.res!;
   const tokens = tokenize(set.passage);
+  // the sentence(s) of the passage that hold the answer, with each pair's phrase in its own colour
+  const found = Object.entries(item.pairs).filter(([, pr]) => pr.p) as [string, { p: string }][];
+  const sentences = set.keyless ? [] : [...new Set(found.map(([, pr]) => sentenceWith(set.passage, pr.p)).filter((x): x is string => Boolean(x)))].slice(0, 2);
+  const tint = (sentence: string) => {
+    const hits = found.map(([id, pr]) => ({ id, at: sentence.indexOf(pr.p), len: pr.p.length })).filter((h) => h.at >= 0).sort((a, b) => a.at - b.at);
+    const out: React.ReactNode[] = [];
+    let at = 0;
+    for (const h of hits) {
+      if (h.at < at) continue;
+      out.push(sentence.slice(at, h.at));
+      out.push(
+        <span key={h.id + h.at} className="rounded px-0.5 text-neutral-900" style={{ background: meta.color[h.id] }}>
+          {sentence.slice(h.at, h.at + h.len)}
+        </span>,
+      );
+      at = h.at + h.len;
+    }
+    out.push(sentence.slice(at));
+    return out;
+  };
   return (
     <div className={cn('space-y-2 rounded-xl border-l-4 p-4 text-sm', res.ansOk ? 'border-emerald-500 bg-emerald-50/60 dark:bg-emerald-500/5' : 'border-rose-500 bg-rose-50/60 dark:bg-rose-500/5')}>
       <p className="flex flex-wrap items-baseline gap-x-3">
@@ -361,6 +382,13 @@ function Feedback({ set, i, st, meta }: { set: P3Set; i: number; st: ItemState; 
         <span className="text-muted-foreground">bạn chọn: {answerLabel(set, item, st.ans)}</span>
         <span className={cn('ml-auto font-bold tracking-wide', res.ansOk ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400')}>{res.ansOk ? 'ĐÚNG' : 'SAI'}</span>
       </p>
+      {sentences.length > 0 && (
+        <blockquote className="border-l-2 border-amber-500/60 pl-3 font-serif italic leading-relaxed" lang="en" data-testid="p3-evidence">
+          {sentences.map((x, k) => (
+            <p key={k}>{tint(x)}</p>
+          ))}
+        </blockquote>
+      )}
       <ul className="space-y-1">
         {res.pairs.map((x) => {
           const part = meta.parts.find((p) => p.t !== 'txt' && p.id === x.id);
