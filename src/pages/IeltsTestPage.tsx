@@ -13,6 +13,7 @@ import { useSaveIeltsAttempt } from '@/features/ielts/api';
 import { useIeltsTarget } from '@/features/learner/useIeltsTarget';
 import type { Highlight } from '@/features/ielts/highlights';
 import { Passage, type TextSize } from '@/features/ielts/Passage';
+import { PartVocabulary } from '@/features/ielts/PartVocabulary';
 import { Highlighted, QuestionGroups } from '@/features/ielts/QuestionGroups';
 import { useScriptPlayer } from '@/features/ielts/useScriptPlayer';
 import { locateQuote } from '@/lib/ielts/locate';
@@ -364,6 +365,11 @@ function Runner({ test, partIds, mode, onRestart }: { test: PracticeTest; partId
             <Card className="lg:overflow-y-auto">
               <CardContent className={cn('px-5 pt-6 sm:px-6', size === 'lg' ? 'text-[17px]' : size === 'md' ? 'text-[15.5px]' : 'text-sm')}>
                 <QuestionGroups groups={part.groups} answers={answers} onAnswer={(n, v) => setAnswers((a) => ({ ...a, [n]: v }))} review={review} />
+                {results && part.vocab && part.vocab.length > 0 && (
+                  <div className="mt-8 border-t pt-6">
+                    <PartVocabulary vocab={part.vocab} source={part.heading} />
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>

@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import { NativeSelect } from '@/components/ui/native-select';
 import { useWordLookup } from '@/features/vocabulary/useWordLookup';
 import { locationLabel, type Location } from '@/lib/ielts/locate';
+import { PAIR_COLORS } from '@/lib/ielts/passage3';
 import { optionsFor, type Mark, type Question, type QuestionGroup } from '@/lib/ielts/tests';
 import { cn } from '@/lib/utils';
 
@@ -236,19 +237,46 @@ function Words({ text, sentence = text, onWord, className }: { text: string; sen
   );
 }
 
-/** The whole sentence, with the exact evidence fragment marked inside it. */
-function Quote({ sentence, fragment, onWord }: { sentence: string; fragment: string; onWord: (t: { word: string; element: HTMLElement; sentence: string }) => void }) {
-  const at = sentence.indexOf(fragment);
-  if (at < 0 || fragment.length >= sentence.length - 2) return <Words text={sentence} onWord={onWord} />;
-  return (
-    <>
-      <Words text={sentence.slice(0, at)} sentence={sentence} onWord={onWord} />
-      <mark className="rounded bg-warning/20 px-0.5 not-italic text-foreground">
-        <Words text={fragment} sentence={sentence} onWord={onWord} />
-      </mark>
-      <Words text={sentence.slice(at + fragment.length)} sentence={sentence} onWord={onWord} />
-    </>
-  );
+type OnWord = (t: { word: string; element: HTMLElement; sentence: string }) => void;
+interface Tint {
+  phrase: string;
+  /** background colour of a paraphrase pair; omitted = the evidence fragment (underlined / marked) */
+  color?: string;
+}
+
+/**
+ * A sentence with phrases tinted: each paraphrase pair in its own colour (the same colour in the
+ * question and in the quote, as IELTS teachers mark them) and the exact evidence underlined.
+ * Words stay clickable for the dictionary.
+ */
+function Tinted({ text, sentence = text, tints, onWord }: { text: string; sentence?: string; tints: Tint[]; onWord: OnWord }) {
+  const ranges = tints
+    .map((t) => ({ ...t, start: text.indexOf(t.phrase), end: text.indexOf(t.phrase) + t.phrase.length }))
+    .filter((r) => r.start >= 0 && r.phrase.length > 0);
+  const edges = [...new Set([0, text.length, ...ranges.flatMap((r) => [r.start, r.end])])].sort((a, b) => a - b);
+  const slices: React.ReactNode[] = [];
+  for (let i = 0; i < edges.length - 1; i++) {
+    const [a, b] = [edges[i]!, edges[i + 1]!];
+    const piece = text.slice(a, b);
+    if (!piece) continue;
+    const color = ranges.find((r) => r.color && r.start <= a && r.end >= b)?.color;
+    const evidence = ranges.some((r) => !r.color && r.start <= a && r.end >= b);
+    const words = <Words text={piece} sentence={sentence} onWord={onWord} />;
+    if (!color && !evidence) {
+      slices.push(<Fragment key={a}>{words}</Fragment>);
+      continue;
+    }
+    slices.push(
+      <span
+        key={a}
+        className={cn('rounded-[3px] px-0.5', color && 'text-neutral-900', !color && evidence && 'bg-warning/20 text-foreground', color && evidence && 'underline decoration-warning decoration-2 underline-offset-4')}
+        style={color ? { background: color } : undefined}
+      >
+        {words}
+      </span>,
+    );
+  }
+  return <>{slices}</>;
 }
 
 /**
@@ -273,6 +301,9 @@ function Feedback({
   const answer = Array.isArray(q.answer) ? q.answer[0]! : q.answer;
   const ok = mark === 'correct';
   const quote = location?.sentence ?? q.evidence;
+  const keys = q.keys ?? [];
+  const inQuestion: Tint[] = keys.map(([a], k) => ({ phrase: a, color: PAIR_COLORS[k % PAIR_COLORS.length] }));
+  const inQuote: Tint[] = [...keys.map(([, b], k) => ({ phrase: b, color: PAIR_COLORS[k % PAIR_COLORS.length] })), ...(q.evidence.length < quote.length - 2 ? [{ phrase: q.evidence }] : [])];
   return (
     <div className={cn('mt-3 space-y-2.5 rounded-lg border-l-4 bg-muted/40 p-3 text-sm', ok ? 'border-success' : 'border-destructive')} data-mark={mark}>
       <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -290,11 +321,31 @@ function Feedback({
         </button>
       </p>
 
-      <blockquote className="border-l-2 border-warning/60 pl-3 italic leading-relaxed text-foreground/90">
-        <Quote sentence={quote} fragment={q.evidence} onWord={onWord} />
+      <blockquote className="space-y-1 border-l-2 border-warning/60 pl-3 leading-relaxed">
+        <p className="italic text-foreground/90">
+          <Tinted text={quote} tints={inQuote} onWord={onWord} />
+        </p>
+        {q.evidence_vi && (
+          <p className="text-[0.95em] text-muted-foreground" lang="vi">
+            <span className="font-medium not-italic">Dịch: </span>
+            {q.evidence_vi}
+          </p>
+        )}
       </blockquote>
 
       <div className="space-y-1" lang="vi">
+        {keys.length > 0 && (
+          <p>
+            <span className="font-medium">Câu hỏi: </span>
+            <Tinted text={q.text} tints={inQuestion} onWord={onWord} />
+          </p>
+        )}
+        {q.pos_hint && (
+          <p>
+            <span className="font-medium">Từ cần điền: </span>
+            {q.pos_hint}
+          </p>
+        )}
         <p>
           <span className="font-medium">Giải thích: </span>
           {q.explain_vi}
