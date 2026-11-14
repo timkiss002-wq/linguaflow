@@ -1,14 +1,12 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { useStudyLanguage } from '@/features/study/context';
-import { sectionFor, sectionsFor } from './nav';
+import { sectionFor, SECTIONS } from './nav';
 
 /** Phone navigation: the four areas as a tab bar at the bottom, within thumb reach. */
 export function BottomNav() {
   const { pathname } = useLocation();
   const active = sectionFor(pathname)?.id;
-  const { lang } = useStudyLanguage();
-  const sections = sectionsFor(lang);
+  const sections = SECTIONS;
   return (
     <nav aria-label="Menu chính" className="fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden">
       <ul className="grid grid-cols-4">

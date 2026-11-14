@@ -13,16 +13,12 @@ const ForgotPasswordPage = lazy(() => import('@/pages/ForgotPasswordPage'));
 const ResetPasswordPage = lazy(() => import('@/pages/ResetPasswordPage'));
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'));
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
-const LessonsPage = lazy(() => import('@/pages/LessonsPage'));
-const LessonDetailPage = lazy(() => import('@/pages/LessonDetailPage'));
-const DictationPage = lazy(() => import('@/pages/DictationPage'));
 const VocabularyPage = lazy(() => import('@/pages/VocabularyPage'));
 const VocabularyPracticePage = lazy(() => import('@/pages/VocabularyPracticePage'));
 const WordFormsPage = lazy(() => import('@/pages/WordFormsPage'));
 const ReviewPage = lazy(() => import('@/pages/ReviewPage'));
 const StatisticsPage = lazy(() => import('@/pages/StatisticsPage'));
 const InsightsPage = lazy(() => import('@/pages/InsightsPage'));
-const LevelTestPage = lazy(() => import('@/pages/LevelTestPage'));
 const WritingPage = lazy(() => import('@/pages/WritingPage'));
 const AdminPage = lazy(() => import('@/pages/AdminPage'));
 const WritingEditorPage = lazy(() => import('@/pages/WritingEditorPage'));
@@ -35,11 +31,12 @@ const IeltsTestPage = lazy(() => import('@/pages/IeltsTestPage'));
 const Passage3Redirect = lazy(() => import('@/pages/Passage3Redirect'));
 const Passage3PracticePage = lazy(() => import('@/pages/Passage3PracticePage'));
 const Passage3ImportPage = lazy(() => import('@/pages/Passage3ImportPage'));
-const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'));
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'));
-const MyLearningPage = lazy(() => import('@/pages/MyLearningPage'));
 const GrammarPage = lazy(() => import('@/pages/GrammarPage'));
 const GrammarDrillPage = lazy(() => import('@/pages/GrammarDrillPage'));
+const RoadmapPage = lazy(() => import('@/pages/RoadmapPage'));
+const RoadmapDayPage = lazy(() => import('@/pages/RoadmapDayPage'));
+const PlacementPage = lazy(() => import('@/pages/PlacementPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
 
@@ -62,13 +59,16 @@ export const router = createBrowserRouter([
         ),
         children: [
           { path: '/dashboard', element: page(<DashboardPage />) },
-          { path: '/lessons', element: page(<LessonsPage />) },
-          { path: '/lessons/:lessonId', element: page(<LessonDetailPage />) },
-          { path: '/lessons/:lessonId/practice', element: page(<DictationPage />) },
-          { path: '/my-learning', element: page(<MyLearningPage />) },
+          { path: '/lo-trinh', element: page(<RoadmapPage />) },
+          { path: '/lo-trinh/kiem-tra', element: page(<PlacementPage />) },
+          { path: '/lo-trinh/:date', element: page(<RoadmapDayPage />) },
+          // Listening, dictation lessons and the adaptive level test were removed with the IELTS path (Reading + Writing only).
+          { path: '/lessons/*', element: <Navigate to="/dashboard" replace /> },
+          { path: '/my-learning', element: <Navigate to="/dashboard" replace /> },
+          { path: '/level-test/*', element: <Navigate to="/lo-trinh/kiem-tra" replace /> },
+          { path: '/ielts/listening', element: <Navigate to="/ielts/reading" replace /> },
           { path: '/ielts', element: <Navigate to="/ielts/reading" replace /> },
           { path: '/ielts/reading', element: page(<IeltsTestsPage skill="reading" />) },
-          { path: '/ielts/listening', element: page(<IeltsTestsPage skill="listening" />) },
           { path: '/ielts/passage3', element: page(<Passage3Redirect />) },
           { path: '/ielts/passage3/edit/:key', element: page(<Passage3ImportPage />) },
           { path: '/ielts/passage3/:setId', element: page(<Passage3PracticePage />) },
@@ -87,8 +87,6 @@ export const router = createBrowserRouter([
           { path: '/writing/guided/frame/:typeId', element: page(<GuidedPracticePage />) },
           { path: '/writing/guided/:promptId', element: page(<GuidedPracticePage />) },
           { path: '/writing/:submissionId', element: page(<WritingResultPage />) },
-          { path: '/level-test', element: page(<LevelTestPage />) },
-          { path: '/level-test/:testId', element: page(<AssessmentPage />) },
           { path: '/insights', element: page(<InsightsPage />) },
           { path: '/admin', element: page(<AdminPage />) },
           { path: '/settings', element: page(<SettingsPage />) },

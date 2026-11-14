@@ -83,7 +83,7 @@ export function LearnerWizard({ initial, dailyGoal, onDone, onSkip }: { initial:
           <section className="space-y-4">
             <h2 className="text-lg font-semibold">What are you learning?</h2>
             <div className="grid gap-3 sm:grid-cols-2">
-              {(['en', 'zh'] as const).map((l) => (
+              {(['en'] as ('en' | 'zh')[]).map((l) => (
                 <button
                   key={l}
                   type="button"

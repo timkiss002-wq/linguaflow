@@ -114,13 +114,19 @@ describe('marking', () => {
   });
 
   it('marks the parts that were taken', () => {
-    const t = TESTS.find((x) => x.id === 'listening-1')!;
-    const r = markParts(t, ['l1-p1'], { 1: 'Thursday', 2: '7', 4: 'Kowalsky' });
-    expect(r).toHaveLength(10);
-    expect(r.find((x) => x.n === 1)!.mark).toBe('correct');
-    expect(r.find((x) => x.n === 2)!.mark).toBe('wrong');
-    expect(r.find((x) => x.n === 3)!.mark).toBe('empty');
-    expect(r.find((x) => x.n === 4)!.mark).toBe('spelling');
+    const t = TESTS.find((x) => x.id === 'reading-1')!;
+    const part = t.parts[0]!;
+    const qs = part.groups.flatMap((g) => g.questions);
+    const first = qs[0]!;
+    const right = Array.isArray(first.answer) ? first.answer[0]! : first.answer;
+    const r = markParts(t, [part.id], { [first.n]: right });
+    expect(r).toHaveLength(qs.length);
+    expect(r.find((x) => x.n === first.n)!.mark).toBe('correct');
+    expect(r.find((x) => x.n === qs[1]!.n)!.mark).toBe('empty');
+  });
+
+  it('has no Listening tests any more', () => {
+    expect(TESTS.every((x) => x.skill === 'reading')).toBe(true);
   });
 });
 

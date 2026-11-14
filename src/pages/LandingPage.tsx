@@ -13,12 +13,12 @@ const STEPS: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
 ];
 
 const FEATURES: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
-  { icon: BookOpen, title: 'IELTS Reading & Listening', text: 'Đề soạn theo format IELTS Academic, chấm tự động, band ước lượng, giải thích tiếng Việt từng câu.', tone: 'teal' },
+  { icon: BookOpen, title: 'IELTS Reading', text: 'Đề soạn theo format IELTS Academic, chấm tự động, band ước lượng, giải thích tiếng Việt từng câu.', tone: 'teal' },
   { icon: PenLine, title: 'Writing có AI chấm band', text: 'Khung bài cho từng dạng đề, thi thử 20/40 phút, AI chấm theo 4 tiêu chí và chỉ ra từng lỗi.', tone: 'rose' },
-  { icon: Keyboard, title: 'Nghe – chép chính tả', text: 'Nghe từng câu, gõ lại, thấy ngay từ thiếu, thừa hay sai chính tả. Có cả tiếng Trung (HSK, pinyin).', tone: 'teal' },
+  { icon: Keyboard, title: 'Ngữ pháp & dịch câu', text: '17 chủ điểm: lý thuyết có hình minh hoạ, câu nhận diện, rồi dịch câu Việt → Anh được chấm từng từ.', tone: 'teal' },
   { icon: Sparkles, title: 'Sổ từ thông minh', text: 'Lưu từ kèm câu gặp nó, ôn bằng thẻ lặp lại ngắt quãng, luyện dạng từ kiểu IELTS.', tone: 'violet' },
-  { icon: Ear, title: 'Kiểm tra trình độ', text: 'Bài kiểm tra ngắn, thích ứng, cho từng kỹ năng — rồi chỉ ra đúng lỗi bạn hay lặp lại.', tone: 'sky' },
-  { icon: CalendarCheck, title: 'Kế hoạch mỗi ngày', text: 'Ôn từ, một điểm yếu và một bài vừa sức — vừa đủ số phút bạn có.', tone: 'orange' },
+  { icon: Ear, title: 'Kiểm tra trình độ', text: 'Ngữ pháp, từ vựng, đọc hiểu và viết — làm lại cuối mỗi giai đoạn để thấy tiến bộ.', tone: 'sky' },
+  { icon: CalendarCheck, title: 'Lộ trình theo ngày', text: 'Nền tảng → luyện tập → thi thử, mỗi ngày biết rõ học ngữ pháp gì, từ nào, bài nào.', tone: 'orange' },
 ];
 
 export default function LandingPage() {
@@ -53,13 +53,13 @@ export default function LandingPage() {
         <div className="container relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
           <div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-              Luyện thi IELTS · có cả tiếng Trung (HSK)
+              Lộ trình IELTS Reading & Writing
             </p>
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               Luyện đề IELTS như thi thật, hiểu từng lỗi bằng tiếng Việt.
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-              Reading, Listening và Writing theo đúng format bài thi trên máy. Sau khi nộp: đáp án được tô ngay trong bài, giải thích tiếng Việt từng câu, và AI chấm band Writing theo 4 tiêu chí.
+              Reading và Writing theo đúng format bài thi trên máy, đi theo một lộ trình từng ngày. Sau khi nộp: đáp án được tô ngay trong bài, giải thích tiếng Việt từng câu, và AI chấm band Writing theo 4 tiêu chí.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" asChild>

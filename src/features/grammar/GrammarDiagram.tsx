@@ -26,6 +26,10 @@ const LABEL: Record<DiagramKind, string> = {
   modal: 'Mức độ: can, should, must',
   linking: 'Từ nối: nguyên nhân, tương phản, kết quả',
   trend: 'Biểu đồ đường: tăng mạnh, ổn định, giảm nhẹ, đạt đỉnh',
+  nouns: 'Hai hộp: danh từ đếm được có -s, danh từ không đếm được không có -s',
+  agreement: 'Mũi tên nối danh từ chính với động từ: the number of tourists has',
+  pattern: 'Hai nhánh: choose to live, suggest taking',
+  order: 'Các ô theo thứ tự: chủ ngữ, động từ, tân ngữ, nơi chốn, thời gian',
 };
 
 const T = ({ x, y, children, size = 11, anchor = 'middle', className = 'fill-muted-foreground', bold }: { x: number; y: number; children: ReactNode; size?: number; anchor?: 'start' | 'middle' | 'end'; className?: string; bold?: boolean }) => (
@@ -269,6 +273,101 @@ const DRAW: Record<DiagramKind, ReactNode> = {
       </T>
       <T x={165} y={144} size={10}>
         2000 → 2020
+      </T>
+    </g>
+  ),
+  nouns: (
+    <g>
+      <rect x={10} y={14} width={146} height={112} rx={12} strokeWidth="1.5" className="fill-teal-100 stroke-teal-400 dark:fill-teal-500/20" />
+      <T x={83} y={36} size={12} className="fill-teal-800 dark:fill-teal-200" bold>
+        Đếm được
+      </T>
+      <T x={83} y={62} size={13} className="fill-foreground" bold>
+        a problem
+      </T>
+      <T x={83} y={84} size={13} className="fill-foreground" bold>
+        many problem<tspan className="fill-rose-600 dark:fill-rose-400">s</tspan>
+      </T>
+      <T x={83} y={108}>any / some + N-s</T>
+      <rect x={164} y={14} width={146} height={112} rx={12} strokeWidth="1.5" className="fill-amber-100 stroke-amber-400 dark:fill-amber-500/20" />
+      <T x={237} y={36} size={12} className="fill-amber-800 dark:fill-amber-200" bold>
+        Không đếm được
+      </T>
+      <T x={237} y={62} size={13} className="fill-foreground" bold>
+        information
+      </T>
+      <T x={237} y={84} size={13} className="fill-foreground" bold>
+        much advice
+      </T>
+      <T x={237} y={108}>không -s · không a/an</T>
+      <T x={160} y={144}>people = số nhiều của person</T>
+    </g>
+  ),
+  agreement: (
+    <g>
+      <defs>
+        <marker id="ag-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" className="fill-rose-500" />
+        </marker>
+      </defs>
+      <T x={14} y={52} size={13} anchor="start" className="fill-muted-foreground" bold>
+        The
+      </T>
+      <Pill x={46} y={28} w={104} c="bg-sky">
+        number
+      </Pill>
+      <T x={158} y={52} size={13} anchor="start" className="fill-muted-foreground" bold>
+        of tourists
+      </T>
+      <Pill x={240} y={28} w={70} c="bg-rose">
+        has
+      </Pill>
+      <path d="M98,70 C98,110 275,110 275,72" fill="none" strokeWidth="2" className="stroke-rose-500" markerEnd="url(#ag-arrow)" />
+      <T x={186} y={118} size={11}>danh từ chính quyết định động từ</T>
+      <T x={160} y={142} size={12} className="fill-foreground" bold>
+        A number of tourists have…
+      </T>
+    </g>
+  ),
+  pattern: (
+    <g>
+      <Pill x={10} y={57} w={90} c="bg-violet">
+        verb
+      </Pill>
+      <path d="M100,75 L130,36 M100,75 L130,114" strokeWidth="2" className="stroke-muted-foreground" fill="none" />
+      <Pill x={132} y={16} w={178} c="bg-teal">
+        choose to live
+      </Pill>
+      <T x={221} y={66}>decide · want · plan + to V</T>
+      <Pill x={132} y={94} w={178} c="bg-amber">
+        suggest taking
+      </Pill>
+      <T x={221} y={144}>enjoy · avoid · spend time + V-ing</T>
+    </g>
+  ),
+  order: (
+    <g>
+      {[
+        { x: 8, w: 60, t: 'S', d: 'chủ ngữ', c: 'bg-sky' },
+        { x: 72, w: 78, t: 'V', d: 'động từ', c: 'bg-rose' },
+        { x: 154, w: 60, t: 'O', d: 'tân ngữ', c: 'bg-teal' },
+        { x: 218, w: 46, t: '📍', d: 'nơi', c: 'bg-amber' },
+        { x: 268, w: 46, t: '⏰', d: 'lúc', c: 'bg-violet' },
+      ].map((b) => (
+        <g key={b.t}>
+          <Pill x={b.x} y={24} w={b.w} c={b.c}>
+            {b.t}
+          </Pill>
+          <T x={b.x + b.w / 2} y={78}>
+            {b.d}
+          </T>
+        </g>
+      ))}
+      <T x={160} y={112} size={12} className="fill-foreground" bold>
+        should invest more in transport
+      </T>
+      <T x={160} y={136} size={12} className="fill-foreground" bold>
+        make better decisions
       </T>
     </g>
   ),

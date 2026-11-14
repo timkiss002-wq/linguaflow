@@ -1,9 +1,8 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { LogoMark } from '@/components/Logo';
 import { useDueToday } from '@/features/dashboard/api';
-import { useStudyLanguage } from '@/features/study/context';
 import { cn } from '@/lib/utils';
-import { sectionFor, sectionsFor } from './nav';
+import { sectionFor, SECTIONS } from './nav';
 import { UserMenu } from './UserMenu';
 
 /**
@@ -13,7 +12,6 @@ import { UserMenu } from './UserMenu';
 export function Rail() {
   const { pathname } = useLocation();
   const active = sectionFor(pathname)?.id;
-  const { lang } = useStudyLanguage();
   const due = useDueToday();
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-20 flex-col items-center border-r bg-card py-3 lg:flex" data-testid="rail">
@@ -21,7 +19,7 @@ export function Rail() {
         <LogoMark className="size-9" />
       </NavLink>
       <nav aria-label="Menu chính" className="flex flex-1 flex-col items-center gap-1.5">
-        {sectionsFor(lang).map((s) => {
+        {SECTIONS.map((s) => {
           const on = active === s.id;
           return (
             <NavLink

@@ -1,22 +1,19 @@
 import { X } from 'lucide-react';
-import { useEffect } from 'react';
-import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { toast } from 'sonner';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { DailyGoalReminder } from '@/features/review/DailyGoalReminder';
-import { STUDY_LABEL, useStudyLanguage } from '@/features/study/context';
 import { StudyLanguageProvider } from '@/features/study/StudyLanguageProvider';
 import { BottomNav } from './BottomNav';
-import { isFocusRoute, sectionFor, tabFor } from './nav';
+import { isFocusRoute, sectionFor } from './nav';
 import { Rail } from './Rail';
 import { TopBar } from './SectionTabs';
 import { UserMenu } from './UserMenu';
 
 /**
  * Desktop: a rail of the four areas on the left (icon + label), and a bar on top of the content with the area's pages
- * as tabs, the study language and today's streak. Phones: logo row, the same tab bar, areas in the bottom bar.
+ * as tabs and today's streak. Phones: logo row, the same tab bar, areas in the bottom bar.
  */
 export function AppLayout() {
   return (
@@ -27,31 +24,8 @@ export function AppLayout() {
 }
 
 function Shell() {
-  const { pathname, search } = useLocation();
-  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const area = sectionFor(pathname)?.id;
-  const { lang, setLang } = useStudyLanguage();
-  // old links such as /writing?lang=zh open in that language
-  const linked = new URLSearchParams(search).get('lang');
-  useEffect(() => {
-    if ((linked === 'en' || linked === 'zh') && linked !== lang) setLang(linked);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [linked]);
-  // A link straight to a page of the other language (e.g. an IELTS test while studying Chinese) switches the language —
-  // and says so, with a way back, instead of changing the whole app silently.
-  useEffect(() => {
-    const s = sectionFor(pathname);
-    const only = s?.only ?? tabFor(s, pathname)?.only;
-    if (!only || only === lang) return;
-    const from = lang;
-    setLang(only);
-    toast(`Đã chuyển sang học ${STUDY_LABEL[only].name.toLowerCase()}`, {
-      id: 'study-switch',
-      description: `Trang này chỉ có cho ${STUDY_LABEL[only].name.toLowerCase()}.`,
-      action: { label: `Về ${STUDY_LABEL[from].name}`, onClick: () => (setLang(from), navigate('/dashboard')) },
-    });
-  }, [pathname, lang, setLang, navigate]);
-
   // Doing one task (dictation, a test, writing, typing practice): no menu, just a way out.
   if (isFocusRoute(pathname)) {
     const section = sectionFor(pathname);

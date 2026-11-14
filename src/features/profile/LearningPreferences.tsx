@@ -49,7 +49,7 @@ export function LearningPreferences({ profile }: { profile: Profile }) {
         <CardDescription>Defaults for lessons and the Dictation Room. You can still change speed during a lesson.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-5">
-        {(['zh', 'en'] as const).map((language) => {
+        {(['en'] as SpeechLanguage[]).map((language) => {
           const list = voicesFor(language);
           const key = language === 'zh' ? 'voiceZh' : 'voiceEn';
           const active = pickVoice(voices, language, settings[key]);

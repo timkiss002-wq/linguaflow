@@ -1,6 +1,24 @@
 # LinguaFlow
 
-> Learn languages by listening, typing and writing.
+> Lộ trình IELTS 6.5 cá nhân: Reading + Writing, từ 14/11/2026 đến 15/04/2027.
+
+## Lộ trình (từ 11/2026)
+
+LinguaFlow giờ chỉ dạy **tiếng Anh, IELTS Reading và Writing**. Tiếng Trung, Listening, nghe – chép chính tả và bài
+kiểm tra trình độ thích ứng cũ đã được bỏ (đường dẫn cũ chuyển về trang mới).
+
+- **Hôm nay** (`/dashboard`): việc của ngày hôm nay trong lộ trình; việc còn nợ của ngày trước hiện trước.
+- **Lộ trình** (`/lo-trinh`): 3 giai đoạn — Nền tảng (16/11 → 10/01: 16 chủ điểm ngữ pháp, 15 từ/ngày), Luyện tập
+  (11/01 → 07/03: Reading theo dạng câu, Writing theo khung, 12 từ/ngày, nghỉ Tết 04–14/02), Thi thử (08/03 → 15/04).
+  Mỗi ngày (`/lo-trinh/:date`) có danh sách việc, link tới bài tập và danh sách từ cần học. Ngày chưa tới chỉ xem trước.
+- **Ngữ pháp**: mỗi chủ điểm 3 bước — lý thuyết → 6 câu nhận diện → dịch 8 câu. Chủ điểm sau chỉ mở khi chủ điểm trước
+  đạt ≥ 80% ở cả hai phần. 6 chủ điểm mới theo lỗi trong bài kiểm tra: danh từ & mạo từ, hòa hợp chủ ngữ, to V / V-ing,
+  trật tự từ, although / despite, điều kiện loại 3.
+- **Từ vựng**: `content/roadmap/vocab.json` lấy từ Google Sheet "Vocab Ielts" (tuần 1–10 + "Ielts reading chưa thuộc";
+  từ đã Check TRUE không xếp lại) và 143 từ bổ sung (Media, Urbanisation, Globalisation & Tourism, Science). Nút "Thêm
+  vào Sổ từ" nhập từ của ngày vào sổ; việc từ vựng tự đánh dấu xong khi mọi từ đã được ôn.
+- **Kiểm tra trình độ** (`/lo-trinh/kiem-tra`): bài làm ngày 14/11/2026, làm lại 10/01 và 07/03, so với lần đầu.
+- Logic lộ trình: `src/lib/roadmap/plan.ts` (thuần, có test), tiến độ: `src/lib/roadmap/progress.ts` (lưu trong trình duyệt).
 
 LinguaFlow is a web app for learning **English** and **Chinese (Simplified, with Pinyin, HSK 3–6)** by
 dictation: listen to one sentence read aloud, type what you hear, and see exactly what you

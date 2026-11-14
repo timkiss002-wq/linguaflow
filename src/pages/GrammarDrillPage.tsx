@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Lightbulb, RotateCcw, ThumbsUp, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { EmptyState } from '@/components/EmptyState';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,14 +8,19 @@ import { Progress } from '@/components/ui/progress';
 import { Textarea } from '@/components/ui/textarea';
 import { DiffView } from '@/features/dictation/DiffView';
 import { GrammarDiagram } from '@/features/grammar/GrammarDiagram';
-import { TOPICS, checkTranslation, saveProgress, topicById, type Checked, type GrammarTopic } from '@/lib/grammar/drills';
+import { PASS, TOPICS, checkTranslation, readQuiz, saveProgress, saveQuiz, topicById, type Checked, type GrammarTopic } from '@/lib/grammar/drills';
 import { cn } from '@/lib/utils';
 
-/** /grammar/:topicId — the lesson (picture, formula, examples, tips), then 8 sentences to translate. */
+/**
+ * /grammar/:topicId — three steps: the lesson (picture, formula, examples, tips), a short recognition quiz,
+ * then 8 sentences to translate. ?step=quiz or ?step=drill opens a step directly (links from the learning path).
+ */
 export default function GrammarDrillPage() {
   const { topicId = '' } = useParams();
   const topic = topicById(topicId);
-  const [stage, setStage] = useState<'learn' | 'drill'>('learn');
+  const [params] = useSearchParams();
+  const asked = params.get('step');
+  const [stage, setStage] = useState<'learn' | 'quiz' | 'drill'>(asked === 'drill' ? 'drill' : asked === 'quiz' ? 'quiz' : 'learn');
   if (!topic)
     return (
       <EmptyState
@@ -28,7 +33,9 @@ export default function GrammarDrillPage() {
         }
       />
     );
-  return stage === 'learn' ? <Lesson topic={topic} onStart={() => setStage('drill')} /> : <Drill key={topic.id} topic={topic} />;
+  if (stage === 'learn') return <Lesson topic={topic} onStart={() => setStage(topic.quiz?.length ? 'quiz' : 'drill')} />;
+  if (stage === 'quiz' && topic.quiz?.length) return <Quiz key={topic.id} topic={topic} onLearn={() => setStage('learn')} onNext={() => setStage('drill')} />;
+  return <Drill key={topic.id} topic={topic} />;
 }
 
 function Lesson({ topic, onStart }: { topic: GrammarTopic; onStart: () => void }) {
@@ -79,9 +86,128 @@ function Lesson({ topic, onStart }: { topic: GrammarTopic; onStart: () => void }
       </div>
       <div className="flex justify-end">
         <Button size="lg" onClick={onStart} data-start>
-          Bắt đầu dịch {topic.items.length} câu <ArrowRight />
+          {topic.quiz?.length ? `Bước 2: ${topic.quiz.length} câu nhận diện` : `Bắt đầu dịch ${topic.items.length} câu`} <ArrowRight />
         </Button>
       </div>
+    </div>
+  );
+}
+
+/** Step 2: pick the right form among four, all questions on one page, marked together with a reason for each. */
+function Quiz({ topic, onLearn, onNext }: { topic: GrammarTopic; onLearn: () => void; onNext: () => void }) {
+  const items = topic.quiz!;
+  const [picked, setPicked] = useState<Record<number, number>>({});
+  const [checked, setChecked] = useState(false);
+  const [error, setError] = useState('');
+  const right = items.filter((q, i) => picked[i] === q.answer).length;
+  const pass = right / items.length >= PASS;
+  const best = readQuiz()[topic.id];
+  const check = () => {
+    const missing = items.findIndex((_, i) => picked[i] === undefined);
+    if (missing >= 0) {
+      setError(`Còn câu ${missing + 1} chưa chọn.`);
+      return;
+    }
+    setChecked(true);
+    saveQuiz(topic.id, right, items.length);
+  };
+  return (
+    <div className="mx-auto max-w-3xl space-y-4">
+      <Back />
+      <div>
+        <p className="text-sm font-medium text-teal-700 dark:text-teal-300">Bước 2 · nhận diện · cần đúng ít nhất {Math.ceil(items.length * PASS)}/{items.length}</p>
+        <h1 className="text-2xl font-bold tracking-tight">{topic.title_vi}</h1>
+        {best && <p className="text-sm text-muted-foreground">Điểm cao nhất: {best.best}/{best.total}</p>}
+      </div>
+      <ol className="space-y-3">
+        {items.map((q, i) => (
+          <li key={q.q + i}>
+            <Card>
+              <CardContent className="space-y-3 pt-5">
+                <p className="font-medium" lang="en">
+                  <span className="mr-2 text-sm text-muted-foreground">{i + 1}.</span>
+                  {q.q}
+                </p>
+                <div className="grid gap-2 sm:grid-cols-2" role="radiogroup" aria-label={`Câu ${i + 1}`}>
+                  {q.options.map((o, j) => {
+                    const on = picked[i] === j;
+                    const good = checked && j === q.answer;
+                    const bad = checked && on && j !== q.answer;
+                    return (
+                      <button
+                        key={o}
+                        type="button"
+                        role="radio"
+                        aria-checked={on}
+                        disabled={checked}
+                        onClick={() => {
+                          setPicked((p) => ({ ...p, [i]: j }));
+                          setError('');
+                        }}
+                        className={cn(
+                          'rounded-lg border px-3 py-2 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+                          on && !checked && 'border-primary bg-primary/10',
+                          good && 'border-emerald-500 bg-emerald-50 dark:bg-emerald-500/10',
+                          bad && 'border-rose-500 bg-rose-50 dark:bg-rose-500/10',
+                          !checked && !on && 'hover:bg-muted',
+                        )}
+                        lang="en"
+                      >
+                        <span className="mr-1.5 text-muted-foreground">{String.fromCharCode(65 + j)}.</span>
+                        {o}
+                      </button>
+                    );
+                  })}
+                </div>
+                {checked && (
+                  <p className={cn('flex items-start gap-1.5 text-sm', picked[i] === q.answer ? 'text-emerald-700 dark:text-emerald-300' : 'text-rose-700 dark:text-rose-300')}>
+                    {picked[i] === q.answer ? <Check className="mt-0.5 size-4 shrink-0" aria-hidden /> : <X className="mt-0.5 size-4 shrink-0" aria-hidden />}
+                    <span>{q.why_vi}</span>
+                  </p>
+                )}
+              </CardContent>
+            </Card>
+          </li>
+        ))}
+      </ol>
+      {!checked ? (
+        <div className="flex flex-wrap items-center justify-end gap-3">
+          {error && <p className="text-sm text-destructive">{error}</p>}
+          <Button variant="ghost" onClick={onLearn}>
+            Xem lại lý thuyết
+          </Button>
+          <Button size="lg" onClick={check}>
+            Chấm điểm
+          </Button>
+        </div>
+      ) : (
+        <Card>
+          <CardContent className="flex flex-wrap items-center gap-3 pt-5">
+            <p className="flex-1 font-semibold">
+              {right}/{items.length} câu đúng · {pass ? 'Đạt — sang bước dịch câu.' : 'Chưa đạt 80%. Xem lại lý thuyết rồi làm lại.'}
+            </p>
+            {pass ? (
+              <Button onClick={onNext}>
+                Bước 3: dịch {topic.items.length} câu <ArrowRight />
+              </Button>
+            ) : (
+              <>
+                <Button variant="outline" onClick={onLearn}>
+                  Xem lại lý thuyết
+                </Button>
+                <Button
+                  onClick={() => {
+                    setPicked({});
+                    setChecked(false);
+                  }}
+                >
+                  <RotateCcw /> Làm lại
+                </Button>
+              </>
+            )}
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }
