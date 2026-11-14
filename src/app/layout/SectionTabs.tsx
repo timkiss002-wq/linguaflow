@@ -1,19 +1,15 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { StudySwitch } from '@/features/study/StudySwitch';
-import { useStudyLanguage } from '@/features/study/context';
 import { cn } from '@/lib/utils';
-import { sectionFor, sectionsFor, tabFor } from './nav';
+import { sectionFor, SECTIONS, tabFor } from './nav';
 import { TodayChip } from './TodayMini';
 
 /**
- * The bar at the top of the content: the pages of the current area as tabs on the left, and on the right the
- * language being studied and today's streak. An area with one page shows its name instead of tabs.
+ * The bar at the top of the content: the pages of the current area as tabs on the left, and today's streak on the right. An area with one page shows its name instead of tabs.
  */
 export function TopBar() {
   const { pathname } = useLocation();
-  const { lang } = useStudyLanguage();
   const found = sectionFor(pathname);
-  const section = found && sectionsFor(lang).find((s) => s.id === found.id);
+  const section = found && SECTIONS.find((s) => s.id === found.id);
   const current = tabFor(section, pathname);
   const tabs = section?.tabs ?? [];
   return (
@@ -39,7 +35,6 @@ export function TopBar() {
           <p className="flex-1 text-sm font-semibold">{section?.label ?? ''}</p>
         )}
         <div className="flex shrink-0 items-center gap-3">
-          <StudySwitch compact />
           <span className="hidden sm:block">
             <TodayChip />
           </span>

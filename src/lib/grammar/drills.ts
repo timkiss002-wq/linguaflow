@@ -4,7 +4,7 @@ import { compareEnglish } from '@/lib/compare/english';
 
 /** Translation drills built around one grammar point each (Vietnamese → English), for learners around band 4.5–5.5. */
 
-export type DiagramKind = 'habit' | 'past' | 'perfect' | 'future' | 'compare' | 'passive' | 'relative' | 'conditional' | 'modal' | 'linking' | 'trend';
+export type DiagramKind = 'habit' | 'past' | 'perfect' | 'future' | 'compare' | 'passive' | 'relative' | 'conditional' | 'modal' | 'linking' | 'trend' | 'nouns' | 'agreement' | 'pattern' | 'order';
 
 export interface DrillItem {
   vi: string;
@@ -14,6 +14,14 @@ export interface DrillItem {
   hint: string;
   /** accepted translations; contractions need not be listed (don't = do not) */
   en: string[];
+}
+
+/** A recognition question (step 2 of a topic): pick the right form before producing it. */
+export interface QuizItem {
+  q: string;
+  options: string[];
+  answer: number;
+  why_vi: string;
 }
 
 export interface GrammarTopic {
@@ -27,6 +35,7 @@ export interface GrammarTopic {
   tips_vi: string[];
   examples: { en: string; vi: string }[];
   items: DrillItem[];
+  quiz?: QuizItem[];
 }
 
 export const TOPICS = data.topics as GrammarTopic[];
@@ -94,6 +103,29 @@ export function saveProgress(topic: string, score: number, total: number) {
   all[topic] = { best: score, total, at: new Date().toISOString() };
   try {
     localStorage.setItem(KEY, JSON.stringify(all));
+  } catch {
+    /* private mode */
+  }
+}
+
+/** Pass mark for both steps of a topic on the learning path. */
+export const PASS = 0.8;
+
+/** Best recognition-quiz score per topic, kept in this browser. */
+const QUIZ_KEY = 'grammar:quiz';
+export function readQuiz(): Record<string, TopicProgress> {
+  try {
+    return JSON.parse(localStorage.getItem(QUIZ_KEY) ?? '{}') as Record<string, TopicProgress>;
+  } catch {
+    return {};
+  }
+}
+export function saveQuiz(topic: string, score: number, total: number) {
+  const all = readQuiz();
+  if (all[topic] && all[topic].best >= score) return;
+  all[topic] = { best: score, total, at: new Date().toISOString() };
+  try {
+    localStorage.setItem(QUIZ_KEY, JSON.stringify(all));
   } catch {
     /* private mode */
   }

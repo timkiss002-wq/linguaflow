@@ -1,0 +1,403 @@
+{
+ "_note": "Bài kiểm tra trình độ dùng lúc bắt đầu (14/11/2026) và để kiểm tra lại cuối mỗi giai đoạn.",
+ "grammar": [
+  {
+   "level": "A2",
+   "q": "She ___ to school every day.",
+   "options": [
+    "go",
+    "goes",
+    "going",
+    "gone"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "A2",
+   "q": "There aren't ___ apples left in the fridge.",
+   "options": [
+    "some",
+    "any",
+    "much",
+    "a"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B1",
+   "q": "I ___ in Hanoi since 2020.",
+   "options": [
+    "live",
+    "lived",
+    "have lived",
+    "am living"
+   ],
+   "answer": 2
+  },
+  {
+   "level": "B1",
+   "q": "If it rains tomorrow, we ___ at home.",
+   "options": [
+    "stay",
+    "will stay",
+    "would stay",
+    "stayed"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B1",
+   "q": "The bridge ___ in 1990.",
+   "options": [
+    "built",
+    "was built",
+    "has built",
+    "is building"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B1",
+   "q": "This is the book ___ I told you about.",
+   "options": [
+    "who",
+    "which",
+    "whose",
+    "where"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B1",
+   "q": "He is ___ student in the class.",
+   "options": [
+    "tall",
+    "taller",
+    "the tallest",
+    "most tall"
+   ],
+   "answer": 2
+  },
+  {
+   "level": "B2",
+   "q": "If I ___ more free time, I would learn Chinese.",
+   "options": [
+    "have",
+    "had",
+    "will have",
+    "would have"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B2",
+   "q": "___ the heavy traffic, she arrived on time.",
+   "options": [
+    "Although",
+    "Despite",
+    "Because",
+    "Even"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B2",
+   "q": "The number of international students ___ increased sharply.",
+   "options": [
+    "have",
+    "has",
+    "are",
+    "were"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B2",
+   "q": "She suggested ___ a taxi to the airport.",
+   "options": [
+    "take",
+    "to take",
+    "taking",
+    "took"
+   ],
+   "answer": 2
+  },
+  {
+   "level": "B2",
+   "q": "The report, ___ was published last week, shows a rise in unemployment.",
+   "options": [
+    "that",
+    "which",
+    "what",
+    "who"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "C1",
+   "q": "Had I known about the problem, I ___ it earlier.",
+   "options": [
+    "would fix",
+    "would have fixed",
+    "will fix",
+    "fixed"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "C1",
+   "q": "Not only ___ the exam, but she also got the highest score.",
+   "options": [
+    "she passed",
+    "did she pass",
+    "she did pass",
+    "passed she"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "C1",
+   "q": "___ in 1885, the university is one of the oldest in the country.",
+   "options": [
+    "Founding",
+    "Founded",
+    "Having founded",
+    "To found"
+   ],
+   "answer": 1
+  }
+ ],
+ "vocab": [
+  {
+   "level": "B1",
+   "q": "The government should ___ more money in public transport.",
+   "options": [
+    "invest",
+    "pay",
+    "cost",
+    "charge"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "B1",
+   "q": "Air pollution has a negative ___ on people's health.",
+   "options": [
+    "affect",
+    "effect",
+    "result",
+    "cause"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B1",
+   "q": "Choose the word closest in meaning to \"significant\".",
+   "options": [
+    "important",
+    "small",
+    "strange",
+    "quick"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "B2",
+   "q": "Many people ___ a healthy lifestyle by exercising regularly.",
+   "options": [
+    "maintain",
+    "remain",
+    "contain",
+    "obtain"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "B2",
+   "q": "The ___ of the new policy took two years.",
+   "options": [
+    "implement",
+    "implementation",
+    "implemental",
+    "implementing"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B2",
+   "q": "After a long discussion, the committee finally ___ a conclusion.",
+   "options": [
+    "reached",
+    "did",
+    "took",
+    "put"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "B2",
+   "q": "Unemployment rates have fallen ___ over the past decade.",
+   "options": [
+    "steady",
+    "steadily",
+    "steadiness",
+    "steadied"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "B2",
+   "q": "People in rural areas often have limited ___ to healthcare.",
+   "options": [
+    "access",
+    "approach",
+    "entry",
+    "admission"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "C1",
+   "q": "\"Mitigate\" the effects of climate change means to ___ them.",
+   "options": [
+    "reduce",
+    "worsen",
+    "ignore",
+    "measure"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "C1",
+   "q": "The study's findings were ___, so further research is needed.",
+   "options": [
+    "inconclusive",
+    "incredible",
+    "inevitable",
+    "invaluable"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "C1",
+   "q": "\"Urban sprawl\" refers to ___.",
+   "options": [
+    "the uncontrolled spread of a city into nearby land",
+    "the cleanliness of city streets",
+    "a decline in city population",
+    "the construction of tall buildings"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "C1",
+   "q": "This trend is likely to ___ in the coming years.",
+   "options": [
+    "persist",
+    "insist",
+    "consist",
+    "resist"
+   ],
+   "answer": 0
+  }
+ ],
+ "passage": [
+  "Vertical farming, the practice of growing crops in stacked layers inside controlled indoor environments, has attracted considerable attention over the past decade. Proponents argue that it could ease pressure on agricultural land, which is increasingly scarce as cities expand. Because plants are grown under LED lighting and their nutrients are delivered through water rather than soil, vertical farms can operate all year round, regardless of the weather outside. Some facilities claim to use up to 95 percent less water than conventional fields.",
+  "However, the technology is not without its critics. The most frequently cited drawback is energy consumption. Replacing sunlight with artificial light requires vast amounts of electricity, and unless this electricity comes from renewable sources, the environmental benefits may be largely cancelled out. Moreover, the high cost of construction means that most vertical farms have so far focused on leafy greens and herbs, which grow quickly and sell at relatively high prices. Staple crops such as wheat and rice, which feed most of the world's population, remain economically unviable to grow in this way.",
+  "Several high-profile companies in the sector have filed for bankruptcy in recent years, prompting some analysts to question whether the industry was overhyped. Others, though, maintain that these failures reflect poor business planning rather than a flaw in the concept itself. They point out that as LED efficiency improves and renewable energy becomes cheaper, the economics of indoor farming could shift considerably. Whether vertical farming becomes a mainstream solution or remains a niche one is likely to depend less on agricultural science than on the price of energy."
+ ],
+ "reading": [
+  {
+   "level": "TFNG",
+   "q": "Vertical farms are unaffected by outdoor weather conditions.",
+   "options": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "TFNG",
+   "q": "All vertical farms use 95 percent less water than traditional farms.",
+   "options": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "TFNG",
+   "q": "Vertical farming is more popular in Asia than in Europe.",
+   "options": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2
+  },
+  {
+   "level": "TFNG",
+   "q": "Some analysts believe the bankruptcies were caused by weak management decisions.",
+   "options": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0
+  },
+  {
+   "level": "MCQ",
+   "q": "The main criticism of vertical farming relates to",
+   "options": [
+    "water use",
+    "electricity use",
+    "soil quality",
+    "labour costs"
+   ],
+   "answer": 1
+  },
+  {
+   "level": "MCQ",
+   "q": "Most vertical farms grow leafy greens because they",
+   "options": [
+    "need little light",
+    "are easy to transport",
+    "grow fast and are profitable",
+    "are staple foods"
+   ],
+   "answer": 2
+  },
+  {
+   "level": "MCQ",
+   "q": "What does the writer suggest about the future of vertical farming?",
+   "options": [
+    "It will replace traditional farming",
+    "It depends mainly on energy costs",
+    "It requires new agricultural science",
+    "It has already failed"
+   ],
+   "answer": 1
+  }
+ ],
+ "translate": [
+  {
+   "vi": "Ngày càng nhiều người trẻ chọn sống ở các thành phố lớn để tìm việc làm.",
+   "model": "More and more young people are choosing to live in big cities to find work."
+  },
+  {
+   "vi": "Mặc dù công nghệ mang lại nhiều lợi ích, nó cũng gây ra một số vấn đề nghiêm trọng.",
+   "model": "Although technology brings many benefits, it also causes some serious problems."
+  },
+  {
+   "vi": "Chính phủ nên đầu tư nhiều hơn vào giao thông công cộng để giảm ùn tắc.",
+   "model": "The government should invest more in public transport to reduce traffic congestion."
+  },
+  {
+   "vi": "Nếu học sinh được dạy kỹ năng quản lý tài chính từ sớm, các em sẽ đưa ra quyết định tốt hơn khi trưởng thành.",
+   "model": "If students are taught financial management skills early, they will make better decisions when they grow up."
+  }
+ ],
+ "essay": "Some people think that university students should only study subjects related to their future jobs. To what extent do you agree or disagree?"
+}

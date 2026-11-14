@@ -110,6 +110,74 @@
             "My older sister often reads books in the evening."
           ]
         }
+      ],
+      "quiz": [
+        {
+          "q": "She ___ to school every day.",
+          "options": [
+            "go",
+            "goes",
+            "going",
+            "gone"
+          ],
+          "answer": 1,
+          "why_vi": "Chủ ngữ she → V-s."
+        },
+        {
+          "q": "My parents ___ coffee.",
+          "options": [
+            "doesn't drink",
+            "don't drink",
+            "not drink",
+            "isn't drink"
+          ],
+          "answer": 1,
+          "why_vi": "Chủ ngữ số nhiều → don't + V."
+        },
+        {
+          "q": "___ he work at the weekend?",
+          "options": [
+            "Do",
+            "Does",
+            "Is",
+            "Has"
+          ],
+          "answer": 1,
+          "why_vi": "Câu hỏi với he → Does."
+        },
+        {
+          "q": "Water ___ at 100°C.",
+          "options": [
+            "boil",
+            "boils",
+            "is boil",
+            "boiling"
+          ],
+          "answer": 1,
+          "why_vi": "Sự thật hiển nhiên, chủ ngữ số ít → boils."
+        },
+        {
+          "q": "Most students ___ by bus.",
+          "options": [
+            "travels",
+            "travel",
+            "travelling",
+            "is travel"
+          ],
+          "answer": 1,
+          "why_vi": "Chủ ngữ số nhiều → V nguyên mẫu."
+        },
+        {
+          "q": "He usually ___ up at 6 a.m.",
+          "options": [
+            "get",
+            "gets",
+            "getting",
+            "is get"
+          ],
+          "answer": 1,
+          "why_vi": "Thói quen, chủ ngữ he → gets."
+        }
       ]
     },
     {
@@ -226,6 +294,74 @@
             "I met my former teacher in the park last week.",
             "I saw my old teacher in the park last week."
           ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "I ___ to Da Nang last summer.",
+          "options": [
+            "go",
+            "went",
+            "have gone",
+            "goes"
+          ],
+          "answer": 1,
+          "why_vi": "last summer → quá khứ đơn."
+        },
+        {
+          "q": "She ___ the email yesterday.",
+          "options": [
+            "didn't send",
+            "didn't sent",
+            "not sent",
+            "doesn't send"
+          ],
+          "answer": 0,
+          "why_vi": "didn't + V nguyên mẫu."
+        },
+        {
+          "q": "When ___ you start learning English?",
+          "options": [
+            "do",
+            "did",
+            "have",
+            "were"
+          ],
+          "answer": 1,
+          "why_vi": "Hỏi về thời điểm trong quá khứ → did."
+        },
+        {
+          "q": "The bridge ___ in 1990.",
+          "options": [
+            "built",
+            "was built",
+            "has built",
+            "is building"
+          ],
+          "answer": 1,
+          "why_vi": "Bị động quá khứ: was + V3."
+        },
+        {
+          "q": "In 2010, the population ___ 5 million.",
+          "options": [
+            "reach",
+            "reached",
+            "has reached",
+            "reaches"
+          ],
+          "answer": 1,
+          "why_vi": "Mốc thời gian quá khứ (Task 1) → quá khứ đơn."
+        },
+        {
+          "q": "They ___ at home last night.",
+          "options": [
+            "was",
+            "were",
+            "are",
+            "been"
+          ],
+          "answer": 1,
+          "why_vi": "They → were."
         }
       ]
     },
@@ -356,6 +492,74 @@
             "They haven't found a solution for this problem."
           ]
         }
+      ],
+      "quiz": [
+        {
+          "q": "I ___ in Hanoi since 2020.",
+          "options": [
+            "live",
+            "lived",
+            "have lived",
+            "am living"
+          ],
+          "answer": 2,
+          "why_vi": "since + mốc thời gian → hiện tại hoàn thành."
+        },
+        {
+          "q": "She ___ three books this month.",
+          "options": [
+            "reads",
+            "has read",
+            "read",
+            "is reading"
+          ],
+          "answer": 1,
+          "why_vi": "this month (chưa kết thúc) → has read."
+        },
+        {
+          "q": "Have you ever ___ abroad?",
+          "options": [
+            "travel",
+            "travelled",
+            "travelling",
+            "to travel"
+          ],
+          "answer": 1,
+          "why_vi": "have + V3."
+        },
+        {
+          "q": "The number of cars ___ doubled since 2000.",
+          "options": [
+            "have",
+            "has",
+            "is",
+            "was"
+          ],
+          "answer": 1,
+          "why_vi": "The number of → has."
+        },
+        {
+          "q": "We ___ each other for ten years.",
+          "options": [
+            "know",
+            "knew",
+            "have known",
+            "are knowing"
+          ],
+          "answer": 2,
+          "why_vi": "for + khoảng thời gian đến nay → have known."
+        },
+        {
+          "q": "He has ___ finished his homework.",
+          "options": [
+            "yet",
+            "already",
+            "since",
+            "ago"
+          ],
+          "answer": 1,
+          "why_vi": "already đứng giữa has và V3."
+        }
       ]
     },
     {
@@ -467,6 +671,74 @@
           "en": [
             "Don't worry, I will help you."
           ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Look at those clouds! It ___ rain.",
+          "options": [
+            "will",
+            "is going to",
+            "rains",
+            "going to"
+          ],
+          "answer": 1,
+          "why_vi": "Có dấu hiệu rõ ràng → be going to."
+        },
+        {
+          "q": "I think robots ___ many jobs in the future.",
+          "options": [
+            "replace",
+            "will replace",
+            "replaced",
+            "are replace"
+          ],
+          "answer": 1,
+          "why_vi": "Dự đoán theo quan điểm → will."
+        },
+        {
+          "q": "By the time the manager arrives, the team ___ the presentation.",
+          "options": [
+            "finishes",
+            "will have finished",
+            "has finished",
+            "finished"
+          ],
+          "answer": 1,
+          "why_vi": "By the time + hiện tại → tương lai hoàn thành."
+        },
+        {
+          "q": "The population ___ to reach 10 million by 2030.",
+          "options": [
+            "expects",
+            "is expected",
+            "will expect",
+            "expected"
+          ],
+          "answer": 1,
+          "why_vi": "be expected to + V (Task 1 dự đoán)."
+        },
+        {
+          "q": "I ___ you tomorrow, I promise.",
+          "options": [
+            "call",
+            "will call",
+            "am calling to",
+            "called"
+          ],
+          "answer": 1,
+          "why_vi": "Lời hứa → will."
+        },
+        {
+          "q": "We ___ visit our grandparents next weekend. We have bought tickets.",
+          "options": [
+            "will",
+            "are going to",
+            "go",
+            "went"
+          ],
+          "answer": 1,
+          "why_vi": "Kế hoạch đã định → be going to."
         }
       ]
     },
@@ -599,6 +871,74 @@
             "This room is as spacious as that one."
           ]
         }
+      ],
+      "quiz": [
+        {
+          "q": "He is ___ student in the class.",
+          "options": [
+            "tall",
+            "taller",
+            "the tallest",
+            "most tall"
+          ],
+          "answer": 2,
+          "why_vi": "So sánh nhất với tính từ ngắn: the + adj-est."
+        },
+        {
+          "q": "Living in a city is ___ than living in the countryside.",
+          "options": [
+            "expensive",
+            "more expensive",
+            "most expensive",
+            "expensiver"
+          ],
+          "answer": 1,
+          "why_vi": "Tính từ dài → more + adj + than."
+        },
+        {
+          "q": "This year's sales were twice as high ___ last year's.",
+          "options": [
+            "than",
+            "as",
+            "so",
+            "like"
+          ],
+          "answer": 1,
+          "why_vi": "twice as + adj + as."
+        },
+        {
+          "q": "The number of visitors was ___ in July.",
+          "options": [
+            "highest",
+            "the highest",
+            "higher",
+            "more high"
+          ],
+          "answer": 1,
+          "why_vi": "So sánh nhất cần the."
+        },
+        {
+          "q": "Cars are ___ bicycles for long distances.",
+          "options": [
+            "more convenient than",
+            "convenienter than",
+            "most convenient",
+            "more convenient as"
+          ],
+          "answer": 0,
+          "why_vi": "more + adj + than."
+        },
+        {
+          "q": "The more you practise, ___ you become.",
+          "options": [
+            "the better",
+            "better",
+            "the best",
+            "more better"
+          ],
+          "answer": 0,
+          "why_vi": "Cấu trúc the + so sánh hơn, the + so sánh hơn."
+        }
       ]
     },
     {
@@ -720,6 +1060,74 @@
             "This painting was drawn by a famous artist.",
             "This picture was drawn by a famous artist."
           ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The bridge ___ in 1990.",
+          "options": [
+            "built",
+            "was built",
+            "has built",
+            "is building"
+          ],
+          "answer": 1,
+          "why_vi": "Chủ ngữ không tự xây → bị động was built."
+        },
+        {
+          "q": "The quarterly report ___ to all shareholders next week.",
+          "options": [
+            "will send",
+            "will be sent",
+            "is sending",
+            "sent"
+          ],
+          "answer": 1,
+          "why_vi": "Bị động tương lai: will be + V3."
+        },
+        {
+          "q": "English ___ in many countries.",
+          "options": [
+            "speaks",
+            "is spoken",
+            "is speaking",
+            "spoke"
+          ],
+          "answer": 1,
+          "why_vi": "Bị động hiện tại: is + V3."
+        },
+        {
+          "q": "If students ___ financial skills, they will manage money better.",
+          "options": [
+            "teach",
+            "are taught",
+            "are teaching",
+            "taught"
+          ],
+          "answer": 1,
+          "why_vi": "Học sinh được dạy → are taught."
+        },
+        {
+          "q": "First, the leaves ___ by hand.",
+          "options": [
+            "pick",
+            "are picked",
+            "picking",
+            "are picking"
+          ],
+          "answer": 1,
+          "why_vi": "Process (Task 1) dùng bị động."
+        },
+        {
+          "q": "A new hospital ___ at the moment.",
+          "options": [
+            "is building",
+            "is being built",
+            "builds",
+            "has built"
+          ],
+          "answer": 1,
+          "why_vi": "Bị động tiếp diễn: is being + V3."
         }
       ]
     },
@@ -851,6 +1259,74 @@
             "Air pollution, which is a serious issue in big cities, affects people's health."
           ]
         }
+      ],
+      "quiz": [
+        {
+          "q": "This is the book ___ I told you about.",
+          "options": [
+            "who",
+            "which",
+            "whose",
+            "where"
+          ],
+          "answer": 1,
+          "why_vi": "Vật → which/that."
+        },
+        {
+          "q": "The employee ___ proposal was selected will receive a bonus.",
+          "options": [
+            "who",
+            "whom",
+            "whose",
+            "which"
+          ],
+          "answer": 2,
+          "why_vi": "Sở hữu → whose + N."
+        },
+        {
+          "q": "The report, ___ was published last week, shows a rise in unemployment.",
+          "options": [
+            "that",
+            "which",
+            "what",
+            "who"
+          ],
+          "answer": 1,
+          "why_vi": "Mệnh đề không xác định (có dấu phẩy) → which, không dùng that."
+        },
+        {
+          "q": "That is the town ___ I grew up.",
+          "options": [
+            "which",
+            "where",
+            "who",
+            "whose"
+          ],
+          "answer": 1,
+          "why_vi": "Nơi chốn → where."
+        },
+        {
+          "q": "People ___ live in cities often work long hours.",
+          "options": [
+            "who",
+            "which",
+            "whose",
+            "where"
+          ],
+          "answer": 0,
+          "why_vi": "Người → who."
+        },
+        {
+          "q": "My sister, ___ lives in Da Nang, is a doctor.",
+          "options": [
+            "that",
+            "who",
+            "which",
+            "whom"
+          ],
+          "answer": 1,
+          "why_vi": "Người, mệnh đề không xác định → who."
+        }
       ]
     },
     {
@@ -975,6 +1451,74 @@
             "If you heat water to 100 degrees Celsius, it boils."
           ]
         }
+      ],
+      "quiz": [
+        {
+          "q": "If it rains tomorrow, we ___ at home.",
+          "options": [
+            "stay",
+            "will stay",
+            "would stay",
+            "stayed"
+          ],
+          "answer": 1,
+          "why_vi": "Loại 1 → will + V."
+        },
+        {
+          "q": "If I ___ more time, I would learn to cook.",
+          "options": [
+            "have",
+            "had",
+            "will have",
+            "would have"
+          ],
+          "answer": 1,
+          "why_vi": "Loại 2 → If + quá khứ."
+        },
+        {
+          "q": "If I were you, I ___ that job.",
+          "options": [
+            "will take",
+            "would take",
+            "take",
+            "took"
+          ],
+          "answer": 1,
+          "why_vi": "Loại 2 → would + V."
+        },
+        {
+          "q": "If people ___ public transport, there will be less traffic.",
+          "options": [
+            "use",
+            "used",
+            "will use",
+            "would use"
+          ],
+          "answer": 0,
+          "why_vi": "Loại 1: không dùng will sau if."
+        },
+        {
+          "q": "Unless you hurry, you ___ the bus.",
+          "options": [
+            "miss",
+            "will miss",
+            "would miss",
+            "missed"
+          ],
+          "answer": 1,
+          "why_vi": "Unless = If not, loại 1."
+        },
+        {
+          "q": "If the city had more parks, people ___ healthier.",
+          "options": [
+            "will be",
+            "would be",
+            "are",
+            "had been"
+          ],
+          "answer": 1,
+          "why_vi": "Loại 2."
+        }
       ]
     },
     {
@@ -1098,6 +1642,74 @@
             "This could cause many health problems.",
             "This can result in many health problems."
           ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You ___ wear a seatbelt. It is the law.",
+          "options": [
+            "must",
+            "might",
+            "could",
+            "would"
+          ],
+          "answer": 0,
+          "why_vi": "Bắt buộc → must."
+        },
+        {
+          "q": "The government ___ invest more in education.",
+          "options": [
+            "should",
+            "would",
+            "might not",
+            "can't"
+          ],
+          "answer": 0,
+          "why_vi": "Lời khuyên → should."
+        },
+        {
+          "q": "She ___ speak three languages.",
+          "options": [
+            "can",
+            "must",
+            "should",
+            "would"
+          ],
+          "answer": 0,
+          "why_vi": "Khả năng → can."
+        },
+        {
+          "q": "Students ___ to wear uniforms at this school.",
+          "options": [
+            "must",
+            "have",
+            "should",
+            "can"
+          ],
+          "answer": 1,
+          "why_vi": "have to + V."
+        },
+        {
+          "q": "It ___ rain later, so take an umbrella.",
+          "options": [
+            "might",
+            "must",
+            "should",
+            "can't"
+          ],
+          "answer": 0,
+          "why_vi": "Khả năng xảy ra → might."
+        },
+        {
+          "q": "You ___ smoke here. It is not allowed.",
+          "options": [
+            "mustn't",
+            "don't have to",
+            "needn't",
+            "might"
+          ],
+          "answer": 0,
+          "why_vi": "Cấm → mustn't."
         }
       ]
     },
@@ -1243,6 +1855,74 @@
             "Despite the power cut, we still finished the test.",
             "Despite the power outage, we still finished the test."
           ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "It was expensive. ___, many people bought it.",
+          "options": [
+            "However",
+            "Although",
+            "Because",
+            "Despite"
+          ],
+          "answer": 0,
+          "why_vi": "Nối hai câu tương phản → However,"
+        },
+        {
+          "q": "He was tired, ___ he went to bed early.",
+          "options": [
+            "so",
+            "but",
+            "because",
+            "although"
+          ],
+          "answer": 0,
+          "why_vi": "Kết quả → so."
+        },
+        {
+          "q": "___, technology saves time. Secondly, it saves money.",
+          "options": [
+            "Firstly",
+            "Finally",
+            "However",
+            "Therefore"
+          ],
+          "answer": 0,
+          "why_vi": "Liệt kê ý đầu tiên → Firstly."
+        },
+        {
+          "q": "Prices rose. ___, sales fell.",
+          "options": [
+            "As a result",
+            "Despite",
+            "Although",
+            "Because"
+          ],
+          "answer": 0,
+          "why_vi": "Kết quả → As a result,"
+        },
+        {
+          "q": "___ example, many students work part-time.",
+          "options": [
+            "For",
+            "In",
+            "As",
+            "By"
+          ],
+          "answer": 0,
+          "why_vi": "For example."
+        },
+        {
+          "q": "Some people like cities, ___ others prefer villages.",
+          "options": [
+            "while",
+            "despite",
+            "because of",
+            "so that"
+          ],
+          "answer": 0,
+          "why_vi": "Đối lập hai nhóm → while."
         }
       ]
     },
@@ -1412,6 +2092,1156 @@
             "Revenue reached a peak of 10 million dollars in 2020.",
             "Revenue reached a peak of $10 million in 2020."
           ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Sales ___ sharply from 2010 to 2015.",
+          "options": [
+            "rose",
+            "raised",
+            "arised",
+            "rised"
+          ],
+          "answer": 0,
+          "why_vi": "rise – rose – risen (nội động từ)."
+        },
+        {
+          "q": "There was a ___ increase in the number of tourists.",
+          "options": [
+            "significant",
+            "significantly",
+            "signify",
+            "significance"
+          ],
+          "answer": 0,
+          "why_vi": "Trước danh từ → tính từ."
+        },
+        {
+          "q": "The figure ___ at 50% in 2020.",
+          "options": [
+            "peaked",
+            "peak",
+            "peaking",
+            "was peak"
+          ],
+          "answer": 0,
+          "why_vi": "peak (v) → peaked."
+        },
+        {
+          "q": "The number of users increased ___.",
+          "options": [
+            "steady",
+            "steadily",
+            "steadiness",
+            "steadied"
+          ],
+          "answer": 1,
+          "why_vi": "Sau động từ → trạng từ."
+        },
+        {
+          "q": "The price remained ___ over the period.",
+          "options": [
+            "stable",
+            "stably",
+            "stability",
+            "stabilise"
+          ],
+          "answer": 0,
+          "why_vi": "remain + tính từ."
+        },
+        {
+          "q": "By 2020, the figure ___ to 30%.",
+          "options": [
+            "falls",
+            "had fallen",
+            "has fell",
+            "fallen"
+          ],
+          "answer": 1,
+          "why_vi": "By + mốc quá khứ → quá khứ hoàn thành."
+        }
+      ]
+    },
+    {
+      "id": "nouns-articles",
+      "title_vi": "Danh từ số nhiều, mạo từ & some/any",
+      "title_en": "Plural nouns, articles, some / any",
+      "band": "4.5",
+      "diagram": "nouns",
+      "summary_vi": "Danh từ đếm được số nhiều phải có -s; danh từ không đếm được không có -s và không đi với a/an. Some dùng trong câu khẳng định, any trong câu phủ định và câu hỏi.",
+      "formula": [
+        "many / a few + danh từ đếm được số nhiều (students, problems)",
+        "much / a little + danh từ không đếm được (information, advice, money)",
+        "a / an + danh từ đếm được số ít (a job, an idea)",
+        "some + câu khẳng định · any + câu phủ định / câu hỏi"
+      ],
+      "tips_vi": [
+        "\"people\" đã là số nhiều: young people (không viết young persons trong bài IELTS).",
+        "information, advice, research, equipment, knowledge, traffic là không đếm được: không thêm -s, không dùng a/an.",
+        "Nói chung chung về một nhóm: dùng số nhiều không mạo từ — Students need sleep.",
+        "Sau \"one of the\" luôn là danh từ số nhiều: one of the biggest problems."
+      ],
+      "examples": [
+        {
+          "en": "More and more young people move to big cities.",
+          "vi": "Ngày càng nhiều người trẻ chuyển đến các thành phố lớn."
+        },
+        {
+          "en": "There isn't any information about the cause.",
+          "vi": "Không có thông tin nào về nguyên nhân."
+        },
+        {
+          "en": "Pollution is one of the most serious problems in cities.",
+          "vi": "Ô nhiễm là một trong những vấn đề nghiêm trọng nhất ở thành phố."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Ngày càng nhiều người trẻ sống ở các thành phố lớn.",
+          "scene": "👩‍🎓🏙️",
+          "hint": "young people · big cities",
+          "en": [
+            "More and more young people live in big cities.",
+            "More and more young people are living in big cities.",
+            "More and more young people live in large cities."
+          ]
+        },
+        {
+          "vi": "Công nghệ gây ra một số vấn đề nghiêm trọng.",
+          "scene": "💻⚠️",
+          "hint": "some serious problems",
+          "en": [
+            "Technology causes some serious problems.",
+            "Technology creates some serious problems."
+          ]
+        },
+        {
+          "vi": "Không còn quả táo nào trong tủ lạnh.",
+          "scene": "🍎❌",
+          "hint": "There aren't any …",
+          "en": [
+            "There aren't any apples in the fridge.",
+            "There are no apples in the fridge.",
+            "There aren't any apples left in the fridge.",
+            "There are no apples left in the fridge."
+          ]
+        },
+        {
+          "vi": "Sinh viên cần lời khuyên về nghề nghiệp.",
+          "scene": "🎓💬",
+          "hint": "advice (không đếm được)",
+          "en": [
+            "Students need advice about careers.",
+            "Students need career advice.",
+            "Students need advice on careers."
+          ]
+        },
+        {
+          "vi": "Ô nhiễm là một trong những vấn đề lớn nhất ở thành phố.",
+          "scene": "🏭🌫️",
+          "hint": "one of the biggest problems",
+          "en": [
+            "Pollution is one of the biggest problems in cities.",
+            "Pollution is one of the biggest problems in the city."
+          ]
+        },
+        {
+          "vi": "Tôi cần thêm thông tin về khóa học.",
+          "scene": "📄❓",
+          "hint": "more information",
+          "en": [
+            "I need more information about the course.",
+            "I need more information on the course."
+          ]
+        },
+        {
+          "vi": "Nhiều gia đình không có đủ tiền để mua nhà.",
+          "scene": "👨‍👩‍👧🏠",
+          "hint": "many families · enough money",
+          "en": [
+            "Many families do not have enough money to buy a house.",
+            "Many families do not have enough money to buy houses.",
+            "Many families cannot afford to buy a house."
+          ]
+        },
+        {
+          "vi": "Bạn có câu hỏi nào không?",
+          "scene": "🙋❓",
+          "hint": "any questions",
+          "en": [
+            "Do you have any questions?",
+            "Have you got any questions?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "There aren't ___ students in the library today.",
+          "options": [
+            "some",
+            "any",
+            "much",
+            "a"
+          ],
+          "answer": 1,
+          "why_vi": "Câu phủ định (aren't) → dùng any."
+        },
+        {
+          "q": "The teacher gave us some useful ___.",
+          "options": [
+            "advices",
+            "advice",
+            "an advice",
+            "advicees"
+          ],
+          "answer": 1,
+          "why_vi": "advice là danh từ không đếm được: không thêm -s, không dùng an."
+        },
+        {
+          "q": "More and more young ___ are moving to cities.",
+          "options": [
+            "person",
+            "people",
+            "persons",
+            "peoples"
+          ],
+          "answer": 1,
+          "why_vi": "Số nhiều của person trong ngữ cảnh này là people."
+        },
+        {
+          "q": "Traffic congestion is one of the biggest ___ in Hanoi.",
+          "options": [
+            "problem",
+            "problems",
+            "a problem",
+            "the problem"
+          ],
+          "answer": 1,
+          "why_vi": "Sau one of the + so sánh nhất → danh từ số nhiều."
+        },
+        {
+          "q": "How ___ money do you spend on food each month?",
+          "options": [
+            "many",
+            "much",
+            "few",
+            "a lot"
+          ],
+          "answer": 1,
+          "why_vi": "money không đếm được → how much."
+        },
+        {
+          "q": "She is ___ engineer at a large company.",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "—"
+          ],
+          "answer": 1,
+          "why_vi": "engineer bắt đầu bằng nguyên âm /e/ → an."
+        }
+      ]
+    },
+    {
+      "id": "agreement",
+      "title_vi": "Hòa hợp chủ ngữ – động từ",
+      "title_en": "Subject–verb agreement",
+      "band": "5.0",
+      "diagram": "agreement",
+      "summary_vi": "Động từ phải hợp với chủ ngữ chính: chủ ngữ số ít → is/has/V-s; số nhiều → are/have/V. Cẩn thận khi chủ ngữ dài hoặc có cụm \"of\".",
+      "formula": [
+        "The number of + N số nhiều → động từ số ít (has, is)",
+        "A number of + N số nhiều → động từ số nhiều (have, are)",
+        "Each / Every / Everyone + động từ số ít",
+        "Chủ ngữ dài: tìm danh từ chính — The cost of houses IS high."
+      ],
+      "tips_vi": [
+        "Task 1 rất hay dùng: The number of tourists has increased.",
+        "\"The percentage of people\" → động từ số ít (was, has).",
+        "People, police, children là số nhiều: People are… / Children have…",
+        "V-ing làm chủ ngữ → số ít: Learning languages is useful."
+      ],
+      "examples": [
+        {
+          "en": "The number of international students has increased sharply.",
+          "vi": "Số lượng sinh viên quốc tế đã tăng mạnh."
+        },
+        {
+          "en": "A number of students have complained.",
+          "vi": "Một số sinh viên đã phàn nàn."
+        },
+        {
+          "en": "The cost of living in big cities is very high.",
+          "vi": "Chi phí sinh hoạt ở các thành phố lớn rất cao."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Số lượng khách du lịch đã tăng mạnh.",
+          "scene": "🧳📈",
+          "hint": "The number of … has",
+          "en": [
+            "The number of tourists has increased sharply.",
+            "The number of tourists has risen sharply.",
+            "The number of tourists increased sharply.",
+            "The number of tourists rose sharply."
+          ]
+        },
+        {
+          "vi": "Một số sinh viên học thêm vào buổi tối.",
+          "scene": "🎓🌙",
+          "hint": "A number of … study",
+          "en": [
+            "A number of students study in the evening.",
+            "A number of students take extra classes in the evening.",
+            "Some students study in the evening."
+          ]
+        },
+        {
+          "vi": "Chi phí nhà ở tại các thành phố lớn rất cao.",
+          "scene": "🏠💸",
+          "hint": "The cost of … is",
+          "en": [
+            "The cost of housing in big cities is very high.",
+            "The cost of housing in large cities is very high.",
+            "Housing costs in big cities are very high."
+          ]
+        },
+        {
+          "vi": "Mỗi học sinh có một máy tính riêng.",
+          "scene": "🧑‍💻",
+          "hint": "Each student has",
+          "en": [
+            "Each student has their own computer.",
+            "Every student has their own computer.",
+            "Each student has a computer."
+          ]
+        },
+        {
+          "vi": "Học ngoại ngữ rất hữu ích.",
+          "scene": "📚🌍",
+          "hint": "Learning … is",
+          "en": [
+            "Learning foreign languages is very useful.",
+            "Learning a foreign language is very useful."
+          ]
+        },
+        {
+          "vi": "Mọi người đều muốn có một công việc ổn định.",
+          "scene": "👥💼",
+          "hint": "Everyone wants",
+          "en": [
+            "Everyone wants a stable job.",
+            "Everybody wants a stable job.",
+            "Everyone wants to have a stable job."
+          ]
+        },
+        {
+          "vi": "Tỷ lệ người thất nghiệp đã giảm nhẹ.",
+          "scene": "📉👷",
+          "hint": "The percentage of … has",
+          "en": [
+            "The percentage of unemployed people has decreased slightly.",
+            "The percentage of unemployed people has fallen slightly.",
+            "The unemployment rate has decreased slightly.",
+            "The unemployment rate has fallen slightly."
+          ]
+        },
+        {
+          "vi": "Trẻ em ngày nay dành nhiều thời gian trên điện thoại.",
+          "scene": "🧒📱",
+          "hint": "Children spend",
+          "en": [
+            "Children today spend a lot of time on their phones.",
+            "Nowadays children spend a lot of time on their phones.",
+            "Children nowadays spend a lot of time on their phones."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The number of cars in the city ___ doubled.",
+          "options": [
+            "have",
+            "has",
+            "are",
+            "were"
+          ],
+          "answer": 1,
+          "why_vi": "The number of + N → động từ số ít."
+        },
+        {
+          "q": "A number of residents ___ complained about the noise.",
+          "options": [
+            "has",
+            "have",
+            "is",
+            "was"
+          ],
+          "answer": 1,
+          "why_vi": "A number of = nhiều/một số → động từ số nhiều."
+        },
+        {
+          "q": "The price of these houses ___ too high for young people.",
+          "options": [
+            "are",
+            "is",
+            "have",
+            "were"
+          ],
+          "answer": 1,
+          "why_vi": "Danh từ chính là \"the price\" (số ít)."
+        },
+        {
+          "q": "Every employee ___ a laptop.",
+          "options": [
+            "have",
+            "has",
+            "are having",
+            "were"
+          ],
+          "answer": 1,
+          "why_vi": "Every + danh từ số ít → has."
+        },
+        {
+          "q": "Reading books ___ children improve their vocabulary.",
+          "options": [
+            "help",
+            "helps",
+            "helping",
+            "are helping"
+          ],
+          "answer": 1,
+          "why_vi": "V-ing làm chủ ngữ → số ít."
+        },
+        {
+          "q": "Other classes often ___ students from different majors.",
+          "options": [
+            "has",
+            "have",
+            "is",
+            "was"
+          ],
+          "answer": 1,
+          "why_vi": "Chủ ngữ số nhiều (classes) → have."
+        }
+      ]
+    },
+    {
+      "id": "verb-patterns",
+      "title_vi": "Động từ + to V hay V-ing",
+      "title_en": "Verb patterns: to-infinitive or -ing",
+      "band": "5.0",
+      "diagram": "pattern",
+      "summary_vi": "Sau một số động từ phải dùng to V (choose, decide, want, plan, need), sau một số khác phải dùng V-ing (suggest, enjoy, avoid, consider, spend time). Sau giới từ luôn là V-ing.",
+      "formula": [
+        "choose / decide / want / plan / hope / need / try + to V",
+        "suggest / enjoy / avoid / consider / finish / keep + V-ing",
+        "spend (time/money) + V-ing · be interested in + V-ing",
+        "help + O + V (bare) · allow / encourage / force + O + to V"
+      ],
+      "tips_vi": [
+        "\"choose live\" là sai → choose to live.",
+        "\"suggest to take\" là sai → suggest taking.",
+        "Sau giới từ (in, of, for, by, about, without) luôn là V-ing: by investing, without studying.",
+        "\"It can help them understand…\" — help + O + V nguyên mẫu (không cần to)."
+      ],
+      "examples": [
+        {
+          "en": "Many young people choose to live in big cities.",
+          "vi": "Nhiều người trẻ chọn sống ở các thành phố lớn."
+        },
+        {
+          "en": "She suggested taking a taxi.",
+          "vi": "Cô ấy gợi ý đi taxi."
+        },
+        {
+          "en": "Teenagers spend hours playing games.",
+          "vi": "Thanh thiếu niên dành hàng giờ chơi game."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Nhiều người trẻ chọn sống ở thành phố để tìm việc.",
+          "scene": "🧑‍💼🏙️",
+          "hint": "choose to live",
+          "en": [
+            "Many young people choose to live in cities to find jobs.",
+            "Many young people choose to live in cities to find work.",
+            "Many young people choose to live in the city to find work."
+          ]
+        },
+        {
+          "vi": "Cô ấy gợi ý đi xe buýt đến trường.",
+          "scene": "🚌💡",
+          "hint": "suggest + V-ing",
+          "en": [
+            "She suggested taking the bus to school.",
+            "She suggested going to school by bus.",
+            "She suggests taking the bus to school."
+          ]
+        },
+        {
+          "vi": "Học sinh dành quá nhiều thời gian chơi điện tử.",
+          "scene": "🎮⏰",
+          "hint": "spend time + V-ing",
+          "en": [
+            "Students spend too much time playing video games.",
+            "Students spend too much time playing computer games."
+          ]
+        },
+        {
+          "vi": "Chính phủ quyết định xây một bệnh viện mới.",
+          "scene": "🏛️🏥",
+          "hint": "decide to build",
+          "en": [
+            "The government decided to build a new hospital.",
+            "The government has decided to build a new hospital."
+          ]
+        },
+        {
+          "vi": "Tôi thích đọc sách vào cuối tuần.",
+          "scene": "📖☕",
+          "hint": "enjoy + V-ing",
+          "en": [
+            "I enjoy reading books at the weekend.",
+            "I enjoy reading books on weekends.",
+            "I enjoy reading at the weekend."
+          ]
+        },
+        {
+          "vi": "Bạn nên tránh ăn đồ ăn nhanh.",
+          "scene": "🍔🚫",
+          "hint": "avoid + V-ing",
+          "en": [
+            "You should avoid eating fast food."
+          ]
+        },
+        {
+          "vi": "Bố mẹ nên khuyến khích con đọc sách.",
+          "scene": "👨‍👩‍👧📚",
+          "hint": "encourage + O + to V",
+          "en": [
+            "Parents should encourage their children to read books.",
+            "Parents should encourage their children to read."
+          ]
+        },
+        {
+          "vi": "Đi du lịch giúp chúng ta hiểu bản thân hơn.",
+          "scene": "✈️🧠",
+          "hint": "help + O + V",
+          "en": [
+            "Travelling helps us understand ourselves better.",
+            "Traveling helps us understand ourselves better.",
+            "Travelling helps us to understand ourselves better."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "More young people are choosing ___ abroad.",
+          "options": [
+            "study",
+            "to study",
+            "studying",
+            "studied"
+          ],
+          "answer": 1,
+          "why_vi": "choose + to V."
+        },
+        {
+          "q": "She suggested ___ a meeting on Friday.",
+          "options": [
+            "have",
+            "to have",
+            "having",
+            "had"
+          ],
+          "answer": 2,
+          "why_vi": "suggest + V-ing."
+        },
+        {
+          "q": "Teenagers spend a lot of time ___ social media.",
+          "options": [
+            "use",
+            "to use",
+            "using",
+            "used"
+          ],
+          "answer": 2,
+          "why_vi": "spend time + V-ing."
+        },
+        {
+          "q": "You can save money by ___ public transport.",
+          "options": [
+            "use",
+            "to use",
+            "using",
+            "used"
+          ],
+          "answer": 2,
+          "why_vi": "Sau giới từ (by) → V-ing."
+        },
+        {
+          "q": "The new rule will force companies ___ their emissions.",
+          "options": [
+            "reduce",
+            "to reduce",
+            "reducing",
+            "reduced"
+          ],
+          "answer": 1,
+          "why_vi": "force + O + to V."
+        },
+        {
+          "q": "They decided ___ the old factory.",
+          "options": [
+            "demolish",
+            "to demolish",
+            "demolishing",
+            "demolished"
+          ],
+          "answer": 1,
+          "why_vi": "decide + to V."
+        }
+      ]
+    },
+    {
+      "id": "word-order",
+      "title_vi": "Trật tự từ trong câu",
+      "title_en": "Word order",
+      "band": "4.5",
+      "diagram": "order",
+      "summary_vi": "Tiếng Anh theo trật tự Chủ ngữ – Động từ – Tân ngữ – Bổ ngữ (nơi chốn, thời gian). Tính từ đứng trước danh từ; trạng từ \"more/much\" đứng sau động từ + tân ngữ.",
+      "formula": [
+        "S + V + O + (place) + (time)",
+        "invest more in + N (không viết: more invest)",
+        "make better decisions (adj + N) — không viết make decisions better khi muốn nói \"quyết định tốt hơn\"",
+        "Trạng từ tần suất: S + always/often + V; S + be + often"
+      ],
+      "tips_vi": [
+        "Tiếng Việt \"đầu tư nhiều hơn vào\" → invest more in.",
+        "Tính từ trước danh từ: a serious problem (không: a problem serious).",
+        "Nơi chốn trước thời gian: I studied in the library yesterday.",
+        "Không đặt trạng từ giữa động từ và tân ngữ: I like football very much (không: I like very much football)."
+      ],
+      "examples": [
+        {
+          "en": "The government should invest more in public transport.",
+          "vi": "Chính phủ nên đầu tư nhiều hơn vào giao thông công cộng."
+        },
+        {
+          "en": "They will make better decisions when they grow up.",
+          "vi": "Các em sẽ đưa ra quyết định tốt hơn khi lớn lên."
+        },
+        {
+          "en": "People often work late in big cities.",
+          "vi": "Ở thành phố lớn người ta thường làm việc muộn."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Chính phủ nên đầu tư nhiều hơn vào giao thông công cộng.",
+          "scene": "🏛️🚇",
+          "hint": "invest more in",
+          "en": [
+            "The government should invest more in public transport.",
+            "The government should invest more in public transportation."
+          ]
+        },
+        {
+          "vi": "Học sinh sẽ đưa ra quyết định tốt hơn.",
+          "scene": "🧑‍🎓✅",
+          "hint": "make better decisions",
+          "en": [
+            "Students will make better decisions.",
+            "The students will make better decisions."
+          ]
+        },
+        {
+          "vi": "Tôi thường học ở thư viện vào buổi tối.",
+          "scene": "📚🌙",
+          "hint": "often · place · time",
+          "en": [
+            "I often study in the library in the evening.",
+            "I usually study in the library in the evening."
+          ]
+        },
+        {
+          "vi": "Đây là một vấn đề rất nghiêm trọng.",
+          "scene": "⚠️",
+          "hint": "a very serious problem",
+          "en": [
+            "This is a very serious problem."
+          ]
+        },
+        {
+          "vi": "Cô ấy nói tiếng Anh rất tốt.",
+          "scene": "🗣️👍",
+          "hint": "speak English very well",
+          "en": [
+            "She speaks English very well."
+          ]
+        },
+        {
+          "vi": "Chúng ta nên dành nhiều thời gian hơn cho gia đình.",
+          "scene": "👨‍👩‍👧⏰",
+          "hint": "spend more time with",
+          "en": [
+            "We should spend more time with our families.",
+            "We should spend more time with our family."
+          ]
+        },
+        {
+          "vi": "Người dân ở thành phố thường làm việc nhiều giờ.",
+          "scene": "🏙️⌛",
+          "hint": "often work long hours",
+          "en": [
+            "People in cities often work long hours.",
+            "City people often work long hours."
+          ]
+        },
+        {
+          "vi": "Anh ấy đã hoàn thành báo cáo rất nhanh.",
+          "scene": "📄⚡",
+          "hint": "finish the report very quickly",
+          "en": [
+            "He finished the report very quickly.",
+            "He completed the report very quickly."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Choose the correct sentence.",
+          "options": [
+            "The government should more invest in schools.",
+            "The government should invest more in schools.",
+            "The government more should invest in schools.",
+            "The government should invest in more schools more."
+          ],
+          "answer": 1,
+          "why_vi": "invest more in + N."
+        },
+        {
+          "q": "Choose the correct sentence.",
+          "options": [
+            "They will make decision better.",
+            "They will make better decisions.",
+            "They will better make decisions.",
+            "They will make decisions more better."
+          ],
+          "answer": 1,
+          "why_vi": "Tính từ so sánh (better) đứng trước danh từ số nhiều decisions."
+        },
+        {
+          "q": "Choose the correct sentence.",
+          "options": [
+            "I like very much reading.",
+            "I very much like read.",
+            "I like reading very much.",
+            "I like reading much very."
+          ],
+          "answer": 2,
+          "why_vi": "Trạng từ đứng sau động từ + tân ngữ."
+        },
+        {
+          "q": "Choose the correct sentence.",
+          "options": [
+            "She always is late.",
+            "She is always late.",
+            "Always she is late.",
+            "She is late always."
+          ],
+          "answer": 1,
+          "why_vi": "be + always."
+        },
+        {
+          "q": "Choose the correct sentence.",
+          "options": [
+            "It is a problem serious.",
+            "It is a serious problem.",
+            "It is serious a problem.",
+            "It is problem a serious."
+          ],
+          "answer": 1,
+          "why_vi": "Tính từ trước danh từ."
+        },
+        {
+          "q": "Choose the correct sentence.",
+          "options": [
+            "We met at the station yesterday.",
+            "We met yesterday at station.",
+            "We yesterday met at the station.",
+            "At the station we yesterday met."
+          ],
+          "answer": 0,
+          "why_vi": "Nơi chốn (at the station) trước thời gian (yesterday)."
+        }
+      ]
+    },
+    {
+      "id": "contrast-cause",
+      "title_vi": "Although / Despite · Because / Because of",
+      "title_en": "Contrast and cause: clause or noun?",
+      "band": "5.5",
+      "diagram": "linking",
+      "summary_vi": "Although, because, while là liên từ: theo sau là một mệnh đề (có chủ ngữ + động từ). Despite, in spite of, because of, due to là giới từ: theo sau là danh từ hoặc V-ing.",
+      "formula": [
+        "Although / Even though + S + V, S + V",
+        "Despite / In spite of + N / V-ing, S + V",
+        "Because / Since + S + V",
+        "Because of / Due to + N / V-ing"
+      ],
+      "tips_vi": [
+        "Mẹo: sau chỗ trống có động từ chia thì → although/because; chỉ có danh từ → despite/because of.",
+        "Không viết \"Although…, but…\" — chỉ dùng một trong hai.",
+        "Despite the fact that + S + V = Although + S + V.",
+        "While/Whereas dùng để so sánh hai ý đối lập trong Task 1 và Task 2."
+      ],
+      "examples": [
+        {
+          "en": "Despite the heavy traffic, she arrived on time.",
+          "vi": "Mặc dù tắc đường, cô ấy vẫn đến đúng giờ."
+        },
+        {
+          "en": "Although technology brings many benefits, it also causes problems.",
+          "vi": "Mặc dù công nghệ mang lại nhiều lợi ích, nó cũng gây ra nhiều vấn đề."
+        },
+        {
+          "en": "Many flights were cancelled because of the storm.",
+          "vi": "Nhiều chuyến bay bị hủy vì cơn bão."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Mặc dù tắc đường, cô ấy vẫn đến đúng giờ.",
+          "scene": "🚗⏰",
+          "hint": "Despite + N",
+          "en": [
+            "Despite the traffic, she arrived on time.",
+            "Despite the traffic jam, she arrived on time.",
+            "In spite of the traffic, she arrived on time.",
+            "Although there was a traffic jam, she arrived on time."
+          ]
+        },
+        {
+          "vi": "Mặc dù công nghệ mang lại nhiều lợi ích, nó cũng gây ra một số vấn đề.",
+          "scene": "💻⚖️",
+          "hint": "Although + S + V",
+          "en": [
+            "Although technology brings many benefits, it also causes some problems.",
+            "Although technology has many benefits, it also causes some problems.",
+            "Even though technology brings many benefits, it also causes some problems."
+          ]
+        },
+        {
+          "vi": "Nhiều chuyến bay bị hủy vì thời tiết xấu.",
+          "scene": "✈️🌧️",
+          "hint": "because of + N",
+          "en": [
+            "Many flights were cancelled because of the bad weather.",
+            "Many flights were canceled because of the bad weather.",
+            "Many flights were cancelled due to the bad weather.",
+            "Many flights were cancelled because of bad weather."
+          ]
+        },
+        {
+          "vi": "Anh ấy bị điểm thấp vì không ôn bài.",
+          "scene": "📉📚",
+          "hint": "because + S + V",
+          "en": [
+            "He got a low score because he did not revise.",
+            "He got a low mark because he did not revise.",
+            "He got a low score because he did not study."
+          ]
+        },
+        {
+          "vi": "Mặc dù lương thấp, cô ấy vẫn yêu công việc của mình.",
+          "scene": "💼❤️",
+          "hint": "Despite + N",
+          "en": [
+            "Despite the low salary, she still loves her job.",
+            "Despite her low salary, she still loves her job.",
+            "Although her salary is low, she still loves her job."
+          ]
+        },
+        {
+          "vi": "Mặc dù trời mưa to, trận đấu vẫn diễn ra.",
+          "scene": "🌧️⚽",
+          "hint": "Although + S + V",
+          "en": [
+            "Although it rained heavily, the match still took place.",
+            "Although it was raining heavily, the match still took place.",
+            "Despite the heavy rain, the match still took place."
+          ]
+        },
+        {
+          "vi": "Người dân rời nông thôn vì thiếu việc làm.",
+          "scene": "🌾➡️🏙️",
+          "hint": "because of a lack of",
+          "en": [
+            "People leave the countryside because of a lack of jobs.",
+            "People leave rural areas because of a lack of jobs.",
+            "People leave the countryside because there are not enough jobs."
+          ]
+        },
+        {
+          "vi": "Một số người thích sống ở thành phố, trong khi những người khác thích nông thôn.",
+          "scene": "🏙️↔️🌳",
+          "hint": "while",
+          "en": [
+            "Some people prefer living in cities, while others prefer the countryside.",
+            "Some people prefer to live in cities, while others prefer the countryside.",
+            "Some people prefer living in the city, while others prefer the countryside."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "___ the heavy traffic, she arrived on time.",
+          "options": [
+            "Although",
+            "Despite",
+            "Because",
+            "However"
+          ],
+          "answer": 1,
+          "why_vi": "Theo sau là cụm danh từ → Despite."
+        },
+        {
+          "q": "___ it was raining, they played football.",
+          "options": [
+            "Despite",
+            "In spite of",
+            "Although",
+            "Because of"
+          ],
+          "answer": 2,
+          "why_vi": "Theo sau là mệnh đề (it was raining) → Although."
+        },
+        {
+          "q": "The flight was delayed ___ the storm.",
+          "options": [
+            "because",
+            "because of",
+            "although",
+            "despite"
+          ],
+          "answer": 1,
+          "why_vi": "Theo sau là danh từ → because of."
+        },
+        {
+          "q": "He failed the exam ___ he did not study.",
+          "options": [
+            "because",
+            "because of",
+            "due to",
+            "despite"
+          ],
+          "answer": 0,
+          "why_vi": "Theo sau là mệnh đề → because."
+        },
+        {
+          "q": "Choose the correct sentence.",
+          "options": [
+            "Although it is cheap, but it is good.",
+            "Although it is cheap, it is good.",
+            "Despite it is cheap, it is good.",
+            "Although cheap it is, it is good."
+          ],
+          "answer": 1,
+          "why_vi": "Không dùng although và but cùng lúc."
+        },
+        {
+          "q": "___ living in a big city, she feels lonely.",
+          "options": [
+            "Although",
+            "Despite",
+            "Because",
+            "Since"
+          ],
+          "answer": 1,
+          "why_vi": "Theo sau là V-ing → Despite."
+        }
+      ]
+    },
+    {
+      "id": "conditionals-3",
+      "title_vi": "Câu điều kiện loại 3 & ôn loại 1–2",
+      "title_en": "Third conditional (and review of 1 & 2)",
+      "band": "5.5",
+      "diagram": "conditional",
+      "summary_vi": "Loại 3 nói về điều không có thật trong quá khứ: If + had + V3, S + would have + V3. Đảo ngữ: Had + S + V3, … (không cần if).",
+      "formula": [
+        "Loại 1 (có thể xảy ra): If + hiện tại đơn, S + will + V",
+        "Loại 2 (không có thật ở hiện tại): If + quá khứ đơn, S + would + V",
+        "Loại 3 (không có thật ở quá khứ): If + had + V3, S + would have + V3",
+        "Đảo ngữ loại 3: Had + S + V3, S + would have + V3"
+      ],
+      "tips_vi": [
+        "Không dùng will trong mệnh đề if: If it rains (không: If it will rain).",
+        "Loại 2 với be: If I were you, I would…",
+        "Loại 1 dùng nhiều trong Task 2 để nêu hệ quả: If students are taught…, they will…",
+        "Không trộn thì: \"If student was learned …, they will\" là sai — chọn đúng một loại."
+      ],
+      "examples": [
+        {
+          "en": "If I had known about the problem, I would have fixed it earlier.",
+          "vi": "Nếu tôi biết về vấn đề đó, tôi đã sửa nó sớm hơn."
+        },
+        {
+          "en": "If students are taught financial skills early, they will make better decisions.",
+          "vi": "Nếu học sinh được dạy kỹ năng tài chính sớm, các em sẽ đưa ra quyết định tốt hơn."
+        },
+        {
+          "en": "If I had more time, I would learn Chinese.",
+          "vi": "Nếu tôi có nhiều thời gian hơn, tôi sẽ học tiếng Trung."
+        }
+      ],
+      "items": [
+        {
+          "vi": "Nếu tôi biết trước, tôi đã giúp bạn.",
+          "scene": "🤷‍♀️🤝",
+          "hint": "If I had known, I would have",
+          "en": [
+            "If I had known, I would have helped you.",
+            "If I had known earlier, I would have helped you.",
+            "Had I known, I would have helped you."
+          ]
+        },
+        {
+          "vi": "Nếu anh ấy học chăm hơn, anh ấy đã đỗ kỳ thi.",
+          "scene": "📚🎓",
+          "hint": "If he had studied … would have passed",
+          "en": [
+            "If he had studied harder, he would have passed the exam.",
+            "Had he studied harder, he would have passed the exam."
+          ]
+        },
+        {
+          "vi": "Nếu học sinh được dạy kỹ năng tài chính sớm, các em sẽ đưa ra quyết định tốt hơn.",
+          "scene": "💰🧒",
+          "hint": "If + are taught …, will",
+          "en": [
+            "If students are taught financial skills early, they will make better decisions.",
+            "If students are taught financial management skills early, they will make better decisions."
+          ]
+        },
+        {
+          "vi": "Nếu tôi có nhiều tiền, tôi sẽ đi du lịch vòng quanh thế giới.",
+          "scene": "💵🌍",
+          "hint": "If I had …, I would",
+          "en": [
+            "If I had a lot of money, I would travel around the world.",
+            "If I had more money, I would travel around the world."
+          ]
+        },
+        {
+          "vi": "Nếu trời mưa ngày mai, chúng tôi sẽ ở nhà.",
+          "scene": "🌧️🏠",
+          "hint": "If it rains, we will",
+          "en": [
+            "If it rains tomorrow, we will stay at home.",
+            "If it rains tomorrow, we will stay home."
+          ]
+        },
+        {
+          "vi": "Nếu chúng tôi rời đi sớm hơn, chúng tôi đã không lỡ chuyến tàu.",
+          "scene": "🚆⏰",
+          "hint": "would not have missed",
+          "en": [
+            "If we had left earlier, we would not have missed the train.",
+            "Had we left earlier, we would not have missed the train."
+          ]
+        },
+        {
+          "vi": "Nếu chính phủ không đầu tư vào trường học, chất lượng giáo dục đã giảm.",
+          "scene": "🏫📉",
+          "hint": "If … had not invested, … would have",
+          "en": [
+            "If the government had not invested in schools, the quality of education would have decreased.",
+            "If the government had not invested in schools, the quality of education would have fallen."
+          ]
+        },
+        {
+          "vi": "Nếu tôi là bạn, tôi sẽ học IELTS mỗi ngày.",
+          "scene": "🙋📘",
+          "hint": "If I were you",
+          "en": [
+            "If I were you, I would study IELTS every day.",
+            "If I were you, I would study for IELTS every day."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Had I known about the problem, I ___ it earlier.",
+          "options": [
+            "would fix",
+            "would have fixed",
+            "will fix",
+            "fixed"
+          ],
+          "answer": 1,
+          "why_vi": "Đảo ngữ loại 3 → would have + V3."
+        },
+        {
+          "q": "If she ___ harder, she would have passed.",
+          "options": [
+            "studied",
+            "had studied",
+            "studies",
+            "would study"
+          ],
+          "answer": 1,
+          "why_vi": "Loại 3: If + had + V3."
+        },
+        {
+          "q": "If I ___ more free time, I would learn Chinese.",
+          "options": [
+            "have",
+            "had",
+            "will have",
+            "would have"
+          ],
+          "answer": 1,
+          "why_vi": "Loại 2: If + quá khứ đơn."
+        },
+        {
+          "q": "If it ___ tomorrow, we will stay at home.",
+          "options": [
+            "rains",
+            "will rain",
+            "rained",
+            "had rained"
+          ],
+          "answer": 0,
+          "why_vi": "Loại 1: không dùng will sau if."
+        },
+        {
+          "q": "If students ___ good habits early, they will benefit later.",
+          "options": [
+            "learn",
+            "learned",
+            "had learned",
+            "would learn"
+          ],
+          "answer": 0,
+          "why_vi": "Loại 1: If + hiện tại đơn, will + V."
+        },
+        {
+          "q": "If we had taken a taxi, we ___ late.",
+          "options": [
+            "would not be",
+            "will not be",
+            "would not have been",
+            "were not"
+          ],
+          "answer": 2,
+          "why_vi": "Loại 3: would have + V3."
         }
       ]
     }
