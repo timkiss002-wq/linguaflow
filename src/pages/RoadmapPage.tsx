@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useRoadmapContext } from '@/features/roadmap/useRoadmap';
 import { topicById } from '@/lib/grammar/drills';
 import { DAYS, PHASES, TARGET, TARGET_BAND, WEEKS, WEEKDAY_VI, daysBetween, daysOfWeek, formatDay, toDate, todayKey, NEW_WORDS, ALL_WORDS, type Week } from '@/lib/roadmap/plan';
-import { currentTopic, dayStatus, type Context, type DayStatus } from '@/lib/roadmap/progress';
+import { currentTopic, dayLock, dayStatus, type Context, type DayStatus } from '@/lib/roadmap/progress';
 import { cn } from '@/lib/utils';
 
 /** /lo-trinh — the whole path at a glance: phases, the grammar topic now open, and every week with its seven days. */
@@ -28,7 +28,7 @@ export default function RoadmapPage() {
           <p className="text-sm font-medium text-muted-foreground">Lộ trình cá nhân · từ band 5.0 (14/11/2026)</p>
           <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">IELTS {TARGET_BAND} trước ngày 15/04/2027</h1>
           <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-            Đi theo đúng thứ tự: nền ngữ pháp và từ vựng → bài tập nhỏ theo dạng câu → thi thử đề đầy đủ. Ngày chưa tới chỉ xem trước; việc còn nợ của ngày trước hiện đầu tiên ở trang Hôm nay.
+            Đi theo đúng thứ tự: nền ngữ pháp và từ vựng → bài tập nhỏ theo dạng câu → thi thử đề đầy đủ. Không khóa theo lịch: học xong hết bài của hôm nay thì học vượt sang ngày sau được, nhưng phải học xong ngày trước mới mở ngày sau. Việc còn nợ của ngày trước hiện đầu tiên ở trang Hôm nay.
           </p>
         </div>
         <div className="grid shrink-0 grid-cols-3 gap-3 text-center">
@@ -104,7 +104,7 @@ const CHIP: Record<DayStatus['state'], string> = {
   future: 'bg-card text-muted-foreground border-border',
   empty: 'bg-muted text-muted-foreground border-transparent',
 };
-const STATE_LABEL: Record<DayStatus['state'], string> = { done: 'xong', partial: 'làm dở', missed: 'chưa làm', today: 'hôm nay', future: 'chưa tới', empty: 'nghỉ' };
+const STATE_LABEL: Record<DayStatus['state'], string> = { done: 'xong', partial: 'làm dở', missed: 'chưa làm', today: 'hôm nay', future: 'ngày sau', empty: 'nghỉ' };
 
 function WeekRow({ week, ctx, today, current }: { week: Week; ctx: Context; today: string; current: boolean }) {
   const days = daysOfWeek(week.n);
@@ -138,7 +138,7 @@ function WeekRow({ week, ctx, today, current }: { week: Week; ctx: Context; toda
                 className={cn('flex h-12 w-11 flex-col items-center justify-center rounded-lg border text-xs font-semibold tabular-nums transition hover:ring-2 hover:ring-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring', CHIP[s.state], d.light && s.state === 'future' && 'border-dashed')}
               >
                 <span className="text-[10px] font-medium opacity-80">{WEEKDAY_VI[d.weekday]}</span>
-                {s.state === 'future' && d.date > today ? (
+                {s.state === 'future' && dayLock(d, ctx, today) ? (
                   <span className="flex items-center gap-0.5">
                     {date.getDate()}
                     <Lock className="size-2.5 opacity-60" aria-hidden />

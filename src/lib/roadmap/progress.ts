@@ -1,5 +1,6 @@
 import { readProgress, readQuiz, PASS } from '@/lib/grammar/drills';
 import { DAYS, GRAMMAR_SEQUENCE, previousTopic, todayKey, wordsOf, type Day, type Task } from './plan';
+import { sentencesOf } from './sentences';
 
 /**
  * What is done on the path. Ticks and retest results are kept in this browser (like the grammar and Passage 3
@@ -46,7 +47,7 @@ function write() {
 export const subscribeRoadmap = (l: () => void) => {
   listeners.add(l);
   const onStorage = (e: StorageEvent) => {
-    if (e.key === KEY || e.key?.startsWith('grammar:') || e.key?.startsWith('p3')) {
+    if (e.key?.startsWith('roadmap:') || e.key?.startsWith('grammar:') || e.key?.startsWith('p3')) {
       store = null;
       version++;
       l();
@@ -121,6 +122,8 @@ export function isDone(task: Task, ctx: Context): boolean {
       if (!ctx.notebook) return false;
       return wordsOf(task).every((w) => ctx.notebook!(w.t).practised);
     }
+    case 'vocab-active':
+      return Boolean(sentencesOf(task.id.slice(0, 10))?.passed);
     case 'reading-p3':
       return Boolean(s.done[task.id]) || ctx.p3Days.has(task.id.slice(0, 10));
     case 'retest':
@@ -132,9 +135,52 @@ export function isDone(task: Task, ctx: Context): boolean {
   }
 }
 
-/** Why a task cannot be started yet, or undefined. Future days are only for reading ahead. */
-export function lockReason(task: Task, day: Day, today = todayKey()): string | undefined {
-  if (day.date > today) return 'Chưa đến ngày — xem trước được, làm được từ ngày này.';
+/**
+ * Days are not locked by the calendar: the path is linear, so a later day opens as soon as everything before it is done.
+ * Today and past days are always open (unfinished work of past days shows first on "Hôm nay"). A future day opens when
+ * nothing is owed from past days and every lesson of the days from today up to it is finished — daily habits
+ * (card review, the short Passage 3, rest) don't count, they can't be done ahead.
+ */
+export function dayLock(day: Day, ctx: Context, today = todayKey()): string | undefined {
+  if (day.date <= today) return undefined;
+  const { owed, blocker } = openState(ctx, today);
+  if (owed) return 'Làm bù việc của những ngày trước, rồi học tiếp được ngày này.';
+  if (blocker && blocker.date < day.date) return `Học xong ngày ${blocker.date.slice(8, 10)}/${blocker.date.slice(5, 7)} trước rồi mới mở ngày này.`;
+  return undefined;
+}
+
+/** Computed once per change of progress (the path page asks for every day): what is owed, and the first unfinished day from today. */
+const openCache = new WeakMap<Context, { key: string; owed: number; blocker?: Day }>();
+function openState(ctx: Context, today: string) {
+  // grammar and sentence progress are written by their own pages without bumping `version`: include them in the key
+  const raw = (k: string) => {
+    try {
+      return localStorage.getItem(k) ?? '';
+    } catch {
+      return '';
+    }
+  };
+  const key = `${version}:${today}:${raw('grammar:progress')}:${raw('grammar:quiz')}:${raw('roadmap:sentences:v1')}`;
+  const hit = openCache.get(ctx);
+  if (hit?.key === key) return hit;
+  const state = { key, owed: backlog(ctx, today).length, blocker: DAYS.find((d) => d.date >= today && lessonsOf(d).some((t) => !isDone(t, ctx))) };
+  openCache.set(ctx, state);
+  return state;
+}
+
+/** The lessons of a day: what has to be finished before the next day opens. */
+export const lessonsOf = (day: Day) => day.tasks.filter((t) => !DAILY_HABITS.includes(t.kind));
+
+/** The first day after today that is not finished yet (the one to study ahead), if it is open. */
+export function nextOpenDay(ctx: Context, today = todayKey()): Day | undefined {
+  const next = DAYS.find((d) => d.date > today && lessonsOf(d).some((t) => !isDone(t, ctx)));
+  return next && !dayLock(next, ctx, today) ? next : undefined;
+}
+
+/** Why a task cannot be started yet, or undefined. */
+export function lockReason(task: Task, day: Day, ctx: Context, today = todayKey()): string | undefined {
+  const locked = dayLock(day, ctx, today);
+  if (locked) return locked;
   if (task.kind === 'grammar-learn' || task.kind === 'grammar-drill' || task.kind === 'grammar-own') {
     const prev = previousTopic(task.topic!);
     if (prev && !topicState(prev).passed) return 'Cần qua chủ điểm trước (nhận diện và dịch câu, mỗi phần ≥ 80%).';

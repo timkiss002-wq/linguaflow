@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { DayTasks } from '@/features/roadmap/DayTasks';
 import { useRoadmapContext } from '@/features/roadmap/useRoadmap';
 import { DAYS, addDays, dayByDate, phaseOf, todayKey, toDate, weekByNumber } from '@/lib/roadmap/plan';
-import { dayStatus } from '@/lib/roadmap/progress';
+import { dayLock, dayStatus } from '@/lib/roadmap/progress';
 
 /** /lo-trinh/:date — the tasks of one day, with the words to learn and links to each exercise. */
 export default function RoadmapDayPage() {
@@ -65,7 +65,7 @@ export default function RoadmapDayPage() {
         <h1 className="mt-1 text-2xl font-bold tracking-tight first-letter:uppercase">{label}</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           {s.total ? `${s.done}/${s.total} việc xong` : 'Ngày nghỉ'} · khoảng {minutes} phút{day.note ? ` · ${day.note}` : ''}
-          {date > today && ' · chưa tới ngày, đang xem trước'}
+          {date > today && (dayLock(day, ctx) ? ' · chưa mở, xem trước' : ' · học vượt')}
         </p>
         <p className="mt-2 rounded-lg bg-muted px-3 py-2 text-sm">{week.focus}</p>
       </header>

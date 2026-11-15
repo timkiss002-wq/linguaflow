@@ -1,3 +1,4 @@
+import activeJson from '../../../content/roadmap/active-vocab.json';
 import vocabJson from '../../../content/roadmap/vocab.json';
 import type { Pos } from '@/lib/vocab/pos';
 
@@ -31,6 +32,7 @@ export type TaskKind =
   | 'grammar-own'
   | 'grammar-review'
   | 'vocab-new'
+  | 'vocab-active'
   | 'vocab-review'
   | 'reading-p3'
   | 'reading-skill'
@@ -59,6 +61,8 @@ export interface Task {
   topic?: string;
   /** index range [from, to) into NEW_WORDS (vocab-new) */
   words?: [number, number];
+  /** vocab-active: topic id and index range [from, to) into that topic's words */
+  active?: { topic: string; from: number; to: number; prompt: string };
   /** done only through the exercise itself (≥ 80 %), not by ticking */
   gated?: boolean;
 }
@@ -101,6 +105,30 @@ export interface PlanWord {
 export const ALL_WORDS = (vocabJson as { words: PlanWord[] }).words;
 /** Words still to learn, in the order of the learner's sheet (weeks 1–10, the reading list), then the added topics. */
 export const NEW_WORDS = ALL_WORDS.filter((w) => !w.known);
+
+/**
+ * Two kinds of vocabulary. Passive (NEW_WORDS, the "Vocab Ielts" weeks): only to recognise in Reading — English → Vietnamese,
+ * a synonym, the word form from its ending. Active (ACTIVE_TOPICS, the "CĐ - …" tabs): collocations for Writing, 5 a day,
+ * used straight away in 3–5 sentences on that day's Writing prompt.
+ */
+export interface ActiveWord {
+  t: string;
+  m: string;
+  p?: Pos;
+  ex: string;
+}
+export interface ActiveTopic {
+  id: string;
+  name: string;
+  vi: string;
+  /** week of the path that learns this topic; topics without one are extra, for self-study */
+  week?: number;
+  prompts: string[];
+  words: ActiveWord[];
+}
+export const ACTIVE_TOPICS = (activeJson as { topics: ActiveTopic[] }).topics;
+export const ACTIVE_PER_DAY = 5;
+export const activeTopicOfWeek = (n: number) => ACTIVE_TOPICS.find((t) => t.week === n);
 
 const SKILL = {
   distractor: { id: 'distractor', name: 'Bẫy trắc nghiệm (MCQ distractors)' },
@@ -200,8 +228,24 @@ function build(): Day[] {
       if (!k || cursor >= NEW_WORDS.length) return;
       const to = Math.min(NEW_WORDS.length, cursor + k);
       const topics = [...new Set(NEW_WORDS.slice(cursor, to).map((w) => w.topic))].join(', ');
-      add('vocab-new', { title: `${to - cursor} từ mới · ${topics}`, detail: 'Đọc nghĩa và ví dụ, thêm vào Sổ từ, gõ lại từng từ ở cột "Ôn từ vựng". Xong khi cả nhóm từ đã được ôn ít nhất một lần.', minutes: 20, href: '/vocabulary', words: [cursor, to] });
+      add('vocab-new', { title: `${to - cursor} từ thụ động · ${topics}`, detail: 'Chỉ cần nhận ra khi đọc: nhìn từ tiếng Anh nói được nghĩa trong 2–3 giây, ghi thêm 1–2 từ đồng nghĩa, nhìn đuôi từ biết là N / V / adj / adv. Thêm vào Sổ từ và ôn một lần là xong.', minutes: 15, href: '/vocabulary', words: [cursor, to] });
       cursor = to;
+    };
+    const vocabActive = () => {
+      const topic = activeTopicOfWeek(week.n);
+      if (!topic || weekday === 0) return;
+      const n = days.filter((d) => d.week === week.n && d.tasks.some((t) => t.kind === 'vocab-active')).length;
+      const from = n * ACTIVE_PER_DAY;
+      if (from >= topic.words.length) return;
+      const to = Math.min(topic.words.length, from + ACTIVE_PER_DAY);
+      add('vocab-active', {
+        title: `${to - from} cụm từ chủ động · ${topic.name}`,
+        detail: 'Học 5 cụm Writing theo chủ đề tuần (nghĩa + ví dụ), rồi viết 3–5 câu trả lời đề Writing của hôm nay, dùng đủ cả 5 cụm. Xong khi lưu bài đạt yêu cầu.',
+        minutes: 15,
+        href: `/viet-cau/${date}`,
+        active: { topic: topic.id, from, to, prompt: topic.prompts[n % topic.prompts.length]! },
+        gated: true,
+      });
     };
     const review = (minutes = 10) => add('vocab-review', { title: 'Ôn thẻ từ đến hạn', detail: 'Ôn các từ đã học theo lịch lặp lại ngắt quãng. Làm hết số thẻ đến hạn hôm nay.', minutes, href: '/review' });
     const p3 = (detail = '4–5 câu Passage 3: ghép từng keyword với cụm đồng nghĩa trong bài rồi mới chọn đáp án.') => add('reading-p3', { title: 'Reading · Passage 3 ngắn', detail, minutes: 15, href: '/ielts/reading?format=p3' });
@@ -209,7 +253,7 @@ function build(): Day[] {
     if (week.phase === 0) {
       if (i === 0) add('placement', { title: 'Bài kiểm tra trình độ', detail: 'Đã làm: ngữ pháp 7/15, từ vựng 9/12, đọc hiểu 4/7 — khoảng band 5.0.', minutes: 33, href: '/lo-trinh/kiem-tra' });
       else {
-        add('setup', { title: 'Đọc lộ trình', detail: 'Xem 3 giai đoạn, cách mở khóa bài và việc mỗi ngày. Ngày chưa tới thì xem trước được nhưng chưa làm được.', minutes: 10, href: '/lo-trinh' });
+        add('setup', { title: 'Đọc lộ trình', detail: 'Xem 3 giai đoạn, cách mở khóa bài và việc mỗi ngày. Không khóa theo lịch: học xong ngày nào thì mở ngày kế tiếp, muốn học vượt cứ học tiếp.', minutes: 10, href: '/lo-trinh' });
         review(15);
       }
     } else if (light) {
@@ -231,6 +275,7 @@ function build(): Day[] {
         if (week.n < 8) p3();
       } else {
         vocabNew();
+        vocabActive();
         review();
         p3();
       }
@@ -244,17 +289,20 @@ function build(): Day[] {
         case 1:
           if (skill) add('reading-skill', { title: `Kỹ năng Reading · ${skill.name}`, detail: 'Đọc cách làm, làm hết các câu luyện nhanh có giải thích tiếng Việt.', minutes: 25, href: `/ielts/reading?skill=${skill.id}` });
           vocabNew();
+          vocabActive();
           review();
           break;
         case 2:
           if (frame) add('writing-frame', { title: `Writing · luyện khung ${FRAME_NAME[frame]}`, detail: 'Học thuộc khung bài: câu mở đầu, câu chủ đề từng đoạn, câu kết. Làm bài luyện khung đến khi đúng hết.', minutes: 25, href: `/writing/guided/frame/${frame}` });
           p3(skill ? `Áp dụng kỹ năng "${skill.name}" vào 4–5 câu Passage 3.` : undefined);
           vocabNew();
+          vocabActive();
           review();
           break;
         case 3:
           if (prompt) add('writing-guided', { title: `Writing · viết theo khung (${FRAME_NAME[frame!]})`, detail: 'Dịch từng câu theo khung với gợi ý giảm dần, nộp để được chấm band và sửa lỗi.', minutes: 35, href: `/writing/guided/${prompt}` });
           vocabNew();
+          vocabActive();
           review();
           break;
         case 4: {
@@ -262,6 +310,7 @@ function build(): Day[] {
           add('grammar-review', { title: 'Ôn lại một chủ điểm ngữ pháp', detail: 'Dịch lại 8 câu, mục tiêu đúng hết ngay lần đầu.', minutes: 15, href: grammarHref(topic), topic });
           p3(skill ? `Áp dụng kỹ năng "${skill.name}".` : undefined);
           vocabNew();
+          vocabActive();
           review();
           break;
         }
@@ -269,6 +318,7 @@ function build(): Day[] {
           if (exam) add('writing-exam', { title: 'Writing Task 2 · viết đủ 40 phút', detail: 'Không gợi ý, hết giờ tự nộp. Đọc kỹ nhận xét AI theo 4 tiêu chí.', minutes: 45, href: `/writing/new/${exam}?exam=1` });
           else if (prompt) add('writing-guided', { title: `Writing Task 1 · ${FRAME_NAME[frame!]} thứ hai`, detail: 'Viết theo khung với đề thứ hai cùng dạng biểu đồ.', minutes: 30, href: `/writing/guided/${TASK1[frame!]![1] ?? TASK1[frame!]![0]}` });
           vocabNew();
+          vocabActive();
           review();
           break;
         case 6:
@@ -276,6 +326,7 @@ function build(): Day[] {
           if (week.frames?.includes('map')) add('writing-guided', { title: 'Writing Task 1 · Maps', detail: 'Bản đồ trước – sau: was transformed into…, had been replaced by…, remained unchanged.', minutes: 30, href: `/writing/guided/${TASK1.map![0]}` });
           else add('writing-mistakes', { title: 'Sửa lại lỗi hay lặp lại', detail: 'Làm bài sửa chính câu sai cũ của bạn trong "Lỗi hay lặp lại".', minutes: 15, href: '/writing/mistakes' });
           vocabNew();
+          vocabActive();
           review();
           break;
         default:
@@ -341,6 +392,11 @@ export const weekByNumber = (n: number) => WEEKS.find((w) => w.n === n);
 export const daysOfWeek = (n: number) => DAYS.filter((d) => d.week === n);
 export const phaseOf = (p: Phase) => PHASES.find((x) => x.id === p)!;
 export const wordsOf = (t: Task) => (t.words ? NEW_WORDS.slice(t.words[0], t.words[1]) : []);
+export const activeWordsOf = (t: Task) => {
+  if (!t.active) return [];
+  return ACTIVE_TOPICS.find((x) => x.id === t.active!.topic)?.words.slice(t.active.from, t.active.to) ?? [];
+};
+export const activeTopicOf = (t: Task) => (t.active ? ACTIVE_TOPICS.find((x) => x.id === t.active!.topic) : undefined);
 
 /** All days in the order of the grammar sequence: topic n+1 opens only when topic n is passed. */
 export const GRAMMAR_SEQUENCE = REVIEW_ORDER;

@@ -25,7 +25,7 @@ import { Button } from '@/components/ui/button';
 import { PosBadge } from '@/features/vocabulary/PosBadge';
 import { useImportWords } from '@/features/vocabulary/api';
 import { topicById } from '@/lib/grammar/drills';
-import { wordsOf, type Day, type Task, type TaskKind } from '@/lib/roadmap/plan';
+import { activeWordsOf, wordsOf, type Day, type Task, type TaskKind } from '@/lib/roadmap/plan';
 import { isDone, lockReason, setManualDone, topicState, type Context } from '@/lib/roadmap/progress';
 import { cn } from '@/lib/utils';
 
@@ -37,6 +37,7 @@ const ICON: Record<TaskKind, LucideIcon> = {
   'grammar-own': PenLine,
   'grammar-review': Repeat,
   'vocab-new': BookA,
+  'vocab-active': PenLine,
   'vocab-review': Layers,
   'reading-p3': BookOpen,
   'reading-skill': BookOpen,
@@ -61,7 +62,8 @@ export const AREA: Record<TaskKind, string> = {
   'grammar-drill': 'Ngữ pháp',
   'grammar-own': 'Ngữ pháp',
   'grammar-review': 'Ngữ pháp',
-  'vocab-new': 'Từ vựng',
+  'vocab-new': 'Từ vựng thụ động · Reading',
+  'vocab-active': 'Từ vựng chủ động · Writing',
   'vocab-review': 'Từ vựng',
   'reading-p3': 'Reading',
   'reading-skill': 'Reading',
@@ -80,7 +82,7 @@ export const AREA: Record<TaskKind, string> = {
 };
 
 /** Tasks that only the exercise itself can tick (grammar ≥ 80 %, retest saved…). */
-const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'placement', 'retest', 'rest'];
+const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'placement', 'retest', 'rest'];
 
 function hrefFor(task: Task) {
   if (task.kind === 'grammar-drill') return `${task.href}?step=drill`;
@@ -101,11 +103,11 @@ export function DayTasks({ day, ctx, compact }: { day: Day; ctx: Context; compac
 
 export function TaskCard({ task, day, ctx, compact, showDate }: { task: Task; day: Day; ctx: Context; compact?: boolean; showDate?: string }) {
   const done = isDone(task, ctx);
-  const lock = lockReason(task, day);
+  const lock = lockReason(task, day, ctx);
   const Icon = ICON[task.kind];
   const topic = task.topic ? topicById(task.topic) : undefined;
   const ts = task.topic ? topicState(task.topic) : undefined;
-  const [open, setOpen] = useState(task.kind === 'vocab-new' && !compact && !done);
+  const [open, setOpen] = useState((task.kind === 'vocab-new' || task.kind === 'vocab-active') && !compact && !done);
   const rest = task.kind === 'rest';
 
   return (
@@ -152,6 +154,26 @@ export function TaskCard({ task, day, ctx, compact, showDate }: { task: Task; da
         </div>
       )}
 
+      {task.kind === 'vocab-active' && (
+        <div className="mt-3">
+          <button type="button" onClick={() => setOpen((o) => !o)} className="flex items-center gap-1 text-sm font-medium text-primary hover:underline" aria-expanded={open}>
+            <ChevronDown className={cn('size-4 transition-transform', open && 'rotate-180')} aria-hidden /> {open ? 'Ẩn các cụm từ' : `Xem ${activeWordsOf(task).length} cụm từ`}
+          </button>
+          {open && (
+            <ul className="mt-2 divide-y overflow-hidden rounded-lg border text-sm">
+              {activeWordsOf(task).map((w) => (
+                <li key={w.t} className="px-3 py-1.5">
+                  <span className="font-medium" lang="en">
+                    {w.t}
+                  </span>
+                  <span className="text-muted-foreground"> — {w.m}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+
       {!rest && (task.href || !AUTO_ONLY.includes(task.kind)) && (
         <div className="mt-3 flex flex-wrap items-center gap-2 pl-12">
           {task.href && (
@@ -161,7 +183,7 @@ export function TaskCard({ task, day, ctx, compact, showDate }: { task: Task; da
               </Button>
             ) : (
               <Button size="sm" asChild variant={done ? 'outline' : 'default'}>
-                <Link to={hrefFor(task)!}>{done ? 'Làm lại' : task.kind === 'vocab-new' ? 'Mở Sổ từ' : 'Bắt đầu'}</Link>
+                <Link to={hrefFor(task)!}>{task.kind === 'vocab-active' ? (done ? 'Xem / sửa câu' : 'Học cụm & viết câu') : done ? 'Làm lại' : task.kind === 'vocab-new' ? 'Mở Sổ từ' : 'Bắt đầu'}</Link>
               </Button>
             )
           )}
