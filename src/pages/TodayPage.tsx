@@ -1,11 +1,11 @@
-import { ArrowRight, CalendarClock, Layers, Map } from 'lucide-react';
+import { ArrowRight, CalendarClock, FastForward, Layers, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useDueToday } from '@/features/dashboard/api';
 import { useProfile } from '@/features/profile/api';
 import { DayTasks, TaskCard } from '@/features/roadmap/DayTasks';
 import { useRoadmapContext } from '@/features/roadmap/useRoadmap';
 import { DAYS, START, TARGET, daysBetween, dayByDate, formatDay, phaseOf, todayKey, weekByNumber } from '@/lib/roadmap/plan';
-import { backlog, dayStatus } from '@/lib/roadmap/progress';
+import { backlog, dayStatus, lessonsOf, isDone, nextOpenDay } from '@/lib/roadmap/progress';
 
 function greeting(hour: number) {
   if (hour < 11) return 'Chào buổi sáng';
@@ -31,6 +31,8 @@ export default function TodayPage() {
   const left = Math.max(0, daysBetween(today, TARGET));
   const date = new Date().toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' });
   const name = profile.data?.display_name;
+  const todayLessonsDone = lessonsOf(day).every((t) => isDone(t, ctx));
+  const ahead = owedTotal === 0 && todayLessonsDone ? nextOpenDay(ctx) : undefined;
 
   return (
     <div className="space-y-5">
@@ -70,6 +72,20 @@ export default function TodayPage() {
             </h2>
             <DayTasks day={day} ctx={ctx} />
           </section>
+          {ahead && (
+            <section aria-labelledby="ahead" className="space-y-2.5">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h2 id="ahead" className="flex items-center gap-1.5 text-sm font-semibold text-primary">
+                  <FastForward className="size-4" aria-hidden /> Xong bài hôm nay · học vượt sang {formatDay(ahead.date)}
+                </h2>
+                <Link to={`/lo-trinh/${ahead.date}`} className="text-sm font-medium text-primary hover:underline">
+                  Mở ngày này
+                </Link>
+              </div>
+              <p className="text-xs text-muted-foreground">Không bắt buộc. Học xong ngày này thì ngày sau nữa tự mở.</p>
+              <DayTasks day={ahead} ctx={ctx} />
+            </section>
+          )}
         </div>
 
         <aside className="space-y-4">

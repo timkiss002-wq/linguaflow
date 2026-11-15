@@ -10,13 +10,18 @@ kiểm tra trình độ thích ứng cũ đã được bỏ (đường dẫn cũ
 - **Hôm nay** (`/dashboard`): việc của ngày hôm nay trong lộ trình; việc còn nợ của ngày trước hiện trước.
 - **Lộ trình** (`/lo-trinh`): 3 giai đoạn — Nền tảng (16/11 → 10/01: 16 chủ điểm ngữ pháp, 15 từ/ngày), Luyện tập
   (11/01 → 07/03: Reading theo dạng câu, Writing theo khung, 12 từ/ngày, nghỉ Tết 04–14/02), Thi thử (08/03 → 15/04).
-  Mỗi ngày (`/lo-trinh/:date`) có danh sách việc, link tới bài tập và danh sách từ cần học. Ngày chưa tới chỉ xem trước.
+  Mỗi ngày (`/lo-trinh/:date`) có danh sách việc, link tới bài tập và danh sách từ cần học. Không khóa theo lịch: học xong ngày trước là mở được ngày sau (học vượt).
 - **Ngữ pháp**: mỗi chủ điểm 3 bước — lý thuyết → 6 câu nhận diện → dịch 8 câu. Chủ điểm sau chỉ mở khi chủ điểm trước
   đạt ≥ 80% ở cả hai phần. 6 chủ điểm mới theo lỗi trong bài kiểm tra: danh từ & mạo từ, hòa hợp chủ ngữ, to V / V-ing,
   trật tự từ, although / despite, điều kiện loại 3.
 - **Từ vựng**: `content/roadmap/vocab.json` lấy từ Google Sheet "Vocab Ielts" (tuần 1–10 + "Ielts reading chưa thuộc";
   từ đã Check TRUE không xếp lại) và 143 từ bổ sung (Media, Urbanisation, Globalisation & Tourism, Science). Nút "Thêm
   vào Sổ từ" nhập từ của ngày vào sổ; việc từ vựng tự đánh dấu xong khi mọi từ đã được ôn.
+  Đây là **từ vựng thụ động** (chỉ cần nhận ra khi đọc: Anh → Việt, từ đồng nghĩa, đoán loại từ từ đuôi).
+- **Từ vựng chủ động** (`content/roadmap/active-vocab.json`, bản giống hệt trong các tab "CĐ 01–18" của Google Sheet):
+  ~510 collocation cho Writing theo 18 chủ đề (15 chủ đề có tuần trong lộ trình, 3 chủ đề tự học thêm). Thứ Hai – thứ
+  Bảy của giai đoạn 1–2, mỗi ngày 5 cụm + bài **viết 3–5 câu** (`/viet-cau/:date`) trả lời đề Writing của ngày, phải dùng đủ
+  5 cụm (máy nhận ra cả dạng chia, bấm tay nếu sót). Lưu đạt yêu cầu là xong; có nút "Nhờ AI chữa" gửi sang chấm Writing.
 - **Kiểm tra trình độ** (`/lo-trinh/kiem-tra`): bài làm ngày 14/11/2026, làm lại 10/01 và 07/03, so với lần đầu.
 - Logic lộ trình: `src/lib/roadmap/plan.ts` (thuần, có test), tiến độ: `src/lib/roadmap/progress.ts` (lưu trong trình duyệt).
 
