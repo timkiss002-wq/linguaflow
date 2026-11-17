@@ -1,5 +1,6 @@
 import { readProgress, readQuiz, PASS } from '@/lib/grammar/drills';
 import { DAYS, GRAMMAR_SEQUENCE, previousTopic, todayKey, wordsOf, type Day, type Task } from './plan';
+import { PRACTICE_KEY, practicePassed } from '@/lib/practice/results';
 import { sentencesOf } from './sentences';
 
 /**
@@ -124,6 +125,10 @@ export function isDone(task: Task, ctx: Context): boolean {
     }
     case 'vocab-active':
       return Boolean(sentencesOf(task.id.slice(0, 10))?.passed);
+    case 'vocab-translate':
+    case 'grammar-fix':
+    case 'grammar-svo':
+      return practicePassed(task.id);
     case 'reading-p3':
       return Boolean(s.done[task.id]) || ctx.p3Days.has(task.id.slice(0, 10));
     case 'retest':
@@ -160,7 +165,7 @@ function openState(ctx: Context, today: string) {
       return '';
     }
   };
-  const key = `${version}:${today}:${raw('grammar:progress')}:${raw('grammar:quiz')}:${raw('roadmap:sentences:v1')}`;
+  const key = `${version}:${today}:${raw('grammar:progress')}:${raw('grammar:quiz')}:${raw('roadmap:sentences:v1')}:${raw(PRACTICE_KEY)}`;
   const hit = openCache.get(ctx);
   if (hit?.key === key) return hit;
   const state = { key, owed: backlog(ctx, today).length, blocker: DAYS.find((d) => d.date >= today && lessonsOf(d).some((t) => !isDone(t, ctx))) };
@@ -186,6 +191,11 @@ export function lockReason(task: Task, day: Day, ctx: Context, today = todayKey(
     if (prev && !topicState(prev).passed) return 'Cần qua chủ điểm trước (nhận diện và dịch câu, mỗi phần ≥ 80%).';
     if (task.kind === 'grammar-drill' && !topicState(task.topic!).quizOk) return 'Làm phần nhận diện trước (≥ 80%).';
     if (task.kind === 'grammar-own' && !topicState(task.topic!).drillOk) return 'Qua phần dịch 8 câu trước (≥ 80%).';
+  }
+  if (task.kind === 'grammar-fix' && task.topic) {
+    const prev = previousTopic(task.topic);
+    if (prev && !topicState(prev).passed) return 'Cần qua chủ điểm trước (nhận diện và dịch câu, mỗi phần ≥ 80%).';
+    if (!topicState(task.topic).quizOk) return 'Học lý thuyết + làm phần nhận diện của chủ điểm này trước (≥ 80%).';
   }
   return undefined;
 }

@@ -1,4 +1,4 @@
-import { CheckCircle2, Languages } from 'lucide-react';
+import { Blocks, CheckCircle2, Languages } from 'lucide-react';
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { GrammarDiagram } from '@/features/grammar/GrammarDiagram';
@@ -28,6 +28,19 @@ export default function GrammarPage() {
           Đã luyện {done}/{TOPICS.length} chủ điểm
         </p>
       </div>
+
+      <Link
+        to="/cau-svo"
+        className="mb-8 flex items-center gap-3 rounded-xl border bg-card p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-sky-600 text-white">
+          <Blocks className="size-5" aria-hidden />
+        </span>
+        <span className="text-sm">
+          <span className="block font-semibold">Cấu trúc câu S-V-O</span>
+          <span className="text-muted-foreground">Chủ ngữ, động từ, tân ngữ, bổ ngữ, trạng ngữ — 6 mẫu câu, phân tích và xếp câu theo 24 bộ từ dễ đến khó.</span>
+        </span>
+      </Link>
 
       {bands.map((band) => (
         <section key={band} className="mb-8" aria-labelledby={`band-${band}`}>

@@ -38,6 +38,9 @@ const RoadmapPage = lazy(() => import('@/pages/RoadmapPage'));
 const RoadmapDayPage = lazy(() => import('@/pages/RoadmapDayPage'));
 const PlacementPage = lazy(() => import('@/pages/PlacementPage'));
 const SentencesPage = lazy(() => import('@/pages/SentencesPage'));
+const ExampleTranslatePage = lazy(() => import('@/pages/ExampleTranslatePage'));
+const GrammarFixPage = lazy(() => import('@/pages/GrammarFixPage'));
+const SvoPage = lazy(() => import('@/pages/SvoPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
 
@@ -64,6 +67,10 @@ export const router = createBrowserRouter([
           { path: '/lo-trinh/kiem-tra', element: page(<PlacementPage />) },
           { path: '/lo-trinh/:date', element: page(<RoadmapDayPage />) },
           { path: '/viet-cau/:date', element: page(<SentencesPage />) },
+          { path: '/dich-vi-du/:date', element: page(<ExampleTranslatePage />) },
+          { path: '/sua-loi/:date', element: page(<GrammarFixPage />) },
+          { path: '/cau-svo', element: page(<SvoPage />) },
+          { path: '/cau-svo/:date', element: page(<SvoPage />) },
           // Listening, dictation lessons and the adaptive level test were removed with the IELTS path (Reading + Writing only).
           { path: '/lessons/*', element: <Navigate to="/dashboard" replace /> },
           { path: '/my-learning', element: <Navigate to="/dashboard" replace /> },
@@ -77,6 +84,7 @@ export const router = createBrowserRouter([
           { path: '/ielts/:testId', element: page(<IeltsTestPage />) },
           { path: '/grammar', element: page(<GrammarPage />) },
           { path: '/grammar/:topicId', element: page(<GrammarDrillPage />) },
+          { path: '/grammar/:topicId/sua-loi', element: page(<GrammarFixPage />) },
           { path: '/vocabulary', element: page(<VocabularyPage />) },
           { path: '/vocabulary/practice', element: page(<VocabularyPracticePage />) },
           { path: '/word-forms', element: page(<WordFormsPage />) },

@@ -1,0 +1,220 @@
+{
+  "_note": "Cấu trúc câu S-V-O. Mỗi câu chia thành khối có nhãn: [S chủ ngữ] [V động từ — cả cụm trợ động từ + động từ chính] [O tân ngữ] [C bổ ngữ — sau be/become/seem… hoặc sau tân ngữ] [A trạng ngữ — nơi chốn, thời gian, cách thức, mục đích]. 24 bộ × 6 câu, khó dần: câu đơn → thêm trạng ngữ → động từ nhiều chữ → chủ ngữ/tân ngữ dài.",
+  "roles": {
+    "S": { "name": "Chủ ngữ", "en": "Subject", "q": "Ai / cái gì làm việc đó?" },
+    "V": { "name": "Động từ", "en": "Verb", "q": "Làm gì? (cả trợ động từ: has been, should be, will…)" },
+    "O": { "name": "Tân ngữ", "en": "Object", "q": "Tác động lên ai / cái gì?" },
+    "C": { "name": "Bổ ngữ", "en": "Complement", "q": "Là gì / thế nào? (sau be, become, seem, feel, make sth…)" },
+    "A": { "name": "Trạng ngữ", "en": "Adverbial", "q": "Ở đâu, khi nào, thế nào, để làm gì?" }
+  },
+  "patterns": [
+    { "id": "SV", "formula": "S + V", "en": "The population [S] / is growing [V].", "vi": "Động từ không cần tân ngữ (grow, rise, happen, arrive, sleep…)." },
+    { "id": "SVO", "formula": "S + V + O", "en": "Many students [S] / use [V] / smartphones [O].", "vi": "Mẫu phổ biến nhất. Tân ngữ đứng ngay sau động từ, không chen trạng từ vào giữa." },
+    { "id": "SVC", "formula": "S + V + C", "en": "Public transport [S] / is [V] / cheap [C].", "vi": "Sau be / become / seem / look / feel là tính từ hoặc danh từ. Tiếng Việt nói “xe buýt rẻ” nhưng tiếng Anh BẮT BUỘC có is." },
+    { "id": "SVOO", "formula": "S + V + O + O", "en": "Teachers [S] / give [V] / students [O] / homework [O].", "vi": "give, send, show, offer, teach + người + vật." },
+    { "id": "SVOC", "formula": "S + V + O + C", "en": "Technology [S] / makes [V] / life [O] / easier [C].", "vi": "make / keep / find / consider + tân ngữ + tính từ." },
+    { "id": "SVOA", "formula": "S + V + O + A", "en": "The government [S] / should spend [V] / more money [O] / on education [A].", "vi": "Trạng ngữ thường đứng cuối câu (hoặc đầu câu, theo sau là dấu phẩy)." }
+  ],
+  "rules_vi": [
+    "Câu nào cũng phải có ít nhất một chủ ngữ và một động từ chia thì. Tiếng Việt hay bỏ chủ ngữ (“Rất quan trọng.”) — tiếng Anh phải viết “It is very important.”",
+    "Mỗi mệnh đề chỉ có MỘT động từ chính được chia. Muốn thêm hành động thứ hai: dùng and, to V, V-ing hoặc một mệnh đề mới.",
+    "Tính từ không tự làm động từ: “The city crowded” ✗ → “The city is crowded” ✓.",
+    "Không chen trạng từ giữa động từ và tân ngữ: “speak very well English” ✗ → “speak English very well” ✓.",
+    "Trạng ngữ dài (thời gian, nơi chốn, lý do) đặt cuối câu, hoặc đầu câu kèm dấu phẩy: “In many cities, traffic is a serious problem.”",
+    "Chủ ngữ dài vẫn là MỘT khối: “The number of people who live in cities” là S, động từ chia theo the number (số ít)."
+  ],
+  "sets": [
+    { "level": 1, "items": [
+      { "s": "[S My mother] [V cooks] [O dinner].", "vi": "Mẹ tôi nấu bữa tối." },
+      { "s": "[S The population] [V is growing].", "vi": "Dân số đang tăng lên." },
+      { "s": "[S Public transport] [V is] [C cheap].", "vi": "Giao thông công cộng rẻ." },
+      { "s": "[S Many students] [V use] [O smartphones].", "vi": "Nhiều học sinh dùng điện thoại thông minh." },
+      { "s": "[S The city] [V is] [C crowded].", "vi": "Thành phố đông đúc." },
+      { "s": "[S Children] [V need] [O exercise].", "vi": "Trẻ em cần vận động." }
+    ] },
+    { "level": 1, "items": [
+      { "s": "[S Prices] [V have risen].", "vi": "Giá cả đã tăng." },
+      { "s": "[S Tourism] [V creates] [O jobs].", "vi": "Du lịch tạo ra việc làm." },
+      { "s": "[S My father] [V is] [C an engineer].", "vi": "Bố tôi là kỹ sư." },
+      { "s": "[S The government] [V builds] [O roads].", "vi": "Chính phủ xây đường sá." },
+      { "s": "[S This problem] [V is] [C serious].", "vi": "Vấn đề này nghiêm trọng." },
+      { "s": "[S Factories] [V pollute] [O rivers].", "vi": "Các nhà máy làm ô nhiễm sông ngòi." }
+    ] },
+    { "level": 1, "items": [
+      { "s": "[S Online learning] [V is] [C convenient].", "vi": "Học trực tuyến rất tiện lợi." },
+      { "s": "[S People] [V buy] [O fast food].", "vi": "Mọi người mua đồ ăn nhanh." },
+      { "s": "[S The accident] [V happened].", "vi": "Vụ tai nạn đã xảy ra." },
+      { "s": "[S Teenagers] [V love] [O social media].", "vi": "Thanh thiếu niên yêu thích mạng xã hội." },
+      { "s": "[S Air pollution] [V causes] [O diseases].", "vi": "Ô nhiễm không khí gây ra bệnh tật." },
+      { "s": "[S My sister] [V became] [C a nurse].", "vi": "Chị gái tôi đã trở thành y tá." }
+    ] },
+    { "level": 1, "items": [
+      { "s": "[S Robots] [V can replace] [O workers].", "vi": "Robot có thể thay thế công nhân." },
+      { "s": "[S The results] [V were] [C surprising].", "vi": "Kết quả thật đáng ngạc nhiên." },
+      { "s": "[S Unemployment] [V fell].", "vi": "Tỷ lệ thất nghiệp đã giảm." },
+      { "s": "[S Parents] [V should read] [O books].", "vi": "Cha mẹ nên đọc sách." },
+      { "s": "[S Housing] [V is becoming] [C expensive].", "vi": "Nhà ở đang trở nên đắt đỏ." },
+      { "s": "[S Doctors] [V treat] [O patients].", "vi": "Bác sĩ điều trị cho bệnh nhân." }
+    ] },
+    { "level": 1, "items": [
+      { "s": "[S Water] [V boils].", "vi": "Nước sôi." },
+      { "s": "[S Exercise] [V improves] [O health].", "vi": "Tập thể dục cải thiện sức khỏe." },
+      { "s": "[S The test] [V seemed] [C easy].", "vi": "Bài kiểm tra có vẻ dễ." },
+      { "s": "[S Advertising] [V influences] [O children].", "vi": "Quảng cáo ảnh hưởng đến trẻ em." },
+      { "s": "[S Traffic jams] [V waste] [O time].", "vi": "Tắc đường làm lãng phí thời gian." },
+      { "s": "[S Her idea] [V sounds] [C interesting].", "vi": "Ý tưởng của cô ấy nghe có vẻ thú vị." }
+    ] },
+    { "level": 1, "items": [
+      { "s": "[S The company] [V hired] [O new staff].", "vi": "Công ty đã tuyển nhân viên mới." },
+      { "s": "[S Young people] [V feel] [C stressed].", "vi": "Người trẻ cảm thấy căng thẳng." },
+      { "s": "[S Crime] [V has increased].", "vi": "Tội phạm đã gia tăng." },
+      { "s": "[S Cars] [V produce] [O emissions].", "vi": "Ô tô thải ra khí thải." },
+      { "s": "[S English] [V is] [C a global language].", "vi": "Tiếng Anh là một ngôn ngữ toàn cầu." },
+      { "s": "[S Volunteers] [V help] [O the elderly].", "vi": "Các tình nguyện viên giúp đỡ người già." }
+    ] },
+    { "level": 2, "items": [
+      { "s": "[S My mother] [V cooks] [O dinner] [A every evening].", "vi": "Mẹ tôi nấu bữa tối mỗi tối." },
+      { "s": "[S Many people] [V work] [A from home] [A nowadays].", "vi": "Ngày nay nhiều người làm việc tại nhà." },
+      { "s": "[S Teachers] [V give] [O students] [O homework].", "vi": "Giáo viên giao bài tập về nhà cho học sinh." },
+      { "s": "[S Technology] [V makes] [O life] [C easier].", "vi": "Công nghệ làm cuộc sống dễ dàng hơn." },
+      { "s": "[S The government] [V should spend] [O more money] [A on education].", "vi": "Chính phủ nên chi nhiều tiền hơn cho giáo dục." },
+      { "s": "[A In big cities], [S traffic] [V is] [C a serious problem].", "vi": "Ở các thành phố lớn, giao thông là một vấn đề nghiêm trọng." }
+    ] },
+    { "level": 2, "items": [
+      { "s": "[S She] [V speaks] [O English] [A very well].", "vi": "Cô ấy nói tiếng Anh rất giỏi." },
+      { "s": "[S The number of tourists] [V rose] [A sharply] [A in 2019].", "vi": "Số lượng khách du lịch tăng mạnh vào năm 2019." },
+      { "s": "[S Parents] [V should keep] [O children] [C safe] [A online].", "vi": "Cha mẹ nên giữ an toàn cho con khi lên mạng." },
+      { "s": "[S My company] [V offered] [O me] [O a promotion].", "vi": "Công ty đã đề nghị thăng chức cho tôi." },
+      { "s": "[S Students] [V study] [A better] [A in the morning].", "vi": "Học sinh học tốt hơn vào buổi sáng." },
+      { "s": "[A Every year], [S millions of trees] [V are cut down].", "vi": "Mỗi năm, hàng triệu cây xanh bị chặt hạ." }
+    ] },
+    { "level": 2, "items": [
+      { "s": "[S I] [V often go] [A to the library] [A at weekends].", "vi": "Tôi thường đến thư viện vào cuối tuần." },
+      { "s": "[S Many people] [V find] [O city life] [C stressful].", "vi": "Nhiều người thấy cuộc sống thành phố căng thẳng." },
+      { "s": "[S The museum] [V shows] [O visitors] [O the history of Hanoi].", "vi": "Bảo tàng cho du khách thấy lịch sử của Hà Nội." },
+      { "s": "[S Sales] [V remained] [C stable] [A for three years].", "vi": "Doanh số giữ ổn định trong ba năm." },
+      { "s": "[S Farmers] [V grow] [O rice] [A in the Mekong Delta].", "vi": "Nông dân trồng lúa ở đồng bằng sông Cửu Long." },
+      { "s": "[A After the lesson], [S the students] [V wrote] [O a short essay].", "vi": "Sau bài học, các học sinh đã viết một bài luận ngắn." }
+    ] },
+    { "level": 2, "items": [
+      { "s": "[S Fast food] [V is] [C popular] [A among teenagers].", "vi": "Đồ ăn nhanh phổ biến trong giới thanh thiếu niên." },
+      { "s": "[S The manager] [V sent] [O the staff] [O an email] [A yesterday].", "vi": "Hôm qua người quản lý đã gửi một email cho nhân viên." },
+      { "s": "[S Most people] [V consider] [O health] [C more important than money].", "vi": "Hầu hết mọi người coi sức khỏe quan trọng hơn tiền bạc." },
+      { "s": "[S My brother] [V drives] [A to work] [A every day].", "vi": "Anh trai tôi lái xe đi làm hằng ngày." },
+      { "s": "[S The city] [V built] [O a new bridge] [A last year].", "vi": "Thành phố đã xây một cây cầu mới vào năm ngoái." },
+      { "s": "[A In my opinion], [S schools] [V should teach] [O cooking].", "vi": "Theo tôi, trường học nên dạy nấu ăn." }
+    ] },
+    { "level": 2, "items": [
+      { "s": "[S Children] [V learn] [O languages] [A quickly].", "vi": "Trẻ em học ngôn ngữ nhanh." },
+      { "s": "[S Good teachers] [V make] [O lessons] [C interesting].", "vi": "Giáo viên giỏi làm cho bài học trở nên thú vị." },
+      { "s": "[S The price of petrol] [V fell] [A by 10%] [A in March].", "vi": "Giá xăng đã giảm 10% vào tháng Ba." },
+      { "s": "[S Grandparents] [V often tell] [O children] [O stories].", "vi": "Ông bà thường kể chuyện cho trẻ em." },
+      { "s": "[S I] [V usually read] [O the news] [A on my phone].", "vi": "Tôi thường đọc tin tức trên điện thoại." },
+      { "s": "[A Because of the rain], [S the match] [V was cancelled].", "vi": "Vì trời mưa, trận đấu đã bị hủy." }
+    ] },
+    { "level": 2, "items": [
+      { "s": "[S The doctor] [V gave] [O my father] [O some advice].", "vi": "Bác sĩ đã cho bố tôi vài lời khuyên." },
+      { "s": "[S People] [V should drink] [O more water] [A in summer].", "vi": "Mọi người nên uống nhiều nước hơn vào mùa hè." },
+      { "s": "[S Noise] [V keeps] [O residents] [C awake] [A at night].", "vi": "Tiếng ồn khiến người dân mất ngủ vào ban đêm." },
+      { "s": "[S The figure] [V reached] [O a peak] [A in 2015].", "vi": "Con số đạt đỉnh vào năm 2015." },
+      { "s": "[S Workers] [V travel] [A to the city centre] [A by bus].", "vi": "Người lao động đi vào trung tâm thành phố bằng xe buýt." },
+      { "s": "[A On the other hand], [S online classes] [V are] [C less interactive].", "vi": "Mặt khác, các lớp học trực tuyến ít tương tác hơn." }
+    ] },
+    { "level": 3, "items": [
+      { "s": "[S The government] [V has introduced] [O new laws] [A to reduce pollution].", "vi": "Chính phủ đã ban hành các luật mới để giảm ô nhiễm." },
+      { "s": "[S Plastic bags] [V should be banned] [A in supermarkets].", "vi": "Túi ni lông nên bị cấm ở các siêu thị." },
+      { "s": "[S Many young people] [V have been living] [A in cities] [A since 2010].", "vi": "Nhiều người trẻ đã sống ở thành phố từ năm 2010." },
+      { "s": "[S A new hospital] [V will be built] [A next year].", "vi": "Một bệnh viện mới sẽ được xây vào năm tới." },
+      { "s": "[S Students] [V must not use] [O phones] [A during the exam].", "vi": "Học sinh không được dùng điện thoại trong giờ thi." },
+      { "s": "[S The population] [V is expected to reach] [O ten million] [A by 2030].", "vi": "Dân số được dự kiến sẽ đạt mười triệu người vào năm 2030." }
+    ] },
+    { "level": 3, "items": [
+      { "s": "[S English] [V is spoken] [A in many countries].", "vi": "Tiếng Anh được nói ở nhiều quốc gia." },
+      { "s": "[S Companies] [V should give] [O employees] [O more flexible hours].", "vi": "Các công ty nên cho nhân viên giờ làm việc linh hoạt hơn." },
+      { "s": "[S Online shopping] [V has become] [C increasingly popular].", "vi": "Mua sắm trực tuyến ngày càng trở nên phổ biến." },
+      { "s": "[S The tea leaves] [V are picked] [A by hand].", "vi": "Lá trà được hái bằng tay." },
+      { "s": "[S Children] [V can learn] [O a lot] [A from video games].", "vi": "Trẻ em có thể học được nhiều điều từ trò chơi điện tử." },
+      { "s": "[S Car ownership] [V has doubled] [A over the last decade].", "vi": "Số lượng ô tô cá nhân đã tăng gấp đôi trong thập kỷ qua." }
+    ] },
+    { "level": 3, "items": [
+      { "s": "[S Air quality] [V has deteriorated] [A in recent years].", "vi": "Chất lượng không khí đã xấu đi trong những năm gần đây." },
+      { "s": "[S Many old buildings] [V were destroyed] [A during the war].", "vi": "Nhiều tòa nhà cũ đã bị phá hủy trong chiến tranh." },
+      { "s": "[S Schools] [V should equip] [O students] [A with practical skills].", "vi": "Trường học nên trang bị cho học sinh những kỹ năng thực tế." },
+      { "s": "[S The meeting] [V has been postponed] [A until Friday].", "vi": "Cuộc họp đã bị hoãn đến thứ Sáu." },
+      { "s": "[S Regular exercise] [V can reduce] [O the risk of heart disease].", "vi": "Tập thể dục đều đặn có thể làm giảm nguy cơ mắc bệnh tim." },
+      { "s": "[S Tourists] [V are attracted] [A by the beautiful beaches].", "vi": "Du khách bị thu hút bởi những bãi biển đẹp." }
+    ] },
+    { "level": 3, "items": [
+      { "s": "[S The results] [V will be announced] [A next week].", "vi": "Kết quả sẽ được công bố vào tuần sau." },
+      { "s": "[S People] [V are spending] [O more time] [A on their phones].", "vi": "Mọi người đang dành nhiều thời gian hơn cho điện thoại." },
+      { "s": "[S The local council] [V has decided to close] [O the old factory].", "vi": "Chính quyền địa phương đã quyết định đóng cửa nhà máy cũ." },
+      { "s": "[S Young drivers] [V should be required to take] [O extra lessons].", "vi": "Tài xế trẻ nên được yêu cầu học thêm các buổi học lái." },
+      { "s": "[S This medicine] [V must be taken] [A after meals].", "vi": "Thuốc này phải được uống sau bữa ăn." },
+      { "s": "[S Unemployment] [V had fallen] [A to 3%] [A by 2020].", "vi": "Tỷ lệ thất nghiệp đã giảm xuống 3% vào năm 2020." }
+    ] },
+    { "level": 3, "items": [
+      { "s": "[S Many species] [V are threatened] [A with extinction].", "vi": "Nhiều loài đang bị đe dọa tuyệt chủng." },
+      { "s": "[S The company] [V is planning to open] [O three new stores].", "vi": "Công ty đang dự định mở ba cửa hàng mới." },
+      { "s": "[S Workers] [V should be paid] [A fairly].", "vi": "Người lao động nên được trả lương công bằng." },
+      { "s": "[S Governments] [V must take] [O action] [A immediately].", "vi": "Các chính phủ phải hành động ngay lập tức." },
+      { "s": "[S The bridge] [V was opened] [A to the public] [A in 2005].", "vi": "Cây cầu được mở cửa cho công chúng vào năm 2005." },
+      { "s": "[S Teenagers] [V seem] [C more stressed] [A than before].", "vi": "Thanh thiếu niên có vẻ căng thẳng hơn trước." }
+    ] },
+    { "level": 3, "items": [
+      { "s": "[S More money] [V should be invested] [A in public transport].", "vi": "Nên đầu tư nhiều tiền hơn vào giao thông công cộng." },
+      { "s": "[S I] [V have never visited] [O Japan].", "vi": "Tôi chưa bao giờ đến Nhật Bản." },
+      { "s": "[S The new rules] [V will make] [O the roads] [C safer].", "vi": "Các quy định mới sẽ làm đường sá an toàn hơn." },
+      { "s": "[S The old system] [V has been replaced] [A by online forms].", "vi": "Hệ thống cũ đã được thay thế bằng các mẫu đơn trực tuyến." },
+      { "s": "[S Students] [V might find] [O the course] [C difficult].", "vi": "Học sinh có thể thấy khóa học khó." },
+      { "s": "[A Since 2015], [S the percentage of cyclists] [V has risen] [A steadily].", "vi": "Từ năm 2015, tỷ lệ người đi xe đạp đã tăng đều đặn." }
+    ] },
+    { "level": 4, "items": [
+      { "s": "[S The number of people who live in cities] [V is increasing].", "vi": "Số người sống ở thành phố đang tăng lên." },
+      { "s": "[S Students who study abroad] [V often gain] [O more confidence].", "vi": "Những sinh viên du học thường tự tin hơn." },
+      { "s": "[S Many experts] [V believe] [O that robots will replace many jobs].", "vi": "Nhiều chuyên gia tin rằng robot sẽ thay thế nhiều việc làm." },
+      { "s": "[S Learning a foreign language] [V is] [C a valuable skill].", "vi": "Học ngoại ngữ là một kỹ năng có giá trị." },
+      { "s": "[S The government] [V should provide] [O free healthcare] [A for people on low incomes].", "vi": "Chính phủ nên cung cấp dịch vụ y tế miễn phí cho người có thu nhập thấp." },
+      { "s": "[S The city where I grew up] [V has changed] [A a lot].", "vi": "Thành phố nơi tôi lớn lên đã thay đổi rất nhiều." }
+    ] },
+    { "level": 4, "items": [
+      { "s": "[S Spending too much time on social media] [V can harm] [O mental health].", "vi": "Dành quá nhiều thời gian cho mạng xã hội có thể gây hại cho sức khỏe tâm thần." },
+      { "s": "[S People who exercise regularly] [V are] [C less likely to get ill].", "vi": "Những người tập thể dục đều đặn ít có khả năng bị ốm hơn." },
+      { "s": "[S Some people] [V argue] [O that university education should be free].", "vi": "Một số người cho rằng giáo dục đại học nên miễn phí." },
+      { "s": "[S The main reason for the increase] [V is] [C the low price of cars].", "vi": "Lý do chính của sự gia tăng là giá ô tô thấp." },
+      { "s": "[S Parents] [V should teach] [O their children] [O how to manage money].", "vi": "Cha mẹ nên dạy con cái cách quản lý tiền bạc." },
+      { "s": "[A Although public transport is cheap], [S many people] [V still prefer] [O cars].", "vi": "Mặc dù giao thông công cộng rẻ, nhiều người vẫn thích ô tô hơn." }
+    ] },
+    { "level": 4, "items": [
+      { "s": "[S What surprised me most] [V was] [C the friendliness of the people].", "vi": "Điều làm tôi ngạc nhiên nhất là sự thân thiện của người dân." },
+      { "s": "[S The proportion of students using bicycles] [V fell] [A from 40% to 15%].", "vi": "Tỷ lệ học sinh đi xe đạp đã giảm từ 40% xuống 15%." },
+      { "s": "[S Companies that pollute rivers] [V should pay] [O heavy fines].", "vi": "Những công ty làm ô nhiễm sông ngòi nên phải nộp phạt nặng." },
+      { "s": "[S Many workers] [V do not know] [O how to use the new software].", "vi": "Nhiều công nhân không biết cách sử dụng phần mềm mới." },
+      { "s": "[S Living in the countryside] [V gives] [O children] [O a healthier childhood].", "vi": "Sống ở nông thôn mang lại cho trẻ em một tuổi thơ khỏe mạnh hơn." },
+      { "s": "[A If the trend continues], [S sales] [V will double] [A by 2030].", "vi": "Nếu xu hướng này tiếp tục, doanh số sẽ tăng gấp đôi vào năm 2030." }
+    ] },
+    { "level": 4, "items": [
+      { "s": "[S The fact that prices are rising] [V worries] [O many families].", "vi": "Việc giá cả đang tăng khiến nhiều gia đình lo lắng." },
+      { "s": "[S Young people who cannot find jobs] [V often feel] [C hopeless].", "vi": "Những người trẻ không tìm được việc làm thường cảm thấy tuyệt vọng." },
+      { "s": "[S Research] [V shows] [O that sleep improves memory].", "vi": "Nghiên cứu cho thấy giấc ngủ cải thiện trí nhớ." },
+      { "s": "[S The amount of rubbish produced by households] [V has risen] [A dramatically].", "vi": "Lượng rác thải do các hộ gia đình tạo ra đã tăng mạnh." },
+      { "s": "[S Governments] [V should make] [O healthy food] [C cheaper] [A than junk food].", "vi": "Các chính phủ nên làm cho thực phẩm lành mạnh rẻ hơn đồ ăn vặt." },
+      { "s": "[A To protect the environment], [S individuals] [V should recycle] [O their waste].", "vi": "Để bảo vệ môi trường, mỗi cá nhân nên tái chế rác thải của mình." }
+    ] },
+    { "level": 4, "items": [
+      { "s": "[S Working from home] [V allows] [O employees] [C to save time and money].", "vi": "Làm việc tại nhà cho phép nhân viên tiết kiệm thời gian và tiền bạc." },
+      { "s": "[S The people I work with] [V are] [C very helpful].", "vi": "Những người tôi làm việc cùng rất hay giúp đỡ." },
+      { "s": "[S Most teachers] [V agree] [O that homework is useful].", "vi": "Hầu hết giáo viên đồng ý rằng bài tập về nhà là có ích." },
+      { "s": "[S A large number of tourists who visit Hanoi] [V come] [A from Korea].", "vi": "Một lượng lớn khách du lịch đến Hà Nội đến từ Hàn Quốc." },
+      { "s": "[S The new policy] [V has made] [O it] [C easier for young couples to buy homes].", "vi": "Chính sách mới đã giúp các cặp vợ chồng trẻ mua nhà dễ dàng hơn." },
+      { "s": "[A In conclusion], [S I] [V believe] [O that the advantages outweigh the disadvantages].", "vi": "Tóm lại, tôi tin rằng ưu điểm nhiều hơn nhược điểm." }
+    ] },
+    { "level": 4, "items": [
+      { "s": "[S Whether children should use phones at school] [V is] [C a difficult question].", "vi": "Việc trẻ em có nên dùng điện thoại ở trường hay không là một câu hỏi khó." },
+      { "s": "[S Countries that invest in education] [V usually have] [O stronger economies].", "vi": "Những quốc gia đầu tư vào giáo dục thường có nền kinh tế mạnh hơn." },
+      { "s": "[S The government] [V should encourage] [O people] [C to use public transport].", "vi": "Chính phủ nên khuyến khích người dân sử dụng giao thông công cộng." },
+      { "s": "[S The biggest problem facing big cities] [V is] [C air pollution].", "vi": "Vấn đề lớn nhất mà các thành phố lớn phải đối mặt là ô nhiễm không khí." },
+      { "s": "[S Many students] [V do not understand] [O why they have to learn history].", "vi": "Nhiều học sinh không hiểu tại sao họ phải học lịch sử." },
+      { "s": "[A Despite the high cost], [S more families] [V are sending] [O their children] [A abroad].", "vi": "Mặc dù chi phí cao, ngày càng nhiều gia đình gửi con ra nước ngoài." }
+    ] }
+  ]
+}

@@ -1,3 +1,4 @@
+import { savePractice } from '@/lib/practice/results';
 import { describe, expect, it } from 'vitest';
 import { ACTIVE_PER_DAY, ACTIVE_TOPICS, DAYS, GRAMMAR_SEQUENCE, activeWordsOf } from './plan';
 import { dayLock, isDone, lessonsOf, nextOpenDay, setManualDone, type Context } from './progress';
@@ -61,6 +62,7 @@ describe('linear unlock instead of a calendar lock', () => {
     expect(dayLock(day('2026-11-17'), ctx, today)).toBeDefined();
     for (const t of lessonsOf(day(today))) {
       if (t.kind === 'vocab-active') saveSentences(today, { text: '', manual: [], savedAt: '', passed: true });
+      else if (t.kind === 'vocab-translate' || t.kind === 'grammar-fix' || t.kind === 'grammar-svo') savePractice(t.id, 10, 10);
       else if (!isDone(t, ctx)) setManualDone(t.id, true);
     }
     expect(lessonsOf(day(today)).every((t) => isDone(t, ctx))).toBe(true);

@@ -1,0 +1,173 @@
+import fixJson from '../../../content/grammar-fix.json';
+import svoJson from '../../../content/svo.json';
+import { checkTranslation, topicById, type Checked, type DrillItem } from '@/lib/grammar/drills';
+import { ACTIVE_TOPICS, NEW_WORDS, activeExampleVi, passiveExampleVi, type Day } from '@/lib/roadmap/plan';
+import { usesPhrase } from '@/lib/roadmap/sentences';
+
+/** One sentence to write in English: the prompt (Vietnamese, or a wrong sentence), the accepted answers, help. */
+export interface WriteItem {
+  key: string;
+  /** what is shown: a Vietnamese sentence, or an English sentence with one mistake */
+  prompt: string;
+  en: string[];
+  /** shown on request */
+  hint?: string;
+  /** shown after checking */
+  why?: string;
+  /** a word / collocation the answer must contain (in any form) */
+  mustUse?: string;
+  /** small label above the prompt (topic, word…) */
+  label?: string;
+}
+
+/* ---------- Dịch ví dụ ---------- */
+
+/** The example sentences of a day's words in Vietnamese, to translate back into English with the word. */
+export function exampleItems(day: Day): WriteItem[] {
+  const out: WriteItem[] = [];
+  const passive = day.tasks.find((t) => t.kind === 'vocab-new');
+  if (passive?.words) {
+    for (const w of NEW_WORDS.slice(passive.words[0], passive.words[1])) {
+      const vi = passiveExampleVi(w);
+      if (vi && w.ex) out.push({ key: `p:${w.t}`, prompt: vi, en: [w.ex], hint: `${w.t} = ${w.m}`, mustUse: w.t, label: 'Từ thụ động' });
+    }
+  }
+  const active = day.tasks.find((t) => t.kind === 'vocab-active');
+  const topic = active?.active ? ACTIVE_TOPICS.find((x) => x.id === active.active!.topic) : undefined;
+  if (topic && active?.active) {
+    for (const w of topic.words.slice(active.active.from, active.active.to)) {
+      const vi = activeExampleVi(topic.id, w);
+      if (vi) out.push({ key: `a:${w.t}`, prompt: vi, en: [w.ex], hint: `${w.t} = ${w.m}`, mustUse: w.t, label: `Cụm chủ động · ${topic.vi}` });
+    }
+  }
+  return out;
+}
+
+/**
+ * Is the word used? Collocations are written with placeholders ("equip students with", "broaden one's horizons"),
+ * so the content words are matched in any form, like in "Viết 3–5 câu".
+ */
+export const usesWord = (text: string, word: string) => usesPhrase(text, word.replace(/\b(one's|its|their|his|her|sb|sth)\b/g, ' '));
+
+/**
+ * Check a written sentence. In "fix" mode a near miss is still a mistake: "student" for "students" is exactly the
+ * error being trained, so only an exact match (contractions, capitals and punctuation aside) counts.
+ */
+export function checkWrite(item: WriteItem, typed: string, strict: boolean): Checked {
+  const r = checkTranslation({ en: item.en } as DrillItem, typed);
+  return strict && r.verdict === 'spelling' ? { ...r, verdict: 'wrong' } : r;
+}
+
+/* ---------- Sửa lỗi sai ---------- */
+
+interface FixRaw {
+  wrong: string;
+  en: string[];
+  why_vi: string;
+}
+const FIX = (fixJson as { topics: Record<string, FixRaw[]> }).topics;
+export const fixTopics = () => Object.keys(FIX);
+
+export function fixItems(list: { topic: string; idx: number }[]): WriteItem[] {
+  return list.flatMap(({ topic, idx }) => {
+    const f = FIX[topic]?.[idx];
+    if (!f) return [];
+    return [{ key: `${topic}:${idx}`, prompt: f.wrong, en: f.en, why: f.why_vi, label: topicById(topic)?.title_vi ?? topic, hint: hintFor(f) }];
+  });
+}
+/** All items of one topic, for practice outside the path. */
+export const fixItemsOfTopic = (topic: string) => fixItems((FIX[topic] ?? []).map((_, idx) => ({ topic, idx })));
+
+/** Points at the words that change, without giving the answer away. */
+function hintFor(f: FixRaw) {
+  const a = f.wrong.toLowerCase().match(/[a-z']+/g) ?? [];
+  const b = new Set(f.en[0]!.toLowerCase().match(/[a-z']+/g) ?? []);
+  const odd = a.filter((w) => !b.has(w));
+  return odd.length ? `Xem lại: “${odd.slice(0, 2).join(' … ')}”` : 'Lỗi nằm ở chỗ thiếu một từ.';
+}
+
+/* ---------- Câu chuẩn S-V-O ---------- */
+
+export type Role = 'S' | 'V' | 'O' | 'C' | 'A';
+export const ROLES: Role[] = ['S', 'V', 'O', 'C', 'A'];
+
+export interface Chunk {
+  role: Role;
+  text: string;
+  /** punctuation written right after the chunk ("," or ".") */
+  after: string;
+}
+export interface SvoSentence {
+  key: string;
+  chunks: Chunk[];
+  /** the sentence as written */
+  text: string;
+  vi: string;
+}
+interface SvoRaw {
+  roles: Record<Role, { name: string; en: string; q: string }>;
+  patterns: { id: string; formula: string; en: string; vi: string }[];
+  rules_vi: string[];
+  sets: { level: number; items: { s: string; vi: string }[] }[];
+}
+export const SVO = svoJson as SvoRaw;
+export const ROLE_INFO = SVO.roles;
+
+/** "[S My mother] [V cooks] [O dinner]." → chunks. */
+export function parseChunks(s: string): Chunk[] {
+  const out: Chunk[] = [];
+  const re = /\[([SVOCA]) ([^\]]+)\]([^[]*)/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(s))) out.push({ role: m[1] as Role, text: m[2]!, after: m[3]!.trim() });
+  return out;
+}
+export const joinChunks = (chunks: Chunk[]) =>
+  chunks
+    .map((c, i) => {
+      const t = i === 0 ? c.text[0]!.toUpperCase() + c.text.slice(1) : c.text;
+      return t + c.after;
+    })
+    .join(' ');
+
+export function svoSet(n: number): SvoSentence[] {
+  const set = SVO.sets[n] ?? SVO.sets[0]!;
+  return set.items.map((it, i) => {
+    const chunks = parseChunks(it.s);
+    return { key: `${n}:${i}`, chunks, text: joinChunks(chunks), vi: it.vi };
+  });
+}
+export const svoLevel = (n: number) => SVO.sets[n]?.level ?? 1;
+
+/** The order is right when S, V, O, C keep their order and each A is where it was, at the start or at the end. */
+export function orderOk(original: Chunk[], answer: Chunk[]) {
+  if (answer.length !== original.length) return false;
+  const core = (xs: Chunk[]) => xs.filter((c) => c.role !== 'A').map((c) => c.text);
+  if (core(original).join('|') !== core(answer).join('|')) return false;
+  if (answer.every((c, i) => c === original[i])) return true;
+  const firstCore = answer.findIndex((c) => c.role !== 'A');
+  const lastCore = answer.length - 1 - [...answer].reverse().findIndex((c) => c.role !== 'A');
+  return answer.every((c, i) => c.role !== 'A' || i < firstCore || i > lastCore);
+}
+
+/** A deterministic shuffle (the same sentence is always shuffled the same way), never the original order. */
+export function shuffled<T>(xs: T[], seed: string): T[] {
+  let h = 2166136261;
+  for (const c of seed) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  const a = xs.map((x, i) => ({ x, i, r: 0 }));
+  for (const e of a) {
+    h = Math.imul(h ^ (e.i + 1), 16777619);
+    e.r = (h >>> 0) / 2 ** 32;
+  }
+  const out = [...a].sort((p, q) => p.r - q.r);
+  if (xs.length > 1 && out.every((e, i) => e.i === i)) out.push(out.shift()!);
+  return out.map((e) => e.x);
+}
+
+/** Writing step of S-V-O: the sentence itself is the answer; Vietnamese is the prompt. */
+export const svoWriteItem = (s: SvoSentence): WriteItem => ({
+  key: `w:${s.key}`,
+  prompt: s.vi,
+  en: [s.text],
+  hint: s.chunks.map((c) => `${c.role}`).join(' + '),
+  why: s.chunks.map((c) => `[${c.role}] ${c.text}`).join('  '),
+});

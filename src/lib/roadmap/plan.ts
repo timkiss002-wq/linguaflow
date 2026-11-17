@@ -1,5 +1,8 @@
+import fixJson from '../../../content/grammar-fix.json';
 import activeJson from '../../../content/roadmap/active-vocab.json';
+import exampleViJson from '../../../content/roadmap/example-vi.json';
 import vocabJson from '../../../content/roadmap/vocab.json';
+import svoJson from '../../../content/svo.json';
 import type { Pos } from '@/lib/vocab/pos';
 
 /**
@@ -31,8 +34,11 @@ export type TaskKind =
   | 'grammar-drill'
   | 'grammar-own'
   | 'grammar-review'
+  | 'grammar-fix'
+  | 'grammar-svo'
   | 'vocab-new'
   | 'vocab-active'
+  | 'vocab-translate'
   | 'vocab-review'
   | 'reading-p3'
   | 'reading-skill'
@@ -63,6 +69,10 @@ export interface Task {
   words?: [number, number];
   /** vocab-active: topic id and index range [from, to) into that topic's words */
   active?: { topic: string; from: number; to: number; prompt: string };
+  /** grammar-fix: the error-correction items of the day, as (topic, index into that topic's list) */
+  fix?: { topic: string; idx: number }[];
+  /** grammar-svo: today's set (labelling) and the set reused for ordering + writing */
+  svo?: { set: number; prev: number };
   /** done only through the exercise itself (≥ 80 %), not by ticking */
   gated?: boolean;
 }
@@ -129,6 +139,46 @@ export interface ActiveTopic {
 export const ACTIVE_TOPICS = (activeJson as { topics: ActiveTopic[] }).topics;
 export const ACTIVE_PER_DAY = 5;
 export const activeTopicOfWeek = (n: number) => ACTIVE_TOPICS.find((t) => t.week === n);
+
+/**
+ * Vietnamese versions of the example sentences ("Dịch ví dụ": translate them back into English using the word).
+ * passive is keyed by the word, active by "topic:collocation". Words without a Vietnamese version are left out.
+ */
+const EXAMPLE_VI = exampleViJson as { passive: Record<string, string>; active: Record<string, string> };
+export const passiveExampleVi = (w: PlanWord) => (w.ex ? EXAMPLE_VI.passive[w.t] : undefined);
+export const activeExampleVi = (topic: string, w: ActiveWord) => EXAMPLE_VI.active[`${topic}:${w.t}`];
+
+/** Error-correction items per grammar topic (content/grammar-fix.json) and the S-V-O sets (content/svo.json). */
+const FIX_COUNT = Object.fromEntries(Object.entries((fixJson as { topics: Record<string, unknown[]> }).topics).map(([k, v]) => [k, v.length]));
+export const SVO_SETS = (svoJson as { sets: unknown[] }).sets.length;
+/** The n-th S-V-O task of the path: the sets in order, then the harder half again and again. */
+export const svoSetFor = (n: number) => (n < SVO_SETS ? n : SVO_SETS / 2 + ((n - SVO_SETS) % (SVO_SETS / 2)));
+
+/**
+ * The error-correction items of one day: `own` items of the day's topic (a window that moves along the list on each
+ * of its days) and `mixed` items from topics learned before, picked by the day so they change every day.
+ */
+function pickFix(topic: string | undefined, k: number, earlier: string[], seed: number, own: number, mixed: number) {
+  const out: { topic: string; idx: number }[] = [];
+  const seen = new Set<string>();
+  const push = (t: string, idx: number) => {
+    const key = `${t}:${idx}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    out.push({ topic: t, idx });
+    return true;
+  };
+  if (topic && FIX_COUNT[topic]) {
+    const n = FIX_COUNT[topic]!;
+    for (let j = 0; j < Math.min(own, n); j++) push(topic, (k * 4 + j) % n);
+  }
+  const pool = earlier.filter((t) => FIX_COUNT[t]);
+  for (let j = 0, tries = 0; pool.length && j < mixed && tries < 50; tries++) {
+    const t = pool[(seed * 5 + tries * 3) % pool.length]!;
+    if (push(t, (seed * 3 + tries * 7) % FIX_COUNT[t]!)) j++;
+  }
+  return out;
+}
 
 const SKILL = {
   distractor: { id: 'distractor', name: 'Bẫy trắc nghiệm (MCQ distractors)' },
@@ -200,6 +250,7 @@ export const WEEKS: Week[] = [
 
 /** Phase 2 and 3: one foundation topic is revisited on Thursdays, in the order they were learned. */
 const REVIEW_ORDER = WEEKS.filter((w) => w.grammar).flatMap((w) => w.grammar!);
+const GRAMMAR_ORDER = REVIEW_ORDER;
 
 const DAY_MS = 86_400_000;
 export const toDate = (key: string) => new Date(`${key}T00:00:00`);
@@ -214,6 +265,7 @@ const vocabPerDay = (phase: Phase) => (phase === 1 ? 15 : phase === 2 ? 12 : 0);
 function build(): Day[] {
   const days: Day[] = [];
   let cursor = 0;
+  let svoN = 0;
   const total = daysBetween(START, TARGET);
   for (let i = 0; i <= total; i++) {
     const date = addDays(START, i);
@@ -247,6 +299,46 @@ function build(): Day[] {
         gated: true,
       });
     };
+    const vocabTranslate = () => {
+      const passive = day.tasks.find((t) => t.kind === 'vocab-new');
+      const active = day.tasks.find((t) => t.kind === 'vocab-active');
+      const nP = passive ? NEW_WORDS.slice(passive.words![0], passive.words![1]).filter((w) => passiveExampleVi(w)).length : 0;
+      const topic = active?.active ? ACTIVE_TOPICS.find((x) => x.id === active.active!.topic) : undefined;
+      const nA = topic ? topic.words.slice(active!.active!.from, active!.active!.to).filter((w) => activeExampleVi(topic.id, w)).length : 0;
+      if (!nP && !nA) return;
+      add('vocab-translate', {
+        title: `Dịch ví dụ Việt → Anh · ${nP + nA} câu`,
+        detail: 'Mỗi từ, cụm từ vừa học có một câu ví dụ bằng tiếng Việt. Dịch sang tiếng Anh và phải dùng đúng từ đó (gợi ý có sẵn). Cần đạt ít nhất 80%.',
+        minutes: 15,
+        href: `/dich-vi-du/${date}`,
+        gated: true,
+      });
+    };
+    const grammarFix = (items: { topic: string; idx: number }[], topic?: string) => {
+      if (!items.length) return;
+      add('grammar-fix', {
+        title: `Sửa lỗi sai · ${items.length} câu`,
+        detail: 'Mỗi câu có một lỗi ngữ pháp người Việt hay mắc. Viết lại cả câu cho đúng rồi đọc giải thích. Cần đạt ít nhất 80%.',
+        minutes: 15,
+        href: `/sua-loi/${date}`,
+        topic,
+        fix: items,
+        gated: true,
+      });
+    };
+    const grammarSvo = () => {
+      const set = svoSetFor(svoN);
+      const prev = svoN === 0 ? set : svoSetFor(svoN - 1);
+      svoN++;
+      add('grammar-svo', {
+        title: 'Câu chuẩn S-V-O · phân tích, xếp câu, viết câu',
+        detail: 'Gán nhãn S / V / O / C / A cho 6 câu, xếp lại 3 câu bị xáo trộn, rồi tự viết 3 câu từ tiếng Việt đúng trật tự S-V-O. Cần đạt ít nhất 80%.',
+        minutes: 20,
+        href: `/cau-svo/${date}`,
+        svo: { set, prev },
+        gated: true,
+      });
+    };
     const review = (minutes = 10) => add('vocab-review', { title: 'Ôn thẻ từ đến hạn', detail: 'Ôn các từ đã học theo lịch lặp lại ngắt quãng. Làm hết số thẻ đến hạn hôm nay.', minutes, href: '/review' });
     const p3 = (detail = '4–5 câu Passage 3: ghép từng keyword với cụm đồng nghĩa trong bài rồi mới chọn đáp án.') => add('reading-p3', { title: 'Reading · Passage 3 ngắn', detail, minutes: 15, href: '/ielts/reading?format=p3' });
 
@@ -267,6 +359,13 @@ function build(): Day[] {
       if (step === 1) add('grammar-learn', { title: 'Ngữ pháp · lý thuyết + nhận diện', detail: 'Xem hình minh hoạ, công thức, lỗi hay gặp; làm 6 câu nhận diện. Cần đúng ít nhất 5/6 (≥ 80%).', minutes: 20, href: grammarHref(topic), topic, gated: true });
       if (step === 2) add('grammar-drill', { title: 'Ngữ pháp · dịch 8 câu Việt → Anh', detail: 'Cần đúng ngay lần đầu ít nhất 7/8 câu. Chưa đạt thì luyện lại câu sai rồi làm lại cả bài.', minutes: 20, href: grammarHref(topic), topic, gated: true });
       if (step === 3) add('grammar-own', { title: 'Ngữ pháp · tự đặt 5 câu', detail: 'Viết 5 câu của riêng bạn dùng cấu trúc vừa học và từ vựng tuần này, ở "Viết tự do". Đọc lại, tự sửa từng câu theo phần "Lỗi hay gặp".', minutes: 15, href: '/writing', topic });
+      const earlier = GRAMMAR_ORDER.slice(0, GRAMMAR_ORDER.indexOf(topic));
+      if (step) {
+        grammarFix(pickFix(topic, step - 1, earlier, i, earlier.length ? 6 : 8, 4), topic);
+        grammarSvo();
+      } else {
+        grammarFix([...pickFix(a, 2 + week.n, [], i, 5, 0), ...pickFix(b, 2 + week.n, [], i, 5, 0)]);
+      }
       if (weekday === 0) {
         if (week.n === 8) add('retest', { title: 'Kiểm tra lại trình độ', detail: 'Cùng dạng bài ngày 14/11. So sánh để thấy tiến bộ trước khi sang giai đoạn Luyện tập.', minutes: 40, href: '/lo-trinh/kiem-tra' });
         else add('week-review', { title: 'Ôn tập tuần', detail: 'Làm lại các câu dịch sai của 2 chủ điểm tuần này cho đến khi đúng hết.', minutes: 20, href: grammarHref(a), topic: a });
@@ -276,6 +375,7 @@ function build(): Day[] {
       } else {
         vocabNew();
         vocabActive();
+        vocabTranslate();
         review();
         p3();
       }
@@ -285,11 +385,17 @@ function build(): Day[] {
       const prompt = frame ? (isTask1 ? TASK1[frame]![0]! : ESSAY[frame]![(week.n + weekday) % 3]!.guided) : undefined;
       const exam = frame && !isTask1 ? ESSAY[frame]![(week.n + weekday) % 3]!.exam : undefined;
       const skill = week.skill;
+      const phase2Grammar = () => {
+        grammarFix(pickFix(undefined, 0, week.n >= 15 ? [...GRAMMAR_ORDER, 'trends'] : GRAMMAR_ORDER, i, 0, 8));
+        if (weekday % 2 === 1) grammarSvo();
+      };
       switch (weekday) {
         case 1:
           if (skill) add('reading-skill', { title: `Kỹ năng Reading · ${skill.name}`, detail: 'Đọc cách làm, làm hết các câu luyện nhanh có giải thích tiếng Việt.', minutes: 25, href: `/ielts/reading?skill=${skill.id}` });
           vocabNew();
           vocabActive();
+          vocabTranslate();
+          phase2Grammar();
           review();
           break;
         case 2:
@@ -297,12 +403,16 @@ function build(): Day[] {
           p3(skill ? `Áp dụng kỹ năng "${skill.name}" vào 4–5 câu Passage 3.` : undefined);
           vocabNew();
           vocabActive();
+          vocabTranslate();
+          phase2Grammar();
           review();
           break;
         case 3:
           if (prompt) add('writing-guided', { title: `Writing · viết theo khung (${FRAME_NAME[frame!]})`, detail: 'Dịch từng câu theo khung với gợi ý giảm dần, nộp để được chấm band và sửa lỗi.', minutes: 35, href: `/writing/guided/${prompt}` });
           vocabNew();
           vocabActive();
+          vocabTranslate();
+          phase2Grammar();
           review();
           break;
         case 4: {
@@ -311,6 +421,8 @@ function build(): Day[] {
           p3(skill ? `Áp dụng kỹ năng "${skill.name}".` : undefined);
           vocabNew();
           vocabActive();
+          vocabTranslate();
+          phase2Grammar();
           review();
           break;
         }
@@ -319,6 +431,8 @@ function build(): Day[] {
           else if (prompt) add('writing-guided', { title: `Writing Task 1 · ${FRAME_NAME[frame!]} thứ hai`, detail: 'Viết theo khung với đề thứ hai cùng dạng biểu đồ.', minutes: 30, href: `/writing/guided/${TASK1[frame!]![1] ?? TASK1[frame!]![0]}` });
           vocabNew();
           vocabActive();
+          vocabTranslate();
+          phase2Grammar();
           review();
           break;
         case 6:
@@ -327,6 +441,8 @@ function build(): Day[] {
           else add('writing-mistakes', { title: 'Sửa lại lỗi hay lặp lại', detail: 'Làm bài sửa chính câu sai cũ của bạn trong "Lỗi hay lặp lại".', minutes: 15, href: '/writing/mistakes' });
           vocabNew();
           vocabActive();
+          vocabTranslate();
+          phase2Grammar();
           review();
           break;
         default:
