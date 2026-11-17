@@ -1,5 +1,6 @@
 import {
   BookA,
+  Blocks,
   BookOpen,
   Check,
   CheckCircle2,
@@ -16,6 +17,7 @@ import {
   Plus,
   Repeat,
   Target,
+  Wrench,
   type LucideIcon,
 } from 'lucide-react';
 import { useState } from 'react';
@@ -25,6 +27,7 @@ import { Button } from '@/components/ui/button';
 import { PosBadge } from '@/features/vocabulary/PosBadge';
 import { useImportWords } from '@/features/vocabulary/api';
 import { topicById } from '@/lib/grammar/drills';
+import { practiceOf } from '@/lib/practice/results';
 import { activeWordsOf, wordsOf, type Day, type Task, type TaskKind } from '@/lib/roadmap/plan';
 import { isDone, lockReason, setManualDone, topicState, type Context } from '@/lib/roadmap/progress';
 import { cn } from '@/lib/utils';
@@ -36,8 +39,11 @@ const ICON: Record<TaskKind, LucideIcon> = {
   'grammar-drill': Languages,
   'grammar-own': PenLine,
   'grammar-review': Repeat,
+  'grammar-fix': Wrench,
+  'grammar-svo': Blocks,
   'vocab-new': BookA,
   'vocab-active': PenLine,
+  'vocab-translate': Languages,
   'vocab-review': Layers,
   'reading-p3': BookOpen,
   'reading-skill': BookOpen,
@@ -62,8 +68,11 @@ export const AREA: Record<TaskKind, string> = {
   'grammar-drill': 'Ngữ pháp',
   'grammar-own': 'Ngữ pháp',
   'grammar-review': 'Ngữ pháp',
+  'grammar-fix': 'Ngữ pháp · sửa lỗi',
+  'grammar-svo': 'Ngữ pháp · cấu trúc câu',
   'vocab-new': 'Từ vựng thụ động · Reading',
   'vocab-active': 'Từ vựng chủ động · Writing',
+  'vocab-translate': 'Từ vựng · dịch ví dụ',
   'vocab-review': 'Từ vựng',
   'reading-p3': 'Reading',
   'reading-skill': 'Reading',
@@ -82,7 +91,9 @@ export const AREA: Record<TaskKind, string> = {
 };
 
 /** Tasks that only the exercise itself can tick (grammar ≥ 80 %, retest saved…). */
-const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'placement', 'retest', 'rest'];
+const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'placement', 'retest', 'rest'];
+
+const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo'];
 
 function hrefFor(task: Task) {
   if (task.kind === 'grammar-drill') return `${task.href}?step=drill`;
@@ -130,6 +141,11 @@ export function TaskCard({ task, day, ctx, compact, showDate }: { task: Task; da
           {ts && (task.kind === 'grammar-learn' || task.kind === 'grammar-drill') && (
             <p className="mt-1 text-xs text-muted-foreground">
               Nhận diện: {ts.quiz ? `${ts.quiz.best}/${ts.quiz.total}` : 'chưa làm'} · Dịch câu: {ts.drill ? `${ts.drill.best}/${ts.drill.total}` : 'chưa làm'}
+            </p>
+          )}
+          {PRACTICE_KINDS.includes(task.kind) && practiceOf(task.id) && (
+            <p className="mt-1 text-xs text-muted-foreground">
+              Điểm cao nhất: {practiceOf(task.id)!.best}/{practiceOf(task.id)!.total}
             </p>
           )}
           {lock && !done && (

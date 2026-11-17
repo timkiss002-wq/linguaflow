@@ -22,6 +22,14 @@ kiểm tra trình độ thích ứng cũ đã được bỏ (đường dẫn cũ
   ~510 collocation cho Writing theo 18 chủ đề (15 chủ đề có tuần trong lộ trình, 3 chủ đề tự học thêm). Thứ Hai – thứ
   Bảy của giai đoạn 1–2, mỗi ngày 5 cụm + bài **viết 3–5 câu** (`/viet-cau/:date`) trả lời đề Writing của ngày, phải dùng đủ
   5 cụm (máy nhận ra cả dạng chia, bấm tay nếu sót). Lưu đạt yêu cầu là xong; có nút "Nhờ AI chữa" gửi sang chấm Writing.
+- **Dịch ví dụ** (`/dich-vi-du/:date`, 11/2026): ví dụ của từng từ / cụm học trong ngày được cho bằng tiếng Việt
+  (`content/roadmap/example-vi.json`), dịch lại sang tiếng Anh, bắt buộc dùng đúng từ đó. Hiện có bản Việt cho 4 tuần đầu
+  (16/11 → 13/12); ngày chưa có bản Việt thì không xếp bài.
+- **Sửa lỗi sai** (`/sua-loi/:date`, `/grammar/:topic/sua-loi`): 10 câu sai / chủ điểm (`content/grammar-fix.json`), mỗi
+  ngày 8–10 câu (chủ điểm đang học + ôn chủ điểm cũ), chấm chặt (sai một chữ cái vẫn là sai), có giải thích.
+- **Câu chuẩn S-V-O** (`/cau-svo`, `/cau-svo/:date`): lý thuyết 5 thành phần (S, V, O, C, A) + 6 mẫu câu; mỗi ngày gán
+  nhãn 6 câu, xếp lại 3 câu, viết 3 câu từ tiếng Việt; 24 bộ khó dần (`content/svo.json`).
+  Ba bài này có mỗi ngày thứ Hai – thứ Bảy (S-V-O ở giai đoạn 2 chỉ thứ Hai, Tư, Sáu), cần ≥ 80% để xong.
 - **Kiểm tra trình độ** (`/lo-trinh/kiem-tra`): bài làm ngày 14/11/2026, làm lại 10/01 và 07/03, so với lần đầu.
 - Logic lộ trình: `src/lib/roadmap/plan.ts` (thuần, có test), tiến độ: `src/lib/roadmap/progress.ts` (lưu trong trình duyệt).
 

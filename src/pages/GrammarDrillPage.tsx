@@ -471,6 +471,9 @@ function Summary({ topic, order, answers, onRetry }: { topic: GrammarTopic; orde
             <Button variant="outline" onClick={() => onRetry()}>
               Làm lại cả bài
             </Button>
+            <Button asChild variant="outline">
+              <Link to={`/grammar/${topic.id}/sua-loi`}>Luyện sửa lỗi sai</Link>
+            </Button>
             {nextTopic && (
               <Button asChild variant={wrong.length ? 'ghost' : 'default'}>
                 <Link to={`/grammar/${nextTopic.id}`}>

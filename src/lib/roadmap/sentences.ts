@@ -46,7 +46,8 @@ const IRREGULAR: Record<string, string[]> = {
   grow: ['grew', 'grown'], build: ['built'], break: ['broke', 'broken'], pay: ['paid'], hold: ['held'], have: ['has', 'had'],
   do: ['did', 'done', 'does'], undergo: ['underwent', 'undergone'], overtake: ['overtook', 'overtaken'], burn: ['burnt'],
   hit: ['hit'], set: ['set'], drive: ['drove', 'driven'], seek: ['sought'], teach: ['taught'], feel: ['felt'], put: ['put'],
-  pose: ['posed'], meet: ['met'], bear: ['bore', 'borne'], come: ['came'], show: ['shown'],
+  pose: ['posed'], meet: ['met'], bear: ['bore', 'borne'], come: ['came'], show: ['shown'], lay: ['laid'], fly: ['flew', 'flown'],
+  swear: ['swore', 'sworn'], sweep: ['swept'], strive: ['strove', 'striven'],
 };
 
 const words = (s: string) => (s.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g) ?? []);
