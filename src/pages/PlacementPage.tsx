@@ -212,7 +212,7 @@ function Result({ result }: { result: PlacementResult }) {
             </div>
           ))}
           <p className="text-sm text-muted-foreground">
-            Đoạn văn W5 ({words(result.writing[4] ?? '')} từ) đã được lưu. Muốn chấm band, dán đoạn văn vào Viết tự do và nộp để nhận nhận xét AI.
+            Đoạn văn W5 ({words(result.writing[4] ?? '')} từ) đã được lưu. So với bản mẫu ở trên để tự chấm.
           </p>
         </CardContent>
       </Card>

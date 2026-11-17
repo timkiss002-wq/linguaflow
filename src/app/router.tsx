@@ -24,7 +24,6 @@ const AdminPage = lazy(() => import('@/pages/AdminPage'));
 const WritingEditorPage = lazy(() => import('@/pages/WritingEditorPage'));
 const WritingResultPage = lazy(() => import('@/pages/WritingResultPage'));
 const GuidedWritingPage = lazy(() => import('@/pages/GuidedWritingPage'));
-const WritingMistakesPage = lazy(() => import('@/pages/WritingMistakesPage'));
 const GuidedPracticePage = lazy(() => import('@/pages/GuidedPracticePage'));
 const IeltsTestsPage = lazy(() => import('@/pages/IeltsTestsPage'));
 const IeltsTestPage = lazy(() => import('@/pages/IeltsTestPage'));
@@ -93,7 +92,7 @@ export const router = createBrowserRouter([
           { path: '/writing', element: page(<WritingPage />) },
           { path: '/writing/new/:taskId', element: page(<WritingEditorPage />) },
           { path: '/writing/guided', element: page(<GuidedWritingPage />) },
-          { path: '/writing/mistakes', element: page(<WritingMistakesPage />) },
+          { path: '/writing/mistakes', element: <Navigate to="/writing" replace /> },
           { path: '/writing/guided/frame/:typeId', element: page(<GuidedPracticePage />) },
           { path: '/writing/guided/:promptId', element: page(<GuidedPracticePage />) },
           { path: '/writing/:submissionId', element: page(<WritingResultPage />) },

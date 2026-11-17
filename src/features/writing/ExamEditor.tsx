@@ -74,7 +74,7 @@ export function ExamEditor({ task }: { task: WritingTask }) {
               <li>
                 Ít nhất <b>{task.min_length} từ</b>. Không có gợi ý, bản dịch hay khung bài.
               </li>
-              <li>Hết giờ bài được nộp tự động; sau đó AI chấm band theo 4 tiêu chí và chỉ ra từng lỗi.</li>
+              <li>Hết giờ bài được nộp tự động; sau đó xem phân tích bài (độ dài, câu, từ nối) và so với bài mẫu.</li>
               <li>{taskNumber(task) === 1 ? 'Mẹo phân bổ: 3 phút đọc biểu đồ, tìm 2 đặc điểm chính · 14 phút viết · 3 phút soát lỗi.' : 'Mẹo phân bổ: 5 phút lập dàn ý · 30 phút viết · 5 phút soát lỗi.'}</li>
             </ul>
             <Button

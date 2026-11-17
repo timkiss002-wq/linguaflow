@@ -20,8 +20,10 @@ kiểm tra trình độ thích ứng cũ đã được bỏ (đường dẫn cũ
   Đây là **từ vựng thụ động** (chỉ cần nhận ra khi đọc: Anh → Việt, từ đồng nghĩa, đoán loại từ từ đuôi).
 - **Từ vựng chủ động** (`content/roadmap/active-vocab.json`, bản giống hệt trong các tab "CĐ 01–18" của Google Sheet):
   ~510 collocation cho Writing theo 18 chủ đề (15 chủ đề có tuần trong lộ trình, 3 chủ đề tự học thêm). Thứ Hai – thứ
-  Bảy của giai đoạn 1–2, mỗi ngày 5 cụm + bài **viết 3–5 câu** (`/viet-cau/:date`) trả lời đề Writing của ngày, phải dùng đủ
-  5 cụm (máy nhận ra cả dạng chia, bấm tay nếu sót). Lưu đạt yêu cầu là xong; có nút "Nhờ AI chữa" gửi sang chấm Writing.
+  Bảy của giai đoạn 1–2, mỗi ngày 5 cụm + bài **dịch câu với cụm từ** (`/viet-cau/:date`): mỗi cụm 3 câu tiếng Việt đơn
+  giản (`content/roadmap/active-sentences.txt` → `node scripts/build-active-sentences.mjs` → `active-sentences.json`),
+  dịch sang tiếng Anh, chấm đúng / sai ngay trên máy với đáp án mẫu, có gợi ý; xong khi đúng ngay lần đầu ≥ 80%. Hiện có
+  câu cho 4 tuần đầu (Education, Environment, Technology, Health); cụm chưa có câu thì dùng câu ví dụ tiếng Việt.
 - **Dịch ví dụ** (`/dich-vi-du/:date`, 11/2026): ví dụ của từng từ / cụm học trong ngày được cho bằng tiếng Việt
   (`content/roadmap/example-vi.json`), dịch lại sang tiếng Anh, bắt buộc dùng đúng từ đó. Hiện có bản Việt cho 4 tuần đầu
   (16/11 → 13/12); ngày chưa có bản Việt thì không xếp bài.
@@ -61,7 +63,7 @@ Architecture, database design and the milestone plan: **[docs/ARCHITECTURE.md](d
 | P3 | Level test: adaptive placement + 2-weekly check-in per skill (Elo), 110-question bank, 27 grammar points, answers graded on the server — [design](docs/PERSONALIZATION.md#12-p3--đã-triển-khai) | ✅ Done |
 | P4 | Today's plan on the dashboard: due reviews, level test / check-in, one weak spot, an i+1 lesson — sized to the daily goal, with reasons, auto-ticked, skips and rest days adapt it; dictation keeps the listening level current — [design](docs/PERSONALIZATION.md#13-p4--đã-triển-khai) | ✅ Done |
 | P5 | Writing in English or 中文: 28 prompts picked by level, interests and exam (HSK / IELTS), notebook words as targets, drafts, automatic analysis without AI (length, sentences, variety, linking words, HSK levels of words, form checks), comparison with earlier texts, in the daily plan — [design](docs/PERSONALIZATION.md#14-p5--đã-triển-khai) | ✅ Done |
-| P6 | AI feedback on writing (Gemini via a Supabase Edge Function, key on the server): scores on IELTS / HSK criteria, sentence corrections with Vietnamese explanations, improved version; validated against the text, cached, daily limit, opt-in with a privacy notice; repeated error types feed Strengths & Weaknesses — [design](docs/PERSONALIZATION.md#15-p6--đã-triển-khai), [setup](docs/DEPLOY.md) | ✅ Done |
+| P6 | ~~AI feedback on writing~~ — **removed 11/2026** (no API available); was: Gemini via a Supabase Edge Function, key on the server): scores on IELTS / HSK criteria, sentence corrections with Vietnamese explanations, improved version; validated against the text, cached, daily limit, opt-in with a privacy notice; repeated error types feed Strengths & Weaknesses — [design](docs/PERSONALIZATION.md#15-p6--đã-triển-khai), [setup](docs/DEPLOY.md) | ❌ Removed |
 | W1 | IELTS Task 2 guided writing: one fixed frame per question type (agree, discuss, advantages, problem–solution, two-part), 10 model essays at bands 5.5 / 6.5 / 7.5 with Vietnamese sentences; frame drill, sentence-by-sentence translation with instant checking and fading hints, then save → analysis + AI band score — [design](docs/PERSONALIZATION.md#16-w1--viết-theo-khung-ielts-task-2) | ✅ Done |
 | W2 | IELTS Reading & Listening practice tests (written for LinguaFlow): a full Academic Reading test (3 passages) and a full Listening test (4 parts, read by text-to-speech with a voice per speaker); exam mode (timer, listen once) or practice by part; automatic marking with word limits, band estimate, Vietnamese explanation and highlighted evidence for every question; history and weak question types (also on Strengths & Weaknesses) — [design](docs/PERSONALIZATION.md#17-w2--luyện-đề-ielts-reading--listening) | ✅ Done |
 | W3 | IELTS Writing exam mode and recurring mistakes: Task 2 under exam conditions (40-minute countdown that survives reloads, no help, automatic submission when time is up, AI band score requested straight away); a "My mistakes" page with AI band per criterion over time, the error categories you repeat most with your own examples, and a drill in which you correct your own past sentences — [design](docs/PERSONALIZATION.md#18-w3--thi-thử-writing-và-lỗi-hay-lặp-lại) | ✅ Done |
@@ -221,7 +223,6 @@ Step-by-step guide in Vietnamese: **[docs/DEPLOY.md](docs/DEPLOY.md)**. Summary:
 
 - Build command: `npm run build` · Output directory: `dist`
 - Environment variables: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
-- Optional AI writing feedback: `npx supabase secrets set GEMINI_API_KEY=…` and `npx supabase functions deploy writing-feedback` ([guide](docs/DEPLOY.md)).
 - Single-page routing is already configured: `vercel.json` (Vercel) and `public/_redirects` (Netlify/Cloudflare Pages).
 
 The anon key is safe to expose in the browser: all data access is protected by Row Level Security.

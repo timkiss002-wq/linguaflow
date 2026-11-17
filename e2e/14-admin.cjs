@@ -80,8 +80,6 @@ async function register(browser, name, email) {
   await ap.getByTestId('admin-tasks').locator(`[data-row="${TASK}"]`).getByRole('switch').click();
   await ap.waitForTimeout(600);
   check('switch a writing prompt off', sql(`select is_active from writing_tasks where id='${TASK}'`) === 'f');
-  await ap.getByRole('tab', { name: 'AI feedback' }).click();
-  check('AI usage tab', (await ap.getByTestId('admin-ai').textContent()).includes('Reviews, last 24 h'));
 
   // ── what the learner now sees ──
   await lp.goto(BASE + '/lessons');

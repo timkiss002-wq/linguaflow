@@ -209,7 +209,7 @@ function Setup({ prompt, minutes, band, onStart }: { prompt: GuidedPrompt; minut
           <Button asChild variant="secondary" className="h-auto flex-col items-start gap-0.5 whitespace-normal py-2.5 text-left">
             <Link to={`/writing/new/${prompt.task}?exam=1`}>
               <span className="font-semibold">Level 4: Thi thử {minutes} phút</span>
-              <span className="text-xs font-normal text-muted-foreground">Chỉ có đề bài, bấm giờ như đi thi — rồi AI chấm band</span>
+              <span className="text-xs font-normal text-muted-foreground">Chỉ có đề bài, bấm giờ như đi thi</span>
             </Link>
           </Button>
         </CardContent>
@@ -309,7 +309,7 @@ function Finish({
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-base">Bài của bạn</CardTitle>
-              <CardDescription>Sửa lại nếu muốn, rồi lưu để xem phân tích và nhờ AI chấm band.</CardDescription>
+              <CardDescription>Sửa lại nếu muốn, rồi lưu để xem phân tích.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <label htmlFor="guided-essay" className="sr-only">

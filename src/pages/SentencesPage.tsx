@@ -1,54 +1,42 @@
-import { ArrowLeft, CheckCircle2, Circle, Lock, Sparkles } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { ArrowLeft, CheckCircle2, Circle, Lock } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import { EmptyState } from '@/components/EmptyState';
 import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { WriteRunner } from '@/features/practice/WriteRunner';
 import { PosBadge } from '@/features/vocabulary/PosBadge';
 import { useRoadmapContext } from '@/features/roadmap/useRoadmap';
-import { useSaveSubmission } from '@/features/writing/api';
-import { toUserMessage } from '@/lib/errors';
+import { phraseItems } from '@/lib/practice/items';
+import { PRACTICE_PASS } from '@/lib/practice/results';
 import { activeTopicOf, activeWordsOf, dayByDate, formatDay } from '@/lib/roadmap/plan';
 import { dayLock, refreshRoadmap } from '@/lib/roadmap/progress';
-import { MAX_SENTENCES, MIN_SENTENCES, checkSentences, saveSentences, sentencesOf } from '@/lib/roadmap/sentences';
-import { analyze } from '@/lib/writing/analyze';
-import { cn } from '@/lib/utils';
+import { saveSentences, sentencesOf } from '@/lib/roadmap/sentences';
 
 /**
- * /viet-cau/:date — the active-vocabulary task of one day: learn 5 Writing collocations, then write 3–5 sentences
- * answering the day's prompt with all 5 of them. Saved in this browser; "Nhờ AI chữa" sends it to the Writing feedback.
+ * /viet-cau/:date — the active-vocabulary task of one day: learn 5 Writing collocations, then translate 3 simple
+ * Vietnamese sentences per collocation into English with it. Checked on the device against model answers, with hints;
+ * done at 80 % right on the first try. Saved in this browser.
  */
 export default function SentencesPage() {
   const { date = '' } = useParams();
-  const navigate = useNavigate();
   const ctx = useRoadmapContext();
   const day = dayByDate(date);
   const task = day?.tasks.find((t) => t.kind === 'vocab-active');
   const topic = task ? activeTopicOf(task) : undefined;
   const words = useMemo(() => (task ? activeWordsOf(task) : []), [task]);
-  const phrases = useMemo(() => words.map((w) => w.t), [words]);
-  const saved = sentencesOf(date);
-  const [text, setText] = useState(saved?.text ?? '');
-  const [manual, setManual] = useState<string[]>(saved?.manual ?? []);
+  const items = useMemo(() => (topic ? phraseItems(topic.id, words) : []), [topic, words]);
+  const [saved, setSaved] = useState(() => sentencesOf(date));
   const [showEx, setShowEx] = useState(true);
-  const save = useSaveSubmission();
-  const [sending, setSending] = useState(false);
-
-  useEffect(() => {
-    const s = sentencesOf(date);
-    setText(s?.text ?? '');
-    setManual(s?.manual ?? []);
-  }, [date]);
-
-  const check = useMemo(() => checkSentences(text, phrases, manual), [text, phrases, manual]);
+  const [started, setStarted] = useState(false);
+  const [run, setRun] = useState(0);
 
   if (!day || !task || !topic)
     return (
       <EmptyState
         icon={Circle}
-        title="Ngày này không có bài viết câu"
-        description="Bài viết 3–5 câu có vào thứ Hai – thứ Bảy của giai đoạn Nền tảng và Luyện tập."
+        title="Ngày này không có bài cụm từ"
+        description="Bài cụm từ chủ động có vào thứ Hai – thứ Bảy của giai đoạn Nền tảng và Luyện tập."
         action={
           <Button asChild variant="outline">
             <Link to="/lo-trinh">Xem lộ trình</Link>
@@ -58,38 +46,19 @@ export default function SentencesPage() {
     );
 
   const lock = dayLock(day, ctx);
-  const prompt = task.active!.prompt;
-
-  const onSave = () => {
-    saveSentences(date, { text, manual, savedAt: new Date().toISOString(), passed: check.passed });
+  const store = (score: number, total: number) => {
+    const passed = total === 0 || score / total >= PRACTICE_PASS;
+    // keep the best result: a worse retry doesn't undo a finished day
+    const prev = sentencesOf(date);
+    if (prev?.passed && !passed) return;
+    const entry = { text: '', manual: [], savedAt: new Date().toISOString(), passed, score, total };
+    saveSentences(date, entry);
+    setSaved(entry);
     refreshRoadmap();
-    if (check.passed) toast.success('Đã lưu. Bài hôm nay đạt yêu cầu.');
-    else toast('Đã lưu bản nháp. Chưa đạt: cần 3–5 câu và dùng đủ 5 cụm.');
+    if (!total) toast.success('Đã đánh dấu học xong 5 cụm hôm nay.');
+    else if (passed) toast.success(`Đạt ${score}/${total} — đã xong bài hôm nay.`);
+    else toast(`${score}/${total} câu đúng ngay lần đầu. Cần ${Math.ceil(total * PRACTICE_PASS)} để hoàn thành.`);
   };
-
-  const askAi = async () => {
-    onSave();
-    setSending(true);
-    try {
-      const metrics = analyze(text, { language: 'en', kind: 'sentences', minLength: MIN_SENTENCES, targets: phrases });
-      const id = await save.mutateAsync({
-        language: 'en',
-        taskId: `roadmap-sentences-${date}`,
-        title: `Viết câu ${formatDay(date)} · ${topic.name}`,
-        prompt: `${prompt}\n\nViết 3–5 câu trả lời đề trên, dùng đủ các cụm: ${phrases.join('; ')}.`,
-        targets: phrases,
-        body: text.trim(),
-        metrics,
-        seconds: 0,
-      });
-      navigate(`/writing/${id}?new=1`);
-    } catch (e) {
-      toast.error(toUserMessage(e));
-      setSending(false);
-    }
-  };
-
-  const toggleManual = (p: string) => setManual((m) => (m.includes(p) ? m.filter((x) => x !== p) : [...m, p]));
 
   return (
     <div className="mx-auto max-w-4xl space-y-5">
@@ -98,13 +67,24 @@ export default function SentencesPage() {
       </Link>
       <header>
         <p className="text-sm font-medium text-muted-foreground">Từ vựng chủ động · {topic.vi}</p>
-        <h1 className="mt-1 text-2xl font-bold tracking-tight">Học 5 cụm, viết 3–5 câu</h1>
-        <p className="mt-1 text-sm text-muted-foreground">Mục tiêu: tự dùng được cụm từ trong bài Writing. Câu nào cũng phải trả lời đúng đề, không viết câu rời rạc.</p>
+        <h1 className="mt-1 text-2xl font-bold tracking-tight">Học 5 cụm, dịch câu với từng cụm</h1>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Mỗi cụm có 3 câu tiếng Việt đơn giản. Dịch sang tiếng Anh và <b>phải dùng đúng cụm đó</b> (được chia thì, thêm -s…). Máy chấm ngay; câu của bạn khác đáp án
+          nhưng vẫn đúng thì bấm “Tôi viết đúng”.
+        </p>
       </header>
 
       {lock && (
         <p className="flex items-center gap-1.5 rounded-lg bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800 dark:bg-amber-500/10 dark:text-amber-300">
           <Lock className="size-4" aria-hidden /> {lock}
+        </p>
+      )}
+
+      {saved && (
+        <p className={saved.passed ? 'flex items-center gap-1.5 text-sm font-medium text-success' : 'text-sm text-muted-foreground'} data-testid="phrase-result">
+          {saved.passed && <CheckCircle2 className="size-4" aria-hidden />}
+          {saved.total ? `Lần tốt nhất: ${saved.score}/${saved.total} câu đúng ngay lần đầu` : 'Đã học xong'}
+          {saved.passed ? ' · đã xong bài hôm nay' : ` · cần ${Math.round(PRACTICE_PASS * 100)}% để hoàn thành`}
         </p>
       )}
 
@@ -119,73 +99,57 @@ export default function SentencesPage() {
         </div>
         <ul className="mt-2 divide-y">
           {words.map((w) => (
-            <li key={w.t} className="flex items-start gap-3 py-2">
-              <button
-                type="button"
-                onClick={() => toggleManual(w.t)}
-                title={check.used[w.t] ? 'Đã dùng' : 'Bấm nếu bạn đã dùng cụm này (dạng chia khác máy chưa nhận ra)'}
-                aria-label={check.used[w.t] ? `Đã dùng ${w.t}` : `Chưa dùng ${w.t}`}
-                className="mt-0.5 shrink-0"
-              >
-                {check.used[w.t] ? <CheckCircle2 className="size-5 text-success" /> : <Circle className="size-5 text-border" />}
-              </button>
-              <div className="min-w-0">
-                <p>
-                  <span className="font-semibold" lang="en">
-                    {w.t}
-                  </span>
-                  {w.p && <PosBadge pos={w.p} className="ml-1.5" />}
-                  <span className="text-muted-foreground"> — {w.m}</span>
+            <li key={w.t} className="py-2">
+              <p>
+                <span className="font-semibold" lang="en">
+                  {w.t}
+                </span>
+                {w.p && <PosBadge pos={w.p} className="ml-1.5" />}
+                <span className="text-muted-foreground"> — {w.m}</span>
+              </p>
+              {showEx && (
+                <p className="text-sm italic text-muted-foreground" lang="en">
+                  {w.ex}
                 </p>
-                {showEx && (
-                  <p className="text-sm italic text-muted-foreground" lang="en">
-                    {w.ex}
-                  </p>
-                )}
-              </div>
+              )}
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="rounded-xl border bg-card p-4" aria-labelledby="prompt">
-        <h2 id="prompt" className="text-sm font-semibold">
-          2 · Đề Writing hôm nay
+      <section className="space-y-3" aria-labelledby="translate">
+        <h2 id="translate" className="text-sm font-semibold">
+          2 · Dịch câu Việt → Anh {items.length > 0 && <span className="font-normal text-muted-foreground">({items.length} câu)</span>}
         </h2>
-        <p className="mt-1.5 rounded-lg bg-muted px-3 py-2 text-[15px]" lang="en">
-          {prompt}
-        </p>
-        <p className="mt-2 text-xs text-muted-foreground">Gợi ý: 1 câu nêu quan điểm, 2–3 câu lý do + ví dụ, 1 câu kết. Mỗi câu nên có 1–2 cụm.</p>
-        <Textarea
-          className="mt-3 min-h-44 text-[15px]"
-          lang="en"
-          spellCheck={false}
-          disabled={Boolean(lock)}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="Viết 3–5 câu tiếng Anh ở đây…"
-          aria-label="Câu của bạn"
-        />
-        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-          <span className={cn(check.enoughSentences && !check.tooMany ? 'text-success' : 'text-muted-foreground')}>
-            {check.sentences.length} câu (cần {MIN_SENTENCES}–{MAX_SENTENCES}){check.tooMany && ' · nhiều quá, gộp hoặc bỏ bớt'}
-          </span>
-          <span className={cn(check.usedCount === phrases.length ? 'text-success' : 'text-muted-foreground')}>
-            Đã dùng {check.usedCount}/{phrases.length} cụm
-          </span>
-          {saved && <span className="text-xs text-muted-foreground">Lưu lúc {new Date(saved.savedAt).toLocaleString('vi-VN')}</span>}
-        </div>
-        {!lock && (
-          <div className="mt-3 flex flex-wrap gap-2">
-            <Button onClick={onSave} disabled={!text.trim()}>
-              {check.passed ? 'Lưu · hoàn thành' : 'Lưu nháp'}
-            </Button>
-            <Button variant="outline" onClick={askAi} disabled={!check.passed || sending}>
-              <Sparkles /> Nhờ AI chữa
+        {lock ? null : items.length === 0 ? (
+          <div className="rounded-xl border bg-card p-4 text-sm">
+            <p className="text-muted-foreground">Chủ đề này chưa có câu mẫu để dịch. Học thuộc 5 cụm ở trên rồi bấm nút dưới đây.</p>
+            {!saved?.passed && (
+              <Button className="mt-3" onClick={() => store(0, 0)}>
+                Đã học xong 5 cụm
+              </Button>
+            )}
+          </div>
+        ) : started ? (
+          <WriteRunner key={`${date}:${run}`} items={items} mode="translate" heading="Dịch câu với cụm từ" onFinish={store} />
+        ) : (
+          <div className="rounded-xl border bg-card p-4 text-sm">
+            <p className="text-muted-foreground">
+              Ẩn ví dụ ở trên trước khi làm để tự nhớ lại cụm. Gõ câu rồi bấm Enter để kiểm tra; bí thì bấm “Xem gợi ý”. Cần đúng ngay lần đầu{' '}
+              {Math.ceil(items.length * PRACTICE_PASS)}/{items.length} câu.
+            </p>
+            <Button
+              className="mt-3"
+              onClick={() => {
+                setShowEx(false);
+                setStarted(true);
+                setRun((n) => n + 1);
+              }}
+            >
+              {saved ? 'Làm lại' : 'Bắt đầu dịch'}
             </Button>
           </div>
         )}
-        <p className="mt-2 text-xs text-muted-foreground">Máy tự nhận ra cụm từ cả khi bạn chia động từ (rise → rose, increase → increased). Nếu bạn đã dùng mà vòng tròn chưa xanh, bấm vào vòng tròn đó.</p>
       </section>
     </div>
   );

@@ -1,0 +1,493 @@
+# Câu mẫu cho bài "Dịch câu với cụm từ" (Việt → Anh), 3 câu đơn giản cho mỗi cụm chủ động.
+# Định dạng:  @ chủ đề           (id trong active-vocab.json)
+#             # cụm               (đúng y như trường "t")
+#             câu tiếng Việt || đáp án 1 | đáp án 2 ... || gợi ý
+# Sinh ra active-sentences.json bằng: node scripts/build-active-sentences.mjs
+
+@ education
+# acquire knowledge
+Trẻ em tiếp thu kiến thức rất nhanh. || Children acquire knowledge very quickly. | Kids acquire knowledge very quickly. || very quickly = rất nhanh · hiện tại đơn
+Chúng ta tiếp thu kiến thức từ sách. || We acquire knowledge from books. || from books = từ sách
+Học sinh tiếp thu kiến thức ở trường. || Students acquire knowledge at school. | Pupils acquire knowledge at school. || at school = ở trường
+# academic performance
+Kết quả học tập của cô ấy rất tốt. || Her academic performance is very good. | Her academic performance is excellent. || Her … is very good
+Ngủ đủ giấc cải thiện kết quả học tập. || Enough sleep improves academic performance. | Getting enough sleep improves academic performance. || enough sleep = ngủ đủ giấc · improve = cải thiện
+Cha mẹ quan tâm đến kết quả học tập của con cái. || Parents care about their children's academic performance. | Parents are interested in their children's academic performance. || care about = quan tâm đến
+# tuition fees
+Học phí rất cao. || Tuition fees are very high. | The tuition fees are very high. || are very high
+Nhiều sinh viên không thể trả học phí. || Many students cannot pay tuition fees. | Many students can't pay tuition fees. | Many students cannot afford tuition fees. || cannot pay = không thể trả
+Chính phủ nên giảm học phí. || The government should reduce tuition fees. | The government should lower tuition fees. || should reduce = nên giảm
+# higher education
+Giáo dục đại học rất quan trọng. || Higher education is very important. || is very important
+Nhiều người trẻ muốn học lên giáo dục đại học. || Many young people want higher education. | Many young people want to get higher education. || young people = người trẻ
+Giáo dục đại học nên miễn phí. || Higher education should be free. || should be free = nên miễn phí
+# compulsory education
+Giáo dục bắt buộc kéo dài chín năm. || Compulsory education lasts nine years. | Compulsory education lasts for nine years. || last = kéo dài
+Mọi trẻ em đều cần giáo dục bắt buộc. || All children need compulsory education. | Every child needs compulsory education. || All children need …
+Giáo dục bắt buộc là miễn phí ở Việt Nam. || Compulsory education is free in Vietnam. || is free in Vietnam
+# vocational training
+Đào tạo nghề giúp người trẻ tìm việc. || Vocational training helps young people find jobs. | Vocational training helps young people find work. || help sb find jobs = giúp ai tìm việc
+Anh ấy chọn đào tạo nghề thay vì đại học. || He chose vocational training instead of university. | He chose vocational training instead of going to university. || chose (quá khứ của choose) · instead of = thay vì
+Đào tạo nghề thì rẻ hơn đại học. || Vocational training is cheaper than university. || cheaper than = rẻ hơn
+# rote learning
+Học vẹt không giúp học sinh hiểu bài. || Rote learning does not help students understand lessons. | Rote learning doesn't help students understand the lessons. || does not help = không giúp · understand = hiểu
+Nhiều trường vẫn dùng học vẹt. || Many schools still use rote learning. || still use = vẫn dùng
+Học vẹt thì nhàm chán. || Rote learning is boring. || boring = nhàm chán
+# critical thinking skills
+Tranh luận phát triển kỹ năng tư duy phản biện. || Debating develops critical thinking skills. | Debates develop critical thinking skills. || debating = tranh luận · develop = phát triển
+Học sinh cần kỹ năng tư duy phản biện. || Students need critical thinking skills. || need = cần
+Đọc sách cải thiện kỹ năng tư duy phản biện. || Reading improves critical thinking skills. | Reading books improves critical thinking skills. || reading = đọc sách · improve = cải thiện
+# well-rounded education
+Thể thao là một phần của nền giáo dục toàn diện. || Sport is part of a well-rounded education. | Sport is a part of a well-rounded education. | Sports are part of a well-rounded education. || is part of = là một phần của
+Mọi trẻ em xứng đáng có một nền giáo dục toàn diện. || Every child deserves a well-rounded education. | All children deserve a well-rounded education. || deserve = xứng đáng có
+Trường này mang lại một nền giáo dục toàn diện. || This school offers a well-rounded education. | This school provides a well-rounded education. || offer / provide = mang lại
+# extracurricular activities
+Hoạt động ngoại khóa rất thú vị. || Extracurricular activities are very interesting. | Extracurricular activities are very fun. || are very interesting
+Tôi tham gia nhiều hoạt động ngoại khóa. || I join many extracurricular activities. | I take part in many extracurricular activities. | I participate in many extracurricular activities. || join / take part in = tham gia
+Hoạt động ngoại khóa dạy kỹ năng làm việc nhóm. || Extracurricular activities teach teamwork skills. | Extracurricular activities teach teamwork. || teach = dạy · teamwork = làm việc nhóm
+# pursue a degree in
+Cô ấy muốn theo học bằng y khoa. || She wants to pursue a degree in medicine. || want to + V · medicine = y khoa
+Anh ấy đang theo học bằng kinh tế. || He is pursuing a degree in economics. | He's pursuing a degree in economics. || hiện tại tiếp diễn: is + V-ing · economics = kinh tế
+Tôi dự định theo học bằng khoa học máy tính. || I plan to pursue a degree in computer science. || plan to + V = dự định · computer science = khoa học máy tính
+# drop out of school
+Một số trẻ em bỏ học sớm. || Some children drop out of school early. | Some kids drop out of school early. || early = sớm
+Anh ấy đã bỏ học năm mười lăm tuổi. || He dropped out of school at fifteen. | He dropped out of school at the age of fifteen. | He dropped out of school when he was fifteen. || quá khứ đơn: dropped · at fifteen = năm 15 tuổi
+Nghèo đói khiến trẻ em bỏ học. || Poverty makes children drop out of school. | Poverty causes children to drop out of school. || poverty = nghèo đói · make sb + V = khiến ai làm gì
+# a heavy academic workload
+Sinh viên có khối lượng học tập nặng. || Students have a heavy academic workload. || have = có
+Khối lượng học tập nặng gây căng thẳng. || A heavy academic workload causes stress. | A heavy academic workload leads to stress. || cause stress = gây căng thẳng
+Tôi có một khối lượng học tập nặng năm nay. || I have a heavy academic workload this year. || this year = năm nay
+# distance learning
+Học từ xa rất tiện lợi. || Distance learning is very convenient. || convenient = tiện lợi
+Nhiều người lớn chọn học từ xa. || Many adults choose distance learning. || adults = người lớn · choose = chọn
+Học từ xa tiết kiệm thời gian. || Distance learning saves time. || save time = tiết kiệm thời gian
+# face-to-face interaction
+Trẻ em cần tương tác trực tiếp. || Children need face-to-face interaction. || need = cần
+Học trực tuyến thiếu tương tác trực tiếp. || Online learning lacks face-to-face interaction. | Online learning has no face-to-face interaction. || online learning = học trực tuyến · lack = thiếu
+Tương tác trực tiếp giúp học sinh kết bạn. || Face-to-face interaction helps students make friends. || make friends = kết bạn
+# equip students with
+Trường học nên trang bị cho học sinh kỹ năng sống. || Schools should equip students with life skills. || should + V · life skills = kỹ năng sống
+Khóa học này trang bị cho học sinh kiến thức thực tế. || This course equips students with practical knowledge. | This course equips students with real-world knowledge. || equips (chủ ngữ số ít +s) · practical = thực tế
+Giáo viên trang bị cho học sinh kỹ năng máy tính. || Teachers equip students with computer skills. || computer skills = kỹ năng máy tính
+# broaden one's horizons
+Du lịch mở rộng tầm nhìn của chúng ta. || Travel broadens our horizons. | Travelling broadens our horizons. | Traveling broadens our horizons. || travel = du lịch · broadens (+s) · our = của chúng ta
+Đọc sách giúp tôi mở rộng tầm nhìn. || Reading helps me broaden my horizons. | Reading books helps me broaden my horizons. || help sb + V · my horizons
+Du học mở rộng tầm nhìn của sinh viên. || Studying abroad broadens students' horizons. | Studying abroad broadens the horizons of students. || study abroad = du học · students' horizons
+# the job market
+Thị trường việc làm rất cạnh tranh. || The job market is very competitive. || competitive = cạnh tranh
+Sinh viên tốt nghiệp gặp khó khăn trong thị trường việc làm. || Graduates face difficulties in the job market. | Graduates have difficulties in the job market. || graduates = sinh viên tốt nghiệp · face difficulties = gặp khó khăn
+Thị trường việc làm đang thay đổi nhanh. || The job market is changing quickly. | The job market is changing fast. | The job market is changing rapidly. || hiện tại tiếp diễn: is changing
+# practical skills
+Người sử dụng lao động cần kỹ năng thực hành. || Employers need practical skills. | Employers want practical skills. || employers = người sử dụng lao động
+Học sinh nên học kỹ năng thực hành. || Students should learn practical skills. || should learn = nên học
+Nấu ăn và may vá là các kỹ năng thực hành. || Cooking and sewing are practical skills. || cooking = nấu ăn · sewing = may vá · are
+# theoretical knowledge
+Đại học tập trung vào kiến thức lý thuyết. || Universities focus on theoretical knowledge. | University focuses on theoretical knowledge. || focus on = tập trung vào
+Kiến thức lý thuyết thôi là không đủ. || Theoretical knowledge alone is not enough. | Theoretical knowledge alone isn't enough. | Only theoretical knowledge is not enough. || alone = thôi · not enough = không đủ
+Sách cung cấp kiến thức lý thuyết. || Books provide theoretical knowledge. | Books give theoretical knowledge. || provide = cung cấp
+# lifelong learning
+Học tập suốt đời rất quan trọng. || Lifelong learning is very important. || is very important
+Thư viện hỗ trợ học tập suốt đời. || Libraries support lifelong learning. || library = thư viện · support = hỗ trợ
+Ông tôi tin vào học tập suốt đời. || My grandfather believes in lifelong learning. || grandfather = ông · believe in = tin vào
+# a student loan
+Anh ấy có một khoản vay sinh viên. || He has a student loan. || has = có
+Tôi cần một khoản vay sinh viên để học đại học. || I need a student loan to go to university. | I need a student loan to study at university. || to go to university = để học đại học
+Cô ấy đã trả hết khoản vay sinh viên. || She paid off her student loan. | She has paid off her student loan. || pay off = trả hết (quá khứ: paid off)
+# gain a qualification
+Anh ấy muốn đạt được một bằng cấp. || He wants to gain a qualification. || want to + V
+Cô ấy đạt được một chứng chỉ năm ngoái. || She gained a qualification last year. || quá khứ đơn: gained · last year = năm ngoái
+Đạt được bằng cấp giúp bạn tìm việc. || Gaining a qualification helps you find a job. || V-ing làm chủ ngữ: Gaining … helps
+# exam-oriented education
+Giáo dục nặng về thi cử gây áp lực. || Exam-oriented education causes pressure. | Exam-oriented education creates pressure. | Exam-oriented education puts pressure on students. || cause pressure = gây áp lực
+Nhiều nước châu Á có giáo dục nặng về thi cử. || Many Asian countries have exam-oriented education. || Asian countries = các nước châu Á
+Giáo dục nặng về thi cử dạy học sinh học vẹt. || Exam-oriented education teaches students rote learning. || teach sb sth = dạy ai cái gì
+# teacher-centred approach
+Trường này dùng phương pháp lấy giáo viên làm trung tâm. || This school uses a teacher-centred approach. | This school uses a teacher-centered approach. || uses (+s) · a … approach
+Phương pháp lấy giáo viên làm trung tâm thì cũ. || The teacher-centred approach is old. | The teacher-centred approach is old-fashioned. | A teacher-centred approach is old-fashioned. || old-fashioned = cũ, lỗi thời
+Học sinh ít nói trong phương pháp lấy giáo viên làm trung tâm. || Students speak little in a teacher-centred approach. | Students talk little in a teacher-centred approach. || speak little = ít nói
+# motivate students to
+Giáo viên giỏi thúc đẩy học sinh học tập. || Good teachers motivate students to learn. | Good teachers motivate students to study. || motivate students to + V
+Phần thưởng thúc đẩy học sinh cố gắng hơn. || Rewards motivate students to try harder. | Rewards motivate students to work harder. || rewards = phần thưởng · try harder = cố gắng hơn
+Trò chơi thúc đẩy học sinh tham gia. || Games motivate students to take part. | Games motivate students to participate. || take part / participate = tham gia
+# academic subjects
+Toán là một môn học thuật. || Maths is an academic subject. | Math is an academic subject. | Mathematics is an academic subject. || an academic subject (số ít)
+Trường học quá chú trọng các môn học thuật. || Schools focus too much on academic subjects. || focus too much on = quá chú trọng
+Tôi thích các môn học thuật. || I like academic subjects. || like = thích
+# enrol in a course
+Tôi muốn đăng ký một khóa học tiếng Anh. || I want to enrol in an English course. | I want to enroll in an English course. || an English course
+Cô ấy đã đăng ký một khóa học nấu ăn. || She enrolled in a cooking course. | She has enrolled in a cooking course. || quá khứ: enrolled · cooking course = khóa học nấu ăn
+Nhiều người lớn đăng ký các khóa học trực tuyến. || Many adults enrol in online courses. | Many adults enroll in online courses. || online courses = khóa học trực tuyến
+# equal access to education
+Mọi trẻ em nên có cơ hội tiếp cận giáo dục bình đẳng. || All children should have equal access to education. | Every child should have equal access to education. || should have = nên có
+Trẻ em nghèo không có cơ hội tiếp cận giáo dục bình đẳng. || Poor children do not have equal access to education. | Poor children don't have equal access to education. || poor children = trẻ em nghèo
+Chính phủ cần đảm bảo cơ hội tiếp cận giáo dục bình đẳng. || The government needs to ensure equal access to education. | The government must ensure equal access to education. || ensure = đảm bảo
+# the gap between rich and poor students
+Khoảng cách giữa học sinh giàu và nghèo đang tăng lên. || The gap between rich and poor students is growing. | The gap between rich and poor students is increasing. || is growing = đang tăng lên
+Học phí miễn phí có thể thu hẹp khoảng cách giữa học sinh giàu và nghèo. || Free tuition can narrow the gap between rich and poor students. | Free tuition can reduce the gap between rich and poor students. || free tuition = học phí miễn phí · narrow = thu hẹp
+Khoảng cách giữa học sinh giàu và nghèo là một vấn đề lớn. || The gap between rich and poor students is a big problem. | The gap between rich and poor students is a big issue. || a big problem = vấn đề lớn
+
+@ environment
+# tackle climate change
+Chúng ta phải giải quyết biến đổi khí hậu. || We must tackle climate change. | We have to tackle climate change. || must = phải
+Các nước cần hợp tác để giải quyết biến đổi khí hậu. || Countries need to work together to tackle climate change. | Countries need to cooperate to tackle climate change. || work together = hợp tác
+Cây xanh giúp giải quyết biến đổi khí hậu. || Trees help tackle climate change. | Trees help to tackle climate change. || trees = cây xanh
+# reduce carbon emissions
+Xe điện giảm lượng khí thải carbon. || Electric cars reduce carbon emissions. || electric cars = xe điện
+Các nhà máy phải giảm lượng khí thải carbon. || Factories must reduce carbon emissions. | Factories have to reduce carbon emissions. || factories = nhà máy
+Đi xe đạp giúp giảm lượng khí thải carbon. || Cycling helps reduce carbon emissions. | Cycling helps to reduce carbon emissions. || cycling = đi xe đạp
+# renewable energy sources
+Gió và mặt trời là các nguồn năng lượng tái tạo. || Wind and sun are renewable energy sources. | Wind and solar power are renewable energy sources. | Wind and the sun are renewable energy sources. || wind = gió · sun = mặt trời
+Chúng ta nên dùng các nguồn năng lượng tái tạo. || We should use renewable energy sources. || should use = nên dùng
+Các nguồn năng lượng tái tạo thì sạch. || Renewable energy sources are clean. || clean = sạch
+# rely heavily on fossil fuels
+Nhiều nước phụ thuộc nhiều vào nhiên liệu hóa thạch. || Many countries rely heavily on fossil fuels. || many countries = nhiều nước
+Ô tô phụ thuộc nhiều vào nhiên liệu hóa thạch. || Cars rely heavily on fossil fuels. || cars = ô tô
+Chúng ta không nên phụ thuộc nhiều vào nhiên liệu hóa thạch. || We should not rely heavily on fossil fuels. | We shouldn't rely heavily on fossil fuels. || should not = không nên
+# environmental degradation
+Ô nhiễm gây ra sự suy thoái môi trường. || Pollution causes environmental degradation. | Pollution leads to environmental degradation. || pollution = ô nhiễm · cause = gây ra
+Sự suy thoái môi trường là một vấn đề nghiêm trọng. || Environmental degradation is a serious problem. | Environmental degradation is a serious issue. || a serious problem = vấn đề nghiêm trọng
+Chặt phá rừng dẫn đến sự suy thoái môi trường. || Deforestation leads to environmental degradation. | Deforestation causes environmental degradation. || deforestation = chặt phá rừng · lead to = dẫn đến
+# pose a serious threat to
+Ô nhiễm gây ra mối đe dọa nghiêm trọng cho sức khỏe. || Pollution poses a serious threat to health. | Pollution poses a serious threat to our health. | Pollution poses a serious threat to human health. || poses (+s) · health = sức khỏe
+Rác nhựa gây ra mối đe dọa nghiêm trọng cho sinh vật biển. || Plastic waste poses a serious threat to sea animals. | Plastic waste poses a serious threat to marine life. || plastic waste = rác nhựa · sea animals = sinh vật biển
+Biến đổi khí hậu gây ra mối đe dọa nghiêm trọng cho nông dân. || Climate change poses a serious threat to farmers. || farmers = nông dân
+# raise public awareness of
+Chính phủ nên nâng cao nhận thức cộng đồng về tái chế. || The government should raise public awareness of recycling. || recycling = tái chế
+Truyền hình có thể nâng cao nhận thức cộng đồng về ô nhiễm. || Television can raise public awareness of pollution. | TV can raise public awareness of pollution. || television = truyền hình · can + V
+Chiến dịch này nâng cao nhận thức cộng đồng về biến đổi khí hậu. || This campaign raises public awareness of climate change. || campaign = chiến dịch · raises (+s)
+# adopt an eco-friendly lifestyle
+Mọi người nên áp dụng lối sống thân thiện với môi trường. || Everyone should adopt an eco-friendly lifestyle. | People should adopt an eco-friendly lifestyle. || everyone = mọi người
+Gia đình tôi áp dụng lối sống thân thiện với môi trường. || My family adopts an eco-friendly lifestyle. | My family has adopted an eco-friendly lifestyle. || my family + adopts (+s)
+Áp dụng lối sống thân thiện với môi trường thì không khó. || Adopting an eco-friendly lifestyle is not difficult. | Adopting an eco-friendly lifestyle isn't difficult. | Adopting an eco-friendly lifestyle is not hard. || V-ing làm chủ ngữ: Adopting … is
+# single-use plastics
+Chúng ta nên cấm đồ nhựa dùng một lần. || We should ban single-use plastics. || ban = cấm
+Đồ nhựa dùng một lần gây hại cho biển. || Single-use plastics harm the ocean. | Single-use plastics harm the sea. | Single-use plastics damage the ocean. || harm = gây hại · the ocean / the sea = biển
+Nhiều cửa hàng không còn dùng đồ nhựa dùng một lần. || Many shops no longer use single-use plastics. | Many stores no longer use single-use plastics. || no longer = không còn
+# impose strict regulations on
+Chính phủ nên áp đặt quy định nghiêm ngặt lên các nhà máy. || The government should impose strict regulations on factories. || factories = các nhà máy
+Thành phố đã áp đặt quy định nghiêm ngặt lên ô tô cũ. || The city imposed strict regulations on old cars. | The city has imposed strict regulations on old cars. || quá khứ: imposed · old cars = ô tô cũ
+Chúng ta cần áp đặt quy định nghiêm ngặt lên rác thải nhựa. || We need to impose strict regulations on plastic waste. || need to + V · plastic waste = rác thải nhựa
+# a carbon tax
+Một số nước có thuế carbon. || Some countries have a carbon tax. || some countries = một số nước
+Thuế carbon có thể giảm ô nhiễm. || A carbon tax can reduce pollution. || can reduce = có thể giảm
+Chính phủ nên áp dụng thuế carbon. || The government should introduce a carbon tax. | The government should adopt a carbon tax. | The government should impose a carbon tax. || introduce = áp dụng (một loại thuế)
+# deplete natural resources
+Con người đang làm cạn kiệt tài nguyên thiên nhiên. || Humans are depleting natural resources. | People are depleting natural resources. || hiện tại tiếp diễn: are depleting
+Khai thác mỏ làm cạn kiệt tài nguyên thiên nhiên. || Mining depletes natural resources. || mining = khai thác mỏ · depletes (+s)
+Chúng ta không nên làm cạn kiệt tài nguyên thiên nhiên. || We should not deplete natural resources. | We shouldn't deplete natural resources. || should not = không nên
+# the loss of biodiversity
+Sự suy giảm đa dạng sinh học là một vấn đề lớn. || The loss of biodiversity is a big problem. | The loss of biodiversity is a big issue. || a big problem
+Chặt phá rừng gây ra sự suy giảm đa dạng sinh học. || Deforestation causes the loss of biodiversity. | Deforestation leads to the loss of biodiversity. || deforestation = chặt phá rừng
+Chúng ta phải ngăn chặn sự suy giảm đa dạng sinh học. || We must stop the loss of biodiversity. | We must prevent the loss of biodiversity. | We have to stop the loss of biodiversity. || stop / prevent = ngăn chặn
+# natural habitats
+Động vật đang mất môi trường sống tự nhiên. || Animals are losing their natural habitats. | Animals are losing natural habitats. || are losing = đang mất · their
+Chúng ta nên bảo vệ môi trường sống tự nhiên. || We should protect natural habitats. || protect = bảo vệ
+Các thành phố phá hủy môi trường sống tự nhiên. || Cities destroy natural habitats. || destroy = phá hủy
+# protect endangered species
+Chúng ta phải bảo vệ các loài có nguy cơ tuyệt chủng. || We must protect endangered species. | We have to protect endangered species. || must = phải
+Sở thú giúp bảo vệ các loài có nguy cơ tuyệt chủng. || Zoos help protect endangered species. | Zoos help to protect endangered species. || zoos = sở thú
+Luật mới bảo vệ các loài có nguy cơ tuyệt chủng. || New laws protect endangered species. | The new law protects endangered species. | A new law protects endangered species. || new laws = luật mới
+# extreme weather events
+Các hiện tượng thời tiết cực đoan đang trở nên phổ biến hơn. || Extreme weather events are becoming more common. || are becoming more common
+Biến đổi khí hậu gây ra các hiện tượng thời tiết cực đoan. || Climate change causes extreme weather events. | Climate change leads to extreme weather events. || causes (+s)
+Các hiện tượng thời tiết cực đoan phá hủy mùa màng. || Extreme weather events destroy crops. || crops = mùa màng · destroy = phá hủy
+# rising sea levels
+Mực nước biển dâng đe dọa các thành phố ven biển. || Rising sea levels threaten coastal cities. || threaten = đe dọa · coastal cities = thành phố ven biển
+Mực nước biển dâng là do biến đổi khí hậu. || Rising sea levels are caused by climate change. | Rising sea levels are due to climate change. || bị động: are caused by
+Nhiều hòn đảo có thể biến mất vì mực nước biển dâng. || Many islands may disappear because of rising sea levels. | Many islands could disappear because of rising sea levels. || islands = hòn đảo · disappear = biến mất · because of
+# waste disposal
+Xử lý rác thải là một vấn đề ở các thành phố. || Waste disposal is a problem in cities. | Waste disposal is a problem in big cities. || is a problem in cities
+Thành phố cần một hệ thống xử lý rác thải tốt hơn. || The city needs a better waste disposal system. || a better … system = hệ thống tốt hơn
+Xử lý rác thải tốn nhiều tiền. || Waste disposal costs a lot of money. | Waste disposal is very expensive. || cost a lot of money = tốn nhiều tiền
+# recycle household waste
+Chúng ta nên tái chế rác thải sinh hoạt. || We should recycle household waste. || should + V
+Gia đình tôi tái chế rác thải sinh hoạt mỗi ngày. || My family recycles household waste every day. || recycles (+s) · every day = mỗi ngày
+Tái chế rác thải sinh hoạt thì dễ. || Recycling household waste is easy. || V-ing làm chủ ngữ: Recycling … is
+# conserve energy
+Tắt đèn giúp tiết kiệm năng lượng. || Turning off the lights helps conserve energy. | Turning off lights helps conserve energy. | Switching off the lights helps conserve energy. || turn off the lights = tắt đèn · V-ing làm chủ ngữ
+Chúng ta nên tiết kiệm năng lượng ở nhà. || We should conserve energy at home. || at home = ở nhà
+Mọi người cần tiết kiệm năng lượng vào mùa hè. || People need to conserve energy in summer. | Everyone needs to conserve energy in summer. | People need to conserve energy in the summer. || in summer = vào mùa hè
+# sustainable development
+Phát triển bền vững rất quan trọng. || Sustainable development is very important. || is very important
+Các nước nghèo cần phát triển bền vững. || Poor countries need sustainable development. || poor countries = các nước nghèo
+Năng lượng sạch hỗ trợ phát triển bền vững. || Clean energy supports sustainable development. || clean energy = năng lượng sạch · support = hỗ trợ
+# the root cause of
+Nghèo đói là nguyên nhân gốc rễ của tội phạm. || Poverty is the root cause of crime. || poverty = nghèo đói · crime = tội phạm
+Ô tô là nguyên nhân gốc rễ của ô nhiễm không khí. || Cars are the root cause of air pollution. || air pollution = ô nhiễm không khí
+Chúng ta phải tìm ra nguyên nhân gốc rễ của vấn đề. || We must find the root cause of the problem. | We have to find the root cause of the problem. || find = tìm ra · the problem
+# take collective action
+Chúng ta phải hành động tập thể. || We must take collective action. | We have to take collective action. || must = phải
+Các nước cần hành động tập thể để chống ô nhiễm. || Countries need to take collective action against pollution. | Countries need to take collective action to fight pollution. || against pollution = chống ô nhiễm
+Người dân đã hành động tập thể để làm sạch bãi biển. || People took collective action to clean the beach. | Local people took collective action to clean the beach. || quá khứ: took · clean the beach = làm sạch bãi biển
+# make a significant contribution to
+Cây xanh đóng góp đáng kể vào không khí sạch. || Trees make a significant contribution to clean air. || clean air = không khí sạch
+Du lịch đóng góp đáng kể vào nền kinh tế. || Tourism makes a significant contribution to the economy. || tourism = du lịch · makes (+s) · the economy
+Mọi người có thể đóng góp đáng kể vào việc bảo vệ môi trường. || Everyone can make a significant contribution to protecting the environment. | People can make a significant contribution to protecting the environment. || to + V-ing: to protecting
+# irreversible damage
+Ô nhiễm có thể gây ra thiệt hại không thể đảo ngược. || Pollution can cause irreversible damage. || can cause = có thể gây ra
+Cháy rừng gây ra thiệt hại không thể đảo ngược. || Forest fires cause irreversible damage. | Wildfires cause irreversible damage. || forest fires = cháy rừng
+Thiệt hại không thể đảo ngược đã xảy ra. || Irreversible damage has happened. | Irreversible damage has been done. | The irreversible damage has happened. || hiện tại hoàn thành: has happened
+# green spaces
+Thành phố cần nhiều không gian xanh hơn. || Cities need more green spaces. | The city needs more green spaces. || more green spaces = nhiều … hơn
+Không gian xanh làm cho mọi người hạnh phúc hơn. || Green spaces make people happier. || make sb + adj · happier = hạnh phúc hơn
+Trẻ em chơi trong không gian xanh. || Children play in green spaces. || play = chơi
+# environmentally friendly products
+Tôi mua sản phẩm thân thiện môi trường. || I buy environmentally friendly products. || buy = mua
+Sản phẩm thân thiện môi trường thường đắt hơn. || Environmentally friendly products are often more expensive. | Environmentally friendly products are usually more expensive. || often = thường · more expensive = đắt hơn
+Cửa hàng này bán sản phẩm thân thiện môi trường. || This shop sells environmentally friendly products. | This store sells environmentally friendly products. || sells (+s)
+# offset the cost of
+Chính phủ giúp bù đắp chi phí của tấm pin mặt trời. || The government helps offset the cost of solar panels. | The government helps to offset the cost of solar panels. || solar panels = tấm pin mặt trời
+Tiết kiệm năng lượng bù đắp chi phí của thiết bị mới. || Saving energy offsets the cost of new equipment. | Energy savings offset the cost of new equipment. || saving energy = tiết kiệm năng lượng · new equipment
+Thuế carbon có thể bù đắp chi phí của ô nhiễm. || A carbon tax can offset the cost of pollution. || can offset
+# industrial waste
+Chất thải công nghiệp làm ô nhiễm sông. || Industrial waste pollutes rivers. | Industrial waste pollutes the rivers. || pollute = làm ô nhiễm · rivers = sông
+Các nhà máy phải xử lý chất thải công nghiệp. || Factories must treat industrial waste. | Factories must deal with industrial waste. | Factories have to treat industrial waste. || treat / deal with = xử lý
+Chất thải công nghiệp gây hại cho cá. || Industrial waste harms fish. | Industrial waste is harmful to fish. || harm = gây hại · fish = cá
+# future generations
+Chúng ta phải bảo vệ hành tinh cho các thế hệ tương lai. || We must protect the planet for future generations. | We have to protect the planet for future generations. || the planet = hành tinh
+Các thế hệ tương lai sẽ chịu hậu quả. || Future generations will suffer the consequences. | Future generations will pay the price. || will suffer the consequences = sẽ chịu hậu quả
+Chúng ta nên để lại một thế giới sạch cho các thế hệ tương lai. || We should leave a clean world for future generations. || leave = để lại · a clean world
+
+@ technology
+# technological advances
+Những tiến bộ công nghệ thay đổi cuộc sống của chúng ta. || Technological advances change our lives. | Technological advances have changed our lives. || change = thay đổi · our lives
+Những tiến bộ công nghệ giúp các bác sĩ. || Technological advances help doctors. || doctors = bác sĩ
+Những tiến bộ công nghệ đến rất nhanh. || Technological advances come very quickly. | Technological advances come very fast. || come very quickly = đến rất nhanh
+# artificial intelligence
+Trí tuệ nhân tạo rất mạnh mẽ. || Artificial intelligence is very powerful. || powerful = mạnh mẽ
+Nhiều công ty dùng trí tuệ nhân tạo. || Many companies use artificial intelligence. || companies = công ty
+Trí tuệ nhân tạo có thể viết văn bản. || Artificial intelligence can write texts. | Artificial intelligence can write text. || can write = có thể viết · text = văn bản
+# automate routine tasks
+Máy tính có thể tự động hóa các công việc lặp lại. || Computers can automate routine tasks. || computers = máy tính
+Các công ty tự động hóa các công việc lặp lại để tiết kiệm tiền. || Companies automate routine tasks to save money. || to save money = để tiết kiệm tiền
+Robot tự động hóa các công việc lặp lại trong nhà máy. || Robots automate routine tasks in factories. | Robots automate routine tasks in the factory. || robots · in factories = trong nhà máy
+# replace human workers
+Robot có thể thay thế người lao động. || Robots can replace human workers. || can + V
+Máy móc đang thay thế người lao động. || Machines are replacing human workers. || hiện tại tiếp diễn: are replacing
+Trí tuệ nhân tạo sẽ không thay thế mọi người lao động. || Artificial intelligence will not replace all human workers. | Artificial intelligence won't replace all human workers. | AI will not replace all human workers. || will not = sẽ không · all = mọi
+# be addicted to
+Nhiều thanh thiếu niên nghiện điện thoại. || Many teenagers are addicted to their phones. | Many teenagers are addicted to phones. | Many teenagers are addicted to their smartphones. || teenagers = thanh thiếu niên · are addicted to
+Anh ấy nghiện trò chơi điện tử. || He is addicted to video games. | He's addicted to video games. | He is addicted to computer games. || video games = trò chơi điện tử
+Tôi không muốn nghiện mạng xã hội. || I do not want to be addicted to social media. | I don't want to be addicted to social media. || want to be addicted to
+# screen time
+Trẻ em có quá nhiều thời gian dùng thiết bị điện tử. || Children have too much screen time. | Kids have too much screen time. || too much = quá nhiều
+Cha mẹ nên giới hạn thời gian dùng thiết bị điện tử. || Parents should limit screen time. | Parents should limit their children's screen time. || limit = giới hạn
+Thời gian dùng thiết bị điện tử ảnh hưởng đến giấc ngủ. || Screen time affects sleep. | Screen time affects our sleep. || affect = ảnh hưởng đến · sleep = giấc ngủ
+# social media platforms
+Facebook là một nền tảng mạng xã hội. || Facebook is a social media platform. || a social media platform (số ít)
+Giới trẻ dùng nhiều nền tảng mạng xã hội. || Young people use many social media platforms. || young people = giới trẻ
+Các nền tảng mạng xã hội lan truyền tin tức nhanh chóng. || Social media platforms spread news quickly. | Social media platforms spread news fast. || spread news = lan truyền tin tức
+# access information instantly
+Internet giúp chúng ta truy cập thông tin ngay lập tức. || The internet helps us access information instantly. | The Internet helps us access information instantly. || help us + V
+Học sinh có thể truy cập thông tin ngay lập tức. || Students can access information instantly. || can + V
+Điện thoại thông minh cho phép chúng ta truy cập thông tin ngay lập tức. || Smartphones allow us to access information instantly. | Smartphones let us access information instantly. || allow us to + V = cho phép chúng ta
+# online privacy
+Quyền riêng tư trên mạng rất quan trọng. || Online privacy is very important. || is very important
+Nhiều người lo lắng về quyền riêng tư trên mạng. || Many people worry about online privacy. | Many people are worried about online privacy. || worry about = lo lắng về
+Chúng ta nên bảo vệ quyền riêng tư trên mạng. || We should protect online privacy. | We should protect our online privacy. || protect = bảo vệ
+# cybercrime
+Tội phạm mạng đang tăng lên. || Cybercrime is increasing. | Cybercrime is rising. | Cybercrime is growing. || is increasing = đang tăng lên
+Tội phạm mạng là một vấn đề nghiêm trọng. || Cybercrime is a serious problem. | Cybercrime is a serious issue. || a serious problem
+Cảnh sát đang chống tội phạm mạng. || The police are fighting cybercrime. | Police are fighting cybercrime. || the police are (số nhiều) · fight = chống
+# the digital divide
+Khoảng cách số đang lớn dần. || The digital divide is growing. | The digital divide is getting bigger. || is growing = đang lớn dần
+Chính phủ nên thu hẹp khoảng cách số. || The government should narrow the digital divide. | The government should reduce the digital divide. | The government should close the digital divide. || narrow = thu hẹp
+Khoảng cách số ảnh hưởng đến trẻ em nghèo. || The digital divide affects poor children. || affect = ảnh hưởng đến
+# keep up with the latest technology
+Người già khó theo kịp công nghệ mới nhất. || Old people find it hard to keep up with the latest technology. | Elderly people find it difficult to keep up with the latest technology. | It is hard for old people to keep up with the latest technology. || find it hard to + V = thấy khó
+Tôi cố gắng theo kịp công nghệ mới nhất. || I try to keep up with the latest technology. || try to + V = cố gắng
+Các công ty phải theo kịp công nghệ mới nhất. || Companies must keep up with the latest technology. | Companies have to keep up with the latest technology. || must = phải
+# increase productivity
+Máy tính giúp tăng năng suất. || Computers help increase productivity. | Computers help to increase productivity. || help + V
+Công nghệ mới làm tăng năng suất. || New technology increases productivity. || increases (+s)
+Nghỉ ngơi ngắn có thể tăng năng suất. || Short breaks can increase productivity. | Taking short breaks can increase productivity. || short breaks = nghỉ ngơi ngắn
+# cutting-edge technology
+Bệnh viện này có công nghệ tiên tiến nhất. || This hospital has cutting-edge technology. || hospital = bệnh viện · has
+Công ty sử dụng công nghệ tiên tiến nhất. || The company uses cutting-edge technology. || uses (+s)
+Công nghệ tiên tiến nhất thì đắt. || Cutting-edge technology is expensive. || expensive = đắt
+# work remotely
+Nhiều người làm việc từ xa bây giờ. || Many people work remotely now. | Now many people work remotely. || now = bây giờ
+Tôi thích làm việc từ xa. || I like working remotely. | I like to work remotely. || like + V-ing
+Làm việc từ xa tiết kiệm thời gian đi lại. || Working remotely saves travel time. | Working remotely saves commuting time. || V-ing làm chủ ngữ · travel time = thời gian đi lại
+# e-commerce
+Thương mại điện tử đang phát triển nhanh. || E-commerce is growing fast. | E-commerce is growing quickly. | E-commerce is developing fast. || is growing = đang phát triển
+Nhiều cửa hàng nhỏ dùng thương mại điện tử. || Many small shops use e-commerce. | Many small stores use e-commerce. || small shops = cửa hàng nhỏ
+Thương mại điện tử rất tiện lợi. || E-commerce is very convenient. || convenient = tiện lợi
+# a sedentary lifestyle
+Nhân viên văn phòng có lối sống ít vận động. || Office workers have a sedentary lifestyle. || office workers = nhân viên văn phòng
+Lối sống ít vận động gây béo phì. || A sedentary lifestyle causes obesity. | A sedentary lifestyle leads to obesity. || obesity = béo phì
+Trò chơi điện tử dẫn đến lối sống ít vận động. || Video games lead to a sedentary lifestyle. | Computer games lead to a sedentary lifestyle. || lead to = dẫn đến
+# face-to-face communication
+Giao tiếp trực tiếp rất quan trọng. || Face-to-face communication is very important. || is very important
+Mạng xã hội làm giảm giao tiếp trực tiếp. || Social media reduces face-to-face communication. | Social media decreases face-to-face communication. || reduce = làm giảm
+Tôi thích giao tiếp trực tiếp hơn. || I prefer face-to-face communication. || prefer = thích … hơn
+# misuse personal data
+Một số công ty lạm dụng dữ liệu cá nhân. || Some companies misuse personal data. || some companies = một số công ty
+Tin tặc có thể lạm dụng dữ liệu cá nhân. || Hackers can misuse personal data. || hackers = tin tặc
+Các ứng dụng không nên lạm dụng dữ liệu cá nhân. || Apps should not misuse personal data. | Apps shouldn't misuse personal data. || apps = ứng dụng · should not
+# revolutionise the way
+Internet đã cách mạng hóa cách chúng ta học. || The internet has revolutionised the way we learn. | The Internet has revolutionised the way we learn. | The internet has revolutionized the way we learn. || hiện tại hoàn thành: has revolutionised
+Điện thoại thông minh cách mạng hóa cách chúng ta giao tiếp. || Smartphones revolutionise the way we communicate. | Smartphones have revolutionised the way we communicate. | Smartphones revolutionize the way we communicate. || communicate = giao tiếp
+Trí tuệ nhân tạo sẽ cách mạng hóa cách chúng ta làm việc. || Artificial intelligence will revolutionise the way we work. | AI will revolutionise the way we work. | Artificial intelligence will revolutionize the way we work. || will + V
+# be exposed to harmful content
+Trẻ em có thể tiếp xúc với nội dung có hại trên mạng. || Children can be exposed to harmful content online. | Children may be exposed to harmful content online. || can be exposed to · online = trên mạng
+Thanh thiếu niên thường tiếp xúc với nội dung có hại. || Teenagers are often exposed to harmful content. || often = thường · are exposed to
+Cha mẹ lo lắng con cái tiếp xúc với nội dung có hại. || Parents worry that their children are exposed to harmful content. | Parents are worried that their children are exposed to harmful content. || worry that + mệnh đề
+# bring about job losses
+Robot có thể gây ra tình trạng mất việc. || Robots can bring about job losses. || can + V
+Tự động hóa sẽ gây ra tình trạng mất việc. || Automation will bring about job losses. || automation = tự động hóa
+Trí tuệ nhân tạo đã gây ra tình trạng mất việc. || Artificial intelligence has brought about job losses. | AI has brought about job losses. || hiện tại hoàn thành: has brought about
+# create new employment opportunities
+Công nghệ tạo ra cơ hội việc làm mới. || Technology creates new employment opportunities. || creates (+s)
+Du lịch có thể tạo ra cơ hội việc làm mới. || Tourism can create new employment opportunities. || tourism = du lịch
+Các nhà máy mới sẽ tạo ra cơ hội việc làm mới. || New factories will create new employment opportunities. || new factories = các nhà máy mới · will + V
+# an over-reliance on technology
+Sự phụ thuộc quá mức vào công nghệ là nguy hiểm. || An over-reliance on technology is dangerous. || dangerous = nguy hiểm
+Học sinh có sự phụ thuộc quá mức vào công nghệ. || Students have an over-reliance on technology. || have
+Sự phụ thuộc quá mức vào công nghệ làm chúng ta lười biếng. || An over-reliance on technology makes us lazy. || make us + adj · lazy = lười biếng
+# user-friendly
+Ứng dụng này rất dễ sử dụng. || This app is very user-friendly. || app = ứng dụng
+Trang web nên dễ sử dụng. || Websites should be user-friendly. | A website should be user-friendly. | The website should be user-friendly. || should be + adj
+Điện thoại mới thì dễ sử dụng. || The new phone is user-friendly. | New phones are user-friendly. || new phone = điện thoại mới
+# digital literacy
+Năng lực số rất cần thiết ngày nay. || Digital literacy is very necessary today. | Digital literacy is essential today. | Digital literacy is very necessary nowadays. || necessary = cần thiết · today = ngày nay
+Trường học nên dạy năng lực số. || Schools should teach digital literacy. || teach = dạy
+Người già thường thiếu năng lực số. || Old people often lack digital literacy. | Elderly people often lack digital literacy. || lack = thiếu
+# stay connected with
+Mạng xã hội giúp tôi giữ liên lạc với bạn bè. || Social media helps me stay connected with my friends. | Social media helps me stay connected with friends. || help me + V · my friends
+Tôi giữ liên lạc với gia đình qua điện thoại. || I stay connected with my family by phone. | I stay connected with my family through my phone. || by phone = qua điện thoại
+Du học sinh giữ liên lạc với cha mẹ. || International students stay connected with their parents. | Overseas students stay connected with their parents. || international students = du học sinh
+# the spread of misinformation
+Mạng xã hội gây ra sự lan truyền thông tin sai lệch. || Social media causes the spread of misinformation. | Social media leads to the spread of misinformation. || causes (+s)
+Chúng ta phải ngăn chặn sự lan truyền thông tin sai lệch. || We must stop the spread of misinformation. | We must prevent the spread of misinformation. | We have to stop the spread of misinformation. || stop / prevent = ngăn chặn
+Sự lan truyền thông tin sai lệch rất nguy hiểm. || The spread of misinformation is very dangerous. || dangerous = nguy hiểm
+# monitor online activity
+Cha mẹ nên giám sát hoạt động trực tuyến của con cái. || Parents should monitor their children's online activity. | Parents should monitor children's online activity. || their children's = của con cái
+Các công ty giám sát hoạt động trực tuyến của nhân viên. || Companies monitor their employees' online activity. | Companies monitor employees' online activity. || employees' = của nhân viên
+Chính phủ không nên giám sát hoạt động trực tuyến. || The government should not monitor online activity. | The government shouldn't monitor online activity. || should not
+# a double-edged sword
+Công nghệ là con dao hai lưỡi. || Technology is a double-edged sword. || is a …
+Mạng xã hội là con dao hai lưỡi. || Social media is a double-edged sword. || social media is (số ít)
+Internet là con dao hai lưỡi đối với trẻ em. || The internet is a double-edged sword for children. | The Internet is a double-edged sword for children. || for children = đối với trẻ em
+
+@ health
+# maintain a healthy lifestyle
+Tôi muốn duy trì lối sống lành mạnh. || I want to maintain a healthy lifestyle. || want to + V
+Duy trì lối sống lành mạnh thì không dễ. || Maintaining a healthy lifestyle is not easy. | Maintaining a healthy lifestyle isn't easy. || V-ing làm chủ ngữ: Maintaining … is
+Mọi người nên duy trì lối sống lành mạnh. || Everyone should maintain a healthy lifestyle. | People should maintain a healthy lifestyle. || should + V
+# a balanced diet
+Một chế độ ăn cân bằng tốt cho sức khỏe. || A balanced diet is good for health. | A balanced diet is good for your health. | A balanced diet is healthy. || be good for = tốt cho
+Trẻ em cần một chế độ ăn cân bằng. || Children need a balanced diet. || need = cần
+Tôi cố gắng có một chế độ ăn cân bằng. || I try to have a balanced diet. | I try to eat a balanced diet. || try to + V
+# take regular exercise
+Bác sĩ khuyên tôi tập thể dục thường xuyên. || The doctor advises me to take regular exercise. | My doctor advises me to take regular exercise. || advise sb to + V = khuyên ai làm gì
+Tôi tập thể dục thường xuyên. || I take regular exercise. || take (không phải do)
+Tập thể dục thường xuyên giúp bạn khỏe mạnh. || Taking regular exercise keeps you healthy. | Taking regular exercise helps you stay healthy. || V-ing làm chủ ngữ · keep sb healthy
+# processed food
+Thực phẩm chế biến sẵn có nhiều muối. || Processed food has a lot of salt. | Processed food contains a lot of salt. || a lot of salt = nhiều muối
+Chúng ta nên ăn ít thực phẩm chế biến sẵn hơn. || We should eat less processed food. || less = ít hơn (danh từ không đếm được)
+Thực phẩm chế biến sẵn thì rẻ và tiện lợi. || Processed food is cheap and convenient. || cheap = rẻ · convenient = tiện lợi
+# junk food
+Trẻ em thích đồ ăn vặt không lành mạnh. || Children love junk food. | Children like junk food. | Kids love junk food. || love / like = thích
+Đồ ăn vặt không lành mạnh gây béo phì. || Junk food causes obesity. | Junk food leads to obesity. || obesity = béo phì
+Trường học nên cấm đồ ăn vặt không lành mạnh. || Schools should ban junk food. || ban = cấm
+# the obesity rate
+Tỷ lệ béo phì đang tăng lên. || The obesity rate is rising. | The obesity rate is increasing. | The obesity rate is going up. || is rising = đang tăng lên
+Tỷ lệ béo phì ở trẻ em rất cao. || The obesity rate among children is very high. | The obesity rate in children is very high. || among children = ở trẻ em
+Chính phủ muốn giảm tỷ lệ béo phì. || The government wants to reduce the obesity rate. | The government wants to lower the obesity rate. || wants (+s) to + V
+# chronic diseases
+Hút thuốc gây ra các bệnh mãn tính. || Smoking causes chronic diseases. | Smoking leads to chronic diseases. || smoking = hút thuốc
+Nhiều người già mắc các bệnh mãn tính. || Many old people have chronic diseases. | Many elderly people suffer from chronic diseases. | Many elderly people have chronic diseases. || have / suffer from = mắc
+Các bệnh mãn tính rất khó chữa. || Chronic diseases are very hard to cure. | Chronic diseases are very difficult to cure. || hard to cure = khó chữa
+# public health campaigns
+Các chiến dịch y tế cộng đồng rất hữu ích. || Public health campaigns are very useful. | Public health campaigns are very helpful. || useful = hữu ích
+Chính phủ tổ chức các chiến dịch y tế cộng đồng. || The government runs public health campaigns. | The government organises public health campaigns. | The government organizes public health campaigns. || run / organise = tổ chức
+Các chiến dịch y tế cộng đồng dạy mọi người ăn uống lành mạnh. || Public health campaigns teach people to eat healthily. | Public health campaigns teach people to eat healthy food. || teach sb to + V
+# preventive measures
+Chúng ta cần các biện pháp phòng ngừa. || We need preventive measures. || need = cần
+Rửa tay là một biện pháp phòng ngừa đơn giản. || Washing hands is a simple preventive measure. | Washing your hands is a simple preventive measure. || washing hands = rửa tay · a … measure (số ít)
+Chính phủ đã đưa ra các biện pháp phòng ngừa. || The government introduced preventive measures. | The government has introduced preventive measures. | The government took preventive measures. || introduce / take = đưa ra
+# the healthcare system
+Hệ thống y tế cần nhiều tiền hơn. || The healthcare system needs more money. || needs (+s) · more money
+Hệ thống y tế ở nước tôi rất tốt. || The healthcare system in my country is very good. || in my country = ở nước tôi
+Dân số già hóa gây áp lực lên hệ thống y tế. || An ageing population puts pressure on the healthcare system. | An aging population puts pressure on the healthcare system. || put pressure on = gây áp lực lên
+# medical treatment
+Điều trị y tế rất đắt. || Medical treatment is very expensive. || expensive = đắt
+Anh ấy cần điều trị y tế ngay lập tức. || He needs medical treatment immediately. | He needs immediate medical treatment. | He needs medical treatment right away. || immediately = ngay lập tức
+Người nghèo không thể chi trả điều trị y tế. || Poor people cannot afford medical treatment. | Poor people can't afford medical treatment. || afford = chi trả nổi
+# life expectancy
+Tuổi thọ trung bình đang tăng lên. || Life expectancy is increasing. | Life expectancy is rising. | Life expectancy is going up. || is increasing = đang tăng lên
+Nhật Bản có tuổi thọ trung bình cao. || Japan has a high life expectancy. | Japan has high life expectancy. || Japan = Nhật Bản · has
+Y học hiện đại tăng tuổi thọ trung bình. || Modern medicine increases life expectancy. | Modern medicine has increased life expectancy. || modern medicine = y học hiện đại
+# mental health problems
+Nhiều học sinh có các vấn đề sức khỏe tâm thần. || Many students have mental health problems. || have = có
+Căng thẳng gây ra các vấn đề sức khỏe tâm thần. || Stress causes mental health problems. | Stress leads to mental health problems. || stress = căng thẳng
+Chúng ta nên nói về các vấn đề sức khỏe tâm thần. || We should talk about mental health problems. || talk about = nói về
+# reduce stress levels
+Yoga giúp giảm mức độ căng thẳng. || Yoga helps reduce stress levels. | Yoga helps to reduce stress levels. || help + V
+Âm nhạc có thể giảm mức độ căng thẳng. || Music can reduce stress levels. || music = âm nhạc
+Đi bộ giảm mức độ căng thẳng. || Walking reduces stress levels. || walking = đi bộ · reduces (+s)
+# have a detrimental effect on
+Hút thuốc có ảnh hưởng xấu đến sức khỏe. || Smoking has a detrimental effect on health. | Smoking has a detrimental effect on your health. || has (chủ ngữ số ít)
+Thiếu ngủ có ảnh hưởng xấu đến việc học. || Lack of sleep has a detrimental effect on studying. | A lack of sleep has a detrimental effect on learning. | Lack of sleep has a detrimental effect on learning. || lack of sleep = thiếu ngủ
+Ô nhiễm có ảnh hưởng xấu đến trẻ em. || Pollution has a detrimental effect on children. || has a detrimental effect on
+# be prone to
+Người già dễ mắc bệnh. || Old people are prone to illness. | Elderly people are prone to illness. | Old people are prone to diseases. || are prone to + N · illness = bệnh
+Trẻ em dễ bị cảm lạnh. || Children are prone to colds. | Children are prone to catching colds. || colds = cảm lạnh
+Người béo phì dễ mắc bệnh tim. || Obese people are prone to heart disease. || obese = béo phì · heart disease = bệnh tim
+# raise taxes on unhealthy products
+Chính phủ nên tăng thuế với sản phẩm không lành mạnh. || The government should raise taxes on unhealthy products. || should + V
+Nhiều nước tăng thuế với sản phẩm không lành mạnh. || Many countries raise taxes on unhealthy products. | Many countries have raised taxes on unhealthy products. || many countries
+Tăng thuế với sản phẩm không lành mạnh có thể cứu sống nhiều người. || Raising taxes on unhealthy products can save lives. | Raising taxes on unhealthy products can save many lives. || V-ing làm chủ ngữ · save lives = cứu sống
+# make informed choices
+Mọi người cần thông tin để đưa ra lựa chọn có hiểu biết. || People need information to make informed choices. || need information = cần thông tin
+Nhãn thực phẩm giúp chúng ta đưa ra lựa chọn có hiểu biết. || Food labels help us make informed choices. | Food labels help us to make informed choices. || food labels = nhãn thực phẩm
+Học sinh nên đưa ra lựa chọn có hiểu biết. || Students should make informed choices. || should + V
+# free medical care
+Một số nước cung cấp chăm sóc y tế miễn phí. || Some countries provide free medical care. | Some countries offer free medical care. || provide = cung cấp
+Trẻ em được chăm sóc y tế miễn phí. || Children get free medical care. | Children receive free medical care. || get / receive = được nhận
+Chăm sóc y tế miễn phí tốn nhiều tiền thuế. || Free medical care costs a lot of tax money. | Free medical care costs taxpayers a lot of money. || cost = tốn · tax money = tiền thuế
+# an ageing population
+Nhật Bản có dân số già hóa. || Japan has an ageing population. | Japan has an aging population. || Japan has …
+Dân số già hóa là một thách thức. || An ageing population is a challenge. | An aging population is a challenge. || challenge = thách thức
+Dân số già hóa cần nhiều bác sĩ hơn. || An ageing population needs more doctors. | An aging population needs more doctors. || more doctors = nhiều bác sĩ hơn
+# health insurance
+Mọi người nên có bảo hiểm y tế. || Everyone should have health insurance. || everyone should have
+Bảo hiểm y tế rất đắt. || Health insurance is very expensive. || expensive = đắt
+Công ty tôi trả bảo hiểm y tế cho tôi. || My company pays for my health insurance. | My company pays my health insurance. || pay for = trả tiền cho
+# cut down on
+Tôi đang cắt giảm đường. || I am cutting down on sugar. | I'm cutting down on sugar. || hiện tại tiếp diễn · sugar = đường
+Bạn nên cắt giảm đồ ăn vặt. || You should cut down on junk food. | You should cut down on snacks. || should + V · junk food = đồ ăn vặt
+Anh ấy đã cắt giảm việc hút thuốc. || He cut down on smoking. | He has cut down on smoking. || quá khứ: cut · smoking = việc hút thuốc
+# physical inactivity
+Sự thiếu vận động gây ra béo phì. || Physical inactivity causes obesity. | Physical inactivity leads to obesity. || causes (+s)
+Sự thiếu vận động là phổ biến ở thành phố. || Physical inactivity is common in cities. || common = phổ biến
+Sự thiếu vận động có hại cho tim. || Physical inactivity is bad for the heart. | Physical inactivity is harmful to the heart. | Physical inactivity is bad for your heart. || be bad for = có hại cho · heart = tim
+# boost the immune system
+Trái cây tăng cường hệ miễn dịch. || Fruit boosts the immune system. | Fruits boost the immune system. || fruit = trái cây · boosts (+s)
+Ngủ đủ giấc tăng cường hệ miễn dịch. || Enough sleep boosts the immune system. | Getting enough sleep boosts the immune system. || enough sleep = ngủ đủ giấc
+Tập thể dục giúp tăng cường hệ miễn dịch. || Exercise helps boost the immune system. | Exercise helps to boost the immune system. || exercise = tập thể dục
+# a heavy burden on
+Người già là một gánh nặng lớn cho gia đình. || Old people are a heavy burden on their families. | Elderly people are a heavy burden on their families. || are a heavy burden on
+Bệnh tật là một gánh nặng lớn cho hệ thống y tế. || Illness is a heavy burden on the healthcare system. | Disease is a heavy burden on the healthcare system. || illness = bệnh tật
+Học phí là một gánh nặng lớn cho sinh viên. || Tuition fees are a heavy burden on students. || tuition fees = học phí
+# be in good shape
+Ông tôi có sức khỏe tốt. || My grandfather is in good shape. || grandfather = ông · is in good shape
+Tôi chạy bộ để có thân hình tốt. || I run to be in good shape. | I go running to be in good shape. || to + V = để
+Vận động viên phải có thân hình tốt. || Athletes must be in good shape. | Athletes have to be in good shape. || athletes = vận động viên · must be
+# medical facilities
+Vùng nông thôn thiếu cơ sở y tế. || Rural areas lack medical facilities. || rural areas = vùng nông thôn · lack = thiếu
+Thành phố có nhiều cơ sở y tế hiện đại. || The city has many modern medical facilities. || modern = hiện đại
+Chính phủ nên xây dựng thêm cơ sở y tế. || The government should build more medical facilities. || build more = xây dựng thêm
+# promote healthy eating
+Trường học nên khuyến khích ăn uống lành mạnh. || Schools should promote healthy eating. || should + V
+Quảng cáo có thể khuyến khích ăn uống lành mạnh. || Advertisements can promote healthy eating. | Adverts can promote healthy eating. | Advertising can promote healthy eating. || advertisements = quảng cáo
+Chiến dịch này khuyến khích ăn uống lành mạnh. || This campaign promotes healthy eating. || promotes (+s)
+# lead to serious health problems
+Hút thuốc dẫn đến vấn đề sức khỏe nghiêm trọng. || Smoking leads to serious health problems. | Smoking can lead to serious health problems. || leads (+s)
+Đồ ăn vặt không lành mạnh có thể dẫn đến vấn đề sức khỏe nghiêm trọng. || Junk food can lead to serious health problems. || can + V
+Căng thẳng dẫn đến vấn đề sức khỏe nghiêm trọng. || Stress leads to serious health problems. | Stress can lead to serious health problems. || stress = căng thẳng
+# individual responsibility
+Sức khỏe là trách nhiệm cá nhân. || Health is an individual responsibility. | Health is individual responsibility. || an individual responsibility
+Ăn uống lành mạnh là trách nhiệm cá nhân. || Healthy eating is an individual responsibility. | Eating healthily is an individual responsibility. || healthy eating = ăn uống lành mạnh
+Một số người tin vào trách nhiệm cá nhân. || Some people believe in individual responsibility. || believe in = tin vào

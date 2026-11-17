@@ -1,7 +1,8 @@
 import fixJson from '../../../content/grammar-fix.json';
+import phraseJson from '../../../content/roadmap/active-sentences.json';
 import svoJson from '../../../content/svo.json';
 import { checkTranslation, topicById, type Checked, type DrillItem } from '@/lib/grammar/drills';
-import { ACTIVE_TOPICS, NEW_WORDS, activeExampleVi, passiveExampleVi, type Day } from '@/lib/roadmap/plan';
+import { ACTIVE_TOPICS, NEW_WORDS, activeExampleVi, passiveExampleVi, type ActiveWord, type Day } from '@/lib/roadmap/plan';
 import { usesPhrase } from '@/lib/roadmap/sentences';
 
 /** One sentence to write in English: the prompt (Vietnamese, or a wrong sentence), the accepted answers, help. */
@@ -41,6 +42,36 @@ export function exampleItems(day: Day): WriteItem[] {
     }
   }
   return out;
+}
+
+/* ---------- Dịch câu với cụm từ (bài cụm chủ động mỗi ngày) ---------- */
+
+interface PhraseSentence {
+  vi: string;
+  en: string[];
+  hint?: string;
+}
+const PHRASE_SENTENCES = (phraseJson as { items: Record<string, PhraseSentence[]> }).items;
+
+/**
+ * The day's active collocations, 3 simple Vietnamese sentences each, to translate into English with the collocation.
+ * A collocation without its 3 sentences falls back to the Vietnamese version of its example, when there is one.
+ */
+export function phraseItems(topicId: string, words: ActiveWord[]): WriteItem[] {
+  return words.flatMap((w) => {
+    const list = PHRASE_SENTENCES[`${topicId}:${w.t}`];
+    if (list?.length)
+      return list.map((s, i) => ({
+        key: `${w.t}:${i}`,
+        prompt: s.vi,
+        en: s.en,
+        hint: s.hint ? `${w.t} = ${w.m} · ${s.hint}` : `${w.t} = ${w.m}`,
+        mustUse: w.t,
+        label: w.t,
+      }));
+    const vi = activeExampleVi(topicId, w);
+    return vi ? [{ key: `${w.t}:ex`, prompt: vi, en: [w.ex], hint: `${w.t} = ${w.m}`, mustUse: w.t, label: w.t }] : [];
+  });
 }
 
 /**

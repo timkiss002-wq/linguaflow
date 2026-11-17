@@ -1,6 +1,6 @@
 import { AlertTriangle, CheckCircle2, PenLine, Trash2 } from 'lucide-react';
 import { Fragment, useMemo, useState } from 'react';
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import { ConfirmDialog } from '@/components/ConfirmDialog';
 import { EmptyState } from '@/components/EmptyState';
@@ -10,8 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { AiFeedback } from '@/features/writing/AiFeedback';
-import { useDeleteSubmission, useSubmission, useSubmissions, useWritingProfile } from '@/features/writing/api';
+import { useDeleteSubmission, useSubmission, useSubmissions } from '@/features/writing/api';
 import { toUserMessage } from '@/lib/errors';
 import { highlights, levelCounts, type Metrics } from '@/lib/writing/analyze';
 import { compareWithPrevious } from '@/lib/writing/tasks';
@@ -33,14 +32,12 @@ const CATEGORY: Record<string, string> = {
 
 export default function WritingResultPage() {
   const { submissionId = '' } = useParams();
-  const [params] = useSearchParams();
   const sub = useSubmission(submissionId);
   const list = useSubmissions();
   const navigate = useNavigate();
   const del = useDeleteSubmission();
   const [confirmDelete, setConfirmDelete] = useState(false);
   const s = sub.data;
-  const profile = useWritingProfile(s?.language ?? 'en');
 
   const compare = useMemo(() => {
     if (!s || !list.data) return null;
@@ -92,17 +89,13 @@ export default function WritingResultPage() {
         }
       />
 
-      {/* Scored straight away: the AI band comes first, the automatic checks below it. */}
+      {/* Automatic checks of form (no AI scoring). */}
       <div className="mb-4 space-y-2">
         {m.exam && (
           <p className="text-sm text-muted-foreground" data-testid="exam-note">
-            Bài thi thử {m.exam.minutes} phút{m.exam.timeUp ? ' — nộp tự động khi hết giờ' : ''}.{' '}
-            <Link to="/writing/mistakes" className="text-primary hover:underline">
-              Xem các lỗi bạn hay lặp lại →
-            </Link>
+            Bài thi thử {m.exam.minutes} phút{m.exam.timeUp ? ' — nộp tự động khi hết giờ' : ''}.
           </p>
         )}
-        <AiFeedback submissionId={s.id} language={s.language} level={profile?.level.value ?? 3} autoStart={params.get('exam') === '1' || params.get('new') === '1'} />
       </div>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4" data-testid="writing-tiles">
         <Tile label={zh ? 'Characters' : 'Words'} value={`${m.length}`} hint={m.length >= m.minLength ? `≥ ${m.minLength} ✓` : `task asks for ${m.minLength}+`} good={m.length >= m.minLength} />
@@ -169,7 +162,7 @@ export default function WritingResultPage() {
                   </span>
                 </p>
               )}
-              <p className="border-t pt-2 text-xs text-muted-foreground">These checks look at form — length, structure, words. They cannot judge grammar or meaning: the AI score above does that.</p>
+              <p className="border-t pt-2 text-xs text-muted-foreground">These checks look at form — length, structure, words. They cannot judge grammar or meaning — compare with a model answer or ask a teacher.</p>
             </CardContent>
           </Card>
 

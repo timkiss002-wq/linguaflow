@@ -58,7 +58,7 @@ function LanguageView({ lang }: { lang: Lang }) {
         >
           <span>
             <span className="block font-semibold">IELTS Writing Task 2</span>
-            <span className="text-sm text-muted-foreground">Chưa biết viết? Học khung cố định cho mỗi dạng đề và dịch bài mẫu band 5.5 / 6.5 / 7.5 từng câu. Viết được rồi? Thi thử 40 phút và để AI chấm band.</span>
+            <span className="text-sm text-muted-foreground">Chưa biết viết? Học khung cố định cho mỗi dạng đề và dịch bài mẫu band 5.5 / 6.5 / 7.5 từng câu. Viết được rồi? Thi thử 40 phút.</span>
           </span>
           <span className="flex flex-wrap gap-2">
             <Button asChild size="sm">
@@ -66,9 +66,6 @@ function LanguageView({ lang }: { lang: Lang }) {
             </Button>
             <Button asChild size="sm" variant="outline">
               <Link to="/writing/guided#exam">Thi thử 40′</Link>
-            </Button>
-            <Button asChild size="sm" variant="ghost">
-              <Link to="/writing/mistakes">Lỗi hay lặp lại</Link>
             </Button>
           </span>
         </div>

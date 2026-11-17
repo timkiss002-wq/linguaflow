@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { TOPICS } from '@/lib/grammar/drills';
-import { DAYS, SVO_SETS } from '@/lib/roadmap/plan';
-import { SVO, checkWrite, exampleItems, fixItems, fixItemsOfTopic, fixTopics, orderOk, parseChunks, shuffled, svoSet, usesWord } from './items';
+import { ACTIVE_TOPICS, DAYS, SVO_SETS } from '@/lib/roadmap/plan';
+import { SVO, checkWrite, exampleItems, fixItems, fixItemsOfTopic, fixTopics, orderOk, phraseItems, parseChunks, shuffled, svoSet, usesWord } from './items';
 
 const tasks = DAYS.flatMap((d) => d.tasks.map((t) => ({ d, t })));
 
@@ -83,5 +83,16 @@ describe('Dịch ví dụ', () => {
 
   it('only schedules the task when the day has examples in Vietnamese', () => {
     for (const { d, t } of tasks.filter((x) => x.t.kind === 'vocab-translate')) expect(exampleItems(d).length, t.id).toBeGreaterThan(0);
+  });
+});
+
+describe('phraseItems (Dịch câu với cụm từ)', () => {
+  // the first answer keeps the collocation as written (British spelling); later ones may be US variants
+  it('has 3 sentences for every collocation of the first 4 weeks, and the model answer uses its collocation', () => {
+    for (const topic of ACTIVE_TOPICS.filter((t) => t.week && t.week <= 4)) {
+      const items = phraseItems(topic.id, topic.words);
+      expect(items).toHaveLength(topic.words.length * 3);
+      for (const it of items) expect(usesWord(it.en[0]!, it.mustUse!), `${it.key}: ${it.en[0]}`).toBe(true);
+    }
   });
 });

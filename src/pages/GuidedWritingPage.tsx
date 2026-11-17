@@ -137,11 +137,7 @@ export default function GuidedWritingPage() {
           )}
 
           <p className="mt-8 text-sm text-muted-foreground">
-            <b className="text-foreground">Thi thử</b>: chỉ có đề bài, đồng hồ đếm ngược, hết giờ tự nộp, rồi AI chấm band theo 4 tiêu chí. Lỗi AI tìm được gom lại ở{' '}
-            <Link to="/writing/mistakes" className="text-primary hover:underline">
-              Lỗi hay lặp lại
-            </Link>
-            .
+            <b className="text-foreground">Thi thử</b>: chỉ có đề bài, đồng hồ đếm ngược, hết giờ tự nộp, rồi xem phân tích bài và so với bài mẫu.
           </p>
         </section>
       </div>
@@ -157,7 +153,7 @@ function Steps() {
         ['0', 'Học khung', 'Gõ lại các cụm cố định'],
         ['1–3', 'Dịch từng câu', 'Bài mẫu 5.5 / 6.5 / 7.5, gợi ý giảm dần'],
         ['4', 'Tự viết cả bài', 'Chỉ có đề, như đi thi'],
-        ['AI', 'Chấm band', '4 tiêu chí + lỗi hay lặp'],
+        ['5', 'So bài mẫu', 'Đối chiếu với bài band 6.5'],
       ].map(([n, t, d]) => (
         <li key={n} className="flex gap-2">
           <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-rose-700 text-xs font-bold text-white">{n}</span>
