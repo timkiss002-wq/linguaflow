@@ -1,0 +1,749 @@
+# Writing theo tuần: mỗi tuần của lộ trình có một chủ đề, khớp với cụm từ chủ động của tuần đó.
+# Sau khi học xong cụm từ + word form + từ bổ sung của tuần, bạn viết được đoạn văn của tuần mà không bí từ:
+# mọi câu của đoạn văn mẫu chỉ dùng những thứ đó (và từ cơ bản).
+#
+# Định dạng mỗi tuần:
+#   === <tuần> | <id chủ đề trong active-vocab.json> | <tên>
+#   prompt: đề của đoạn văn mẫu        prompt_vi: bản tiếng Việt
+#   own: đề để tự viết                 own_vi: bản tiếng Việt
+#   @forms     họ từ: "head | từ (loại) nghĩa; từ (loại) nghĩa; …" rồi các câu "- câu có [đáp án] || vì sao"
+#   @bank      từ bổ sung: "Loại | từ | nghĩa | ví dụ"   (Loại: Word, Phrase, Phrasal verb, Idiom, Linking)
+#   @paragraph câu của đoạn văn mẫu: "câu Việt || đáp án 1 | đáp án 2 || từ bắt buộc dùng || gợi ý"
+# Sinh ra writing-weeks.json bằng: node scripts/build-writing-weeks.mjs
+
+=== 1 | education | Education
+prompt: Some people think schools should only teach academic subjects. Others believe they should also teach practical skills. Write one body paragraph giving your opinion.
+prompt_vi: Có người cho rằng trường học chỉ nên dạy các môn học thuật, người khác cho rằng nên dạy cả kỹ năng thực hành. Viết một đoạn thân bài nêu quan điểm của bạn.
+own: Some people think university education should be free for everyone. Write one paragraph (120–150 words) giving your opinion.
+own_vi: Có người cho rằng giáo dục đại học nên miễn phí cho mọi người. Viết một đoạn (120–150 từ) nêu quan điểm của bạn.
+@forms
+educate | educate (v) giáo dục; education (n) nền giáo dục, việc học; educational (adj) mang tính giáo dục; educated (adj) có học thức
+- Every child has the right to free [education]. || sau tính từ "free" và làm tân ngữ → danh từ
+- Museums offer many [educational] activities for children. || đứng trước danh từ "activities" → tính từ
+know | know (v) biết; knowledge (n) kiến thức; knowledgeable (adj) hiểu biết rộng
+- Students acquire [knowledge] from books and teachers. || sau động từ "acquire" → danh từ (không đếm được)
+- A good teacher is [knowledgeable] about the subject. || sau "is" và trước "about" → tính từ
+practice | practice (n) sự thực hành; practise (v) luyện tập; practical (adj) thực tế, thực hành; practically (adv) gần như, về mặt thực tế
+- Schools should teach more [practical] skills. || đứng trước danh từ "skills" → tính từ
+- You need to [practise] speaking English every day. || sau "need to" → động từ nguyên mẫu (Anh–Anh: practise là động từ)
+theory | theory (n) lý thuyết; theoretical (adj) thuộc lý thuyết; theoretically (adv) về mặt lý thuyết
+- University courses focus too much on [theoretical] knowledge. || đứng trước danh từ "knowledge" → tính từ
+- The [theory] is easy, but the practice is difficult. || sau mạo từ "the", làm chủ ngữ → danh từ
+motivate | motivate (v) thúc đẩy; motivation (n) động lực; motivated (adj) có động lực
+- Good teachers [motivate] students to learn. || sau chủ ngữ số nhiều "teachers" → động từ
+- Students with high [motivation] usually get better results. || sau tính từ "high" → danh từ
+succeed | succeed (v) thành công; success (n) sự thành công; successful (adj) thành công; successfully (adv) một cách thành công
+- A well-rounded education helps young people [succeed] in life. || sau "help + O" → động từ nguyên mẫu
+- Practical skills are the key to [success]. || sau giới từ "to" (the key to + N) → danh từ
+employ | employ (v) thuê, tuyển; employer (n) nhà tuyển dụng; employee (n) nhân viên; employment (n) việc làm
+- [Employers] want graduates who can work in teams. || chủ ngữ số nhiều, người tuyển dụng → danh từ chỉ người (-er)
+- The company has 200 [employees]. || sau số đếm "200", người được thuê → danh từ chỉ người (-ee), số nhiều
+able | able (adj) có thể; ability (n) khả năng; enable (v) giúp cho có thể; unable (adj) không thể
+- Group projects improve students' [ability] to work with others. || sau sở hữu cách "students'" → danh từ
+- Online courses [enable] adults to learn at home. || sau chủ ngữ và trước "adults to + V" → động từ (enable sb to V)
+@bank
+Linking | as well as | cũng như, bên cạnh | Schools should teach practical skills as well as academic subjects.
+Phrase | solve problems | giải quyết vấn đề | Employers want staff who can solve problems.
+Phrase | work in teams | làm việc nhóm | Group projects teach students to work in teams.
+Word | confident (adj) | tự tin | Debating helps students become more confident.
+Phrase | life skills | kỹ năng sống | Cooking and managing money are important life skills.
+Phrasal verb | keep up with | theo kịp | Weak students often cannot keep up with their classmates.
+Phrasal verb | fall behind | tụt lại phía sau | Students who miss lessons may fall behind.
+Phrasal verb | hand in | nộp (bài) | Students must hand in their essays on Friday.
+Idiom | the key to success | chìa khóa thành công | Many people think a good education is the key to success.
+@paragraph
+Tôi tin rằng trường học nên dạy kỹ năng thực hành cũng như các môn học thuật. || I believe that schools should teach practical skills as well as academic subjects. | I believe schools should teach practical skills as well as academic subjects. || practical skills || as well as = cũng như · academic subjects
+Hiện nay, nhiều trường áp dụng giáo dục nặng về thi cử, vì vậy học sinh chủ yếu học kiến thức lý thuyết. || Nowadays, many schools follow exam-oriented education, so students mainly learn theoretical knowledge. | Today, many schools follow exam-oriented education, so students mainly learn theoretical knowledge. || exam-oriented education || follow = áp dụng · mainly = chủ yếu · theoretical knowledge
+Tuy nhiên, kiến thức này không đủ khi họ bước vào thị trường việc làm. || However, this knowledge is not enough when they enter the job market. | However, this knowledge isn't enough when they enter the job market. || the job market || enter = bước vào
+Các nhà tuyển dụng muốn những nhân viên có thể giải quyết vấn đề và làm việc nhóm. || Employers want employees who can solve problems and work in teams. | Employers want staff who can solve problems and work in teams. || employer || word form: employ → employer (người tuyển) / employee (nhân viên) · who + V
+Vì vậy, trường học nên trang bị cho học sinh kỹ năng tư duy phản biện và kỹ năng sống. || Therefore, schools should equip students with critical thinking skills and life skills. || equip students with || therefore = vì vậy
+Ví dụ, các hoạt động ngoại khóa như câu lạc bộ tranh biện giúp học sinh tự tin hơn. || For example, extracurricular activities such as debate clubs help students become more confident. | For example, extracurricular activities like debate clubs help students become more confident. | For example, extracurricular activities such as debate clubs make students more confident. || extracurricular activities || such as = như · debate club = câu lạc bộ tranh biện · confident
+Những kỹ năng này cũng thúc đẩy học sinh học chăm chỉ hơn vì các em thấy được giá trị của việc học. || These skills also motivate students to study harder because they can see the value of learning. | These skills also motivate students to work harder because they can see the value of learning. || motivate students to || study harder = học chăm hơn · the value of = giá trị của
+Tóm lại, một nền giáo dục toàn diện sẽ giúp người trẻ thành công trong cuộc sống. || In conclusion, a well-rounded education will help young people succeed in life. | In conclusion, a well-rounded education helps young people succeed in life. || well-rounded education || word form: succeed (v) sau help + O
+
+=== 2 | environment | Environment
+prompt: Some people think governments should be responsible for protecting the environment. Others believe it is the responsibility of individuals. Write one body paragraph giving your opinion.
+prompt_vi: Có người cho rằng chính phủ phải chịu trách nhiệm bảo vệ môi trường, người khác cho rằng đó là trách nhiệm của mỗi cá nhân. Viết một đoạn thân bài nêu quan điểm của bạn.
+own: Many people believe that individuals can do very little to protect the environment. To what extent do you agree? Write one paragraph (120–150 words).
+own_vi: Nhiều người cho rằng mỗi cá nhân có thể làm rất ít để bảo vệ môi trường. Bạn đồng ý đến mức nào? Viết một đoạn (120–150 từ).
+@forms
+environment | environment (n) môi trường; environmental (adj) thuộc môi trường; environmentally (adv) về mặt môi trường
+- Plastic waste causes serious [environmental] problems. || đứng trước danh từ "problems" → tính từ
+- We should buy [environmentally] friendly products. || bổ nghĩa cho tính từ "friendly" → trạng từ
+pollute | pollute (v) làm ô nhiễm; pollution (n) sự ô nhiễm; polluted (adj) bị ô nhiễm; polluter (n) bên gây ô nhiễm
+- Factories [pollute] rivers with industrial waste. || sau chủ ngữ "Factories" → động từ
+- Air [pollution] is a big problem in Hanoi. || sau "Air", làm chủ ngữ → danh từ
+sustain | sustain (v) duy trì; sustainable (adj) bền vững; sustainability (n) tính bền vững
+- Solar power is a [sustainable] source of energy. || sau "a", trước danh từ "source" → tính từ
+- Companies should care more about [sustainability]. || sau giới từ "about" → danh từ
+protect | protect (v) bảo vệ; protection (n) sự bảo vệ; protective (adj) mang tính bảo vệ
+- Governments must [protect] endangered species. || sau "must" → động từ nguyên mẫu
+- Environmental [protection] costs a lot of money. || sau tính từ, làm chủ ngữ → danh từ
+consume | consume (v) tiêu thụ; consumption (n) sự tiêu thụ; consumer (n) người tiêu dùng
+- Energy [consumption] has doubled in the last 20 years. || sau "Energy", làm chủ ngữ → danh từ (sự tiêu thụ)
+- Rich countries [consume] more energy than poor countries. || sau chủ ngữ → động từ
+reduce | reduce (v) giảm; reduction (n) sự giảm
+- A carbon tax can lead to a [reduction] in carbon emissions. || sau "a", trước "in" → danh từ
+- We must [reduce] our use of plastic bags. || sau "must" → động từ nguyên mẫu
+harm | harm (n/v) sự tổn hại, làm hại; harmful (adj) có hại; harmless (adj) vô hại
+- Single-use plastics are [harmful] to sea animals. || sau "are", trước "to" → tính từ (be harmful to)
+- Chemicals from factories can [harm] wildlife. || sau "can" → động từ nguyên mẫu
+destroy | destroy (v) phá hủy; destruction (n) sự phá hủy; destructive (adj) có sức tàn phá
+- Forest fires [destroy] natural habitats. || sau chủ ngữ số nhiều → động từ
+- The [destruction] of forests leads to the loss of biodiversity. || sau "The", trước "of" → danh từ
+@bank
+Phrase | play a role in + V-ing | đóng vai trò trong việc | Governments play a key role in protecting the environment.
+Phrase | on a large scale | trên quy mô lớn | Only governments can build solar farms on a large scale.
+Phrase | make a difference | tạo ra sự khác biệt | Small actions can make a difference.
+Phrase | force sb to do sth | buộc ai làm gì | New laws force companies to cut pollution.
+Word | individual (n) | cá nhân | Each individual should save energy at home.
+Phrasal verb | throw away | vứt bỏ | People throw away too much plastic.
+Phrasal verb | switch off | tắt (thiết bị) | Switch off the lights when you leave the room.
+Phrasal verb | run out of | cạn kiệt, hết | The world may run out of oil one day.
+Idiom | the tip of the iceberg | phần nổi của tảng băng | Plastic in the sea is only the tip of the iceberg.
+@paragraph
+Theo tôi, chính phủ nên đóng vai trò lớn nhất trong việc giải quyết biến đổi khí hậu. || In my opinion, governments should play the biggest role in tackling climate change. | In my view, governments should play the biggest role in tackling climate change. || tackle climate change || play a role in + V-ing
+Lý do chính là nhiều quốc gia vẫn phụ thuộc nhiều vào nhiên liệu hóa thạch. || The main reason is that many countries still rely heavily on fossil fuels. || rely heavily on fossil fuels || the main reason is that = lý do chính là
+Chỉ chính phủ mới có thể đầu tư vào các nguồn năng lượng tái tạo trên quy mô lớn. || Only governments can invest in renewable energy sources on a large scale. || renewable energy sources || invest in = đầu tư vào · on a large scale
+Họ cũng có thể áp đặt quy định nghiêm ngặt lên những nhà máy gây ô nhiễm. || They can also impose strict regulations on factories that cause pollution. | They can also impose strict regulations on polluting factories. || impose strict regulations on || word form: pollute → pollution · that cause = gây ra
+Ví dụ, thuế carbon buộc các công ty phải giảm lượng khí thải carbon. || For example, a carbon tax forces companies to reduce carbon emissions. | For instance, a carbon tax forces companies to reduce carbon emissions. || a carbon tax || force sb to V = buộc ai phải
+Tuy nhiên, mỗi cá nhân cũng nên áp dụng lối sống thân thiện với môi trường. || However, each individual should also adopt an eco-friendly lifestyle. | However, individuals should also adopt an eco-friendly lifestyle. || adopt an eco-friendly lifestyle || each individual = mỗi cá nhân
+Những hành động đơn giản như tái chế rác thải sinh hoạt có thể tạo ra sự khác biệt. || Simple actions such as recycling household waste can make a difference. | Simple actions like recycling household waste can make a difference. || recycle household waste || such as + V-ing · make a difference
+Nếu mọi người cùng hành động tập thể, chúng ta có thể bảo vệ hành tinh cho các thế hệ tương lai. || If everyone takes collective action, we can protect the planet for future generations. | If people take collective action, we can protect the planet for future generations. || take collective action || everyone takes (+s) · the planet = hành tinh
+
+=== 3 | technology | Technology
+prompt: Some people think artificial intelligence will bring more benefits than problems. Write one body paragraph discussing its benefits and its main drawback.
+prompt_vi: Có người cho rằng trí tuệ nhân tạo sẽ mang lại nhiều lợi ích hơn vấn đề. Viết một đoạn thân bài bàn về lợi ích và bất lợi chính của nó.
+own: Children today spend too much time on smartphones. What problems does this cause? Write one paragraph (120–150 words).
+own_vi: Trẻ em ngày nay dành quá nhiều thời gian cho điện thoại. Điều này gây ra những vấn đề gì? Viết một đoạn (120–150 từ).
+@forms
+technology | technology (n) công nghệ; technological (adj) thuộc công nghệ; technologically (adv) về mặt công nghệ
+- [Technological] advances have changed the way we live. || đứng trước danh từ "advances" → tính từ
+- Japan is a [technologically] advanced country. || bổ nghĩa cho tính từ "advanced" → trạng từ
+create | create (v) tạo ra; creation (n) sự tạo ra; creative (adj) sáng tạo; creativity (n) sự sáng tạo
+- Machines cannot do [creative] work as well as humans. || đứng trước danh từ "work" → tính từ
+- Art classes help to develop children's [creativity]. || sau sở hữu cách "children's" → danh từ
+produce | produce (v) sản xuất; product (n) sản phẩm; productive (adj) năng suất; productivity (n) năng suất
+- Computers help workers become more [productive]. || sau "become more" → tính từ
+- New software can increase [productivity]. || sau động từ "increase", làm tân ngữ → danh từ
+automate | automate (v) tự động hóa; automation (n) sự tự động hóa; automatic (adj) tự động; automatically (adv) một cách tự động
+- [Automation] may bring about job losses in factories. || làm chủ ngữ ở đầu câu → danh từ
+- The doors open [automatically]. || bổ nghĩa cho động từ "open" → trạng từ
+rely | rely (v) dựa vào; reliable (adj) đáng tin cậy; reliance (n) sự phụ thuộc
+- Many students [rely] on the internet for information. || sau chủ ngữ, trước "on" → động từ (rely on)
+- Wikipedia is not always a [reliable] source. || sau "a", trước danh từ "source" → tính từ
+access | access (n/v) sự truy cập, truy cập; accessible (adj) dễ tiếp cận
+- Online courses make education more [accessible]. || make + O + adj → tính từ
+- Many poor families have no [access] to the internet. || sau "no", trước "to" → danh từ (access to)
+innovate | innovate (v) đổi mới; innovation (n) sự đổi mới, phát minh; innovative (adj) mang tính đổi mới
+- Smartphones are a great [innovation]. || sau "a great" → danh từ
+- The company is famous for its [innovative] products. || đứng trước danh từ "products" → tính từ
+addict | addiction (n) sự nghiện; addictive (adj) gây nghiện; addicted (adj) bị nghiện
+- Online games can be very [addictive]. || sau "be very" → tính từ chỉ tính chất của trò chơi (gây nghiện)
+- Many teenagers are [addicted] to their phones. || người bị nghiện → addicted to
+@bank
+Word | outweigh (v) | lớn hơn, nặng hơn | The benefits of AI outweigh its drawbacks.
+Word | drawback (n) | bất lợi, nhược điểm | The main drawback of AI is job losses.
+Linking | so that | để mà | Governments should train workers so that they can find new jobs.
+Phrase | save costs | tiết kiệm chi phí | Robots help factories save costs.
+Phrasal verb | rely on | dựa vào | Many people rely on their phones for everything.
+Phrasal verb | take over | thay thế, đảm nhận | Robots may take over many routine jobs.
+Phrasal verb | carry out | thực hiện | Computers can carry out complex calculations.
+Phrasal verb | log on / go online | đăng nhập / lên mạng | Most teenagers go online every day.
+@paragraph
+Không thể phủ nhận rằng trí tuệ nhân tạo đang cách mạng hóa cách chúng ta làm việc. || It is undeniable that artificial intelligence is revolutionising the way we work. | It is undeniable that artificial intelligence is revolutionizing the way we work. || revolutionise the way || it is undeniable that = không thể phủ nhận rằng · hiện tại tiếp diễn
+Trước hết, máy móc có thể tự động hóa các công việc lặp lại, vì vậy nhân viên có nhiều thời gian hơn cho những việc sáng tạo. || Firstly, machines can automate routine tasks, so employees have more time for creative work. | First, machines can automate routine tasks, so employees have more time for creative work. || automate routine tasks || word form: creative (adj) + work
+Điều này giúp các công ty tăng năng suất và tiết kiệm chi phí. || This helps companies increase productivity and save costs. | This helps companies to increase productivity and save costs. || increase productivity || save costs = tiết kiệm chi phí
+Thứ hai, trí tuệ nhân tạo cho phép chúng ta truy cập thông tin ngay lập tức. || Secondly, artificial intelligence allows us to access information instantly. | Second, artificial intelligence allows us to access information instantly. || access information instantly || allow sb to V = cho phép ai
+Tuy nhiên, công nghệ này là con dao hai lưỡi. || However, this technology is a double-edged sword. || a double-edged sword || this technology (số ít)
+Nó có thể thay thế người lao động và gây ra tình trạng mất việc. || It may replace human workers and bring about job losses. | It can replace human workers and bring about job losses. || bring about job losses || may / can + V
+Vì vậy, chính phủ nên đào tạo người lao động để họ có thể theo kịp công nghệ mới nhất. || Therefore, governments should train workers so that they can keep up with the latest technology. || keep up with the latest technology || train = đào tạo · so that = để
+Nhìn chung, tôi tin rằng lợi ích của trí tuệ nhân tạo lớn hơn bất lợi của nó. || Overall, I believe that the benefits of artificial intelligence outweigh its drawbacks. | Overall, I believe the benefits of artificial intelligence outweigh its drawbacks. || artificial intelligence || outweigh = lớn hơn · drawbacks = bất lợi
+
+=== 4 | health | Health
+prompt: Some people think individuals are responsible for their own health. Others say governments should do more. Write one body paragraph giving your opinion.
+prompt_vi: Có người cho rằng mỗi người tự chịu trách nhiệm về sức khỏe của mình, người khác cho rằng chính phủ nên làm nhiều hơn. Viết một đoạn thân bài nêu quan điểm của bạn.
+own: Some people say governments should spend more money on preventing illness than on treating it. Do you agree? Write one paragraph (120–150 words).
+own_vi: Có người cho rằng chính phủ nên chi nhiều tiền cho việc phòng bệnh hơn là chữa bệnh. Bạn có đồng ý không? Viết một đoạn (120–150 từ).
+@forms
+health | health (n) sức khỏe; healthy (adj) khỏe mạnh, lành mạnh; unhealthy (adj) không lành mạnh; healthily (adv) một cách lành mạnh
+- Fast food is [unhealthy] because it contains too much fat. || sau "is" → tính từ mang nghĩa phủ định (không lành mạnh)
+- Children should learn to eat [healthily]. || bổ nghĩa cho động từ "eat" → trạng từ
+prevent | prevent (v) ngăn ngừa; prevention (n) sự phòng ngừa; preventive (adj) mang tính phòng ngừa; preventable (adj) có thể phòng ngừa
+- [Prevention] is better than cure. || làm chủ ngữ → danh từ
+- Many diseases are [preventable] if people exercise regularly. || sau "are" → tính từ (có thể phòng ngừa)
+obese | obese (adj) béo phì; obesity (n) bệnh béo phì
+- Junk food is one of the main causes of [obesity]. || sau giới từ "of" → danh từ
+- [Obese] children are prone to heart disease. || đứng trước danh từ "children" → tính từ
+treat | treat (v) điều trị; treatment (n) sự điều trị
+- Medical [treatment] is very expensive in some countries. || sau tính từ "Medical", làm chủ ngữ → danh từ
+- Doctors [treat] thousands of patients every year. || sau chủ ngữ "Doctors" → động từ
+responsible | responsible (adj) chịu trách nhiệm; responsibility (n) trách nhiệm; responsibly (adv) có trách nhiệm; irresponsible (adj) vô trách nhiệm
+- Health is an individual [responsibility]. || sau tính từ "individual" → danh từ
+- Each person is [responsible] for his or her own health. || be + adj + for → tính từ
+inform | inform (v) thông báo; information (n) thông tin; informed (adj) có hiểu biết, có thông tin; informative (adj) nhiều thông tin bổ ích
+- Food labels help people make [informed] choices. || đứng trước danh từ "choices" → tính từ (có hiểu biết)
+- The campaign gives useful [information] about healthy eating. || sau tính từ "useful" → danh từ (không đếm được)
+medicine | medicine (n) thuốc, y học; medical (adj) thuộc y tế; medically (adv) về mặt y tế
+- Everyone should have access to [medical] care. || đứng trước danh từ "care" → tính từ
+- Modern [medicine] has increased life expectancy. || sau tính từ "Modern", làm chủ ngữ → danh từ
+sugar | sugar (n) đường; sugary (adj) có nhiều đường
+- [Sugary] drinks are bad for children's teeth. || đứng trước danh từ "drinks" → tính từ
+- People should eat less [sugar]. || sau "less" (danh từ không đếm được) → danh từ
+@bank
+Phrase | public health | sức khỏe cộng đồng | Smoking is a serious threat to public health.
+Phrase | sugary drinks | đồ uống có đường | Some countries tax sugary drinks.
+Phrase | work together | chung tay, hợp tác | Families and schools should work together.
+Word | burden (n) | gánh nặng | Obesity puts a heavy burden on the healthcare system.
+Phrasal verb | give up | từ bỏ (thói quen) | He gave up smoking last year.
+Phrasal verb | work out | tập luyện | I work out three times a week.
+Phrasal verb | take up | bắt đầu (một môn thể thao, sở thích) | She took up swimming to stay healthy.
+Idiom | prevention is better than cure | phòng bệnh hơn chữa bệnh | As the saying goes, prevention is better than cure.
+@paragraph
+Nhiều người tin rằng sức khỏe chủ yếu là trách nhiệm cá nhân. || Many people believe that health is mainly an individual responsibility. | Many people believe health is mainly an individual responsibility. || individual responsibility || mainly = chủ yếu
+Thật vậy, mỗi người có thể duy trì lối sống lành mạnh bằng cách tập thể dục thường xuyên. || Indeed, everyone can maintain a healthy lifestyle by taking regular exercise. | Indeed, people can maintain a healthy lifestyle by taking regular exercise. || maintain a healthy lifestyle || by + V-ing = bằng cách
+Họ cũng nên có một chế độ ăn cân bằng và cắt giảm đồ ăn vặt. || They should also have a balanced diet and cut down on junk food. | They should also eat a balanced diet and cut down on junk food. || cut down on || a balanced diet · junk food
+Tuy nhiên, chính phủ cũng đóng vai trò quan trọng trong việc nâng cao sức khỏe cộng đồng. || However, governments also play an important role in improving public health. | However, the government also plays an important role in improving public health. || public health || play a role in + V-ing · improve = nâng cao
+Ví dụ, họ có thể tăng thuế với các sản phẩm không lành mạnh như thuốc lá và đồ uống có đường. || For example, they can raise taxes on unhealthy products such as cigarettes and sugary drinks. | For example, they can raise taxes on unhealthy products like cigarettes and sugary drinks. || raise taxes on unhealthy products || cigarettes = thuốc lá · word form: sugary (adj)
+Các chiến dịch y tế cộng đồng cũng giúp mọi người đưa ra lựa chọn có hiểu biết. || Public health campaigns also help people make informed choices. | Public health campaigns also help people to make informed choices. || make informed choices || help sb + V
+Nếu không có những biện pháp phòng ngừa này, tỷ lệ béo phì sẽ tiếp tục tăng. || Without these preventive measures, the obesity rate will continue to rise. | Without these preventive measures, the obesity rate will keep rising. || preventive measures || without = nếu không có · continue to rise = tiếp tục tăng
+Vì vậy, cả cá nhân và chính phủ nên chung tay để giảm gánh nặng cho hệ thống y tế. || Therefore, both individuals and governments should work together to reduce the burden on the healthcare system. || the healthcare system || both … and … = cả … và … · the burden on = gánh nặng cho
+
+=== 5 | work | Work & Career
+prompt: Some people think a high salary is the most important thing in a job. Others think job satisfaction matters more. Write one body paragraph giving your opinion.
+prompt_vi: Có người cho rằng lương cao là điều quan trọng nhất của một công việc, người khác cho rằng sự hài lòng trong công việc quan trọng hơn. Viết một đoạn thân bài nêu quan điểm của bạn.
+own: Is it better to work for a company or to be self-employed? Write one paragraph (120–150 words) giving your opinion.
+own_vi: Làm cho một công ty hay tự kinh doanh thì tốt hơn? Viết một đoạn (120–150 từ) nêu quan điểm của bạn.
+@forms
+satisfy | satisfy (v) làm hài lòng; satisfaction (n) sự hài lòng; satisfied (adj) hài lòng (người); satisfying (adj) đem lại sự hài lòng (việc)
+- Job [satisfaction] is more important than money. || sau "Job", làm chủ ngữ → danh từ
+- Workers who are [satisfied] with their jobs work harder. || người cảm thấy hài lòng → satisfied with
+employ | employ (v) thuê, tuyển; employment (n) việc làm; unemployment (n) sự thất nghiệp; unemployed (adj) thất nghiệp
+- The [unemployment] rate is rising among young people. || sau "The", trước "rate" (the unemployment rate) → danh từ
+- Many graduates remain [unemployed] for months. || sau "remain" → tính từ
+achieve | achieve (v) đạt được; achievement (n) thành tựu; achievable (adj) có thể đạt được
+- A good job gives people a sense of [achievement]. || sau giới từ "of" → danh từ
+- Set goals that are [achievable]. || sau "are" → tính từ
+stress | stress (n) sự căng thẳng; stressful (adj) gây căng thẳng; stressed (adj) bị căng thẳng (người)
+- Nurses work in a very [stressful] environment. || môi trường gây căng thẳng, trước danh từ → stressful
+- Many office workers feel [stressed] at the end of the week. || người cảm thấy căng thẳng → stressed
+flexible | flexible (adj) linh hoạt; flexibility (n) sự linh hoạt; flexibly (adv) một cách linh hoạt
+- Parents need [flexible] working hours. || đứng trước danh từ → tính từ
+- Working from home offers more [flexibility]. || sau "more", làm tân ngữ → danh từ
+understand | understand (v) hiểu; understandable (adj) dễ hiểu, có thể thông cảm; understanding (n) sự hiểu biết
+- It is [understandable] that young people want a high salary. || It is + adj + that → tính từ
+- This job requires a good [understanding] of computers. || sau "a good", trước "of" → danh từ
+enjoy | enjoy (v) thích; enjoyment (n) niềm vui; enjoyable (adj) thú vị
+- A good job should offer both money and [enjoyment]. || sau "both money and", làm tân ngữ → danh từ
+- Working with friendly colleagues is [enjoyable]. || sau "is" → tính từ
+reason | reason (n) lý do; reasonable (adj) hợp lý, phải chăng; reasonably (adv) khá, một cách hợp lý
+- Everyone deserves a [reasonable] income. || sau "a", trước danh từ "income" → tính từ
+- The job is [reasonably] well paid. || bổ nghĩa cho cụm "well paid" → trạng từ
+@bank
+Word | factor (n) | yếu tố | Salary is an important factor when choosing a job.
+Phrase | support one's family | chu cấp cho gia đình | Everyone needs money to support their family.
+Word | value (v) | coi trọng | Young people value work-life balance.
+Word | income (n) | thu nhập | A reasonable income is enough for a good life.
+Phrasal verb | burn out | kiệt sức | Long working hours make many people burn out.
+Phrasal verb | take on | đảm nhận (việc, trách nhiệm) | She took on more responsibility at work.
+Phrasal verb | set up | thành lập (công ty) | He set up his own company at 25.
+Phrasal verb | give up | từ bỏ | She gave up her job to travel.
+Idiom | work around the clock | làm việc suốt ngày đêm | Many young doctors work around the clock.
+@paragraph
+Một số người cho rằng mức lương cao là yếu tố quan trọng nhất khi chọn việc. || Some people argue that a high salary is the most important factor when choosing a job. | Some people think that a high salary is the most important factor when choosing a job. || a high salary || factor = yếu tố · when + V-ing
+Điều này dễ hiểu vì ai cũng cần tiền để chu cấp cho gia đình. || This is understandable because everyone needs money to support their family. | This is understandable because everybody needs money to support their family. || understandable || word form: understand → understandable · everyone needs (+s)
+Tuy nhiên, tôi tin rằng sự hài lòng trong công việc quan trọng hơn. || However, I believe that job satisfaction is more important. | However, I believe job satisfaction is more important. || job satisfaction || more important = quan trọng hơn
+Những người yêu thích công việc của mình thường có cảm giác thành tựu mỗi ngày. || People who enjoy their work often have a sense of achievement every day. | People who love their jobs often have a sense of achievement every day. || a sense of achievement || who + V · often đứng trước động từ thường
+Ngược lại, giờ làm việc kéo dài trong một môi trường làm việc căng thẳng có thể khiến nhân viên kiệt sức. || In contrast, long working hours in a stressful working environment can make employees burn out. | On the other hand, long working hours in a stressful working environment can make employees burn out. || long working hours || make sb + V · burn out = kiệt sức
+Ngoài ra, nhiều người trẻ coi trọng triển vọng nghề nghiệp và sự cân bằng giữa công việc và cuộc sống. || In addition, many young people value career prospects and work-life balance. | Moreover, many young people value career prospects and work-life balance. || career prospects || value (v) = coi trọng · work-life balance
+Ví dụ, một công việc có giờ làm linh hoạt cho phép cha mẹ dành thời gian cho con cái. || For example, a job with flexible working hours allows parents to spend time with their children. | For example, a job with flexible working hours allows parents to spend more time with their children. || flexible working hours || allow sb to V
+Tóm lại, một công việc tốt nên mang lại cả thu nhập hợp lý lẫn niềm vui. || In conclusion, a good job should offer both a reasonable income and enjoyment. | In conclusion, a good job should provide both a reasonable income and enjoyment. || enjoyment || both … and … · word form: reasonable (adj), enjoyment (n)
+
+=== 6 | crime | Crime & Law
+prompt: Some people think that putting criminals in prison is the best way to reduce crime. Write one body paragraph explaining why other methods are also needed.
+prompt_vi: Có người cho rằng bỏ tù tội phạm là cách tốt nhất để giảm tội phạm. Viết một đoạn thân bài giải thích vì sao cần cả những biện pháp khác.
+own: Should young people who commit minor crimes be sent to prison or do community service? Write one paragraph (120–150 words).
+own_vi: Thanh thiếu niên phạm tội nhẹ nên bị bỏ tù hay làm lao động công ích? Viết một đoạn (120–150 từ).
+@forms
+crime | crime (n) tội phạm, tội ác; criminal (n/adj) kẻ phạm tội, thuộc tội phạm
+- Most [criminals] come from poor families. || sau "Most", làm chủ ngữ số nhiều chỉ người → danh từ (criminals)
+- A [criminal] record makes it hard to find a job. || đứng trước danh từ "record" → tính từ
+offend | offend (v) phạm tội, xúc phạm; offender (n) người phạm tội; offence (n) hành vi phạm tội
+- Young [offenders] should get a second chance. || sau tính từ "Young", chỉ người, số nhiều → danh từ
+- Stealing a bike is a minor [offence]. || sau tính từ "minor" → danh từ chỉ hành vi
+punish | punish (v) trừng phạt; punishment (n) hình phạt
+- Harsh [punishment] does not always stop crime. || sau tính từ "Harsh", làm chủ ngữ → danh từ
+- Parents should not [punish] children too harshly. || sau "should not" → động từ nguyên mẫu
+prison | prison (n) nhà tù; prisoner (n) tù nhân; imprison (v) bỏ tù; imprisonment (n) sự giam giữ
+- Many [prisoners] reoffend after they are released. || người, làm chủ ngữ số nhiều → danh từ chỉ người
+- Life [imprisonment] is used instead of the death penalty in many countries. || sau "Life" (tù chung thân) → danh từ
+violence | violence (n) bạo lực; violent (adj) bạo lực; violently (adv) một cách bạo lực
+- [Violent] crime has fallen in many cities. || đứng trước danh từ "crime" → tính từ
+- Children who watch [violence] on TV may become aggressive. || sau động từ "watch", làm tân ngữ → danh từ
+legal | legal (adj) hợp pháp, thuộc pháp luật; illegal (adj) bất hợp pháp; legally (adv) một cách hợp pháp
+- Selling drugs is [illegal] in most countries. || sau "is", nghĩa phủ định → tính từ (illegal)
+- The [legal] system should treat everyone equally. || đứng trước danh từ "system" → tính từ
+poor | poor (adj) nghèo; poverty (n) sự nghèo đói
+- [Poverty] is one of the root causes of crime. || làm chủ ngữ → danh từ
+- Children from [poor] families need more support. || đứng trước danh từ "families" → tính từ
+equal | equal (adj) bình đẳng; equality (n) sự bình đẳng; inequality (n) sự bất bình đẳng; equally (adv) một cách bình đẳng
+- Social [inequality] can lead to crime. || sau "Social", nghĩa tiêu cực → danh từ (inequality)
+- The law should treat rich and poor people [equally]. || bổ nghĩa cho động từ "treat" → trạng từ
+@bank
+Word | offender (n) | người phạm tội | Many offenders cannot find jobs after prison.
+Phrase | lead an honest life | sống lương thiện | Education helps prisoners lead an honest life.
+Phrase | a second chance | cơ hội thứ hai | Young offenders deserve a second chance.
+Word | poverty (n) | nghèo đói | Poverty pushes some people into crime.
+Phrasal verb | turn to crime | sa vào con đường phạm tội | Some jobless young people turn to crime.
+Phrasal verb | get away with | thoát tội, không bị phạt | Criminals should not get away with their crimes.
+Phrasal verb | break into | đột nhập | Thieves broke into the shop last night.
+Phrasal verb | lock up | nhốt, bỏ tù | Locking up every offender is very expensive.
+Idiom | a vicious circle | vòng luẩn quẩn | Poverty and crime create a vicious circle.
+@paragraph
+Nhiều người tin rằng hình phạt nặng hơn là cách tốt nhất để giảm tỷ lệ tội phạm. || Many people believe that harsher penalties are the best way to reduce the crime rate. | Many people believe harsher penalties are the best way to reduce the crime rate. || the crime rate || harsher penalties = hình phạt nặng hơn · the best way to V
+Tuy nhiên, tôi cho rằng chỉ bỏ tù thôi là không đủ. || However, I would argue that prison alone is not enough. | However, I would argue that prison alone isn't enough. | However, I think that prison alone is not enough. || prison || alone = chỉ … thôi · I would argue that
+Nhiều người phạm tội tái phạm ngay sau khi chấp hành án tù. || Many offenders reoffend soon after they serve a prison sentence. | Many offenders reoffend soon after serving a prison sentence. || serve a prison sentence || offenders = người phạm tội · soon after = ngay sau khi
+Điều này là vì có tiền án khiến họ rất khó tìm việc. || This is because having a criminal record makes it very difficult for them to find a job. | This is because having a criminal record makes it very hard for them to find a job. || a criminal record || make it difficult for sb to V
+Vì vậy, chính phủ nên cải tạo người phạm tội thông qua giáo dục và đào tạo nghề. || Therefore, governments should rehabilitate offenders through education and vocational training. || rehabilitate offenders || through = thông qua · vocational training (tuần 1)
+Điều này giúp họ tái hòa nhập cộng đồng và sống lương thiện. || This helps them reintegrate into society and lead an honest life. | This helps them to reintegrate into society and lead an honest life. || reintegrate into society || lead an honest life = sống lương thiện
+Hơn nữa, chúng ta cần giải quyết nguyên nhân gốc rễ của tội phạm, như nghèo đói và bất bình đẳng xã hội. || Moreover, we need to tackle the root causes of crime, such as poverty and social inequality. | Furthermore, we need to tackle the root causes of crime, such as poverty and social inequality. || the root causes of crime || tackle = giải quyết · poverty · social inequality
+Ví dụ, các câu lạc bộ thể thao có thể giữ thanh thiếu niên tránh xa đường phố. || For example, sports clubs can keep young people off the streets. | For instance, sports clubs can keep young people off the streets. || keep young people off the streets || sports clubs = câu lạc bộ thể thao
+
+=== 7 | government | Government & Society
+prompt: Some people think governments should spend money on public services rather than on the arts. Write one body paragraph giving your opinion.
+prompt_vi: Có người cho rằng chính phủ nên chi tiền cho dịch vụ công thay vì nghệ thuật. Viết một đoạn thân bài nêu quan điểm của bạn.
+own: Some people think governments should provide free housing for poor people. Do you agree? Write one paragraph (120–150 words).
+own_vi: Có người cho rằng chính phủ nên cung cấp nhà ở miễn phí cho người nghèo. Bạn có đồng ý không? Viết một đoạn (120–150 từ).
+@forms
+govern | govern (v) cai quản; government (n) chính phủ; governmental (adj) thuộc chính phủ
+- The [government] should build more schools. || sau "The", làm chủ ngữ → danh từ
+- Many charities work with [governmental] organisations. || đứng trước danh từ "organisations" → tính từ
+afford | afford (v) có đủ tiền; affordable (adj) giá phải chăng; affordability (n) khả năng chi trả
+- Young couples cannot [afford] to buy a house. || sau "cannot" → động từ nguyên mẫu
+- The city needs more [affordable] housing. || đứng trước danh từ "housing" → tính từ
+priority | priority (n) sự ưu tiên; prioritise (v) ưu tiên; prior (adj) trước
+- Health care should be a top [priority]. || sau "a top" → danh từ
+- Governments must [prioritise] education and health. || sau "must" → động từ nguyên mẫu
+vulnerable | vulnerable (adj) dễ bị tổn thương; vulnerability (n) sự dễ bị tổn thương
+- The elderly are one of the most [vulnerable] groups. || "the most + adj" đứng trước danh từ → tính từ
+- Poor children show great [vulnerability] in a crisis. || sau tính từ "great" → danh từ
+strong | strong (adj) mạnh; strength (n) sức mạnh; strengthen (v) củng cố; strongly (adv) mạnh mẽ
+- Festivals help to [strengthen] social cohesion. || sau "help to" → động từ (làm cho mạnh hơn)
+- I [strongly] believe that education should be free. || bổ nghĩa cho động từ "believe" → trạng từ
+fund | fund (n/v) quỹ, tài trợ; funding (n) nguồn tài trợ; underfunded (adj) thiếu kinh phí
+- Many rural schools are [underfunded]. || sau "are", nghĩa là thiếu tiền → tính từ
+- Museums need more [funding] from the state. || sau "more", làm tân ngữ → danh từ
+important | important (adj) quan trọng; importance (n) tầm quan trọng; unimportant (adj) không quan trọng
+- This does not mean that the arts are [unimportant]. || sau "are", nghĩa phủ định → tính từ
+- People should understand the [importance] of public services. || sau "the", trước "of" → danh từ
+benefit | benefit (n/v) lợi ích, có lợi; beneficial (adj) có lợi
+- Public parks are [beneficial] to everyone. || sau "are", trước "to" → tính từ (beneficial to)
+- Free health care would [benefit] poor families. || sau "would" → động từ nguyên mẫu
+@bank
+Phrase | a limited budget | ngân sách hạn chế | Governments have a limited budget.
+Word | ensure (v) | đảm bảo | Free schools ensure that every child can study.
+Phrase | strengthen social cohesion | tăng cường gắn kết xã hội | Sports events strengthen social cohesion.
+Phrasal verb | cut back on | cắt giảm (chi tiêu) | The government cut back on spending for the arts.
+Phrasal verb | set aside | dành riêng ra (tiền) | Cities should set aside money for parks.
+Phrasal verb | pay for | chi trả cho | Taxpayers pay for public services.
+Phrasal verb | look after | chăm sóc | The state should look after vulnerable people.
+Idiom | a drop in the ocean | muối bỏ bể | The money for the arts is a drop in the ocean.
+@paragraph
+Chính phủ có ngân sách hạn chế, vì vậy họ phải quyết định đâu là ưu tiên hàng đầu. || Governments have a limited budget, so they must decide what the top priority is. | Governments have a limited budget, so they have to decide what the top priority is. || top priority || a limited budget = ngân sách hạn chế
+Theo tôi, trước hết họ nên phân bổ ngân sách cho các dịch vụ công. || In my opinion, they should allocate funds to public services first. | In my view, they should allocate funds to public services first. | In my opinion, they should first allocate funds to public services. || allocate funds to || first = trước hết
+Ví dụ, bệnh viện và trường học cần được nhà nước tài trợ. || For example, hospitals and schools need to be funded by the state. | For instance, hospitals and schools need to be funded by the state. || be funded by the state || need to be + V3 (bị động)
+Điều này đảm bảo rằng các nhóm dễ bị tổn thương cũng có cơ hội bình đẳng. || This ensures that vulnerable groups also have equal opportunities. | This ensures that vulnerable groups have equal opportunities too. || vulnerable groups || ensure that = đảm bảo rằng · equal opportunities
+Ngoài ra, nhà ở giá phải chăng có thể giảm tình trạng vô gia cư ở các thành phố lớn. || In addition, affordable housing can reduce homelessness in big cities. | Moreover, affordable housing can reduce homelessness in big cities. || affordable housing || homelessness = tình trạng vô gia cư
+Tuy nhiên, điều đó không có nghĩa là nghệ thuật không quan trọng. || However, this does not mean that the arts are unimportant. | However, this doesn't mean that the arts are unimportant. | However, this does not mean that the arts are not important. || the arts || the arts (số nhiều) + are · word form: unimportant
+Bảo tàng và nhà hát giúp tăng cường sự gắn kết xã hội. || Museums and theatres help to strengthen social cohesion. | Museums and theatres help strengthen social cohesion. | Museums and theaters help strengthen social cohesion. || social cohesion || word form: strong → strengthen (v)
+Vì vậy, chính phủ nên dành phần lớn tiền thuế của người dân cho dịch vụ công và một phần nhỏ cho nghệ thuật. || Therefore, governments should spend most taxpayers' money on public services and a small part on the arts. | Therefore, governments should spend most of the taxpayers' money on public services and a small part on the arts. || taxpayers' money || spend money on = chi tiền cho
+
+=== 8 | economy | Economy & Business
+prompt: In a consumer society, people buy more and more goods. Do the advantages of this outweigh the disadvantages? Write one body paragraph.
+prompt_vi: Trong xã hội tiêu dùng, con người mua ngày càng nhiều hàng hóa. Lợi ích của điều này có lớn hơn bất lợi không? Viết một đoạn thân bài.
+own: Some people think it is better to save money for the future than to spend it now. Do you agree? Write one paragraph (120–150 words).
+own_vi: Có người cho rằng tiết kiệm tiền cho tương lai tốt hơn là tiêu ngay bây giờ. Bạn có đồng ý không? Viết một đoạn (120–150 từ).
+@forms
+economy | economy (n) nền kinh tế; economic (adj) thuộc kinh tế; economical (adj) tiết kiệm; economically (adv) về mặt kinh tế
+- [Economic] growth creates many new jobs. || đứng trước danh từ "growth", nghĩa "thuộc kinh tế" → economic
+- Small cars are more [economical] than big ones. || nghĩa "tiết kiệm (xăng, tiền)" → economical
+consume | consume (v) tiêu thụ; consumer (n) người tiêu dùng; consumption (n) sự tiêu thụ
+- [Consumers] are buying more products online. || người, làm chủ ngữ số nhiều → danh từ chỉ người
+- We should [consume] less and recycle more. || sau "should" → động từ nguyên mẫu
+produce | produce (v) sản xuất; product (n) sản phẩm; production (n) sự sản xuất
+- Cheap [products] often break easily. || sau tính từ "Cheap", làm chủ ngữ số nhiều → danh từ (sản phẩm)
+- Factory [production] has increased by 10%. || sau "Factory", nghĩa "sự sản xuất" → danh từ
+profit | profit (n) lợi nhuận; profitable (adj) có lãi; profitably (adv) có lãi
+- Online shops are very [profitable]. || sau "are very" → tính từ
+- Companies want to make a [profit]. || sau "make a" → danh từ
+finance | finance (n) tài chính; financial (adj) thuộc tài chính; financially (adv) về mặt tài chính
+- Many students face a [financial] burden after university. || đứng trước danh từ "burden" → tính từ
+- Young people want to be [financially] independent. || bổ nghĩa cho tính từ "independent" → trạng từ
+grow | grow (v) tăng trưởng; growth (n) sự tăng trưởng; growing (adj) ngày càng tăng
+- Economic [growth] has improved living standards. || sau "Economic", làm chủ ngữ → danh từ
+- A [growing] number of people shop online. || "a + adj + number of" → tính từ (ngày càng tăng)
+invest | invest (v) đầu tư; investment (n) khoản đầu tư; investor (n) nhà đầu tư
+- Foreign [investment] creates jobs. || sau "Foreign", làm chủ ngữ → danh từ (khoản đầu tư)
+- [Investors] are attracted by cheap labour. || người, làm chủ ngữ số nhiều → danh từ chỉ người
+wealth | wealth (n) của cải, sự giàu có; wealthy (adj) giàu có
+- Material [wealth] does not always bring happiness. || sau "Material", làm chủ ngữ → danh từ
+- [Wealthy] people should pay higher taxes. || đứng trước danh từ "people" → tính từ
+@bank
+Word | goods (n) | hàng hóa | People buy more goods than ever before.
+Phrase | developing countries | các nước đang phát triển | Foreign investment helps developing countries.
+Phrase | than ever before | hơn bao giờ hết | People shop online more than ever before.
+Phrase | create jobs | tạo việc làm | New factories create jobs for local people.
+Phrasal verb | pay off | trả hết (nợ) | It took him ten years to pay off his loan.
+Phrasal verb | run out of | hết (tiền) | Many people run out of money before payday.
+Phrasal verb | take out a loan | vay tiền | They took out a loan to buy a house.
+Idiom | tighten one's belt | thắt lưng buộc bụng | During a crisis, families have to tighten their belts.
+@paragraph
+Trong một xã hội tiêu dùng, mọi người mua nhiều hàng hóa hơn bao giờ hết. || In a consumer society, people buy more goods than ever before. | In a consumer society, people are buying more goods than ever before. || a consumer society || goods = hàng hóa · than ever before
+Một mặt, nhu cầu tiêu dùng cao thúc đẩy nền kinh tế. || On the one hand, high consumer demand boosts the economy. || boost the economy || on the one hand = một mặt · consumer demand
+Các doanh nghiệp có thể kiếm lợi nhuận và tạo việc làm cho người dân địa phương. || Businesses can make a profit and create jobs for local people. | Companies can make a profit and create jobs for local people. || make a profit || create jobs = tạo việc làm
+Điều này giúp nâng cao mức sống ở nhiều nước đang phát triển. || This helps to raise living standards in many developing countries. | This helps raise living standards in many developing countries. || raise living standards || developing countries = nước đang phát triển
+Mặt khác, nhiều người tiêu xài quá khả năng và gặp gánh nặng tài chính. || On the other hand, many people live beyond their means and face a financial burden. | On the other hand, many people live beyond their means and have a financial burden. || live beyond one's means || one's → their · face = gặp phải
+Họ thường không tiết kiệm tiền cho tương lai. || They often do not save money for the future. | They often don't save money for the future. || save money for the future || often đứng trước "do not"? → They often do not …
+Hơn nữa, tăng trưởng kinh tế đôi khi đạt được bằng cái giá là môi trường. || Moreover, economic growth is sometimes achieved at the expense of the environment. | Furthermore, economic growth is sometimes achieved at the expense of the environment. || at the expense of || bị động: is achieved · economic growth
+Vì vậy, tôi cho rằng chúng ta nên tiêu dùng có trách nhiệm hơn. || Therefore, I would argue that we should consume more responsibly. | Therefore, I think that we should consume more responsibly. || responsibly || word form: consume (v) · responsibly (adv) bổ nghĩa cho động từ
+
+=== 9 | media | Media & Advertising
+prompt: Advertising encourages people to buy things they do not really need. Do you agree? Write one body paragraph.
+prompt_vi: Quảng cáo khuyến khích con người mua những thứ họ không thực sự cần. Bạn có đồng ý không? Viết một đoạn thân bài.
+own: Some people believe social media has a negative influence on young people. Do you agree? Write one paragraph (120–150 words).
+own_vi: Có người cho rằng mạng xã hội ảnh hưởng tiêu cực đến giới trẻ. Bạn có đồng ý không? Viết một đoạn (120–150 từ).
+@forms
+advertise | advertise (v) quảng cáo; advertisement / advert (n) mẩu quảng cáo; advertising (n) ngành/hoạt động quảng cáo; advertiser (n) nhà quảng cáo
+- Companies spend millions to [advertise] their products. || sau "to" → động từ nguyên mẫu
+- [Advertisers] often target young consumers. || người/công ty quảng cáo, làm chủ ngữ số nhiều → danh từ chỉ người
+persuade | persuade (v) thuyết phục; persuasion (n) sự thuyết phục; persuasive (adj) có sức thuyết phục
+- TV adverts are very [persuasive]. || sau "are very" → tính từ
+- Adverts [persuade] children to ask for toys. || sau chủ ngữ → động từ (persuade sb to V)
+influence | influence (n/v) ảnh hưởng, gây ảnh hưởng; influential (adj) có ảnh hưởng
+- Celebrities are very [influential] on social media. || sau "are very" → tính từ
+- Advertising has a strong [influence] on teenagers. || sau "a strong", trước "on" → danh từ
+mislead | mislead (v) làm hiểu lầm; misleading (adj) gây hiểu lầm
+- Some adverts [mislead] consumers about the price. || sau chủ ngữ → động từ
+- [Misleading] advertisements should be banned. || đứng trước danh từ → tính từ (V-ing)
+entertain | entertain (v) giải trí; entertainment (n) sự giải trí; entertaining (adj) thú vị, mang tính giải trí
+- Television is a cheap source of [entertainment]. || sau giới từ "of" → danh từ
+- Some adverts are funny and [entertaining]. || sau "funny and" (song song với tính từ) → tính từ
+private | private (adj) riêng tư; privacy (n) quyền riêng tư; privately (adv) một cách riêng tư
+- Journalists should not invade people's [privacy]. || sau sở hữu cách "people's" → danh từ
+- Celebrities also need a [private] life. || đứng trước danh từ "life" → tính từ
+real | real (adj) thật; reality (n) thực tế; realistic (adj) thực tế; unrealistic (adj) phi thực tế
+- Adverts show [unrealistic] body images. || nghĩa "phi thực tế", trước danh từ → tính từ
+- In [reality], most products are not as good as the adverts say. || sau "In" (in reality = trên thực tế) → danh từ
+commerce | commerce (n) thương mại; commercial (adj/n) mang tính thương mại, mẩu quảng cáo; commercially (adv) về mặt thương mại
+- [Commercial] television depends on advertising money. || đứng trước danh từ "television" → tính từ
+- The film was [commercially] successful. || bổ nghĩa cho tính từ "successful" → trạng từ
+@bank
+Phrase | easily influenced | dễ bị ảnh hưởng | Children are easily influenced by adverts.
+Phrase | false information | thông tin sai | Some adverts give false information.
+Word | expensive (adj) | đắt | Teenagers want expensive brands.
+Phrasal verb | fall for | tin vào (lời quảng cáo), bị lừa | Many people fall for misleading adverts.
+Phrasal verb | show off | khoe khoang | Some teenagers buy brands to show off.
+Phrasal verb | give in to | chiều theo, đầu hàng | Parents often give in to their children's demands.
+Idiom | keep up with the Joneses | chạy đua theo hàng xóm | People buy new cars just to keep up with the Joneses.
+@paragraph
+Ngày nay, chúng ta bị dội bom quảng cáo ở khắp mọi nơi. || Nowadays, we are bombarded with adverts everywhere. | Today, we are bombarded with adverts everywhere. || be bombarded with adverts || bị động: are bombarded with
+Các chiến dịch quảng cáo được thiết kế để thuyết phục mọi người mua nhiều hơn. || Advertising campaigns are designed to persuade people to buy more. || persuade people to buy || are designed to = được thiết kế để
+Nhiều quảng cáo nhắm đến người tiêu dùng trẻ, những người dễ bị ảnh hưởng. || Many adverts target young consumers, who are easily influenced. | Many advertisements target young consumers, who are easily influenced. || target young consumers || , who + V (mệnh đề quan hệ) · easily influenced
+Ví dụ, việc người nổi tiếng quảng bá sản phẩm khiến thanh thiếu niên muốn mua đồ đắt tiền. || For example, celebrity endorsements make teenagers want to buy expensive products. | For example, celebrity endorsements make teenagers want to buy expensive things. || celebrity endorsements || make sb + V
+Điều này dẫn đến mua sắm bốc đồng và một xã hội vật chất. || This leads to impulse buying and a materialistic society. || impulse buying || lead to = dẫn đến
+Hơn nữa, một số quảng cáo gây hiểu lầm đưa ra thông tin sai về sản phẩm. || Moreover, some misleading advertisements give false information about products. | Furthermore, some misleading advertisements give false information about products. || misleading advertisements || false information = thông tin sai
+Vì vậy, chính phủ nên kiểm soát nội dung quảng cáo, đặc biệt là quảng cáo trực tuyến. || Therefore, governments should regulate the content of adverts, especially online advertising. | Therefore, the government should regulate the content of adverts, especially online advertising. || regulate the content || especially = đặc biệt là · online advertising
+Khi đó, người tiêu dùng có thể đưa ra quyết định có hiểu biết. || Then consumers can make an informed decision. | As a result, consumers can make an informed decision. || an informed decision || make a decision
+
+=== 10 | globalisation | Globalisation & Culture
+prompt: In a globalised world, it is important to preserve local traditions. Do you agree? Write one body paragraph.
+prompt_vi: Trong một thế giới toàn cầu hóa, việc gìn giữ truyền thống địa phương là quan trọng. Bạn có đồng ý không? Viết một đoạn thân bài.
+own: More and more people move to other countries to work. What are the advantages and disadvantages of this? Write one paragraph (120–150 words).
+own_vi: Ngày càng nhiều người ra nước ngoài làm việc. Ưu điểm và nhược điểm của điều này là gì? Viết một đoạn (120–150 từ).
+@forms
+culture | culture (n) văn hóa; cultural (adj) thuộc văn hóa; culturally (adv) về mặt văn hóa
+- Festivals are part of our [cultural] identity. || đứng trước danh từ "identity" → tính từ
+- Vietnam is a [culturally] rich country. || bổ nghĩa cho tính từ "rich" → trạng từ
+tradition | tradition (n) truyền thống; traditional (adj) truyền thống; traditionally (adv) theo truyền thống
+- [Traditional] customs are disappearing in big cities. || đứng trước danh từ "customs" → tính từ
+- [Traditionally], families eat together at Tet. || đứng đầu câu, bổ nghĩa cả câu → trạng từ
+globe | globe (n) quả địa cầu; global (adj) toàn cầu; globalisation (n) toàn cầu hóa; globally (adv) trên toàn cầu
+- [Globalisation] has made the world smaller. || làm chủ ngữ → danh từ
+- Coca-Cola is a [global] brand. || sau "a", trước danh từ "brand" → tính từ
+nation | nation (n) quốc gia; national (adj) thuộc quốc gia; international (adj) quốc tế; nationality (n) quốc tịch
+- English is an [international] language. || nghĩa "quốc tế", trước danh từ → tính từ
+- People feel [national] pride when their team wins. || đứng trước danh từ "pride" → tính từ
+diverse | diverse (adj) đa dạng; diversity (n) sự đa dạng; diversify (v) đa dạng hóa
+- London is a very [diverse] city. || sau "a very", trước danh từ → tính từ
+- We should respect cultural [diversity]. || sau tính từ "cultural" → danh từ
+similar | similar (adj) giống nhau; similarity (n) điểm giống nhau; similarly (adv) tương tự
+- Cities around the world look more and more [similar]. || sau "look more and more" → tính từ
+- There are many [similarities] between Vietnamese and Chinese culture. || sau "many", số nhiều → danh từ
+preserve | preserve (v) gìn giữ; preservation (n) sự gìn giữ
+- We must [preserve] historic buildings. || sau "must" → động từ nguyên mẫu
+- The [preservation] of minority languages is important. || sau "The", trước "of" → danh từ
+tolerate | tolerate (v) chịu đựng, chấp nhận; tolerance (n) sự khoan dung; tolerant (adj) khoan dung
+- Travelling makes people more [tolerant] of other cultures. || sau "more", trước "of" → tính từ
+- Schools should teach [tolerance] and respect. || sau động từ "teach", làm tân ngữ → danh từ
+@bank
+Phrase | follow trends | chạy theo xu hướng | Many teenagers follow Western trends.
+Phrase | show little interest in | ít quan tâm đến | Young people show little interest in traditional music.
+Word | respect (v/n) | tôn trọng | We should respect other cultures.
+Phrasal verb | hand down | truyền lại (cho thế hệ sau) | Old stories are handed down from parents to children.
+Phrasal verb | die out | mai một, biến mất | Many minority languages are dying out.
+Phrasal verb | fit in | hòa nhập | Migrants often find it hard to fit in.
+Phrasal verb | look down on | coi thường | We should not look down on other cultures.
+Idiom | when in Rome, do as the Romans do | nhập gia tùy tục | Travellers should follow the rule "when in Rome, do as the Romans do".
+@paragraph
+Trong một thế giới kết nối, các nền văn hóa đang trở nên giống nhau hơn. || In an interconnected world, cultures are becoming more similar. | In an interconnected world, cultures are becoming more and more similar. || interconnected world || are becoming = đang trở nên · word form: similar (adj)
+Sự lan rộng của các thương hiệu toàn cầu là một ví dụ rõ ràng. || The spread of global brands is a clear example. | The spread of global brands is a good example. || the spread of global brands || a clear example = ví dụ rõ ràng
+Nhiều người trẻ chạy theo xu hướng phương Tây và ít quan tâm đến phong tục truyền thống. || Many young people follow Western trends and show little interest in traditional customs. || traditional customs || follow trends · show little interest in
+Nếu điều này tiếp diễn, chúng ta có thể đánh mất di sản văn hóa của mình. || If this continues, we may lose our cultural heritage. | If this continues, we might lose our cultural heritage. || lose one's cultural heritage || one's → our · điều kiện loại 1
+Theo tôi, gìn giữ truyền thống địa phương là rất quan trọng. || In my opinion, preserving local traditions is very important. | In my view, preserving local traditions is very important. || preserve local traditions || V-ing làm chủ ngữ + is
+Truyền thống mang lại cho con người cảm giác thuộc về và niềm tự hào dân tộc. || Traditions give people a sense of belonging and national pride. | Traditions give people a sense of belonging as well as national pride. || a sense of belonging || give sb sth · national pride
+Tuy nhiên, giao lưu văn hóa cũng có thể thúc đẩy sự hiểu biết lẫn nhau giữa các quốc gia. || However, cultural exchange can also promote mutual understanding between nations. | However, cultural exchange can also promote mutual understanding between countries. || promote mutual understanding || cultural exchange · between nations
+Vì vậy, chúng ta nên tôn trọng sự đa dạng văn hóa thay vì sao chép một nền văn hóa duy nhất. || Therefore, we should respect cultural diversity instead of copying a single culture. | Therefore, we should respect cultural diversity rather than copy a single culture. || cultural diversity || instead of + V-ing · a single culture
+
+=== 11 | urban | Urbanisation & Transport
+prompt: Traffic congestion is a serious problem in many big cities. What are the causes, and what can be done? Write one body paragraph.
+prompt_vi: Ùn tắc giao thông là vấn đề nghiêm trọng ở nhiều thành phố lớn. Nguyên nhân là gì và có thể làm gì? Viết một đoạn thân bài.
+own: More and more people move from the countryside to big cities. Why is this happening? Is it a positive or negative development? Write one paragraph (120–150 words).
+own_vi: Ngày càng nhiều người chuyển từ nông thôn lên thành phố lớn. Vì sao? Đây là xu hướng tích cực hay tiêu cực? Viết một đoạn (120–150 từ).
+@forms
+urban | urban (adj) thuộc đô thị; urbanisation (n) đô thị hóa; suburban (adj) thuộc ngoại ô
+- [Urbanisation] has made cities overcrowded. || làm chủ ngữ → danh từ
+- Many families move to [suburban] areas to find cheaper houses. || nghĩa "ngoại ô", trước danh từ → tính từ
+congest | congestion (n) sự tắc nghẽn; congested (adj) bị tắc nghẽn
+- The roads are very [congested] at rush hour. || sau "are very" → tính từ
+- Traffic [congestion] wastes a lot of time. || sau "Traffic", làm chủ ngữ → danh từ
+crowd | crowd (n) đám đông; crowded (adj) đông đúc; overcrowded (adj) quá đông; overcrowding (n) tình trạng quá tải
+- Buses in Hanoi are [overcrowded] in the morning. || sau "are", nghĩa "quá đông" → tính từ
+- [Overcrowding] is a problem in many schools. || làm chủ ngữ → danh từ
+transport | transport (n/v) giao thông, vận chuyển; transportation (n) sự vận chuyển
+- Public [transport] is cheap in this city. || sau "Public", làm chủ ngữ → danh từ (public transport)
+- Trains [transport] goods across the country. || sau chủ ngữ → động từ
+efficient | efficient (adj) hiệu quả; efficiency (n) sự hiệu quả; efficiently (adv) một cách hiệu quả; inefficient (adj) kém hiệu quả
+- The city needs an [efficient] metro system. || sau "an", trước danh từ → tính từ
+- The new system moves people more [efficiently]. || bổ nghĩa cho động từ "moves" → trạng từ
+safe | safe (adj) an toàn; safety (n) sự an toàn; safely (adv) một cách an toàn; unsafe (adj) không an toàn
+- Cycle lanes improve road [safety]. || sau "road", làm tân ngữ → danh từ
+- Children should be able to walk to school [safely]. || bổ nghĩa cho động từ "walk" → trạng từ
+convenient | convenient (adj) tiện lợi; convenience (n) sự tiện lợi; inconvenient (adj) bất tiện
+- Cars are more [convenient] than buses. || sau "more", trước "than" → tính từ
+- People choose cars for [convenience]. || sau giới từ "for" → danh từ
+improve | improve (v) cải thiện; improvement (n) sự cải thiện
+- Better roads [improve] the quality of life. || sau chủ ngữ → động từ
+- There has been a big [improvement] in public transport. || sau "a big" → danh từ
+@bank
+Phrase | the main cause | nguyên nhân chính | The main cause of traffic jams is private cars.
+Phrase | the growing number of | số lượng ngày càng tăng | The growing number of cars causes pollution.
+Word | measure (n) | biện pháp | This measure reduces traffic.
+Word | reliable (adj) | đáng tin cậy, đúng giờ | People use buses if they are reliable.
+Phrasal verb | get around | đi lại | It is easy to get around the city by metro.
+Phrasal verb | hold up | làm chậm, kẹt lại | We were held up in traffic for an hour.
+Phrasal verb | set off | khởi hành | Many people set off for work at 6 a.m.
+Idiom | bumper to bumper | xe nối đuôi nhau | At rush hour, cars are bumper to bumper.
+@paragraph
+Ùn tắc giao thông là một vấn đề nghiêm trọng ở hầu hết các thành phố lớn. || Traffic congestion is a serious problem in most big cities. | Traffic congestion is a serious problem in most large cities. || traffic congestion || most big cities = hầu hết các thành phố lớn
+Nguyên nhân chính là số lượng phương tiện cá nhân ngày càng tăng. || The main cause is the growing number of private vehicles. | The main reason is the growing number of private vehicles. || private vehicles || the main cause · the growing number of
+Vào giờ cao điểm, nhiều người mất hàng giờ để đi làm. || During rush hour, many people spend hours commuting to work. | At rush hour, many people spend hours commuting to work. || rush hour || spend time + V-ing · commute to work (tuần 5)
+Giải pháp đầu tiên là đầu tư vào cơ sở hạ tầng, đặc biệt là một hệ thống tàu điện ngầm hiệu quả. || The first solution is to invest in infrastructure, especially an efficient metro system. || invest in infrastructure || solution = giải pháp · an efficient metro system
+Nếu giao thông công cộng rẻ và đáng tin cậy, ít người sẽ lái xe hơn. || If public transport is cheap and reliable, fewer people will drive. || public transport || fewer people = ít người hơn · điều kiện loại 1
+Giải pháp thứ hai là áp dụng phí chống ùn tắc ở trung tâm thành phố. || The second solution is to introduce congestion charges in the city centre. | The second solution is to introduce congestion charges in the city center. || introduce congestion charges || the city centre = trung tâm thành phố
+Biện pháp này khuyến khích người dân không lái xe và giảm ô nhiễm tiếng ồn. || This measure discourages people from driving and reduces noise pollution. || discourage people from driving || measure = biện pháp · noise pollution
+Kết quả là, chất lượng cuộc sống ở các thành phố sẽ được cải thiện. || As a result, the quality of life in cities will improve. | As a result, the quality of life in cities will be improved. || the quality of life || as a result = kết quả là
+
+=== 12 | family | Family & Children
+prompt: Parents are the most important teachers of children. Do you agree? Write one body paragraph.
+prompt_vi: Cha mẹ là những người thầy quan trọng nhất của trẻ. Bạn có đồng ý không? Viết một đoạn thân bài.
+own: Is it better for children to grow up in an extended family or a nuclear family? Write one paragraph (120–150 words).
+own_vi: Trẻ lớn lên trong gia đình nhiều thế hệ hay gia đình hạt nhân thì tốt hơn? Viết một đoạn (120–150 từ).
+@forms
+parent | parent (n) cha/mẹ; parental (adj) thuộc cha mẹ; parenting (n) việc nuôi dạy con
+- [Parental] guidance is important for teenagers. || đứng trước danh từ "guidance" → tính từ
+- Good [parenting] takes time and patience. || sau tính từ "Good", làm chủ ngữ → danh từ
+child | child (n) đứa trẻ; childhood (n) tuổi thơ; childish (adj) trẻ con, ấu trĩ; childcare (n) việc trông trẻ
+- I had a happy [childhood] in the countryside. || sau "a happy" → danh từ (tuổi thơ)
+- Working parents need cheap [childcare]. || sau "cheap", nghĩa việc trông trẻ → danh từ
+depend | depend (v) phụ thuộc; dependent (adj) phụ thuộc; independent (adj) độc lập; independence (n) sự độc lập
+- Children should learn to be [independent]. || sau "to be", nghĩa "độc lập" → tính từ
+- Young children are [dependent] on their parents. || sau "are", trước "on" → tính từ (dependent on)
+discipline | discipline (n/v) kỷ luật; disciplined (adj) có kỷ luật
+- Parents need to [discipline] children when they behave badly. || sau "need to" → động từ nguyên mẫu
+- Sport helps children become more [disciplined]. || sau "become more" → tính từ
+honest | honest (adj) trung thực; honesty (n) sự trung thực; dishonest (adj) không trung thực
+- Parents should teach their children [honesty]. || sau "teach their children", làm tân ngữ thứ hai → danh từ
+- If parents are [honest], their children will copy them. || sau "are" → tính từ
+behave | behave (v) cư xử; behaviour (n) hành vi; well-behaved (adj) ngoan
+- Children copy their parents' [behaviour]. || sau sở hữu cách "parents'" → danh từ
+- [Well-behaved] children usually have strict parents. || đứng trước danh từ "children", nghĩa "ngoan" → tính từ ghép
+necessary | necessary (adj) cần thiết; necessity (n) sự cần thiết; unnecessary (adj) không cần thiết; necessarily (adv) nhất thiết
+- Parental guidance is still [necessary]. || sau "is still" → tính từ
+- Expensive toys are [unnecessary] for young children. || sau "are", nghĩa phủ định → tính từ
+young | young (adj) trẻ; youth (n) tuổi trẻ, thanh niên; youngster (n) người trẻ
+- Many [youngsters] spend too much time online. || sau "Many", chỉ người, số nhiều → danh từ
+- In my [youth], I lived with my grandparents. || sau "my" → danh từ (tuổi trẻ)
+@bank
+Phrase | from an early age | từ khi còn nhỏ | Children should learn good habits from an early age.
+Word | copy (v) | bắt chước | Young children copy what their parents do.
+Word | value (n) | giá trị | Parents pass on values to their children.
+Phrasal verb | bring up | nuôi dạy | Her grandparents brought her up.
+Phrasal verb | look after | chăm sóc | Grandparents often look after the children.
+Phrasal verb | grow up | lớn lên | I grew up in a small village.
+Phrasal verb | take after | giống (bố/mẹ) | He takes after his father.
+Phrasal verb | get on with | hòa hợp với | Teenagers often do not get on with their parents.
+Idiom | like father, like son | cha nào con nấy | Like father, like son: both of them love football.
+@paragraph
+Theo tôi, cha mẹ đóng vai trò quan trọng nhất trong việc nuôi dạy con cái. || In my opinion, parents play the most important role in bringing up children. | In my view, parents play the most important role in bringing up children. || bring up children || play a role in + V-ing
+Cha mẹ là những hình mẫu đầu tiên mà trẻ em bắt chước. || Parents are the first role models that children copy. | Parents are the first role models children copy. || role models || copy = bắt chước · that + mệnh đề
+Ví dụ, nếu cha mẹ trung thực và tốt bụng, con cái cũng sẽ học những giá trị này. || For example, if parents are honest and kind, their children will also learn these values. | For example, if parents are honest and kind, children will also learn these values. || honest || điều kiện loại 1 · these values = những giá trị này
+Vì vậy, cha mẹ nên gieo những giá trị tốt cho con từ khi còn nhỏ. || Therefore, parents should instil good values in their children from an early age. | Therefore, parents should instill good values in their children from an early age. || instil good values in || from an early age = từ khi còn nhỏ
+Tuy nhiên, ngày nay nhiều cha mẹ đi làm quá bận để dành thời gian chất lượng với con. || However, many working parents today are too busy to spend quality time with their children. | However, nowadays many working parents are too busy to spend quality time with their children. || spend quality time with || too + adj + to V = quá … để
+Họ thường gửi con đến các cơ sở chăm sóc trẻ. || They often send their children to childcare facilities. || childcare facilities || send sb to = gửi ai đến
+Điều này có thể tạo ra khoảng cách thế hệ giữa cha mẹ và con cái. || This can create a generation gap between parents and children. | This may create a generation gap between parents and children. || a generation gap || between … and …
+Vì vậy, sự hướng dẫn của cha mẹ vẫn rất cần thiết cho trẻ. || Therefore, parental guidance is still very necessary for children. | Therefore, parental guidance is still necessary for children. || parental guidance || word form: necessary (adj)
+
+=== 14 | life | Life & Lifestyle
+prompt: Modern life is becoming more and more stressful. What are the causes of this, and what can people do about it? Write one body paragraph.
+prompt_vi: Cuộc sống hiện đại ngày càng căng thẳng. Nguyên nhân là gì và mọi người có thể làm gì? Viết một đoạn thân bài.
+own: Some people think money is the key to happiness. Do you agree? Write one paragraph (120–150 words).
+own_vi: Có người cho rằng tiền là chìa khóa của hạnh phúc. Bạn có đồng ý không? Viết một đoạn (120–150 từ).
+@forms
+relax | relax (v) thư giãn; relaxation (n) sự thư giãn; relaxing (adj) làm thư giãn; relaxed (adj) cảm thấy thư giãn
+- Reading is a [relaxing] hobby. || hoạt động mang lại sự thư giãn, trước danh từ → relaxing
+- After a walk, I feel more [relaxed]. || người cảm thấy thư giãn → relaxed
+lonely | lonely (adj) cô đơn; loneliness (n) sự cô đơn; alone (adj/adv) một mình
+- Many old people suffer from [loneliness]. || sau giới từ "from" → danh từ
+- People who live [alone] may feel lonely. || sau động từ "live", nghĩa "một mình" → alone
+fulfil | fulfil (v) hoàn thành, thực hiện; fulfilment (n) sự mãn nguyện; fulfilling (adj) mang lại sự mãn nguyện
+- Teaching is a very [fulfilling] job. || sau "a very", trước danh từ → tính từ
+- Many people find personal [fulfilment] in helping others. || sau tính từ "personal" → danh từ
+possess | possess (v) sở hữu; possession (n) đồ sở hữu, của cải
+- Experiences are more valuable than [possessions]. || sau "than", làm danh từ số nhiều → danh từ
+- Very few people [possess] true happiness. || sau chủ ngữ → động từ
+balance | balance (n/v) sự cân bằng, cân bằng; balanced (adj) cân bằng; imbalance (n) sự mất cân bằng
+- It is hard to [balance] work and family life. || sau "to" → động từ
+- A [balanced] lifestyle includes work, rest and exercise. || sau "A", trước danh từ → tính từ
+simple | simple (adj) đơn giản; simplicity (n) sự giản dị; simplify (v) đơn giản hóa; simply (adv) chỉ, một cách đơn giản
+- Many people now prefer a life of [simplicity]. || sau giới từ "of" → danh từ
+- We should [simplify] our lives and buy less. || sau "should" → động từ nguyên mẫu
+purpose | purpose (n) mục đích; purposeful (adj) có mục đích
+- Volunteering gives people a sense of [purpose]. || sau giới từ "of" → danh từ
+- Retired people need [purposeful] activities. || đứng trước danh từ "activities" → tính từ
+active | active (adj) năng động; activity (n) hoạt động; actively (adv) tích cực; inactive (adj) không vận động
+- Leisure [activities] help people reduce stress. || sau "Leisure", làm chủ ngữ số nhiều → danh từ
+- Office workers are often physically [inactive]. || sau "physically", nghĩa phủ định → tính từ
+@bank
+Phrase | feel stressed | cảm thấy căng thẳng | Many students feel stressed before exams.
+Phrase | work long hours | làm việc nhiều giờ | Many people work long hours to earn more.
+Linking | besides | bên cạnh đó | Besides, a simple lifestyle saves money.
+Phrasal verb | slow down | sống chậm lại | People should slow down and enjoy life.
+Phrasal verb | wind down | thư giãn (sau giờ làm) | I wind down by listening to music.
+Phrasal verb | catch up with | gặp lại, hàn huyên với | At weekends I catch up with old friends.
+Phrasal verb | look forward to | mong chờ | I look forward to my holidays.
+Idiom | all work and no play | chỉ làm mà không chơi | All work and no play is bad for your health.
+@paragraph
+Ngày nay, nhiều người có lối sống bận rộn và cảm thấy căng thẳng. || Nowadays, many people have a hectic lifestyle and feel stressed. | Today, many people have a hectic lifestyle and feel stressed. || a hectic lifestyle || feel stressed (tính từ -ed cho người)
+Nguyên nhân đầu tiên là áp lực của cuộc sống hiện đại, đặc biệt là ở các thành phố lớn. || The first cause is the pressures of modern life, especially in big cities. | The first reason is the pressures of modern life, especially in big cities. || the pressures of modern life || especially = đặc biệt là
+Nhiều người làm việc nhiều giờ chỉ để xoay xở đủ sống. || Many people work long hours just to make ends meet. || make ends meet || just to = chỉ để
+Nguyên nhân thứ hai là mọi người cố chạy theo những xu hướng mới nhất và mua quá nhiều hàng tiêu dùng. || The second cause is that people try to keep up with the latest trends and buy too many consumer goods. | The second reason is that people try to keep up with the latest trends and buy too many consumer goods. || keep up with the latest trends || try to V = cố gắng · too many = quá nhiều
+Để giải quyết vấn đề này, mỗi người nên dành ra thời gian cho các hoạt động giải trí. || To solve this problem, everyone should free up time for leisure activities. | To solve this problem, people should free up time for leisure activities. || free up time for || to solve this problem = để giải quyết vấn đề này
+Ví dụ, theo đuổi một sở thích giúp chúng ta thư giãn sau giờ làm. || For example, pursuing a hobby helps us unwind after work. | For example, pursuing a hobby helps us to unwind after work. || pursue a hobby || V-ing làm chủ ngữ + helps
+Bên cạnh đó, một lối sống giản dị có thể mang lại sự an tâm. || Besides, a simple lifestyle can bring peace of mind. | Besides, a simple lifestyle can give us peace of mind. || a simple lifestyle || besides = bên cạnh đó · peace of mind
+Cuối cùng, chúng ta nên coi trọng trải nghiệm hơn của cải để hài lòng hơn với cuộc sống. || Finally, we should value experiences over possessions to have higher life satisfaction. | Finally, we should value experiences over possessions to have greater life satisfaction. || value experiences over possessions || to + V = để · life satisfaction
+
+=== 15 | task1-trends | Task 1 · Trends & figures
+prompt: The line graph shows the number of visitors to three museums (A, B and C) in a city from 2010 to 2020. Write the overview and the details. (A: 20,000 → 40,000 in 2015, overtook B in 2016, peak 65,000 in 2018. B: about 50,000 in 2010 → 20,000 in 2020. C: around 30,000 the whole time.)
+prompt_vi: Biểu đồ đường thể hiện số khách tham quan ba bảo tàng (A, B, C) ở một thành phố từ 2010 đến 2020. Viết phần tổng quan và chi tiết.
+own: The line graph shows the percentage of households with internet access in two countries from 2000 to 2020 (Country X: 30% → 90%; Country Y: 10% → 50%, stable at 20% from 2005 to 2010). Write a paragraph (120–150 words).
+own_vi: Biểu đồ đường thể hiện tỷ lệ hộ gia đình có internet ở hai nước từ 2000 đến 2020 (X: 30% → 90%; Y: 10% → 50%, đứng yên ở 20% từ 2005 đến 2010). Viết một đoạn (120–150 từ).
+@forms
+significant | significant (adj) đáng kể; significantly (adv) một cách đáng kể; significance (n) tầm quan trọng
+- There was a [significant] increase in sales. || đứng trước danh từ "increase" → tính từ
+- Sales increased [significantly] in 2015. || bổ nghĩa cho động từ "increased" → trạng từ
+dramatic | dramatic (adj) đột ngột, mạnh; dramatically (adv) một cách đột ngột
+- The number of visitors dropped [dramatically] in 2020. || bổ nghĩa cho động từ "dropped" → trạng từ
+- There was a [dramatic] fall in prices. || đứng trước danh từ "fall" → tính từ
+gradual | gradual (adj) dần dần; gradually (adv) dần dần
+- The figure declined [gradually] over ten years. || bổ nghĩa cho động từ "declined" → trạng từ
+- The graph shows a [gradual] rise in temperature. || đứng trước danh từ "rise" → tính từ
+steady | steady (adj) đều đặn; steadily (adv) một cách đều đặn
+- The population increased [steadily]. || bổ nghĩa cho động từ "increased" → trạng từ
+- There was a [steady] growth in exports. || đứng trước danh từ "growth" → tính từ
+sharp | sharp (adj) mạnh, đột ngột; sharply (adv) một cách mạnh
+- House prices rose [sharply] after 2010. || bổ nghĩa cho động từ "rose" → trạng từ
+- There was a [sharp] drop in car sales. || đứng trước danh từ "drop" → tính từ
+slight | slight (adj) nhẹ; slightly (adv) một chút
+- The figure fell [slightly] to 45%. || bổ nghĩa cho động từ "fell" → trạng từ
+- There was a [slight] decrease in the number of tourists. || đứng trước danh từ "decrease" → tính từ
+stable | stable (adj) ổn định; stability (n) sự ổn định; stabilise (v) ổn định lại
+- The price remained [stable] at $5. || sau "remained" (remain + adj) → tính từ
+- After 2015, the number of visitors began to [stabilise]. || sau "began to" → động từ
+fluctuate | fluctuate (v) dao động; fluctuation (n) sự dao động
+- The figure for Museum C [fluctuated] around 30,000. || động từ chính của câu, thì quá khứ → fluctuated
+- There were small [fluctuations] in the price of oil. || sau "small", số nhiều → danh từ
+@bank
+Phrase | the line graph shows | biểu đồ đường cho thấy | The line graph shows the number of visitors to three museums.
+Phrase | the number of | số lượng (danh từ đếm được) | The number of visitors rose sharply.
+Phrase | the most popular | phổ biến nhất | In 2010, Museum B was the most popular.
+Linking | meanwhile | trong khi đó | Meanwhile, the figure for Museum C remained stable.
+Phrasal verb | go up / go down | tăng / giảm (văn nói, Task 1 nên dùng rise / fall) | Prices went up in 2020.
+Phrasal verb | pick up | phục hồi, tăng trở lại | Sales picked up after 2015.
+Idiom | (không dùng) | Task 1 không dùng thành ngữ — chỉ dùng từ mô tả số liệu | —
+@paragraph
+Biểu đồ đường cho thấy số lượng khách tham quan ba bảo tàng ở một thành phố từ năm 2010 đến năm 2020. || The line graph shows the number of visitors to three museums in a city from 2010 to 2020. | The line graph shows the number of visitors to three museums in a city between 2010 and 2020. || the line graph shows || the number of visitors to … · from … to …
+Nhìn chung, rõ ràng là số khách đến bảo tàng A tăng mạnh, trong khi số liệu của bảo tàng B giảm dần. || Overall, it is clear that the number of visitors to Museum A rose sharply, while the figure for Museum B declined gradually. | Overall, it is clear that the number of visitors to Museum A rose sharply, whereas the figure for Museum B declined gradually. || overall, it is clear that || rise sharply (rose) · the figure for · decline gradually
+Năm 2010, bảo tàng B là nơi phổ biến nhất với xấp xỉ 50,000 khách. || In 2010, Museum B was the most popular, with approximately 50,000 visitors. | In 2010, Museum B was the most popular museum, with approximately 50,000 visitors. || approximately || the most popular · with + số liệu
+Sau đó, con số này giảm dần xuống còn 20,000 vào năm 2020. || After that, this figure declined gradually to 20,000 in 2020. | After that, the figure declined gradually to 20,000 in 2020. | After that, this figure decreased gradually to 20,000 in 2020. || decline gradually || to + số = xuống còn
+Ngược lại, số khách đến bảo tàng A tăng đều đặn từ 20,000 lên 40,000 trong năm năm đầu. || In contrast, the number of visitors to Museum A increased steadily from 20,000 to 40,000 in the first five years. | In contrast, the number of visitors to Museum A increased steadily from 20,000 to 40,000 over the first five years. || increase steadily || in contrast = ngược lại · from … to …
+Bảo tàng A vượt qua bảo tàng B vào năm 2016 và đạt đỉnh 65,000 khách vào năm 2018. || Museum A overtook Museum B in 2016 and reached a peak of 65,000 visitors in 2018. || reach a peak of || overtake → overtook (quá khứ bất quy tắc)
+Trong khi đó, số khách đến bảo tàng C dao động quanh mức 30,000 trong suốt giai đoạn. || Meanwhile, the number of visitors to Museum C fluctuated around 30,000 over the period shown. | Meanwhile, the number of visitors to Museum C fluctuated around 30,000 throughout the period. || fluctuate around || meanwhile = trong khi đó · over the period shown
+Đến cuối giai đoạn, bảo tàng A chiếm khoảng một nửa tổng số khách. || By the end of the period, Museum A accounted for roughly half of all visitors. | By the end of the period, Museum A accounted for roughly half of the total visitors. || account for || by the end of the period · roughly half of
+
+=== 16 | task1-structures | Task 1 · Comparison, process & maps
+prompt: The two maps show the centre of a town in 2000 and 2020. Describe the main changes. (Old market → shopping centre; forest in the north → park; main road extended; new car park; station and school unchanged; old houses → high-rise buildings.)
+prompt_vi: Hai bản đồ thể hiện trung tâm một thị trấn năm 2000 và 2020. Mô tả những thay đổi chính.
+own: The diagram shows how paper is recycled: used paper is collected, transported to a factory, sorted by type, mixed with water, then pressed and dried into new paper. Describe the process in one paragraph (120–150 words).
+own_vi: Sơ đồ cho thấy giấy được tái chế như thế nào: thu gom giấy cũ, chở đến nhà máy, phân loại, trộn với nước, ép và sấy khô thành giấy mới. Mô tả quy trình trong một đoạn (120–150 từ).
+@forms
+construct | construct (v) xây dựng; construction (n) sự xây dựng
+- A new hospital was [constructed] in 2015. || bị động "was + V3" → constructed
+- The [construction] of the bridge took three years. || sau "The", trước "of" → danh từ
+extend | extend (v) mở rộng, kéo dài; extension (n) phần mở rộng
+- The main road was [extended] to the east. || bị động "was + V3" → extended
+- An [extension] was added to the school. || sau "An" → danh từ
+demolish | demolish (v) phá dỡ; demolition (n) sự phá dỡ
+- The old factory was [demolished] in 2010. || bị động "was + V3" → demolished
+- After the [demolition] of the market, a mall was built. || sau "the", trước "of" → danh từ
+convert | convert (v) chuyển đổi; conversion (n) sự chuyển đổi
+- The farmland was [converted] into a park. || bị động "was + V3" → converted
+- The [conversion] of the old house into a café was expensive. || sau "The", trước "of" → danh từ
+replace | replace (v) thay thế; replacement (n) sự thay thế
+- The trees were [replaced] by houses. || bị động "were + V3" → replaced
+- The bridge needs a [replacement]. || sau "a" → danh từ
+develop | develop (v) phát triển; development (n) sự phát triển; developed (adj) phát triển
+- The area saw rapid [development] after 2005. || sau tính từ "rapid" → danh từ
+- The town [developed] quickly between 2000 and 2020. || động từ chính, quá khứ → developed
+expand | expand (v) mở rộng; expansion (n) sự mở rộng
+- The town centre [expanded] to the south. || động từ chính, quá khứ → expanded
+- The [expansion] of the airport caused noise pollution. || sau "The", trước "of" → danh từ
+locate | locate (v) đặt ở vị trí; location (n) vị trí; located (adj) nằm ở
+- The school is [located] to the north of the park. || "be located" = nằm ở → located
+- The [location] of the station remained the same. || sau "The", trước "of" → danh từ
+@bank
+Phrase | the maps show | các bản đồ cho thấy | The maps show how the town changed.
+Phrase | shopping centre | trung tâm mua sắm | A shopping centre replaced the market.
+Phrase | car park | bãi đỗ xe | A new car park was built near the station.
+Phrasal verb | knock down | phá dỡ (văn nói của "demolish") | The old houses were knocked down.
+Phrasal verb | turn into | biến thành | The farm was turned into a park.
+Phrasal verb | build up | xây dựng dày đặc | The area became more built up.
+Idiom | (không dùng) | Task 1 không dùng thành ngữ — chỉ dùng bị động và từ chỉ vị trí | —
+@paragraph
+Hai bản đồ cho thấy trung tâm một thị trấn đã thay đổi như thế nào từ năm 2000 đến năm 2020. || The two maps show how a town centre changed between 2000 and 2020. | The two maps show how a town centre changed from 2000 to 2020. | The two maps show how the centre of a town changed between 2000 and 2020. || the maps show || how + S + V = như thế nào
+Nhìn chung, thị trấn đã trải qua những thay đổi đáng kể và trở nên đô thị hóa hơn. || Overall, the town underwent significant changes and became more urbanised. | Overall, the town underwent significant changes and became more urbanized. || undergo significant changes || undergo → underwent (quá khứ)
+Khu chợ cũ ở trung tâm thị trấn đã bị phá dỡ. || The old market in the centre of the town was demolished. | The old market in the town centre was demolished. || be demolished || bị động quá khứ: was + V3
+Nó được thay thế bởi một trung tâm mua sắm lớn. || It was replaced by a large shopping centre. | It was replaced by a big shopping centre. | It was replaced by a large shopping center. || be replaced by || shopping centre
+Khu rừng ở phía bắc của thị trấn được chuyển đổi thành một công viên. || The forest to the north of the town was converted into a park. || be converted into || to the north of = ở phía bắc của
+Ngoài ra, con đường chính được mở rộng và một bãi đỗ xe mới được xây dựng. || In addition, the main road was extended and a new car park was constructed. | In addition, the main road was extended and a new car park was built. || be extended || car park = bãi đỗ xe · be constructed
+Tuy nhiên, nhà ga và trường học vẫn giữ nguyên. || However, the train station and the school remained unchanged. | However, the station and the school remained unchanged. || remain unchanged || remain + adj
+Một số ngôi nhà cũ bị phá dỡ để dọn chỗ cho các tòa nhà cao tầng. || Some old houses were demolished to make way for high-rise buildings. || make way for || high-rise buildings (tuần 11)

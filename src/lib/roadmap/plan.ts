@@ -2,6 +2,7 @@ import fixJson from '../../../content/grammar-fix.json';
 import activeJson from '../../../content/roadmap/active-vocab.json';
 import exampleViJson from '../../../content/roadmap/example-vi.json';
 import vocabJson from '../../../content/roadmap/vocab.json';
+import writingJson from '../../../content/roadmap/writing-weeks.json';
 import svoJson from '../../../content/svo.json';
 import type { Pos } from '@/lib/vocab/pos';
 
@@ -40,6 +41,8 @@ export type TaskKind =
   | 'vocab-active'
   | 'vocab-translate'
   | 'vocab-review'
+  | 'wordform-week'
+  | 'writing-week'
   | 'reading-p3'
   | 'reading-skill'
   | 'reading-part'
@@ -197,6 +200,16 @@ const ESSAY: Record<string, { guided: string; exam: string }[]> = {
   problem: [{ guided: 'g-traffic', exam: 'en-w-ielts-traffic' }, { guided: 'g-social', exam: 'en-w-ielts-social' }, { guided: 'g-housing', exam: 'en-w-ielts-housing' }],
   twopart: [{ guided: 'g-alone', exam: 'en-w-ielts-alone' }, { guided: 'g-reading', exam: 'en-w-ielts-reading' }, { guided: 'g-freelance', exam: 'en-w-ielts-freelance' }],
 };
+/**
+ * The essay of each Phase 2 week (guided on Wednesday, its free twin on Friday), picked so the topic is one already
+ * learned: technology (week 3), education (1), career (5), urban (11), life & family (12, 14).
+ */
+const ESSAY_OF_WEEK: Record<number, string> = { 9: 'g-tech', 10: 'g-languages', 11: 'g-wfh', 12: 'g-traffic', 14: 'g-alone' };
+const essayOf = (week: number, frame: string) => ESSAY[frame]!.find((e) => e.guided === ESSAY_OF_WEEK[week]) ?? ESSAY[frame]![0]!;
+/** Weeks with a "Writing tuần" (word forms + model paragraph + own paragraph): content/roadmap/writing-weeks.txt. */
+const WRITING_WEEK_NUMBERS = new Set((writingJson as { weeks: { week: number; title: string }[] }).weeks.map((w) => w.week));
+const writingTitle = (n: number) => (writingJson as { weeks: { week: number; title: string }[] }).weeks.find((w) => w.week === n)?.title ?? '';
+
 const TASK1: Record<string, string[]> = {
   line: ['g1-transport', 'g1-drinks'],
   bar: ['g1-exercise', 'g1-leisure'],
@@ -242,7 +255,7 @@ export const WEEKS: Week[] = [
   // Phase 3 — mock tests. Practice tests 1–2 are in the app; Cambridge 17–19 from the learner's own books, on paper.
   { n: 17, phase: 3, start: '2027-03-08', title: 'Thi thử 1', focus: 'Làm quen áp lực thời gian: Reading 60 phút, Writing 60 phút.', mock: { mon: { title: 'Practice test 1 (trong app)', href: '/ielts/reading-1' }, sat: 'Cambridge 17 · Test 1', essay: 'en-w-ielts-env', task1: 'g1-drinks' } },
   { n: 18, phase: 3, start: '2027-03-15', title: 'Thi thử 2', focus: 'So sánh với tuần trước: dạng câu nào vẫn sai?', mock: { mon: { title: 'Practice test 2 (trong app)', href: '/ielts/reading-2' }, sat: 'Cambridge 17 · Test 2', essay: 'en-w-ielts-edu', task1: 'g1-leisure' } },
-  { n: 19, phase: 3, start: '2027-03-22', title: 'Thi thử 3', focus: 'Đề Cambridge trên giấy, chấm bằng đáp án cuối sách.', mock: { mon: { title: 'Cambridge 17 · Test 3 (Reading)' }, sat: 'Cambridge 18 · Test 1', essay: 'en-w-ielts-space', task1: 'g1-spending' } },
+  { n: 19, phase: 3, start: '2027-03-22', title: 'Thi thử 3', focus: 'Đề Cambridge trên giấy, chấm bằng đáp án cuối sách.', mock: { mon: { title: 'Cambridge 17 · Test 3 (Reading)' }, sat: 'Cambridge 18 · Test 1', essay: 'en-w-ielts-social', task1: 'g1-spending' } },
   { n: 20, phase: 3, start: '2027-03-29', title: 'Thi thử 4', focus: 'Tập trung vào dạng câu sai nhiều nhất trong sổ lỗi.', mock: { mon: { title: 'Cambridge 18 · Test 2 (Reading)' }, sat: 'Cambridge 18 · Test 3', essay: 'en-w-ielts-housing', task1: 'g1-tourism' } },
   { n: 21, phase: 3, start: '2027-04-05', title: 'Thi thử 5', focus: 'Đề cuối cùng như thi thật, cả Reading và Writing trong một buổi.', mock: { mon: { title: 'Cambridge 19 · Test 1 (Reading)' }, sat: 'Cambridge 19 · Test 2', essay: 'en-w-ielts-freelance', task1: 'g1-tea' } },
   { n: 22, phase: 3, start: '2027-04-12', title: 'Về đích', focus: 'Giảm tải, giữ phong độ. Không học thêm điều mới.', mock: { mon: { title: 'Cambridge 19 · Test 3 (Reading)' }, sat: '', essay: 'en-w-ielts-shopping' } },
@@ -339,6 +352,26 @@ function build(): Day[] {
         gated: true,
       });
     };
+    const wordformWeek = () => {
+      if (!WRITING_WEEK_NUMBERS.has(week.n)) return;
+      add('wordform-week', {
+        title: `Word form tuần · ${writingTitle(week.n)}`,
+        detail: 'Học 8 họ từ chọn lọc cho bài Writing của tuần (danh từ, động từ, tính từ, trạng từ), rồi điền đúng dạng từ vào 16 câu cùng chủ đề. Cần đạt ít nhất 80%.',
+        minutes: 20,
+        href: `/word-form/${date}`,
+        gated: true,
+      });
+    };
+    const writingWeek = () => {
+      if (!WRITING_WEEK_NUMBERS.has(week.n)) return;
+      add('writing-week', {
+        title: `Writing tuần · ${writingTitle(week.n)}`,
+        detail: 'Dịch đoạn văn mẫu từng câu (chỉ dùng cụm từ, word form và từ bổ sung đã học), rồi tự viết một đoạn 120–150 từ cho đề thứ hai. Cần đúng ngay lần đầu ít nhất 80% số câu.',
+        minutes: 35,
+        href: `/writing-tuan/${date}`,
+        gated: true,
+      });
+    };
     const review = (minutes = 10) => add('vocab-review', { title: 'Ôn thẻ từ đến hạn', detail: 'Ôn các từ đã học theo lịch lặp lại ngắt quãng. Làm hết số thẻ đến hạn hôm nay.', minutes, href: '/review' });
     const p3 = (detail = '4–5 câu Passage 3: ghép từng keyword với cụm đồng nghĩa trong bài rồi mới chọn đáp án.') => add('reading-p3', { title: 'Reading · Passage 3 ngắn', detail, minutes: 15, href: '/ielts/reading?format=p3' });
 
@@ -369,21 +402,24 @@ function build(): Day[] {
       if (weekday === 0) {
         if (week.n === 8) add('retest', { title: 'Kiểm tra lại trình độ', detail: 'Cùng dạng bài ngày 14/11. So sánh để thấy tiến bộ trước khi sang giai đoạn Luyện tập.', minutes: 40, href: '/lo-trinh/kiem-tra' });
         else add('week-review', { title: 'Ôn tập tuần', detail: 'Làm lại các câu dịch sai của 2 chủ điểm tuần này cho đến khi đúng hết.', minutes: 20, href: grammarHref(a), topic: a });
-        if (week.n >= 4 && week.n < 8) add('writing-paragraph', { title: 'Viết một đoạn 120–150 từ', detail: 'Chọn một đề IELTS ở "Viết tự do", viết một đoạn thân bài: câu chủ đề → giải thích → ví dụ. Dùng ít nhất 2 cấu trúc đã học.', minutes: 25, href: '/writing' });
+        writingWeek();
         review(15);
         if (week.n < 8) p3();
       } else {
         vocabNew();
         vocabActive();
         vocabTranslate();
+        if (weekday === 6) wordformWeek();
         review();
         p3();
       }
     } else if (week.phase === 2) {
       const frame = week.frames?.[Math.min(week.frames.length - 1, weekday === 0 ? 0 : Math.floor((weekday - 1) / 2) % week.frames.length)];
       const isTask1 = frame ? Boolean(TASK1[frame]) : false;
-      const prompt = frame ? (isTask1 ? TASK1[frame]![0]! : ESSAY[frame]![(week.n + weekday) % 3]!.guided) : undefined;
-      const exam = frame && !isTask1 ? ESSAY[frame]![(week.n + weekday) % 3]!.exam : undefined;
+      const prompt = frame ? (isTask1 ? TASK1[frame]![0]! : essayOf(week.n, frame).guided) : undefined;
+      const exam = frame && !isTask1 ? essayOf(week.n, frame).exam : undefined;
+      // the week stops early for Tết (week 12): word forms and the paragraph move to Wednesday
+      const short = Boolean(week.light?.length);
       const skill = week.skill;
       const phase2Grammar = () => {
         grammarFix(pickFix(undefined, 0, week.n >= 15 ? [...GRAMMAR_ORDER, 'trends'] : GRAMMAR_ORDER, i, 0, 8));
@@ -408,10 +444,14 @@ function build(): Day[] {
           review();
           break;
         case 3:
-          if (prompt) add('writing-guided', { title: `Writing · viết theo khung (${FRAME_NAME[frame!]})`, detail: 'Dịch từng câu theo khung với gợi ý giảm dần, nộp để được chấm band và sửa lỗi.', minutes: 35, href: `/writing/guided/${prompt}` });
+          if (prompt) add('writing-guided', { title: `Writing · viết theo khung (${FRAME_NAME[frame!]})`, detail: 'Dịch từng câu theo khung với gợi ý giảm dần, rồi so bài của bạn với bài mẫu band 5.5 / 6.5 / 7.5.', minutes: 35, href: `/writing/guided/${prompt}` });
           vocabNew();
           vocabActive();
           vocabTranslate();
+          if (short) {
+            wordformWeek();
+            writingWeek();
+          }
           phase2Grammar();
           review();
           break;
@@ -422,12 +462,13 @@ function build(): Day[] {
           vocabNew();
           vocabActive();
           vocabTranslate();
+          wordformWeek();
           phase2Grammar();
           review();
           break;
         }
         case 5:
-          if (exam) add('writing-exam', { title: 'Writing Task 2 · viết đủ 40 phút', detail: 'Không gợi ý, hết giờ tự nộp. Đọc kỹ nhận xét AI theo 4 tiêu chí.', minutes: 45, href: `/writing/new/${exam}?exam=1` });
+          if (exam) add('writing-exam', { title: 'Writing Task 2 · viết đủ 40 phút', detail: 'Cùng đề với bài viết theo khung thứ Tư, lần này không gợi ý, hết giờ tự nộp. Sau đó so với bài mẫu và tự chấm theo 4 tiêu chí.', minutes: 45, href: `/writing/new/${exam}?exam=1` });
           else if (prompt) add('writing-guided', { title: `Writing Task 1 · ${FRAME_NAME[frame!]} thứ hai`, detail: 'Viết theo khung với đề thứ hai cùng dạng biểu đồ.', minutes: 30, href: `/writing/guided/${TASK1[frame!]![1] ?? TASK1[frame!]![0]}` });
           vocabNew();
           vocabActive();
@@ -438,7 +479,7 @@ function build(): Day[] {
         case 6:
           add('reading-part', { title: 'Reading · một passage của đề đầy đủ', detail: 'Chế độ luyện tập, khoảng 20 phút cho 13 câu. Xem giải thích từng câu sai.', minutes: 25, href: '/ielts/reading?format=part' });
           if (week.frames?.includes('map')) add('writing-guided', { title: 'Writing Task 1 · Maps', detail: 'Bản đồ trước – sau: was transformed into…, had been replaced by…, remained unchanged.', minutes: 30, href: `/writing/guided/${TASK1.map![0]}` });
-          else add('writing-mistakes', { title: 'Sửa lại lỗi hay lặp lại', detail: 'Làm bài sửa chính câu sai cũ của bạn trong "Lỗi hay lặp lại".', minutes: 15, href: '/writing/mistakes' });
+          writingWeek();
           vocabNew();
           vocabActive();
           vocabTranslate();
@@ -459,7 +500,7 @@ function build(): Day[] {
           review();
           break;
         case 2:
-          if (finalWeek) add('writing-exam', { title: 'Writing Task 2 · 40 phút', detail: 'Bài viết tập cuối. Chỉ đọc lại phần nhận xét, không viết lại.', minutes: 45, href: `/writing/new/${m.essay}?exam=1` });
+          if (finalWeek) add('writing-exam', { title: 'Writing Task 2 · 40 phút', detail: 'Bài viết tập cuối. Đọc lại, so với bài mẫu cùng đề, không viết lại.', minutes: 45, href: `/writing/new/${m.essay}?exam=1` });
           else add('mock-review', { title: 'Chữa đề Reading', detail: 'Với từng câu sai: tìm câu chứa đáp án, ghép keyword, ghi cặp paraphrase vào Sổ paraphrase. Đếm câu sai theo dạng.', minutes: 40, href: '/ielts/reading?format=full' });
           review();
           if (!finalWeek) p3();
@@ -470,8 +511,8 @@ function build(): Day[] {
             add('rest', { title: 'Ôn nhẹ', detail: 'Xem lại khung bài Task 1, Task 2 và Sổ paraphrase. Ngủ sớm.', minutes: 20, href: '/writing/guided' });
             break;
           }
-          if (m.task1) add('writing-guided', { title: 'Thi thử Writing Task 1 · 20 phút', detail: 'Viết không nhìn khung, tự canh 20 phút, rồi nộp để chấm.', minutes: 20, href: `/writing/guided/${m.task1}` });
-          add('writing-exam', { title: 'Thi thử Writing Task 2 · 40 phút', detail: 'Chế độ thi: không gợi ý, hết giờ tự nộp, chấm AI ngay.', minutes: 40, href: `/writing/new/${m.essay}?exam=1` });
+          if (m.task1) add('writing-guided', { title: 'Thi thử Writing Task 1 · 20 phút', detail: 'Viết không nhìn khung, tự canh 20 phút, rồi so với bài mẫu.', minutes: 20, href: `/writing/guided/${m.task1}` });
+          add('writing-exam', { title: 'Thi thử Writing Task 2 · 40 phút', detail: 'Chế độ thi: không gợi ý, hết giờ tự nộp. Đề thuộc chủ đề đã học ở giai đoạn 1–2.', minutes: 40, href: `/writing/new/${m.essay}?exam=1` });
           review();
           break;
         case 4:
@@ -479,7 +520,7 @@ function build(): Day[] {
             add('rest', { title: `Ngày mục tiêu · band ${TARGET_BAND}`, detail: 'Hôm nay không học. Chúc bạn làm bài tốt!', minutes: 0 });
             break;
           }
-          add('writing-mistakes', { title: 'Chữa Writing', detail: 'Đọc nhận xét theo 4 tiêu chí, sửa lại các câu sai của bài hôm qua trong "Lỗi hay lặp lại".', minutes: 30, href: '/writing/mistakes' });
+          add('writing-mistakes', { title: 'Chữa Writing', detail: 'Mở bài hôm qua trong "Viết tự do", so từng đoạn với bài mẫu cùng đề, gạch chân lỗi ngữ pháp và những cụm đã học mà chưa dùng, rồi viết lại 3 câu yếu nhất.', minutes: 30, href: '/writing' });
           add('grammar-review', { title: 'Ôn chủ điểm ngữ pháp còn sai', detail: 'Chọn chủ điểm có lỗi lặp lại nhiều nhất trong bài viết, dịch lại 8 câu.', minutes: 15, href: '/grammar' });
           review();
           break;

@@ -1,0 +1,6361 @@
+{
+ "_note": "Writing theo tuần (đề, word form, từ bổ sung, đoạn văn mẫu dịch Việt → Anh). Đừng sửa tay — sửa writing-weeks.txt rồi chạy node scripts/build-writing-weeks.mjs.",
+ "weeks": [
+  {
+   "week": 1,
+   "topic": "education",
+   "title": "Education",
+   "forms": [
+    {
+     "head": "educate",
+     "words": [
+      {
+       "w": "educate",
+       "pos": "v",
+       "m": "giáo dục"
+      },
+      {
+       "w": "education",
+       "pos": "n",
+       "m": "nền giáo dục, việc học"
+      },
+      {
+       "w": "educational",
+       "pos": "adj",
+       "m": "mang tính giáo dục"
+      },
+      {
+       "w": "educated",
+       "pos": "adj",
+       "m": "có học thức"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Every child has the right to free ____.",
+       "a": [
+        "education"
+       ],
+       "why": "sau tính từ \"free\" và làm tân ngữ → danh từ"
+      },
+      {
+       "s": "Museums offer many ____ activities for children.",
+       "a": [
+        "educational"
+       ],
+       "why": "đứng trước danh từ \"activities\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "know",
+     "words": [
+      {
+       "w": "know",
+       "pos": "v",
+       "m": "biết"
+      },
+      {
+       "w": "knowledge",
+       "pos": "n",
+       "m": "kiến thức"
+      },
+      {
+       "w": "knowledgeable",
+       "pos": "adj",
+       "m": "hiểu biết rộng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Students acquire ____ from books and teachers.",
+       "a": [
+        "knowledge"
+       ],
+       "why": "sau động từ \"acquire\" → danh từ (không đếm được)"
+      },
+      {
+       "s": "A good teacher is ____ about the subject.",
+       "a": [
+        "knowledgeable"
+       ],
+       "why": "sau \"is\" và trước \"about\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "practice",
+     "words": [
+      {
+       "w": "practice",
+       "pos": "n",
+       "m": "sự thực hành"
+      },
+      {
+       "w": "practise",
+       "pos": "v",
+       "m": "luyện tập"
+      },
+      {
+       "w": "practical",
+       "pos": "adj",
+       "m": "thực tế, thực hành"
+      },
+      {
+       "w": "practically",
+       "pos": "adv",
+       "m": "gần như, về mặt thực tế"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Schools should teach more ____ skills.",
+       "a": [
+        "practical"
+       ],
+       "why": "đứng trước danh từ \"skills\" → tính từ"
+      },
+      {
+       "s": "You need to ____ speaking English every day.",
+       "a": [
+        "practise"
+       ],
+       "why": "sau \"need to\" → động từ nguyên mẫu (Anh–Anh: practise là động từ)"
+      }
+     ]
+    },
+    {
+     "head": "theory",
+     "words": [
+      {
+       "w": "theory",
+       "pos": "n",
+       "m": "lý thuyết"
+      },
+      {
+       "w": "theoretical",
+       "pos": "adj",
+       "m": "thuộc lý thuyết"
+      },
+      {
+       "w": "theoretically",
+       "pos": "adv",
+       "m": "về mặt lý thuyết"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "University courses focus too much on ____ knowledge.",
+       "a": [
+        "theoretical"
+       ],
+       "why": "đứng trước danh từ \"knowledge\" → tính từ"
+      },
+      {
+       "s": "The ____ is easy, but the practice is difficult.",
+       "a": [
+        "theory"
+       ],
+       "why": "sau mạo từ \"the\", làm chủ ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "motivate",
+     "words": [
+      {
+       "w": "motivate",
+       "pos": "v",
+       "m": "thúc đẩy"
+      },
+      {
+       "w": "motivation",
+       "pos": "n",
+       "m": "động lực"
+      },
+      {
+       "w": "motivated",
+       "pos": "adj",
+       "m": "có động lực"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Good teachers ____ students to learn.",
+       "a": [
+        "motivate"
+       ],
+       "why": "sau chủ ngữ số nhiều \"teachers\" → động từ"
+      },
+      {
+       "s": "Students with high ____ usually get better results.",
+       "a": [
+        "motivation"
+       ],
+       "why": "sau tính từ \"high\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "succeed",
+     "words": [
+      {
+       "w": "succeed",
+       "pos": "v",
+       "m": "thành công"
+      },
+      {
+       "w": "success",
+       "pos": "n",
+       "m": "sự thành công"
+      },
+      {
+       "w": "successful",
+       "pos": "adj",
+       "m": "thành công"
+      },
+      {
+       "w": "successfully",
+       "pos": "adv",
+       "m": "một cách thành công"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "A well-rounded education helps young people ____ in life.",
+       "a": [
+        "succeed"
+       ],
+       "why": "sau \"help + O\" → động từ nguyên mẫu"
+      },
+      {
+       "s": "Practical skills are the key to ____.",
+       "a": [
+        "success"
+       ],
+       "why": "sau giới từ \"to\" (the key to + N) → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "employ",
+     "words": [
+      {
+       "w": "employ",
+       "pos": "v",
+       "m": "thuê, tuyển"
+      },
+      {
+       "w": "employer",
+       "pos": "n",
+       "m": "nhà tuyển dụng"
+      },
+      {
+       "w": "employee",
+       "pos": "n",
+       "m": "nhân viên"
+      },
+      {
+       "w": "employment",
+       "pos": "n",
+       "m": "việc làm"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ want graduates who can work in teams.",
+       "a": [
+        "Employers"
+       ],
+       "why": "chủ ngữ số nhiều, người tuyển dụng → danh từ chỉ người (-er)"
+      },
+      {
+       "s": "The company has 200 ____.",
+       "a": [
+        "employees"
+       ],
+       "why": "sau số đếm \"200\", người được thuê → danh từ chỉ người (-ee), số nhiều"
+      }
+     ]
+    },
+    {
+     "head": "able",
+     "words": [
+      {
+       "w": "able",
+       "pos": "adj",
+       "m": "có thể"
+      },
+      {
+       "w": "ability",
+       "pos": "n",
+       "m": "khả năng"
+      },
+      {
+       "w": "enable",
+       "pos": "v",
+       "m": "giúp cho có thể"
+      },
+      {
+       "w": "unable",
+       "pos": "adj",
+       "m": "không thể"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Group projects improve students' ____ to work with others.",
+       "a": [
+        "ability"
+       ],
+       "why": "sau sở hữu cách \"students'\" → danh từ"
+      },
+      {
+       "s": "Online courses ____ adults to learn at home.",
+       "a": [
+        "enable"
+       ],
+       "why": "sau chủ ngữ và trước \"adults to + V\" → động từ (enable sb to V)"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Linking",
+     "term": "as well as",
+     "m": "cũng như, bên cạnh",
+     "ex": "Schools should teach practical skills as well as academic subjects."
+    },
+    {
+     "type": "Phrase",
+     "term": "solve problems",
+     "m": "giải quyết vấn đề",
+     "ex": "Employers want staff who can solve problems."
+    },
+    {
+     "type": "Phrase",
+     "term": "work in teams",
+     "m": "làm việc nhóm",
+     "ex": "Group projects teach students to work in teams."
+    },
+    {
+     "type": "Word",
+     "term": "confident (adj)",
+     "m": "tự tin",
+     "ex": "Debating helps students become more confident."
+    },
+    {
+     "type": "Phrase",
+     "term": "life skills",
+     "m": "kỹ năng sống",
+     "ex": "Cooking and managing money are important life skills."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "keep up with",
+     "m": "theo kịp",
+     "ex": "Weak students often cannot keep up with their classmates."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "fall behind",
+     "m": "tụt lại phía sau",
+     "ex": "Students who miss lessons may fall behind."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "hand in",
+     "m": "nộp (bài)",
+     "ex": "Students must hand in their essays on Friday."
+    },
+    {
+     "type": "Idiom",
+     "term": "the key to success",
+     "m": "chìa khóa thành công",
+     "ex": "Many people think a good education is the key to success."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Tôi tin rằng trường học nên dạy kỹ năng thực hành cũng như các môn học thuật.",
+     "en": [
+      "I believe that schools should teach practical skills as well as academic subjects.",
+      "I believe schools should teach practical skills as well as academic subjects."
+     ],
+     "use": "practical skills",
+     "hint": "as well as = cũng như · academic subjects"
+    },
+    {
+     "vi": "Hiện nay, nhiều trường áp dụng giáo dục nặng về thi cử, vì vậy học sinh chủ yếu học kiến thức lý thuyết.",
+     "en": [
+      "Nowadays, many schools follow exam-oriented education, so students mainly learn theoretical knowledge.",
+      "Today, many schools follow exam-oriented education, so students mainly learn theoretical knowledge."
+     ],
+     "use": "exam-oriented education",
+     "hint": "follow = áp dụng · mainly = chủ yếu · theoretical knowledge"
+    },
+    {
+     "vi": "Tuy nhiên, kiến thức này không đủ khi họ bước vào thị trường việc làm.",
+     "en": [
+      "However, this knowledge is not enough when they enter the job market.",
+      "However, this knowledge isn't enough when they enter the job market."
+     ],
+     "use": "the job market",
+     "hint": "enter = bước vào"
+    },
+    {
+     "vi": "Các nhà tuyển dụng muốn những nhân viên có thể giải quyết vấn đề và làm việc nhóm.",
+     "en": [
+      "Employers want employees who can solve problems and work in teams.",
+      "Employers want staff who can solve problems and work in teams."
+     ],
+     "use": "employer",
+     "hint": "word form: employ → employer (người tuyển) / employee (nhân viên) · who + V"
+    },
+    {
+     "vi": "Vì vậy, trường học nên trang bị cho học sinh kỹ năng tư duy phản biện và kỹ năng sống.",
+     "en": [
+      "Therefore, schools should equip students with critical thinking skills and life skills."
+     ],
+     "use": "equip students with",
+     "hint": "therefore = vì vậy"
+    },
+    {
+     "vi": "Ví dụ, các hoạt động ngoại khóa như câu lạc bộ tranh biện giúp học sinh tự tin hơn.",
+     "en": [
+      "For example, extracurricular activities such as debate clubs help students become more confident.",
+      "For example, extracurricular activities like debate clubs help students become more confident.",
+      "For example, extracurricular activities such as debate clubs make students more confident."
+     ],
+     "use": "extracurricular activities",
+     "hint": "such as = như · debate club = câu lạc bộ tranh biện · confident"
+    },
+    {
+     "vi": "Những kỹ năng này cũng thúc đẩy học sinh học chăm chỉ hơn vì các em thấy được giá trị của việc học.",
+     "en": [
+      "These skills also motivate students to study harder because they can see the value of learning.",
+      "These skills also motivate students to work harder because they can see the value of learning."
+     ],
+     "use": "motivate students to",
+     "hint": "study harder = học chăm hơn · the value of = giá trị của"
+    },
+    {
+     "vi": "Tóm lại, một nền giáo dục toàn diện sẽ giúp người trẻ thành công trong cuộc sống.",
+     "en": [
+      "In conclusion, a well-rounded education will help young people succeed in life.",
+      "In conclusion, a well-rounded education helps young people succeed in life."
+     ],
+     "use": "well-rounded education",
+     "hint": "word form: succeed (v) sau help + O"
+    }
+   ],
+   "prompt": "Some people think schools should only teach academic subjects. Others believe they should also teach practical skills. Write one body paragraph giving your opinion.",
+   "prompt_vi": "Có người cho rằng trường học chỉ nên dạy các môn học thuật, người khác cho rằng nên dạy cả kỹ năng thực hành. Viết một đoạn thân bài nêu quan điểm của bạn.",
+   "own": "Some people think university education should be free for everyone. Write one paragraph (120–150 words) giving your opinion.",
+   "own_vi": "Có người cho rằng giáo dục đại học nên miễn phí cho mọi người. Viết một đoạn (120–150 từ) nêu quan điểm của bạn."
+  },
+  {
+   "week": 2,
+   "topic": "environment",
+   "title": "Environment",
+   "forms": [
+    {
+     "head": "environment",
+     "words": [
+      {
+       "w": "environment",
+       "pos": "n",
+       "m": "môi trường"
+      },
+      {
+       "w": "environmental",
+       "pos": "adj",
+       "m": "thuộc môi trường"
+      },
+      {
+       "w": "environmentally",
+       "pos": "adv",
+       "m": "về mặt môi trường"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Plastic waste causes serious ____ problems.",
+       "a": [
+        "environmental"
+       ],
+       "why": "đứng trước danh từ \"problems\" → tính từ"
+      },
+      {
+       "s": "We should buy ____ friendly products.",
+       "a": [
+        "environmentally"
+       ],
+       "why": "bổ nghĩa cho tính từ \"friendly\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "pollute",
+     "words": [
+      {
+       "w": "pollute",
+       "pos": "v",
+       "m": "làm ô nhiễm"
+      },
+      {
+       "w": "pollution",
+       "pos": "n",
+       "m": "sự ô nhiễm"
+      },
+      {
+       "w": "polluted",
+       "pos": "adj",
+       "m": "bị ô nhiễm"
+      },
+      {
+       "w": "polluter",
+       "pos": "n",
+       "m": "bên gây ô nhiễm"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Factories ____ rivers with industrial waste.",
+       "a": [
+        "pollute"
+       ],
+       "why": "sau chủ ngữ \"Factories\" → động từ"
+      },
+      {
+       "s": "Air ____ is a big problem in Hanoi.",
+       "a": [
+        "pollution"
+       ],
+       "why": "sau \"Air\", làm chủ ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "sustain",
+     "words": [
+      {
+       "w": "sustain",
+       "pos": "v",
+       "m": "duy trì"
+      },
+      {
+       "w": "sustainable",
+       "pos": "adj",
+       "m": "bền vững"
+      },
+      {
+       "w": "sustainability",
+       "pos": "n",
+       "m": "tính bền vững"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Solar power is a ____ source of energy.",
+       "a": [
+        "sustainable"
+       ],
+       "why": "sau \"a\", trước danh từ \"source\" → tính từ"
+      },
+      {
+       "s": "Companies should care more about ____.",
+       "a": [
+        "sustainability"
+       ],
+       "why": "sau giới từ \"about\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "protect",
+     "words": [
+      {
+       "w": "protect",
+       "pos": "v",
+       "m": "bảo vệ"
+      },
+      {
+       "w": "protection",
+       "pos": "n",
+       "m": "sự bảo vệ"
+      },
+      {
+       "w": "protective",
+       "pos": "adj",
+       "m": "mang tính bảo vệ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Governments must ____ endangered species.",
+       "a": [
+        "protect"
+       ],
+       "why": "sau \"must\" → động từ nguyên mẫu"
+      },
+      {
+       "s": "Environmental ____ costs a lot of money.",
+       "a": [
+        "protection"
+       ],
+       "why": "sau tính từ, làm chủ ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "consume",
+     "words": [
+      {
+       "w": "consume",
+       "pos": "v",
+       "m": "tiêu thụ"
+      },
+      {
+       "w": "consumption",
+       "pos": "n",
+       "m": "sự tiêu thụ"
+      },
+      {
+       "w": "consumer",
+       "pos": "n",
+       "m": "người tiêu dùng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Energy ____ has doubled in the last 20 years.",
+       "a": [
+        "consumption"
+       ],
+       "why": "sau \"Energy\", làm chủ ngữ → danh từ (sự tiêu thụ)"
+      },
+      {
+       "s": "Rich countries ____ more energy than poor countries.",
+       "a": [
+        "consume"
+       ],
+       "why": "sau chủ ngữ → động từ"
+      }
+     ]
+    },
+    {
+     "head": "reduce",
+     "words": [
+      {
+       "w": "reduce",
+       "pos": "v",
+       "m": "giảm"
+      },
+      {
+       "w": "reduction",
+       "pos": "n",
+       "m": "sự giảm"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "A carbon tax can lead to a ____ in carbon emissions.",
+       "a": [
+        "reduction"
+       ],
+       "why": "sau \"a\", trước \"in\" → danh từ"
+      },
+      {
+       "s": "We must ____ our use of plastic bags.",
+       "a": [
+        "reduce"
+       ],
+       "why": "sau \"must\" → động từ nguyên mẫu"
+      }
+     ]
+    },
+    {
+     "head": "harm",
+     "words": [
+      {
+       "w": "harm",
+       "pos": "n/v",
+       "m": "sự tổn hại, làm hại"
+      },
+      {
+       "w": "harmful",
+       "pos": "adj",
+       "m": "có hại"
+      },
+      {
+       "w": "harmless",
+       "pos": "adj",
+       "m": "vô hại"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Single-use plastics are ____ to sea animals.",
+       "a": [
+        "harmful"
+       ],
+       "why": "sau \"are\", trước \"to\" → tính từ (be harmful to)"
+      },
+      {
+       "s": "Chemicals from factories can ____ wildlife.",
+       "a": [
+        "harm"
+       ],
+       "why": "sau \"can\" → động từ nguyên mẫu"
+      }
+     ]
+    },
+    {
+     "head": "destroy",
+     "words": [
+      {
+       "w": "destroy",
+       "pos": "v",
+       "m": "phá hủy"
+      },
+      {
+       "w": "destruction",
+       "pos": "n",
+       "m": "sự phá hủy"
+      },
+      {
+       "w": "destructive",
+       "pos": "adj",
+       "m": "có sức tàn phá"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Forest fires ____ natural habitats.",
+       "a": [
+        "destroy"
+       ],
+       "why": "sau chủ ngữ số nhiều → động từ"
+      },
+      {
+       "s": "The ____ of forests leads to the loss of biodiversity.",
+       "a": [
+        "destruction"
+       ],
+       "why": "sau \"The\", trước \"of\" → danh từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "play a role in + V-ing",
+     "m": "đóng vai trò trong việc",
+     "ex": "Governments play a key role in protecting the environment."
+    },
+    {
+     "type": "Phrase",
+     "term": "on a large scale",
+     "m": "trên quy mô lớn",
+     "ex": "Only governments can build solar farms on a large scale."
+    },
+    {
+     "type": "Phrase",
+     "term": "make a difference",
+     "m": "tạo ra sự khác biệt",
+     "ex": "Small actions can make a difference."
+    },
+    {
+     "type": "Phrase",
+     "term": "force sb to do sth",
+     "m": "buộc ai làm gì",
+     "ex": "New laws force companies to cut pollution."
+    },
+    {
+     "type": "Word",
+     "term": "individual (n)",
+     "m": "cá nhân",
+     "ex": "Each individual should save energy at home."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "throw away",
+     "m": "vứt bỏ",
+     "ex": "People throw away too much plastic."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "switch off",
+     "m": "tắt (thiết bị)",
+     "ex": "Switch off the lights when you leave the room."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "run out of",
+     "m": "cạn kiệt, hết",
+     "ex": "The world may run out of oil one day."
+    },
+    {
+     "type": "Idiom",
+     "term": "the tip of the iceberg",
+     "m": "phần nổi của tảng băng",
+     "ex": "Plastic in the sea is only the tip of the iceberg."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Theo tôi, chính phủ nên đóng vai trò lớn nhất trong việc giải quyết biến đổi khí hậu.",
+     "en": [
+      "In my opinion, governments should play the biggest role in tackling climate change.",
+      "In my view, governments should play the biggest role in tackling climate change."
+     ],
+     "use": "tackle climate change",
+     "hint": "play a role in + V-ing"
+    },
+    {
+     "vi": "Lý do chính là nhiều quốc gia vẫn phụ thuộc nhiều vào nhiên liệu hóa thạch.",
+     "en": [
+      "The main reason is that many countries still rely heavily on fossil fuels."
+     ],
+     "use": "rely heavily on fossil fuels",
+     "hint": "the main reason is that = lý do chính là"
+    },
+    {
+     "vi": "Chỉ chính phủ mới có thể đầu tư vào các nguồn năng lượng tái tạo trên quy mô lớn.",
+     "en": [
+      "Only governments can invest in renewable energy sources on a large scale."
+     ],
+     "use": "renewable energy sources",
+     "hint": "invest in = đầu tư vào · on a large scale"
+    },
+    {
+     "vi": "Họ cũng có thể áp đặt quy định nghiêm ngặt lên những nhà máy gây ô nhiễm.",
+     "en": [
+      "They can also impose strict regulations on factories that cause pollution.",
+      "They can also impose strict regulations on polluting factories."
+     ],
+     "use": "impose strict regulations on",
+     "hint": "word form: pollute → pollution · that cause = gây ra"
+    },
+    {
+     "vi": "Ví dụ, thuế carbon buộc các công ty phải giảm lượng khí thải carbon.",
+     "en": [
+      "For example, a carbon tax forces companies to reduce carbon emissions.",
+      "For instance, a carbon tax forces companies to reduce carbon emissions."
+     ],
+     "use": "a carbon tax",
+     "hint": "force sb to V = buộc ai phải"
+    },
+    {
+     "vi": "Tuy nhiên, mỗi cá nhân cũng nên áp dụng lối sống thân thiện với môi trường.",
+     "en": [
+      "However, each individual should also adopt an eco-friendly lifestyle.",
+      "However, individuals should also adopt an eco-friendly lifestyle."
+     ],
+     "use": "adopt an eco-friendly lifestyle",
+     "hint": "each individual = mỗi cá nhân"
+    },
+    {
+     "vi": "Những hành động đơn giản như tái chế rác thải sinh hoạt có thể tạo ra sự khác biệt.",
+     "en": [
+      "Simple actions such as recycling household waste can make a difference.",
+      "Simple actions like recycling household waste can make a difference."
+     ],
+     "use": "recycle household waste",
+     "hint": "such as + V-ing · make a difference"
+    },
+    {
+     "vi": "Nếu mọi người cùng hành động tập thể, chúng ta có thể bảo vệ hành tinh cho các thế hệ tương lai.",
+     "en": [
+      "If everyone takes collective action, we can protect the planet for future generations.",
+      "If people take collective action, we can protect the planet for future generations."
+     ],
+     "use": "take collective action",
+     "hint": "everyone takes (+s) · the planet = hành tinh"
+    }
+   ],
+   "prompt": "Some people think governments should be responsible for protecting the environment. Others believe it is the responsibility of individuals. Write one body paragraph giving your opinion.",
+   "prompt_vi": "Có người cho rằng chính phủ phải chịu trách nhiệm bảo vệ môi trường, người khác cho rằng đó là trách nhiệm của mỗi cá nhân. Viết một đoạn thân bài nêu quan điểm của bạn.",
+   "own": "Many people believe that individuals can do very little to protect the environment. To what extent do you agree? Write one paragraph (120–150 words).",
+   "own_vi": "Nhiều người cho rằng mỗi cá nhân có thể làm rất ít để bảo vệ môi trường. Bạn đồng ý đến mức nào? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 3,
+   "topic": "technology",
+   "title": "Technology",
+   "forms": [
+    {
+     "head": "technology",
+     "words": [
+      {
+       "w": "technology",
+       "pos": "n",
+       "m": "công nghệ"
+      },
+      {
+       "w": "technological",
+       "pos": "adj",
+       "m": "thuộc công nghệ"
+      },
+      {
+       "w": "technologically",
+       "pos": "adv",
+       "m": "về mặt công nghệ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ advances have changed the way we live.",
+       "a": [
+        "Technological"
+       ],
+       "why": "đứng trước danh từ \"advances\" → tính từ"
+      },
+      {
+       "s": "Japan is a ____ advanced country.",
+       "a": [
+        "technologically"
+       ],
+       "why": "bổ nghĩa cho tính từ \"advanced\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "create",
+     "words": [
+      {
+       "w": "create",
+       "pos": "v",
+       "m": "tạo ra"
+      },
+      {
+       "w": "creation",
+       "pos": "n",
+       "m": "sự tạo ra"
+      },
+      {
+       "w": "creative",
+       "pos": "adj",
+       "m": "sáng tạo"
+      },
+      {
+       "w": "creativity",
+       "pos": "n",
+       "m": "sự sáng tạo"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Machines cannot do ____ work as well as humans.",
+       "a": [
+        "creative"
+       ],
+       "why": "đứng trước danh từ \"work\" → tính từ"
+      },
+      {
+       "s": "Art classes help to develop children's ____.",
+       "a": [
+        "creativity"
+       ],
+       "why": "sau sở hữu cách \"children's\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "produce",
+     "words": [
+      {
+       "w": "produce",
+       "pos": "v",
+       "m": "sản xuất"
+      },
+      {
+       "w": "product",
+       "pos": "n",
+       "m": "sản phẩm"
+      },
+      {
+       "w": "productive",
+       "pos": "adj",
+       "m": "năng suất"
+      },
+      {
+       "w": "productivity",
+       "pos": "n",
+       "m": "năng suất"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Computers help workers become more ____.",
+       "a": [
+        "productive"
+       ],
+       "why": "sau \"become more\" → tính từ"
+      },
+      {
+       "s": "New software can increase ____.",
+       "a": [
+        "productivity"
+       ],
+       "why": "sau động từ \"increase\", làm tân ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "automate",
+     "words": [
+      {
+       "w": "automate",
+       "pos": "v",
+       "m": "tự động hóa"
+      },
+      {
+       "w": "automation",
+       "pos": "n",
+       "m": "sự tự động hóa"
+      },
+      {
+       "w": "automatic",
+       "pos": "adj",
+       "m": "tự động"
+      },
+      {
+       "w": "automatically",
+       "pos": "adv",
+       "m": "một cách tự động"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ may bring about job losses in factories.",
+       "a": [
+        "Automation"
+       ],
+       "why": "làm chủ ngữ ở đầu câu → danh từ"
+      },
+      {
+       "s": "The doors open ____.",
+       "a": [
+        "automatically"
+       ],
+       "why": "bổ nghĩa cho động từ \"open\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "rely",
+     "words": [
+      {
+       "w": "rely",
+       "pos": "v",
+       "m": "dựa vào"
+      },
+      {
+       "w": "reliable",
+       "pos": "adj",
+       "m": "đáng tin cậy"
+      },
+      {
+       "w": "reliance",
+       "pos": "n",
+       "m": "sự phụ thuộc"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Many students ____ on the internet for information.",
+       "a": [
+        "rely"
+       ],
+       "why": "sau chủ ngữ, trước \"on\" → động từ (rely on)"
+      },
+      {
+       "s": "Wikipedia is not always a ____ source.",
+       "a": [
+        "reliable"
+       ],
+       "why": "sau \"a\", trước danh từ \"source\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "access",
+     "words": [
+      {
+       "w": "access",
+       "pos": "n/v",
+       "m": "sự truy cập, truy cập"
+      },
+      {
+       "w": "accessible",
+       "pos": "adj",
+       "m": "dễ tiếp cận"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Online courses make education more ____.",
+       "a": [
+        "accessible"
+       ],
+       "why": "make + O + adj → tính từ"
+      },
+      {
+       "s": "Many poor families have no ____ to the internet.",
+       "a": [
+        "access"
+       ],
+       "why": "sau \"no\", trước \"to\" → danh từ (access to)"
+      }
+     ]
+    },
+    {
+     "head": "innovate",
+     "words": [
+      {
+       "w": "innovate",
+       "pos": "v",
+       "m": "đổi mới"
+      },
+      {
+       "w": "innovation",
+       "pos": "n",
+       "m": "sự đổi mới, phát minh"
+      },
+      {
+       "w": "innovative",
+       "pos": "adj",
+       "m": "mang tính đổi mới"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Smartphones are a great ____.",
+       "a": [
+        "innovation"
+       ],
+       "why": "sau \"a great\" → danh từ"
+      },
+      {
+       "s": "The company is famous for its ____ products.",
+       "a": [
+        "innovative"
+       ],
+       "why": "đứng trước danh từ \"products\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "addict",
+     "words": [
+      {
+       "w": "addiction",
+       "pos": "n",
+       "m": "sự nghiện"
+      },
+      {
+       "w": "addictive",
+       "pos": "adj",
+       "m": "gây nghiện"
+      },
+      {
+       "w": "addicted",
+       "pos": "adj",
+       "m": "bị nghiện"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Online games can be very ____.",
+       "a": [
+        "addictive"
+       ],
+       "why": "sau \"be very\" → tính từ chỉ tính chất của trò chơi (gây nghiện)"
+      },
+      {
+       "s": "Many teenagers are ____ to their phones.",
+       "a": [
+        "addicted"
+       ],
+       "why": "người bị nghiện → addicted to"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Word",
+     "term": "outweigh (v)",
+     "m": "lớn hơn, nặng hơn",
+     "ex": "The benefits of AI outweigh its drawbacks."
+    },
+    {
+     "type": "Word",
+     "term": "drawback (n)",
+     "m": "bất lợi, nhược điểm",
+     "ex": "The main drawback of AI is job losses."
+    },
+    {
+     "type": "Linking",
+     "term": "so that",
+     "m": "để mà",
+     "ex": "Governments should train workers so that they can find new jobs."
+    },
+    {
+     "type": "Phrase",
+     "term": "save costs",
+     "m": "tiết kiệm chi phí",
+     "ex": "Robots help factories save costs."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "rely on",
+     "m": "dựa vào",
+     "ex": "Many people rely on their phones for everything."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "take over",
+     "m": "thay thế, đảm nhận",
+     "ex": "Robots may take over many routine jobs."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "carry out",
+     "m": "thực hiện",
+     "ex": "Computers can carry out complex calculations."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "log on / go online",
+     "m": "đăng nhập / lên mạng",
+     "ex": "Most teenagers go online every day."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Không thể phủ nhận rằng trí tuệ nhân tạo đang cách mạng hóa cách chúng ta làm việc.",
+     "en": [
+      "It is undeniable that artificial intelligence is revolutionising the way we work.",
+      "It is undeniable that artificial intelligence is revolutionizing the way we work."
+     ],
+     "use": "revolutionise the way",
+     "hint": "it is undeniable that = không thể phủ nhận rằng · hiện tại tiếp diễn"
+    },
+    {
+     "vi": "Trước hết, máy móc có thể tự động hóa các công việc lặp lại, vì vậy nhân viên có nhiều thời gian hơn cho những việc sáng tạo.",
+     "en": [
+      "Firstly, machines can automate routine tasks, so employees have more time for creative work.",
+      "First, machines can automate routine tasks, so employees have more time for creative work."
+     ],
+     "use": "automate routine tasks",
+     "hint": "word form: creative (adj) + work"
+    },
+    {
+     "vi": "Điều này giúp các công ty tăng năng suất và tiết kiệm chi phí.",
+     "en": [
+      "This helps companies increase productivity and save costs.",
+      "This helps companies to increase productivity and save costs."
+     ],
+     "use": "increase productivity",
+     "hint": "save costs = tiết kiệm chi phí"
+    },
+    {
+     "vi": "Thứ hai, trí tuệ nhân tạo cho phép chúng ta truy cập thông tin ngay lập tức.",
+     "en": [
+      "Secondly, artificial intelligence allows us to access information instantly.",
+      "Second, artificial intelligence allows us to access information instantly."
+     ],
+     "use": "access information instantly",
+     "hint": "allow sb to V = cho phép ai"
+    },
+    {
+     "vi": "Tuy nhiên, công nghệ này là con dao hai lưỡi.",
+     "en": [
+      "However, this technology is a double-edged sword."
+     ],
+     "use": "a double-edged sword",
+     "hint": "this technology (số ít)"
+    },
+    {
+     "vi": "Nó có thể thay thế người lao động và gây ra tình trạng mất việc.",
+     "en": [
+      "It may replace human workers and bring about job losses.",
+      "It can replace human workers and bring about job losses."
+     ],
+     "use": "bring about job losses",
+     "hint": "may / can + V"
+    },
+    {
+     "vi": "Vì vậy, chính phủ nên đào tạo người lao động để họ có thể theo kịp công nghệ mới nhất.",
+     "en": [
+      "Therefore, governments should train workers so that they can keep up with the latest technology."
+     ],
+     "use": "keep up with the latest technology",
+     "hint": "train = đào tạo · so that = để"
+    },
+    {
+     "vi": "Nhìn chung, tôi tin rằng lợi ích của trí tuệ nhân tạo lớn hơn bất lợi của nó.",
+     "en": [
+      "Overall, I believe that the benefits of artificial intelligence outweigh its drawbacks.",
+      "Overall, I believe the benefits of artificial intelligence outweigh its drawbacks."
+     ],
+     "use": "artificial intelligence",
+     "hint": "outweigh = lớn hơn · drawbacks = bất lợi"
+    }
+   ],
+   "prompt": "Some people think artificial intelligence will bring more benefits than problems. Write one body paragraph discussing its benefits and its main drawback.",
+   "prompt_vi": "Có người cho rằng trí tuệ nhân tạo sẽ mang lại nhiều lợi ích hơn vấn đề. Viết một đoạn thân bài bàn về lợi ích và bất lợi chính của nó.",
+   "own": "Children today spend too much time on smartphones. What problems does this cause? Write one paragraph (120–150 words).",
+   "own_vi": "Trẻ em ngày nay dành quá nhiều thời gian cho điện thoại. Điều này gây ra những vấn đề gì? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 4,
+   "topic": "health",
+   "title": "Health",
+   "forms": [
+    {
+     "head": "health",
+     "words": [
+      {
+       "w": "health",
+       "pos": "n",
+       "m": "sức khỏe"
+      },
+      {
+       "w": "healthy",
+       "pos": "adj",
+       "m": "khỏe mạnh, lành mạnh"
+      },
+      {
+       "w": "unhealthy",
+       "pos": "adj",
+       "m": "không lành mạnh"
+      },
+      {
+       "w": "healthily",
+       "pos": "adv",
+       "m": "một cách lành mạnh"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Fast food is ____ because it contains too much fat.",
+       "a": [
+        "unhealthy"
+       ],
+       "why": "sau \"is\" → tính từ mang nghĩa phủ định (không lành mạnh)"
+      },
+      {
+       "s": "Children should learn to eat ____.",
+       "a": [
+        "healthily"
+       ],
+       "why": "bổ nghĩa cho động từ \"eat\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "prevent",
+     "words": [
+      {
+       "w": "prevent",
+       "pos": "v",
+       "m": "ngăn ngừa"
+      },
+      {
+       "w": "prevention",
+       "pos": "n",
+       "m": "sự phòng ngừa"
+      },
+      {
+       "w": "preventive",
+       "pos": "adj",
+       "m": "mang tính phòng ngừa"
+      },
+      {
+       "w": "preventable",
+       "pos": "adj",
+       "m": "có thể phòng ngừa"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ is better than cure.",
+       "a": [
+        "Prevention"
+       ],
+       "why": "làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Many diseases are ____ if people exercise regularly.",
+       "a": [
+        "preventable"
+       ],
+       "why": "sau \"are\" → tính từ (có thể phòng ngừa)"
+      }
+     ]
+    },
+    {
+     "head": "obese",
+     "words": [
+      {
+       "w": "obese",
+       "pos": "adj",
+       "m": "béo phì"
+      },
+      {
+       "w": "obesity",
+       "pos": "n",
+       "m": "bệnh béo phì"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Junk food is one of the main causes of ____.",
+       "a": [
+        "obesity"
+       ],
+       "why": "sau giới từ \"of\" → danh từ"
+      },
+      {
+       "s": "____ children are prone to heart disease.",
+       "a": [
+        "Obese"
+       ],
+       "why": "đứng trước danh từ \"children\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "treat",
+     "words": [
+      {
+       "w": "treat",
+       "pos": "v",
+       "m": "điều trị"
+      },
+      {
+       "w": "treatment",
+       "pos": "n",
+       "m": "sự điều trị"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Medical ____ is very expensive in some countries.",
+       "a": [
+        "treatment"
+       ],
+       "why": "sau tính từ \"Medical\", làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Doctors ____ thousands of patients every year.",
+       "a": [
+        "treat"
+       ],
+       "why": "sau chủ ngữ \"Doctors\" → động từ"
+      }
+     ]
+    },
+    {
+     "head": "responsible",
+     "words": [
+      {
+       "w": "responsible",
+       "pos": "adj",
+       "m": "chịu trách nhiệm"
+      },
+      {
+       "w": "responsibility",
+       "pos": "n",
+       "m": "trách nhiệm"
+      },
+      {
+       "w": "responsibly",
+       "pos": "adv",
+       "m": "có trách nhiệm"
+      },
+      {
+       "w": "irresponsible",
+       "pos": "adj",
+       "m": "vô trách nhiệm"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Health is an individual ____.",
+       "a": [
+        "responsibility"
+       ],
+       "why": "sau tính từ \"individual\" → danh từ"
+      },
+      {
+       "s": "Each person is ____ for his or her own health.",
+       "a": [
+        "responsible"
+       ],
+       "why": "be + adj + for → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "inform",
+     "words": [
+      {
+       "w": "inform",
+       "pos": "v",
+       "m": "thông báo"
+      },
+      {
+       "w": "information",
+       "pos": "n",
+       "m": "thông tin"
+      },
+      {
+       "w": "informed",
+       "pos": "adj",
+       "m": "có hiểu biết, có thông tin"
+      },
+      {
+       "w": "informative",
+       "pos": "adj",
+       "m": "nhiều thông tin bổ ích"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Food labels help people make ____ choices.",
+       "a": [
+        "informed"
+       ],
+       "why": "đứng trước danh từ \"choices\" → tính từ (có hiểu biết)"
+      },
+      {
+       "s": "The campaign gives useful ____ about healthy eating.",
+       "a": [
+        "information"
+       ],
+       "why": "sau tính từ \"useful\" → danh từ (không đếm được)"
+      }
+     ]
+    },
+    {
+     "head": "medicine",
+     "words": [
+      {
+       "w": "medicine",
+       "pos": "n",
+       "m": "thuốc, y học"
+      },
+      {
+       "w": "medical",
+       "pos": "adj",
+       "m": "thuộc y tế"
+      },
+      {
+       "w": "medically",
+       "pos": "adv",
+       "m": "về mặt y tế"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Everyone should have access to ____ care.",
+       "a": [
+        "medical"
+       ],
+       "why": "đứng trước danh từ \"care\" → tính từ"
+      },
+      {
+       "s": "Modern ____ has increased life expectancy.",
+       "a": [
+        "medicine"
+       ],
+       "why": "sau tính từ \"Modern\", làm chủ ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "sugar",
+     "words": [
+      {
+       "w": "sugar",
+       "pos": "n",
+       "m": "đường"
+      },
+      {
+       "w": "sugary",
+       "pos": "adj",
+       "m": "có nhiều đường"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ drinks are bad for children's teeth.",
+       "a": [
+        "Sugary"
+       ],
+       "why": "đứng trước danh từ \"drinks\" → tính từ"
+      },
+      {
+       "s": "People should eat less ____.",
+       "a": [
+        "sugar"
+       ],
+       "why": "sau \"less\" (danh từ không đếm được) → danh từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "public health",
+     "m": "sức khỏe cộng đồng",
+     "ex": "Smoking is a serious threat to public health."
+    },
+    {
+     "type": "Phrase",
+     "term": "sugary drinks",
+     "m": "đồ uống có đường",
+     "ex": "Some countries tax sugary drinks."
+    },
+    {
+     "type": "Phrase",
+     "term": "work together",
+     "m": "chung tay, hợp tác",
+     "ex": "Families and schools should work together."
+    },
+    {
+     "type": "Word",
+     "term": "burden (n)",
+     "m": "gánh nặng",
+     "ex": "Obesity puts a heavy burden on the healthcare system."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "give up",
+     "m": "từ bỏ (thói quen)",
+     "ex": "He gave up smoking last year."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "work out",
+     "m": "tập luyện",
+     "ex": "I work out three times a week."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "take up",
+     "m": "bắt đầu (một môn thể thao, sở thích)",
+     "ex": "She took up swimming to stay healthy."
+    },
+    {
+     "type": "Idiom",
+     "term": "prevention is better than cure",
+     "m": "phòng bệnh hơn chữa bệnh",
+     "ex": "As the saying goes, prevention is better than cure."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Nhiều người tin rằng sức khỏe chủ yếu là trách nhiệm cá nhân.",
+     "en": [
+      "Many people believe that health is mainly an individual responsibility.",
+      "Many people believe health is mainly an individual responsibility."
+     ],
+     "use": "individual responsibility",
+     "hint": "mainly = chủ yếu"
+    },
+    {
+     "vi": "Thật vậy, mỗi người có thể duy trì lối sống lành mạnh bằng cách tập thể dục thường xuyên.",
+     "en": [
+      "Indeed, everyone can maintain a healthy lifestyle by taking regular exercise.",
+      "Indeed, people can maintain a healthy lifestyle by taking regular exercise."
+     ],
+     "use": "maintain a healthy lifestyle",
+     "hint": "by + V-ing = bằng cách"
+    },
+    {
+     "vi": "Họ cũng nên có một chế độ ăn cân bằng và cắt giảm đồ ăn vặt.",
+     "en": [
+      "They should also have a balanced diet and cut down on junk food.",
+      "They should also eat a balanced diet and cut down on junk food."
+     ],
+     "use": "cut down on",
+     "hint": "a balanced diet · junk food"
+    },
+    {
+     "vi": "Tuy nhiên, chính phủ cũng đóng vai trò quan trọng trong việc nâng cao sức khỏe cộng đồng.",
+     "en": [
+      "However, governments also play an important role in improving public health.",
+      "However, the government also plays an important role in improving public health."
+     ],
+     "use": "public health",
+     "hint": "play a role in + V-ing · improve = nâng cao"
+    },
+    {
+     "vi": "Ví dụ, họ có thể tăng thuế với các sản phẩm không lành mạnh như thuốc lá và đồ uống có đường.",
+     "en": [
+      "For example, they can raise taxes on unhealthy products such as cigarettes and sugary drinks.",
+      "For example, they can raise taxes on unhealthy products like cigarettes and sugary drinks."
+     ],
+     "use": "raise taxes on unhealthy products",
+     "hint": "cigarettes = thuốc lá · word form: sugary (adj)"
+    },
+    {
+     "vi": "Các chiến dịch y tế cộng đồng cũng giúp mọi người đưa ra lựa chọn có hiểu biết.",
+     "en": [
+      "Public health campaigns also help people make informed choices.",
+      "Public health campaigns also help people to make informed choices."
+     ],
+     "use": "make informed choices",
+     "hint": "help sb + V"
+    },
+    {
+     "vi": "Nếu không có những biện pháp phòng ngừa này, tỷ lệ béo phì sẽ tiếp tục tăng.",
+     "en": [
+      "Without these preventive measures, the obesity rate will continue to rise.",
+      "Without these preventive measures, the obesity rate will keep rising."
+     ],
+     "use": "preventive measures",
+     "hint": "without = nếu không có · continue to rise = tiếp tục tăng"
+    },
+    {
+     "vi": "Vì vậy, cả cá nhân và chính phủ nên chung tay để giảm gánh nặng cho hệ thống y tế.",
+     "en": [
+      "Therefore, both individuals and governments should work together to reduce the burden on the healthcare system."
+     ],
+     "use": "the healthcare system",
+     "hint": "both … and … = cả … và … · the burden on = gánh nặng cho"
+    }
+   ],
+   "prompt": "Some people think individuals are responsible for their own health. Others say governments should do more. Write one body paragraph giving your opinion.",
+   "prompt_vi": "Có người cho rằng mỗi người tự chịu trách nhiệm về sức khỏe của mình, người khác cho rằng chính phủ nên làm nhiều hơn. Viết một đoạn thân bài nêu quan điểm của bạn.",
+   "own": "Some people say governments should spend more money on preventing illness than on treating it. Do you agree? Write one paragraph (120–150 words).",
+   "own_vi": "Có người cho rằng chính phủ nên chi nhiều tiền cho việc phòng bệnh hơn là chữa bệnh. Bạn có đồng ý không? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 5,
+   "topic": "work",
+   "title": "Work & Career",
+   "forms": [
+    {
+     "head": "satisfy",
+     "words": [
+      {
+       "w": "satisfy",
+       "pos": "v",
+       "m": "làm hài lòng"
+      },
+      {
+       "w": "satisfaction",
+       "pos": "n",
+       "m": "sự hài lòng"
+      },
+      {
+       "w": "satisfied",
+       "pos": "adj",
+       "m": "hài lòng (người)"
+      },
+      {
+       "w": "satisfying",
+       "pos": "adj",
+       "m": "đem lại sự hài lòng (việc)"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Job ____ is more important than money.",
+       "a": [
+        "satisfaction"
+       ],
+       "why": "sau \"Job\", làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Workers who are ____ with their jobs work harder.",
+       "a": [
+        "satisfied"
+       ],
+       "why": "người cảm thấy hài lòng → satisfied with"
+      }
+     ]
+    },
+    {
+     "head": "employ",
+     "words": [
+      {
+       "w": "employ",
+       "pos": "v",
+       "m": "thuê, tuyển"
+      },
+      {
+       "w": "employment",
+       "pos": "n",
+       "m": "việc làm"
+      },
+      {
+       "w": "unemployment",
+       "pos": "n",
+       "m": "sự thất nghiệp"
+      },
+      {
+       "w": "unemployed",
+       "pos": "adj",
+       "m": "thất nghiệp"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The ____ rate is rising among young people.",
+       "a": [
+        "unemployment"
+       ],
+       "why": "sau \"The\", trước \"rate\" (the unemployment rate) → danh từ"
+      },
+      {
+       "s": "Many graduates remain ____ for months.",
+       "a": [
+        "unemployed"
+       ],
+       "why": "sau \"remain\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "achieve",
+     "words": [
+      {
+       "w": "achieve",
+       "pos": "v",
+       "m": "đạt được"
+      },
+      {
+       "w": "achievement",
+       "pos": "n",
+       "m": "thành tựu"
+      },
+      {
+       "w": "achievable",
+       "pos": "adj",
+       "m": "có thể đạt được"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "A good job gives people a sense of ____.",
+       "a": [
+        "achievement"
+       ],
+       "why": "sau giới từ \"of\" → danh từ"
+      },
+      {
+       "s": "Set goals that are ____.",
+       "a": [
+        "achievable"
+       ],
+       "why": "sau \"are\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "stress",
+     "words": [
+      {
+       "w": "stress",
+       "pos": "n",
+       "m": "sự căng thẳng"
+      },
+      {
+       "w": "stressful",
+       "pos": "adj",
+       "m": "gây căng thẳng"
+      },
+      {
+       "w": "stressed",
+       "pos": "adj",
+       "m": "bị căng thẳng (người)"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Nurses work in a very ____ environment.",
+       "a": [
+        "stressful"
+       ],
+       "why": "môi trường gây căng thẳng, trước danh từ → stressful"
+      },
+      {
+       "s": "Many office workers feel ____ at the end of the week.",
+       "a": [
+        "stressed"
+       ],
+       "why": "người cảm thấy căng thẳng → stressed"
+      }
+     ]
+    },
+    {
+     "head": "flexible",
+     "words": [
+      {
+       "w": "flexible",
+       "pos": "adj",
+       "m": "linh hoạt"
+      },
+      {
+       "w": "flexibility",
+       "pos": "n",
+       "m": "sự linh hoạt"
+      },
+      {
+       "w": "flexibly",
+       "pos": "adv",
+       "m": "một cách linh hoạt"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Parents need ____ working hours.",
+       "a": [
+        "flexible"
+       ],
+       "why": "đứng trước danh từ → tính từ"
+      },
+      {
+       "s": "Working from home offers more ____.",
+       "a": [
+        "flexibility"
+       ],
+       "why": "sau \"more\", làm tân ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "understand",
+     "words": [
+      {
+       "w": "understand",
+       "pos": "v",
+       "m": "hiểu"
+      },
+      {
+       "w": "understandable",
+       "pos": "adj",
+       "m": "dễ hiểu, có thể thông cảm"
+      },
+      {
+       "w": "understanding",
+       "pos": "n",
+       "m": "sự hiểu biết"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "It is ____ that young people want a high salary.",
+       "a": [
+        "understandable"
+       ],
+       "why": "It is + adj + that → tính từ"
+      },
+      {
+       "s": "This job requires a good ____ of computers.",
+       "a": [
+        "understanding"
+       ],
+       "why": "sau \"a good\", trước \"of\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "enjoy",
+     "words": [
+      {
+       "w": "enjoy",
+       "pos": "v",
+       "m": "thích"
+      },
+      {
+       "w": "enjoyment",
+       "pos": "n",
+       "m": "niềm vui"
+      },
+      {
+       "w": "enjoyable",
+       "pos": "adj",
+       "m": "thú vị"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "A good job should offer both money and ____.",
+       "a": [
+        "enjoyment"
+       ],
+       "why": "sau \"both money and\", làm tân ngữ → danh từ"
+      },
+      {
+       "s": "Working with friendly colleagues is ____.",
+       "a": [
+        "enjoyable"
+       ],
+       "why": "sau \"is\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "reason",
+     "words": [
+      {
+       "w": "reason",
+       "pos": "n",
+       "m": "lý do"
+      },
+      {
+       "w": "reasonable",
+       "pos": "adj",
+       "m": "hợp lý, phải chăng"
+      },
+      {
+       "w": "reasonably",
+       "pos": "adv",
+       "m": "khá, một cách hợp lý"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Everyone deserves a ____ income.",
+       "a": [
+        "reasonable"
+       ],
+       "why": "sau \"a\", trước danh từ \"income\" → tính từ"
+      },
+      {
+       "s": "The job is ____ well paid.",
+       "a": [
+        "reasonably"
+       ],
+       "why": "bổ nghĩa cho cụm \"well paid\" → trạng từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Word",
+     "term": "factor (n)",
+     "m": "yếu tố",
+     "ex": "Salary is an important factor when choosing a job."
+    },
+    {
+     "type": "Phrase",
+     "term": "support one's family",
+     "m": "chu cấp cho gia đình",
+     "ex": "Everyone needs money to support their family."
+    },
+    {
+     "type": "Word",
+     "term": "value (v)",
+     "m": "coi trọng",
+     "ex": "Young people value work-life balance."
+    },
+    {
+     "type": "Word",
+     "term": "income (n)",
+     "m": "thu nhập",
+     "ex": "A reasonable income is enough for a good life."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "burn out",
+     "m": "kiệt sức",
+     "ex": "Long working hours make many people burn out."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "take on",
+     "m": "đảm nhận (việc, trách nhiệm)",
+     "ex": "She took on more responsibility at work."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "set up",
+     "m": "thành lập (công ty)",
+     "ex": "He set up his own company at 25."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "give up",
+     "m": "từ bỏ",
+     "ex": "She gave up her job to travel."
+    },
+    {
+     "type": "Idiom",
+     "term": "work around the clock",
+     "m": "làm việc suốt ngày đêm",
+     "ex": "Many young doctors work around the clock."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Một số người cho rằng mức lương cao là yếu tố quan trọng nhất khi chọn việc.",
+     "en": [
+      "Some people argue that a high salary is the most important factor when choosing a job.",
+      "Some people think that a high salary is the most important factor when choosing a job."
+     ],
+     "use": "a high salary",
+     "hint": "factor = yếu tố · when + V-ing"
+    },
+    {
+     "vi": "Điều này dễ hiểu vì ai cũng cần tiền để chu cấp cho gia đình.",
+     "en": [
+      "This is understandable because everyone needs money to support their family.",
+      "This is understandable because everybody needs money to support their family."
+     ],
+     "use": "understandable",
+     "hint": "word form: understand → understandable · everyone needs (+s)"
+    },
+    {
+     "vi": "Tuy nhiên, tôi tin rằng sự hài lòng trong công việc quan trọng hơn.",
+     "en": [
+      "However, I believe that job satisfaction is more important.",
+      "However, I believe job satisfaction is more important."
+     ],
+     "use": "job satisfaction",
+     "hint": "more important = quan trọng hơn"
+    },
+    {
+     "vi": "Những người yêu thích công việc của mình thường có cảm giác thành tựu mỗi ngày.",
+     "en": [
+      "People who enjoy their work often have a sense of achievement every day.",
+      "People who love their jobs often have a sense of achievement every day."
+     ],
+     "use": "a sense of achievement",
+     "hint": "who + V · often đứng trước động từ thường"
+    },
+    {
+     "vi": "Ngược lại, giờ làm việc kéo dài trong một môi trường làm việc căng thẳng có thể khiến nhân viên kiệt sức.",
+     "en": [
+      "In contrast, long working hours in a stressful working environment can make employees burn out.",
+      "On the other hand, long working hours in a stressful working environment can make employees burn out."
+     ],
+     "use": "long working hours",
+     "hint": "make sb + V · burn out = kiệt sức"
+    },
+    {
+     "vi": "Ngoài ra, nhiều người trẻ coi trọng triển vọng nghề nghiệp và sự cân bằng giữa công việc và cuộc sống.",
+     "en": [
+      "In addition, many young people value career prospects and work-life balance.",
+      "Moreover, many young people value career prospects and work-life balance."
+     ],
+     "use": "career prospects",
+     "hint": "value (v) = coi trọng · work-life balance"
+    },
+    {
+     "vi": "Ví dụ, một công việc có giờ làm linh hoạt cho phép cha mẹ dành thời gian cho con cái.",
+     "en": [
+      "For example, a job with flexible working hours allows parents to spend time with their children.",
+      "For example, a job with flexible working hours allows parents to spend more time with their children."
+     ],
+     "use": "flexible working hours",
+     "hint": "allow sb to V"
+    },
+    {
+     "vi": "Tóm lại, một công việc tốt nên mang lại cả thu nhập hợp lý lẫn niềm vui.",
+     "en": [
+      "In conclusion, a good job should offer both a reasonable income and enjoyment.",
+      "In conclusion, a good job should provide both a reasonable income and enjoyment."
+     ],
+     "use": "enjoyment",
+     "hint": "both … and … · word form: reasonable (adj), enjoyment (n)"
+    }
+   ],
+   "prompt": "Some people think a high salary is the most important thing in a job. Others think job satisfaction matters more. Write one body paragraph giving your opinion.",
+   "prompt_vi": "Có người cho rằng lương cao là điều quan trọng nhất của một công việc, người khác cho rằng sự hài lòng trong công việc quan trọng hơn. Viết một đoạn thân bài nêu quan điểm của bạn.",
+   "own": "Is it better to work for a company or to be self-employed? Write one paragraph (120–150 words) giving your opinion.",
+   "own_vi": "Làm cho một công ty hay tự kinh doanh thì tốt hơn? Viết một đoạn (120–150 từ) nêu quan điểm của bạn."
+  },
+  {
+   "week": 6,
+   "topic": "crime",
+   "title": "Crime & Law",
+   "forms": [
+    {
+     "head": "crime",
+     "words": [
+      {
+       "w": "crime",
+       "pos": "n",
+       "m": "tội phạm, tội ác"
+      },
+      {
+       "w": "criminal",
+       "pos": "n/adj",
+       "m": "kẻ phạm tội, thuộc tội phạm"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Most ____ come from poor families.",
+       "a": [
+        "criminals"
+       ],
+       "why": "sau \"Most\", làm chủ ngữ số nhiều chỉ người → danh từ (criminals)"
+      },
+      {
+       "s": "A ____ record makes it hard to find a job.",
+       "a": [
+        "criminal"
+       ],
+       "why": "đứng trước danh từ \"record\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "offend",
+     "words": [
+      {
+       "w": "offend",
+       "pos": "v",
+       "m": "phạm tội, xúc phạm"
+      },
+      {
+       "w": "offender",
+       "pos": "n",
+       "m": "người phạm tội"
+      },
+      {
+       "w": "offence",
+       "pos": "n",
+       "m": "hành vi phạm tội"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Young ____ should get a second chance.",
+       "a": [
+        "offenders"
+       ],
+       "why": "sau tính từ \"Young\", chỉ người, số nhiều → danh từ"
+      },
+      {
+       "s": "Stealing a bike is a minor ____.",
+       "a": [
+        "offence"
+       ],
+       "why": "sau tính từ \"minor\" → danh từ chỉ hành vi"
+      }
+     ]
+    },
+    {
+     "head": "punish",
+     "words": [
+      {
+       "w": "punish",
+       "pos": "v",
+       "m": "trừng phạt"
+      },
+      {
+       "w": "punishment",
+       "pos": "n",
+       "m": "hình phạt"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Harsh ____ does not always stop crime.",
+       "a": [
+        "punishment"
+       ],
+       "why": "sau tính từ \"Harsh\", làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Parents should not ____ children too harshly.",
+       "a": [
+        "punish"
+       ],
+       "why": "sau \"should not\" → động từ nguyên mẫu"
+      }
+     ]
+    },
+    {
+     "head": "prison",
+     "words": [
+      {
+       "w": "prison",
+       "pos": "n",
+       "m": "nhà tù"
+      },
+      {
+       "w": "prisoner",
+       "pos": "n",
+       "m": "tù nhân"
+      },
+      {
+       "w": "imprison",
+       "pos": "v",
+       "m": "bỏ tù"
+      },
+      {
+       "w": "imprisonment",
+       "pos": "n",
+       "m": "sự giam giữ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Many ____ reoffend after they are released.",
+       "a": [
+        "prisoners"
+       ],
+       "why": "người, làm chủ ngữ số nhiều → danh từ chỉ người"
+      },
+      {
+       "s": "Life ____ is used instead of the death penalty in many countries.",
+       "a": [
+        "imprisonment"
+       ],
+       "why": "sau \"Life\" (tù chung thân) → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "violence",
+     "words": [
+      {
+       "w": "violence",
+       "pos": "n",
+       "m": "bạo lực"
+      },
+      {
+       "w": "violent",
+       "pos": "adj",
+       "m": "bạo lực"
+      },
+      {
+       "w": "violently",
+       "pos": "adv",
+       "m": "một cách bạo lực"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ crime has fallen in many cities.",
+       "a": [
+        "Violent"
+       ],
+       "why": "đứng trước danh từ \"crime\" → tính từ"
+      },
+      {
+       "s": "Children who watch ____ on TV may become aggressive.",
+       "a": [
+        "violence"
+       ],
+       "why": "sau động từ \"watch\", làm tân ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "legal",
+     "words": [
+      {
+       "w": "legal",
+       "pos": "adj",
+       "m": "hợp pháp, thuộc pháp luật"
+      },
+      {
+       "w": "illegal",
+       "pos": "adj",
+       "m": "bất hợp pháp"
+      },
+      {
+       "w": "legally",
+       "pos": "adv",
+       "m": "một cách hợp pháp"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Selling drugs is ____ in most countries.",
+       "a": [
+        "illegal"
+       ],
+       "why": "sau \"is\", nghĩa phủ định → tính từ (illegal)"
+      },
+      {
+       "s": "The ____ system should treat everyone equally.",
+       "a": [
+        "legal"
+       ],
+       "why": "đứng trước danh từ \"system\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "poor",
+     "words": [
+      {
+       "w": "poor",
+       "pos": "adj",
+       "m": "nghèo"
+      },
+      {
+       "w": "poverty",
+       "pos": "n",
+       "m": "sự nghèo đói"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ is one of the root causes of crime.",
+       "a": [
+        "Poverty"
+       ],
+       "why": "làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Children from ____ families need more support.",
+       "a": [
+        "poor"
+       ],
+       "why": "đứng trước danh từ \"families\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "equal",
+     "words": [
+      {
+       "w": "equal",
+       "pos": "adj",
+       "m": "bình đẳng"
+      },
+      {
+       "w": "equality",
+       "pos": "n",
+       "m": "sự bình đẳng"
+      },
+      {
+       "w": "inequality",
+       "pos": "n",
+       "m": "sự bất bình đẳng"
+      },
+      {
+       "w": "equally",
+       "pos": "adv",
+       "m": "một cách bình đẳng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Social ____ can lead to crime.",
+       "a": [
+        "inequality"
+       ],
+       "why": "sau \"Social\", nghĩa tiêu cực → danh từ (inequality)"
+      },
+      {
+       "s": "The law should treat rich and poor people ____.",
+       "a": [
+        "equally"
+       ],
+       "why": "bổ nghĩa cho động từ \"treat\" → trạng từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Word",
+     "term": "offender (n)",
+     "m": "người phạm tội",
+     "ex": "Many offenders cannot find jobs after prison."
+    },
+    {
+     "type": "Phrase",
+     "term": "lead an honest life",
+     "m": "sống lương thiện",
+     "ex": "Education helps prisoners lead an honest life."
+    },
+    {
+     "type": "Phrase",
+     "term": "a second chance",
+     "m": "cơ hội thứ hai",
+     "ex": "Young offenders deserve a second chance."
+    },
+    {
+     "type": "Word",
+     "term": "poverty (n)",
+     "m": "nghèo đói",
+     "ex": "Poverty pushes some people into crime."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "turn to crime",
+     "m": "sa vào con đường phạm tội",
+     "ex": "Some jobless young people turn to crime."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "get away with",
+     "m": "thoát tội, không bị phạt",
+     "ex": "Criminals should not get away with their crimes."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "break into",
+     "m": "đột nhập",
+     "ex": "Thieves broke into the shop last night."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "lock up",
+     "m": "nhốt, bỏ tù",
+     "ex": "Locking up every offender is very expensive."
+    },
+    {
+     "type": "Idiom",
+     "term": "a vicious circle",
+     "m": "vòng luẩn quẩn",
+     "ex": "Poverty and crime create a vicious circle."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Nhiều người tin rằng hình phạt nặng hơn là cách tốt nhất để giảm tỷ lệ tội phạm.",
+     "en": [
+      "Many people believe that harsher penalties are the best way to reduce the crime rate.",
+      "Many people believe harsher penalties are the best way to reduce the crime rate."
+     ],
+     "use": "the crime rate",
+     "hint": "harsher penalties = hình phạt nặng hơn · the best way to V"
+    },
+    {
+     "vi": "Tuy nhiên, tôi cho rằng chỉ bỏ tù thôi là không đủ.",
+     "en": [
+      "However, I would argue that prison alone is not enough.",
+      "However, I would argue that prison alone isn't enough.",
+      "However, I think that prison alone is not enough."
+     ],
+     "use": "prison",
+     "hint": "alone = chỉ … thôi · I would argue that"
+    },
+    {
+     "vi": "Nhiều người phạm tội tái phạm ngay sau khi chấp hành án tù.",
+     "en": [
+      "Many offenders reoffend soon after they serve a prison sentence.",
+      "Many offenders reoffend soon after serving a prison sentence."
+     ],
+     "use": "serve a prison sentence",
+     "hint": "offenders = người phạm tội · soon after = ngay sau khi"
+    },
+    {
+     "vi": "Điều này là vì có tiền án khiến họ rất khó tìm việc.",
+     "en": [
+      "This is because having a criminal record makes it very difficult for them to find a job.",
+      "This is because having a criminal record makes it very hard for them to find a job."
+     ],
+     "use": "a criminal record",
+     "hint": "make it difficult for sb to V"
+    },
+    {
+     "vi": "Vì vậy, chính phủ nên cải tạo người phạm tội thông qua giáo dục và đào tạo nghề.",
+     "en": [
+      "Therefore, governments should rehabilitate offenders through education and vocational training."
+     ],
+     "use": "rehabilitate offenders",
+     "hint": "through = thông qua · vocational training (tuần 1)"
+    },
+    {
+     "vi": "Điều này giúp họ tái hòa nhập cộng đồng và sống lương thiện.",
+     "en": [
+      "This helps them reintegrate into society and lead an honest life.",
+      "This helps them to reintegrate into society and lead an honest life."
+     ],
+     "use": "reintegrate into society",
+     "hint": "lead an honest life = sống lương thiện"
+    },
+    {
+     "vi": "Hơn nữa, chúng ta cần giải quyết nguyên nhân gốc rễ của tội phạm, như nghèo đói và bất bình đẳng xã hội.",
+     "en": [
+      "Moreover, we need to tackle the root causes of crime, such as poverty and social inequality.",
+      "Furthermore, we need to tackle the root causes of crime, such as poverty and social inequality."
+     ],
+     "use": "the root causes of crime",
+     "hint": "tackle = giải quyết · poverty · social inequality"
+    },
+    {
+     "vi": "Ví dụ, các câu lạc bộ thể thao có thể giữ thanh thiếu niên tránh xa đường phố.",
+     "en": [
+      "For example, sports clubs can keep young people off the streets.",
+      "For instance, sports clubs can keep young people off the streets."
+     ],
+     "use": "keep young people off the streets",
+     "hint": "sports clubs = câu lạc bộ thể thao"
+    }
+   ],
+   "prompt": "Some people think that putting criminals in prison is the best way to reduce crime. Write one body paragraph explaining why other methods are also needed.",
+   "prompt_vi": "Có người cho rằng bỏ tù tội phạm là cách tốt nhất để giảm tội phạm. Viết một đoạn thân bài giải thích vì sao cần cả những biện pháp khác.",
+   "own": "Should young people who commit minor crimes be sent to prison or do community service? Write one paragraph (120–150 words).",
+   "own_vi": "Thanh thiếu niên phạm tội nhẹ nên bị bỏ tù hay làm lao động công ích? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 7,
+   "topic": "government",
+   "title": "Government & Society",
+   "forms": [
+    {
+     "head": "govern",
+     "words": [
+      {
+       "w": "govern",
+       "pos": "v",
+       "m": "cai quản"
+      },
+      {
+       "w": "government",
+       "pos": "n",
+       "m": "chính phủ"
+      },
+      {
+       "w": "governmental",
+       "pos": "adj",
+       "m": "thuộc chính phủ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The ____ should build more schools.",
+       "a": [
+        "government"
+       ],
+       "why": "sau \"The\", làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Many charities work with ____ organisations.",
+       "a": [
+        "governmental"
+       ],
+       "why": "đứng trước danh từ \"organisations\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "afford",
+     "words": [
+      {
+       "w": "afford",
+       "pos": "v",
+       "m": "có đủ tiền"
+      },
+      {
+       "w": "affordable",
+       "pos": "adj",
+       "m": "giá phải chăng"
+      },
+      {
+       "w": "affordability",
+       "pos": "n",
+       "m": "khả năng chi trả"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Young couples cannot ____ to buy a house.",
+       "a": [
+        "afford"
+       ],
+       "why": "sau \"cannot\" → động từ nguyên mẫu"
+      },
+      {
+       "s": "The city needs more ____ housing.",
+       "a": [
+        "affordable"
+       ],
+       "why": "đứng trước danh từ \"housing\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "priority",
+     "words": [
+      {
+       "w": "priority",
+       "pos": "n",
+       "m": "sự ưu tiên"
+      },
+      {
+       "w": "prioritise",
+       "pos": "v",
+       "m": "ưu tiên"
+      },
+      {
+       "w": "prior",
+       "pos": "adj",
+       "m": "trước"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Health care should be a top ____.",
+       "a": [
+        "priority"
+       ],
+       "why": "sau \"a top\" → danh từ"
+      },
+      {
+       "s": "Governments must ____ education and health.",
+       "a": [
+        "prioritise"
+       ],
+       "why": "sau \"must\" → động từ nguyên mẫu"
+      }
+     ]
+    },
+    {
+     "head": "vulnerable",
+     "words": [
+      {
+       "w": "vulnerable",
+       "pos": "adj",
+       "m": "dễ bị tổn thương"
+      },
+      {
+       "w": "vulnerability",
+       "pos": "n",
+       "m": "sự dễ bị tổn thương"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The elderly are one of the most ____ groups.",
+       "a": [
+        "vulnerable"
+       ],
+       "why": "\"the most + adj\" đứng trước danh từ → tính từ"
+      },
+      {
+       "s": "Poor children show great ____ in a crisis.",
+       "a": [
+        "vulnerability"
+       ],
+       "why": "sau tính từ \"great\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "strong",
+     "words": [
+      {
+       "w": "strong",
+       "pos": "adj",
+       "m": "mạnh"
+      },
+      {
+       "w": "strength",
+       "pos": "n",
+       "m": "sức mạnh"
+      },
+      {
+       "w": "strengthen",
+       "pos": "v",
+       "m": "củng cố"
+      },
+      {
+       "w": "strongly",
+       "pos": "adv",
+       "m": "mạnh mẽ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Festivals help to ____ social cohesion.",
+       "a": [
+        "strengthen"
+       ],
+       "why": "sau \"help to\" → động từ (làm cho mạnh hơn)"
+      },
+      {
+       "s": "I ____ believe that education should be free.",
+       "a": [
+        "strongly"
+       ],
+       "why": "bổ nghĩa cho động từ \"believe\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "fund",
+     "words": [
+      {
+       "w": "fund",
+       "pos": "n/v",
+       "m": "quỹ, tài trợ"
+      },
+      {
+       "w": "funding",
+       "pos": "n",
+       "m": "nguồn tài trợ"
+      },
+      {
+       "w": "underfunded",
+       "pos": "adj",
+       "m": "thiếu kinh phí"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Many rural schools are ____.",
+       "a": [
+        "underfunded"
+       ],
+       "why": "sau \"are\", nghĩa là thiếu tiền → tính từ"
+      },
+      {
+       "s": "Museums need more ____ from the state.",
+       "a": [
+        "funding"
+       ],
+       "why": "sau \"more\", làm tân ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "important",
+     "words": [
+      {
+       "w": "important",
+       "pos": "adj",
+       "m": "quan trọng"
+      },
+      {
+       "w": "importance",
+       "pos": "n",
+       "m": "tầm quan trọng"
+      },
+      {
+       "w": "unimportant",
+       "pos": "adj",
+       "m": "không quan trọng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "This does not mean that the arts are ____.",
+       "a": [
+        "unimportant"
+       ],
+       "why": "sau \"are\", nghĩa phủ định → tính từ"
+      },
+      {
+       "s": "People should understand the ____ of public services.",
+       "a": [
+        "importance"
+       ],
+       "why": "sau \"the\", trước \"of\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "benefit",
+     "words": [
+      {
+       "w": "benefit",
+       "pos": "n/v",
+       "m": "lợi ích, có lợi"
+      },
+      {
+       "w": "beneficial",
+       "pos": "adj",
+       "m": "có lợi"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Public parks are ____ to everyone.",
+       "a": [
+        "beneficial"
+       ],
+       "why": "sau \"are\", trước \"to\" → tính từ (beneficial to)"
+      },
+      {
+       "s": "Free health care would ____ poor families.",
+       "a": [
+        "benefit"
+       ],
+       "why": "sau \"would\" → động từ nguyên mẫu"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "a limited budget",
+     "m": "ngân sách hạn chế",
+     "ex": "Governments have a limited budget."
+    },
+    {
+     "type": "Word",
+     "term": "ensure (v)",
+     "m": "đảm bảo",
+     "ex": "Free schools ensure that every child can study."
+    },
+    {
+     "type": "Phrase",
+     "term": "strengthen social cohesion",
+     "m": "tăng cường gắn kết xã hội",
+     "ex": "Sports events strengthen social cohesion."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "cut back on",
+     "m": "cắt giảm (chi tiêu)",
+     "ex": "The government cut back on spending for the arts."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "set aside",
+     "m": "dành riêng ra (tiền)",
+     "ex": "Cities should set aside money for parks."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "pay for",
+     "m": "chi trả cho",
+     "ex": "Taxpayers pay for public services."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "look after",
+     "m": "chăm sóc",
+     "ex": "The state should look after vulnerable people."
+    },
+    {
+     "type": "Idiom",
+     "term": "a drop in the ocean",
+     "m": "muối bỏ bể",
+     "ex": "The money for the arts is a drop in the ocean."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Chính phủ có ngân sách hạn chế, vì vậy họ phải quyết định đâu là ưu tiên hàng đầu.",
+     "en": [
+      "Governments have a limited budget, so they must decide what the top priority is.",
+      "Governments have a limited budget, so they have to decide what the top priority is."
+     ],
+     "use": "top priority",
+     "hint": "a limited budget = ngân sách hạn chế"
+    },
+    {
+     "vi": "Theo tôi, trước hết họ nên phân bổ ngân sách cho các dịch vụ công.",
+     "en": [
+      "In my opinion, they should allocate funds to public services first.",
+      "In my view, they should allocate funds to public services first.",
+      "In my opinion, they should first allocate funds to public services."
+     ],
+     "use": "allocate funds to",
+     "hint": "first = trước hết"
+    },
+    {
+     "vi": "Ví dụ, bệnh viện và trường học cần được nhà nước tài trợ.",
+     "en": [
+      "For example, hospitals and schools need to be funded by the state.",
+      "For instance, hospitals and schools need to be funded by the state."
+     ],
+     "use": "be funded by the state",
+     "hint": "need to be + V3 (bị động)"
+    },
+    {
+     "vi": "Điều này đảm bảo rằng các nhóm dễ bị tổn thương cũng có cơ hội bình đẳng.",
+     "en": [
+      "This ensures that vulnerable groups also have equal opportunities.",
+      "This ensures that vulnerable groups have equal opportunities too."
+     ],
+     "use": "vulnerable groups",
+     "hint": "ensure that = đảm bảo rằng · equal opportunities"
+    },
+    {
+     "vi": "Ngoài ra, nhà ở giá phải chăng có thể giảm tình trạng vô gia cư ở các thành phố lớn.",
+     "en": [
+      "In addition, affordable housing can reduce homelessness in big cities.",
+      "Moreover, affordable housing can reduce homelessness in big cities."
+     ],
+     "use": "affordable housing",
+     "hint": "homelessness = tình trạng vô gia cư"
+    },
+    {
+     "vi": "Tuy nhiên, điều đó không có nghĩa là nghệ thuật không quan trọng.",
+     "en": [
+      "However, this does not mean that the arts are unimportant.",
+      "However, this doesn't mean that the arts are unimportant.",
+      "However, this does not mean that the arts are not important."
+     ],
+     "use": "the arts",
+     "hint": "the arts (số nhiều) + are · word form: unimportant"
+    },
+    {
+     "vi": "Bảo tàng và nhà hát giúp tăng cường sự gắn kết xã hội.",
+     "en": [
+      "Museums and theatres help to strengthen social cohesion.",
+      "Museums and theatres help strengthen social cohesion.",
+      "Museums and theaters help strengthen social cohesion."
+     ],
+     "use": "social cohesion",
+     "hint": "word form: strong → strengthen (v)"
+    },
+    {
+     "vi": "Vì vậy, chính phủ nên dành phần lớn tiền thuế của người dân cho dịch vụ công và một phần nhỏ cho nghệ thuật.",
+     "en": [
+      "Therefore, governments should spend most taxpayers' money on public services and a small part on the arts.",
+      "Therefore, governments should spend most of the taxpayers' money on public services and a small part on the arts."
+     ],
+     "use": "taxpayers' money",
+     "hint": "spend money on = chi tiền cho"
+    }
+   ],
+   "prompt": "Some people think governments should spend money on public services rather than on the arts. Write one body paragraph giving your opinion.",
+   "prompt_vi": "Có người cho rằng chính phủ nên chi tiền cho dịch vụ công thay vì nghệ thuật. Viết một đoạn thân bài nêu quan điểm của bạn.",
+   "own": "Some people think governments should provide free housing for poor people. Do you agree? Write one paragraph (120–150 words).",
+   "own_vi": "Có người cho rằng chính phủ nên cung cấp nhà ở miễn phí cho người nghèo. Bạn có đồng ý không? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 8,
+   "topic": "economy",
+   "title": "Economy & Business",
+   "forms": [
+    {
+     "head": "economy",
+     "words": [
+      {
+       "w": "economy",
+       "pos": "n",
+       "m": "nền kinh tế"
+      },
+      {
+       "w": "economic",
+       "pos": "adj",
+       "m": "thuộc kinh tế"
+      },
+      {
+       "w": "economical",
+       "pos": "adj",
+       "m": "tiết kiệm"
+      },
+      {
+       "w": "economically",
+       "pos": "adv",
+       "m": "về mặt kinh tế"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ growth creates many new jobs.",
+       "a": [
+        "Economic"
+       ],
+       "why": "đứng trước danh từ \"growth\", nghĩa \"thuộc kinh tế\" → economic"
+      },
+      {
+       "s": "Small cars are more ____ than big ones.",
+       "a": [
+        "economical"
+       ],
+       "why": "nghĩa \"tiết kiệm (xăng, tiền)\" → economical"
+      }
+     ]
+    },
+    {
+     "head": "consume",
+     "words": [
+      {
+       "w": "consume",
+       "pos": "v",
+       "m": "tiêu thụ"
+      },
+      {
+       "w": "consumer",
+       "pos": "n",
+       "m": "người tiêu dùng"
+      },
+      {
+       "w": "consumption",
+       "pos": "n",
+       "m": "sự tiêu thụ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ are buying more products online.",
+       "a": [
+        "Consumers"
+       ],
+       "why": "người, làm chủ ngữ số nhiều → danh từ chỉ người"
+      },
+      {
+       "s": "We should ____ less and recycle more.",
+       "a": [
+        "consume"
+       ],
+       "why": "sau \"should\" → động từ nguyên mẫu"
+      }
+     ]
+    },
+    {
+     "head": "produce",
+     "words": [
+      {
+       "w": "produce",
+       "pos": "v",
+       "m": "sản xuất"
+      },
+      {
+       "w": "product",
+       "pos": "n",
+       "m": "sản phẩm"
+      },
+      {
+       "w": "production",
+       "pos": "n",
+       "m": "sự sản xuất"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Cheap ____ often break easily.",
+       "a": [
+        "products"
+       ],
+       "why": "sau tính từ \"Cheap\", làm chủ ngữ số nhiều → danh từ (sản phẩm)"
+      },
+      {
+       "s": "Factory ____ has increased by 10%.",
+       "a": [
+        "production"
+       ],
+       "why": "sau \"Factory\", nghĩa \"sự sản xuất\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "profit",
+     "words": [
+      {
+       "w": "profit",
+       "pos": "n",
+       "m": "lợi nhuận"
+      },
+      {
+       "w": "profitable",
+       "pos": "adj",
+       "m": "có lãi"
+      },
+      {
+       "w": "profitably",
+       "pos": "adv",
+       "m": "có lãi"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Online shops are very ____.",
+       "a": [
+        "profitable"
+       ],
+       "why": "sau \"are very\" → tính từ"
+      },
+      {
+       "s": "Companies want to make a ____.",
+       "a": [
+        "profit"
+       ],
+       "why": "sau \"make a\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "finance",
+     "words": [
+      {
+       "w": "finance",
+       "pos": "n",
+       "m": "tài chính"
+      },
+      {
+       "w": "financial",
+       "pos": "adj",
+       "m": "thuộc tài chính"
+      },
+      {
+       "w": "financially",
+       "pos": "adv",
+       "m": "về mặt tài chính"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Many students face a ____ burden after university.",
+       "a": [
+        "financial"
+       ],
+       "why": "đứng trước danh từ \"burden\" → tính từ"
+      },
+      {
+       "s": "Young people want to be ____ independent.",
+       "a": [
+        "financially"
+       ],
+       "why": "bổ nghĩa cho tính từ \"independent\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "grow",
+     "words": [
+      {
+       "w": "grow",
+       "pos": "v",
+       "m": "tăng trưởng"
+      },
+      {
+       "w": "growth",
+       "pos": "n",
+       "m": "sự tăng trưởng"
+      },
+      {
+       "w": "growing",
+       "pos": "adj",
+       "m": "ngày càng tăng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Economic ____ has improved living standards.",
+       "a": [
+        "growth"
+       ],
+       "why": "sau \"Economic\", làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "A ____ number of people shop online.",
+       "a": [
+        "growing"
+       ],
+       "why": "\"a + adj + number of\" → tính từ (ngày càng tăng)"
+      }
+     ]
+    },
+    {
+     "head": "invest",
+     "words": [
+      {
+       "w": "invest",
+       "pos": "v",
+       "m": "đầu tư"
+      },
+      {
+       "w": "investment",
+       "pos": "n",
+       "m": "khoản đầu tư"
+      },
+      {
+       "w": "investor",
+       "pos": "n",
+       "m": "nhà đầu tư"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Foreign ____ creates jobs.",
+       "a": [
+        "investment"
+       ],
+       "why": "sau \"Foreign\", làm chủ ngữ → danh từ (khoản đầu tư)"
+      },
+      {
+       "s": "____ are attracted by cheap labour.",
+       "a": [
+        "Investors"
+       ],
+       "why": "người, làm chủ ngữ số nhiều → danh từ chỉ người"
+      }
+     ]
+    },
+    {
+     "head": "wealth",
+     "words": [
+      {
+       "w": "wealth",
+       "pos": "n",
+       "m": "của cải, sự giàu có"
+      },
+      {
+       "w": "wealthy",
+       "pos": "adj",
+       "m": "giàu có"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Material ____ does not always bring happiness.",
+       "a": [
+        "wealth"
+       ],
+       "why": "sau \"Material\", làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "____ people should pay higher taxes.",
+       "a": [
+        "Wealthy"
+       ],
+       "why": "đứng trước danh từ \"people\" → tính từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Word",
+     "term": "goods (n)",
+     "m": "hàng hóa",
+     "ex": "People buy more goods than ever before."
+    },
+    {
+     "type": "Phrase",
+     "term": "developing countries",
+     "m": "các nước đang phát triển",
+     "ex": "Foreign investment helps developing countries."
+    },
+    {
+     "type": "Phrase",
+     "term": "than ever before",
+     "m": "hơn bao giờ hết",
+     "ex": "People shop online more than ever before."
+    },
+    {
+     "type": "Phrase",
+     "term": "create jobs",
+     "m": "tạo việc làm",
+     "ex": "New factories create jobs for local people."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "pay off",
+     "m": "trả hết (nợ)",
+     "ex": "It took him ten years to pay off his loan."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "run out of",
+     "m": "hết (tiền)",
+     "ex": "Many people run out of money before payday."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "take out a loan",
+     "m": "vay tiền",
+     "ex": "They took out a loan to buy a house."
+    },
+    {
+     "type": "Idiom",
+     "term": "tighten one's belt",
+     "m": "thắt lưng buộc bụng",
+     "ex": "During a crisis, families have to tighten their belts."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Trong một xã hội tiêu dùng, mọi người mua nhiều hàng hóa hơn bao giờ hết.",
+     "en": [
+      "In a consumer society, people buy more goods than ever before.",
+      "In a consumer society, people are buying more goods than ever before."
+     ],
+     "use": "a consumer society",
+     "hint": "goods = hàng hóa · than ever before"
+    },
+    {
+     "vi": "Một mặt, nhu cầu tiêu dùng cao thúc đẩy nền kinh tế.",
+     "en": [
+      "On the one hand, high consumer demand boosts the economy."
+     ],
+     "use": "boost the economy",
+     "hint": "on the one hand = một mặt · consumer demand"
+    },
+    {
+     "vi": "Các doanh nghiệp có thể kiếm lợi nhuận và tạo việc làm cho người dân địa phương.",
+     "en": [
+      "Businesses can make a profit and create jobs for local people.",
+      "Companies can make a profit and create jobs for local people."
+     ],
+     "use": "make a profit",
+     "hint": "create jobs = tạo việc làm"
+    },
+    {
+     "vi": "Điều này giúp nâng cao mức sống ở nhiều nước đang phát triển.",
+     "en": [
+      "This helps to raise living standards in many developing countries.",
+      "This helps raise living standards in many developing countries."
+     ],
+     "use": "raise living standards",
+     "hint": "developing countries = nước đang phát triển"
+    },
+    {
+     "vi": "Mặt khác, nhiều người tiêu xài quá khả năng và gặp gánh nặng tài chính.",
+     "en": [
+      "On the other hand, many people live beyond their means and face a financial burden.",
+      "On the other hand, many people live beyond their means and have a financial burden."
+     ],
+     "use": "live beyond one's means",
+     "hint": "one's → their · face = gặp phải"
+    },
+    {
+     "vi": "Họ thường không tiết kiệm tiền cho tương lai.",
+     "en": [
+      "They often do not save money for the future.",
+      "They often don't save money for the future."
+     ],
+     "use": "save money for the future",
+     "hint": "often đứng trước \"do not\"? → They often do not …"
+    },
+    {
+     "vi": "Hơn nữa, tăng trưởng kinh tế đôi khi đạt được bằng cái giá là môi trường.",
+     "en": [
+      "Moreover, economic growth is sometimes achieved at the expense of the environment.",
+      "Furthermore, economic growth is sometimes achieved at the expense of the environment."
+     ],
+     "use": "at the expense of",
+     "hint": "bị động: is achieved · economic growth"
+    },
+    {
+     "vi": "Vì vậy, tôi cho rằng chúng ta nên tiêu dùng có trách nhiệm hơn.",
+     "en": [
+      "Therefore, I would argue that we should consume more responsibly.",
+      "Therefore, I think that we should consume more responsibly."
+     ],
+     "use": "responsibly",
+     "hint": "word form: consume (v) · responsibly (adv) bổ nghĩa cho động từ"
+    }
+   ],
+   "prompt": "In a consumer society, people buy more and more goods. Do the advantages of this outweigh the disadvantages? Write one body paragraph.",
+   "prompt_vi": "Trong xã hội tiêu dùng, con người mua ngày càng nhiều hàng hóa. Lợi ích của điều này có lớn hơn bất lợi không? Viết một đoạn thân bài.",
+   "own": "Some people think it is better to save money for the future than to spend it now. Do you agree? Write one paragraph (120–150 words).",
+   "own_vi": "Có người cho rằng tiết kiệm tiền cho tương lai tốt hơn là tiêu ngay bây giờ. Bạn có đồng ý không? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 9,
+   "topic": "media",
+   "title": "Media & Advertising",
+   "forms": [
+    {
+     "head": "advertise",
+     "words": [
+      {
+       "w": "advertise",
+       "pos": "v",
+       "m": "quảng cáo"
+      },
+      {
+       "w": "advertisement / advert",
+       "pos": "n",
+       "m": "mẩu quảng cáo"
+      },
+      {
+       "w": "advertising",
+       "pos": "n",
+       "m": "ngành/hoạt động quảng cáo"
+      },
+      {
+       "w": "advertiser",
+       "pos": "n",
+       "m": "nhà quảng cáo"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Companies spend millions to ____ their products.",
+       "a": [
+        "advertise"
+       ],
+       "why": "sau \"to\" → động từ nguyên mẫu"
+      },
+      {
+       "s": "____ often target young consumers.",
+       "a": [
+        "Advertisers"
+       ],
+       "why": "người/công ty quảng cáo, làm chủ ngữ số nhiều → danh từ chỉ người"
+      }
+     ]
+    },
+    {
+     "head": "persuade",
+     "words": [
+      {
+       "w": "persuade",
+       "pos": "v",
+       "m": "thuyết phục"
+      },
+      {
+       "w": "persuasion",
+       "pos": "n",
+       "m": "sự thuyết phục"
+      },
+      {
+       "w": "persuasive",
+       "pos": "adj",
+       "m": "có sức thuyết phục"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "TV adverts are very ____.",
+       "a": [
+        "persuasive"
+       ],
+       "why": "sau \"are very\" → tính từ"
+      },
+      {
+       "s": "Adverts ____ children to ask for toys.",
+       "a": [
+        "persuade"
+       ],
+       "why": "sau chủ ngữ → động từ (persuade sb to V)"
+      }
+     ]
+    },
+    {
+     "head": "influence",
+     "words": [
+      {
+       "w": "influence",
+       "pos": "n/v",
+       "m": "ảnh hưởng, gây ảnh hưởng"
+      },
+      {
+       "w": "influential",
+       "pos": "adj",
+       "m": "có ảnh hưởng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Celebrities are very ____ on social media.",
+       "a": [
+        "influential"
+       ],
+       "why": "sau \"are very\" → tính từ"
+      },
+      {
+       "s": "Advertising has a strong ____ on teenagers.",
+       "a": [
+        "influence"
+       ],
+       "why": "sau \"a strong\", trước \"on\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "mislead",
+     "words": [
+      {
+       "w": "mislead",
+       "pos": "v",
+       "m": "làm hiểu lầm"
+      },
+      {
+       "w": "misleading",
+       "pos": "adj",
+       "m": "gây hiểu lầm"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Some adverts ____ consumers about the price.",
+       "a": [
+        "mislead"
+       ],
+       "why": "sau chủ ngữ → động từ"
+      },
+      {
+       "s": "____ advertisements should be banned.",
+       "a": [
+        "Misleading"
+       ],
+       "why": "đứng trước danh từ → tính từ (V-ing)"
+      }
+     ]
+    },
+    {
+     "head": "entertain",
+     "words": [
+      {
+       "w": "entertain",
+       "pos": "v",
+       "m": "giải trí"
+      },
+      {
+       "w": "entertainment",
+       "pos": "n",
+       "m": "sự giải trí"
+      },
+      {
+       "w": "entertaining",
+       "pos": "adj",
+       "m": "thú vị, mang tính giải trí"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Television is a cheap source of ____.",
+       "a": [
+        "entertainment"
+       ],
+       "why": "sau giới từ \"of\" → danh từ"
+      },
+      {
+       "s": "Some adverts are funny and ____.",
+       "a": [
+        "entertaining"
+       ],
+       "why": "sau \"funny and\" (song song với tính từ) → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "private",
+     "words": [
+      {
+       "w": "private",
+       "pos": "adj",
+       "m": "riêng tư"
+      },
+      {
+       "w": "privacy",
+       "pos": "n",
+       "m": "quyền riêng tư"
+      },
+      {
+       "w": "privately",
+       "pos": "adv",
+       "m": "một cách riêng tư"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Journalists should not invade people's ____.",
+       "a": [
+        "privacy"
+       ],
+       "why": "sau sở hữu cách \"people's\" → danh từ"
+      },
+      {
+       "s": "Celebrities also need a ____ life.",
+       "a": [
+        "private"
+       ],
+       "why": "đứng trước danh từ \"life\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "real",
+     "words": [
+      {
+       "w": "real",
+       "pos": "adj",
+       "m": "thật"
+      },
+      {
+       "w": "reality",
+       "pos": "n",
+       "m": "thực tế"
+      },
+      {
+       "w": "realistic",
+       "pos": "adj",
+       "m": "thực tế"
+      },
+      {
+       "w": "unrealistic",
+       "pos": "adj",
+       "m": "phi thực tế"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Adverts show ____ body images.",
+       "a": [
+        "unrealistic"
+       ],
+       "why": "nghĩa \"phi thực tế\", trước danh từ → tính từ"
+      },
+      {
+       "s": "In ____, most products are not as good as the adverts say.",
+       "a": [
+        "reality"
+       ],
+       "why": "sau \"In\" (in reality = trên thực tế) → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "commerce",
+     "words": [
+      {
+       "w": "commerce",
+       "pos": "n",
+       "m": "thương mại"
+      },
+      {
+       "w": "commercial",
+       "pos": "adj/n",
+       "m": "mang tính thương mại, mẩu quảng cáo"
+      },
+      {
+       "w": "commercially",
+       "pos": "adv",
+       "m": "về mặt thương mại"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ television depends on advertising money.",
+       "a": [
+        "Commercial"
+       ],
+       "why": "đứng trước danh từ \"television\" → tính từ"
+      },
+      {
+       "s": "The film was ____ successful.",
+       "a": [
+        "commercially"
+       ],
+       "why": "bổ nghĩa cho tính từ \"successful\" → trạng từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "easily influenced",
+     "m": "dễ bị ảnh hưởng",
+     "ex": "Children are easily influenced by adverts."
+    },
+    {
+     "type": "Phrase",
+     "term": "false information",
+     "m": "thông tin sai",
+     "ex": "Some adverts give false information."
+    },
+    {
+     "type": "Word",
+     "term": "expensive (adj)",
+     "m": "đắt",
+     "ex": "Teenagers want expensive brands."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "fall for",
+     "m": "tin vào (lời quảng cáo), bị lừa",
+     "ex": "Many people fall for misleading adverts."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "show off",
+     "m": "khoe khoang",
+     "ex": "Some teenagers buy brands to show off."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "give in to",
+     "m": "chiều theo, đầu hàng",
+     "ex": "Parents often give in to their children's demands."
+    },
+    {
+     "type": "Idiom",
+     "term": "keep up with the Joneses",
+     "m": "chạy đua theo hàng xóm",
+     "ex": "People buy new cars just to keep up with the Joneses."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Ngày nay, chúng ta bị dội bom quảng cáo ở khắp mọi nơi.",
+     "en": [
+      "Nowadays, we are bombarded with adverts everywhere.",
+      "Today, we are bombarded with adverts everywhere."
+     ],
+     "use": "be bombarded with adverts",
+     "hint": "bị động: are bombarded with"
+    },
+    {
+     "vi": "Các chiến dịch quảng cáo được thiết kế để thuyết phục mọi người mua nhiều hơn.",
+     "en": [
+      "Advertising campaigns are designed to persuade people to buy more."
+     ],
+     "use": "persuade people to buy",
+     "hint": "are designed to = được thiết kế để"
+    },
+    {
+     "vi": "Nhiều quảng cáo nhắm đến người tiêu dùng trẻ, những người dễ bị ảnh hưởng.",
+     "en": [
+      "Many adverts target young consumers, who are easily influenced.",
+      "Many advertisements target young consumers, who are easily influenced."
+     ],
+     "use": "target young consumers",
+     "hint": ", who + V (mệnh đề quan hệ) · easily influenced"
+    },
+    {
+     "vi": "Ví dụ, việc người nổi tiếng quảng bá sản phẩm khiến thanh thiếu niên muốn mua đồ đắt tiền.",
+     "en": [
+      "For example, celebrity endorsements make teenagers want to buy expensive products.",
+      "For example, celebrity endorsements make teenagers want to buy expensive things."
+     ],
+     "use": "celebrity endorsements",
+     "hint": "make sb + V"
+    },
+    {
+     "vi": "Điều này dẫn đến mua sắm bốc đồng và một xã hội vật chất.",
+     "en": [
+      "This leads to impulse buying and a materialistic society."
+     ],
+     "use": "impulse buying",
+     "hint": "lead to = dẫn đến"
+    },
+    {
+     "vi": "Hơn nữa, một số quảng cáo gây hiểu lầm đưa ra thông tin sai về sản phẩm.",
+     "en": [
+      "Moreover, some misleading advertisements give false information about products.",
+      "Furthermore, some misleading advertisements give false information about products."
+     ],
+     "use": "misleading advertisements",
+     "hint": "false information = thông tin sai"
+    },
+    {
+     "vi": "Vì vậy, chính phủ nên kiểm soát nội dung quảng cáo, đặc biệt là quảng cáo trực tuyến.",
+     "en": [
+      "Therefore, governments should regulate the content of adverts, especially online advertising.",
+      "Therefore, the government should regulate the content of adverts, especially online advertising."
+     ],
+     "use": "regulate the content",
+     "hint": "especially = đặc biệt là · online advertising"
+    },
+    {
+     "vi": "Khi đó, người tiêu dùng có thể đưa ra quyết định có hiểu biết.",
+     "en": [
+      "Then consumers can make an informed decision.",
+      "As a result, consumers can make an informed decision."
+     ],
+     "use": "an informed decision",
+     "hint": "make a decision"
+    }
+   ],
+   "prompt": "Advertising encourages people to buy things they do not really need. Do you agree? Write one body paragraph.",
+   "prompt_vi": "Quảng cáo khuyến khích con người mua những thứ họ không thực sự cần. Bạn có đồng ý không? Viết một đoạn thân bài.",
+   "own": "Some people believe social media has a negative influence on young people. Do you agree? Write one paragraph (120–150 words).",
+   "own_vi": "Có người cho rằng mạng xã hội ảnh hưởng tiêu cực đến giới trẻ. Bạn có đồng ý không? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 10,
+   "topic": "globalisation",
+   "title": "Globalisation & Culture",
+   "forms": [
+    {
+     "head": "culture",
+     "words": [
+      {
+       "w": "culture",
+       "pos": "n",
+       "m": "văn hóa"
+      },
+      {
+       "w": "cultural",
+       "pos": "adj",
+       "m": "thuộc văn hóa"
+      },
+      {
+       "w": "culturally",
+       "pos": "adv",
+       "m": "về mặt văn hóa"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Festivals are part of our ____ identity.",
+       "a": [
+        "cultural"
+       ],
+       "why": "đứng trước danh từ \"identity\" → tính từ"
+      },
+      {
+       "s": "Vietnam is a ____ rich country.",
+       "a": [
+        "culturally"
+       ],
+       "why": "bổ nghĩa cho tính từ \"rich\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "tradition",
+     "words": [
+      {
+       "w": "tradition",
+       "pos": "n",
+       "m": "truyền thống"
+      },
+      {
+       "w": "traditional",
+       "pos": "adj",
+       "m": "truyền thống"
+      },
+      {
+       "w": "traditionally",
+       "pos": "adv",
+       "m": "theo truyền thống"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ customs are disappearing in big cities.",
+       "a": [
+        "Traditional"
+       ],
+       "why": "đứng trước danh từ \"customs\" → tính từ"
+      },
+      {
+       "s": "____, families eat together at Tet.",
+       "a": [
+        "Traditionally"
+       ],
+       "why": "đứng đầu câu, bổ nghĩa cả câu → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "globe",
+     "words": [
+      {
+       "w": "globe",
+       "pos": "n",
+       "m": "quả địa cầu"
+      },
+      {
+       "w": "global",
+       "pos": "adj",
+       "m": "toàn cầu"
+      },
+      {
+       "w": "globalisation",
+       "pos": "n",
+       "m": "toàn cầu hóa"
+      },
+      {
+       "w": "globally",
+       "pos": "adv",
+       "m": "trên toàn cầu"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ has made the world smaller.",
+       "a": [
+        "Globalisation"
+       ],
+       "why": "làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Coca-Cola is a ____ brand.",
+       "a": [
+        "global"
+       ],
+       "why": "sau \"a\", trước danh từ \"brand\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "nation",
+     "words": [
+      {
+       "w": "nation",
+       "pos": "n",
+       "m": "quốc gia"
+      },
+      {
+       "w": "national",
+       "pos": "adj",
+       "m": "thuộc quốc gia"
+      },
+      {
+       "w": "international",
+       "pos": "adj",
+       "m": "quốc tế"
+      },
+      {
+       "w": "nationality",
+       "pos": "n",
+       "m": "quốc tịch"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "English is an ____ language.",
+       "a": [
+        "international"
+       ],
+       "why": "nghĩa \"quốc tế\", trước danh từ → tính từ"
+      },
+      {
+       "s": "People feel ____ pride when their team wins.",
+       "a": [
+        "national"
+       ],
+       "why": "đứng trước danh từ \"pride\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "diverse",
+     "words": [
+      {
+       "w": "diverse",
+       "pos": "adj",
+       "m": "đa dạng"
+      },
+      {
+       "w": "diversity",
+       "pos": "n",
+       "m": "sự đa dạng"
+      },
+      {
+       "w": "diversify",
+       "pos": "v",
+       "m": "đa dạng hóa"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "London is a very ____ city.",
+       "a": [
+        "diverse"
+       ],
+       "why": "sau \"a very\", trước danh từ → tính từ"
+      },
+      {
+       "s": "We should respect cultural ____.",
+       "a": [
+        "diversity"
+       ],
+       "why": "sau tính từ \"cultural\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "similar",
+     "words": [
+      {
+       "w": "similar",
+       "pos": "adj",
+       "m": "giống nhau"
+      },
+      {
+       "w": "similarity",
+       "pos": "n",
+       "m": "điểm giống nhau"
+      },
+      {
+       "w": "similarly",
+       "pos": "adv",
+       "m": "tương tự"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Cities around the world look more and more ____.",
+       "a": [
+        "similar"
+       ],
+       "why": "sau \"look more and more\" → tính từ"
+      },
+      {
+       "s": "There are many ____ between Vietnamese and Chinese culture.",
+       "a": [
+        "similarities"
+       ],
+       "why": "sau \"many\", số nhiều → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "preserve",
+     "words": [
+      {
+       "w": "preserve",
+       "pos": "v",
+       "m": "gìn giữ"
+      },
+      {
+       "w": "preservation",
+       "pos": "n",
+       "m": "sự gìn giữ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "We must ____ historic buildings.",
+       "a": [
+        "preserve"
+       ],
+       "why": "sau \"must\" → động từ nguyên mẫu"
+      },
+      {
+       "s": "The ____ of minority languages is important.",
+       "a": [
+        "preservation"
+       ],
+       "why": "sau \"The\", trước \"of\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "tolerate",
+     "words": [
+      {
+       "w": "tolerate",
+       "pos": "v",
+       "m": "chịu đựng, chấp nhận"
+      },
+      {
+       "w": "tolerance",
+       "pos": "n",
+       "m": "sự khoan dung"
+      },
+      {
+       "w": "tolerant",
+       "pos": "adj",
+       "m": "khoan dung"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Travelling makes people more ____ of other cultures.",
+       "a": [
+        "tolerant"
+       ],
+       "why": "sau \"more\", trước \"of\" → tính từ"
+      },
+      {
+       "s": "Schools should teach ____ and respect.",
+       "a": [
+        "tolerance"
+       ],
+       "why": "sau động từ \"teach\", làm tân ngữ → danh từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "follow trends",
+     "m": "chạy theo xu hướng",
+     "ex": "Many teenagers follow Western trends."
+    },
+    {
+     "type": "Phrase",
+     "term": "show little interest in",
+     "m": "ít quan tâm đến",
+     "ex": "Young people show little interest in traditional music."
+    },
+    {
+     "type": "Word",
+     "term": "respect (v/n)",
+     "m": "tôn trọng",
+     "ex": "We should respect other cultures."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "hand down",
+     "m": "truyền lại (cho thế hệ sau)",
+     "ex": "Old stories are handed down from parents to children."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "die out",
+     "m": "mai một, biến mất",
+     "ex": "Many minority languages are dying out."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "fit in",
+     "m": "hòa nhập",
+     "ex": "Migrants often find it hard to fit in."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "look down on",
+     "m": "coi thường",
+     "ex": "We should not look down on other cultures."
+    },
+    {
+     "type": "Idiom",
+     "term": "when in Rome, do as the Romans do",
+     "m": "nhập gia tùy tục",
+     "ex": "Travellers should follow the rule \"when in Rome, do as the Romans do\"."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Trong một thế giới kết nối, các nền văn hóa đang trở nên giống nhau hơn.",
+     "en": [
+      "In an interconnected world, cultures are becoming more similar.",
+      "In an interconnected world, cultures are becoming more and more similar."
+     ],
+     "use": "interconnected world",
+     "hint": "are becoming = đang trở nên · word form: similar (adj)"
+    },
+    {
+     "vi": "Sự lan rộng của các thương hiệu toàn cầu là một ví dụ rõ ràng.",
+     "en": [
+      "The spread of global brands is a clear example.",
+      "The spread of global brands is a good example."
+     ],
+     "use": "the spread of global brands",
+     "hint": "a clear example = ví dụ rõ ràng"
+    },
+    {
+     "vi": "Nhiều người trẻ chạy theo xu hướng phương Tây và ít quan tâm đến phong tục truyền thống.",
+     "en": [
+      "Many young people follow Western trends and show little interest in traditional customs."
+     ],
+     "use": "traditional customs",
+     "hint": "follow trends · show little interest in"
+    },
+    {
+     "vi": "Nếu điều này tiếp diễn, chúng ta có thể đánh mất di sản văn hóa của mình.",
+     "en": [
+      "If this continues, we may lose our cultural heritage.",
+      "If this continues, we might lose our cultural heritage."
+     ],
+     "use": "lose one's cultural heritage",
+     "hint": "one's → our · điều kiện loại 1"
+    },
+    {
+     "vi": "Theo tôi, gìn giữ truyền thống địa phương là rất quan trọng.",
+     "en": [
+      "In my opinion, preserving local traditions is very important.",
+      "In my view, preserving local traditions is very important."
+     ],
+     "use": "preserve local traditions",
+     "hint": "V-ing làm chủ ngữ + is"
+    },
+    {
+     "vi": "Truyền thống mang lại cho con người cảm giác thuộc về và niềm tự hào dân tộc.",
+     "en": [
+      "Traditions give people a sense of belonging and national pride.",
+      "Traditions give people a sense of belonging as well as national pride."
+     ],
+     "use": "a sense of belonging",
+     "hint": "give sb sth · national pride"
+    },
+    {
+     "vi": "Tuy nhiên, giao lưu văn hóa cũng có thể thúc đẩy sự hiểu biết lẫn nhau giữa các quốc gia.",
+     "en": [
+      "However, cultural exchange can also promote mutual understanding between nations.",
+      "However, cultural exchange can also promote mutual understanding between countries."
+     ],
+     "use": "promote mutual understanding",
+     "hint": "cultural exchange · between nations"
+    },
+    {
+     "vi": "Vì vậy, chúng ta nên tôn trọng sự đa dạng văn hóa thay vì sao chép một nền văn hóa duy nhất.",
+     "en": [
+      "Therefore, we should respect cultural diversity instead of copying a single culture.",
+      "Therefore, we should respect cultural diversity rather than copy a single culture."
+     ],
+     "use": "cultural diversity",
+     "hint": "instead of + V-ing · a single culture"
+    }
+   ],
+   "prompt": "In a globalised world, it is important to preserve local traditions. Do you agree? Write one body paragraph.",
+   "prompt_vi": "Trong một thế giới toàn cầu hóa, việc gìn giữ truyền thống địa phương là quan trọng. Bạn có đồng ý không? Viết một đoạn thân bài.",
+   "own": "More and more people move to other countries to work. What are the advantages and disadvantages of this? Write one paragraph (120–150 words).",
+   "own_vi": "Ngày càng nhiều người ra nước ngoài làm việc. Ưu điểm và nhược điểm của điều này là gì? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 11,
+   "topic": "urban",
+   "title": "Urbanisation & Transport",
+   "forms": [
+    {
+     "head": "urban",
+     "words": [
+      {
+       "w": "urban",
+       "pos": "adj",
+       "m": "thuộc đô thị"
+      },
+      {
+       "w": "urbanisation",
+       "pos": "n",
+       "m": "đô thị hóa"
+      },
+      {
+       "w": "suburban",
+       "pos": "adj",
+       "m": "thuộc ngoại ô"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ has made cities overcrowded.",
+       "a": [
+        "Urbanisation"
+       ],
+       "why": "làm chủ ngữ → danh từ"
+      },
+      {
+       "s": "Many families move to ____ areas to find cheaper houses.",
+       "a": [
+        "suburban"
+       ],
+       "why": "nghĩa \"ngoại ô\", trước danh từ → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "congest",
+     "words": [
+      {
+       "w": "congestion",
+       "pos": "n",
+       "m": "sự tắc nghẽn"
+      },
+      {
+       "w": "congested",
+       "pos": "adj",
+       "m": "bị tắc nghẽn"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The roads are very ____ at rush hour.",
+       "a": [
+        "congested"
+       ],
+       "why": "sau \"are very\" → tính từ"
+      },
+      {
+       "s": "Traffic ____ wastes a lot of time.",
+       "a": [
+        "congestion"
+       ],
+       "why": "sau \"Traffic\", làm chủ ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "crowd",
+     "words": [
+      {
+       "w": "crowd",
+       "pos": "n",
+       "m": "đám đông"
+      },
+      {
+       "w": "crowded",
+       "pos": "adj",
+       "m": "đông đúc"
+      },
+      {
+       "w": "overcrowded",
+       "pos": "adj",
+       "m": "quá đông"
+      },
+      {
+       "w": "overcrowding",
+       "pos": "n",
+       "m": "tình trạng quá tải"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Buses in Hanoi are ____ in the morning.",
+       "a": [
+        "overcrowded"
+       ],
+       "why": "sau \"are\", nghĩa \"quá đông\" → tính từ"
+      },
+      {
+       "s": "____ is a problem in many schools.",
+       "a": [
+        "Overcrowding"
+       ],
+       "why": "làm chủ ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "transport",
+     "words": [
+      {
+       "w": "transport",
+       "pos": "n/v",
+       "m": "giao thông, vận chuyển"
+      },
+      {
+       "w": "transportation",
+       "pos": "n",
+       "m": "sự vận chuyển"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Public ____ is cheap in this city.",
+       "a": [
+        "transport"
+       ],
+       "why": "sau \"Public\", làm chủ ngữ → danh từ (public transport)"
+      },
+      {
+       "s": "Trains ____ goods across the country.",
+       "a": [
+        "transport"
+       ],
+       "why": "sau chủ ngữ → động từ"
+      }
+     ]
+    },
+    {
+     "head": "efficient",
+     "words": [
+      {
+       "w": "efficient",
+       "pos": "adj",
+       "m": "hiệu quả"
+      },
+      {
+       "w": "efficiency",
+       "pos": "n",
+       "m": "sự hiệu quả"
+      },
+      {
+       "w": "efficiently",
+       "pos": "adv",
+       "m": "một cách hiệu quả"
+      },
+      {
+       "w": "inefficient",
+       "pos": "adj",
+       "m": "kém hiệu quả"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The city needs an ____ metro system.",
+       "a": [
+        "efficient"
+       ],
+       "why": "sau \"an\", trước danh từ → tính từ"
+      },
+      {
+       "s": "The new system moves people more ____.",
+       "a": [
+        "efficiently"
+       ],
+       "why": "bổ nghĩa cho động từ \"moves\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "safe",
+     "words": [
+      {
+       "w": "safe",
+       "pos": "adj",
+       "m": "an toàn"
+      },
+      {
+       "w": "safety",
+       "pos": "n",
+       "m": "sự an toàn"
+      },
+      {
+       "w": "safely",
+       "pos": "adv",
+       "m": "một cách an toàn"
+      },
+      {
+       "w": "unsafe",
+       "pos": "adj",
+       "m": "không an toàn"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Cycle lanes improve road ____.",
+       "a": [
+        "safety"
+       ],
+       "why": "sau \"road\", làm tân ngữ → danh từ"
+      },
+      {
+       "s": "Children should be able to walk to school ____.",
+       "a": [
+        "safely"
+       ],
+       "why": "bổ nghĩa cho động từ \"walk\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "convenient",
+     "words": [
+      {
+       "w": "convenient",
+       "pos": "adj",
+       "m": "tiện lợi"
+      },
+      {
+       "w": "convenience",
+       "pos": "n",
+       "m": "sự tiện lợi"
+      },
+      {
+       "w": "inconvenient",
+       "pos": "adj",
+       "m": "bất tiện"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Cars are more ____ than buses.",
+       "a": [
+        "convenient"
+       ],
+       "why": "sau \"more\", trước \"than\" → tính từ"
+      },
+      {
+       "s": "People choose cars for ____.",
+       "a": [
+        "convenience"
+       ],
+       "why": "sau giới từ \"for\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "improve",
+     "words": [
+      {
+       "w": "improve",
+       "pos": "v",
+       "m": "cải thiện"
+      },
+      {
+       "w": "improvement",
+       "pos": "n",
+       "m": "sự cải thiện"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Better roads ____ the quality of life.",
+       "a": [
+        "improve"
+       ],
+       "why": "sau chủ ngữ → động từ"
+      },
+      {
+       "s": "There has been a big ____ in public transport.",
+       "a": [
+        "improvement"
+       ],
+       "why": "sau \"a big\" → danh từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "the main cause",
+     "m": "nguyên nhân chính",
+     "ex": "The main cause of traffic jams is private cars."
+    },
+    {
+     "type": "Phrase",
+     "term": "the growing number of",
+     "m": "số lượng ngày càng tăng",
+     "ex": "The growing number of cars causes pollution."
+    },
+    {
+     "type": "Word",
+     "term": "measure (n)",
+     "m": "biện pháp",
+     "ex": "This measure reduces traffic."
+    },
+    {
+     "type": "Word",
+     "term": "reliable (adj)",
+     "m": "đáng tin cậy, đúng giờ",
+     "ex": "People use buses if they are reliable."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "get around",
+     "m": "đi lại",
+     "ex": "It is easy to get around the city by metro."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "hold up",
+     "m": "làm chậm, kẹt lại",
+     "ex": "We were held up in traffic for an hour."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "set off",
+     "m": "khởi hành",
+     "ex": "Many people set off for work at 6 a.m."
+    },
+    {
+     "type": "Idiom",
+     "term": "bumper to bumper",
+     "m": "xe nối đuôi nhau",
+     "ex": "At rush hour, cars are bumper to bumper."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Ùn tắc giao thông là một vấn đề nghiêm trọng ở hầu hết các thành phố lớn.",
+     "en": [
+      "Traffic congestion is a serious problem in most big cities.",
+      "Traffic congestion is a serious problem in most large cities."
+     ],
+     "use": "traffic congestion",
+     "hint": "most big cities = hầu hết các thành phố lớn"
+    },
+    {
+     "vi": "Nguyên nhân chính là số lượng phương tiện cá nhân ngày càng tăng.",
+     "en": [
+      "The main cause is the growing number of private vehicles.",
+      "The main reason is the growing number of private vehicles."
+     ],
+     "use": "private vehicles",
+     "hint": "the main cause · the growing number of"
+    },
+    {
+     "vi": "Vào giờ cao điểm, nhiều người mất hàng giờ để đi làm.",
+     "en": [
+      "During rush hour, many people spend hours commuting to work.",
+      "At rush hour, many people spend hours commuting to work."
+     ],
+     "use": "rush hour",
+     "hint": "spend time + V-ing · commute to work (tuần 5)"
+    },
+    {
+     "vi": "Giải pháp đầu tiên là đầu tư vào cơ sở hạ tầng, đặc biệt là một hệ thống tàu điện ngầm hiệu quả.",
+     "en": [
+      "The first solution is to invest in infrastructure, especially an efficient metro system."
+     ],
+     "use": "invest in infrastructure",
+     "hint": "solution = giải pháp · an efficient metro system"
+    },
+    {
+     "vi": "Nếu giao thông công cộng rẻ và đáng tin cậy, ít người sẽ lái xe hơn.",
+     "en": [
+      "If public transport is cheap and reliable, fewer people will drive."
+     ],
+     "use": "public transport",
+     "hint": "fewer people = ít người hơn · điều kiện loại 1"
+    },
+    {
+     "vi": "Giải pháp thứ hai là áp dụng phí chống ùn tắc ở trung tâm thành phố.",
+     "en": [
+      "The second solution is to introduce congestion charges in the city centre.",
+      "The second solution is to introduce congestion charges in the city center."
+     ],
+     "use": "introduce congestion charges",
+     "hint": "the city centre = trung tâm thành phố"
+    },
+    {
+     "vi": "Biện pháp này khuyến khích người dân không lái xe và giảm ô nhiễm tiếng ồn.",
+     "en": [
+      "This measure discourages people from driving and reduces noise pollution."
+     ],
+     "use": "discourage people from driving",
+     "hint": "measure = biện pháp · noise pollution"
+    },
+    {
+     "vi": "Kết quả là, chất lượng cuộc sống ở các thành phố sẽ được cải thiện.",
+     "en": [
+      "As a result, the quality of life in cities will improve.",
+      "As a result, the quality of life in cities will be improved."
+     ],
+     "use": "the quality of life",
+     "hint": "as a result = kết quả là"
+    }
+   ],
+   "prompt": "Traffic congestion is a serious problem in many big cities. What are the causes, and what can be done? Write one body paragraph.",
+   "prompt_vi": "Ùn tắc giao thông là vấn đề nghiêm trọng ở nhiều thành phố lớn. Nguyên nhân là gì và có thể làm gì? Viết một đoạn thân bài.",
+   "own": "More and more people move from the countryside to big cities. Why is this happening? Is it a positive or negative development? Write one paragraph (120–150 words).",
+   "own_vi": "Ngày càng nhiều người chuyển từ nông thôn lên thành phố lớn. Vì sao? Đây là xu hướng tích cực hay tiêu cực? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 12,
+   "topic": "family",
+   "title": "Family & Children",
+   "forms": [
+    {
+     "head": "parent",
+     "words": [
+      {
+       "w": "parent",
+       "pos": "n",
+       "m": "cha/mẹ"
+      },
+      {
+       "w": "parental",
+       "pos": "adj",
+       "m": "thuộc cha mẹ"
+      },
+      {
+       "w": "parenting",
+       "pos": "n",
+       "m": "việc nuôi dạy con"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "____ guidance is important for teenagers.",
+       "a": [
+        "Parental"
+       ],
+       "why": "đứng trước danh từ \"guidance\" → tính từ"
+      },
+      {
+       "s": "Good ____ takes time and patience.",
+       "a": [
+        "parenting"
+       ],
+       "why": "sau tính từ \"Good\", làm chủ ngữ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "child",
+     "words": [
+      {
+       "w": "child",
+       "pos": "n",
+       "m": "đứa trẻ"
+      },
+      {
+       "w": "childhood",
+       "pos": "n",
+       "m": "tuổi thơ"
+      },
+      {
+       "w": "childish",
+       "pos": "adj",
+       "m": "trẻ con, ấu trĩ"
+      },
+      {
+       "w": "childcare",
+       "pos": "n",
+       "m": "việc trông trẻ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "I had a happy ____ in the countryside.",
+       "a": [
+        "childhood"
+       ],
+       "why": "sau \"a happy\" → danh từ (tuổi thơ)"
+      },
+      {
+       "s": "Working parents need cheap ____.",
+       "a": [
+        "childcare"
+       ],
+       "why": "sau \"cheap\", nghĩa việc trông trẻ → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "depend",
+     "words": [
+      {
+       "w": "depend",
+       "pos": "v",
+       "m": "phụ thuộc"
+      },
+      {
+       "w": "dependent",
+       "pos": "adj",
+       "m": "phụ thuộc"
+      },
+      {
+       "w": "independent",
+       "pos": "adj",
+       "m": "độc lập"
+      },
+      {
+       "w": "independence",
+       "pos": "n",
+       "m": "sự độc lập"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Children should learn to be ____.",
+       "a": [
+        "independent"
+       ],
+       "why": "sau \"to be\", nghĩa \"độc lập\" → tính từ"
+      },
+      {
+       "s": "Young children are ____ on their parents.",
+       "a": [
+        "dependent"
+       ],
+       "why": "sau \"are\", trước \"on\" → tính từ (dependent on)"
+      }
+     ]
+    },
+    {
+     "head": "discipline",
+     "words": [
+      {
+       "w": "discipline",
+       "pos": "n/v",
+       "m": "kỷ luật"
+      },
+      {
+       "w": "disciplined",
+       "pos": "adj",
+       "m": "có kỷ luật"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Parents need to ____ children when they behave badly.",
+       "a": [
+        "discipline"
+       ],
+       "why": "sau \"need to\" → động từ nguyên mẫu"
+      },
+      {
+       "s": "Sport helps children become more ____.",
+       "a": [
+        "disciplined"
+       ],
+       "why": "sau \"become more\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "honest",
+     "words": [
+      {
+       "w": "honest",
+       "pos": "adj",
+       "m": "trung thực"
+      },
+      {
+       "w": "honesty",
+       "pos": "n",
+       "m": "sự trung thực"
+      },
+      {
+       "w": "dishonest",
+       "pos": "adj",
+       "m": "không trung thực"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Parents should teach their children ____.",
+       "a": [
+        "honesty"
+       ],
+       "why": "sau \"teach their children\", làm tân ngữ thứ hai → danh từ"
+      },
+      {
+       "s": "If parents are ____, their children will copy them.",
+       "a": [
+        "honest"
+       ],
+       "why": "sau \"are\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "behave",
+     "words": [
+      {
+       "w": "behave",
+       "pos": "v",
+       "m": "cư xử"
+      },
+      {
+       "w": "behaviour",
+       "pos": "n",
+       "m": "hành vi"
+      },
+      {
+       "w": "well-behaved",
+       "pos": "adj",
+       "m": "ngoan"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Children copy their parents' ____.",
+       "a": [
+        "behaviour"
+       ],
+       "why": "sau sở hữu cách \"parents'\" → danh từ"
+      },
+      {
+       "s": "____ children usually have strict parents.",
+       "a": [
+        "Well-behaved"
+       ],
+       "why": "đứng trước danh từ \"children\", nghĩa \"ngoan\" → tính từ ghép"
+      }
+     ]
+    },
+    {
+     "head": "necessary",
+     "words": [
+      {
+       "w": "necessary",
+       "pos": "adj",
+       "m": "cần thiết"
+      },
+      {
+       "w": "necessity",
+       "pos": "n",
+       "m": "sự cần thiết"
+      },
+      {
+       "w": "unnecessary",
+       "pos": "adj",
+       "m": "không cần thiết"
+      },
+      {
+       "w": "necessarily",
+       "pos": "adv",
+       "m": "nhất thiết"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Parental guidance is still ____.",
+       "a": [
+        "necessary"
+       ],
+       "why": "sau \"is still\" → tính từ"
+      },
+      {
+       "s": "Expensive toys are ____ for young children.",
+       "a": [
+        "unnecessary"
+       ],
+       "why": "sau \"are\", nghĩa phủ định → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "young",
+     "words": [
+      {
+       "w": "young",
+       "pos": "adj",
+       "m": "trẻ"
+      },
+      {
+       "w": "youth",
+       "pos": "n",
+       "m": "tuổi trẻ, thanh niên"
+      },
+      {
+       "w": "youngster",
+       "pos": "n",
+       "m": "người trẻ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Many ____ spend too much time online.",
+       "a": [
+        "youngsters"
+       ],
+       "why": "sau \"Many\", chỉ người, số nhiều → danh từ"
+      },
+      {
+       "s": "In my ____, I lived with my grandparents.",
+       "a": [
+        "youth"
+       ],
+       "why": "sau \"my\" → danh từ (tuổi trẻ)"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "from an early age",
+     "m": "từ khi còn nhỏ",
+     "ex": "Children should learn good habits from an early age."
+    },
+    {
+     "type": "Word",
+     "term": "copy (v)",
+     "m": "bắt chước",
+     "ex": "Young children copy what their parents do."
+    },
+    {
+     "type": "Word",
+     "term": "value (n)",
+     "m": "giá trị",
+     "ex": "Parents pass on values to their children."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "bring up",
+     "m": "nuôi dạy",
+     "ex": "Her grandparents brought her up."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "look after",
+     "m": "chăm sóc",
+     "ex": "Grandparents often look after the children."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "grow up",
+     "m": "lớn lên",
+     "ex": "I grew up in a small village."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "take after",
+     "m": "giống (bố/mẹ)",
+     "ex": "He takes after his father."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "get on with",
+     "m": "hòa hợp với",
+     "ex": "Teenagers often do not get on with their parents."
+    },
+    {
+     "type": "Idiom",
+     "term": "like father, like son",
+     "m": "cha nào con nấy",
+     "ex": "Like father, like son: both of them love football."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Theo tôi, cha mẹ đóng vai trò quan trọng nhất trong việc nuôi dạy con cái.",
+     "en": [
+      "In my opinion, parents play the most important role in bringing up children.",
+      "In my view, parents play the most important role in bringing up children."
+     ],
+     "use": "bring up children",
+     "hint": "play a role in + V-ing"
+    },
+    {
+     "vi": "Cha mẹ là những hình mẫu đầu tiên mà trẻ em bắt chước.",
+     "en": [
+      "Parents are the first role models that children copy.",
+      "Parents are the first role models children copy."
+     ],
+     "use": "role models",
+     "hint": "copy = bắt chước · that + mệnh đề"
+    },
+    {
+     "vi": "Ví dụ, nếu cha mẹ trung thực và tốt bụng, con cái cũng sẽ học những giá trị này.",
+     "en": [
+      "For example, if parents are honest and kind, their children will also learn these values.",
+      "For example, if parents are honest and kind, children will also learn these values."
+     ],
+     "use": "honest",
+     "hint": "điều kiện loại 1 · these values = những giá trị này"
+    },
+    {
+     "vi": "Vì vậy, cha mẹ nên gieo những giá trị tốt cho con từ khi còn nhỏ.",
+     "en": [
+      "Therefore, parents should instil good values in their children from an early age.",
+      "Therefore, parents should instill good values in their children from an early age."
+     ],
+     "use": "instil good values in",
+     "hint": "from an early age = từ khi còn nhỏ"
+    },
+    {
+     "vi": "Tuy nhiên, ngày nay nhiều cha mẹ đi làm quá bận để dành thời gian chất lượng với con.",
+     "en": [
+      "However, many working parents today are too busy to spend quality time with their children.",
+      "However, nowadays many working parents are too busy to spend quality time with their children."
+     ],
+     "use": "spend quality time with",
+     "hint": "too + adj + to V = quá … để"
+    },
+    {
+     "vi": "Họ thường gửi con đến các cơ sở chăm sóc trẻ.",
+     "en": [
+      "They often send their children to childcare facilities."
+     ],
+     "use": "childcare facilities",
+     "hint": "send sb to = gửi ai đến"
+    },
+    {
+     "vi": "Điều này có thể tạo ra khoảng cách thế hệ giữa cha mẹ và con cái.",
+     "en": [
+      "This can create a generation gap between parents and children.",
+      "This may create a generation gap between parents and children."
+     ],
+     "use": "a generation gap",
+     "hint": "between … and …"
+    },
+    {
+     "vi": "Vì vậy, sự hướng dẫn của cha mẹ vẫn rất cần thiết cho trẻ.",
+     "en": [
+      "Therefore, parental guidance is still very necessary for children.",
+      "Therefore, parental guidance is still necessary for children."
+     ],
+     "use": "parental guidance",
+     "hint": "word form: necessary (adj)"
+    }
+   ],
+   "prompt": "Parents are the most important teachers of children. Do you agree? Write one body paragraph.",
+   "prompt_vi": "Cha mẹ là những người thầy quan trọng nhất của trẻ. Bạn có đồng ý không? Viết một đoạn thân bài.",
+   "own": "Is it better for children to grow up in an extended family or a nuclear family? Write one paragraph (120–150 words).",
+   "own_vi": "Trẻ lớn lên trong gia đình nhiều thế hệ hay gia đình hạt nhân thì tốt hơn? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 14,
+   "topic": "life",
+   "title": "Life & Lifestyle",
+   "forms": [
+    {
+     "head": "relax",
+     "words": [
+      {
+       "w": "relax",
+       "pos": "v",
+       "m": "thư giãn"
+      },
+      {
+       "w": "relaxation",
+       "pos": "n",
+       "m": "sự thư giãn"
+      },
+      {
+       "w": "relaxing",
+       "pos": "adj",
+       "m": "làm thư giãn"
+      },
+      {
+       "w": "relaxed",
+       "pos": "adj",
+       "m": "cảm thấy thư giãn"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Reading is a ____ hobby.",
+       "a": [
+        "relaxing"
+       ],
+       "why": "hoạt động mang lại sự thư giãn, trước danh từ → relaxing"
+      },
+      {
+       "s": "After a walk, I feel more ____.",
+       "a": [
+        "relaxed"
+       ],
+       "why": "người cảm thấy thư giãn → relaxed"
+      }
+     ]
+    },
+    {
+     "head": "lonely",
+     "words": [
+      {
+       "w": "lonely",
+       "pos": "adj",
+       "m": "cô đơn"
+      },
+      {
+       "w": "loneliness",
+       "pos": "n",
+       "m": "sự cô đơn"
+      },
+      {
+       "w": "alone",
+       "pos": "adj/adv",
+       "m": "một mình"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Many old people suffer from ____.",
+       "a": [
+        "loneliness"
+       ],
+       "why": "sau giới từ \"from\" → danh từ"
+      },
+      {
+       "s": "People who live ____ may feel lonely.",
+       "a": [
+        "alone"
+       ],
+       "why": "sau động từ \"live\", nghĩa \"một mình\" → alone"
+      }
+     ]
+    },
+    {
+     "head": "fulfil",
+     "words": [
+      {
+       "w": "fulfil",
+       "pos": "v",
+       "m": "hoàn thành, thực hiện"
+      },
+      {
+       "w": "fulfilment",
+       "pos": "n",
+       "m": "sự mãn nguyện"
+      },
+      {
+       "w": "fulfilling",
+       "pos": "adj",
+       "m": "mang lại sự mãn nguyện"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Teaching is a very ____ job.",
+       "a": [
+        "fulfilling"
+       ],
+       "why": "sau \"a very\", trước danh từ → tính từ"
+      },
+      {
+       "s": "Many people find personal ____ in helping others.",
+       "a": [
+        "fulfilment"
+       ],
+       "why": "sau tính từ \"personal\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "possess",
+     "words": [
+      {
+       "w": "possess",
+       "pos": "v",
+       "m": "sở hữu"
+      },
+      {
+       "w": "possession",
+       "pos": "n",
+       "m": "đồ sở hữu, của cải"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Experiences are more valuable than ____.",
+       "a": [
+        "possessions"
+       ],
+       "why": "sau \"than\", làm danh từ số nhiều → danh từ"
+      },
+      {
+       "s": "Very few people ____ true happiness.",
+       "a": [
+        "possess"
+       ],
+       "why": "sau chủ ngữ → động từ"
+      }
+     ]
+    },
+    {
+     "head": "balance",
+     "words": [
+      {
+       "w": "balance",
+       "pos": "n/v",
+       "m": "sự cân bằng, cân bằng"
+      },
+      {
+       "w": "balanced",
+       "pos": "adj",
+       "m": "cân bằng"
+      },
+      {
+       "w": "imbalance",
+       "pos": "n",
+       "m": "sự mất cân bằng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "It is hard to ____ work and family life.",
+       "a": [
+        "balance"
+       ],
+       "why": "sau \"to\" → động từ"
+      },
+      {
+       "s": "A ____ lifestyle includes work, rest and exercise.",
+       "a": [
+        "balanced"
+       ],
+       "why": "sau \"A\", trước danh từ → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "simple",
+     "words": [
+      {
+       "w": "simple",
+       "pos": "adj",
+       "m": "đơn giản"
+      },
+      {
+       "w": "simplicity",
+       "pos": "n",
+       "m": "sự giản dị"
+      },
+      {
+       "w": "simplify",
+       "pos": "v",
+       "m": "đơn giản hóa"
+      },
+      {
+       "w": "simply",
+       "pos": "adv",
+       "m": "chỉ, một cách đơn giản"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Many people now prefer a life of ____.",
+       "a": [
+        "simplicity"
+       ],
+       "why": "sau giới từ \"of\" → danh từ"
+      },
+      {
+       "s": "We should ____ our lives and buy less.",
+       "a": [
+        "simplify"
+       ],
+       "why": "sau \"should\" → động từ nguyên mẫu"
+      }
+     ]
+    },
+    {
+     "head": "purpose",
+     "words": [
+      {
+       "w": "purpose",
+       "pos": "n",
+       "m": "mục đích"
+      },
+      {
+       "w": "purposeful",
+       "pos": "adj",
+       "m": "có mục đích"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Volunteering gives people a sense of ____.",
+       "a": [
+        "purpose"
+       ],
+       "why": "sau giới từ \"of\" → danh từ"
+      },
+      {
+       "s": "Retired people need ____ activities.",
+       "a": [
+        "purposeful"
+       ],
+       "why": "đứng trước danh từ \"activities\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "active",
+     "words": [
+      {
+       "w": "active",
+       "pos": "adj",
+       "m": "năng động"
+      },
+      {
+       "w": "activity",
+       "pos": "n",
+       "m": "hoạt động"
+      },
+      {
+       "w": "actively",
+       "pos": "adv",
+       "m": "tích cực"
+      },
+      {
+       "w": "inactive",
+       "pos": "adj",
+       "m": "không vận động"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "Leisure ____ help people reduce stress.",
+       "a": [
+        "activities"
+       ],
+       "why": "sau \"Leisure\", làm chủ ngữ số nhiều → danh từ"
+      },
+      {
+       "s": "Office workers are often physically ____.",
+       "a": [
+        "inactive"
+       ],
+       "why": "sau \"physically\", nghĩa phủ định → tính từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "feel stressed",
+     "m": "cảm thấy căng thẳng",
+     "ex": "Many students feel stressed before exams."
+    },
+    {
+     "type": "Phrase",
+     "term": "work long hours",
+     "m": "làm việc nhiều giờ",
+     "ex": "Many people work long hours to earn more."
+    },
+    {
+     "type": "Linking",
+     "term": "besides",
+     "m": "bên cạnh đó",
+     "ex": "Besides, a simple lifestyle saves money."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "slow down",
+     "m": "sống chậm lại",
+     "ex": "People should slow down and enjoy life."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "wind down",
+     "m": "thư giãn (sau giờ làm)",
+     "ex": "I wind down by listening to music."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "catch up with",
+     "m": "gặp lại, hàn huyên với",
+     "ex": "At weekends I catch up with old friends."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "look forward to",
+     "m": "mong chờ",
+     "ex": "I look forward to my holidays."
+    },
+    {
+     "type": "Idiom",
+     "term": "all work and no play",
+     "m": "chỉ làm mà không chơi",
+     "ex": "All work and no play is bad for your health."
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Ngày nay, nhiều người có lối sống bận rộn và cảm thấy căng thẳng.",
+     "en": [
+      "Nowadays, many people have a hectic lifestyle and feel stressed.",
+      "Today, many people have a hectic lifestyle and feel stressed."
+     ],
+     "use": "a hectic lifestyle",
+     "hint": "feel stressed (tính từ -ed cho người)"
+    },
+    {
+     "vi": "Nguyên nhân đầu tiên là áp lực của cuộc sống hiện đại, đặc biệt là ở các thành phố lớn.",
+     "en": [
+      "The first cause is the pressures of modern life, especially in big cities.",
+      "The first reason is the pressures of modern life, especially in big cities."
+     ],
+     "use": "the pressures of modern life",
+     "hint": "especially = đặc biệt là"
+    },
+    {
+     "vi": "Nhiều người làm việc nhiều giờ chỉ để xoay xở đủ sống.",
+     "en": [
+      "Many people work long hours just to make ends meet."
+     ],
+     "use": "make ends meet",
+     "hint": "just to = chỉ để"
+    },
+    {
+     "vi": "Nguyên nhân thứ hai là mọi người cố chạy theo những xu hướng mới nhất và mua quá nhiều hàng tiêu dùng.",
+     "en": [
+      "The second cause is that people try to keep up with the latest trends and buy too many consumer goods.",
+      "The second reason is that people try to keep up with the latest trends and buy too many consumer goods."
+     ],
+     "use": "keep up with the latest trends",
+     "hint": "try to V = cố gắng · too many = quá nhiều"
+    },
+    {
+     "vi": "Để giải quyết vấn đề này, mỗi người nên dành ra thời gian cho các hoạt động giải trí.",
+     "en": [
+      "To solve this problem, everyone should free up time for leisure activities.",
+      "To solve this problem, people should free up time for leisure activities."
+     ],
+     "use": "free up time for",
+     "hint": "to solve this problem = để giải quyết vấn đề này"
+    },
+    {
+     "vi": "Ví dụ, theo đuổi một sở thích giúp chúng ta thư giãn sau giờ làm.",
+     "en": [
+      "For example, pursuing a hobby helps us unwind after work.",
+      "For example, pursuing a hobby helps us to unwind after work."
+     ],
+     "use": "pursue a hobby",
+     "hint": "V-ing làm chủ ngữ + helps"
+    },
+    {
+     "vi": "Bên cạnh đó, một lối sống giản dị có thể mang lại sự an tâm.",
+     "en": [
+      "Besides, a simple lifestyle can bring peace of mind.",
+      "Besides, a simple lifestyle can give us peace of mind."
+     ],
+     "use": "a simple lifestyle",
+     "hint": "besides = bên cạnh đó · peace of mind"
+    },
+    {
+     "vi": "Cuối cùng, chúng ta nên coi trọng trải nghiệm hơn của cải để hài lòng hơn với cuộc sống.",
+     "en": [
+      "Finally, we should value experiences over possessions to have higher life satisfaction.",
+      "Finally, we should value experiences over possessions to have greater life satisfaction."
+     ],
+     "use": "value experiences over possessions",
+     "hint": "to + V = để · life satisfaction"
+    }
+   ],
+   "prompt": "Modern life is becoming more and more stressful. What are the causes of this, and what can people do about it? Write one body paragraph.",
+   "prompt_vi": "Cuộc sống hiện đại ngày càng căng thẳng. Nguyên nhân là gì và mọi người có thể làm gì? Viết một đoạn thân bài.",
+   "own": "Some people think money is the key to happiness. Do you agree? Write one paragraph (120–150 words).",
+   "own_vi": "Có người cho rằng tiền là chìa khóa của hạnh phúc. Bạn có đồng ý không? Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 15,
+   "topic": "task1-trends",
+   "title": "Task 1 · Trends & figures",
+   "forms": [
+    {
+     "head": "significant",
+     "words": [
+      {
+       "w": "significant",
+       "pos": "adj",
+       "m": "đáng kể"
+      },
+      {
+       "w": "significantly",
+       "pos": "adv",
+       "m": "một cách đáng kể"
+      },
+      {
+       "w": "significance",
+       "pos": "n",
+       "m": "tầm quan trọng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "There was a ____ increase in sales.",
+       "a": [
+        "significant"
+       ],
+       "why": "đứng trước danh từ \"increase\" → tính từ"
+      },
+      {
+       "s": "Sales increased ____ in 2015.",
+       "a": [
+        "significantly"
+       ],
+       "why": "bổ nghĩa cho động từ \"increased\" → trạng từ"
+      }
+     ]
+    },
+    {
+     "head": "dramatic",
+     "words": [
+      {
+       "w": "dramatic",
+       "pos": "adj",
+       "m": "đột ngột, mạnh"
+      },
+      {
+       "w": "dramatically",
+       "pos": "adv",
+       "m": "một cách đột ngột"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The number of visitors dropped ____ in 2020.",
+       "a": [
+        "dramatically"
+       ],
+       "why": "bổ nghĩa cho động từ \"dropped\" → trạng từ"
+      },
+      {
+       "s": "There was a ____ fall in prices.",
+       "a": [
+        "dramatic"
+       ],
+       "why": "đứng trước danh từ \"fall\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "gradual",
+     "words": [
+      {
+       "w": "gradual",
+       "pos": "adj",
+       "m": "dần dần"
+      },
+      {
+       "w": "gradually",
+       "pos": "adv",
+       "m": "dần dần"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The figure declined ____ over ten years.",
+       "a": [
+        "gradually"
+       ],
+       "why": "bổ nghĩa cho động từ \"declined\" → trạng từ"
+      },
+      {
+       "s": "The graph shows a ____ rise in temperature.",
+       "a": [
+        "gradual"
+       ],
+       "why": "đứng trước danh từ \"rise\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "steady",
+     "words": [
+      {
+       "w": "steady",
+       "pos": "adj",
+       "m": "đều đặn"
+      },
+      {
+       "w": "steadily",
+       "pos": "adv",
+       "m": "một cách đều đặn"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The population increased ____.",
+       "a": [
+        "steadily"
+       ],
+       "why": "bổ nghĩa cho động từ \"increased\" → trạng từ"
+      },
+      {
+       "s": "There was a ____ growth in exports.",
+       "a": [
+        "steady"
+       ],
+       "why": "đứng trước danh từ \"growth\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "sharp",
+     "words": [
+      {
+       "w": "sharp",
+       "pos": "adj",
+       "m": "mạnh, đột ngột"
+      },
+      {
+       "w": "sharply",
+       "pos": "adv",
+       "m": "một cách mạnh"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "House prices rose ____ after 2010.",
+       "a": [
+        "sharply"
+       ],
+       "why": "bổ nghĩa cho động từ \"rose\" → trạng từ"
+      },
+      {
+       "s": "There was a ____ drop in car sales.",
+       "a": [
+        "sharp"
+       ],
+       "why": "đứng trước danh từ \"drop\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "slight",
+     "words": [
+      {
+       "w": "slight",
+       "pos": "adj",
+       "m": "nhẹ"
+      },
+      {
+       "w": "slightly",
+       "pos": "adv",
+       "m": "một chút"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The figure fell ____ to 45%.",
+       "a": [
+        "slightly"
+       ],
+       "why": "bổ nghĩa cho động từ \"fell\" → trạng từ"
+      },
+      {
+       "s": "There was a ____ decrease in the number of tourists.",
+       "a": [
+        "slight"
+       ],
+       "why": "đứng trước danh từ \"decrease\" → tính từ"
+      }
+     ]
+    },
+    {
+     "head": "stable",
+     "words": [
+      {
+       "w": "stable",
+       "pos": "adj",
+       "m": "ổn định"
+      },
+      {
+       "w": "stability",
+       "pos": "n",
+       "m": "sự ổn định"
+      },
+      {
+       "w": "stabilise",
+       "pos": "v",
+       "m": "ổn định lại"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The price remained ____ at $5.",
+       "a": [
+        "stable"
+       ],
+       "why": "sau \"remained\" (remain + adj) → tính từ"
+      },
+      {
+       "s": "After 2015, the number of visitors began to ____.",
+       "a": [
+        "stabilise"
+       ],
+       "why": "sau \"began to\" → động từ"
+      }
+     ]
+    },
+    {
+     "head": "fluctuate",
+     "words": [
+      {
+       "w": "fluctuate",
+       "pos": "v",
+       "m": "dao động"
+      },
+      {
+       "w": "fluctuation",
+       "pos": "n",
+       "m": "sự dao động"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The figure for Museum C ____ around 30,000.",
+       "a": [
+        "fluctuated"
+       ],
+       "why": "động từ chính của câu, thì quá khứ → fluctuated"
+      },
+      {
+       "s": "There were small ____ in the price of oil.",
+       "a": [
+        "fluctuations"
+       ],
+       "why": "sau \"small\", số nhiều → danh từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "the line graph shows",
+     "m": "biểu đồ đường cho thấy",
+     "ex": "The line graph shows the number of visitors to three museums."
+    },
+    {
+     "type": "Phrase",
+     "term": "the number of",
+     "m": "số lượng (danh từ đếm được)",
+     "ex": "The number of visitors rose sharply."
+    },
+    {
+     "type": "Phrase",
+     "term": "the most popular",
+     "m": "phổ biến nhất",
+     "ex": "In 2010, Museum B was the most popular."
+    },
+    {
+     "type": "Linking",
+     "term": "meanwhile",
+     "m": "trong khi đó",
+     "ex": "Meanwhile, the figure for Museum C remained stable."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "go up / go down",
+     "m": "tăng / giảm (văn nói, Task 1 nên dùng rise / fall)",
+     "ex": "Prices went up in 2020."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "pick up",
+     "m": "phục hồi, tăng trở lại",
+     "ex": "Sales picked up after 2015."
+    },
+    {
+     "type": "Idiom",
+     "term": "(không dùng)",
+     "m": "Task 1 không dùng thành ngữ — chỉ dùng từ mô tả số liệu",
+     "ex": ""
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Biểu đồ đường cho thấy số lượng khách tham quan ba bảo tàng ở một thành phố từ năm 2010 đến năm 2020.",
+     "en": [
+      "The line graph shows the number of visitors to three museums in a city from 2010 to 2020.",
+      "The line graph shows the number of visitors to three museums in a city between 2010 and 2020."
+     ],
+     "use": "the line graph shows",
+     "hint": "the number of visitors to … · from … to …"
+    },
+    {
+     "vi": "Nhìn chung, rõ ràng là số khách đến bảo tàng A tăng mạnh, trong khi số liệu của bảo tàng B giảm dần.",
+     "en": [
+      "Overall, it is clear that the number of visitors to Museum A rose sharply, while the figure for Museum B declined gradually.",
+      "Overall, it is clear that the number of visitors to Museum A rose sharply, whereas the figure for Museum B declined gradually."
+     ],
+     "use": "overall, it is clear that",
+     "hint": "rise sharply (rose) · the figure for · decline gradually"
+    },
+    {
+     "vi": "Năm 2010, bảo tàng B là nơi phổ biến nhất với xấp xỉ 50,000 khách.",
+     "en": [
+      "In 2010, Museum B was the most popular, with approximately 50,000 visitors.",
+      "In 2010, Museum B was the most popular, with approximately 50000 visitors.",
+      "In 2010, Museum B was the most popular museum, with approximately 50,000 visitors.",
+      "In 2010, Museum B was the most popular museum, with approximately 50000 visitors."
+     ],
+     "use": "approximately",
+     "hint": "the most popular · with + số liệu"
+    },
+    {
+     "vi": "Sau đó, con số này giảm dần xuống còn 20,000 vào năm 2020.",
+     "en": [
+      "After that, this figure declined gradually to 20,000 in 2020.",
+      "After that, this figure declined gradually to 20000 in 2020.",
+      "After that, the figure declined gradually to 20,000 in 2020.",
+      "After that, the figure declined gradually to 20000 in 2020.",
+      "After that, this figure decreased gradually to 20,000 in 2020.",
+      "After that, this figure decreased gradually to 20000 in 2020."
+     ],
+     "use": "decline gradually",
+     "hint": "to + số = xuống còn"
+    },
+    {
+     "vi": "Ngược lại, số khách đến bảo tàng A tăng đều đặn từ 20,000 lên 40,000 trong năm năm đầu.",
+     "en": [
+      "In contrast, the number of visitors to Museum A increased steadily from 20,000 to 40,000 in the first five years.",
+      "In contrast, the number of visitors to Museum A increased steadily from 20000 to 40000 in the first five years.",
+      "In contrast, the number of visitors to Museum A increased steadily from 20,000 to 40,000 over the first five years.",
+      "In contrast, the number of visitors to Museum A increased steadily from 20000 to 40000 over the first five years."
+     ],
+     "use": "increase steadily",
+     "hint": "in contrast = ngược lại · from … to …"
+    },
+    {
+     "vi": "Bảo tàng A vượt qua bảo tàng B vào năm 2016 và đạt đỉnh 65,000 khách vào năm 2018.",
+     "en": [
+      "Museum A overtook Museum B in 2016 and reached a peak of 65,000 visitors in 2018.",
+      "Museum A overtook Museum B in 2016 and reached a peak of 65000 visitors in 2018."
+     ],
+     "use": "reach a peak of",
+     "hint": "overtake → overtook (quá khứ bất quy tắc)"
+    },
+    {
+     "vi": "Trong khi đó, số khách đến bảo tàng C dao động quanh mức 30,000 trong suốt giai đoạn.",
+     "en": [
+      "Meanwhile, the number of visitors to Museum C fluctuated around 30,000 over the period shown.",
+      "Meanwhile, the number of visitors to Museum C fluctuated around 30000 over the period shown.",
+      "Meanwhile, the number of visitors to Museum C fluctuated around 30,000 throughout the period.",
+      "Meanwhile, the number of visitors to Museum C fluctuated around 30000 throughout the period."
+     ],
+     "use": "fluctuate around",
+     "hint": "meanwhile = trong khi đó · over the period shown"
+    },
+    {
+     "vi": "Đến cuối giai đoạn, bảo tàng A chiếm khoảng một nửa tổng số khách.",
+     "en": [
+      "By the end of the period, Museum A accounted for roughly half of all visitors.",
+      "By the end of the period, Museum A accounted for roughly half of the total visitors."
+     ],
+     "use": "account for",
+     "hint": "by the end of the period · roughly half of"
+    }
+   ],
+   "prompt": "The line graph shows the number of visitors to three museums (A, B and C) in a city from 2010 to 2020. Write the overview and the details. (A: 20,000 → 40,000 in 2015, overtook B in 2016, peak 65,000 in 2018. B: about 50,000 in 2010 → 20,000 in 2020. C: around 30,000 the whole time.)",
+   "prompt_vi": "Biểu đồ đường thể hiện số khách tham quan ba bảo tàng (A, B, C) ở một thành phố từ 2010 đến 2020. Viết phần tổng quan và chi tiết.",
+   "own": "The line graph shows the percentage of households with internet access in two countries from 2000 to 2020 (Country X: 30% → 90%; Country Y: 10% → 50%, stable at 20% from 2005 to 2010). Write a paragraph (120–150 words).",
+   "own_vi": "Biểu đồ đường thể hiện tỷ lệ hộ gia đình có internet ở hai nước từ 2000 đến 2020 (X: 30% → 90%; Y: 10% → 50%, đứng yên ở 20% từ 2005 đến 2010). Viết một đoạn (120–150 từ)."
+  },
+  {
+   "week": 16,
+   "topic": "task1-structures",
+   "title": "Task 1 · Comparison, process & maps",
+   "forms": [
+    {
+     "head": "construct",
+     "words": [
+      {
+       "w": "construct",
+       "pos": "v",
+       "m": "xây dựng"
+      },
+      {
+       "w": "construction",
+       "pos": "n",
+       "m": "sự xây dựng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "A new hospital was ____ in 2015.",
+       "a": [
+        "constructed"
+       ],
+       "why": "bị động \"was + V3\" → constructed"
+      },
+      {
+       "s": "The ____ of the bridge took three years.",
+       "a": [
+        "construction"
+       ],
+       "why": "sau \"The\", trước \"of\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "extend",
+     "words": [
+      {
+       "w": "extend",
+       "pos": "v",
+       "m": "mở rộng, kéo dài"
+      },
+      {
+       "w": "extension",
+       "pos": "n",
+       "m": "phần mở rộng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The main road was ____ to the east.",
+       "a": [
+        "extended"
+       ],
+       "why": "bị động \"was + V3\" → extended"
+      },
+      {
+       "s": "An ____ was added to the school.",
+       "a": [
+        "extension"
+       ],
+       "why": "sau \"An\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "demolish",
+     "words": [
+      {
+       "w": "demolish",
+       "pos": "v",
+       "m": "phá dỡ"
+      },
+      {
+       "w": "demolition",
+       "pos": "n",
+       "m": "sự phá dỡ"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The old factory was ____ in 2010.",
+       "a": [
+        "demolished"
+       ],
+       "why": "bị động \"was + V3\" → demolished"
+      },
+      {
+       "s": "After the ____ of the market, a mall was built.",
+       "a": [
+        "demolition"
+       ],
+       "why": "sau \"the\", trước \"of\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "convert",
+     "words": [
+      {
+       "w": "convert",
+       "pos": "v",
+       "m": "chuyển đổi"
+      },
+      {
+       "w": "conversion",
+       "pos": "n",
+       "m": "sự chuyển đổi"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The farmland was ____ into a park.",
+       "a": [
+        "converted"
+       ],
+       "why": "bị động \"was + V3\" → converted"
+      },
+      {
+       "s": "The ____ of the old house into a café was expensive.",
+       "a": [
+        "conversion"
+       ],
+       "why": "sau \"The\", trước \"of\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "replace",
+     "words": [
+      {
+       "w": "replace",
+       "pos": "v",
+       "m": "thay thế"
+      },
+      {
+       "w": "replacement",
+       "pos": "n",
+       "m": "sự thay thế"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The trees were ____ by houses.",
+       "a": [
+        "replaced"
+       ],
+       "why": "bị động \"were + V3\" → replaced"
+      },
+      {
+       "s": "The bridge needs a ____.",
+       "a": [
+        "replacement"
+       ],
+       "why": "sau \"a\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "develop",
+     "words": [
+      {
+       "w": "develop",
+       "pos": "v",
+       "m": "phát triển"
+      },
+      {
+       "w": "development",
+       "pos": "n",
+       "m": "sự phát triển"
+      },
+      {
+       "w": "developed",
+       "pos": "adj",
+       "m": "phát triển"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The area saw rapid ____ after 2005.",
+       "a": [
+        "development"
+       ],
+       "why": "sau tính từ \"rapid\" → danh từ"
+      },
+      {
+       "s": "The town ____ quickly between 2000 and 2020.",
+       "a": [
+        "developed"
+       ],
+       "why": "động từ chính, quá khứ → developed"
+      }
+     ]
+    },
+    {
+     "head": "expand",
+     "words": [
+      {
+       "w": "expand",
+       "pos": "v",
+       "m": "mở rộng"
+      },
+      {
+       "w": "expansion",
+       "pos": "n",
+       "m": "sự mở rộng"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The town centre ____ to the south.",
+       "a": [
+        "expanded"
+       ],
+       "why": "động từ chính, quá khứ → expanded"
+      },
+      {
+       "s": "The ____ of the airport caused noise pollution.",
+       "a": [
+        "expansion"
+       ],
+       "why": "sau \"The\", trước \"of\" → danh từ"
+      }
+     ]
+    },
+    {
+     "head": "locate",
+     "words": [
+      {
+       "w": "locate",
+       "pos": "v",
+       "m": "đặt ở vị trí"
+      },
+      {
+       "w": "location",
+       "pos": "n",
+       "m": "vị trí"
+      },
+      {
+       "w": "located",
+       "pos": "adj",
+       "m": "nằm ở"
+      }
+     ],
+     "gaps": [
+      {
+       "s": "The school is ____ to the north of the park.",
+       "a": [
+        "located"
+       ],
+       "why": "\"be located\" = nằm ở → located"
+      },
+      {
+       "s": "The ____ of the station remained the same.",
+       "a": [
+        "location"
+       ],
+       "why": "sau \"The\", trước \"of\" → danh từ"
+      }
+     ]
+    }
+   ],
+   "bank": [
+    {
+     "type": "Phrase",
+     "term": "the maps show",
+     "m": "các bản đồ cho thấy",
+     "ex": "The maps show how the town changed."
+    },
+    {
+     "type": "Phrase",
+     "term": "shopping centre",
+     "m": "trung tâm mua sắm",
+     "ex": "A shopping centre replaced the market."
+    },
+    {
+     "type": "Phrase",
+     "term": "car park",
+     "m": "bãi đỗ xe",
+     "ex": "A new car park was built near the station."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "knock down",
+     "m": "phá dỡ (văn nói của \"demolish\")",
+     "ex": "The old houses were knocked down."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "turn into",
+     "m": "biến thành",
+     "ex": "The farm was turned into a park."
+    },
+    {
+     "type": "Phrasal verb",
+     "term": "build up",
+     "m": "xây dựng dày đặc",
+     "ex": "The area became more built up."
+    },
+    {
+     "type": "Idiom",
+     "term": "(không dùng)",
+     "m": "Task 1 không dùng thành ngữ — chỉ dùng bị động và từ chỉ vị trí",
+     "ex": ""
+    }
+   ],
+   "paragraph": [
+    {
+     "vi": "Hai bản đồ cho thấy trung tâm một thị trấn đã thay đổi như thế nào từ năm 2000 đến năm 2020.",
+     "en": [
+      "The two maps show how a town centre changed between 2000 and 2020.",
+      "The two maps show how a town centre changed from 2000 to 2020.",
+      "The two maps show how the centre of a town changed between 2000 and 2020."
+     ],
+     "use": "the maps show",
+     "hint": "how + S + V = như thế nào"
+    },
+    {
+     "vi": "Nhìn chung, thị trấn đã trải qua những thay đổi đáng kể và trở nên đô thị hóa hơn.",
+     "en": [
+      "Overall, the town underwent significant changes and became more urbanised.",
+      "Overall, the town underwent significant changes and became more urbanized."
+     ],
+     "use": "undergo significant changes",
+     "hint": "undergo → underwent (quá khứ)"
+    },
+    {
+     "vi": "Khu chợ cũ ở trung tâm thị trấn đã bị phá dỡ.",
+     "en": [
+      "The old market in the centre of the town was demolished.",
+      "The old market in the town centre was demolished."
+     ],
+     "use": "be demolished",
+     "hint": "bị động quá khứ: was + V3"
+    },
+    {
+     "vi": "Nó được thay thế bởi một trung tâm mua sắm lớn.",
+     "en": [
+      "It was replaced by a large shopping centre.",
+      "It was replaced by a big shopping centre.",
+      "It was replaced by a large shopping center."
+     ],
+     "use": "be replaced by",
+     "hint": "shopping centre"
+    },
+    {
+     "vi": "Khu rừng ở phía bắc của thị trấn được chuyển đổi thành một công viên.",
+     "en": [
+      "The forest to the north of the town was converted into a park."
+     ],
+     "use": "be converted into",
+     "hint": "to the north of = ở phía bắc của"
+    },
+    {
+     "vi": "Ngoài ra, con đường chính được mở rộng và một bãi đỗ xe mới được xây dựng.",
+     "en": [
+      "In addition, the main road was extended and a new car park was constructed.",
+      "In addition, the main road was extended and a new car park was built."
+     ],
+     "use": "be extended",
+     "hint": "car park = bãi đỗ xe · be constructed"
+    },
+    {
+     "vi": "Tuy nhiên, nhà ga và trường học vẫn giữ nguyên.",
+     "en": [
+      "However, the train station and the school remained unchanged.",
+      "However, the station and the school remained unchanged."
+     ],
+     "use": "remain unchanged",
+     "hint": "remain + adj"
+    },
+    {
+     "vi": "Một số ngôi nhà cũ bị phá dỡ để dọn chỗ cho các tòa nhà cao tầng.",
+     "en": [
+      "Some old houses were demolished to make way for high-rise buildings."
+     ],
+     "use": "make way for",
+     "hint": "high-rise buildings (tuần 11)"
+    }
+   ],
+   "prompt": "The two maps show the centre of a town in 2000 and 2020. Describe the main changes. (Old market → shopping centre; forest in the north → park; main road extended; new car park; station and school unchanged; old houses → high-rise buildings.)",
+   "prompt_vi": "Hai bản đồ thể hiện trung tâm một thị trấn năm 2000 và 2020. Mô tả những thay đổi chính.",
+   "own": "The diagram shows how paper is recycled: used paper is collected, transported to a factory, sorted by type, mixed with water, then pressed and dried into new paper. Describe the process in one paragraph (120–150 words).",
+   "own_vi": "Sơ đồ cho thấy giấy được tái chế như thế nào: thu gom giấy cũ, chở đến nhà máy, phân loại, trộn với nước, ép và sấy khô thành giấy mới. Mô tả quy trình trong một đoạn (120–150 từ)."
+  }
+ ]
+}
