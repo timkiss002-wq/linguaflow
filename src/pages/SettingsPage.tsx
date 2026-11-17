@@ -6,7 +6,6 @@ import { useProfile } from '@/features/profile/api';
 import { LearningPreferences } from '@/features/profile/LearningPreferences';
 import { ProfileForm } from '@/features/profile/ProfileForm';
 import { ReviewPreferences } from '@/features/profile/ReviewPreferences';
-import { AiPreferences } from '@/features/profile/AiPreferences';
 import { ChangePassword } from '@/features/profile/ChangePassword';
 import { LearningProfileCard } from '@/features/learner/LearningProfileCard';
 
@@ -30,7 +29,6 @@ export default function SettingsPage() {
           <LearningProfileCard />
           <LearningPreferences profile={profile.data} />
           <ReviewPreferences profile={profile.data} />
-          <AiPreferences profile={profile.data} />
           <ChangePassword />
         </div>
       )}

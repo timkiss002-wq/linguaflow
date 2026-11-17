@@ -15,7 +15,6 @@ import { buildDrill, type DrillItem } from '@/features/insights/drill';
 import { useLearner } from '@/features/learner/api';
 import { HBarList } from '@/features/stats/charts';
 import { useWordFamilyIndex } from '@/features/wordforms/api';
-import { useAllFeedback } from '@/features/writing/feedback';
 import { buildInsights, MIN, SLOT_LABEL, type Insight, type InsightData, type Slot } from '@/lib/personal/insights';
 import { cn } from '@/lib/utils';
 
@@ -28,7 +27,6 @@ export default function InsightsPage() {
   const learner = useLearner();
   const index = useWordFamilyIndex();
   const { lang } = useStudyLanguage();
-  const feedback = useAllFeedback();
   const ielts = useIeltsAttempts();
   const profile = learner.data?.profile;
   // No profile yet (onboarding skipped) → same defaults as the database: habits on, every day planned.
@@ -42,11 +40,10 @@ export default function InsightsPage() {
             sameFamily: index?.sameFamily,
             habitAnalysis,
             plannedDays,
-            writing: feedback.data?.map((f) => ({ language: f.feedback.language, corrections: f.feedback.corrections })),
             ielts: ielts.data?.flatMap((a) => a.results.map((r) => ({ skill: a.skill, type: r.type, mark: r.mark }))),
           })
         : [],
-    [data.data, index, habitAnalysis, plannedDays, feedback.data, ielts.data],
+    [data.data, index, habitAnalysis, plannedDays, ielts.data],
   );
   const drill = useMemo(() => (data.data && lang === 'zh' ? buildDrill(data.data.pairs) : []), [data.data, lang]);
 

@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowLeft, Bot, CheckCircle2, Copy, Loader2, Sparkles, Trash2 } from 'lucide-react';
+import { AlertTriangle, ArrowLeft, CheckCircle2, Sparkles, Trash2 } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -7,9 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { CAM_INDEX, TYPE_INFO, deleteImport, getImports, importFor, parseImport, saveImport, toImportInput, type ImportInput, type P3Type } from '@/lib/ielts/passage3';
-import { PAIR_ERRORS, PairError, useAutoPairs } from '@/features/passage3/autoPairs';
-import { aiPrompt } from '@/lib/ielts/aiPrompt';
-import { applyPairs, guessAll } from '@/lib/ielts/autopair';
+import { guessAll } from '@/lib/ielts/autopair';
 import { cn } from '@/lib/utils';
 
 const EXAMPLE: Record<P3Type, string> = {
@@ -34,40 +32,16 @@ export default function Passage3ImportPage() {
   const parsed = useMemo(() => parseImport(form), [form]);
   const set = <K extends keyof ImportInput>(k: K, v: ImportInput[K]) => setForm((f) => ({ ...f, [k]: v }));
   const nQuestions = form.questions.split('\n').filter((l) => l.trim()).length;
-  const auto = useAutoPairs();
-  const prompt = aiPrompt(form);
-  const copyPrompt = async () => {
-    try {
-      await navigator.clipboard.writeText(prompt);
-      toast.success(form.passage.trim() && form.questions.trim() ? 'Đã sao chép lời nhắc kèm đoạn văn và câu hỏi.' : 'Đã sao chép — nhớ thay phần <DÁN …> bằng đoạn văn và câu hỏi.');
-    } catch {
-      toast.error('Trình duyệt không cho sao chép — mở “Xem lời nhắc” và chép tay.');
-    }
-  };
   const keyed = parsed.set && !parsed.set.keyless;
 
-  /** Marks the keywords of every question and, with AI, finds their partners in the passage. */
-  const autoPair = async () => {
-    const lines = form.questions.split('\n').filter((l) => l.trim());
-    if (!lines.length || form.passage.trim().length < 50) {
+  /** Marks the keywords of every question by rule (no AI): the words the question shares with the passage. */
+  const autoPair = () => {
+    if (!form.questions.trim() || form.passage.trim().length < 50) {
       toast.error('Dán đoạn văn và câu hỏi trước đã.');
       return;
     }
-    // AI sees the question and, for MCQ, the options — never the answer
-    const questions = lines.map((l) => {
-      const cells = l.split('||').map((c) => c.trim());
-      return form.type === 'mcq' ? cells.slice(0, -1).join(' || ') : (cells[0] ?? '');
-    });
-    try {
-      const res = await auto.mutateAsync({ type: form.type, passage: form.passage, questions });
-      const { text, key } = applyPairs(form.questions, form.passage, res.pairs);
-      setForm((f) => ({ ...f, questions: text, key }));
-      toast.success(`Đã ghép cặp từ khóa cho ${Object.keys(key).length}/${lines.length} câu.${res.remaining !== undefined ? ` Còn ${res.remaining} lượt hôm nay.` : ''}`);
-    } catch (e) {
-      const code = e instanceof PairError ? e.code : 'ai_failed';
-      setForm((f) => ({ ...f, questions: guessAll(f.questions, f.passage) }));
-      toast.warning(`${PAIR_ERRORS[code] ?? PAIR_ERRORS.ai_failed} Đã tự đánh dấu từ khóa theo quy tắc (không có đáp án cho từng cặp).`);
-    }
+    setForm((f) => ({ ...f, questions: guessAll(f.questions, f.passage) }));
+    toast.success('Đã tự đánh dấu từ khóa theo quy tắc. Kiểm tra lại và thêm cặp đồng nghĩa nếu cần.');
   };
 
   const save = () => {
@@ -87,7 +61,7 @@ export default function Passage3ImportPage() {
       <div>
         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{cam ? `Cambridge ${cam.book} · Test ${cam.test} · Passage 3` : from ? `Đề từ ${from}` : 'Đề khác'}</p>
         <h1 className="text-2xl font-bold tracking-tight">{existing ? 'Sửa đề' : from ? 'Dán đề bạn đang làm' : 'Nhập đề từ sách của bạn'}</h1>
-        <p className="mt-1 text-sm text-muted-foreground">Chỉ cần một đoạn của Passage 3 và 4–5 câu hỏi liên quan đến đoạn đó. Đề được lưu trên trình duyệt này; khi bấm Tự ghép cặp, đoạn văn và câu hỏi (không kèm đáp án) được gửi cho AI để tìm cặp từ, không lưu lại trên server.</p>
+        <p className="mt-1 text-sm text-muted-foreground">Chỉ cần một đoạn của Passage 3 và 4–5 câu hỏi liên quan đến đoạn đó. Đề được lưu trên trình duyệt này; bấm Tự đánh dấu để máy gợi ý từ khóa trùng giữa câu hỏi và đoạn văn.</p>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
@@ -131,8 +105,8 @@ export default function Passage3ImportPage() {
           <div className="space-y-1.5">
             <div className="flex flex-wrap items-end justify-between gap-2">
               <Label htmlFor="p3-q">Câu hỏi — mỗi dòng một câu, đáp án sau dấu ||</Label>
-              <Button type="button" size="sm" variant="secondary" onClick={autoPair} disabled={auto.isPending} data-autopair>
-                {auto.isPending ? <Loader2 className="animate-spin" /> : <Sparkles />} {auto.isPending ? 'Đang ghép cặp…' : 'Tự ghép cặp'}
+              <Button type="button" size="sm" variant="secondary" onClick={autoPair} data-autopair>
+                <Sparkles /> Tự đánh dấu
               </Button>
             </div>
             <Textarea id="p3-q" rows={7} value={form.questions} onChange={(e) => setForm((f) => ({ ...f, questions: e.target.value }))} placeholder={EXAMPLE[form.type]} lang="en" />
@@ -193,23 +167,8 @@ export default function Passage3ImportPage() {
               <li>MCQ: các phương án cũng cách nhau bằng ||.</li>
             </ul>
           </div>
-          <div className="rounded-xl border bg-muted/40 p-4" data-ai-prompt>
-            <p className="mb-1 flex items-center gap-1.5 font-semibold">
-              <Bot className="size-4" aria-hidden /> Nhờ AI khác soạn đề
-            </p>
-            <ol className="mb-3 list-decimal space-y-1 pl-4 text-muted-foreground">
-              <li>Dán đoạn văn và câu hỏi (có đáp án thì càng tốt) vào hai ô bên trái.</li>
-              <li>Bấm <b>Sao chép lời nhắc</b>, dán vào ChatGPT, Claude hoặc Gemini.</li>
-              <li>Chép các dòng AI trả về, dán đè vào ô Câu hỏi rồi bấm Lưu.</li>
-            </ol>
-            <Button size="sm" className="w-full" onClick={copyPrompt}>
-              <Copy /> Sao chép lời nhắc
-            </Button>
-            <details className="mt-3">
-              <summary className="cursor-pointer text-xs text-muted-foreground">Xem lời nhắc</summary>
-              <pre className="mt-2 max-h-64 overflow-auto whitespace-pre-wrap rounded-lg bg-background p-2 font-mono text-[11px] leading-relaxed">{prompt}</pre>
-            </details>
-            <p className="mt-3 text-xs text-muted-foreground">Ví dụ một dòng đúng định dạng ({TYPE_INFO[form.type].short}):</p>
+          <div className="rounded-xl border bg-muted/40 p-4">
+            <p className="text-xs text-muted-foreground">Ví dụ một dòng đúng định dạng ({TYPE_INFO[form.type].short}):</p>
             <p className="mt-1 break-words font-mono text-xs leading-relaxed" lang="en">
               {EXAMPLE[form.type]}
             </p>

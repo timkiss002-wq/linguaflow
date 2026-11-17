@@ -1,8 +1,9 @@
 import { splitSentences } from '@/lib/writing/analyze';
 
 /**
- * "Viết 3–5 câu": each day of the path with active collocations has a short writing exercise — 3 to 5 sentences
- * answering that day's Writing prompt, using all 5 collocations. Kept in this browser, keyed by the day.
+ * The active-collocation task of each day of the path. Now "Dịch câu với cụm từ": 3 simple Vietnamese sentences per
+ * collocation, translated into English and checked against model answers (score / total). Older entries were
+ * "Viết 3–5 câu" (free sentences on the day's prompt, text / manual). Kept in this browser, keyed by the day.
  */
 
 export const MIN_SENTENCES = 3;
@@ -14,6 +15,9 @@ export interface SentenceEntry {
   manual: string[];
   savedAt: string;
   passed: boolean;
+  /** "Dịch câu với cụm từ": sentences right on the first try, out of total */
+  score?: number;
+  total?: number;
 }
 
 const KEY = 'roadmap:sentences:v1';

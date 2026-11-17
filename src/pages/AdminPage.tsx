@@ -6,7 +6,7 @@ import { EmptyState } from '@/components/EmptyState';
 import { ErrorState } from '@/components/ErrorState';
 import { PageHeader } from '@/components/PageHeader';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Switch } from '@/components/ui/switch';
 import { useProfile } from '@/features/profile/api';
@@ -22,7 +22,7 @@ interface Stats {
   ai: { last_24h: number; learners_24h: number; total: number; by_model: Record<string, number> };
 }
 
-const TABS = ['Lessons', 'Level test', 'Writing', 'AI feedback'] as const;
+const TABS = ['Lessons', 'Level test', 'Writing'] as const;
 type Tab = (typeof TABS)[number];
 const LANG = { en: 'EN', zh: '中文' } as const;
 
@@ -91,8 +91,7 @@ function AdminTabs({ tab }: { tab: Tab }) {
   const d = data.data;
   if (tab === 'Lessons') return <LessonsTab d={d} />;
   if (tab === 'Level test') return <ItemsTab d={d} />;
-  if (tab === 'Writing') return <TasksTab d={d} />;
-  return <AiTab stats={d.stats} />;
+  return <TasksTab d={d} />;
 }
 
 type Data = NonNullable<ReturnType<typeof useAdminData>['data']>;
@@ -269,38 +268,5 @@ function TasksTab({ d }: { d: Data }) {
         );
       })}
     </Table>
-  );
-}
-
-function AiTab({ stats }: { stats: Stats }) {
-  return (
-    <div className="space-y-4" data-testid="admin-ai">
-      <div className="grid gap-3 sm:grid-cols-3">
-        {[
-          ['Reviews, last 24 h', stats.ai.last_24h],
-          ['Learners, last 24 h', stats.ai.learners_24h],
-          ['Reviews, all time', stats.ai.total],
-        ].map(([label, value]) => (
-          <Card key={label} className="p-4">
-            <p className="text-sm text-muted-foreground">{label}</p>
-            <p className="mt-1 text-2xl font-semibold tabular-nums">{value}</p>
-          </Card>
-        ))}
-      </div>
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-base">Settings</CardTitle>
-          <CardDescription>Set on the server, not here, so the API key never reaches a browser.</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-1 text-sm">
-          <p>
-            Models used: {Object.entries(stats.ai.by_model).map(([m, n]) => `${m} (${n})`).join(', ') || 'none yet'}.
-          </p>
-          <p className="text-muted-foreground">
-            Change with <code>npx supabase secrets set GEMINI_MODEL=… WRITING_FEEDBACK_DAILY_LIMIT=…</code> — see docs/DEPLOY.md §4. Gemini's free tier also has its own per-minute and per-day limits.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
   );
 }

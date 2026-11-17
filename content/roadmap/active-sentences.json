@@ -1,0 +1,3033 @@
+{
+ "_note": "Câu mẫu cho bài \"Dịch câu với cụm từ\" (Việt → Anh): 3 câu đơn giản cho mỗi cụm chủ động, khóa \"chủ đề:cụm\". Đừng sửa tay — sửa active-sentences.txt rồi chạy node scripts/build-active-sentences.mjs. Cụm chưa có câu thì bài dùng câu ví dụ có sẵn.",
+ "items": {
+  "education:acquire knowledge": [
+   {
+    "vi": "Trẻ em tiếp thu kiến thức rất nhanh.",
+    "en": [
+     "Children acquire knowledge very quickly.",
+     "Kids acquire knowledge very quickly."
+    ],
+    "hint": "very quickly = rất nhanh · hiện tại đơn"
+   },
+   {
+    "vi": "Chúng ta tiếp thu kiến thức từ sách.",
+    "en": [
+     "We acquire knowledge from books."
+    ],
+    "hint": "from books = từ sách"
+   },
+   {
+    "vi": "Học sinh tiếp thu kiến thức ở trường.",
+    "en": [
+     "Students acquire knowledge at school.",
+     "Pupils acquire knowledge at school."
+    ],
+    "hint": "at school = ở trường"
+   }
+  ],
+  "education:academic performance": [
+   {
+    "vi": "Kết quả học tập của cô ấy rất tốt.",
+    "en": [
+     "Her academic performance is very good.",
+     "Her academic performance is excellent."
+    ],
+    "hint": "Her … is very good"
+   },
+   {
+    "vi": "Ngủ đủ giấc cải thiện kết quả học tập.",
+    "en": [
+     "Enough sleep improves academic performance.",
+     "Getting enough sleep improves academic performance."
+    ],
+    "hint": "enough sleep = ngủ đủ giấc · improve = cải thiện"
+   },
+   {
+    "vi": "Cha mẹ quan tâm đến kết quả học tập của con cái.",
+    "en": [
+     "Parents care about their children's academic performance.",
+     "Parents are interested in their children's academic performance."
+    ],
+    "hint": "care about = quan tâm đến"
+   }
+  ],
+  "education:tuition fees": [
+   {
+    "vi": "Học phí rất cao.",
+    "en": [
+     "Tuition fees are very high.",
+     "The tuition fees are very high."
+    ],
+    "hint": "are very high"
+   },
+   {
+    "vi": "Nhiều sinh viên không thể trả học phí.",
+    "en": [
+     "Many students cannot pay tuition fees.",
+     "Many students can't pay tuition fees.",
+     "Many students cannot afford tuition fees."
+    ],
+    "hint": "cannot pay = không thể trả"
+   },
+   {
+    "vi": "Chính phủ nên giảm học phí.",
+    "en": [
+     "The government should reduce tuition fees.",
+     "The government should lower tuition fees."
+    ],
+    "hint": "should reduce = nên giảm"
+   }
+  ],
+  "education:higher education": [
+   {
+    "vi": "Giáo dục đại học rất quan trọng.",
+    "en": [
+     "Higher education is very important."
+    ],
+    "hint": "is very important"
+   },
+   {
+    "vi": "Nhiều người trẻ muốn học lên giáo dục đại học.",
+    "en": [
+     "Many young people want higher education.",
+     "Many young people want to get higher education."
+    ],
+    "hint": "young people = người trẻ"
+   },
+   {
+    "vi": "Giáo dục đại học nên miễn phí.",
+    "en": [
+     "Higher education should be free."
+    ],
+    "hint": "should be free = nên miễn phí"
+   }
+  ],
+  "education:compulsory education": [
+   {
+    "vi": "Giáo dục bắt buộc kéo dài chín năm.",
+    "en": [
+     "Compulsory education lasts nine years.",
+     "Compulsory education lasts for nine years."
+    ],
+    "hint": "last = kéo dài"
+   },
+   {
+    "vi": "Mọi trẻ em đều cần giáo dục bắt buộc.",
+    "en": [
+     "All children need compulsory education.",
+     "Every child needs compulsory education."
+    ],
+    "hint": "All children need …"
+   },
+   {
+    "vi": "Giáo dục bắt buộc là miễn phí ở Việt Nam.",
+    "en": [
+     "Compulsory education is free in Vietnam."
+    ],
+    "hint": "is free in Vietnam"
+   }
+  ],
+  "education:vocational training": [
+   {
+    "vi": "Đào tạo nghề giúp người trẻ tìm việc.",
+    "en": [
+     "Vocational training helps young people find jobs.",
+     "Vocational training helps young people find work."
+    ],
+    "hint": "help sb find jobs = giúp ai tìm việc"
+   },
+   {
+    "vi": "Anh ấy chọn đào tạo nghề thay vì đại học.",
+    "en": [
+     "He chose vocational training instead of university.",
+     "He chose vocational training instead of going to university."
+    ],
+    "hint": "chose (quá khứ của choose) · instead of = thay vì"
+   },
+   {
+    "vi": "Đào tạo nghề thì rẻ hơn đại học.",
+    "en": [
+     "Vocational training is cheaper than university."
+    ],
+    "hint": "cheaper than = rẻ hơn"
+   }
+  ],
+  "education:rote learning": [
+   {
+    "vi": "Học vẹt không giúp học sinh hiểu bài.",
+    "en": [
+     "Rote learning does not help students understand lessons.",
+     "Rote learning doesn't help students understand the lessons."
+    ],
+    "hint": "does not help = không giúp · understand = hiểu"
+   },
+   {
+    "vi": "Nhiều trường vẫn dùng học vẹt.",
+    "en": [
+     "Many schools still use rote learning."
+    ],
+    "hint": "still use = vẫn dùng"
+   },
+   {
+    "vi": "Học vẹt thì nhàm chán.",
+    "en": [
+     "Rote learning is boring."
+    ],
+    "hint": "boring = nhàm chán"
+   }
+  ],
+  "education:critical thinking skills": [
+   {
+    "vi": "Tranh luận phát triển kỹ năng tư duy phản biện.",
+    "en": [
+     "Debating develops critical thinking skills.",
+     "Debates develop critical thinking skills."
+    ],
+    "hint": "debating = tranh luận · develop = phát triển"
+   },
+   {
+    "vi": "Học sinh cần kỹ năng tư duy phản biện.",
+    "en": [
+     "Students need critical thinking skills."
+    ],
+    "hint": "need = cần"
+   },
+   {
+    "vi": "Đọc sách cải thiện kỹ năng tư duy phản biện.",
+    "en": [
+     "Reading improves critical thinking skills.",
+     "Reading books improves critical thinking skills."
+    ],
+    "hint": "reading = đọc sách · improve = cải thiện"
+   }
+  ],
+  "education:well-rounded education": [
+   {
+    "vi": "Thể thao là một phần của nền giáo dục toàn diện.",
+    "en": [
+     "Sport is part of a well-rounded education.",
+     "Sport is a part of a well-rounded education.",
+     "Sports are part of a well-rounded education."
+    ],
+    "hint": "is part of = là một phần của"
+   },
+   {
+    "vi": "Mọi trẻ em xứng đáng có một nền giáo dục toàn diện.",
+    "en": [
+     "Every child deserves a well-rounded education.",
+     "All children deserve a well-rounded education."
+    ],
+    "hint": "deserve = xứng đáng có"
+   },
+   {
+    "vi": "Trường này mang lại một nền giáo dục toàn diện.",
+    "en": [
+     "This school offers a well-rounded education.",
+     "This school provides a well-rounded education."
+    ],
+    "hint": "offer / provide = mang lại"
+   }
+  ],
+  "education:extracurricular activities": [
+   {
+    "vi": "Hoạt động ngoại khóa rất thú vị.",
+    "en": [
+     "Extracurricular activities are very interesting.",
+     "Extracurricular activities are very fun."
+    ],
+    "hint": "are very interesting"
+   },
+   {
+    "vi": "Tôi tham gia nhiều hoạt động ngoại khóa.",
+    "en": [
+     "I join many extracurricular activities.",
+     "I take part in many extracurricular activities.",
+     "I participate in many extracurricular activities."
+    ],
+    "hint": "join / take part in = tham gia"
+   },
+   {
+    "vi": "Hoạt động ngoại khóa dạy kỹ năng làm việc nhóm.",
+    "en": [
+     "Extracurricular activities teach teamwork skills.",
+     "Extracurricular activities teach teamwork."
+    ],
+    "hint": "teach = dạy · teamwork = làm việc nhóm"
+   }
+  ],
+  "education:pursue a degree in": [
+   {
+    "vi": "Cô ấy muốn theo học bằng y khoa.",
+    "en": [
+     "She wants to pursue a degree in medicine."
+    ],
+    "hint": "want to + V · medicine = y khoa"
+   },
+   {
+    "vi": "Anh ấy đang theo học bằng kinh tế.",
+    "en": [
+     "He is pursuing a degree in economics.",
+     "He's pursuing a degree in economics."
+    ],
+    "hint": "hiện tại tiếp diễn: is + V-ing · economics = kinh tế"
+   },
+   {
+    "vi": "Tôi dự định theo học bằng khoa học máy tính.",
+    "en": [
+     "I plan to pursue a degree in computer science."
+    ],
+    "hint": "plan to + V = dự định · computer science = khoa học máy tính"
+   }
+  ],
+  "education:drop out of school": [
+   {
+    "vi": "Một số trẻ em bỏ học sớm.",
+    "en": [
+     "Some children drop out of school early.",
+     "Some kids drop out of school early."
+    ],
+    "hint": "early = sớm"
+   },
+   {
+    "vi": "Anh ấy đã bỏ học năm mười lăm tuổi.",
+    "en": [
+     "He dropped out of school at fifteen.",
+     "He dropped out of school at the age of fifteen.",
+     "He dropped out of school when he was fifteen."
+    ],
+    "hint": "quá khứ đơn: dropped · at fifteen = năm 15 tuổi"
+   },
+   {
+    "vi": "Nghèo đói khiến trẻ em bỏ học.",
+    "en": [
+     "Poverty makes children drop out of school.",
+     "Poverty causes children to drop out of school."
+    ],
+    "hint": "poverty = nghèo đói · make sb + V = khiến ai làm gì"
+   }
+  ],
+  "education:a heavy academic workload": [
+   {
+    "vi": "Sinh viên có khối lượng học tập nặng.",
+    "en": [
+     "Students have a heavy academic workload."
+    ],
+    "hint": "have = có"
+   },
+   {
+    "vi": "Khối lượng học tập nặng gây căng thẳng.",
+    "en": [
+     "A heavy academic workload causes stress.",
+     "A heavy academic workload leads to stress."
+    ],
+    "hint": "cause stress = gây căng thẳng"
+   },
+   {
+    "vi": "Tôi có một khối lượng học tập nặng năm nay.",
+    "en": [
+     "I have a heavy academic workload this year."
+    ],
+    "hint": "this year = năm nay"
+   }
+  ],
+  "education:distance learning": [
+   {
+    "vi": "Học từ xa rất tiện lợi.",
+    "en": [
+     "Distance learning is very convenient."
+    ],
+    "hint": "convenient = tiện lợi"
+   },
+   {
+    "vi": "Nhiều người lớn chọn học từ xa.",
+    "en": [
+     "Many adults choose distance learning."
+    ],
+    "hint": "adults = người lớn · choose = chọn"
+   },
+   {
+    "vi": "Học từ xa tiết kiệm thời gian.",
+    "en": [
+     "Distance learning saves time."
+    ],
+    "hint": "save time = tiết kiệm thời gian"
+   }
+  ],
+  "education:face-to-face interaction": [
+   {
+    "vi": "Trẻ em cần tương tác trực tiếp.",
+    "en": [
+     "Children need face-to-face interaction."
+    ],
+    "hint": "need = cần"
+   },
+   {
+    "vi": "Học trực tuyến thiếu tương tác trực tiếp.",
+    "en": [
+     "Online learning lacks face-to-face interaction.",
+     "Online learning has no face-to-face interaction."
+    ],
+    "hint": "online learning = học trực tuyến · lack = thiếu"
+   },
+   {
+    "vi": "Tương tác trực tiếp giúp học sinh kết bạn.",
+    "en": [
+     "Face-to-face interaction helps students make friends."
+    ],
+    "hint": "make friends = kết bạn"
+   }
+  ],
+  "education:equip students with": [
+   {
+    "vi": "Trường học nên trang bị cho học sinh kỹ năng sống.",
+    "en": [
+     "Schools should equip students with life skills."
+    ],
+    "hint": "should + V · life skills = kỹ năng sống"
+   },
+   {
+    "vi": "Khóa học này trang bị cho học sinh kiến thức thực tế.",
+    "en": [
+     "This course equips students with practical knowledge.",
+     "This course equips students with real-world knowledge."
+    ],
+    "hint": "equips (chủ ngữ số ít +s) · practical = thực tế"
+   },
+   {
+    "vi": "Giáo viên trang bị cho học sinh kỹ năng máy tính.",
+    "en": [
+     "Teachers equip students with computer skills."
+    ],
+    "hint": "computer skills = kỹ năng máy tính"
+   }
+  ],
+  "education:broaden one's horizons": [
+   {
+    "vi": "Du lịch mở rộng tầm nhìn của chúng ta.",
+    "en": [
+     "Travel broadens our horizons.",
+     "Travelling broadens our horizons.",
+     "Traveling broadens our horizons."
+    ],
+    "hint": "travel = du lịch · broadens (+s) · our = của chúng ta"
+   },
+   {
+    "vi": "Đọc sách giúp tôi mở rộng tầm nhìn.",
+    "en": [
+     "Reading helps me broaden my horizons.",
+     "Reading books helps me broaden my horizons."
+    ],
+    "hint": "help sb + V · my horizons"
+   },
+   {
+    "vi": "Du học mở rộng tầm nhìn của sinh viên.",
+    "en": [
+     "Studying abroad broadens students' horizons.",
+     "Studying abroad broadens the horizons of students."
+    ],
+    "hint": "study abroad = du học · students' horizons"
+   }
+  ],
+  "education:the job market": [
+   {
+    "vi": "Thị trường việc làm rất cạnh tranh.",
+    "en": [
+     "The job market is very competitive."
+    ],
+    "hint": "competitive = cạnh tranh"
+   },
+   {
+    "vi": "Sinh viên tốt nghiệp gặp khó khăn trong thị trường việc làm.",
+    "en": [
+     "Graduates face difficulties in the job market.",
+     "Graduates have difficulties in the job market."
+    ],
+    "hint": "graduates = sinh viên tốt nghiệp · face difficulties = gặp khó khăn"
+   },
+   {
+    "vi": "Thị trường việc làm đang thay đổi nhanh.",
+    "en": [
+     "The job market is changing quickly.",
+     "The job market is changing fast.",
+     "The job market is changing rapidly."
+    ],
+    "hint": "hiện tại tiếp diễn: is changing"
+   }
+  ],
+  "education:practical skills": [
+   {
+    "vi": "Người sử dụng lao động cần kỹ năng thực hành.",
+    "en": [
+     "Employers need practical skills.",
+     "Employers want practical skills."
+    ],
+    "hint": "employers = người sử dụng lao động"
+   },
+   {
+    "vi": "Học sinh nên học kỹ năng thực hành.",
+    "en": [
+     "Students should learn practical skills."
+    ],
+    "hint": "should learn = nên học"
+   },
+   {
+    "vi": "Nấu ăn và may vá là các kỹ năng thực hành.",
+    "en": [
+     "Cooking and sewing are practical skills."
+    ],
+    "hint": "cooking = nấu ăn · sewing = may vá · are"
+   }
+  ],
+  "education:theoretical knowledge": [
+   {
+    "vi": "Đại học tập trung vào kiến thức lý thuyết.",
+    "en": [
+     "Universities focus on theoretical knowledge.",
+     "University focuses on theoretical knowledge."
+    ],
+    "hint": "focus on = tập trung vào"
+   },
+   {
+    "vi": "Kiến thức lý thuyết thôi là không đủ.",
+    "en": [
+     "Theoretical knowledge alone is not enough.",
+     "Theoretical knowledge alone isn't enough.",
+     "Only theoretical knowledge is not enough."
+    ],
+    "hint": "alone = thôi · not enough = không đủ"
+   },
+   {
+    "vi": "Sách cung cấp kiến thức lý thuyết.",
+    "en": [
+     "Books provide theoretical knowledge.",
+     "Books give theoretical knowledge."
+    ],
+    "hint": "provide = cung cấp"
+   }
+  ],
+  "education:lifelong learning": [
+   {
+    "vi": "Học tập suốt đời rất quan trọng.",
+    "en": [
+     "Lifelong learning is very important."
+    ],
+    "hint": "is very important"
+   },
+   {
+    "vi": "Thư viện hỗ trợ học tập suốt đời.",
+    "en": [
+     "Libraries support lifelong learning."
+    ],
+    "hint": "library = thư viện · support = hỗ trợ"
+   },
+   {
+    "vi": "Ông tôi tin vào học tập suốt đời.",
+    "en": [
+     "My grandfather believes in lifelong learning."
+    ],
+    "hint": "grandfather = ông · believe in = tin vào"
+   }
+  ],
+  "education:a student loan": [
+   {
+    "vi": "Anh ấy có một khoản vay sinh viên.",
+    "en": [
+     "He has a student loan."
+    ],
+    "hint": "has = có"
+   },
+   {
+    "vi": "Tôi cần một khoản vay sinh viên để học đại học.",
+    "en": [
+     "I need a student loan to go to university.",
+     "I need a student loan to study at university."
+    ],
+    "hint": "to go to university = để học đại học"
+   },
+   {
+    "vi": "Cô ấy đã trả hết khoản vay sinh viên.",
+    "en": [
+     "She paid off her student loan.",
+     "She has paid off her student loan."
+    ],
+    "hint": "pay off = trả hết (quá khứ: paid off)"
+   }
+  ],
+  "education:gain a qualification": [
+   {
+    "vi": "Anh ấy muốn đạt được một bằng cấp.",
+    "en": [
+     "He wants to gain a qualification."
+    ],
+    "hint": "want to + V"
+   },
+   {
+    "vi": "Cô ấy đạt được một chứng chỉ năm ngoái.",
+    "en": [
+     "She gained a qualification last year."
+    ],
+    "hint": "quá khứ đơn: gained · last year = năm ngoái"
+   },
+   {
+    "vi": "Đạt được bằng cấp giúp bạn tìm việc.",
+    "en": [
+     "Gaining a qualification helps you find a job."
+    ],
+    "hint": "V-ing làm chủ ngữ: Gaining … helps"
+   }
+  ],
+  "education:exam-oriented education": [
+   {
+    "vi": "Giáo dục nặng về thi cử gây áp lực.",
+    "en": [
+     "Exam-oriented education causes pressure.",
+     "Exam-oriented education creates pressure.",
+     "Exam-oriented education puts pressure on students."
+    ],
+    "hint": "cause pressure = gây áp lực"
+   },
+   {
+    "vi": "Nhiều nước châu Á có giáo dục nặng về thi cử.",
+    "en": [
+     "Many Asian countries have exam-oriented education."
+    ],
+    "hint": "Asian countries = các nước châu Á"
+   },
+   {
+    "vi": "Giáo dục nặng về thi cử dạy học sinh học vẹt.",
+    "en": [
+     "Exam-oriented education teaches students rote learning."
+    ],
+    "hint": "teach sb sth = dạy ai cái gì"
+   }
+  ],
+  "education:teacher-centred approach": [
+   {
+    "vi": "Trường này dùng phương pháp lấy giáo viên làm trung tâm.",
+    "en": [
+     "This school uses a teacher-centred approach.",
+     "This school uses a teacher-centered approach."
+    ],
+    "hint": "uses (+s) · a … approach"
+   },
+   {
+    "vi": "Phương pháp lấy giáo viên làm trung tâm thì cũ.",
+    "en": [
+     "The teacher-centred approach is old.",
+     "The teacher-centred approach is old-fashioned.",
+     "A teacher-centred approach is old-fashioned."
+    ],
+    "hint": "old-fashioned = cũ, lỗi thời"
+   },
+   {
+    "vi": "Học sinh ít nói trong phương pháp lấy giáo viên làm trung tâm.",
+    "en": [
+     "Students speak little in a teacher-centred approach.",
+     "Students talk little in a teacher-centred approach."
+    ],
+    "hint": "speak little = ít nói"
+   }
+  ],
+  "education:motivate students to": [
+   {
+    "vi": "Giáo viên giỏi thúc đẩy học sinh học tập.",
+    "en": [
+     "Good teachers motivate students to learn.",
+     "Good teachers motivate students to study."
+    ],
+    "hint": "motivate students to + V"
+   },
+   {
+    "vi": "Phần thưởng thúc đẩy học sinh cố gắng hơn.",
+    "en": [
+     "Rewards motivate students to try harder.",
+     "Rewards motivate students to work harder."
+    ],
+    "hint": "rewards = phần thưởng · try harder = cố gắng hơn"
+   },
+   {
+    "vi": "Trò chơi thúc đẩy học sinh tham gia.",
+    "en": [
+     "Games motivate students to take part.",
+     "Games motivate students to participate."
+    ],
+    "hint": "take part / participate = tham gia"
+   }
+  ],
+  "education:academic subjects": [
+   {
+    "vi": "Toán là một môn học thuật.",
+    "en": [
+     "Maths is an academic subject.",
+     "Math is an academic subject.",
+     "Mathematics is an academic subject."
+    ],
+    "hint": "an academic subject (số ít)"
+   },
+   {
+    "vi": "Trường học quá chú trọng các môn học thuật.",
+    "en": [
+     "Schools focus too much on academic subjects."
+    ],
+    "hint": "focus too much on = quá chú trọng"
+   },
+   {
+    "vi": "Tôi thích các môn học thuật.",
+    "en": [
+     "I like academic subjects."
+    ],
+    "hint": "like = thích"
+   }
+  ],
+  "education:enrol in a course": [
+   {
+    "vi": "Tôi muốn đăng ký một khóa học tiếng Anh.",
+    "en": [
+     "I want to enrol in an English course.",
+     "I want to enroll in an English course."
+    ],
+    "hint": "an English course"
+   },
+   {
+    "vi": "Cô ấy đã đăng ký một khóa học nấu ăn.",
+    "en": [
+     "She enrolled in a cooking course.",
+     "She has enrolled in a cooking course."
+    ],
+    "hint": "quá khứ: enrolled · cooking course = khóa học nấu ăn"
+   },
+   {
+    "vi": "Nhiều người lớn đăng ký các khóa học trực tuyến.",
+    "en": [
+     "Many adults enrol in online courses.",
+     "Many adults enroll in online courses."
+    ],
+    "hint": "online courses = khóa học trực tuyến"
+   }
+  ],
+  "education:equal access to education": [
+   {
+    "vi": "Mọi trẻ em nên có cơ hội tiếp cận giáo dục bình đẳng.",
+    "en": [
+     "All children should have equal access to education.",
+     "Every child should have equal access to education."
+    ],
+    "hint": "should have = nên có"
+   },
+   {
+    "vi": "Trẻ em nghèo không có cơ hội tiếp cận giáo dục bình đẳng.",
+    "en": [
+     "Poor children do not have equal access to education.",
+     "Poor children don't have equal access to education."
+    ],
+    "hint": "poor children = trẻ em nghèo"
+   },
+   {
+    "vi": "Chính phủ cần đảm bảo cơ hội tiếp cận giáo dục bình đẳng.",
+    "en": [
+     "The government needs to ensure equal access to education.",
+     "The government must ensure equal access to education."
+    ],
+    "hint": "ensure = đảm bảo"
+   }
+  ],
+  "education:the gap between rich and poor students": [
+   {
+    "vi": "Khoảng cách giữa học sinh giàu và nghèo đang tăng lên.",
+    "en": [
+     "The gap between rich and poor students is growing.",
+     "The gap between rich and poor students is increasing."
+    ],
+    "hint": "is growing = đang tăng lên"
+   },
+   {
+    "vi": "Học phí miễn phí có thể thu hẹp khoảng cách giữa học sinh giàu và nghèo.",
+    "en": [
+     "Free tuition can narrow the gap between rich and poor students.",
+     "Free tuition can reduce the gap between rich and poor students."
+    ],
+    "hint": "free tuition = học phí miễn phí · narrow = thu hẹp"
+   },
+   {
+    "vi": "Khoảng cách giữa học sinh giàu và nghèo là một vấn đề lớn.",
+    "en": [
+     "The gap between rich and poor students is a big problem.",
+     "The gap between rich and poor students is a big issue."
+    ],
+    "hint": "a big problem = vấn đề lớn"
+   }
+  ],
+  "environment:tackle climate change": [
+   {
+    "vi": "Chúng ta phải giải quyết biến đổi khí hậu.",
+    "en": [
+     "We must tackle climate change.",
+     "We have to tackle climate change."
+    ],
+    "hint": "must = phải"
+   },
+   {
+    "vi": "Các nước cần hợp tác để giải quyết biến đổi khí hậu.",
+    "en": [
+     "Countries need to work together to tackle climate change.",
+     "Countries need to cooperate to tackle climate change."
+    ],
+    "hint": "work together = hợp tác"
+   },
+   {
+    "vi": "Cây xanh giúp giải quyết biến đổi khí hậu.",
+    "en": [
+     "Trees help tackle climate change.",
+     "Trees help to tackle climate change."
+    ],
+    "hint": "trees = cây xanh"
+   }
+  ],
+  "environment:reduce carbon emissions": [
+   {
+    "vi": "Xe điện giảm lượng khí thải carbon.",
+    "en": [
+     "Electric cars reduce carbon emissions."
+    ],
+    "hint": "electric cars = xe điện"
+   },
+   {
+    "vi": "Các nhà máy phải giảm lượng khí thải carbon.",
+    "en": [
+     "Factories must reduce carbon emissions.",
+     "Factories have to reduce carbon emissions."
+    ],
+    "hint": "factories = nhà máy"
+   },
+   {
+    "vi": "Đi xe đạp giúp giảm lượng khí thải carbon.",
+    "en": [
+     "Cycling helps reduce carbon emissions.",
+     "Cycling helps to reduce carbon emissions."
+    ],
+    "hint": "cycling = đi xe đạp"
+   }
+  ],
+  "environment:renewable energy sources": [
+   {
+    "vi": "Gió và mặt trời là các nguồn năng lượng tái tạo.",
+    "en": [
+     "Wind and sun are renewable energy sources.",
+     "Wind and solar power are renewable energy sources.",
+     "Wind and the sun are renewable energy sources."
+    ],
+    "hint": "wind = gió · sun = mặt trời"
+   },
+   {
+    "vi": "Chúng ta nên dùng các nguồn năng lượng tái tạo.",
+    "en": [
+     "We should use renewable energy sources."
+    ],
+    "hint": "should use = nên dùng"
+   },
+   {
+    "vi": "Các nguồn năng lượng tái tạo thì sạch.",
+    "en": [
+     "Renewable energy sources are clean."
+    ],
+    "hint": "clean = sạch"
+   }
+  ],
+  "environment:rely heavily on fossil fuels": [
+   {
+    "vi": "Nhiều nước phụ thuộc nhiều vào nhiên liệu hóa thạch.",
+    "en": [
+     "Many countries rely heavily on fossil fuels."
+    ],
+    "hint": "many countries = nhiều nước"
+   },
+   {
+    "vi": "Ô tô phụ thuộc nhiều vào nhiên liệu hóa thạch.",
+    "en": [
+     "Cars rely heavily on fossil fuels."
+    ],
+    "hint": "cars = ô tô"
+   },
+   {
+    "vi": "Chúng ta không nên phụ thuộc nhiều vào nhiên liệu hóa thạch.",
+    "en": [
+     "We should not rely heavily on fossil fuels.",
+     "We shouldn't rely heavily on fossil fuels."
+    ],
+    "hint": "should not = không nên"
+   }
+  ],
+  "environment:environmental degradation": [
+   {
+    "vi": "Ô nhiễm gây ra sự suy thoái môi trường.",
+    "en": [
+     "Pollution causes environmental degradation.",
+     "Pollution leads to environmental degradation."
+    ],
+    "hint": "pollution = ô nhiễm · cause = gây ra"
+   },
+   {
+    "vi": "Sự suy thoái môi trường là một vấn đề nghiêm trọng.",
+    "en": [
+     "Environmental degradation is a serious problem.",
+     "Environmental degradation is a serious issue."
+    ],
+    "hint": "a serious problem = vấn đề nghiêm trọng"
+   },
+   {
+    "vi": "Chặt phá rừng dẫn đến sự suy thoái môi trường.",
+    "en": [
+     "Deforestation leads to environmental degradation.",
+     "Deforestation causes environmental degradation."
+    ],
+    "hint": "deforestation = chặt phá rừng · lead to = dẫn đến"
+   }
+  ],
+  "environment:pose a serious threat to": [
+   {
+    "vi": "Ô nhiễm gây ra mối đe dọa nghiêm trọng cho sức khỏe.",
+    "en": [
+     "Pollution poses a serious threat to health.",
+     "Pollution poses a serious threat to our health.",
+     "Pollution poses a serious threat to human health."
+    ],
+    "hint": "poses (+s) · health = sức khỏe"
+   },
+   {
+    "vi": "Rác nhựa gây ra mối đe dọa nghiêm trọng cho sinh vật biển.",
+    "en": [
+     "Plastic waste poses a serious threat to sea animals.",
+     "Plastic waste poses a serious threat to marine life."
+    ],
+    "hint": "plastic waste = rác nhựa · sea animals = sinh vật biển"
+   },
+   {
+    "vi": "Biến đổi khí hậu gây ra mối đe dọa nghiêm trọng cho nông dân.",
+    "en": [
+     "Climate change poses a serious threat to farmers."
+    ],
+    "hint": "farmers = nông dân"
+   }
+  ],
+  "environment:raise public awareness of": [
+   {
+    "vi": "Chính phủ nên nâng cao nhận thức cộng đồng về tái chế.",
+    "en": [
+     "The government should raise public awareness of recycling."
+    ],
+    "hint": "recycling = tái chế"
+   },
+   {
+    "vi": "Truyền hình có thể nâng cao nhận thức cộng đồng về ô nhiễm.",
+    "en": [
+     "Television can raise public awareness of pollution.",
+     "TV can raise public awareness of pollution."
+    ],
+    "hint": "television = truyền hình · can + V"
+   },
+   {
+    "vi": "Chiến dịch này nâng cao nhận thức cộng đồng về biến đổi khí hậu.",
+    "en": [
+     "This campaign raises public awareness of climate change."
+    ],
+    "hint": "campaign = chiến dịch · raises (+s)"
+   }
+  ],
+  "environment:adopt an eco-friendly lifestyle": [
+   {
+    "vi": "Mọi người nên áp dụng lối sống thân thiện với môi trường.",
+    "en": [
+     "Everyone should adopt an eco-friendly lifestyle.",
+     "People should adopt an eco-friendly lifestyle."
+    ],
+    "hint": "everyone = mọi người"
+   },
+   {
+    "vi": "Gia đình tôi áp dụng lối sống thân thiện với môi trường.",
+    "en": [
+     "My family adopts an eco-friendly lifestyle.",
+     "My family has adopted an eco-friendly lifestyle."
+    ],
+    "hint": "my family + adopts (+s)"
+   },
+   {
+    "vi": "Áp dụng lối sống thân thiện với môi trường thì không khó.",
+    "en": [
+     "Adopting an eco-friendly lifestyle is not difficult.",
+     "Adopting an eco-friendly lifestyle isn't difficult.",
+     "Adopting an eco-friendly lifestyle is not hard."
+    ],
+    "hint": "V-ing làm chủ ngữ: Adopting … is"
+   }
+  ],
+  "environment:single-use plastics": [
+   {
+    "vi": "Chúng ta nên cấm đồ nhựa dùng một lần.",
+    "en": [
+     "We should ban single-use plastics."
+    ],
+    "hint": "ban = cấm"
+   },
+   {
+    "vi": "Đồ nhựa dùng một lần gây hại cho biển.",
+    "en": [
+     "Single-use plastics harm the ocean.",
+     "Single-use plastics harm the sea.",
+     "Single-use plastics damage the ocean."
+    ],
+    "hint": "harm = gây hại · the ocean / the sea = biển"
+   },
+   {
+    "vi": "Nhiều cửa hàng không còn dùng đồ nhựa dùng một lần.",
+    "en": [
+     "Many shops no longer use single-use plastics.",
+     "Many stores no longer use single-use plastics."
+    ],
+    "hint": "no longer = không còn"
+   }
+  ],
+  "environment:impose strict regulations on": [
+   {
+    "vi": "Chính phủ nên áp đặt quy định nghiêm ngặt lên các nhà máy.",
+    "en": [
+     "The government should impose strict regulations on factories."
+    ],
+    "hint": "factories = các nhà máy"
+   },
+   {
+    "vi": "Thành phố đã áp đặt quy định nghiêm ngặt lên ô tô cũ.",
+    "en": [
+     "The city imposed strict regulations on old cars.",
+     "The city has imposed strict regulations on old cars."
+    ],
+    "hint": "quá khứ: imposed · old cars = ô tô cũ"
+   },
+   {
+    "vi": "Chúng ta cần áp đặt quy định nghiêm ngặt lên rác thải nhựa.",
+    "en": [
+     "We need to impose strict regulations on plastic waste."
+    ],
+    "hint": "need to + V · plastic waste = rác thải nhựa"
+   }
+  ],
+  "environment:a carbon tax": [
+   {
+    "vi": "Một số nước có thuế carbon.",
+    "en": [
+     "Some countries have a carbon tax."
+    ],
+    "hint": "some countries = một số nước"
+   },
+   {
+    "vi": "Thuế carbon có thể giảm ô nhiễm.",
+    "en": [
+     "A carbon tax can reduce pollution."
+    ],
+    "hint": "can reduce = có thể giảm"
+   },
+   {
+    "vi": "Chính phủ nên áp dụng thuế carbon.",
+    "en": [
+     "The government should introduce a carbon tax.",
+     "The government should adopt a carbon tax.",
+     "The government should impose a carbon tax."
+    ],
+    "hint": "introduce = áp dụng (một loại thuế)"
+   }
+  ],
+  "environment:deplete natural resources": [
+   {
+    "vi": "Con người đang làm cạn kiệt tài nguyên thiên nhiên.",
+    "en": [
+     "Humans are depleting natural resources.",
+     "People are depleting natural resources."
+    ],
+    "hint": "hiện tại tiếp diễn: are depleting"
+   },
+   {
+    "vi": "Khai thác mỏ làm cạn kiệt tài nguyên thiên nhiên.",
+    "en": [
+     "Mining depletes natural resources."
+    ],
+    "hint": "mining = khai thác mỏ · depletes (+s)"
+   },
+   {
+    "vi": "Chúng ta không nên làm cạn kiệt tài nguyên thiên nhiên.",
+    "en": [
+     "We should not deplete natural resources.",
+     "We shouldn't deplete natural resources."
+    ],
+    "hint": "should not = không nên"
+   }
+  ],
+  "environment:the loss of biodiversity": [
+   {
+    "vi": "Sự suy giảm đa dạng sinh học là một vấn đề lớn.",
+    "en": [
+     "The loss of biodiversity is a big problem.",
+     "The loss of biodiversity is a big issue."
+    ],
+    "hint": "a big problem"
+   },
+   {
+    "vi": "Chặt phá rừng gây ra sự suy giảm đa dạng sinh học.",
+    "en": [
+     "Deforestation causes the loss of biodiversity.",
+     "Deforestation leads to the loss of biodiversity."
+    ],
+    "hint": "deforestation = chặt phá rừng"
+   },
+   {
+    "vi": "Chúng ta phải ngăn chặn sự suy giảm đa dạng sinh học.",
+    "en": [
+     "We must stop the loss of biodiversity.",
+     "We must prevent the loss of biodiversity.",
+     "We have to stop the loss of biodiversity."
+    ],
+    "hint": "stop / prevent = ngăn chặn"
+   }
+  ],
+  "environment:natural habitats": [
+   {
+    "vi": "Động vật đang mất môi trường sống tự nhiên.",
+    "en": [
+     "Animals are losing their natural habitats.",
+     "Animals are losing natural habitats."
+    ],
+    "hint": "are losing = đang mất · their"
+   },
+   {
+    "vi": "Chúng ta nên bảo vệ môi trường sống tự nhiên.",
+    "en": [
+     "We should protect natural habitats."
+    ],
+    "hint": "protect = bảo vệ"
+   },
+   {
+    "vi": "Các thành phố phá hủy môi trường sống tự nhiên.",
+    "en": [
+     "Cities destroy natural habitats."
+    ],
+    "hint": "destroy = phá hủy"
+   }
+  ],
+  "environment:protect endangered species": [
+   {
+    "vi": "Chúng ta phải bảo vệ các loài có nguy cơ tuyệt chủng.",
+    "en": [
+     "We must protect endangered species.",
+     "We have to protect endangered species."
+    ],
+    "hint": "must = phải"
+   },
+   {
+    "vi": "Sở thú giúp bảo vệ các loài có nguy cơ tuyệt chủng.",
+    "en": [
+     "Zoos help protect endangered species.",
+     "Zoos help to protect endangered species."
+    ],
+    "hint": "zoos = sở thú"
+   },
+   {
+    "vi": "Luật mới bảo vệ các loài có nguy cơ tuyệt chủng.",
+    "en": [
+     "New laws protect endangered species.",
+     "The new law protects endangered species.",
+     "A new law protects endangered species."
+    ],
+    "hint": "new laws = luật mới"
+   }
+  ],
+  "environment:extreme weather events": [
+   {
+    "vi": "Các hiện tượng thời tiết cực đoan đang trở nên phổ biến hơn.",
+    "en": [
+     "Extreme weather events are becoming more common."
+    ],
+    "hint": "are becoming more common"
+   },
+   {
+    "vi": "Biến đổi khí hậu gây ra các hiện tượng thời tiết cực đoan.",
+    "en": [
+     "Climate change causes extreme weather events.",
+     "Climate change leads to extreme weather events."
+    ],
+    "hint": "causes (+s)"
+   },
+   {
+    "vi": "Các hiện tượng thời tiết cực đoan phá hủy mùa màng.",
+    "en": [
+     "Extreme weather events destroy crops."
+    ],
+    "hint": "crops = mùa màng · destroy = phá hủy"
+   }
+  ],
+  "environment:rising sea levels": [
+   {
+    "vi": "Mực nước biển dâng đe dọa các thành phố ven biển.",
+    "en": [
+     "Rising sea levels threaten coastal cities."
+    ],
+    "hint": "threaten = đe dọa · coastal cities = thành phố ven biển"
+   },
+   {
+    "vi": "Mực nước biển dâng là do biến đổi khí hậu.",
+    "en": [
+     "Rising sea levels are caused by climate change.",
+     "Rising sea levels are due to climate change."
+    ],
+    "hint": "bị động: are caused by"
+   },
+   {
+    "vi": "Nhiều hòn đảo có thể biến mất vì mực nước biển dâng.",
+    "en": [
+     "Many islands may disappear because of rising sea levels.",
+     "Many islands could disappear because of rising sea levels."
+    ],
+    "hint": "islands = hòn đảo · disappear = biến mất · because of"
+   }
+  ],
+  "environment:waste disposal": [
+   {
+    "vi": "Xử lý rác thải là một vấn đề ở các thành phố.",
+    "en": [
+     "Waste disposal is a problem in cities.",
+     "Waste disposal is a problem in big cities."
+    ],
+    "hint": "is a problem in cities"
+   },
+   {
+    "vi": "Thành phố cần một hệ thống xử lý rác thải tốt hơn.",
+    "en": [
+     "The city needs a better waste disposal system."
+    ],
+    "hint": "a better … system = hệ thống tốt hơn"
+   },
+   {
+    "vi": "Xử lý rác thải tốn nhiều tiền.",
+    "en": [
+     "Waste disposal costs a lot of money.",
+     "Waste disposal is very expensive."
+    ],
+    "hint": "cost a lot of money = tốn nhiều tiền"
+   }
+  ],
+  "environment:recycle household waste": [
+   {
+    "vi": "Chúng ta nên tái chế rác thải sinh hoạt.",
+    "en": [
+     "We should recycle household waste."
+    ],
+    "hint": "should + V"
+   },
+   {
+    "vi": "Gia đình tôi tái chế rác thải sinh hoạt mỗi ngày.",
+    "en": [
+     "My family recycles household waste every day."
+    ],
+    "hint": "recycles (+s) · every day = mỗi ngày"
+   },
+   {
+    "vi": "Tái chế rác thải sinh hoạt thì dễ.",
+    "en": [
+     "Recycling household waste is easy."
+    ],
+    "hint": "V-ing làm chủ ngữ: Recycling … is"
+   }
+  ],
+  "environment:conserve energy": [
+   {
+    "vi": "Tắt đèn giúp tiết kiệm năng lượng.",
+    "en": [
+     "Turning off the lights helps conserve energy.",
+     "Turning off lights helps conserve energy.",
+     "Switching off the lights helps conserve energy."
+    ],
+    "hint": "turn off the lights = tắt đèn · V-ing làm chủ ngữ"
+   },
+   {
+    "vi": "Chúng ta nên tiết kiệm năng lượng ở nhà.",
+    "en": [
+     "We should conserve energy at home."
+    ],
+    "hint": "at home = ở nhà"
+   },
+   {
+    "vi": "Mọi người cần tiết kiệm năng lượng vào mùa hè.",
+    "en": [
+     "People need to conserve energy in summer.",
+     "Everyone needs to conserve energy in summer.",
+     "People need to conserve energy in the summer."
+    ],
+    "hint": "in summer = vào mùa hè"
+   }
+  ],
+  "environment:sustainable development": [
+   {
+    "vi": "Phát triển bền vững rất quan trọng.",
+    "en": [
+     "Sustainable development is very important."
+    ],
+    "hint": "is very important"
+   },
+   {
+    "vi": "Các nước nghèo cần phát triển bền vững.",
+    "en": [
+     "Poor countries need sustainable development."
+    ],
+    "hint": "poor countries = các nước nghèo"
+   },
+   {
+    "vi": "Năng lượng sạch hỗ trợ phát triển bền vững.",
+    "en": [
+     "Clean energy supports sustainable development."
+    ],
+    "hint": "clean energy = năng lượng sạch · support = hỗ trợ"
+   }
+  ],
+  "environment:the root cause of": [
+   {
+    "vi": "Nghèo đói là nguyên nhân gốc rễ của tội phạm.",
+    "en": [
+     "Poverty is the root cause of crime."
+    ],
+    "hint": "poverty = nghèo đói · crime = tội phạm"
+   },
+   {
+    "vi": "Ô tô là nguyên nhân gốc rễ của ô nhiễm không khí.",
+    "en": [
+     "Cars are the root cause of air pollution."
+    ],
+    "hint": "air pollution = ô nhiễm không khí"
+   },
+   {
+    "vi": "Chúng ta phải tìm ra nguyên nhân gốc rễ của vấn đề.",
+    "en": [
+     "We must find the root cause of the problem.",
+     "We have to find the root cause of the problem."
+    ],
+    "hint": "find = tìm ra · the problem"
+   }
+  ],
+  "environment:take collective action": [
+   {
+    "vi": "Chúng ta phải hành động tập thể.",
+    "en": [
+     "We must take collective action.",
+     "We have to take collective action."
+    ],
+    "hint": "must = phải"
+   },
+   {
+    "vi": "Các nước cần hành động tập thể để chống ô nhiễm.",
+    "en": [
+     "Countries need to take collective action against pollution.",
+     "Countries need to take collective action to fight pollution."
+    ],
+    "hint": "against pollution = chống ô nhiễm"
+   },
+   {
+    "vi": "Người dân đã hành động tập thể để làm sạch bãi biển.",
+    "en": [
+     "People took collective action to clean the beach.",
+     "Local people took collective action to clean the beach."
+    ],
+    "hint": "quá khứ: took · clean the beach = làm sạch bãi biển"
+   }
+  ],
+  "environment:make a significant contribution to": [
+   {
+    "vi": "Cây xanh đóng góp đáng kể vào không khí sạch.",
+    "en": [
+     "Trees make a significant contribution to clean air."
+    ],
+    "hint": "clean air = không khí sạch"
+   },
+   {
+    "vi": "Du lịch đóng góp đáng kể vào nền kinh tế.",
+    "en": [
+     "Tourism makes a significant contribution to the economy."
+    ],
+    "hint": "tourism = du lịch · makes (+s) · the economy"
+   },
+   {
+    "vi": "Mọi người có thể đóng góp đáng kể vào việc bảo vệ môi trường.",
+    "en": [
+     "Everyone can make a significant contribution to protecting the environment.",
+     "People can make a significant contribution to protecting the environment."
+    ],
+    "hint": "to + V-ing: to protecting"
+   }
+  ],
+  "environment:irreversible damage": [
+   {
+    "vi": "Ô nhiễm có thể gây ra thiệt hại không thể đảo ngược.",
+    "en": [
+     "Pollution can cause irreversible damage."
+    ],
+    "hint": "can cause = có thể gây ra"
+   },
+   {
+    "vi": "Cháy rừng gây ra thiệt hại không thể đảo ngược.",
+    "en": [
+     "Forest fires cause irreversible damage.",
+     "Wildfires cause irreversible damage."
+    ],
+    "hint": "forest fires = cháy rừng"
+   },
+   {
+    "vi": "Thiệt hại không thể đảo ngược đã xảy ra.",
+    "en": [
+     "Irreversible damage has happened.",
+     "Irreversible damage has been done.",
+     "The irreversible damage has happened."
+    ],
+    "hint": "hiện tại hoàn thành: has happened"
+   }
+  ],
+  "environment:green spaces": [
+   {
+    "vi": "Thành phố cần nhiều không gian xanh hơn.",
+    "en": [
+     "Cities need more green spaces.",
+     "The city needs more green spaces."
+    ],
+    "hint": "more green spaces = nhiều … hơn"
+   },
+   {
+    "vi": "Không gian xanh làm cho mọi người hạnh phúc hơn.",
+    "en": [
+     "Green spaces make people happier."
+    ],
+    "hint": "make sb + adj · happier = hạnh phúc hơn"
+   },
+   {
+    "vi": "Trẻ em chơi trong không gian xanh.",
+    "en": [
+     "Children play in green spaces."
+    ],
+    "hint": "play = chơi"
+   }
+  ],
+  "environment:environmentally friendly products": [
+   {
+    "vi": "Tôi mua sản phẩm thân thiện môi trường.",
+    "en": [
+     "I buy environmentally friendly products."
+    ],
+    "hint": "buy = mua"
+   },
+   {
+    "vi": "Sản phẩm thân thiện môi trường thường đắt hơn.",
+    "en": [
+     "Environmentally friendly products are often more expensive.",
+     "Environmentally friendly products are usually more expensive."
+    ],
+    "hint": "often = thường · more expensive = đắt hơn"
+   },
+   {
+    "vi": "Cửa hàng này bán sản phẩm thân thiện môi trường.",
+    "en": [
+     "This shop sells environmentally friendly products.",
+     "This store sells environmentally friendly products."
+    ],
+    "hint": "sells (+s)"
+   }
+  ],
+  "environment:offset the cost of": [
+   {
+    "vi": "Chính phủ giúp bù đắp chi phí của tấm pin mặt trời.",
+    "en": [
+     "The government helps offset the cost of solar panels.",
+     "The government helps to offset the cost of solar panels."
+    ],
+    "hint": "solar panels = tấm pin mặt trời"
+   },
+   {
+    "vi": "Tiết kiệm năng lượng bù đắp chi phí của thiết bị mới.",
+    "en": [
+     "Saving energy offsets the cost of new equipment.",
+     "Energy savings offset the cost of new equipment."
+    ],
+    "hint": "saving energy = tiết kiệm năng lượng · new equipment"
+   },
+   {
+    "vi": "Thuế carbon có thể bù đắp chi phí của ô nhiễm.",
+    "en": [
+     "A carbon tax can offset the cost of pollution."
+    ],
+    "hint": "can offset"
+   }
+  ],
+  "environment:industrial waste": [
+   {
+    "vi": "Chất thải công nghiệp làm ô nhiễm sông.",
+    "en": [
+     "Industrial waste pollutes rivers.",
+     "Industrial waste pollutes the rivers."
+    ],
+    "hint": "pollute = làm ô nhiễm · rivers = sông"
+   },
+   {
+    "vi": "Các nhà máy phải xử lý chất thải công nghiệp.",
+    "en": [
+     "Factories must treat industrial waste.",
+     "Factories must deal with industrial waste.",
+     "Factories have to treat industrial waste."
+    ],
+    "hint": "treat / deal with = xử lý"
+   },
+   {
+    "vi": "Chất thải công nghiệp gây hại cho cá.",
+    "en": [
+     "Industrial waste harms fish.",
+     "Industrial waste is harmful to fish."
+    ],
+    "hint": "harm = gây hại · fish = cá"
+   }
+  ],
+  "environment:future generations": [
+   {
+    "vi": "Chúng ta phải bảo vệ hành tinh cho các thế hệ tương lai.",
+    "en": [
+     "We must protect the planet for future generations.",
+     "We have to protect the planet for future generations."
+    ],
+    "hint": "the planet = hành tinh"
+   },
+   {
+    "vi": "Các thế hệ tương lai sẽ chịu hậu quả.",
+    "en": [
+     "Future generations will suffer the consequences.",
+     "Future generations will pay the price."
+    ],
+    "hint": "will suffer the consequences = sẽ chịu hậu quả"
+   },
+   {
+    "vi": "Chúng ta nên để lại một thế giới sạch cho các thế hệ tương lai.",
+    "en": [
+     "We should leave a clean world for future generations."
+    ],
+    "hint": "leave = để lại · a clean world"
+   }
+  ],
+  "technology:technological advances": [
+   {
+    "vi": "Những tiến bộ công nghệ thay đổi cuộc sống của chúng ta.",
+    "en": [
+     "Technological advances change our lives.",
+     "Technological advances have changed our lives."
+    ],
+    "hint": "change = thay đổi · our lives"
+   },
+   {
+    "vi": "Những tiến bộ công nghệ giúp các bác sĩ.",
+    "en": [
+     "Technological advances help doctors."
+    ],
+    "hint": "doctors = bác sĩ"
+   },
+   {
+    "vi": "Những tiến bộ công nghệ đến rất nhanh.",
+    "en": [
+     "Technological advances come very quickly.",
+     "Technological advances come very fast."
+    ],
+    "hint": "come very quickly = đến rất nhanh"
+   }
+  ],
+  "technology:artificial intelligence": [
+   {
+    "vi": "Trí tuệ nhân tạo rất mạnh mẽ.",
+    "en": [
+     "Artificial intelligence is very powerful."
+    ],
+    "hint": "powerful = mạnh mẽ"
+   },
+   {
+    "vi": "Nhiều công ty dùng trí tuệ nhân tạo.",
+    "en": [
+     "Many companies use artificial intelligence."
+    ],
+    "hint": "companies = công ty"
+   },
+   {
+    "vi": "Trí tuệ nhân tạo có thể viết văn bản.",
+    "en": [
+     "Artificial intelligence can write texts.",
+     "Artificial intelligence can write text."
+    ],
+    "hint": "can write = có thể viết · text = văn bản"
+   }
+  ],
+  "technology:automate routine tasks": [
+   {
+    "vi": "Máy tính có thể tự động hóa các công việc lặp lại.",
+    "en": [
+     "Computers can automate routine tasks."
+    ],
+    "hint": "computers = máy tính"
+   },
+   {
+    "vi": "Các công ty tự động hóa các công việc lặp lại để tiết kiệm tiền.",
+    "en": [
+     "Companies automate routine tasks to save money."
+    ],
+    "hint": "to save money = để tiết kiệm tiền"
+   },
+   {
+    "vi": "Robot tự động hóa các công việc lặp lại trong nhà máy.",
+    "en": [
+     "Robots automate routine tasks in factories.",
+     "Robots automate routine tasks in the factory."
+    ],
+    "hint": "robots · in factories = trong nhà máy"
+   }
+  ],
+  "technology:replace human workers": [
+   {
+    "vi": "Robot có thể thay thế người lao động.",
+    "en": [
+     "Robots can replace human workers."
+    ],
+    "hint": "can + V"
+   },
+   {
+    "vi": "Máy móc đang thay thế người lao động.",
+    "en": [
+     "Machines are replacing human workers."
+    ],
+    "hint": "hiện tại tiếp diễn: are replacing"
+   },
+   {
+    "vi": "Trí tuệ nhân tạo sẽ không thay thế mọi người lao động.",
+    "en": [
+     "Artificial intelligence will not replace all human workers.",
+     "Artificial intelligence won't replace all human workers.",
+     "AI will not replace all human workers."
+    ],
+    "hint": "will not = sẽ không · all = mọi"
+   }
+  ],
+  "technology:be addicted to": [
+   {
+    "vi": "Nhiều thanh thiếu niên nghiện điện thoại.",
+    "en": [
+     "Many teenagers are addicted to their phones.",
+     "Many teenagers are addicted to phones.",
+     "Many teenagers are addicted to their smartphones."
+    ],
+    "hint": "teenagers = thanh thiếu niên · are addicted to"
+   },
+   {
+    "vi": "Anh ấy nghiện trò chơi điện tử.",
+    "en": [
+     "He is addicted to video games.",
+     "He's addicted to video games.",
+     "He is addicted to computer games."
+    ],
+    "hint": "video games = trò chơi điện tử"
+   },
+   {
+    "vi": "Tôi không muốn nghiện mạng xã hội.",
+    "en": [
+     "I do not want to be addicted to social media.",
+     "I don't want to be addicted to social media."
+    ],
+    "hint": "want to be addicted to"
+   }
+  ],
+  "technology:screen time": [
+   {
+    "vi": "Trẻ em có quá nhiều thời gian dùng thiết bị điện tử.",
+    "en": [
+     "Children have too much screen time.",
+     "Kids have too much screen time."
+    ],
+    "hint": "too much = quá nhiều"
+   },
+   {
+    "vi": "Cha mẹ nên giới hạn thời gian dùng thiết bị điện tử.",
+    "en": [
+     "Parents should limit screen time.",
+     "Parents should limit their children's screen time."
+    ],
+    "hint": "limit = giới hạn"
+   },
+   {
+    "vi": "Thời gian dùng thiết bị điện tử ảnh hưởng đến giấc ngủ.",
+    "en": [
+     "Screen time affects sleep.",
+     "Screen time affects our sleep."
+    ],
+    "hint": "affect = ảnh hưởng đến · sleep = giấc ngủ"
+   }
+  ],
+  "technology:social media platforms": [
+   {
+    "vi": "Facebook là một nền tảng mạng xã hội.",
+    "en": [
+     "Facebook is a social media platform."
+    ],
+    "hint": "a social media platform (số ít)"
+   },
+   {
+    "vi": "Giới trẻ dùng nhiều nền tảng mạng xã hội.",
+    "en": [
+     "Young people use many social media platforms."
+    ],
+    "hint": "young people = giới trẻ"
+   },
+   {
+    "vi": "Các nền tảng mạng xã hội lan truyền tin tức nhanh chóng.",
+    "en": [
+     "Social media platforms spread news quickly.",
+     "Social media platforms spread news fast."
+    ],
+    "hint": "spread news = lan truyền tin tức"
+   }
+  ],
+  "technology:access information instantly": [
+   {
+    "vi": "Internet giúp chúng ta truy cập thông tin ngay lập tức.",
+    "en": [
+     "The internet helps us access information instantly.",
+     "The Internet helps us access information instantly."
+    ],
+    "hint": "help us + V"
+   },
+   {
+    "vi": "Học sinh có thể truy cập thông tin ngay lập tức.",
+    "en": [
+     "Students can access information instantly."
+    ],
+    "hint": "can + V"
+   },
+   {
+    "vi": "Điện thoại thông minh cho phép chúng ta truy cập thông tin ngay lập tức.",
+    "en": [
+     "Smartphones allow us to access information instantly.",
+     "Smartphones let us access information instantly."
+    ],
+    "hint": "allow us to + V = cho phép chúng ta"
+   }
+  ],
+  "technology:online privacy": [
+   {
+    "vi": "Quyền riêng tư trên mạng rất quan trọng.",
+    "en": [
+     "Online privacy is very important."
+    ],
+    "hint": "is very important"
+   },
+   {
+    "vi": "Nhiều người lo lắng về quyền riêng tư trên mạng.",
+    "en": [
+     "Many people worry about online privacy.",
+     "Many people are worried about online privacy."
+    ],
+    "hint": "worry about = lo lắng về"
+   },
+   {
+    "vi": "Chúng ta nên bảo vệ quyền riêng tư trên mạng.",
+    "en": [
+     "We should protect online privacy.",
+     "We should protect our online privacy."
+    ],
+    "hint": "protect = bảo vệ"
+   }
+  ],
+  "technology:cybercrime": [
+   {
+    "vi": "Tội phạm mạng đang tăng lên.",
+    "en": [
+     "Cybercrime is increasing.",
+     "Cybercrime is rising.",
+     "Cybercrime is growing."
+    ],
+    "hint": "is increasing = đang tăng lên"
+   },
+   {
+    "vi": "Tội phạm mạng là một vấn đề nghiêm trọng.",
+    "en": [
+     "Cybercrime is a serious problem.",
+     "Cybercrime is a serious issue."
+    ],
+    "hint": "a serious problem"
+   },
+   {
+    "vi": "Cảnh sát đang chống tội phạm mạng.",
+    "en": [
+     "The police are fighting cybercrime.",
+     "Police are fighting cybercrime."
+    ],
+    "hint": "the police are (số nhiều) · fight = chống"
+   }
+  ],
+  "technology:the digital divide": [
+   {
+    "vi": "Khoảng cách số đang lớn dần.",
+    "en": [
+     "The digital divide is growing.",
+     "The digital divide is getting bigger."
+    ],
+    "hint": "is growing = đang lớn dần"
+   },
+   {
+    "vi": "Chính phủ nên thu hẹp khoảng cách số.",
+    "en": [
+     "The government should narrow the digital divide.",
+     "The government should reduce the digital divide.",
+     "The government should close the digital divide."
+    ],
+    "hint": "narrow = thu hẹp"
+   },
+   {
+    "vi": "Khoảng cách số ảnh hưởng đến trẻ em nghèo.",
+    "en": [
+     "The digital divide affects poor children."
+    ],
+    "hint": "affect = ảnh hưởng đến"
+   }
+  ],
+  "technology:keep up with the latest technology": [
+   {
+    "vi": "Người già khó theo kịp công nghệ mới nhất.",
+    "en": [
+     "Old people find it hard to keep up with the latest technology.",
+     "Elderly people find it difficult to keep up with the latest technology.",
+     "It is hard for old people to keep up with the latest technology."
+    ],
+    "hint": "find it hard to + V = thấy khó"
+   },
+   {
+    "vi": "Tôi cố gắng theo kịp công nghệ mới nhất.",
+    "en": [
+     "I try to keep up with the latest technology."
+    ],
+    "hint": "try to + V = cố gắng"
+   },
+   {
+    "vi": "Các công ty phải theo kịp công nghệ mới nhất.",
+    "en": [
+     "Companies must keep up with the latest technology.",
+     "Companies have to keep up with the latest technology."
+    ],
+    "hint": "must = phải"
+   }
+  ],
+  "technology:increase productivity": [
+   {
+    "vi": "Máy tính giúp tăng năng suất.",
+    "en": [
+     "Computers help increase productivity.",
+     "Computers help to increase productivity."
+    ],
+    "hint": "help + V"
+   },
+   {
+    "vi": "Công nghệ mới làm tăng năng suất.",
+    "en": [
+     "New technology increases productivity."
+    ],
+    "hint": "increases (+s)"
+   },
+   {
+    "vi": "Nghỉ ngơi ngắn có thể tăng năng suất.",
+    "en": [
+     "Short breaks can increase productivity.",
+     "Taking short breaks can increase productivity."
+    ],
+    "hint": "short breaks = nghỉ ngơi ngắn"
+   }
+  ],
+  "technology:cutting-edge technology": [
+   {
+    "vi": "Bệnh viện này có công nghệ tiên tiến nhất.",
+    "en": [
+     "This hospital has cutting-edge technology."
+    ],
+    "hint": "hospital = bệnh viện · has"
+   },
+   {
+    "vi": "Công ty sử dụng công nghệ tiên tiến nhất.",
+    "en": [
+     "The company uses cutting-edge technology."
+    ],
+    "hint": "uses (+s)"
+   },
+   {
+    "vi": "Công nghệ tiên tiến nhất thì đắt.",
+    "en": [
+     "Cutting-edge technology is expensive."
+    ],
+    "hint": "expensive = đắt"
+   }
+  ],
+  "technology:work remotely": [
+   {
+    "vi": "Nhiều người làm việc từ xa bây giờ.",
+    "en": [
+     "Many people work remotely now.",
+     "Now many people work remotely."
+    ],
+    "hint": "now = bây giờ"
+   },
+   {
+    "vi": "Tôi thích làm việc từ xa.",
+    "en": [
+     "I like working remotely.",
+     "I like to work remotely."
+    ],
+    "hint": "like + V-ing"
+   },
+   {
+    "vi": "Làm việc từ xa tiết kiệm thời gian đi lại.",
+    "en": [
+     "Working remotely saves travel time.",
+     "Working remotely saves commuting time."
+    ],
+    "hint": "V-ing làm chủ ngữ · travel time = thời gian đi lại"
+   }
+  ],
+  "technology:e-commerce": [
+   {
+    "vi": "Thương mại điện tử đang phát triển nhanh.",
+    "en": [
+     "E-commerce is growing fast.",
+     "E-commerce is growing quickly.",
+     "E-commerce is developing fast."
+    ],
+    "hint": "is growing = đang phát triển"
+   },
+   {
+    "vi": "Nhiều cửa hàng nhỏ dùng thương mại điện tử.",
+    "en": [
+     "Many small shops use e-commerce.",
+     "Many small stores use e-commerce."
+    ],
+    "hint": "small shops = cửa hàng nhỏ"
+   },
+   {
+    "vi": "Thương mại điện tử rất tiện lợi.",
+    "en": [
+     "E-commerce is very convenient."
+    ],
+    "hint": "convenient = tiện lợi"
+   }
+  ],
+  "technology:a sedentary lifestyle": [
+   {
+    "vi": "Nhân viên văn phòng có lối sống ít vận động.",
+    "en": [
+     "Office workers have a sedentary lifestyle."
+    ],
+    "hint": "office workers = nhân viên văn phòng"
+   },
+   {
+    "vi": "Lối sống ít vận động gây béo phì.",
+    "en": [
+     "A sedentary lifestyle causes obesity.",
+     "A sedentary lifestyle leads to obesity."
+    ],
+    "hint": "obesity = béo phì"
+   },
+   {
+    "vi": "Trò chơi điện tử dẫn đến lối sống ít vận động.",
+    "en": [
+     "Video games lead to a sedentary lifestyle.",
+     "Computer games lead to a sedentary lifestyle."
+    ],
+    "hint": "lead to = dẫn đến"
+   }
+  ],
+  "technology:face-to-face communication": [
+   {
+    "vi": "Giao tiếp trực tiếp rất quan trọng.",
+    "en": [
+     "Face-to-face communication is very important."
+    ],
+    "hint": "is very important"
+   },
+   {
+    "vi": "Mạng xã hội làm giảm giao tiếp trực tiếp.",
+    "en": [
+     "Social media reduces face-to-face communication.",
+     "Social media decreases face-to-face communication."
+    ],
+    "hint": "reduce = làm giảm"
+   },
+   {
+    "vi": "Tôi thích giao tiếp trực tiếp hơn.",
+    "en": [
+     "I prefer face-to-face communication."
+    ],
+    "hint": "prefer = thích … hơn"
+   }
+  ],
+  "technology:misuse personal data": [
+   {
+    "vi": "Một số công ty lạm dụng dữ liệu cá nhân.",
+    "en": [
+     "Some companies misuse personal data."
+    ],
+    "hint": "some companies = một số công ty"
+   },
+   {
+    "vi": "Tin tặc có thể lạm dụng dữ liệu cá nhân.",
+    "en": [
+     "Hackers can misuse personal data."
+    ],
+    "hint": "hackers = tin tặc"
+   },
+   {
+    "vi": "Các ứng dụng không nên lạm dụng dữ liệu cá nhân.",
+    "en": [
+     "Apps should not misuse personal data.",
+     "Apps shouldn't misuse personal data."
+    ],
+    "hint": "apps = ứng dụng · should not"
+   }
+  ],
+  "technology:revolutionise the way": [
+   {
+    "vi": "Internet đã cách mạng hóa cách chúng ta học.",
+    "en": [
+     "The internet has revolutionised the way we learn.",
+     "The Internet has revolutionised the way we learn.",
+     "The internet has revolutionized the way we learn."
+    ],
+    "hint": "hiện tại hoàn thành: has revolutionised"
+   },
+   {
+    "vi": "Điện thoại thông minh cách mạng hóa cách chúng ta giao tiếp.",
+    "en": [
+     "Smartphones revolutionise the way we communicate.",
+     "Smartphones have revolutionised the way we communicate.",
+     "Smartphones revolutionize the way we communicate."
+    ],
+    "hint": "communicate = giao tiếp"
+   },
+   {
+    "vi": "Trí tuệ nhân tạo sẽ cách mạng hóa cách chúng ta làm việc.",
+    "en": [
+     "Artificial intelligence will revolutionise the way we work.",
+     "AI will revolutionise the way we work.",
+     "Artificial intelligence will revolutionize the way we work."
+    ],
+    "hint": "will + V"
+   }
+  ],
+  "technology:be exposed to harmful content": [
+   {
+    "vi": "Trẻ em có thể tiếp xúc với nội dung có hại trên mạng.",
+    "en": [
+     "Children can be exposed to harmful content online.",
+     "Children may be exposed to harmful content online."
+    ],
+    "hint": "can be exposed to · online = trên mạng"
+   },
+   {
+    "vi": "Thanh thiếu niên thường tiếp xúc với nội dung có hại.",
+    "en": [
+     "Teenagers are often exposed to harmful content."
+    ],
+    "hint": "often = thường · are exposed to"
+   },
+   {
+    "vi": "Cha mẹ lo lắng con cái tiếp xúc với nội dung có hại.",
+    "en": [
+     "Parents worry that their children are exposed to harmful content.",
+     "Parents are worried that their children are exposed to harmful content."
+    ],
+    "hint": "worry that + mệnh đề"
+   }
+  ],
+  "technology:bring about job losses": [
+   {
+    "vi": "Robot có thể gây ra tình trạng mất việc.",
+    "en": [
+     "Robots can bring about job losses."
+    ],
+    "hint": "can + V"
+   },
+   {
+    "vi": "Tự động hóa sẽ gây ra tình trạng mất việc.",
+    "en": [
+     "Automation will bring about job losses."
+    ],
+    "hint": "automation = tự động hóa"
+   },
+   {
+    "vi": "Trí tuệ nhân tạo đã gây ra tình trạng mất việc.",
+    "en": [
+     "Artificial intelligence has brought about job losses.",
+     "AI has brought about job losses."
+    ],
+    "hint": "hiện tại hoàn thành: has brought about"
+   }
+  ],
+  "technology:create new employment opportunities": [
+   {
+    "vi": "Công nghệ tạo ra cơ hội việc làm mới.",
+    "en": [
+     "Technology creates new employment opportunities."
+    ],
+    "hint": "creates (+s)"
+   },
+   {
+    "vi": "Du lịch có thể tạo ra cơ hội việc làm mới.",
+    "en": [
+     "Tourism can create new employment opportunities."
+    ],
+    "hint": "tourism = du lịch"
+   },
+   {
+    "vi": "Các nhà máy mới sẽ tạo ra cơ hội việc làm mới.",
+    "en": [
+     "New factories will create new employment opportunities."
+    ],
+    "hint": "new factories = các nhà máy mới · will + V"
+   }
+  ],
+  "technology:an over-reliance on technology": [
+   {
+    "vi": "Sự phụ thuộc quá mức vào công nghệ là nguy hiểm.",
+    "en": [
+     "An over-reliance on technology is dangerous."
+    ],
+    "hint": "dangerous = nguy hiểm"
+   },
+   {
+    "vi": "Học sinh có sự phụ thuộc quá mức vào công nghệ.",
+    "en": [
+     "Students have an over-reliance on technology."
+    ],
+    "hint": "have"
+   },
+   {
+    "vi": "Sự phụ thuộc quá mức vào công nghệ làm chúng ta lười biếng.",
+    "en": [
+     "An over-reliance on technology makes us lazy."
+    ],
+    "hint": "make us + adj · lazy = lười biếng"
+   }
+  ],
+  "technology:user-friendly": [
+   {
+    "vi": "Ứng dụng này rất dễ sử dụng.",
+    "en": [
+     "This app is very user-friendly."
+    ],
+    "hint": "app = ứng dụng"
+   },
+   {
+    "vi": "Trang web nên dễ sử dụng.",
+    "en": [
+     "Websites should be user-friendly.",
+     "A website should be user-friendly.",
+     "The website should be user-friendly."
+    ],
+    "hint": "should be + adj"
+   },
+   {
+    "vi": "Điện thoại mới thì dễ sử dụng.",
+    "en": [
+     "The new phone is user-friendly.",
+     "New phones are user-friendly."
+    ],
+    "hint": "new phone = điện thoại mới"
+   }
+  ],
+  "technology:digital literacy": [
+   {
+    "vi": "Năng lực số rất cần thiết ngày nay.",
+    "en": [
+     "Digital literacy is very necessary today.",
+     "Digital literacy is essential today.",
+     "Digital literacy is very necessary nowadays."
+    ],
+    "hint": "necessary = cần thiết · today = ngày nay"
+   },
+   {
+    "vi": "Trường học nên dạy năng lực số.",
+    "en": [
+     "Schools should teach digital literacy."
+    ],
+    "hint": "teach = dạy"
+   },
+   {
+    "vi": "Người già thường thiếu năng lực số.",
+    "en": [
+     "Old people often lack digital literacy.",
+     "Elderly people often lack digital literacy."
+    ],
+    "hint": "lack = thiếu"
+   }
+  ],
+  "technology:stay connected with": [
+   {
+    "vi": "Mạng xã hội giúp tôi giữ liên lạc với bạn bè.",
+    "en": [
+     "Social media helps me stay connected with my friends.",
+     "Social media helps me stay connected with friends."
+    ],
+    "hint": "help me + V · my friends"
+   },
+   {
+    "vi": "Tôi giữ liên lạc với gia đình qua điện thoại.",
+    "en": [
+     "I stay connected with my family by phone.",
+     "I stay connected with my family through my phone."
+    ],
+    "hint": "by phone = qua điện thoại"
+   },
+   {
+    "vi": "Du học sinh giữ liên lạc với cha mẹ.",
+    "en": [
+     "International students stay connected with their parents.",
+     "Overseas students stay connected with their parents."
+    ],
+    "hint": "international students = du học sinh"
+   }
+  ],
+  "technology:the spread of misinformation": [
+   {
+    "vi": "Mạng xã hội gây ra sự lan truyền thông tin sai lệch.",
+    "en": [
+     "Social media causes the spread of misinformation.",
+     "Social media leads to the spread of misinformation."
+    ],
+    "hint": "causes (+s)"
+   },
+   {
+    "vi": "Chúng ta phải ngăn chặn sự lan truyền thông tin sai lệch.",
+    "en": [
+     "We must stop the spread of misinformation.",
+     "We must prevent the spread of misinformation.",
+     "We have to stop the spread of misinformation."
+    ],
+    "hint": "stop / prevent = ngăn chặn"
+   },
+   {
+    "vi": "Sự lan truyền thông tin sai lệch rất nguy hiểm.",
+    "en": [
+     "The spread of misinformation is very dangerous."
+    ],
+    "hint": "dangerous = nguy hiểm"
+   }
+  ],
+  "technology:monitor online activity": [
+   {
+    "vi": "Cha mẹ nên giám sát hoạt động trực tuyến của con cái.",
+    "en": [
+     "Parents should monitor their children's online activity.",
+     "Parents should monitor children's online activity."
+    ],
+    "hint": "their children's = của con cái"
+   },
+   {
+    "vi": "Các công ty giám sát hoạt động trực tuyến của nhân viên.",
+    "en": [
+     "Companies monitor their employees' online activity.",
+     "Companies monitor employees' online activity."
+    ],
+    "hint": "employees' = của nhân viên"
+   },
+   {
+    "vi": "Chính phủ không nên giám sát hoạt động trực tuyến.",
+    "en": [
+     "The government should not monitor online activity.",
+     "The government shouldn't monitor online activity."
+    ],
+    "hint": "should not"
+   }
+  ],
+  "technology:a double-edged sword": [
+   {
+    "vi": "Công nghệ là con dao hai lưỡi.",
+    "en": [
+     "Technology is a double-edged sword."
+    ],
+    "hint": "is a …"
+   },
+   {
+    "vi": "Mạng xã hội là con dao hai lưỡi.",
+    "en": [
+     "Social media is a double-edged sword."
+    ],
+    "hint": "social media is (số ít)"
+   },
+   {
+    "vi": "Internet là con dao hai lưỡi đối với trẻ em.",
+    "en": [
+     "The internet is a double-edged sword for children.",
+     "The Internet is a double-edged sword for children."
+    ],
+    "hint": "for children = đối với trẻ em"
+   }
+  ],
+  "health:maintain a healthy lifestyle": [
+   {
+    "vi": "Tôi muốn duy trì lối sống lành mạnh.",
+    "en": [
+     "I want to maintain a healthy lifestyle."
+    ],
+    "hint": "want to + V"
+   },
+   {
+    "vi": "Duy trì lối sống lành mạnh thì không dễ.",
+    "en": [
+     "Maintaining a healthy lifestyle is not easy.",
+     "Maintaining a healthy lifestyle isn't easy."
+    ],
+    "hint": "V-ing làm chủ ngữ: Maintaining … is"
+   },
+   {
+    "vi": "Mọi người nên duy trì lối sống lành mạnh.",
+    "en": [
+     "Everyone should maintain a healthy lifestyle.",
+     "People should maintain a healthy lifestyle."
+    ],
+    "hint": "should + V"
+   }
+  ],
+  "health:a balanced diet": [
+   {
+    "vi": "Một chế độ ăn cân bằng tốt cho sức khỏe.",
+    "en": [
+     "A balanced diet is good for health.",
+     "A balanced diet is good for your health.",
+     "A balanced diet is healthy."
+    ],
+    "hint": "be good for = tốt cho"
+   },
+   {
+    "vi": "Trẻ em cần một chế độ ăn cân bằng.",
+    "en": [
+     "Children need a balanced diet."
+    ],
+    "hint": "need = cần"
+   },
+   {
+    "vi": "Tôi cố gắng có một chế độ ăn cân bằng.",
+    "en": [
+     "I try to have a balanced diet.",
+     "I try to eat a balanced diet."
+    ],
+    "hint": "try to + V"
+   }
+  ],
+  "health:take regular exercise": [
+   {
+    "vi": "Bác sĩ khuyên tôi tập thể dục thường xuyên.",
+    "en": [
+     "The doctor advises me to take regular exercise.",
+     "My doctor advises me to take regular exercise."
+    ],
+    "hint": "advise sb to + V = khuyên ai làm gì"
+   },
+   {
+    "vi": "Tôi tập thể dục thường xuyên.",
+    "en": [
+     "I take regular exercise."
+    ],
+    "hint": "take (không phải do)"
+   },
+   {
+    "vi": "Tập thể dục thường xuyên giúp bạn khỏe mạnh.",
+    "en": [
+     "Taking regular exercise keeps you healthy.",
+     "Taking regular exercise helps you stay healthy."
+    ],
+    "hint": "V-ing làm chủ ngữ · keep sb healthy"
+   }
+  ],
+  "health:processed food": [
+   {
+    "vi": "Thực phẩm chế biến sẵn có nhiều muối.",
+    "en": [
+     "Processed food has a lot of salt.",
+     "Processed food contains a lot of salt."
+    ],
+    "hint": "a lot of salt = nhiều muối"
+   },
+   {
+    "vi": "Chúng ta nên ăn ít thực phẩm chế biến sẵn hơn.",
+    "en": [
+     "We should eat less processed food."
+    ],
+    "hint": "less = ít hơn (danh từ không đếm được)"
+   },
+   {
+    "vi": "Thực phẩm chế biến sẵn thì rẻ và tiện lợi.",
+    "en": [
+     "Processed food is cheap and convenient."
+    ],
+    "hint": "cheap = rẻ · convenient = tiện lợi"
+   }
+  ],
+  "health:junk food": [
+   {
+    "vi": "Trẻ em thích đồ ăn vặt không lành mạnh.",
+    "en": [
+     "Children love junk food.",
+     "Children like junk food.",
+     "Kids love junk food."
+    ],
+    "hint": "love / like = thích"
+   },
+   {
+    "vi": "Đồ ăn vặt không lành mạnh gây béo phì.",
+    "en": [
+     "Junk food causes obesity.",
+     "Junk food leads to obesity."
+    ],
+    "hint": "obesity = béo phì"
+   },
+   {
+    "vi": "Trường học nên cấm đồ ăn vặt không lành mạnh.",
+    "en": [
+     "Schools should ban junk food."
+    ],
+    "hint": "ban = cấm"
+   }
+  ],
+  "health:the obesity rate": [
+   {
+    "vi": "Tỷ lệ béo phì đang tăng lên.",
+    "en": [
+     "The obesity rate is rising.",
+     "The obesity rate is increasing.",
+     "The obesity rate is going up."
+    ],
+    "hint": "is rising = đang tăng lên"
+   },
+   {
+    "vi": "Tỷ lệ béo phì ở trẻ em rất cao.",
+    "en": [
+     "The obesity rate among children is very high.",
+     "The obesity rate in children is very high."
+    ],
+    "hint": "among children = ở trẻ em"
+   },
+   {
+    "vi": "Chính phủ muốn giảm tỷ lệ béo phì.",
+    "en": [
+     "The government wants to reduce the obesity rate.",
+     "The government wants to lower the obesity rate."
+    ],
+    "hint": "wants (+s) to + V"
+   }
+  ],
+  "health:chronic diseases": [
+   {
+    "vi": "Hút thuốc gây ra các bệnh mãn tính.",
+    "en": [
+     "Smoking causes chronic diseases.",
+     "Smoking leads to chronic diseases."
+    ],
+    "hint": "smoking = hút thuốc"
+   },
+   {
+    "vi": "Nhiều người già mắc các bệnh mãn tính.",
+    "en": [
+     "Many old people have chronic diseases.",
+     "Many elderly people suffer from chronic diseases.",
+     "Many elderly people have chronic diseases."
+    ],
+    "hint": "have / suffer from = mắc"
+   },
+   {
+    "vi": "Các bệnh mãn tính rất khó chữa.",
+    "en": [
+     "Chronic diseases are very hard to cure.",
+     "Chronic diseases are very difficult to cure."
+    ],
+    "hint": "hard to cure = khó chữa"
+   }
+  ],
+  "health:public health campaigns": [
+   {
+    "vi": "Các chiến dịch y tế cộng đồng rất hữu ích.",
+    "en": [
+     "Public health campaigns are very useful.",
+     "Public health campaigns are very helpful."
+    ],
+    "hint": "useful = hữu ích"
+   },
+   {
+    "vi": "Chính phủ tổ chức các chiến dịch y tế cộng đồng.",
+    "en": [
+     "The government runs public health campaigns.",
+     "The government organises public health campaigns.",
+     "The government organizes public health campaigns."
+    ],
+    "hint": "run / organise = tổ chức"
+   },
+   {
+    "vi": "Các chiến dịch y tế cộng đồng dạy mọi người ăn uống lành mạnh.",
+    "en": [
+     "Public health campaigns teach people to eat healthily.",
+     "Public health campaigns teach people to eat healthy food."
+    ],
+    "hint": "teach sb to + V"
+   }
+  ],
+  "health:preventive measures": [
+   {
+    "vi": "Chúng ta cần các biện pháp phòng ngừa.",
+    "en": [
+     "We need preventive measures."
+    ],
+    "hint": "need = cần"
+   },
+   {
+    "vi": "Rửa tay là một biện pháp phòng ngừa đơn giản.",
+    "en": [
+     "Washing hands is a simple preventive measure.",
+     "Washing your hands is a simple preventive measure."
+    ],
+    "hint": "washing hands = rửa tay · a … measure (số ít)"
+   },
+   {
+    "vi": "Chính phủ đã đưa ra các biện pháp phòng ngừa.",
+    "en": [
+     "The government introduced preventive measures.",
+     "The government has introduced preventive measures.",
+     "The government took preventive measures."
+    ],
+    "hint": "introduce / take = đưa ra"
+   }
+  ],
+  "health:the healthcare system": [
+   {
+    "vi": "Hệ thống y tế cần nhiều tiền hơn.",
+    "en": [
+     "The healthcare system needs more money."
+    ],
+    "hint": "needs (+s) · more money"
+   },
+   {
+    "vi": "Hệ thống y tế ở nước tôi rất tốt.",
+    "en": [
+     "The healthcare system in my country is very good."
+    ],
+    "hint": "in my country = ở nước tôi"
+   },
+   {
+    "vi": "Dân số già hóa gây áp lực lên hệ thống y tế.",
+    "en": [
+     "An ageing population puts pressure on the healthcare system.",
+     "An aging population puts pressure on the healthcare system."
+    ],
+    "hint": "put pressure on = gây áp lực lên"
+   }
+  ],
+  "health:medical treatment": [
+   {
+    "vi": "Điều trị y tế rất đắt.",
+    "en": [
+     "Medical treatment is very expensive."
+    ],
+    "hint": "expensive = đắt"
+   },
+   {
+    "vi": "Anh ấy cần điều trị y tế ngay lập tức.",
+    "en": [
+     "He needs medical treatment immediately.",
+     "He needs immediate medical treatment.",
+     "He needs medical treatment right away."
+    ],
+    "hint": "immediately = ngay lập tức"
+   },
+   {
+    "vi": "Người nghèo không thể chi trả điều trị y tế.",
+    "en": [
+     "Poor people cannot afford medical treatment.",
+     "Poor people can't afford medical treatment."
+    ],
+    "hint": "afford = chi trả nổi"
+   }
+  ],
+  "health:life expectancy": [
+   {
+    "vi": "Tuổi thọ trung bình đang tăng lên.",
+    "en": [
+     "Life expectancy is increasing.",
+     "Life expectancy is rising.",
+     "Life expectancy is going up."
+    ],
+    "hint": "is increasing = đang tăng lên"
+   },
+   {
+    "vi": "Nhật Bản có tuổi thọ trung bình cao.",
+    "en": [
+     "Japan has a high life expectancy.",
+     "Japan has high life expectancy."
+    ],
+    "hint": "Japan = Nhật Bản · has"
+   },
+   {
+    "vi": "Y học hiện đại tăng tuổi thọ trung bình.",
+    "en": [
+     "Modern medicine increases life expectancy.",
+     "Modern medicine has increased life expectancy."
+    ],
+    "hint": "modern medicine = y học hiện đại"
+   }
+  ],
+  "health:mental health problems": [
+   {
+    "vi": "Nhiều học sinh có các vấn đề sức khỏe tâm thần.",
+    "en": [
+     "Many students have mental health problems."
+    ],
+    "hint": "have = có"
+   },
+   {
+    "vi": "Căng thẳng gây ra các vấn đề sức khỏe tâm thần.",
+    "en": [
+     "Stress causes mental health problems.",
+     "Stress leads to mental health problems."
+    ],
+    "hint": "stress = căng thẳng"
+   },
+   {
+    "vi": "Chúng ta nên nói về các vấn đề sức khỏe tâm thần.",
+    "en": [
+     "We should talk about mental health problems."
+    ],
+    "hint": "talk about = nói về"
+   }
+  ],
+  "health:reduce stress levels": [
+   {
+    "vi": "Yoga giúp giảm mức độ căng thẳng.",
+    "en": [
+     "Yoga helps reduce stress levels.",
+     "Yoga helps to reduce stress levels."
+    ],
+    "hint": "help + V"
+   },
+   {
+    "vi": "Âm nhạc có thể giảm mức độ căng thẳng.",
+    "en": [
+     "Music can reduce stress levels."
+    ],
+    "hint": "music = âm nhạc"
+   },
+   {
+    "vi": "Đi bộ giảm mức độ căng thẳng.",
+    "en": [
+     "Walking reduces stress levels."
+    ],
+    "hint": "walking = đi bộ · reduces (+s)"
+   }
+  ],
+  "health:have a detrimental effect on": [
+   {
+    "vi": "Hút thuốc có ảnh hưởng xấu đến sức khỏe.",
+    "en": [
+     "Smoking has a detrimental effect on health.",
+     "Smoking has a detrimental effect on your health."
+    ],
+    "hint": "has (chủ ngữ số ít)"
+   },
+   {
+    "vi": "Thiếu ngủ có ảnh hưởng xấu đến việc học.",
+    "en": [
+     "Lack of sleep has a detrimental effect on studying.",
+     "A lack of sleep has a detrimental effect on learning.",
+     "Lack of sleep has a detrimental effect on learning."
+    ],
+    "hint": "lack of sleep = thiếu ngủ"
+   },
+   {
+    "vi": "Ô nhiễm có ảnh hưởng xấu đến trẻ em.",
+    "en": [
+     "Pollution has a detrimental effect on children."
+    ],
+    "hint": "has a detrimental effect on"
+   }
+  ],
+  "health:be prone to": [
+   {
+    "vi": "Người già dễ mắc bệnh.",
+    "en": [
+     "Old people are prone to illness.",
+     "Elderly people are prone to illness.",
+     "Old people are prone to diseases."
+    ],
+    "hint": "are prone to + N · illness = bệnh"
+   },
+   {
+    "vi": "Trẻ em dễ bị cảm lạnh.",
+    "en": [
+     "Children are prone to colds.",
+     "Children are prone to catching colds."
+    ],
+    "hint": "colds = cảm lạnh"
+   },
+   {
+    "vi": "Người béo phì dễ mắc bệnh tim.",
+    "en": [
+     "Obese people are prone to heart disease."
+    ],
+    "hint": "obese = béo phì · heart disease = bệnh tim"
+   }
+  ],
+  "health:raise taxes on unhealthy products": [
+   {
+    "vi": "Chính phủ nên tăng thuế với sản phẩm không lành mạnh.",
+    "en": [
+     "The government should raise taxes on unhealthy products."
+    ],
+    "hint": "should + V"
+   },
+   {
+    "vi": "Nhiều nước tăng thuế với sản phẩm không lành mạnh.",
+    "en": [
+     "Many countries raise taxes on unhealthy products.",
+     "Many countries have raised taxes on unhealthy products."
+    ],
+    "hint": "many countries"
+   },
+   {
+    "vi": "Tăng thuế với sản phẩm không lành mạnh có thể cứu sống nhiều người.",
+    "en": [
+     "Raising taxes on unhealthy products can save lives.",
+     "Raising taxes on unhealthy products can save many lives."
+    ],
+    "hint": "V-ing làm chủ ngữ · save lives = cứu sống"
+   }
+  ],
+  "health:make informed choices": [
+   {
+    "vi": "Mọi người cần thông tin để đưa ra lựa chọn có hiểu biết.",
+    "en": [
+     "People need information to make informed choices."
+    ],
+    "hint": "need information = cần thông tin"
+   },
+   {
+    "vi": "Nhãn thực phẩm giúp chúng ta đưa ra lựa chọn có hiểu biết.",
+    "en": [
+     "Food labels help us make informed choices.",
+     "Food labels help us to make informed choices."
+    ],
+    "hint": "food labels = nhãn thực phẩm"
+   },
+   {
+    "vi": "Học sinh nên đưa ra lựa chọn có hiểu biết.",
+    "en": [
+     "Students should make informed choices."
+    ],
+    "hint": "should + V"
+   }
+  ],
+  "health:free medical care": [
+   {
+    "vi": "Một số nước cung cấp chăm sóc y tế miễn phí.",
+    "en": [
+     "Some countries provide free medical care.",
+     "Some countries offer free medical care."
+    ],
+    "hint": "provide = cung cấp"
+   },
+   {
+    "vi": "Trẻ em được chăm sóc y tế miễn phí.",
+    "en": [
+     "Children get free medical care.",
+     "Children receive free medical care."
+    ],
+    "hint": "get / receive = được nhận"
+   },
+   {
+    "vi": "Chăm sóc y tế miễn phí tốn nhiều tiền thuế.",
+    "en": [
+     "Free medical care costs a lot of tax money.",
+     "Free medical care costs taxpayers a lot of money."
+    ],
+    "hint": "cost = tốn · tax money = tiền thuế"
+   }
+  ],
+  "health:an ageing population": [
+   {
+    "vi": "Nhật Bản có dân số già hóa.",
+    "en": [
+     "Japan has an ageing population.",
+     "Japan has an aging population."
+    ],
+    "hint": "Japan has …"
+   },
+   {
+    "vi": "Dân số già hóa là một thách thức.",
+    "en": [
+     "An ageing population is a challenge.",
+     "An aging population is a challenge."
+    ],
+    "hint": "challenge = thách thức"
+   },
+   {
+    "vi": "Dân số già hóa cần nhiều bác sĩ hơn.",
+    "en": [
+     "An ageing population needs more doctors.",
+     "An aging population needs more doctors."
+    ],
+    "hint": "more doctors = nhiều bác sĩ hơn"
+   }
+  ],
+  "health:health insurance": [
+   {
+    "vi": "Mọi người nên có bảo hiểm y tế.",
+    "en": [
+     "Everyone should have health insurance."
+    ],
+    "hint": "everyone should have"
+   },
+   {
+    "vi": "Bảo hiểm y tế rất đắt.",
+    "en": [
+     "Health insurance is very expensive."
+    ],
+    "hint": "expensive = đắt"
+   },
+   {
+    "vi": "Công ty tôi trả bảo hiểm y tế cho tôi.",
+    "en": [
+     "My company pays for my health insurance.",
+     "My company pays my health insurance."
+    ],
+    "hint": "pay for = trả tiền cho"
+   }
+  ],
+  "health:cut down on": [
+   {
+    "vi": "Tôi đang cắt giảm đường.",
+    "en": [
+     "I am cutting down on sugar.",
+     "I'm cutting down on sugar."
+    ],
+    "hint": "hiện tại tiếp diễn · sugar = đường"
+   },
+   {
+    "vi": "Bạn nên cắt giảm đồ ăn vặt.",
+    "en": [
+     "You should cut down on junk food.",
+     "You should cut down on snacks."
+    ],
+    "hint": "should + V · junk food = đồ ăn vặt"
+   },
+   {
+    "vi": "Anh ấy đã cắt giảm việc hút thuốc.",
+    "en": [
+     "He cut down on smoking.",
+     "He has cut down on smoking."
+    ],
+    "hint": "quá khứ: cut · smoking = việc hút thuốc"
+   }
+  ],
+  "health:physical inactivity": [
+   {
+    "vi": "Sự thiếu vận động gây ra béo phì.",
+    "en": [
+     "Physical inactivity causes obesity.",
+     "Physical inactivity leads to obesity."
+    ],
+    "hint": "causes (+s)"
+   },
+   {
+    "vi": "Sự thiếu vận động là phổ biến ở thành phố.",
+    "en": [
+     "Physical inactivity is common in cities."
+    ],
+    "hint": "common = phổ biến"
+   },
+   {
+    "vi": "Sự thiếu vận động có hại cho tim.",
+    "en": [
+     "Physical inactivity is bad for the heart.",
+     "Physical inactivity is harmful to the heart.",
+     "Physical inactivity is bad for your heart."
+    ],
+    "hint": "be bad for = có hại cho · heart = tim"
+   }
+  ],
+  "health:boost the immune system": [
+   {
+    "vi": "Trái cây tăng cường hệ miễn dịch.",
+    "en": [
+     "Fruit boosts the immune system.",
+     "Fruits boost the immune system."
+    ],
+    "hint": "fruit = trái cây · boosts (+s)"
+   },
+   {
+    "vi": "Ngủ đủ giấc tăng cường hệ miễn dịch.",
+    "en": [
+     "Enough sleep boosts the immune system.",
+     "Getting enough sleep boosts the immune system."
+    ],
+    "hint": "enough sleep = ngủ đủ giấc"
+   },
+   {
+    "vi": "Tập thể dục giúp tăng cường hệ miễn dịch.",
+    "en": [
+     "Exercise helps boost the immune system.",
+     "Exercise helps to boost the immune system."
+    ],
+    "hint": "exercise = tập thể dục"
+   }
+  ],
+  "health:a heavy burden on": [
+   {
+    "vi": "Người già là một gánh nặng lớn cho gia đình.",
+    "en": [
+     "Old people are a heavy burden on their families.",
+     "Elderly people are a heavy burden on their families."
+    ],
+    "hint": "are a heavy burden on"
+   },
+   {
+    "vi": "Bệnh tật là một gánh nặng lớn cho hệ thống y tế.",
+    "en": [
+     "Illness is a heavy burden on the healthcare system.",
+     "Disease is a heavy burden on the healthcare system."
+    ],
+    "hint": "illness = bệnh tật"
+   },
+   {
+    "vi": "Học phí là một gánh nặng lớn cho sinh viên.",
+    "en": [
+     "Tuition fees are a heavy burden on students."
+    ],
+    "hint": "tuition fees = học phí"
+   }
+  ],
+  "health:be in good shape": [
+   {
+    "vi": "Ông tôi có sức khỏe tốt.",
+    "en": [
+     "My grandfather is in good shape."
+    ],
+    "hint": "grandfather = ông · is in good shape"
+   },
+   {
+    "vi": "Tôi chạy bộ để có thân hình tốt.",
+    "en": [
+     "I run to be in good shape.",
+     "I go running to be in good shape."
+    ],
+    "hint": "to + V = để"
+   },
+   {
+    "vi": "Vận động viên phải có thân hình tốt.",
+    "en": [
+     "Athletes must be in good shape.",
+     "Athletes have to be in good shape."
+    ],
+    "hint": "athletes = vận động viên · must be"
+   }
+  ],
+  "health:medical facilities": [
+   {
+    "vi": "Vùng nông thôn thiếu cơ sở y tế.",
+    "en": [
+     "Rural areas lack medical facilities."
+    ],
+    "hint": "rural areas = vùng nông thôn · lack = thiếu"
+   },
+   {
+    "vi": "Thành phố có nhiều cơ sở y tế hiện đại.",
+    "en": [
+     "The city has many modern medical facilities."
+    ],
+    "hint": "modern = hiện đại"
+   },
+   {
+    "vi": "Chính phủ nên xây dựng thêm cơ sở y tế.",
+    "en": [
+     "The government should build more medical facilities."
+    ],
+    "hint": "build more = xây dựng thêm"
+   }
+  ],
+  "health:promote healthy eating": [
+   {
+    "vi": "Trường học nên khuyến khích ăn uống lành mạnh.",
+    "en": [
+     "Schools should promote healthy eating."
+    ],
+    "hint": "should + V"
+   },
+   {
+    "vi": "Quảng cáo có thể khuyến khích ăn uống lành mạnh.",
+    "en": [
+     "Advertisements can promote healthy eating.",
+     "Adverts can promote healthy eating.",
+     "Advertising can promote healthy eating."
+    ],
+    "hint": "advertisements = quảng cáo"
+   },
+   {
+    "vi": "Chiến dịch này khuyến khích ăn uống lành mạnh.",
+    "en": [
+     "This campaign promotes healthy eating."
+    ],
+    "hint": "promotes (+s)"
+   }
+  ],
+  "health:lead to serious health problems": [
+   {
+    "vi": "Hút thuốc dẫn đến vấn đề sức khỏe nghiêm trọng.",
+    "en": [
+     "Smoking leads to serious health problems.",
+     "Smoking can lead to serious health problems."
+    ],
+    "hint": "leads (+s)"
+   },
+   {
+    "vi": "Đồ ăn vặt không lành mạnh có thể dẫn đến vấn đề sức khỏe nghiêm trọng.",
+    "en": [
+     "Junk food can lead to serious health problems."
+    ],
+    "hint": "can + V"
+   },
+   {
+    "vi": "Căng thẳng dẫn đến vấn đề sức khỏe nghiêm trọng.",
+    "en": [
+     "Stress leads to serious health problems.",
+     "Stress can lead to serious health problems."
+    ],
+    "hint": "stress = căng thẳng"
+   }
+  ],
+  "health:individual responsibility": [
+   {
+    "vi": "Sức khỏe là trách nhiệm cá nhân.",
+    "en": [
+     "Health is an individual responsibility.",
+     "Health is individual responsibility."
+    ],
+    "hint": "an individual responsibility"
+   },
+   {
+    "vi": "Ăn uống lành mạnh là trách nhiệm cá nhân.",
+    "en": [
+     "Healthy eating is an individual responsibility.",
+     "Eating healthily is an individual responsibility."
+    ],
+    "hint": "healthy eating = ăn uống lành mạnh"
+   },
+   {
+    "vi": "Một số người tin vào trách nhiệm cá nhân.",
+    "en": [
+     "Some people believe in individual responsibility."
+    ],
+    "hint": "believe in = tin vào"
+   }
+  ]
+ }
+}

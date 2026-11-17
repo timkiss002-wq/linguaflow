@@ -14,7 +14,7 @@ const STEPS: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
 
 const FEATURES: { icon: LucideIcon; title: string; text: string; tone: Tone }[] = [
   { icon: BookOpen, title: 'IELTS Reading', text: 'Đề soạn theo format IELTS Academic, chấm tự động, band ước lượng, giải thích tiếng Việt từng câu.', tone: 'teal' },
-  { icon: PenLine, title: 'Writing có AI chấm band', text: 'Khung bài cho từng dạng đề, thi thử 20/40 phút, AI chấm theo 4 tiêu chí và chỉ ra từng lỗi.', tone: 'rose' },
+  { icon: PenLine, title: 'Writing theo khung', text: 'Khung bài cho từng dạng đề, dịch câu Việt → Anh có chấm đúng / sai ngay, thi thử 20/40 phút.', tone: 'rose' },
   { icon: Keyboard, title: 'Ngữ pháp & dịch câu', text: '17 chủ điểm: lý thuyết có hình minh hoạ, câu nhận diện, rồi dịch câu Việt → Anh được chấm từng từ.', tone: 'teal' },
   { icon: Sparkles, title: 'Sổ từ thông minh', text: 'Lưu từ kèm câu gặp nó, ôn bằng thẻ lặp lại ngắt quãng, luyện dạng từ kiểu IELTS.', tone: 'violet' },
   { icon: Ear, title: 'Kiểm tra trình độ', text: 'Ngữ pháp, từ vựng, đọc hiểu và viết — làm lại cuối mỗi giai đoạn để thấy tiến bộ.', tone: 'sky' },
@@ -59,7 +59,7 @@ export default function LandingPage() {
               Luyện đề IELTS như thi thật, hiểu từng lỗi bằng tiếng Việt.
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-              Reading và Writing theo đúng format bài thi trên máy, đi theo một lộ trình từng ngày. Sau khi nộp: đáp án được tô ngay trong bài, giải thích tiếng Việt từng câu, và AI chấm band Writing theo 4 tiêu chí.
+              Reading và Writing theo đúng format bài thi trên máy, đi theo một lộ trình từng ngày. Sau khi nộp: đáp án được tô ngay trong bài, giải thích tiếng Việt từng câu, và bài dịch câu Writing được chấm đúng / sai ngay.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" asChild>
@@ -155,7 +155,7 @@ function IeltsPreview() {
       <div className="flex items-center gap-3 rounded-md border p-3 text-sm">
         <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-rose-700 text-lg font-bold text-white">6.0</span>
         <span>
-          <span className="font-semibold">Writing Task 2 · AI chấm band</span>
+          <span className="font-semibold">Writing Task 2 · theo khung</span>
           <span className="block text-xs text-muted-foreground">Task Response 6 · Coherence 6 · Lexical 5.5 · Grammar 6</span>
         </span>
       </div>

@@ -292,7 +292,7 @@ function build(): Day[] {
       const to = Math.min(topic.words.length, from + ACTIVE_PER_DAY);
       add('vocab-active', {
         title: `${to - from} cụm từ chủ động · ${topic.name}`,
-        detail: 'Học 5 cụm Writing theo chủ đề tuần (nghĩa + ví dụ), rồi viết 3–5 câu trả lời đề Writing của hôm nay, dùng đủ cả 5 cụm. Xong khi lưu bài đạt yêu cầu.',
+        detail: 'Học 5 cụm Writing theo chủ đề tuần (nghĩa + ví dụ), rồi dịch 3 câu tiếng Việt đơn giản cho mỗi cụm sang tiếng Anh, dùng đúng cụm đó. Máy chấm đúng / sai ngay, có gợi ý. Xong khi đúng ngay lần đầu từ 80% số câu.',
         minutes: 15,
         href: `/viet-cau/${date}`,
         active: { topic: topic.id, from, to, prompt: topic.prompts[n % topic.prompts.length]! },
