@@ -491,3 +491,1285 @@ Căng thẳng dẫn đến vấn đề sức khỏe nghiêm trọng. || Stress l
 Sức khỏe là trách nhiệm cá nhân. || Health is an individual responsibility. | Health is individual responsibility. || an individual responsibility
 Ăn uống lành mạnh là trách nhiệm cá nhân. || Healthy eating is an individual responsibility. | Eating healthily is an individual responsibility. || healthy eating = ăn uống lành mạnh
 Một số người tin vào trách nhiệm cá nhân. || Some people believe in individual responsibility. || believe in = tin vào
+
+@ work
+# job satisfaction
+Sự hài lòng trong công việc rất quan trọng. || Job satisfaction is very important. || is very important
+Tiền không phải lúc nào cũng mang lại sự hài lòng trong công việc. || Money does not always bring job satisfaction. | Money doesn't always bring job satisfaction. || does not always = không phải lúc nào cũng · bring = mang lại
+Giáo viên thường có sự hài lòng trong công việc cao. || Teachers often have high job satisfaction. | Teachers usually have high job satisfaction. || often = thường · high = cao
+# a high salary
+Bác sĩ có mức lương cao. || Doctors have a high salary. | Doctors earn a high salary. || earn = kiếm được
+Nhiều người trẻ muốn một mức lương cao. || Many young people want a high salary. || young people = người trẻ
+Mức lương cao không phải là tất cả. || A high salary is not everything. | A high salary isn't everything. || not everything = không phải là tất cả
+# job security
+Công chức có sự ổn định công việc. || Civil servants have job security. || civil servants = công chức
+Nhiều người lo lắng về sự ổn định công việc. || Many people worry about job security. | Many people are worried about job security. || worry about = lo lắng về
+Công việc tạm thời không có sự ổn định công việc. || Temporary jobs have no job security. | Temporary jobs do not offer job security. || temporary jobs = công việc tạm thời
+# career prospects
+Công việc này có triển vọng nghề nghiệp tốt. || This job has good career prospects. | This job offers good career prospects. || good = tốt
+Kỹ sư công nghệ thông tin có triển vọng nghề nghiệp tuyệt vời. || IT engineers have excellent career prospects. | IT engineers have great career prospects. || IT engineers = kỹ sư CNTT · excellent = tuyệt vời
+Bằng cấp cải thiện triển vọng nghề nghiệp. || A degree improves career prospects. | Qualifications improve career prospects. || degree = bằng cấp · improve = cải thiện
+# climb the career ladder
+Anh ấy muốn thăng tiến trong sự nghiệp. || He wants to climb the career ladder. || want to + V
+Phụ nữ khó thăng tiến trong sự nghiệp hơn. || It is harder for women to climb the career ladder. | Women find it harder to climb the career ladder. || It is harder for sb to V = ai đó khó … hơn
+Làm việc chăm chỉ giúp bạn thăng tiến trong sự nghiệp. || Hard work helps you climb the career ladder. | Working hard helps you climb the career ladder. || hard work = làm việc chăm chỉ
+# work-life balance
+Tôi muốn có sự cân bằng giữa công việc và cuộc sống tốt. || I want a good work-life balance. | I want to have a good work-life balance. || a good … = … tốt
+Làm việc từ xa cải thiện sự cân bằng giữa công việc và cuộc sống. || Working remotely improves work-life balance. | Remote work improves work-life balance. || working remotely = làm việc từ xa
+Người trẻ coi trọng sự cân bằng giữa công việc và cuộc sống. || Young people value work-life balance. || value = coi trọng
+# long working hours
+Giờ làm việc kéo dài gây căng thẳng. || Long working hours cause stress. | Long working hours lead to stress. || cause = gây ra
+Bác sĩ thường có giờ làm việc kéo dài. || Doctors often have long working hours. | Doctors often work long hours. || often = thường
+Giờ làm việc kéo dài có hại cho sức khỏe. || Long working hours are bad for health. | Long working hours are bad for your health. | Long working hours are harmful to health. || be bad for = có hại cho
+# flexible working hours
+Tôi thích giờ làm linh hoạt. || I like flexible working hours. | I prefer flexible working hours. || like = thích
+Giờ làm linh hoạt giúp cha mẹ chăm sóc con cái. || Flexible working hours help parents look after their children. | Flexible working hours help parents take care of their children. || look after = chăm sóc
+Nhiều công ty cho phép giờ làm linh hoạt. || Many companies allow flexible working hours. | Many companies offer flexible working hours. || allow = cho phép
+# the unemployment rate
+Tỷ lệ thất nghiệp đang tăng. || The unemployment rate is rising. | The unemployment rate is increasing. || is rising = đang tăng
+Tỷ lệ thất nghiệp ở người trẻ rất cao. || The unemployment rate among young people is very high. | The unemployment rate for young people is very high. || among young people = ở người trẻ
+Chính phủ muốn giảm tỷ lệ thất nghiệp. || The government wants to reduce the unemployment rate. | The government wants to lower the unemployment rate. || wants (+s) to + V
+# be made redundant
+Anh ấy đã bị cho thôi việc năm ngoái. || He was made redundant last year. || bị động quá khứ: was made
+Nhiều công nhân bị cho thôi việc vì robot. || Many workers are made redundant because of robots. | Many workers were made redundant because of robots. || because of = vì
+Cô ấy sợ bị cho thôi việc. || She is afraid of being made redundant. | She is afraid of being made redundant soon. || afraid of + V-ing = sợ
+# apply for a job
+Tôi muốn nộp đơn xin việc ở ngân hàng. || I want to apply for a job at a bank. | I want to apply for a job in a bank. || at a bank = ở ngân hàng
+Cô ấy đã nộp đơn xin việc hôm qua. || She applied for a job yesterday. || quá khứ: applied
+Bạn cần một CV tốt để nộp đơn xin việc. || You need a good CV to apply for a job. || CV · to + V = để
+# gain work experience
+Sinh viên nên tích lũy kinh nghiệm làm việc. || Students should gain work experience. | University students should gain work experience. || should + V
+Thực tập giúp bạn tích lũy kinh nghiệm làm việc. || Internships help you gain work experience. | An internship helps you gain work experience. || internships = thực tập
+Tôi làm thêm để tích lũy kinh nghiệm làm việc. || I work part-time to gain work experience. | I have a part-time job to gain work experience. || work part-time = làm thêm
+# a stressful working environment
+Bệnh viện là một môi trường làm việc căng thẳng. || A hospital is a stressful working environment. | Hospitals are a stressful working environment. || a hospital = bệnh viện
+Không ai muốn một môi trường làm việc căng thẳng. || Nobody wants a stressful working environment. | No one wants a stressful working environment. || nobody = không ai
+Một môi trường làm việc căng thẳng làm giảm năng suất. || A stressful working environment reduces productivity. | A stressful working environment lowers productivity. || reduce productivity = làm giảm năng suất
+# employee productivity
+Máy tính mới tăng năng suất của nhân viên. || New computers increase employee productivity. | New computers improve employee productivity. || increase = tăng
+Giờ làm linh hoạt có thể cải thiện năng suất của nhân viên. || Flexible working hours can improve employee productivity. || can + V
+Các công ty muốn đo năng suất của nhân viên. || Companies want to measure employee productivity. || measure = đo
+# job-hopping
+Nhảy việc liên tục phổ biến ở người trẻ. || Job-hopping is common among young people. || common among = phổ biến ở
+Nhà tuyển dụng không thích việc nhảy việc liên tục. || Employers do not like job-hopping. | Employers don't like job-hopping. || employers = nhà tuyển dụng
+Nhảy việc liên tục có thể giúp bạn tăng lương. || Job-hopping can help you get a higher salary. | Job-hopping can help you increase your salary. || a higher salary = lương cao hơn
+# be self-employed
+Bố tôi tự kinh doanh. || My father is self-employed. | My dad is self-employed. || is self-employed
+Ngày càng nhiều người muốn tự làm chủ. || More and more people want to be self-employed. || more and more = ngày càng nhiều
+Tự làm chủ cho bạn nhiều tự do hơn. || Being self-employed gives you more freedom. || V-ing làm chủ ngữ · freedom = tự do
+# start a business
+Cô ấy muốn khởi nghiệp. || She wants to start a business. | She wants to start her own business. || want to + V
+Khởi nghiệp cần nhiều tiền. || Starting a business needs a lot of money. | Starting a business requires a lot of money. || V-ing làm chủ ngữ
+Anh ấy đã khởi nghiệp năm 25 tuổi. || He started a business at 25. | He started a business at the age of 25. | He started a business when he was 25. || quá khứ: started · at 25 = năm 25 tuổi
+# a sense of achievement
+Giúp đỡ người khác mang lại cảm giác thành tựu. || Helping others gives a sense of achievement. | Helping other people gives a sense of achievement. || V-ing làm chủ ngữ · give = mang lại
+Tôi có cảm giác thành tựu khi hoàn thành dự án. || I have a sense of achievement when I finish a project. | I feel a sense of achievement when I finish a project. || finish a project = hoàn thành dự án
+Một công việc tốt mang lại cảm giác thành tựu. || A good job brings a sense of achievement. | A good job gives a sense of achievement. || bring = mang lại
+# fringe benefits
+Công ty này có nhiều phúc lợi ngoài lương. || This company has many fringe benefits. | This company offers many fringe benefits. || has / offers
+Bảo hiểm y tế là một phúc lợi ngoài lương. || Health insurance is a fringe benefit. || health insurance (tuần 4)
+Phúc lợi ngoài lương thu hút nhân viên giỏi. || Fringe benefits attract good employees. | Fringe benefits attract talented employees. || attract = thu hút
+# the gender pay gap
+Khoảng cách lương theo giới tính vẫn tồn tại. || The gender pay gap still exists. || still exists = vẫn tồn tại
+Chính phủ nên thu hẹp chênh lệch lương theo giới tính. || The government should reduce the gender pay gap. | The government should narrow the gender pay gap. || narrow / reduce = thu hẹp
+Chênh lệch lương theo giới tính là không công bằng. || The gender pay gap is unfair. | The gender pay gap is not fair. || unfair = không công bằng
+# retire early
+Tôi muốn nghỉ hưu sớm. || I want to retire early. || want to + V
+Một số người tiết kiệm tiền để nghỉ hưu sớm. || Some people save money to retire early. || save money = tiết kiệm tiền
+Cầu thủ bóng đá thường nghỉ hưu sớm. || Football players often retire early. | Footballers often retire early. || often = thường
+# the retirement age
+Tuổi nghỉ hưu ở Việt Nam là 60. || The retirement age in Vietnam is 60. || is 60
+Chính phủ đã tăng tuổi nghỉ hưu. || The government has raised the retirement age. | The government raised the retirement age. || raise = tăng
+Tuổi nghỉ hưu đang tăng ở nhiều nước. || The retirement age is rising in many countries. | The retirement age is increasing in many countries. || is rising = đang tăng
+# manual labour
+Lao động chân tay rất mệt. || Manual labour is very tiring. | Manual labor is very tiring. || tiring = mệt
+Robot đang thay thế lao động chân tay. || Robots are replacing manual labour. | Robots are replacing manual labor. || are replacing = đang thay thế
+Lao động chân tay thường có lương thấp. || Manual labour is often poorly paid. | Manual labour often has low pay. | Manual labor is often poorly paid. || poorly paid = lương thấp
+# skilled workers
+Nhà máy cần thêm lao động có tay nghề. || The factory needs more skilled workers. | Factories need more skilled workers. || more = thêm
+Lao động có tay nghề kiếm được nhiều tiền hơn. || Skilled workers earn more money. || earn = kiếm được
+Đào tạo nghề tạo ra lao động có tay nghề. || Vocational training produces skilled workers. | Vocational training creates skilled workers. || vocational training (tuần 1) · produce = tạo ra
+# be under pressure to
+Học sinh bị áp lực phải đạt điểm cao. || Students are under pressure to get high marks. | Students are under pressure to get good grades. || get high marks = đạt điểm cao
+Nhân viên bị áp lực phải làm thêm giờ. || Employees are under pressure to work overtime. | Workers are under pressure to work overtime. || work overtime = làm thêm giờ
+Tôi bị áp lực phải hoàn thành dự án. || I am under pressure to finish the project. | I'm under pressure to finish the project. || finish = hoàn thành
+# meet deadlines
+Tôi luôn hoàn thành đúng hạn. || I always meet deadlines. | I always meet my deadlines. || always = luôn
+Nhân viên phải hoàn thành công việc đúng hạn. || Employees must meet deadlines. | Staff must meet deadlines. || must = phải
+Thật khó để hoàn thành đúng hạn khi bạn mệt. || It is hard to meet deadlines when you are tired. | It's hard to meet deadlines when you're tired. || It is hard to + V = thật khó để
+# commute to work
+Tôi đi làm bằng xe buýt. || I commute to work by bus. || by bus = bằng xe buýt
+Nhiều người mất một giờ để đi làm. || Many people spend an hour commuting to work. | Many people take an hour to commute to work. || spend time + V-ing
+Đi làm bằng xe đạp thì tốt cho sức khỏe. || Commuting to work by bike is good for your health. | Commuting to work by bicycle is healthy. || V-ing làm chủ ngữ
+# a sense of isolation
+Làm việc ở nhà có thể gây ra cảm giác bị cô lập. || Working from home can cause a sense of isolation. | Working at home can cause a sense of isolation. || V-ing làm chủ ngữ · cause = gây ra
+Nhiều người già có cảm giác bị cô lập. || Many old people have a sense of isolation. | Many elderly people feel a sense of isolation. || old people = người già
+Mạng xã hội không làm giảm cảm giác bị cô lập. || Social media does not reduce a sense of isolation. | Social media doesn't reduce the sense of isolation. || does not reduce
+# reward hard work
+Công ty tốt khen thưởng sự chăm chỉ. || Good companies reward hard work. || reward = khen thưởng
+Giáo viên nên khen thưởng sự chăm chỉ. || Teachers should reward hard work. || should + V
+Một mức lương cao là cách khen thưởng sự chăm chỉ. || A high salary is a way to reward hard work. | A high salary is one way to reward hard work. || a way to + V = cách để
+# burn out
+Nhiều bác sĩ bị kiệt sức. || Many doctors burn out. | Many doctors are burning out. || burn out = kiệt sức
+Nếu làm việc quá nhiều, bạn sẽ kiệt sức. || If you work too much, you will burn out. || điều kiện loại 1
+Nghỉ ngơi giúp bạn không bị kiệt sức. || Rest helps you avoid burning out. | Taking a rest stops you from burning out. | Resting helps you not burn out. || avoid + V-ing = tránh
+
+@ crime
+# commit a crime
+Anh ta đã phạm tội. || He committed a crime. | He has committed a crime. || quá khứ: committed
+Người nghèo không phải lúc nào cũng phạm tội. || Poor people do not always commit crimes. | Poor people don't always commit crimes. || not always = không phải lúc nào cũng
+Thanh thiếu niên phạm tội vì áp lực từ bạn bè. || Teenagers commit crimes because of peer pressure. || because of = vì · peer pressure
+# the crime rate
+Tỷ lệ tội phạm đang giảm. || The crime rate is falling. | The crime rate is decreasing. | The crime rate is going down. || is falling = đang giảm
+Tỷ lệ tội phạm ở thành phố lớn cao hơn. || The crime rate in big cities is higher. | The crime rate is higher in big cities. || higher = cao hơn
+Cảnh sát muốn giảm tỷ lệ tội phạm. || The police want to reduce the crime rate. | Police want to reduce the crime rate. || the police want (số nhiều)
+# juvenile delinquency
+Tội phạm vị thành niên là một vấn đề xã hội. || Juvenile delinquency is a social problem. || social problem = vấn đề xã hội
+Nghèo đói dẫn đến tội phạm vị thành niên. || Poverty leads to juvenile delinquency. | Poverty causes juvenile delinquency. || poverty = nghèo đói
+Trường học có thể ngăn chặn tội phạm vị thành niên. || Schools can prevent juvenile delinquency. | Schools can stop juvenile delinquency. || prevent = ngăn chặn
+# serve a prison sentence
+Anh ta đang chấp hành án tù. || He is serving a prison sentence. | He's serving a prison sentence. || hiện tại tiếp diễn
+Cô ta đã chấp hành án tù năm năm. || She served a five-year prison sentence. | She served a prison sentence of five years. || a five-year … = … năm năm
+Sau khi chấp hành án tù, anh ta tìm được việc. || After serving a prison sentence, he found a job. | After he served a prison sentence, he found a job. || after + V-ing
+# a deterrent to crime
+Hình phạt nặng là biện pháp răn đe tội phạm. || Harsh punishment is a deterrent to crime. | Heavy punishment is a deterrent to crime. || harsh punishment = hình phạt nặng
+Camera là một biện pháp răn đe tội phạm. || Cameras are a deterrent to crime. | Cameras act as a deterrent to crime. || cameras
+Án tử hình có phải là biện pháp răn đe tội phạm không? || Is the death penalty a deterrent to crime? || câu hỏi: Is + S + …?
+# reoffend
+Nhiều tù nhân tái phạm. || Many prisoners reoffend. || prisoners = tù nhân
+Giáo dục giúp người phạm tội không tái phạm. || Education helps offenders not to reoffend. | Education stops offenders from reoffending. | Education helps offenders not reoffend. || offenders = người phạm tội
+Người có việc làm ít tái phạm hơn. || People with jobs are less likely to reoffend. | People who have jobs are less likely to reoffend. || less likely to = ít có khả năng
+# rehabilitate offenders
+Nhà tù nên cải tạo người phạm tội. || Prisons should rehabilitate offenders. || should + V
+Giáo dục là cách tốt nhất để cải tạo người phạm tội. || Education is the best way to rehabilitate offenders. || the best way to + V
+Thật khó để cải tạo người phạm tội. || It is difficult to rehabilitate offenders. | It is hard to rehabilitate offenders. | It's difficult to rehabilitate offenders. || It is difficult to + V
+# community service
+Anh ấy phải làm lao động công ích. || He has to do community service. | He must do community service. || do community service
+Lao động công ích rẻ hơn nhà tù. || Community service is cheaper than prison. || cheaper than = rẻ hơn
+Người phạm tội nhẹ nên làm lao động công ích. || Minor offenders should do community service. | People who commit minor crimes should do community service. || minor offenders = người phạm tội nhẹ
+# law enforcement
+Việc thực thi pháp luật rất quan trọng. || Law enforcement is very important. || is very important
+Chính phủ nên tăng cường việc thực thi pháp luật. || The government should strengthen law enforcement. | The government should improve law enforcement. || strengthen = tăng cường
+Việc thực thi pháp luật kém dẫn đến nhiều tội phạm hơn. || Weak law enforcement leads to more crime. | Poor law enforcement leads to more crime. || weak = kém · lead to = dẫn đến
+# break the law
+Không ai được vi phạm pháp luật. || No one should break the law. | Nobody should break the law. || no one should = không ai được
+Anh ta vi phạm pháp luật khi lái xe quá nhanh. || He broke the law when he drove too fast. | He broke the law by driving too fast. || quá khứ: broke · too fast = quá nhanh
+Những người vi phạm pháp luật phải bị trừng phạt. || People who break the law must be punished. | Those who break the law must be punished. || must be punished = phải bị trừng phạt
+# impose harsher penalties
+Chính phủ nên áp dụng hình phạt nặng hơn. || The government should impose harsher penalties. || should + V
+Chúng ta nên áp dụng hình phạt nặng hơn với người lái xe say rượu. || We should impose harsher penalties on drunk drivers. || on drunk drivers = với người lái xe say rượu
+Áp dụng hình phạt nặng hơn có thể giảm tội phạm. || Imposing harsher penalties can reduce crime. || V-ing làm chủ ngữ
+# the root causes of crime
+Nghèo đói là một trong những nguyên nhân gốc rễ của tội phạm. || Poverty is one of the root causes of crime. || one of the … = một trong những
+Chúng ta phải giải quyết nguyên nhân gốc rễ của tội phạm. || We must tackle the root causes of crime. | We must address the root causes of crime. | We have to tackle the root causes of crime. || tackle = giải quyết
+Nhà tù không giải quyết nguyên nhân gốc rễ của tội phạm. || Prison does not solve the root causes of crime. | Prisons don't tackle the root causes of crime. | Prison does not tackle the root causes of crime. || does not solve
+# social inequality
+Bất bình đẳng xã hội đang tăng. || Social inequality is growing. | Social inequality is increasing. || is growing = đang tăng
+Bất bình đẳng xã hội gây ra tội phạm. || Social inequality causes crime. | Social inequality leads to crime. || causes (+s)
+Giáo dục có thể giảm bất bình đẳng xã hội. || Education can reduce social inequality. || can reduce
+# peer pressure
+Thanh thiếu niên dễ bị áp lực từ bạn bè. || Teenagers are easily affected by peer pressure. | Teenagers easily give in to peer pressure. || easily affected by = dễ bị ảnh hưởng bởi
+Áp lực từ bạn bè khiến nhiều người hút thuốc. || Peer pressure makes many people smoke. | Peer pressure causes many people to smoke. || make sb + V
+Cha mẹ nên giúp con đối phó với áp lực từ bạn bè. || Parents should help their children deal with peer pressure. | Parents should help children cope with peer pressure. || deal with = đối phó với
+# violent crime
+Tội phạm bạo lực đã giảm. || Violent crime has fallen. | Violent crime has decreased. || hiện tại hoàn thành: has fallen
+Phim ảnh có gây ra tội phạm bạo lực không? || Do films cause violent crime? | Do movies cause violent crime? || câu hỏi: Do + S + V?
+Tội phạm bạo lực phải bị trừng phạt nghiêm khắc. || Violent crime must be punished severely. | Violent crime must be punished harshly. || severely = nghiêm khắc
+# petty crime
+Trộm vặt là một tội nhẹ. || Shoplifting is a petty crime. || shoplifting = trộm vặt ở cửa hàng
+Tội nhẹ phổ biến ở các khu vực nghèo. || Petty crime is common in poor areas. || common = phổ biến
+Người trẻ thường phạm tội nhẹ. || Young people often commit petty crime. | Young people often commit petty crimes. || commit = phạm
+# the justice system
+Hệ thống tư pháp nên công bằng. || The justice system should be fair. || fair = công bằng
+Mọi người tin vào hệ thống tư pháp. || People trust the justice system. || trust = tin vào
+Hệ thống tư pháp cần thay đổi. || The justice system needs to change. | The justice system needs changing. || needs to + V
+# be held responsible for
+Cha mẹ nên chịu trách nhiệm về hành vi của con. || Parents should be held responsible for their children's behaviour. | Parents should be held responsible for their children's behavior. || behaviour = hành vi
+Công ty phải chịu trách nhiệm về ô nhiễm. || Companies must be held responsible for pollution. || must be held responsible for
+Ai phải chịu trách nhiệm về tai nạn này? || Who should be held responsible for this accident? || accident = tai nạn
+# crime prevention
+Phòng chống tội phạm tốt hơn trừng phạt. || Crime prevention is better than punishment. || better than = tốt hơn
+Cảnh sát tập trung vào phòng chống tội phạm. || The police focus on crime prevention. | Police focus on crime prevention. || focus on = tập trung vào
+Giáo dục đóng vai trò quan trọng trong phòng chống tội phạm. || Education plays an important role in crime prevention. || play a role in
+# surveillance cameras
+Camera giám sát có ở khắp nơi. || Surveillance cameras are everywhere. || everywhere = khắp nơi
+Camera giám sát giúp cảnh sát bắt tội phạm. || Surveillance cameras help the police catch criminals. | Surveillance cameras help police catch criminals. || catch criminals = bắt tội phạm
+Một số người không thích camera giám sát. || Some people do not like surveillance cameras. | Some people don't like surveillance cameras. || do not like
+# a criminal record
+Anh ta có tiền án. || He has a criminal record. || has
+Người có tiền án khó tìm việc. || People with a criminal record find it hard to get a job. | People with a criminal record find it difficult to get a job. || find it hard to + V
+Cô ấy không có tiền án. || She does not have a criminal record. | She doesn't have a criminal record. | She has no criminal record. || does not have
+# reintegrate into society
+Tù nhân cần giúp đỡ để tái hòa nhập cộng đồng. || Prisoners need help to reintegrate into society. || need help to + V
+Việc làm giúp người phạm tội tái hòa nhập cộng đồng. || Jobs help offenders reintegrate into society. | Having a job helps offenders reintegrate into society. || offenders
+Thật khó để tái hòa nhập cộng đồng sau khi ra tù. || It is hard to reintegrate into society after prison. | It's difficult to reintegrate into society after prison. | It is difficult to reintegrate into society after prison. || after prison = sau khi ra tù
+# a life of crime
+Nghèo đói có thể dẫn đến con đường phạm tội. || Poverty can lead to a life of crime. || lead to = dẫn đến
+Anh ấy đã từ bỏ con đường phạm tội. || He gave up a life of crime. | He has given up a life of crime. || give up = từ bỏ (gave up)
+Giáo dục giữ trẻ em tránh xa con đường phạm tội. || Education keeps children away from a life of crime. | Education keeps children from a life of crime. || keep sb away from = giữ ai tránh xa
+# strict laws
+Singapore có luật pháp nghiêm khắc. || Singapore has strict laws. || has
+Luật pháp nghiêm khắc làm giảm tội phạm. || Strict laws reduce crime. | Strict laws lower crime. || reduce = làm giảm
+Chúng ta cần luật pháp nghiêm khắc hơn về lái xe say rượu. || We need stricter laws on drink-driving. | We need stricter laws against drunk driving. || stricter = nghiêm khắc hơn
+# the death penalty
+Nhiều nước đã bỏ án tử hình. || Many countries have abolished the death penalty. | Many countries have ended the death penalty. || abolish = bãi bỏ
+Tôi không ủng hộ án tử hình. || I do not support the death penalty. | I don't support the death penalty. || support = ủng hộ
+Án tử hình là một chủ đề gây tranh cãi. || The death penalty is a controversial topic. | The death penalty is a controversial issue. || controversial = gây tranh cãi
+# protect citizens from
+Cảnh sát bảo vệ công dân khỏi tội phạm. || The police protect citizens from crime. | Police protect citizens from crime. || protect sb from = bảo vệ khỏi
+Chính phủ phải bảo vệ công dân khỏi nguy hiểm. || The government must protect citizens from danger. || danger = nguy hiểm
+Luật này bảo vệ công dân khỏi tội phạm mạng. || This law protects citizens from cybercrime. || cybercrime (tuần 3)
+# act as a deterrent
+Án tù có tác dụng răn đe. || Prison sentences act as a deterrent. | A prison sentence acts as a deterrent. || act as = có tác dụng như
+Camera có tác dụng răn đe kẻ trộm. || Cameras act as a deterrent to thieves. || thieves = kẻ trộm
+Tiền phạt nặng có tác dụng răn đe. || Heavy fines act as a deterrent. | Large fines act as a deterrent. || fines = tiền phạt
+# keep young people off the streets
+Câu lạc bộ thể thao giữ thanh thiếu niên tránh xa đường phố. || Sports clubs keep young people off the streets. || sports clubs = câu lạc bộ thể thao
+Chúng ta cần nhiều hoạt động hơn để giữ thanh thiếu niên tránh xa đường phố. || We need more activities to keep young people off the streets. || more activities = nhiều hoạt động hơn
+Trường học có thể giữ thanh thiếu niên tránh xa đường phố. || Schools can keep young people off the streets. || can + V
+# a sense of community
+Làng quê có tinh thần cộng đồng mạnh mẽ. || Villages have a strong sense of community. || strong = mạnh mẽ
+Thành phố lớn thiếu tinh thần cộng đồng. || Big cities lack a sense of community. | Big cities have no sense of community. || lack = thiếu
+Lễ hội xây dựng tinh thần cộng đồng. || Festivals build a sense of community. | Festivals create a sense of community. || build = xây dựng
+# committed by
+Nhiều tội phạm được gây ra bởi người trẻ. || Many crimes are committed by young people. || bị động: are committed by
+Vụ trộm được gây ra bởi hai người đàn ông. || The robbery was committed by two men. | The theft was committed by two men. || robbery = vụ trộm · was committed by
+Hầu hết tội phạm bạo lực được gây ra bởi nam giới. || Most violent crimes are committed by men. | Most violent crime is committed by men. || most = hầu hết
+
+@ government
+# allocate funds to
+Chính phủ nên phân bổ ngân sách cho giáo dục. || The government should allocate funds to education. || should + V
+Thành phố đã phân bổ ngân sách cho các công viên mới. || The city allocated funds to new parks. | The city has allocated funds to new parks. || quá khứ: allocated
+Chúng ta cần phân bổ ngân sách cho bệnh viện. || We need to allocate funds to hospitals. || need to + V
+# public services
+Dịch vụ công nên miễn phí. || Public services should be free. || should be free
+Thuế chi trả cho dịch vụ công. || Taxes pay for public services. || pay for = chi trả cho
+Dịch vụ công ở nông thôn còn kém. || Public services in rural areas are still poor. | Public services in the countryside are still poor. || rural areas = nông thôn · poor = kém
+# government spending
+Chi tiêu chính phủ cho y tế đang tăng. || Government spending on health is increasing. | Government spending on healthcare is rising. || spending on = chi tiêu cho
+Chúng ta cần cắt giảm chi tiêu chính phủ. || We need to cut government spending. | We need to reduce government spending. || cut = cắt giảm
+Chi tiêu chính phủ có thể thúc đẩy kinh tế. || Government spending can boost the economy. || boost = thúc đẩy
+# raise taxes
+Chính phủ dự định tăng thuế. || The government plans to raise taxes. || plan to + V = dự định
+Không ai thích việc tăng thuế. || Nobody likes raising taxes. | No one likes it when taxes are raised. || V-ing làm tân ngữ
+Họ tăng thuế để xây thêm trường học. || They raise taxes to build more schools. | They raised taxes to build more schools. || to + V = để
+# the welfare system
+Hệ thống phúc lợi xã hội giúp người nghèo. || The welfare system helps poor people. | The welfare system helps the poor. || helps (+s)
+Hệ thống phúc lợi xã hội rất tốn kém. || The welfare system is very expensive. | The welfare system is very costly. || expensive = tốn kém
+Một số người lạm dụng hệ thống phúc lợi xã hội. || Some people abuse the welfare system. | Some people misuse the welfare system. || abuse = lạm dụng
+# the gap between rich and poor
+Khoảng cách giàu nghèo đang lớn dần. || The gap between rich and poor is growing. | The gap between rich and poor is getting wider. || is growing = đang lớn dần
+Giáo dục có thể thu hẹp khoảng cách giàu nghèo. || Education can narrow the gap between rich and poor. | Education can reduce the gap between rich and poor. || narrow = thu hẹp
+Khoảng cách giàu nghèo gây ra nhiều vấn đề. || The gap between rich and poor causes many problems. || causes (+s)
+# live below the poverty line
+Nhiều gia đình sống dưới mức nghèo. || Many families live below the poverty line. || many families
+Hàng triệu trẻ em sống dưới mức nghèo. || Millions of children live below the poverty line. || millions of = hàng triệu
+Ít người sống dưới mức nghèo hơn trước. || Fewer people live below the poverty line than before. || fewer = ít hơn · than before = hơn trước
+# affordable housing
+Người trẻ cần nhà ở giá phải chăng. || Young people need affordable housing. || need = cần
+Có quá ít nhà ở giá phải chăng ở Hà Nội. || There is too little affordable housing in Hanoi. | There is not enough affordable housing in Hanoi. || too little = quá ít (danh từ không đếm được)
+Chính phủ nên xây nhà ở giá phải chăng. || The government should build affordable housing. || build = xây
+# social problems
+Thất nghiệp gây ra các vấn đề xã hội. || Unemployment causes social problems. | Unemployment leads to social problems. || unemployment = thất nghiệp
+Các thành phố lớn có nhiều vấn đề xã hội. || Big cities have many social problems. || many = nhiều
+Chúng ta phải giải quyết các vấn đề xã hội. || We must solve social problems. | We must tackle social problems. | We have to solve social problems. || solve = giải quyết
+# introduce legislation
+Chính phủ đã ban hành luật mới về ô nhiễm. || The government introduced new legislation on pollution. | The government has introduced new legislation on pollution. || legislation = luật (không đếm được)
+Chúng ta cần ban hành luật bảo vệ người lao động. || We need to introduce legislation to protect workers. || to protect = để bảo vệ
+Họ sẽ ban hành luật cấm hút thuốc. || They will introduce legislation to ban smoking. || ban smoking = cấm hút thuốc
+# the public interest
+Chính phủ phải hành động vì lợi ích công cộng. || The government must act in the public interest. || act in the public interest = hành động vì lợi ích công cộng
+Dự án này không phục vụ lợi ích công cộng. || This project does not serve the public interest. | This project doesn't serve the public interest. || serve = phục vụ
+Báo chí nên bảo vệ lợi ích công cộng. || The press should protect the public interest. | Newspapers should protect the public interest. || the press = báo chí
+# take responsibility for
+Mọi người nên chịu trách nhiệm cho hành động của mình. || Everyone should take responsibility for their actions. | People should take responsibility for their actions. || actions = hành động
+Chính phủ phải chịu trách nhiệm cho người già. || The government must take responsibility for old people. | The government must take responsibility for the elderly. || the elderly = người già
+Cha mẹ chịu trách nhiệm cho việc giáo dục con cái. || Parents take responsibility for their children's education. || children's education
+# vulnerable groups
+Trẻ em nghèo thuộc các nhóm dễ bị tổn thương. || Poor children belong to vulnerable groups. || belong to = thuộc
+Chính phủ nên bảo vệ các nhóm dễ bị tổn thương. || The government should protect vulnerable groups. || protect = bảo vệ
+Người già và người khuyết tật là các nhóm dễ bị tổn thương. || Old people and disabled people are vulnerable groups. | The elderly and the disabled are vulnerable groups. || disabled = khuyết tật
+# social cohesion
+Lễ hội tăng cường sự gắn kết xã hội. || Festivals strengthen social cohesion. | Festivals improve social cohesion. || strengthen = tăng cường
+Bất bình đẳng làm hại sự gắn kết xã hội. || Inequality harms social cohesion. | Inequality damages social cohesion. || harm = làm hại
+Sự gắn kết xã hội rất quan trọng cho một quốc gia. || Social cohesion is very important for a country. | Social cohesion is very important for a nation. || for a country
+# infrastructure projects
+Chính phủ đầu tư vào các dự án cơ sở hạ tầng. || The government invests in infrastructure projects. || invest in = đầu tư vào
+Các dự án cơ sở hạ tầng tạo ra việc làm. || Infrastructure projects create jobs. || create jobs = tạo việc làm
+Các dự án cơ sở hạ tầng lớn rất tốn kém. || Large infrastructure projects are very expensive. | Big infrastructure projects are very expensive. || large = lớn
+# taxpayers' money
+Chính phủ không nên lãng phí tiền thuế của người dân. || The government should not waste taxpayers' money. | The government shouldn't waste taxpayers' money. || waste = lãng phí
+Bệnh viện công được xây bằng tiền thuế của người dân. || Public hospitals are built with taxpayers' money. || bị động: are built with
+Tiền thuế của người dân nên được chi tiêu cẩn thận. || Taxpayers' money should be spent carefully. || should be spent = nên được chi tiêu
+# subsidise
+Chính phủ trợ cấp giao thông công cộng. || The government subsidises public transport. | The government subsidizes public transport. || subsidises (+s)
+Chúng ta nên trợ cấp cho nông dân. || We should subsidise farmers. | We should subsidize farmers. || should + V
+Nhiều nước trợ cấp năng lượng tái tạo. || Many countries subsidise renewable energy. | Many countries subsidize renewable energy. || renewable energy (tuần 2)
+# be entitled to
+Mọi công dân có quyền được hưởng giáo dục miễn phí. || All citizens are entitled to free education. | Every citizen is entitled to free education. || all citizens = mọi công dân
+Người lao động có quyền được hưởng ngày nghỉ. || Workers are entitled to holidays. | Workers are entitled to paid holidays. || holidays = ngày nghỉ
+Người già có quyền được hưởng lương hưu. || Old people are entitled to a pension. | Elderly people are entitled to a pension. || pension = lương hưu
+# civic duty
+Bỏ phiếu là nghĩa vụ công dân. || Voting is a civic duty. || voting = bỏ phiếu
+Nộp thuế là nghĩa vụ công dân của chúng ta. || Paying taxes is our civic duty. || paying taxes = nộp thuế
+Giúp đỡ hàng xóm là một nghĩa vụ công dân. || Helping neighbours is a civic duty. | Helping your neighbours is a civic duty. | Helping neighbors is a civic duty. || neighbours = hàng xóm
+# equal opportunities
+Mọi trẻ em nên có cơ hội bình đẳng. || All children should have equal opportunities. | Every child should have equal opportunities. || should have
+Phụ nữ cần cơ hội bình đẳng trong công việc. || Women need equal opportunities at work. | Women need equal opportunities in the workplace. || at work = trong công việc
+Giáo dục miễn phí tạo ra cơ hội bình đẳng. || Free education creates equal opportunities. | Free education gives equal opportunities. || create = tạo ra
+# address the issue of
+Chính phủ phải giải quyết vấn đề vô gia cư. || The government must address the issue of homelessness. || homelessness = vô gia cư
+Chúng ta cần giải quyết vấn đề ô nhiễm không khí. || We need to address the issue of air pollution. || air pollution
+Luật mới giải quyết vấn đề lao động trẻ em. || The new law addresses the issue of child labour. | The new law addresses the issue of child labor. || child labour = lao động trẻ em
+# a top priority
+Giáo dục nên là ưu tiên hàng đầu. || Education should be a top priority. || should be
+Sức khỏe là ưu tiên hàng đầu của tôi. || Health is my top priority. || my top priority
+An toàn là ưu tiên hàng đầu. || Safety is a top priority. | Safety is the top priority. || safety = an toàn
+# policymakers
+Các nhà hoạch định chính sách nên lắng nghe người dân. || Policymakers should listen to people. | Policymakers should listen to the public. || listen to = lắng nghe
+Các nhà hoạch định chính sách phải đưa ra quyết định khó khăn. || Policymakers have to make difficult decisions. | Policymakers must make difficult decisions. || make decisions = đưa ra quyết định
+Các nhà hoạch định chính sách lo lắng về dân số già hóa. || Policymakers worry about the ageing population. | Policymakers are worried about the ageing population. || ageing population (tuần 4)
+# social security
+An sinh xã hội bảo vệ người thất nghiệp. || Social security protects unemployed people. | Social security protects the unemployed. || unemployed = thất nghiệp
+Nhiều người già sống bằng an sinh xã hội. || Many old people live on social security. | Many elderly people live on social security. || live on = sống bằng
+Chính phủ chi nhiều tiền cho an sinh xã hội. || The government spends a lot of money on social security. || spend money on = chi tiền cho
+# be funded by the state
+Trường công được nhà nước tài trợ. || Public schools are funded by the state. || bị động: are funded by
+Bảo tàng này được nhà nước tài trợ. || This museum is funded by the state. || is funded
+Nghiên cứu khoa học nên được nhà nước tài trợ. || Scientific research should be funded by the state. || should be funded
+# the arts
+Chính phủ nên hỗ trợ nghệ thuật. || The government should support the arts. || support = hỗ trợ
+Nghệ thuật làm cho cuộc sống thú vị hơn. || The arts make life more interesting. || make + O + adj
+Ngân sách cho nghệ thuật rất nhỏ. || The budget for the arts is very small. | Funding for the arts is very small. || budget = ngân sách
+# homelessness
+Tình trạng vô gia cư là một vấn đề lớn ở các thành phố. || Homelessness is a big problem in cities. | Homelessness is a major problem in cities. || a big problem
+Thất nghiệp có thể dẫn đến tình trạng vô gia cư. || Unemployment can lead to homelessness. || lead to = dẫn đến
+Nhà ở giá rẻ giúp giảm tình trạng vô gia cư. || Cheap housing helps reduce homelessness. | Cheap housing helps to reduce homelessness. || cheap housing = nhà ở giá rẻ
+# make a positive difference to
+Tình nguyện viên tạo ra thay đổi tích cực cho cộng đồng. || Volunteers make a positive difference to the community. | Volunteers make a positive difference to their community. || volunteers = tình nguyện viên
+Luật mới đã tạo ra thay đổi tích cực cho cuộc sống của người nghèo. || The new law has made a positive difference to the lives of poor people. | The new law made a positive difference to poor people's lives. || hiện tại hoàn thành: has made
+Một giáo viên giỏi có thể tạo ra thay đổi tích cực cho học sinh. || A good teacher can make a positive difference to students. | A good teacher can make a positive difference to his or her students. || can + V
+# reduce inequality
+Thuế có thể giảm bất bình đẳng. || Taxes can reduce inequality. || can reduce
+Giáo dục là cách tốt nhất để giảm bất bình đẳng. || Education is the best way to reduce inequality. || the best way to + V
+Chính phủ cố gắng giảm bất bình đẳng. || The government tries to reduce inequality. | The government is trying to reduce inequality. || try to + V
+# a fair distribution of wealth
+Chúng ta cần một sự phân phối của cải công bằng. || We need a fair distribution of wealth. || need = cần
+Thuế giúp tạo ra sự phân phối của cải công bằng hơn. || Taxes help create a fairer distribution of wealth. | Taxes help to create a fairer distribution of wealth. || fairer = công bằng hơn
+Không có sự phân phối của cải công bằng ở nhiều nước. || There is no fair distribution of wealth in many countries. | Many countries do not have a fair distribution of wealth. || there is no = không có
+
+@ economy
+# economic growth
+Tăng trưởng kinh tế tạo ra việc làm. || Economic growth creates jobs. || creates (+s)
+Việt Nam có tăng trưởng kinh tế nhanh. || Vietnam has fast economic growth. | Vietnam has rapid economic growth. || fast = nhanh
+Du lịch thúc đẩy tăng trưởng kinh tế. || Tourism drives economic growth. | Tourism boosts economic growth. || drive = thúc đẩy
+# boost the economy
+Du lịch có thể thúc đẩy nền kinh tế. || Tourism can boost the economy. || can + V
+Chính phủ giảm thuế để thúc đẩy nền kinh tế. || The government cuts taxes to boost the economy. | The government reduces taxes to boost the economy. || cut taxes = giảm thuế
+Đầu tư nước ngoài thúc đẩy nền kinh tế. || Foreign investment boosts the economy. || boosts (+s)
+# the cost of living
+Chi phí sinh hoạt ở Hà Nội đang tăng. || The cost of living in Hanoi is rising. | The cost of living in Hanoi is increasing. || is rising = đang tăng
+Chi phí sinh hoạt ở London rất cao. || The cost of living in London is very high. || very high = rất cao
+Lương không theo kịp chi phí sinh hoạt. || Salaries do not keep up with the cost of living. | Wages don't keep up with the cost of living. || keep up with = theo kịp
+# a consumer society
+Chúng ta đang sống trong một xã hội tiêu dùng. || We live in a consumer society. | We are living in a consumer society. || live in = sống trong
+Một xã hội tiêu dùng tạo ra nhiều rác. || A consumer society creates a lot of waste. | A consumer society produces a lot of waste. || waste = rác
+Quảng cáo xây dựng một xã hội tiêu dùng. || Advertising builds a consumer society. | Advertising creates a consumer society. || advertising = quảng cáo
+# purchasing power
+Sức mua của người dân đang giảm. || People's purchasing power is falling. | People's purchasing power is decreasing. || people's = của người dân
+Lạm phát làm giảm sức mua. || Inflation reduces purchasing power. || inflation = lạm phát
+Người trẻ có sức mua lớn. || Young people have strong purchasing power. | Young people have great purchasing power. || strong = lớn, mạnh
+# multinational corporations
+Các tập đoàn đa quốc gia trả lương cao. || Multinational corporations pay high salaries. || pay = trả
+Nhiều tập đoàn đa quốc gia đầu tư vào Việt Nam. || Many multinational corporations invest in Vietnam. || invest in = đầu tư vào
+Các tập đoàn đa quốc gia rất quyền lực. || Multinational corporations are very powerful. || powerful = quyền lực
+# foreign investment
+Việt Nam thu hút nhiều đầu tư nước ngoài. || Vietnam attracts a lot of foreign investment. | Vietnam attracts much foreign investment. || attract = thu hút
+Đầu tư nước ngoài tạo ra việc làm. || Foreign investment creates jobs. || creates (+s)
+Chúng ta cần thêm đầu tư nước ngoài. || We need more foreign investment. || more = thêm
+# small and medium-sized businesses
+Doanh nghiệp vừa và nhỏ tạo ra nhiều việc làm. || Small and medium-sized businesses create many jobs. | Small and medium-sized businesses create a lot of jobs. || create = tạo ra
+Chính phủ nên hỗ trợ doanh nghiệp vừa và nhỏ. || The government should support small and medium-sized businesses. || support = hỗ trợ
+Doanh nghiệp vừa và nhỏ gặp khó khăn trong khủng hoảng. || Small and medium-sized businesses struggle in a crisis. | Small and medium-sized businesses have difficulties in a crisis. || struggle = gặp khó khăn · crisis = khủng hoảng
+# go out of business
+Nhiều cửa hàng nhỏ đã phá sản. || Many small shops have gone out of business. | Many small shops went out of business. || hiện tại hoàn thành: have gone
+Công ty có thể phá sản nếu không có khách hàng. || A company can go out of business if it has no customers. | Companies can go out of business without customers. || customers = khách hàng
+Cửa hàng sách cũ đã đóng cửa năm ngoái. || The old bookshop went out of business last year. | The old bookstore went out of business last year. || quá khứ: went
+# make a profit
+Công ty muốn kiếm lợi nhuận. || Companies want to make a profit. | The company wants to make a profit. || want to + V
+Cửa hàng này không kiếm được lợi nhuận. || This shop does not make a profit. | This shop doesn't make a profit. | This store does not make a profit. || does not make
+Rất khó để kiếm lợi nhuận trong năm đầu. || It is very hard to make a profit in the first year. | It is very difficult to make a profit in the first year. || It is hard to + V
+# financial burden
+Học phí là một gánh nặng tài chính. || Tuition fees are a financial burden. || tuition fees (tuần 1)
+Chăm sóc cha mẹ già có thể là gánh nặng tài chính. || Caring for elderly parents can be a financial burden. || care for = chăm sóc · V-ing làm chủ ngữ
+Khoản vay là gánh nặng tài chính lớn cho sinh viên. || Loans are a heavy financial burden for students. | Loans are a big financial burden for students. || loans = khoản vay · heavy = lớn
+# a stable income
+Tôi muốn có thu nhập ổn định. || I want a stable income. | I want to have a stable income. || want
+Công chức có thu nhập ổn định. || Civil servants have a stable income. || civil servants = công chức
+Thu nhập ổn định mang lại sự an tâm. || A stable income gives peace of mind. | A stable income brings peace of mind. || peace of mind = sự an tâm
+# save money for the future
+Bạn nên tiết kiệm tiền cho tương lai. || You should save money for the future. || should + V
+Người trẻ ít khi tiết kiệm tiền cho tương lai. || Young people rarely save money for the future. | Young people seldom save money for the future. || rarely = ít khi
+Tôi tiết kiệm tiền cho tương lai mỗi tháng. || I save money for the future every month. || every month = mỗi tháng
+# live beyond one's means
+Nhiều người tiêu xài quá khả năng. || Many people live beyond their means. || one's → their
+Đừng tiêu xài quá khả năng của bạn. || Do not live beyond your means. | Don't live beyond your means. || câu mệnh lệnh: Don't + V
+Thẻ tín dụng khiến mọi người tiêu xài quá khả năng. || Credit cards make people live beyond their means. | Credit cards encourage people to live beyond their means. || credit cards = thẻ tín dụng
+# a competitive market
+Đây là một thị trường cạnh tranh. || This is a competitive market. || competitive = cạnh tranh
+Các công ty nhỏ khó tồn tại trong thị trường cạnh tranh. || Small companies find it hard to survive in a competitive market. | It is hard for small companies to survive in a competitive market. || survive = tồn tại
+Thị trường cạnh tranh làm giá rẻ hơn. || A competitive market makes prices lower. | A competitive market keeps prices low. || make + O + adj
+# generate revenue
+Du lịch tạo ra doanh thu cho thành phố. || Tourism generates revenue for the city. || generates (+s)
+Quảng cáo tạo ra doanh thu cho mạng xã hội. || Advertising generates revenue for social media. || for social media
+Công ty cần tạo ra thêm doanh thu. || The company needs to generate more revenue. || need to + V
+# an economic downturn
+Nhiều người mất việc trong suy thoái kinh tế. || Many people lose their jobs in an economic downturn. | Many people lost their jobs in the economic downturn. || lose one's job = mất việc
+Suy thoái kinh tế ảnh hưởng đến mọi người. || An economic downturn affects everyone. | The economic downturn affected everyone. || affect = ảnh hưởng đến
+Công ty đã sống sót qua suy thoái kinh tế. || The company survived the economic downturn. | The company survived an economic downturn. || survive = sống sót qua
+# job creation
+Chính phủ tập trung vào tạo việc làm. || The government focuses on job creation. || focus on = tập trung vào
+Doanh nghiệp nhỏ rất quan trọng cho việc tạo việc làm. || Small businesses are very important for job creation. || important for
+Đầu tư nước ngoài dẫn đến tạo việc làm. || Foreign investment leads to job creation. || lead to = dẫn đến
+# exploit cheap labour
+Một số công ty bóc lột lao động giá rẻ. || Some companies exploit cheap labour. | Some companies exploit cheap labor. || exploit = bóc lột
+Các nhà máy không nên bóc lột lao động giá rẻ. || Factories should not exploit cheap labour. | Factories shouldn't exploit cheap labour. | Factories should not exploit cheap labor. || should not
+Các tập đoàn đa quốc gia bị chỉ trích vì bóc lột lao động giá rẻ. || Multinational corporations are criticised for exploiting cheap labour. | Multinational corporations are criticized for exploiting cheap labor. || be criticised for + V-ing
+# raise living standards
+Tăng trưởng kinh tế nâng cao mức sống. || Economic growth raises living standards. | Economic growth improves living standards. || raises (+s)
+Giáo dục giúp nâng cao mức sống. || Education helps raise living standards. | Education helps to raise living standards. || help + V
+Chính phủ muốn nâng cao mức sống ở nông thôn. || The government wants to raise living standards in rural areas. || rural areas = nông thôn
+# a free market economy
+Mỹ có nền kinh tế thị trường tự do. || The USA has a free market economy. | America has a free market economy. | The US has a free market economy. || has
+Nền kinh tế thị trường tự do khuyến khích cạnh tranh. || A free market economy encourages competition. || competition = cạnh tranh
+Trong nền kinh tế thị trường tự do, giá cả do thị trường quyết định. || In a free market economy, prices are decided by the market. | In a free market economy, prices are set by the market. || bị động: are decided by
+# consumer demand
+Nhu cầu tiêu dùng đang tăng. || Consumer demand is rising. | Consumer demand is growing. | Consumer demand is increasing. || is rising
+Nhu cầu tiêu dùng về xe điện rất cao. || Consumer demand for electric cars is very high. || demand for = nhu cầu về
+Quảng cáo làm tăng nhu cầu tiêu dùng. || Advertising increases consumer demand. | Advertising raises consumer demand. || increase = làm tăng
+# advertising budget
+Công ty có ngân sách quảng cáo lớn. || The company has a big advertising budget. | The company has a large advertising budget. || big = lớn
+Họ đã cắt giảm ngân sách quảng cáo. || They cut the advertising budget. | They have cut their advertising budget. || cut = cắt giảm
+Ngân sách quảng cáo của công ty nhỏ rất hạn chế. || Small companies have a very limited advertising budget. | The advertising budget of small companies is very limited. || limited = hạn chế
+# a thriving business
+Bà tôi có một doanh nghiệp phát đạt. || My grandmother has a thriving business. | My grandmother runs a thriving business. || grandmother = bà
+Anh ấy biến cửa hàng nhỏ thành một doanh nghiệp phát đạt. || He turned a small shop into a thriving business. | He turned his small shop into a thriving business. || turn A into B = biến A thành B
+Một doanh nghiệp phát đạt cần khách hàng trung thành. || A thriving business needs loyal customers. || loyal = trung thành
+# contribute to the economy
+Người nhập cư đóng góp cho nền kinh tế. || Immigrants contribute to the economy. | Migrants contribute to the economy. || immigrants = người nhập cư
+Du lịch đóng góp nhiều cho nền kinh tế. || Tourism contributes a lot to the economy. | Tourism contributes greatly to the economy. || contribute a lot = đóng góp nhiều
+Mọi người lao động đều đóng góp cho nền kinh tế. || All workers contribute to the economy. | Every worker contributes to the economy. || all workers
+# economic inequality
+Bất bình đẳng kinh tế đang tăng. || Economic inequality is increasing. | Economic inequality is growing. | Economic inequality is rising. || is increasing
+Bất bình đẳng kinh tế gây ra bất ổn xã hội. || Economic inequality causes social unrest. | Economic inequality leads to social unrest. || social unrest = bất ổn xã hội
+Thuế có thể giảm bất bình đẳng kinh tế. || Taxes can reduce economic inequality. || can reduce
+# the local economy
+Du lịch hỗ trợ kinh tế địa phương. || Tourism supports the local economy. || supports (+s)
+Chợ truyền thống quan trọng cho kinh tế địa phương. || Traditional markets are important for the local economy. || traditional markets = chợ truyền thống
+Mua hàng địa phương giúp kinh tế địa phương. || Buying local products helps the local economy. | Buying local goods helps the local economy. || V-ing làm chủ ngữ
+# at the expense of
+Họ làm việc nhiều bằng cái giá là sức khỏe. || They work hard at the expense of their health. | They work long hours at the expense of their health. || at the expense of
+Tăng trưởng kinh tế không nên đánh đổi bằng môi trường. || Economic growth should not come at the expense of the environment. | Economic growth shouldn't come at the expense of the environment. || come at the expense of
+Anh ấy thành công nhưng đánh đổi bằng gia đình. || He succeeded at the expense of his family. | He was successful at the expense of his family. || succeed = thành công
+# material wealth
+Của cải vật chất không mang lại hạnh phúc. || Material wealth does not bring happiness. | Material wealth doesn't bring happiness. || does not bring
+Nhiều người theo đuổi của cải vật chất. || Many people pursue material wealth. | Many people chase material wealth. || pursue = theo đuổi
+Sức khỏe quan trọng hơn của cải vật chất. || Health is more important than material wealth. || more important than
+# tax revenue
+Thuế thu nhập tạo ra nguồn thu từ thuế. || Income tax creates tax revenue. | Income tax generates tax revenue. || income tax = thuế thu nhập
+Chính phủ dùng nguồn thu từ thuế để xây đường. || The government uses tax revenue to build roads. || to + V = để
+Nguồn thu từ thuế đã giảm năm nay. || Tax revenue has fallen this year. | Tax revenue has decreased this year. | Tax revenue fell this year. || hiện tại hoàn thành: has fallen
+
+@ media
+# mass media
+Phương tiện truyền thông đại chúng định hình suy nghĩ của chúng ta. || The mass media shape the way we think. | The mass media shapes the way we think. | Mass media shapes our thinking. || shape = định hình
+Truyền hình là một phương tiện truyền thông đại chúng. || Television is a form of mass media. | TV is a form of mass media. || a form of = một dạng
+Phương tiện truyền thông đại chúng có ảnh hưởng lớn. || The mass media have a big influence. | The mass media has a great influence. | Mass media has a big influence. || influence = ảnh hưởng
+# advertising campaigns
+Công ty đã chạy một chiến dịch quảng cáo lớn. || The company ran a big advertising campaign. | The company ran a large advertising campaign. || ran (quá khứ của run) = chạy
+Các chiến dịch quảng cáo rất tốn kém. || Advertising campaigns are very expensive. || expensive = tốn kém
+Các chiến dịch quảng cáo nhắm đến trẻ em. || Advertising campaigns target children. || target = nhắm đến
+# target young consumers
+Các thương hiệu thời trang nhắm đến người tiêu dùng trẻ. || Fashion brands target young consumers. || fashion brands = thương hiệu thời trang
+Quảng cáo trên mạng nhắm đến người tiêu dùng trẻ. || Online adverts target young consumers. | Online advertisements target young consumers. || online adverts = quảng cáo trên mạng
+Không nên nhắm đến người tiêu dùng trẻ bằng quảng cáo đồ ăn vặt. || Junk food adverts should not target young consumers. | Junk food adverts shouldn't target young consumers. || junk food (tuần 4)
+# persuade people to buy
+Quảng cáo thuyết phục mọi người mua sản phẩm. || Adverts persuade people to buy products. | Advertisements persuade people to buy products. || persuade sb to V
+Giảm giá thuyết phục mọi người mua nhiều hơn. || Discounts persuade people to buy more. || discounts = giảm giá
+Thật khó để thuyết phục mọi người mua xe điện. || It is hard to persuade people to buy electric cars. | It is difficult to persuade people to buy electric cars. || It is hard to + V
+# misleading advertisements
+Quảng cáo gây hiểu lầm nên bị cấm. || Misleading advertisements should be banned. || should be banned = nên bị cấm
+Nhiều quảng cáo gây hiểu lầm về thực phẩm. || Many misleading advertisements are about food. | There are many misleading advertisements about food. || about food = về thực phẩm
+Người tiêu dùng bị lừa bởi quảng cáo gây hiểu lầm. || Consumers are tricked by misleading advertisements. | Consumers are fooled by misleading advertisements. || be tricked by = bị lừa bởi
+# celebrity endorsements
+Người nổi tiếng quảng bá sản phẩm làm tăng doanh số. || Celebrity endorsements increase sales. | Celebrity endorsements boost sales. || sales = doanh số
+Thanh thiếu niên tin vào việc người nổi tiếng quảng bá sản phẩm. || Teenagers trust celebrity endorsements. | Teenagers believe celebrity endorsements. || trust = tin vào
+Việc người nổi tiếng quảng bá sản phẩm rất đắt. || Celebrity endorsements are very expensive. || are very expensive
+# brand loyalty
+Apple có lòng trung thành thương hiệu mạnh. || Apple has strong brand loyalty. || strong = mạnh
+Quảng cáo xây dựng lòng trung thành với thương hiệu. || Advertising builds brand loyalty. | Advertising creates brand loyalty. || build = xây dựng
+Người trẻ có ít lòng trung thành với thương hiệu hơn. || Young people have less brand loyalty. | Young people show less brand loyalty. || less = ít hơn
+# impulse buying
+Mua sắm trực tuyến khuyến khích mua sắm bốc đồng. || Online shopping encourages impulse buying. || encourage = khuyến khích
+Tôi cố tránh mua sắm bốc đồng. || I try to avoid impulse buying. || avoid + V-ing/N = tránh
+Mua sắm bốc đồng lãng phí tiền. || Impulse buying wastes money. | Impulse buying is a waste of money. || waste money = lãng phí tiền
+# a materialistic society
+Chúng ta sống trong một xã hội vật chất. || We live in a materialistic society. || live in
+Quảng cáo tạo ra một xã hội vật chất. || Advertising creates a materialistic society. || create = tạo ra
+Trong một xã hội vật chất, mọi người coi trọng tiền bạc. || In a materialistic society, people value money. | In a materialistic society, people care about money. || value = coi trọng
+# freedom of the press
+Tự do báo chí rất quan trọng cho dân chủ. || Freedom of the press is very important for democracy. || democracy = dân chủ
+Một số nước không có tự do báo chí. || Some countries do not have freedom of the press. | Some countries don't have freedom of the press. | Some countries have no freedom of the press. || do not have
+Chúng ta phải bảo vệ tự do báo chí. || We must protect freedom of the press. | We have to protect freedom of the press. || protect = bảo vệ
+# fake news
+Tin giả lan truyền nhanh trên mạng xã hội. || Fake news spreads quickly on social media. | Fake news spreads fast on social media. || spread = lan truyền
+Nhiều người tin vào tin giả. || Many people believe fake news. | Many people believe in fake news. || believe = tin
+Chúng ta nên kiểm tra tin tức để tránh tin giả. || We should check the news to avoid fake news. | We should check news to avoid fake news. || check = kiểm tra · avoid = tránh
+# reliable sources of information
+Báo chí là nguồn thông tin đáng tin cậy. || Newspapers are reliable sources of information. || newspapers = báo chí
+Học sinh nên dùng nguồn thông tin đáng tin cậy. || Students should use reliable sources of information. || should use
+Mạng xã hội không cung cấp nguồn thông tin đáng tin cậy. || Social media does not provide reliable sources of information. | Social media doesn't provide reliable sources of information. || provide = cung cấp
+# invade people's privacy
+Phóng viên không nên xâm phạm quyền riêng tư. || Journalists should not invade people's privacy. | Journalists shouldn't invade people's privacy. || journalists = phóng viên
+Camera có thể xâm phạm quyền riêng tư của mọi người. || Cameras can invade people's privacy. || can + V
+Ứng dụng này xâm phạm quyền riêng tư của người dùng. || This app invades people's privacy. | This app invades users' privacy. || invades (+s)
+# sensationalism
+Nhiều tờ báo dùng lối giật gân để bán báo. || Many newspapers use sensationalism to sell copies. | Many newspapers use sensationalism to sell more papers. || to sell copies = để bán báo
+Giật gân hóa tin tức làm mọi người lo lắng. || Sensationalism makes people worried. | Sensationalism makes people anxious. || make + O + adj
+Tôi không thích lối giật gân trong tin tức. || I do not like sensationalism in the news. | I don't like sensationalism in the news. || in the news
+# shape public opinion
+Truyền thông định hình dư luận. || The media shape public opinion. | The media shapes public opinion. | Media shapes public opinion. || shape = định hình
+Mạng xã hội có thể định hình dư luận. || Social media can shape public opinion. || can + V
+Các chính trị gia cố gắng định hình dư luận. || Politicians try to shape public opinion. || politicians = chính trị gia
+# have a profound influence on
+Truyền hình có ảnh hưởng sâu sắc đến trẻ em. || Television has a profound influence on children. | TV has a profound influence on children. || has (+s)
+Cha mẹ có ảnh hưởng sâu sắc đến con cái. || Parents have a profound influence on their children. || have
+Internet đã có ảnh hưởng sâu sắc đến cuộc sống của chúng ta. || The internet has had a profound influence on our lives. | The Internet has had a profound influence on our lives. || hiện tại hoàn thành: has had
+# unrealistic body images
+Quảng cáo tạo ra hình ảnh cơ thể phi thực tế. || Adverts create unrealistic body images. | Advertisements create unrealistic body images. || create = tạo ra
+Hình ảnh cơ thể phi thực tế ảnh hưởng xấu đến thanh thiếu niên. || Unrealistic body images have a bad effect on teenagers. | Unrealistic body images affect teenagers badly. || a bad effect on = ảnh hưởng xấu đến
+Tạp chí thời trang thường dùng hình ảnh cơ thể phi thực tế. || Fashion magazines often use unrealistic body images. || fashion magazines = tạp chí thời trang
+# online advertising
+Quảng cáo trực tuyến đang phát triển nhanh. || Online advertising is growing fast. | Online advertising is growing quickly. || is growing
+Quảng cáo trực tuyến rẻ hơn quảng cáo truyền hình. || Online advertising is cheaper than TV advertising. | Online advertising is cheaper than television advertising. || cheaper than
+Nhiều công ty chi nhiều tiền cho quảng cáo trực tuyến. || Many companies spend a lot of money on online advertising. || spend money on
+# raise awareness of social issues
+Phim tài liệu có thể nâng cao nhận thức về vấn đề xã hội. || Documentaries can raise awareness of social issues. || documentaries = phim tài liệu
+Người nổi tiếng nên nâng cao nhận thức về vấn đề xã hội. || Celebrities should raise awareness of social issues. || celebrities = người nổi tiếng
+Mạng xã hội giúp nâng cao nhận thức về vấn đề xã hội. || Social media helps raise awareness of social issues. | Social media helps to raise awareness of social issues. || help + V
+# be bombarded with adverts
+Chúng ta bị dội bom quảng cáo mỗi ngày. || We are bombarded with adverts every day. || bị động: are bombarded with
+Trẻ em bị dội bom quảng cáo trên YouTube. || Children are bombarded with adverts on YouTube. || on YouTube
+Tôi không muốn bị dội bom quảng cáo. || I do not want to be bombarded with adverts. | I don't want to be bombarded with adverts. || want to be + V3
+# a source of entertainment
+Truyền hình là một nguồn giải trí rẻ. || Television is a cheap source of entertainment. | TV is a cheap source of entertainment. || cheap = rẻ
+Mạng xã hội là nguồn giải trí chính của thanh thiếu niên. || Social media is the main source of entertainment for teenagers. || the main source = nguồn chính
+Sách là một nguồn giải trí tuyệt vời. || Books are a great source of entertainment. || great = tuyệt vời
+# consumer choice
+Thị trường tự do mang lại nhiều lựa chọn cho người tiêu dùng. || A free market gives more consumer choice. | The free market offers more consumer choice. || more = nhiều
+Mua sắm trực tuyến tăng sự lựa chọn của người tiêu dùng. || Online shopping increases consumer choice. || increase = tăng
+Quảng cáo ảnh hưởng đến sự lựa chọn của người tiêu dùng. || Advertising affects consumer choice. | Advertising influences consumer choice. || affect = ảnh hưởng đến
+# regulate the content
+Chính phủ nên kiểm soát nội dung trên mạng. || The government should regulate the content online. | The government should regulate the content on the internet. || online = trên mạng
+Thật khó để kiểm soát nội dung trên mạng xã hội. || It is hard to regulate the content on social media. | It is difficult to regulate the content on social media. || It is hard to + V
+Các nền tảng phải kiểm soát nội dung cho trẻ em. || Platforms must regulate the content for children. | Platforms have to regulate the content for children. || platforms = các nền tảng
+# print media
+Báo in đang mất độc giả. || Print media is losing readers. | Print media are losing readers. || is losing = đang mất
+Người già vẫn đọc báo in. || Old people still read print media. | Elderly people still read print media. || still = vẫn
+Báo in đáng tin cậy hơn mạng xã hội. || Print media is more reliable than social media. | Print media are more reliable than social media. || more reliable than
+# news coverage
+Việc đưa tin về chiến tranh rất nhiều. || There is a lot of news coverage of the war. || news coverage of = việc đưa tin về
+Việc đưa tin về môi trường còn ít. || News coverage of the environment is limited. | There is little news coverage of the environment. || limited = còn ít
+Truyền hình có việc đưa tin trực tiếp. || Television has live news coverage. | TV has live news coverage. || live = trực tiếp
+# go viral
+Video của cô ấy lan truyền chóng mặt. || Her video went viral. || quá khứ: went
+Tin giả có thể lan truyền chóng mặt. || Fake news can go viral. | Fake news can go viral quickly. || can + V
+Một số quảng cáo lan truyền chóng mặt trên mạng. || Some adverts go viral online. | Some advertisements go viral online. || online = trên mạng
+# manipulate consumers
+Một số quảng cáo thao túng người tiêu dùng. || Some adverts manipulate consumers. | Some advertisements manipulate consumers. || manipulate = thao túng
+Các công ty dùng dữ liệu để thao túng người tiêu dùng. || Companies use data to manipulate consumers. || data = dữ liệu
+Không được thao túng người tiêu dùng. || Consumers should not be manipulated. | Companies should not manipulate consumers. || bị động: should not be + V3
+# an informed decision
+Bạn cần thông tin để đưa ra quyết định có hiểu biết. || You need information to make an informed decision. || make a decision
+Đọc đánh giá giúp tôi đưa ra quyết định có hiểu biết. || Reading reviews helps me make an informed decision. | Reading reviews helps me to make an informed decision. || reviews = đánh giá
+Cử tri nên đưa ra quyết định có hiểu biết. || Voters should make an informed decision. || voters = cử tri
+# commercial television
+Truyền hình thương mại có nhiều quảng cáo. || Commercial television has a lot of adverts. | Commercial television has many adverts. | Commercial television has a lot of advertisements. || a lot of adverts
+Truyền hình thương mại sống nhờ quảng cáo. || Commercial television depends on advertising. | Commercial television relies on advertising. || depend on = sống nhờ
+Trẻ em xem nhiều truyền hình thương mại. || Children watch a lot of commercial television. || a lot of
+# peer influence
+Thanh thiếu niên chịu ảnh hưởng từ bạn bè. || Teenagers are affected by peer influence. | Teenagers are influenced by peer influence. || be affected by = chịu ảnh hưởng
+Ảnh hưởng từ bạn bè mạnh hơn quảng cáo. || Peer influence is stronger than advertising. || stronger than = mạnh hơn
+Ảnh hưởng từ bạn bè có thể tích cực. || Peer influence can be positive. || positive = tích cực
+
+@ globalisation
+# cultural identity
+Ngôn ngữ là một phần của bản sắc văn hóa. || Language is part of cultural identity. | Language is a part of cultural identity. || part of = một phần của
+Chúng ta phải bảo vệ bản sắc văn hóa. || We must protect our cultural identity. | We must protect cultural identity. || protect = bảo vệ
+Toàn cầu hóa đe dọa bản sắc văn hóa. || Globalisation threatens cultural identity. | Globalization threatens cultural identity. || threaten = đe dọa
+# preserve local traditions
+Lễ hội giúp gìn giữ truyền thống địa phương. || Festivals help preserve local traditions. | Festivals help to preserve local traditions. || help + V
+Người già muốn gìn giữ truyền thống địa phương. || Old people want to preserve local traditions. | Elderly people want to preserve local traditions. || want to + V
+Chúng ta nên gìn giữ truyền thống địa phương. || We should preserve local traditions. || should + V
+# cultural diversity
+Sự đa dạng văn hóa làm thế giới thú vị hơn. || Cultural diversity makes the world more interesting. || make + O + adj
+Chúng ta nên tôn trọng sự đa dạng văn hóa. || We should respect cultural diversity. || respect = tôn trọng
+London nổi tiếng vì sự đa dạng văn hóa. || London is famous for its cultural diversity. || famous for = nổi tiếng vì
+# cultural exchange
+Du học thúc đẩy giao lưu văn hóa. || Studying abroad promotes cultural exchange. || study abroad = du học
+Giao lưu văn hóa giúp chúng ta hiểu nhau hơn. || Cultural exchange helps us understand each other better. || each other = nhau
+Trường tôi có chương trình giao lưu văn hóa. || My school has a cultural exchange programme. | My school has a cultural exchange program. || programme = chương trình
+# international trade
+Thương mại quốc tế làm giá rẻ hơn. || International trade makes prices lower. | International trade makes things cheaper. || make + O + adj
+Việt Nam phụ thuộc vào thương mại quốc tế. || Vietnam depends on international trade. | Vietnam relies on international trade. || depend on = phụ thuộc vào
+Thương mại quốc tế tạo ra việc làm. || International trade creates jobs. || creates (+s)
+# a global village
+Internet đã biến thế giới thành ngôi làng toàn cầu. || The internet has turned the world into a global village. | The Internet has turned the world into a global village. || turn A into B = biến A thành B
+Chúng ta sống trong một ngôi làng toàn cầu. || We live in a global village. || live in
+Trong ngôi làng toàn cầu, tin tức lan truyền ngay lập tức. || In a global village, news travels instantly. | In a global village, news spreads instantly. || instantly = ngay lập tức
+# Western influence
+Ảnh hưởng phương Tây có thể thấy ở khắp nơi. || Western influence can be seen everywhere. || can be seen = có thể thấy
+Ẩm thực Việt Nam chịu ít ảnh hưởng phương Tây. || Vietnamese food has little Western influence. | Vietnamese cuisine shows little Western influence. || little = ít
+Ảnh hưởng phương Tây đang tăng ở châu Á. || Western influence is growing in Asia. | Western influence is increasing in Asia. || is growing = đang tăng
+# lose one's cultural heritage
+Nhiều quốc gia sợ đánh mất di sản văn hóa của mình. || Many countries are afraid of losing their cultural heritage. | Many countries fear losing their cultural heritage. || afraid of + V-ing · one's → their
+Chúng ta không nên đánh mất di sản văn hóa của mình. || We should not lose our cultural heritage. | We shouldn't lose our cultural heritage. || one's → our
+Người trẻ có thể đánh mất di sản văn hóa của họ. || Young people may lose their cultural heritage. | Young people might lose their cultural heritage. || may + V
+# cultural heritage
+Hội An là một phần di sản văn hóa của chúng ta. || Hoi An is part of our cultural heritage. || part of
+Chính phủ nên bảo vệ di sản văn hóa. || The government should protect cultural heritage. || protect = bảo vệ
+Di sản văn hóa thu hút khách du lịch. || Cultural heritage attracts tourists. || attracts (+s)
+# integrate into a new culture
+Người nhập cư cần thời gian để hòa nhập vào nền văn hóa mới. || Immigrants need time to integrate into a new culture. | Migrants need time to integrate into a new culture. || need time to + V
+Học ngôn ngữ giúp bạn hòa nhập vào nền văn hóa mới. || Learning the language helps you integrate into a new culture. || learning the language = học ngôn ngữ
+Trẻ em hòa nhập vào nền văn hóa mới nhanh hơn. || Children integrate into a new culture faster. | Children integrate into a new culture more quickly. || faster = nhanh hơn
+# a multicultural society
+Canada là một xã hội đa văn hóa. || Canada is a multicultural society. || is a …
+Trong một xã hội đa văn hóa, mọi người tôn trọng nhau. || In a multicultural society, people respect each other. || respect each other = tôn trọng nhau
+Sống trong một xã hội đa văn hóa mở mang tầm nhìn. || Living in a multicultural society broadens your horizons. || broaden one's horizons (tuần 1)
+# culture shock
+Tôi bị sốc văn hóa khi đến Nhật. || I experienced culture shock when I went to Japan. | I had culture shock when I came to Japan. || experience = trải qua
+Du học sinh thường bị sốc văn hóa. || International students often experience culture shock. | International students often suffer from culture shock. || often = thường
+Sốc văn hóa thường kéo dài vài tháng. || Culture shock usually lasts a few months. | Culture shock usually lasts for a few months. || last = kéo dài
+# the spread of global brands
+Sự lan rộng của các thương hiệu toàn cầu làm các thành phố giống nhau. || The spread of global brands makes cities look the same. | The spread of global brands makes cities similar. || look the same = trông giống nhau
+Tôi lo lắng về sự lan rộng của các thương hiệu toàn cầu. || I am worried about the spread of global brands. | I'm worried about the spread of global brands. || worried about
+Sự lan rộng của các thương hiệu toàn cầu đe dọa cửa hàng nhỏ. || The spread of global brands threatens small shops. | The spread of global brands threatens small businesses. || threaten = đe dọa
+# homogenisation of culture
+Toàn cầu hóa dẫn đến sự đồng nhất hóa văn hóa. || Globalisation leads to the homogenisation of culture. | Globalization leads to the homogenization of culture. || lead to = dẫn đến
+Nhiều người lo về sự đồng nhất hóa văn hóa. || Many people worry about the homogenisation of culture. | Many people are worried about the homogenisation of culture. || worry about
+Sự đồng nhất hóa văn hóa làm thế giới nhàm chán hơn. || The homogenisation of culture makes the world more boring. | The homogenization of culture makes the world more boring. || boring = nhàm chán
+# minority languages
+Nhiều ngôn ngữ thiểu số đang biến mất. || Many minority languages are disappearing. | Many minority languages are dying out. || are disappearing = đang biến mất
+Trường học nên dạy ngôn ngữ thiểu số. || Schools should teach minority languages. || teach = dạy
+Chúng ta phải bảo vệ ngôn ngữ thiểu số. || We must protect minority languages. | We have to protect minority languages. || protect
+# traditional customs
+Tết có nhiều phong tục truyền thống. || Tet has many traditional customs. || has
+Người trẻ ít quan tâm đến phong tục truyền thống. || Young people are not very interested in traditional customs. | Young people show little interest in traditional customs. || be interested in = quan tâm đến
+Khách du lịch nên tôn trọng phong tục truyền thống. || Tourists should respect traditional customs. || respect = tôn trọng
+# a sense of belonging
+Gia đình mang lại cảm giác thuộc về. || Family gives a sense of belonging. | The family gives a sense of belonging. || give = mang lại
+Người nhập cư cần cảm giác thuộc về. || Immigrants need a sense of belonging. | Migrants need a sense of belonging. || need = cần
+Lễ hội tạo ra cảm giác thuộc về. || Festivals create a sense of belonging. || create = tạo ra
+# skilled migrants
+Nhiều nước muốn thu hút người nhập cư có tay nghề. || Many countries want to attract skilled migrants. || attract = thu hút
+Người nhập cư có tay nghề lấp đầy thiếu hụt lao động. || Skilled migrants fill labour shortages. | Skilled migrants fill labor shortages. || fill = lấp đầy
+Úc cần thêm người nhập cư có tay nghề. || Australia needs more skilled migrants. || needs (+s) · more = thêm
+# brain drain
+Chảy máu chất xám là vấn đề ở các nước nghèo. || Brain drain is a problem in poor countries. | The brain drain is a problem in poor countries. || is a problem
+Lương thấp gây ra chảy máu chất xám. || Low salaries cause brain drain. | Low salaries cause the brain drain. | Low wages cause brain drain. || low salaries = lương thấp
+Chính phủ muốn ngăn chảy máu chất xám. || The government wants to stop brain drain. | The government wants to prevent brain drain. | The government wants to stop the brain drain. || stop = ngăn
+# labour shortages
+Nhiều nước đang thiếu lao động. || Many countries have labour shortages. | Many countries are facing labour shortages. | Many countries have labor shortages. || face = đối mặt
+Dân số già dẫn đến thiếu lao động. || An ageing population leads to labour shortages. | An aging population leads to labor shortages. || ageing population (tuần 4)
+Robot có thể giải quyết tình trạng thiếu lao động. || Robots can solve labour shortages. | Robots can solve labor shortages. || solve = giải quyết
+# promote mutual understanding
+Du lịch thúc đẩy sự hiểu biết lẫn nhau. || Travel promotes mutual understanding. | Tourism promotes mutual understanding. || promotes (+s)
+Thể thao có thể thúc đẩy sự hiểu biết lẫn nhau giữa các nước. || Sport can promote mutual understanding between countries. | Sports can promote mutual understanding between countries. || between countries = giữa các nước
+Giao lưu sinh viên thúc đẩy sự hiểu biết lẫn nhau. || Student exchanges promote mutual understanding. || student exchanges = giao lưu sinh viên
+# adapt to a different lifestyle
+Du học sinh phải thích nghi với lối sống khác. || International students have to adapt to a different lifestyle. | International students must adapt to a different lifestyle. || have to = phải
+Thật khó để thích nghi với lối sống khác. || It is hard to adapt to a different lifestyle. | It is difficult to adapt to a different lifestyle. || It is hard to + V
+Trẻ em thích nghi với lối sống khác nhanh chóng. || Children adapt to a different lifestyle quickly. | Children quickly adapt to a different lifestyle. || quickly = nhanh chóng
+# national pride
+Thể thao mang lại niềm tự hào dân tộc. || Sport brings national pride. | Sports bring national pride. || bring = mang lại
+Người Việt có niềm tự hào dân tộc mạnh mẽ. || Vietnamese people have strong national pride. || strong = mạnh mẽ
+Di sản văn hóa là nguồn tự hào dân tộc. || Cultural heritage is a source of national pride. || a source of = nguồn
+# interconnected world
+Chúng ta sống trong một thế giới kết nối. || We live in an interconnected world. || an + interconnected
+Trong một thế giới kết nối, các vấn đề lan nhanh. || In an interconnected world, problems spread quickly. | In an interconnected world, problems spread fast. || spread = lan
+Internet tạo ra một thế giới kết nối. || The internet creates an interconnected world. | The Internet has created an interconnected world. || create = tạo ra
+# historic buildings
+Hà Nội có nhiều công trình lịch sử. || Hanoi has many historic buildings. || has
+Chúng ta nên bảo vệ các công trình lịch sử. || We should protect historic buildings. || protect
+Nhiều công trình lịch sử đã bị phá dỡ. || Many historic buildings have been demolished. | Many historic buildings were demolished. || bị động: have been demolished
+# be passed down from generation to generation
+Câu chuyện này được truyền từ đời này sang đời khác. || This story is passed down from generation to generation. || bị động: is passed down
+Công thức nấu ăn được truyền từ đời này sang đời khác. || Recipes are passed down from generation to generation. || recipes = công thức nấu ăn
+Phong tục được truyền từ đời này sang đời khác. || Customs are passed down from generation to generation. || customs = phong tục
+# an international language
+Tiếng Anh là một ngôn ngữ quốc tế. || English is an international language. || an + international
+Học một ngôn ngữ quốc tế mở ra nhiều cơ hội. || Learning an international language opens many doors. | Learning an international language creates many opportunities. || V-ing làm chủ ngữ
+Chúng ta cần một ngôn ngữ quốc tế để giao tiếp. || We need an international language to communicate. || to communicate = để giao tiếp
+# cross-cultural communication
+Giao tiếp liên văn hóa ngày càng quan trọng. || Cross-cultural communication is becoming more important. | Cross-cultural communication is more and more important. || is becoming = ngày càng
+Công ty đào tạo nhân viên về giao tiếp liên văn hóa. || The company trains its staff in cross-cultural communication. | The company trains employees in cross-cultural communication. || train sb in = đào tạo ai về
+Giao tiếp liên văn hóa có thể khó khăn. || Cross-cultural communication can be difficult. | Cross-cultural communication can be hard. || can be = có thể
+# open borders
+Châu Âu có biên giới mở. || Europe has open borders. || has
+Biên giới mở giúp thương mại dễ dàng hơn. || Open borders make trade easier. || make + O + adj · trade = thương mại
+Một số người phản đối biên giới mở. || Some people are against open borders. | Some people oppose open borders. || be against = phản đối
+# foster tolerance
+Giáo dục có thể nuôi dưỡng sự khoan dung. || Education can foster tolerance. || can + V
+Trường học nên nuôi dưỡng sự khoan dung. || Schools should foster tolerance. || should + V
+Du lịch nuôi dưỡng sự khoan dung với các nền văn hóa khác. || Travel fosters tolerance of other cultures. | Travelling fosters tolerance of other cultures. | Travel fosters tolerance towards other cultures. || of other cultures
+
+@ urban
+# traffic congestion
+Ùn tắc giao thông rất tệ ở Hà Nội. || Traffic congestion is very bad in Hanoi. || very bad = rất tệ
+Ùn tắc giao thông lãng phí thời gian. || Traffic congestion wastes time. | Traffic congestion wastes a lot of time. || waste = lãng phí
+Tàu điện ngầm có thể giảm ùn tắc giao thông. || The metro can reduce traffic congestion. | A metro system can reduce traffic congestion. || the metro = tàu điện ngầm
+# public transport
+Tôi đi làm bằng giao thông công cộng. || I go to work by public transport. | I travel to work by public transport. || by public transport
+Giao thông công cộng rẻ hơn ô tô. || Public transport is cheaper than cars. | Public transport is cheaper than driving. || cheaper than
+Chính phủ nên đầu tư vào giao thông công cộng. || The government should invest in public transport. || invest in = đầu tư vào
+# rush hour
+Đường rất đông vào giờ cao điểm. || The roads are very busy at rush hour. | The roads are very busy during rush hour. || busy = đông
+Tôi tránh đi lại vào giờ cao điểm. || I avoid travelling at rush hour. | I avoid traveling during rush hour. || avoid + V-ing
+Xe buýt luôn quá đông vào giờ cao điểm. || Buses are always overcrowded at rush hour. | Buses are always overcrowded during rush hour. || overcrowded = quá đông
+# private vehicles
+Có quá nhiều phương tiện cá nhân. || There are too many private vehicles. || too many = quá nhiều
+Phương tiện cá nhân gây ô nhiễm không khí. || Private vehicles cause air pollution. || cause = gây ra
+Chúng ta nên hạn chế phương tiện cá nhân trong trung tâm thành phố. || We should limit private vehicles in the city centre. | We should limit private vehicles in the city center. || limit = hạn chế
+# a reliable transport network
+Thành phố cần một mạng lưới giao thông đáng tin cậy. || The city needs a reliable transport network. || needs (+s)
+Tokyo có một mạng lưới giao thông đáng tin cậy. || Tokyo has a reliable transport network. || has
+Một mạng lưới giao thông đáng tin cậy giảm việc dùng ô tô. || A reliable transport network reduces car use. | A reliable transport network reduces the use of cars. || car use = việc dùng ô tô
+# expand the road network
+Chính phủ dự định mở rộng mạng lưới đường bộ. || The government plans to expand the road network. || plan to + V
+Mở rộng mạng lưới đường bộ rất tốn kém. || Expanding the road network is very expensive. || V-ing làm chủ ngữ
+Mở rộng mạng lưới đường bộ không giải quyết ùn tắc. || Expanding the road network does not solve congestion. | Expanding the road network doesn't solve traffic congestion. || does not solve
+# introduce congestion charges
+London đã áp dụng phí chống ùn tắc. || London has introduced congestion charges. | London introduced congestion charges. || hiện tại hoàn thành
+Hà Nội nên áp dụng phí chống ùn tắc. || Hanoi should introduce congestion charges. || should + V
+Áp dụng phí chống ùn tắc giảm lượng xe. || Introducing congestion charges reduces traffic. | Introducing congestion charges reduces the number of cars. || V-ing làm chủ ngữ
+# rural-urban migration
+Di cư từ nông thôn ra thành thị đang tăng. || Rural-urban migration is increasing. | Rural-urban migration is rising. || is increasing
+Di cư từ nông thôn ra thành thị gây ra nhà ở quá tải. || Rural-urban migration causes overcrowded housing. || overcrowded housing = nhà ở quá tải
+Việc làm là lý do chính của di cư từ nông thôn ra thành thị. || Jobs are the main reason for rural-urban migration. || the main reason for = lý do chính của
+# overcrowded cities
+Nhiều người sống trong các thành phố quá đông đúc. || Many people live in overcrowded cities. || live in
+Các thành phố quá đông đúc có nhiều tội phạm hơn. || Overcrowded cities have more crime. || more crime = nhiều tội phạm hơn
+Chính phủ nên phát triển nông thôn để giảm các thành phố quá đông đúc. || The government should develop rural areas to reduce overcrowded cities. | The government should develop the countryside to ease overcrowded cities. || develop = phát triển
+# urban sprawl
+Sự phát triển đô thị lan tràn phá hủy đất nông nghiệp. || Urban sprawl destroys farmland. | Urban sprawl destroys farm land. || farmland = đất nông nghiệp
+Ô tô dẫn đến sự phát triển đô thị lan tràn. || Cars lead to urban sprawl. || lead to
+Chúng ta nên kiểm soát sự phát triển đô thị lan tràn. || We should control urban sprawl. || control = kiểm soát
+# high-rise buildings
+Thành phố có nhiều tòa nhà cao tầng. || The city has many high-rise buildings. || has
+Tòa nhà cao tầng tiết kiệm đất. || High-rise buildings save land. | High-rise buildings save space. || save land = tiết kiệm đất
+Nhiều gia đình sống trong các tòa nhà cao tầng. || Many families live in high-rise buildings. || live in
+# the quality of life
+Cây xanh cải thiện chất lượng cuộc sống. || Trees improve the quality of life. | Green trees improve the quality of life. || improve = cải thiện
+Chất lượng cuộc sống ở nông thôn tốt hơn. || The quality of life in the countryside is better. | The quality of life is better in the countryside. || better = tốt hơn
+Ô nhiễm làm giảm chất lượng cuộc sống. || Pollution reduces the quality of life. | Pollution lowers the quality of life. || reduce = làm giảm
+# job opportunities
+Thành phố có nhiều cơ hội việc làm hơn. || Cities have more job opportunities. | Cities offer more job opportunities. || more = nhiều hơn
+Người trẻ chuyển ra thành phố để tìm cơ hội việc làm. || Young people move to cities to find job opportunities. | Young people move to the city to look for job opportunities. || move to = chuyển ra
+Nông thôn thiếu cơ hội việc làm. || The countryside lacks job opportunities. | Rural areas lack job opportunities. || lack = thiếu
+# better amenities
+Thành phố có tiện ích tốt hơn. || Cities have better amenities. | Cities offer better amenities. || better = tốt hơn
+Mọi người chuyển đến thành phố vì tiện ích tốt hơn. || People move to cities for better amenities. | People move to cities because of better amenities. || for = vì
+Khu này cần tiện ích tốt hơn. || This area needs better amenities. || needs (+s)
+# a pedestrian zone
+Phố cổ có một khu phố đi bộ. || The Old Quarter has a pedestrian zone. || the Old Quarter = phố cổ
+Khu phố đi bộ rất đông vào cuối tuần. || The pedestrian zone is very crowded at weekends. | The pedestrian zone is very crowded on weekends. || at weekends = vào cuối tuần
+Thành phố nên tạo thêm khu phố đi bộ. || The city should create more pedestrian zones. || more pedestrian zones (số nhiều)
+# cycle lanes
+Amsterdam có nhiều làn đường dành cho xe đạp. || Amsterdam has many cycle lanes. || has
+Làn đường dành cho xe đạp giúp đi xe đạp an toàn hơn. || Cycle lanes make cycling safer. || make + O + adj · safer = an toàn hơn
+Chúng ta cần xây thêm làn đường dành cho xe đạp. || We need to build more cycle lanes. || build = xây
+# road accidents
+Tai nạn giao thông là một vấn đề nghiêm trọng. || Road accidents are a serious problem. || serious = nghiêm trọng
+Lái xe quá nhanh gây ra tai nạn giao thông. || Driving too fast causes road accidents. | Speeding causes road accidents. || V-ing làm chủ ngữ
+Số tai nạn giao thông đã giảm. || The number of road accidents has fallen. | The number of road accidents has decreased. || the number of + N số nhiều + has
+# car ownership
+Việc sở hữu ô tô đang tăng ở Việt Nam. || Car ownership is rising in Vietnam. | Car ownership is increasing in Vietnam. || is rising
+Việc sở hữu ô tô rất đắt ở Singapore. || Car ownership is very expensive in Singapore. || expensive = đắt
+Việc sở hữu ô tô gây ra nhiều ùn tắc hơn. || Car ownership causes more traffic congestion. | Car ownership leads to more congestion. || cause = gây ra
+# ease traffic congestion
+Tàu điện ngầm mới sẽ giảm ùn tắc giao thông. || The new metro will ease traffic congestion. | The new metro line will ease traffic congestion. || will + V
+Làm việc từ xa giúp giảm ùn tắc giao thông. || Working remotely helps ease traffic congestion. | Working from home helps ease traffic congestion. || help + V
+Chúng ta cần tìm cách giảm ùn tắc giao thông. || We need to find ways to ease traffic congestion. || find ways to + V = tìm cách
+# invest in infrastructure
+Chính phủ nên đầu tư vào cơ sở hạ tầng. || The government should invest in infrastructure. || should + V
+Đầu tư vào cơ sở hạ tầng tạo ra việc làm. || Investing in infrastructure creates jobs. || V-ing làm chủ ngữ
+Việt Nam đang đầu tư vào cơ sở hạ tầng. || Vietnam is investing in infrastructure. || hiện tại tiếp diễn
+# housing shortage
+Thành phố đang thiếu nhà ở. || The city has a housing shortage. | The city is facing a housing shortage. || has a housing shortage
+Tình trạng thiếu nhà ở làm giá nhà tăng. || The housing shortage makes house prices rise. | A housing shortage pushes up house prices. || make + O + V
+Chính phủ phải giải quyết tình trạng thiếu nhà ở. || The government must solve the housing shortage. | The government must tackle the housing shortage. || solve = giải quyết
+# the countryside
+Tôi thích sống ở nông thôn. || I like living in the countryside. | I like to live in the countryside. || like + V-ing
+Không khí ở nông thôn trong lành hơn. || The air in the countryside is cleaner. | The air is cleaner in the countryside. || cleaner = trong lành hơn
+Nhiều người già chuyển về nông thôn. || Many old people move to the countryside. | Many elderly people move to the countryside. || move to = chuyển về
+# a fast pace of life
+Thành phố có nhịp sống nhanh. || Cities have a fast pace of life. | The city has a fast pace of life. || has
+Nhịp sống nhanh gây căng thẳng. || A fast pace of life causes stress. | A fast pace of life leads to stress. || cause stress
+Tôi không thích nhịp sống nhanh. || I do not like a fast pace of life. | I don't like the fast pace of life. || do not like
+# noise pollution
+Ô nhiễm tiếng ồn ảnh hưởng đến giấc ngủ. || Noise pollution affects sleep. | Noise pollution affects our sleep. || affect = ảnh hưởng đến
+Ô nhiễm tiếng ồn là vấn đề ở thành phố. || Noise pollution is a problem in cities. || is a problem
+Xe máy gây ra ô nhiễm tiếng ồn. || Motorbikes cause noise pollution. || motorbikes = xe máy
+# commuting time
+Thời gian đi làm của tôi là một giờ. || My commuting time is one hour. | My commuting time is an hour. || is one hour
+Làm việc từ xa tiết kiệm thời gian đi lại. || Working remotely saves commuting time. | Working from home saves commuting time. || save = tiết kiệm
+Thời gian đi lại dài gây mệt mỏi. || Long commuting time makes people tired. | Long commuting times make people tired. || make + O + adj
+# carpooling
+Đi chung xe tiết kiệm tiền. || Carpooling saves money. || saves (+s)
+Đi chung xe giảm số xe trên đường. || Carpooling reduces the number of cars on the road. || reduce = giảm
+Công ty khuyến khích nhân viên đi chung xe. || The company encourages its staff to go carpooling. | The company encourages carpooling among its staff. | The company encourages employees to try carpooling. || encourage = khuyến khích
+# an efficient metro system
+Singapore có hệ thống tàu điện ngầm hiệu quả. || Singapore has an efficient metro system. || has
+Hà Nội cần hệ thống tàu điện ngầm hiệu quả. || Hanoi needs an efficient metro system. || needs (+s)
+Hệ thống tàu điện ngầm hiệu quả giảm ùn tắc giao thông. || An efficient metro system reduces traffic congestion. | An efficient metro system eases traffic congestion. || reduce = giảm
+# discourage people from driving
+Phí đỗ xe cao khuyến khích người dân không lái xe. || High parking fees discourage people from driving. || parking fees = phí đỗ xe
+Thành phố muốn khuyến khích người dân không lái xe. || The city wants to discourage people from driving. || want to + V
+Thuế xăng khuyến khích người dân không lái xe. || Fuel taxes discourage people from driving. | Petrol taxes discourage people from driving. || fuel taxes = thuế xăng
+# regional development
+Phát triển vùng giảm di cư ra thành phố. || Regional development reduces migration to cities. || migration = di cư
+Chính phủ đầu tư vào phát triển vùng. || The government invests in regional development. || invest in
+Phát triển vùng tạo ra việc làm ở nông thôn. || Regional development creates jobs in rural areas. | Regional development creates jobs in the countryside. || create jobs
+# slum areas
+Nhiều người nghèo sống ở khu ổ chuột. || Many poor people live in slum areas. || live in
+Khu ổ chuột thiếu nước sạch. || Slum areas lack clean water. | Slum areas do not have clean water. || lack = thiếu
+Chính phủ nên cải thiện khu ổ chuột. || The government should improve slum areas. || improve = cải thiện
+
+@ family
+# bring up children
+Nuôi dạy con cái không dễ. || Bringing up children is not easy. | Bringing up children isn't easy. || V-ing làm chủ ngữ
+Ông bà giúp nuôi dạy con cái. || Grandparents help bring up children. | Grandparents help to bring up children. || help + V
+Cha mẹ đơn thân phải nuôi dạy con cái một mình. || Single parents have to bring up children alone. | Single parents must bring up their children alone. || alone = một mình
+# a nuclear family
+Tôi sống trong một gia đình hạt nhân. || I live in a nuclear family. || live in
+Gia đình hạt nhân phổ biến ở thành phố. || Nuclear families are common in cities. | The nuclear family is common in cities. || common = phổ biến
+Một gia đình hạt nhân chỉ có cha mẹ và con cái. || A nuclear family has only parents and children. | A nuclear family only has parents and children. || only = chỉ
+# an extended family
+Bà tôi sống trong một gia đình nhiều thế hệ. || My grandmother lives in an extended family. || lives (+s)
+Gia đình nhiều thế hệ đang ít dần. || Extended families are becoming less common. | Extended families are disappearing. || less common = ít phổ biến hơn
+Trẻ em trong gia đình nhiều thế hệ học được nhiều từ ông bà. || Children in an extended family learn a lot from their grandparents. | Children in extended families learn a lot from their grandparents. || learn from = học từ
+# working parents
+Cha mẹ đi làm có ít thời gian cho con. || Working parents have little time for their children. | Working parents have less time for their children. || little time = ít thời gian
+Nhiều cha mẹ đi làm cần nhà trẻ. || Many working parents need childcare. || childcare = trông trẻ
+Cha mẹ đi làm thường cảm thấy mệt. || Working parents often feel tired. || often feel = thường cảm thấy
+# childcare facilities
+Thành phố cần thêm cơ sở chăm sóc trẻ. || The city needs more childcare facilities. || more = thêm
+Cơ sở chăm sóc trẻ rất đắt. || Childcare facilities are very expensive. || expensive = đắt
+Công ty tôi có cơ sở chăm sóc trẻ. || My company has childcare facilities. || has
+# spend quality time with
+Tôi muốn dành thời gian chất lượng với gia đình. || I want to spend quality time with my family. || want to + V
+Cha mẹ nên dành thời gian chất lượng với con cái. || Parents should spend quality time with their children. || should + V
+Điện thoại khiến chúng ta không dành thời gian chất lượng với nhau. || Phones stop us from spending quality time with each other. | Phones prevent us from spending quality time with each other. || stop sb from + V-ing
+# a generation gap
+Có khoảng cách thế hệ giữa tôi và bố mẹ. || There is a generation gap between me and my parents. || there is
+Công nghệ làm tăng khoảng cách thế hệ. || Technology widens the generation gap. | Technology increases the generation gap. || widen = làm tăng (rộng)
+Nói chuyện giúp thu hẹp khoảng cách thế hệ. || Talking helps to narrow the generation gap. | Talking helps narrow the generation gap. || narrow = thu hẹp
+# parental guidance
+Trẻ em cần sự hướng dẫn của cha mẹ. || Children need parental guidance. || need = cần
+Sự hướng dẫn của cha mẹ rất quan trọng với thanh thiếu niên. || Parental guidance is very important for teenagers. || important for
+Phim này cần sự hướng dẫn của cha mẹ. || This film needs parental guidance. | This film requires parental guidance. || requires = cần
+# role models
+Cha mẹ là hình mẫu của con cái. || Parents are role models for their children. | Parents are their children's role models. || role models for
+Người nổi tiếng nên là hình mẫu tốt. || Celebrities should be good role models. || good = tốt
+Trẻ em cần hình mẫu tích cực. || Children need positive role models. || positive = tích cực
+# instil good values in
+Cha mẹ nên gieo những giá trị tốt cho con. || Parents should instil good values in their children. | Parents should instill good values in their children. || instil … in sb
+Trường học có thể gieo những giá trị tốt cho học sinh. || Schools can instil good values in students. | Schools can instill good values in students. || can + V
+Ông bà gieo những giá trị tốt cho cháu. || Grandparents instil good values in their grandchildren. | Grandparents instill good values in their grandchildren. || grandchildren = cháu
+# discipline children
+Cha mẹ cần kỷ luật trẻ khi chúng hư. || Parents need to discipline children when they behave badly. | Parents need to discipline children when they misbehave. || behave badly = hư
+Giáo viên không nên đánh để kỷ luật trẻ. || Teachers should not hit children to discipline them. | Teachers shouldn't hit children to discipline them. || hit = đánh
+Có nhiều cách để kỷ luật trẻ. || There are many ways to discipline children. || many ways to + V
+# spoil children
+Ông bà thường chiều hư trẻ. || Grandparents often spoil children. | Grandparents often spoil their grandchildren. || often = thường
+Mua quá nhiều đồ chơi có thể chiều hư trẻ. || Buying too many toys can spoil children. || V-ing làm chủ ngữ · toys = đồ chơi
+Cha mẹ không nên chiều hư con. || Parents should not spoil their children. | Parents shouldn't spoil their children. || should not
+# sibling rivalry
+Ganh đua giữa anh chị em là điều bình thường. || Sibling rivalry is normal. | Sibling rivalry is natural. || normal = bình thường
+Cha mẹ nên đối xử công bằng để tránh ganh đua giữa anh chị em. || Parents should treat children fairly to avoid sibling rivalry. | Parents should treat their children equally to avoid sibling rivalry. || treat fairly = đối xử công bằng
+Ganh đua giữa anh chị em có thể kéo dài nhiều năm. || Sibling rivalry can last for years. | Sibling rivalry can last many years. || last = kéo dài
+# the birth rate
+Tỷ lệ sinh đang giảm. || The birth rate is falling. | The birth rate is decreasing. | The birth rate is declining. || is falling = đang giảm
+Tỷ lệ sinh ở Nhật Bản rất thấp. || The birth rate in Japan is very low. | Japan's birth rate is very low. || low = thấp
+Chính phủ muốn tăng tỷ lệ sinh. || The government wants to increase the birth rate. | The government wants to raise the birth rate. || increase = tăng
+# care for elderly parents
+Ở Việt Nam, con cái chăm sóc cha mẹ già. || In Vietnam, children care for their elderly parents. | In Vietnam, children care for elderly parents. || care for = chăm sóc
+Chăm sóc cha mẹ già là một trách nhiệm. || Caring for elderly parents is a responsibility. | Caring for elderly parents is a duty. || V-ing làm chủ ngữ
+Nhiều người bận rộn không có thời gian chăm sóc cha mẹ già. || Many busy people have no time to care for their elderly parents. | Many busy people don't have time to care for their elderly parents. || have no time to + V
+
+@ life
+# a hectic lifestyle
+Nhân viên văn phòng có lối sống bận rộn. || Office workers have a hectic lifestyle. || office workers = nhân viên văn phòng
+Lối sống bận rộn gây căng thẳng. || A hectic lifestyle causes stress. | A hectic lifestyle leads to stress. || cause stress
+Tôi không thích lối sống bận rộn. || I do not like a hectic lifestyle. | I don't like a hectic lifestyle. || do not like
+# lead a busy life
+Người ở thành phố sống một cuộc sống bận rộn. || People in cities lead a busy life. | People in the city lead a busy life. || lead a life = sống một cuộc sống
+Mẹ tôi sống một cuộc sống rất bận rộn. || My mother leads a very busy life. || leads (+s) · very busy
+Sinh viên sống một cuộc sống bận rộn. || Students lead a busy life. || lead
+# spend leisure time
+Tôi dành thời gian rảnh để đọc sách. || I spend my leisure time reading books. | I spend leisure time reading books. || spend time + V-ing
+Người trẻ dành thời gian rảnh trên mạng. || Young people spend their leisure time online. | Young people spend leisure time online. || online = trên mạng
+Bạn dành thời gian rảnh như thế nào? || How do you spend your leisure time? || câu hỏi How do you …?
+# leisure activities
+Các hoạt động giải trí giúp chúng ta thư giãn. || Leisure activities help us relax. | Leisure activities help us to relax. || help us + V
+Bơi và đọc sách là các hoạt động giải trí yêu thích của tôi. || Swimming and reading are my favourite leisure activities. | Swimming and reading are my favorite leisure activities. || favourite = yêu thích · are (số nhiều)
+Thành phố có nhiều hoạt động giải trí. || The city has many leisure activities. | The city offers many leisure activities. || has
+# pursue a hobby
+Mọi người nên theo đuổi một sở thích. || Everyone should pursue a hobby. | People should pursue a hobby. || should + V
+Theo đuổi một sở thích giúp giảm căng thẳng. || Pursuing a hobby helps reduce stress. | Pursuing a hobby helps to reduce stress. || V-ing làm chủ ngữ
+Cô ấy không có thời gian để theo đuổi một sở thích. || She has no time to pursue a hobby. | She doesn't have time to pursue a hobby. || have no time to + V
+# make ends meet
+Nhiều gia đình khó xoay xở đủ sống. || Many families struggle to make ends meet. || struggle to + V = khó khăn để
+Anh ấy làm hai việc để xoay xở đủ sống. || He works two jobs to make ends meet. | He has two jobs to make ends meet. || to + V = để
+Sinh viên làm thêm để xoay xở đủ sống. || Students work part-time to make ends meet. | Students take part-time jobs to make ends meet. || work part-time = làm thêm
+# earn a living
+Anh ấy kiếm sống bằng nghề lái taxi. || He earns a living as a taxi driver. | He earns a living by driving a taxi. || as a … = bằng nghề
+Thật khó để kiếm sống bằng nghệ thuật. || It is hard to earn a living from art. | It's hard to earn a living as an artist. | It is difficult to earn a living from art. || It is hard to + V
+Mọi người đều cần kiếm sống. || Everyone needs to earn a living. | Everybody needs to earn a living. || needs (+s) to + V
+# personal fulfilment
+Nhiều người tìm thấy sự mãn nguyện cá nhân trong công việc. || Many people find personal fulfilment in their work. | Many people find personal fulfillment in their work. || find = tìm thấy
+Giúp người khác mang lại sự mãn nguyện cá nhân. || Helping others brings personal fulfilment. | Helping others gives personal fulfilment. | Helping other people brings personal fulfillment. || V-ing làm chủ ngữ
+Tiền không mang lại sự mãn nguyện cá nhân. || Money does not bring personal fulfilment. | Money doesn't bring personal fulfilment. | Money does not bring personal fulfillment. || does not bring
+# mental well-being
+Tập thể dục tốt cho sức khỏe tinh thần. || Exercise is good for mental well-being. | Exercise is good for your mental well-being. || be good for
+Mạng xã hội có thể làm hại sức khỏe tinh thần. || Social media can harm mental well-being. | Social media can damage mental well-being. || harm = làm hại
+Trường học nên quan tâm đến sức khỏe tinh thần của học sinh. || Schools should care about students' mental well-being. || care about = quan tâm đến
+# a sense of purpose
+Công việc mang lại cảm giác sống có mục đích. || Work gives a sense of purpose. | Work gives people a sense of purpose. || give = mang lại
+Người về hưu cần cảm giác sống có mục đích. || Retired people need a sense of purpose. || retired = về hưu
+Tình nguyện mang lại cho tôi cảm giác sống có mục đích. || Volunteering gives me a sense of purpose. || volunteering = tình nguyện
+# peace of mind
+Bảo hiểm mang lại sự an tâm. || Insurance gives peace of mind. | Insurance brings peace of mind. || insurance = bảo hiểm
+Tôi muốn có sự an tâm. || I want peace of mind. | I want to have peace of mind. || want
+Tiết kiệm tiền mang lại sự an tâm. || Saving money gives you peace of mind. | Saving money brings peace of mind. || V-ing làm chủ ngữ
+# consumer goods
+Chúng ta mua quá nhiều hàng tiêu dùng. || We buy too many consumer goods. || too many = quá nhiều
+Giá hàng tiêu dùng đang tăng. || The price of consumer goods is rising. | Prices of consumer goods are rising. || the price of = giá của
+Trung Quốc sản xuất nhiều hàng tiêu dùng. || China produces a lot of consumer goods. | China makes many consumer goods. || produce = sản xuất
+# keep up with the latest trends
+Thanh thiếu niên muốn chạy theo xu hướng mới nhất. || Teenagers want to keep up with the latest trends. || want to + V
+Chạy theo xu hướng mới nhất rất tốn kém. || Keeping up with the latest trends is very expensive. || V-ing làm chủ ngữ
+Tôi không cố chạy theo xu hướng mới nhất. || I do not try to keep up with the latest trends. | I don't try to keep up with the latest trends. || try to + V
+# a simple lifestyle
+Ông tôi có lối sống giản dị. || My grandfather has a simple lifestyle. | My grandfather leads a simple lifestyle. || has
+Lối sống giản dị tiết kiệm tiền. || A simple lifestyle saves money. || saves (+s)
+Nhiều người trẻ chọn lối sống giản dị. || Many young people choose a simple lifestyle. || choose = chọn
+# have an active social life
+Sinh viên muốn có đời sống xã hội năng động. || Students want to have an active social life. | University students want to have an active social life. || want to + V
+Cô ấy có đời sống xã hội rất năng động. || She has a very active social life. || has · very active
+Người có đời sống xã hội năng động thường hạnh phúc hơn. || People who have an active social life are often happier. | People with an active social life are often happier. || happier = hạnh phúc hơn
+# make new friends
+Tôi kết bạn mới ở trường đại học. || I made new friends at university. | I make new friends at university. || made (quá khứ của make)
+Tham gia câu lạc bộ giúp bạn kết bạn mới. || Joining a club helps you make new friends. || V-ing làm chủ ngữ
+Thật khó để kết bạn mới ở một thành phố mới. || It is hard to make new friends in a new city. | It's hard to make new friends in a new city. | It is difficult to make new friends in a new city. || It is hard to + V
+# maintain close relationships
+Chúng ta nên duy trì các mối quan hệ thân thiết với gia đình. || We should maintain close relationships with our family. | We should maintain close relationships with family. || should + V
+Duy trì các mối quan hệ thân thiết cần thời gian. || Maintaining close relationships takes time. | Maintaining close relationships needs time. || V-ing làm chủ ngữ · take time = cần thời gian
+Người bận rộn khó duy trì các mối quan hệ thân thiết. || Busy people find it hard to maintain close relationships. | It is hard for busy people to maintain close relationships. || find it hard to + V
+# feel lonely
+Nhiều người già cảm thấy cô đơn. || Many old people feel lonely. | Many elderly people feel lonely. || feel + adj
+Tôi cảm thấy cô đơn khi sống một mình. || I feel lonely when I live alone. || live alone = sống một mình
+Mạng xã hội có thể khiến chúng ta cảm thấy cô đơn. || Social media can make us feel lonely. || make sb + V
+# social isolation
+Sự cô lập xã hội có hại cho sức khỏe. || Social isolation is bad for health. | Social isolation is bad for your health. | Social isolation is harmful to health. || be bad for
+Người già thường bị cô lập xã hội. || Old people often suffer from social isolation. | Elderly people often suffer from social isolation. || suffer from = bị
+Câu lạc bộ cộng đồng giảm sự cô lập xã hội. || Community clubs reduce social isolation. || reduce = giảm
+# a daily routine
+Tập thể dục là một phần trong thói quen hằng ngày của tôi. || Exercise is part of my daily routine. | Exercise is a part of my daily routine. || part of
+Trẻ em cần một thói quen hằng ngày. || Children need a daily routine. || need
+Thói quen hằng ngày của tôi bắt đầu lúc 6 giờ. || My daily routine starts at 6 o'clock. | My daily routine starts at 6 a.m. | My daily routine begins at 6 o'clock. || at 6 o'clock = lúc 6 giờ
+# get enough sleep
+Học sinh cần ngủ đủ giấc. || Students need to get enough sleep. || need to + V
+Tôi không ngủ đủ giấc tuần này. || I did not get enough sleep this week. | I haven't got enough sleep this week. | I didn't get enough sleep this week. || quá khứ: did not get
+Ngủ đủ giấc giúp bạn khỏe mạnh. || Getting enough sleep keeps you healthy. | Getting enough sleep helps you stay healthy. || V-ing làm chủ ngữ
+# unwind after work
+Tôi nghe nhạc để thư giãn sau giờ làm. || I listen to music to unwind after work. || to + V = để
+Nhiều người xem TV để thư giãn sau giờ làm. || Many people watch TV to unwind after work. || watch TV
+Thư giãn sau giờ làm rất quan trọng. || Unwinding after work is very important. || V-ing làm chủ ngữ
+# free up time for
+Làm việc từ xa giúp tôi dành ra thời gian cho gia đình. || Working remotely frees up time for my family. | Working from home frees up time for my family. || frees (+s) up
+Máy rửa bát dành ra thời gian cho những việc khác. || A dishwasher frees up time for other things. || dishwasher = máy rửa bát
+Tôi muốn dành ra thời gian cho sở thích. || I want to free up time for my hobbies. | I want to free up time for hobbies. || want to + V
+# set personal goals
+Đặt mục tiêu cá nhân giúp bạn có động lực. || Setting personal goals keeps you motivated. | Setting personal goals helps you stay motivated. || V-ing làm chủ ngữ · motivated = có động lực
+Tôi đặt mục tiêu cá nhân mỗi năm. || I set personal goals every year. || every year = mỗi năm
+Học sinh nên học cách đặt mục tiêu cá nhân. || Students should learn to set personal goals. | Students should learn how to set personal goals. || learn to + V
+# step out of one's comfort zone
+Du lịch một mình giúp bạn bước ra khỏi vùng an toàn. || Travelling alone helps you step out of your comfort zone. | Traveling alone helps you step out of your comfort zone. || one's → your
+Tôi muốn bước ra khỏi vùng an toàn của mình. || I want to step out of my comfort zone. || one's → my
+Người trẻ nên bước ra khỏi vùng an toàn. || Young people should step out of their comfort zone. | Young people should step out of their comfort zones. || one's → their
+# life satisfaction
+Bạn bè làm tăng mức độ hài lòng với cuộc sống. || Friends increase life satisfaction. | Friendship increases life satisfaction. || increase = làm tăng
+Mức độ hài lòng với cuộc sống ở Phần Lan rất cao. || Life satisfaction in Finland is very high. || high = cao
+Tiền không phải lúc nào cũng tăng mức độ hài lòng với cuộc sống. || Money does not always increase life satisfaction. | Money doesn't always increase life satisfaction. || not always = không phải lúc nào cũng
+# the pressures of modern life
+Áp lực của cuộc sống hiện đại gây căng thẳng. || The pressures of modern life cause stress. | The pressures of modern life lead to stress. || cause stress
+Nhiều người không chịu nổi áp lực của cuộc sống hiện đại. || Many people cannot cope with the pressures of modern life. | Many people can't cope with the pressures of modern life. || cope with = chịu nổi
+Yoga giúp chúng ta đối phó với áp lực của cuộc sống hiện đại. || Yoga helps us deal with the pressures of modern life. | Yoga helps us cope with the pressures of modern life. || deal with = đối phó với
+# value experiences over possessions
+Người trẻ coi trọng trải nghiệm hơn của cải. || Young people value experiences over possessions. || value A over B
+Tôi coi trọng trải nghiệm hơn của cải. || I value experiences over possessions. || value
+Những người hạnh phúc thường coi trọng trải nghiệm hơn của cải. || Happy people often value experiences over possessions. || often = thường
+# manage personal finances
+Trường học nên dạy cách quản lý tài chính cá nhân. || Schools should teach how to manage personal finances. | Schools should teach students how to manage personal finances. || how to + V = cách
+Nhiều người trẻ không biết quản lý tài chính cá nhân. || Many young people do not know how to manage personal finances. | Many young people don't know how to manage their personal finances. || know how to + V
+Ứng dụng này giúp bạn quản lý tài chính cá nhân. || This app helps you manage personal finances. | This app helps you manage your personal finances. || help + V
+# volunteer in the community
+Tôi làm tình nguyện trong cộng đồng vào cuối tuần. || I volunteer in the community at weekends. | I volunteer in the community on weekends. || at weekends = vào cuối tuần
+Sinh viên nên làm tình nguyện trong cộng đồng. || Students should volunteer in the community. || should + V
+Làm tình nguyện trong cộng đồng mang lại niềm vui. || Volunteering in the community brings joy. | Volunteering in the community brings happiness. || V-ing làm chủ ngữ · joy = niềm vui
+
+@ task1-trends
+# increase steadily
+Dân số tăng đều đặn. || The population increased steadily. | The population rose steadily. || quá khứ (Task 1 thường dùng quá khứ)
+Doanh số tăng đều đặn từ năm 2010 đến năm 2020. || Sales increased steadily from 2010 to 2020. | Sales increased steadily between 2010 and 2020. || from … to …
+Số học sinh tăng đều đặn mỗi năm. || The number of students increased steadily every year. | The number of students increased steadily each year. || the number of = số
+# rise sharply
+Giá nhà tăng mạnh vào năm 2015. || House prices rose sharply in 2015. || rise → rose
+Số khách du lịch tăng mạnh sau năm 2010. || The number of tourists rose sharply after 2010. || after = sau
+Chi phí sinh hoạt đã tăng mạnh. || The cost of living has risen sharply. | The cost of living rose sharply. || hiện tại hoàn thành: has risen
+# decline gradually
+Số người hút thuốc giảm dần. || The number of smokers declined gradually. | The number of smokers decreased gradually. || smokers = người hút thuốc
+Doanh số báo in giảm dần qua các năm. || Sales of print newspapers declined gradually over the years. | Newspaper sales declined gradually over the years. || over the years = qua các năm
+Tỷ lệ sinh giảm dần từ năm 1990. || The birth rate declined gradually from 1990. | The birth rate has declined gradually since 1990. || from 1990 = từ năm 1990
+# drop dramatically
+Doanh số giảm mạnh vào năm 2020. || Sales dropped dramatically in 2020. || drop → dropped
+Số chuyến bay giảm mạnh trong đại dịch. || The number of flights dropped dramatically during the pandemic. || during the pandemic = trong đại dịch
+Giá dầu giảm mạnh. || Oil prices dropped dramatically. | The price of oil dropped dramatically. || oil prices = giá dầu
+# fluctuate around
+Nhiệt độ dao động quanh mức 30 độ. || The temperature fluctuated around 30 degrees. || degrees = độ
+Giá dao động quanh mức 5 đô la. || The price fluctuated around $5. | The price fluctuated around 5 dollars. || $5 = 5 đô la
+Số khách dao động quanh mức 200 mỗi ngày. || The number of visitors fluctuated around 200 per day. | The number of visitors fluctuated around 200 a day. || per day = mỗi ngày
+# remain stable at
+Tỷ lệ thất nghiệp giữ ổn định ở mức 5%. || The unemployment rate remained stable at 5%. | The unemployment rate remained stable at 5 percent. || remain stable at
+Giá giữ ổn định ở mức 10 đô la. || The price remained stable at $10. | The price remained stable at 10 dollars. || remained (quá khứ)
+Số học sinh giữ ổn định ở mức 300. || The number of students remained stable at 300. || remained
+# level off
+Doanh số chững lại vào năm 2018. || Sales levelled off in 2018. | Sales leveled off in 2018. || level → levelled (Anh–Anh)
+Sau năm 2015, giá chững lại. || After 2015, prices levelled off. | After 2015, prices leveled off. || after = sau
+Dân số tăng rồi chững lại. || The population increased and then levelled off. | The population rose and then levelled off. | The population increased and then leveled off. || and then = rồi
+# reach a peak of
+Doanh số đạt đỉnh 500 đơn vị vào năm 2019. || Sales reached a peak of 500 units in 2019. || units = đơn vị
+Nhiệt độ đạt đỉnh 35 độ vào tháng Bảy. || The temperature reached a peak of 35 degrees in July. || in July = vào tháng Bảy
+Số khách đạt đỉnh 80% vào năm 2010. || The figure reached a peak of 80% in 2010. | The figure reached a peak of 80 percent in 2010. || the figure = số liệu
+# hit a low of
+Doanh số chạm đáy 100 đơn vị vào năm 2009. || Sales hit a low of 100 units in 2009. || hit (quá khứ giữ nguyên)
+Giá chạm đáy 2 đô la vào năm 2020. || The price hit a low of $2 in 2020. | The price hit a low of 2 dollars in 2020. || hit
+Tỷ lệ thất nghiệp chạm đáy 3% vào năm 2019. || The unemployment rate hit a low of 3% in 2019. | The unemployment rate hit a low of 3 percent in 2019. || the unemployment rate
+# a significant increase in
+Có sự gia tăng đáng kể về số người dùng internet. || There was a significant increase in the number of internet users. || there was = có
+Năm 2015 có sự gia tăng đáng kể về doanh số. || There was a significant increase in sales in 2015. | In 2015, there was a significant increase in sales. || in 2015
+Biểu đồ cho thấy sự gia tăng đáng kể về giá nhà. || The chart shows a significant increase in house prices. || the chart shows = biểu đồ cho thấy
+# a slight decrease in
+Có sự giảm nhẹ về số khách du lịch. || There was a slight decrease in the number of tourists. || there was
+Năm 2012 có sự giảm nhẹ về doanh số. || There was a slight decrease in sales in 2012. | In 2012, there was a slight decrease in sales. || in 2012
+Bảng cho thấy sự giảm nhẹ về lượng điện tiêu thụ. || The table shows a slight decrease in electricity consumption. || electricity consumption = lượng điện tiêu thụ
+# an upward trend
+Doanh số cho thấy xu hướng đi lên. || Sales showed an upward trend. | Sales show an upward trend. || show = cho thấy
+Có xu hướng đi lên về số xe điện. || There was an upward trend in the number of electric cars. || there was an upward trend in
+Giá nhà theo xu hướng đi lên. || House prices followed an upward trend. | House prices showed an upward trend. || follow = theo
+# a downward trend
+Số người hút thuốc cho thấy xu hướng đi xuống. || The number of smokers showed a downward trend. || showed (quá khứ)
+Có xu hướng đi xuống về doanh số báo in. || There was a downward trend in newspaper sales. || there was … in
+Tỷ lệ sinh theo xu hướng đi xuống. || The birth rate followed a downward trend. | The birth rate showed a downward trend. || followed
+# over the period shown
+Doanh số tăng gấp đôi trong suốt giai đoạn được đưa ra. || Sales doubled over the period shown. || double → doubled
+Giá giữ ổn định trong suốt giai đoạn được đưa ra. || Prices remained stable over the period shown. || remained stable
+Số liệu dao động trong suốt giai đoạn được đưa ra. || The figures fluctuated over the period shown. | The figure fluctuated over the period shown. || the figures = số liệu
+# overall, it is clear that
+Nhìn chung, rõ ràng là doanh số tăng. || Overall, it is clear that sales increased. | Overall, it is clear that sales rose. || overall, it is clear that + mệnh đề
+Nhìn chung, rõ ràng là ô tô là phương tiện phổ biến nhất. || Overall, it is clear that cars were the most popular means of transport. | Overall, it is clear that the car was the most popular means of transport. || means of transport = phương tiện
+Nhìn chung, rõ ràng là giá nhà tăng ở cả ba thành phố. || Overall, it is clear that house prices rose in all three cities. | Overall, it is clear that house prices increased in all three cities. || all three cities = cả ba thành phố
+# account for
+Ô tô chiếm 50% số phương tiện. || Cars accounted for 50% of vehicles. | Cars accounted for 50 percent of vehicles. || account for = chiếm
+Than đá chiếm một phần tư lượng điện. || Coal accounted for a quarter of electricity. | Coal accounted for a quarter of the electricity. || a quarter of = một phần tư
+Người trẻ chiếm phần lớn người dùng. || Young people accounted for most users. | Young people accounted for the majority of users. || most users = phần lớn người dùng
+# the figure for
+Số liệu của Pháp cao hơn. || The figure for France was higher. || the figure for + nước/nhóm
+Số liệu của nam giới tăng gấp đôi. || The figure for men doubled. || doubled
+Số liệu của năm 2020 thấp nhất. || The figure for 2020 was the lowest. || the lowest = thấp nhất
+# double / triple
+Doanh số tăng gấp đôi trong mười năm. || Sales doubled in ten years. | Sales doubled over ten years. || doubled
+Giá nhà tăng gấp ba từ năm 2000. || House prices tripled from 2000. | House prices have tripled since 2000. || tripled
+Số khách du lịch tăng gấp đôi lên 2 triệu. || The number of tourists doubled to 2 million. || doubled to = tăng gấp đôi lên
+# approximately
+Xấp xỉ 40% người lớn hút thuốc. || Approximately 40% of adults smoked. | Approximately 40 percent of adults smoked. || approximately = xấp xỉ
+Thành phố có xấp xỉ 2 triệu dân. || The city had approximately 2 million people. | The city had approximately 2 million inhabitants. || had (quá khứ)
+Giá là xấp xỉ 10 đô la. || The price was approximately $10. | The price was approximately 10 dollars. || was
+# roughly half of
+Khoảng một nửa số sinh viên đi xe buýt. || Roughly half of the students travelled by bus. | Roughly half of the students traveled by bus. | Roughly half of students took the bus. || roughly half of
+Khoảng một nửa số điện đến từ than. || Roughly half of the electricity came from coal. || came from = đến từ
+Khoảng một nửa số hộ gia đình có ô tô. || Roughly half of households had a car. | Roughly half of the households had a car. || households = hộ gia đình
+# a quarter of
+Một phần tư số người dùng là trẻ em. || A quarter of users were children. | A quarter of the users were children. || a quarter of
+Than chiếm một phần tư số điện. || Coal made up a quarter of electricity. | Coal accounted for a quarter of electricity. || made up = chiếm
+Một phần tư ngân sách được chi cho giáo dục. || A quarter of the budget was spent on education. || bị động: was spent on
+# in contrast
+Ngược lại, doanh số ở Pháp giảm. || In contrast, sales in France fell. | In contrast, sales in France decreased. || in contrast = ngược lại
+Ngược lại, số liệu của phụ nữ tăng. || In contrast, the figure for women rose. | In contrast, the figure for women increased. || the figure for women
+Ngược lại, giá ở London giữ ổn định. || In contrast, prices in London remained stable. || remained stable
+# while / whereas
+Doanh số ở Anh tăng, trong khi doanh số ở Pháp giảm. || Sales in the UK rose, while sales in France fell. | Sales in the UK rose, whereas sales in France fell. || while / whereas = trong khi
+Nam giới thích bóng đá, trong khi nữ giới thích bơi. || Men preferred football, while women preferred swimming. | Men preferred football, whereas women preferred swimming. || preferred (quá khứ)
+Ô tô tăng, trong khi xe buýt giảm. || Car use increased, while bus use decreased. | Car use increased, whereas bus use decreased. || car use = việc dùng ô tô
+# experience a growth of
+Công ty trải qua mức tăng trưởng 10%. || The company experienced a growth of 10%. | The company experienced a growth of 10 percent. || experienced (quá khứ)
+Ngành du lịch trải qua mức tăng trưởng 20% vào năm 2019. || The tourism industry experienced a growth of 20% in 2019. | The tourism industry experienced a growth of 20 percent in 2019. || the tourism industry
+Doanh số trực tuyến trải qua mức tăng trưởng lớn. || Online sales experienced a large growth. | Online sales experienced a big growth. || large = lớn
+# show a similar pattern
+Hai nước thể hiện xu hướng tương tự. || The two countries showed a similar pattern. || showed
+Doanh số trà thể hiện xu hướng tương tự cà phê. || Tea sales showed a similar pattern to coffee sales. | Sales of tea showed a similar pattern to coffee. || a similar pattern to = tương tự
+Số liệu của nam và nữ thể hiện xu hướng tương tự. || The figures for men and women showed a similar pattern. || the figures for
+# is projected to
+Dân số được dự đoán sẽ tăng. || The population is projected to increase. | The population is projected to rise. || is projected to + V
+Doanh số được dự đoán sẽ đạt 1 triệu vào năm 2030. || Sales are projected to reach 1 million by 2030. || by 2030 = vào năm 2030 (trước 2030)
+Giá được dự đoán sẽ giảm nhẹ. || Prices are projected to fall slightly. | Prices are projected to decrease slightly. || slightly = nhẹ
+# by the end of the period
+Đến cuối giai đoạn, doanh số đạt 500. || By the end of the period, sales reached 500. || reached
+Đến cuối giai đoạn, ô tô là phương tiện phổ biến nhất. || By the end of the period, cars were the most popular means of transport. | By the end of the period, the car was the most popular means of transport. || the most popular
+Đến cuối giai đoạn, số liệu tăng gấp đôi. || By the end of the period, the figure had doubled. | By the end of the period, the figure doubled. || had doubled (quá khứ hoàn thành)
+# overtake
+Doanh số trực tuyến vượt qua doanh số cửa hàng vào năm 2018. || Online sales overtook shop sales in 2018. | Online sales overtook store sales in 2018. || overtake → overtook
+Xe đạp vượt qua xe buýt vào năm 2015. || Bicycles overtook buses in 2015. | Bikes overtook buses in 2015. || overtook
+Trung Quốc vượt qua Mỹ vào năm 2010. || China overtook the USA in 2010. | China overtook the US in 2010. || overtook
+# the highest proportion of
+Nhật Bản có tỷ lệ người già cao nhất. || Japan had the highest proportion of old people. | Japan had the highest proportion of elderly people. || had
+Nhóm 18–25 tuổi có tỷ lệ người dùng mạng xã hội cao nhất. || The 18–25 age group had the highest proportion of social media users. | The 18-25 age group had the highest proportion of social media users. || age group = nhóm tuổi
+Hà Nội có tỷ lệ người đi xe máy cao nhất. || Hanoi had the highest proportion of motorbike users. | Hanoi had the highest proportion of people using motorbikes. || motorbike users = người đi xe máy
+# a marginal difference
+Có chênh lệch không đáng kể giữa nam và nữ. || There was a marginal difference between men and women. || there was … between
+Chênh lệch giữa hai thành phố không đáng kể. || The difference between the two cities was marginal. | There was a marginal difference between the two cities. || marginal = không đáng kể
+Chỉ có chênh lệch không đáng kể về giá. || There was only a marginal difference in price. | There was only a marginal difference in prices. || only = chỉ
+
+@ task1-structures
+# compared to
+Giá ở London cao so với Paris. || Prices in London were high compared to Paris. | Prices in London were high compared to those in Paris. || compared to = so với
+So với năm 2000, nhiều người dùng internet hơn. || Compared to 2000, more people used the internet. || more people = nhiều người hơn
+Số liệu của nữ thấp so với nam. || The figure for women was low compared to men. | The figure for women was low compared to the figure for men. || the figure for
+# be twice as high as
+Giá ở Tokyo cao gấp đôi giá ở Hà Nội. || Prices in Tokyo were twice as high as prices in Hanoi. | Prices in Tokyo were twice as high as those in Hanoi. || twice as high as
+Số liệu của nam cao gấp đôi số liệu của nữ. || The figure for men was twice as high as the figure for women. | The figure for men was twice as high as that for women. || was twice as high as
+Doanh số năm 2020 cao gấp đôi năm 2010. || Sales in 2020 were twice as high as in 2010. | Sales in 2020 were twice as high as those in 2010. || were (số nhiều)
+# the largest share of
+Than chiếm phần lớn nhất. || Coal had the largest share. | Coal accounted for the largest share. || had the largest share
+Nhà ở chiếm phần lớn nhất trong chi tiêu. || Housing had the largest share of spending. | Housing accounted for the largest share of spending. || of spending = trong chi tiêu
+Châu Á có phần lớn nhất trong số khách du lịch. || Asia had the largest share of tourists. | Asia accounted for the largest share of tourists. || Asia = châu Á
+# make up
+Phụ nữ chiếm 60% sinh viên. || Women made up 60% of students. | Women made up 60 percent of students. || made up = chiếm
+Ô tô chiếm phần lớn số phương tiện. || Cars made up most of the vehicles. | Cars made up the majority of vehicles. || most of = phần lớn
+Trẻ em chiếm một phần tư dân số. || Children made up a quarter of the population. || a quarter of
+# the smallest proportion
+Năng lượng gió chiếm tỷ lệ nhỏ nhất. || Wind power accounted for the smallest proportion. | Wind power made up the smallest proportion. || wind power = năng lượng gió
+Người già chiếm tỷ lệ nhỏ nhất của người dùng. || Old people made up the smallest proportion of users. | Elderly people accounted for the smallest proportion of users. || of users
+Đi bộ chiếm tỷ lệ nhỏ nhất. || Walking accounted for the smallest proportion. | Walking made up the smallest proportion. || walking = đi bộ
+# by far the most popular
+Bóng đá là môn thể thao phổ biến nhất, vượt xa các môn khác. || Football was by far the most popular sport. || by far = vượt xa
+Xe máy là phương tiện phổ biến nhất ở Việt Nam. || Motorbikes were by far the most popular vehicle in Vietnam. | The motorbike was by far the most popular vehicle in Vietnam. || were (số nhiều)
+Cà phê là đồ uống phổ biến nhất, vượt xa các loại khác. || Coffee was by far the most popular drink. | Coffee was by far the most popular drink of all. || was
+# respectively
+Giá ở A và B lần lượt là 5 đô la và 8 đô la. || The prices in A and B were $5 and $8 respectively. | The prices in A and B were 5 and 8 dollars respectively. || respectively = lần lượt (đặt cuối câu)
+Nam và nữ lần lượt chiếm 40% và 60%. || Men and women accounted for 40% and 60% respectively. | Men and women made up 40% and 60% respectively. || respectively
+Số liệu năm 2000 và năm 2020 lần lượt là 10 và 30. || The figures for 2000 and 2020 were 10 and 30 respectively. || the figures for
+# the process consists of
+Quy trình gồm có năm giai đoạn. || The process consists of five stages. || consists (+s) of
+Quy trình gồm có sáu bước chính. || The process consists of six main steps. | The process consists of six main stages. || main steps = bước chính
+Quy trình tái chế gồm có bốn giai đoạn. || The recycling process consists of four stages. || the recycling process
+# the first stage is
+Giai đoạn đầu tiên là thu gom chai cũ. || The first stage is collecting old bottles. | The first stage is to collect old bottles. || the first stage is + V-ing/to V
+Giai đoạn đầu tiên là trồng cây chè. || The first stage is growing tea plants. | The first stage is to grow tea plants. || tea plants = cây chè
+Giai đoạn đầu tiên là thu hoạch lá. || The first stage is picking the leaves. | The first stage is to pick the leaves. | The first stage is harvesting the leaves. || pick = thu hoạch
+# is then transported to
+Giấy sau đó được vận chuyển đến nhà máy. || The paper is then transported to a factory. | The paper is then transported to the factory. || is then transported to
+Lá chè sau đó được vận chuyển đến nhà máy. || The tea leaves are then transported to a factory. | The leaves are then transported to the factory. || are then transported to (số nhiều)
+Sữa sau đó được vận chuyển đến cửa hàng. || The milk is then transported to shops. | The milk is then transported to the shops. || shops = cửa hàng
+# once / after this
+Sau khi việc này xong, chai được rửa sạch. || After this, the bottles are washed. | Once this is done, the bottles are washed. || after this = sau khi việc này xong · bị động
+Sau khi lá được sấy khô, chúng được đóng gói. || Once the leaves are dried, they are packed. | After the leaves are dried, they are packed. || once = sau khi
+Sau khi việc này xong, giấy được ép. || After this, the paper is pressed. | Once this is done, the paper is pressed. || is pressed = được ép
+# are heated to
+Chai được nung nóng đến 1000 độ. || The bottles are heated to 1000 degrees. | The bottles are heated to 1,000 degrees. || are heated to
+Hỗn hợp được nung nóng đến 200 độ. || The mixture is heated to 200 degrees. || is heated to (số ít)
+Lá chè được nung nóng đến 90 độ. || The tea leaves are heated to 90 degrees. | The leaves are heated to 90 degrees. || are heated to
+# are sorted by
+Chai được phân loại theo màu. || The bottles are sorted by colour. | The bottles are sorted by color. || by colour = theo màu
+Rác được phân loại theo loại. || The waste is sorted by type. || by type = theo loại
+Quả được phân loại theo kích thước. || The fruit is sorted by size. | The fruits are sorted by size. || by size = theo kích thước
+# the final stage
+Giai đoạn cuối cùng là đóng gói. || The final stage is packaging. | The final stage is packing. || packaging = đóng gói
+Ở giai đoạn cuối cùng, sản phẩm được chuyển đến cửa hàng. || In the final stage, the products are delivered to shops. | At the final stage, the products are sent to shops. || are delivered to = được chuyển đến
+Giai đoạn cuối cùng mất hai ngày. || The final stage takes two days. || takes = mất
+# a cyclical process
+Tái chế là một quy trình tuần hoàn. || Recycling is a cyclical process. || recycling = tái chế
+Vòng đời của ếch là một quy trình tuần hoàn. || The life cycle of a frog is a cyclical process. || life cycle = vòng đời · frog = ếch
+Đây là một quy trình tuần hoàn gồm bốn giai đoạn. || This is a cyclical process with four stages. | This is a cyclical process consisting of four stages. || with four stages = gồm bốn giai đoạn
+# a man-made process
+Sản xuất giấy là một quy trình nhân tạo. || Paper production is a man-made process. | Making paper is a man-made process. || production = sản xuất
+Đây là một quy trình nhân tạo gồm năm bước. || This is a man-made process with five steps. | This is a man-made process consisting of five steps. || with five steps
+Tái chế chai là một quy trình nhân tạo. || Recycling bottles is a man-made process. || V-ing làm chủ ngữ
+# be demolished
+Nhà máy cũ đã bị phá dỡ. || The old factory was demolished. | The old factory has been demolished. || bị động quá khứ: was demolished
+Những ngôi nhà gần sông bị phá dỡ. || The houses near the river were demolished. || were demolished (số nhiều)
+Khu chợ bị phá dỡ vào năm 2015. || The market was demolished in 2015. || was demolished
+# be replaced by
+Cánh đồng được thay thế bởi những ngôi nhà. || The fields were replaced by houses. || were replaced by
+Bến xe buýt được thay thế bởi một nhà ga. || The bus station was replaced by a train station. || was replaced by
+Cây cối được thay thế bởi một bãi đỗ xe. || The trees were replaced by a car park. | The trees were replaced by a parking lot. || car park = bãi đỗ xe
+# be converted into
+Nhà máy được chuyển đổi thành một khách sạn. || The factory was converted into a hotel. || was converted into
+Trang trại được chuyển đổi thành một công viên. || The farm was converted into a park. || farm = trang trại
+Tòa nhà cũ được chuyển đổi thành căn hộ. || The old building was converted into flats. | The old building was converted into apartments. || flats = căn hộ
+# be constructed
+Một cây cầu mới được xây dựng. || A new bridge was constructed. | A new bridge was built. || was constructed
+Hai khách sạn được xây dựng gần bãi biển. || Two hotels were constructed near the beach. || were constructed · near the beach
+Một sân bay được xây dựng ở phía nam. || An airport was constructed in the south. | An airport was constructed to the south. || in the south = ở phía nam
+# be extended
+Con đường được mở rộng về phía đông. || The road was extended to the east. || was extended
+Trường học được mở rộng vào năm 2010. || The school was extended in 2010. || in 2010
+Đường sắt được mở rộng đến sân bay. || The railway was extended to the airport. || railway = đường sắt
+# remain unchanged
+Nhà thờ vẫn giữ nguyên. || The church remained unchanged. || remained (quá khứ)
+Công viên vẫn giữ nguyên trong suốt giai đoạn. || The park remained unchanged over the period. | The park remained unchanged throughout the period. || over the period
+Con sông vẫn giữ nguyên. || The river remained unchanged. || remained
+# to the north of
+Trường học nằm ở phía bắc của công viên. || The school is to the north of the park. | The school is located to the north of the park. || to the north of
+Một khu rừng ở phía bắc của làng. || There was a forest to the north of the village. | A forest was located to the north of the village. || there was = có
+Bãi đỗ xe được xây ở phía bắc của nhà ga. || A car park was built to the north of the station. | A car park was constructed to the north of the station. || was built
+# in the centre of
+Có một khu chợ ở trung tâm của thị trấn. || There was a market in the centre of the town. | There was a market in the center of the town. || in the centre of
+Một công viên được xây ở trung tâm của thành phố. || A park was built in the centre of the city. | A park was built in the center of the city. || was built
+Bệnh viện nằm ở trung tâm của làng. || The hospital is in the centre of the village. | The hospital is located in the centre of the village. || in the centre of
+# undergo significant changes
+Thị trấn đã trải qua những thay đổi đáng kể. || The town underwent significant changes. | The town has undergone significant changes. || undergo → underwent
+Khu vực này trải qua những thay đổi đáng kể sau năm 2000. || This area underwent significant changes after 2000. || after 2000
+Bờ biển trải qua những thay đổi đáng kể. || The coast underwent significant changes. | The coastline underwent significant changes. || coast = bờ biển
+# become more urbanised
+Làng trở nên đô thị hóa hơn. || The village became more urbanised. | The village became more urbanized. || became (quá khứ)
+Khu vực này trở nên đô thị hóa hơn sau năm 2010. || This area became more urbanised after 2010. | This area became more urbanized after 2010. || after 2010
+Thị trấn trở nên đô thị hóa hơn với nhiều tòa nhà mới. || The town became more urbanised with many new buildings. | The town became more urbanized with many new buildings. || with = với
+# make way for
+Cây bị chặt để dọn chỗ cho một con đường. || Trees were cut down to make way for a road. || were cut down = bị chặt
+Những ngôi nhà cũ bị phá dỡ để dọn chỗ cho một khách sạn. || Old houses were demolished to make way for a hotel. | The old houses were demolished to make way for a hotel. || to make way for
+Trang trại bị phá bỏ để dọn chỗ cho nhà ở. || The farm was removed to make way for housing. | The farm was cleared to make way for housing. || removed = phá bỏ
+# in terms of
+Xét về giá, London đắt nhất. || In terms of price, London was the most expensive. | In terms of prices, London was the most expensive. || in terms of = xét về
+Xét về số lượng, ô tô phổ biến nhất. || In terms of numbers, cars were the most popular. || the most popular
+Xét về kích thước, nhà ga lớn hơn. || In terms of size, the station was bigger. | In terms of size, the station was larger. || bigger = lớn hơn
+# a similar proportion of
+Hai nước có tỷ lệ người dùng tương đương. || The two countries had a similar proportion of users. || had a similar proportion of
+Nam và nữ có tỷ lệ tương đương. || Men and women had a similar proportion. | A similar proportion of men and women took part. || a similar proportion
+Một tỷ lệ tương đương học sinh đi bộ và đi xe đạp. || A similar proportion of students walked and cycled. | A similar proportion of students walked or cycled. || walked = đi bộ · cycled = đi xe đạp
+# there was a shift from ... to ...
+Có sự chuyển dịch từ than sang năng lượng mặt trời. || There was a shift from coal to solar power. | There was a shift from coal to solar energy. || there was a shift from … to …
+Có sự chuyển dịch từ xe buýt sang ô tô. || There was a shift from buses to cars. || from buses to cars
+Có sự chuyển dịch từ báo in sang tin tức trực tuyến. || There was a shift from print newspapers to online news. | There was a shift from newspapers to online news. || online news = tin tức trực tuyến

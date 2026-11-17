@@ -23,7 +23,14 @@ kiểm tra trình độ thích ứng cũ đã được bỏ (đường dẫn cũ
   Bảy của giai đoạn 1–2, mỗi ngày 5 cụm + bài **dịch câu với cụm từ** (`/viet-cau/:date`): mỗi cụm 3 câu tiếng Việt đơn
   giản (`content/roadmap/active-sentences.txt` → `node scripts/build-active-sentences.mjs` → `active-sentences.json`),
   dịch sang tiếng Anh, chấm đúng / sai ngay trên máy với đáp án mẫu, có gợi ý; xong khi đúng ngay lần đầu ≥ 80%. Hiện có
-  câu cho 4 tuần đầu (Education, Environment, Technology, Health); cụm chưa có câu thì dùng câu ví dụ tiếng Việt.
+  câu cho mọi tuần của lộ trình (1.305 câu); cụm chưa có câu thì dùng câu ví dụ tiếng Việt. Tuần 5 là **Work & Career**, tuần 14
+  là **Life & Lifestyle** (Tourism chuyển sang phần tự học).
+- **Writing tuần** (`content/roadmap/writing-weeks.txt` → `node scripts/build-writing-weeks.mjs`): mỗi tuần có từ vựng chủ
+  động một chủ đề Writing gồm 8 họ từ chọn lọc (**Word form tuần**, `/word-form/:date`: bảng từ rồi 16 câu điền dạng từ, chấm
+  chặt) và **đoạn văn tuần** (`/writing-tuan/:date`): dịch đoạn văn mẫu từng câu — mỗi câu chỉ dùng cụm từ, word form, từ bổ
+  sung / phrasal verb / idiom đã học đến tuần đó (có test kiểm tra) — rồi tự viết 120–150 từ cho đề thứ hai, máy đánh dấu từ
+  của tuần đã dùng. Giai đoạn 1: thứ Bảy + Chủ nhật; giai đoạn 2: thứ Năm + thứ Bảy (tuần Tết: thứ Tư). Đề viết theo khung /
+  thi thử giai đoạn 2–3 được chọn theo chủ đề đã học (technology, education, career, urban, life).
 - **Dịch ví dụ** (`/dich-vi-du/:date`, 11/2026): ví dụ của từng từ / cụm học trong ngày được cho bằng tiếng Việt
   (`content/roadmap/example-vi.json`), dịch lại sang tiếng Anh, bắt buộc dùng đúng từ đó. Hiện có bản Việt cho 4 tuần đầu
   (16/11 → 13/12); ngày chưa có bản Việt thì không xếp bài.

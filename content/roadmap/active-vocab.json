@@ -1,4 +1,4 @@
-{"_note": "Từ vựng CHỦ ĐỘNG cho Writing (cụm từ/collocation phải tự dùng được). Mỗi chủ đề có tuần trong lộ trình (week); mỗi ngày học 5 cụm rồi viết 3–5 câu cho đề Writing của ngày bằng chính 5 cụm đó. Bản giống hệt nằm trong Google Sheet \"Vocab Ielts\", các tab \"CĐ - …\". Chủ đề không có week là phần thêm để tự học.", "topics": [
+{"_note": "Từ vựng CHỦ ĐỘNG cho Writing (cụm từ/collocation phải tự dùng được). Mỗi chủ đề có tuần trong lộ trình (week); mỗi ngày học 5 cụm rồi dịch 3 câu tiếng Việt cho mỗi cụm (active-sentences.txt); cuối tuần viết đoạn văn theo chủ đề (writing-weeks.txt). Bản giống hệt nằm trong Google Sheet \"Vocab Ielts\", các tab \"CĐ - …\". Chủ đề không có week là phần thêm để tự học. Tuần 14 là Life & Lifestyle (11/2026); Tourism chuyển sang phần tự học.", "topics": [
 {"id": "education", "name": "Education", "vi": "Giáo dục", "week": 1, "prompts": ["Some people think university education should be free for everyone. To what extent do you agree or disagree?", "Some believe children should start school at a very young age, while others think they should wait until they are older. Discuss both views and give your opinion.", "Many students today rely on online courses instead of attending classes in person. What are the advantages and disadvantages of this?"], "words": [
 {"t": "acquire knowledge", "m": "tiếp thu kiến thức", "p": "verb", "ex": "Students acquire knowledge more effectively when they apply it to real problems."}, 
 {"t": "academic performance", "m": "kết quả học tập", "p": "noun", "ex": "Regular sleep has a positive effect on academic performance."}, 
@@ -123,7 +123,7 @@
 {"t": "promote healthy eating", "m": "khuyến khích ăn uống lành mạnh", "p": "verb", "ex": "Schools can promote healthy eating by removing vending machines."}, 
 {"t": "lead to serious health problems", "m": "dẫn đến vấn đề sức khỏe nghiêm trọng", "p": "verb", "ex": "Drinking too much alcohol can lead to serious health problems."}, 
 {"t": "individual responsibility", "m": "trách nhiệm cá nhân", "p": "noun", "ex": "Staying healthy is largely a matter of individual responsibility."}]}, 
-{"id": "work", "name": "Work & Employment", "vi": "Công việc & việc làm", "week": 5, "prompts": ["Some people prefer to work for a large company, while others prefer a small one. Discuss the advantages of both and give your opinion.", "More and more people are working from home. Is this a positive or negative development?", "Some think job satisfaction is more important than a high salary. To what extent do you agree or disagree?"], "words": [
+{"id": "work", "name": "Work & Career", "vi": "Công việc & sự nghiệp", "week": 5, "prompts": ["Some people prefer to work for a large company, while others prefer a small one. Discuss the advantages of both and give your opinion.", "More and more people are working from home. Is this a positive or negative development?", "Some think job satisfaction is more important than a high salary. To what extent do you agree or disagree?"], "words": [
 {"t": "job satisfaction", "m": "sự hài lòng trong công việc", "p": "noun", "ex": "Job satisfaction is often more important than salary for young workers."}, 
 {"t": "a high salary", "m": "mức lương cao", "p": "noun", "ex": "A high salary does not always make people happy."}, 
 {"t": "job security", "m": "sự ổn định công việc", "p": "noun", "ex": "Government jobs offer greater job security than private ones."}, 
@@ -371,7 +371,38 @@
 {"t": "a stable home environment", "m": "môi trường gia đình ổn định", "p": "noun", "ex": "A stable home environment helps children do well at school."}, 
 {"t": "juggle work and family", "m": "cân bằng công việc và gia đình", "p": "verb", "ex": "Many mothers struggle to juggle work and family."}, 
 {"t": "independent thinkers", "m": "người có tư duy độc lập", "p": "noun", "ex": "Giving children choices helps them become independent thinkers."}]}, 
-{"id": "tourism", "name": "Tourism & Travel", "vi": "Du lịch", "week": 14, "prompts": ["International tourism has become a huge industry. Do the advantages of this outweigh the disadvantages?", "Some people think tourists should be charged more than local people to visit famous sites. To what extent do you agree or disagree?", "Mass tourism is damaging many popular destinations. What problems does it cause, and what can be done?"], "words": [
+{"id": "life", "name": "Life & Lifestyle", "vi": "Cuộc sống & lối sống", "week": 14, "prompts": ["Modern life is becoming more and more stressful. What are the causes of this, and what can people do about it?", "Some people think money is the key to happiness. To what extent do you agree or disagree?", "Nowadays many people feel lonely even though they live in big cities. Why is this? What can be done?"], "words": [
+{"t": "a hectic lifestyle", "m": "lối sống bận rộn", "p": "noun", "ex": "Many office workers have a hectic lifestyle and rarely cook at home."}, 
+{"t": "lead a busy life", "m": "sống một cuộc sống bận rộn", "p": "verb", "ex": "People in big cities lead a busy life."}, 
+{"t": "spend leisure time", "m": "dành thời gian rảnh", "p": "verb", "ex": "Young people spend most of their leisure time online."}, 
+{"t": "leisure activities", "m": "các hoạt động giải trí", "p": "noun", "ex": "Leisure activities such as sport help people relax."}, 
+{"t": "pursue a hobby", "m": "theo đuổi một sở thích", "p": "verb", "ex": "Pursuing a hobby is a good way to reduce stress."}, 
+{"t": "make ends meet", "m": "xoay xở đủ sống", "p": "idiom", "ex": "Many families work two jobs just to make ends meet."}, 
+{"t": "earn a living", "m": "kiếm sống", "p": "verb", "ex": "He earns a living as a taxi driver."}, 
+{"t": "personal fulfilment", "m": "sự mãn nguyện cá nhân", "p": "noun", "ex": "Many people find personal fulfilment in helping others."}, 
+{"t": "mental well-being", "m": "sức khỏe tinh thần", "p": "noun", "ex": "Spending time in nature is good for our mental well-being."}, 
+{"t": "a sense of purpose", "m": "cảm giác sống có mục đích", "p": "noun", "ex": "Volunteering gives retired people a sense of purpose."}, 
+{"t": "peace of mind", "m": "sự an tâm", "p": "noun", "ex": "Having savings gives people peace of mind."}, 
+{"t": "consumer goods", "m": "hàng tiêu dùng", "p": "noun", "ex": "People today buy more consumer goods than they need."}, 
+{"t": "keep up with the latest trends", "m": "chạy theo xu hướng mới nhất", "p": "verb", "ex": "Teenagers spend a lot of money to keep up with the latest trends."}, 
+{"t": "a simple lifestyle", "m": "lối sống giản dị", "p": "noun", "ex": "A simple lifestyle can make people happier."}, 
+{"t": "have an active social life", "m": "có đời sống xã hội năng động", "p": "verb", "ex": "Students who have an active social life feel less lonely."}, 
+{"t": "make new friends", "m": "kết bạn mới", "p": "verb", "ex": "Joining a club is an easy way to make new friends."}, 
+{"t": "maintain close relationships", "m": "duy trì các mối quan hệ thân thiết", "p": "verb", "ex": "It is important to maintain close relationships with family and friends."}, 
+{"t": "feel lonely", "m": "cảm thấy cô đơn", "p": "verb", "ex": "Many elderly people feel lonely when their children move away."}, 
+{"t": "social isolation", "m": "sự cô lập xã hội", "p": "noun", "ex": "Social isolation is a serious problem among old people."}, 
+{"t": "a daily routine", "m": "thói quen hằng ngày", "p": "noun", "ex": "Exercise should be part of your daily routine."}, 
+{"t": "get enough sleep", "m": "ngủ đủ giấc", "p": "verb", "ex": "Students who get enough sleep concentrate better."}, 
+{"t": "unwind after work", "m": "thư giãn sau giờ làm", "p": "verb", "ex": "I like to unwind after work by listening to music."}, 
+{"t": "free up time for", "m": "dành ra thời gian cho", "p": "verb", "ex": "Working from home frees up time for family and hobbies."}, 
+{"t": "set personal goals", "m": "đặt mục tiêu cá nhân", "p": "verb", "ex": "Setting personal goals helps people stay motivated."}, 
+{"t": "step out of one's comfort zone", "m": "bước ra khỏi vùng an toàn", "p": "idiom", "ex": "Travelling alone helps you step out of your comfort zone."}, 
+{"t": "life satisfaction", "m": "mức độ hài lòng với cuộc sống", "p": "noun", "ex": "Studies show that strong friendships increase life satisfaction."}, 
+{"t": "the pressures of modern life", "m": "áp lực của cuộc sống hiện đại", "p": "noun", "ex": "The pressures of modern life cause stress for many people."}, 
+{"t": "value experiences over possessions", "m": "coi trọng trải nghiệm hơn của cải", "p": "verb", "ex": "Many young people now value experiences over possessions."}, 
+{"t": "manage personal finances", "m": "quản lý tài chính cá nhân", "p": "verb", "ex": "Schools should teach students how to manage personal finances."}, 
+{"t": "volunteer in the community", "m": "làm tình nguyện trong cộng đồng", "p": "verb", "ex": "Retired people can volunteer in the community to stay active."}]}, 
+{"id": "tourism", "name": "Tourism & Travel", "vi": "Du lịch", "prompts": ["International tourism has become a huge industry. Do the advantages of this outweigh the disadvantages?", "Some people think tourists should be charged more than local people to visit famous sites. To what extent do you agree or disagree?", "Mass tourism is damaging many popular destinations. What problems does it cause, and what can be done?"], "words": [
 {"t": "the tourism industry", "m": "ngành du lịch", "p": "noun", "ex": "The tourism industry employs millions of people in Southeast Asia."}, 
 {"t": "mass tourism", "m": "du lịch đại trà", "p": "noun", "ex": "Mass tourism can destroy the natural beauty of an island."}, 
 {"t": "tourist destinations", "m": "các điểm đến du lịch", "p": "noun", "ex": "Ha Long Bay is one of the most popular tourist destinations in Vietnam."}, 

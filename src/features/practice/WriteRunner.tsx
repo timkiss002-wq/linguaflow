@@ -31,7 +31,8 @@ export function WriteRunner({
   summary = true,
 }: {
   items: WriteItem[];
-  mode: 'translate' | 'fix';
+  /** translate: Vietnamese → English · fix: correct the wrong sentence · gap: type the right form of the word */
+  mode: 'translate' | 'fix' | 'gap';
   heading: ReactNode;
   /** called after a full run (every sentence), with the first-try score */
   onFinish: (score: number, total: number, answers: Record<number, WriteAnswer>) => void;
@@ -71,7 +72,7 @@ export function WriteRunner({
       setNote('Câu này vẫn còn lỗi — bạn chưa sửa gì.');
       return;
     }
-    const r = checkWrite(item, typed, mode === 'fix');
+    const r = checkWrite(item, typed, mode !== 'translate');
     setResult(r);
     setNote(r.verdict === 'wrong' && item.mustUse && !usesWord(typed, item.mustUse) ? `Câu của bạn chưa dùng “${item.mustUse}”.` : '');
     const ok = r.verdict !== 'wrong';
@@ -123,10 +124,10 @@ export function WriteRunner({
         <CardContent className="space-y-5 pt-6">
           <div>
             <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-              {mode === 'fix' ? 'Câu có một lỗi — sửa lại cho đúng' : 'Dịch sang tiếng Anh'}
+              {mode === 'fix' ? 'Câu có một lỗi — sửa lại cho đúng' : mode === 'gap' ? 'Điền dạng đúng của từ trong ngoặc' : 'Dịch sang tiếng Anh'}
               {item!.label && <span className="ml-2 rounded bg-muted px-1.5 py-0.5 normal-case tracking-normal">{item!.label}</span>}
             </p>
-            <p className={cn('mt-1 text-xl font-semibold leading-snug sm:text-2xl', mode === 'fix' && 'decoration-rose-400 decoration-wavy underline-offset-4')} lang={mode === 'fix' ? 'en' : 'vi'} data-testid="prompt">
+            <p className={cn('mt-1 text-xl font-semibold leading-snug sm:text-2xl', mode === 'fix' && 'decoration-rose-400 decoration-wavy underline-offset-4')} lang={mode === 'translate' ? 'vi' : 'en'} data-testid="prompt">
               {item!.prompt}
             </p>
             {mode === 'translate' && item!.mustUse && (
@@ -140,7 +141,7 @@ export function WriteRunner({
             <Textarea
               ref={input}
               lang="en"
-              rows={2}
+              rows={mode === 'gap' ? 1 : 2}
               value={typed}
               disabled={Boolean(passed)}
               onChange={(e) => {
@@ -154,7 +155,7 @@ export function WriteRunner({
                 if (passed) next();
                 else check();
               }}
-              placeholder="Gõ câu tiếng Anh… (Enter để kiểm tra)"
+              placeholder={mode === 'gap' ? 'Gõ từ cần điền… (Enter để kiểm tra)' : 'Gõ câu tiếng Anh… (Enter để kiểm tra)'}
               className="text-lg"
               autoComplete="off"
               autoCorrect="off"
@@ -186,9 +187,11 @@ export function WriteRunner({
             )}
             {result && result.verdict === 'wrong' && (
               <>
-                <Button variant="ghost" onClick={accept} disabled={!canAccept} title={canAccept ? 'Câu của bạn đúng ngữ pháp và nghĩa nhưng diễn đạt khác đáp án' : `Cần dùng “${item!.mustUse}”`}>
-                  <ThumbsUp /> Tôi viết đúng
-                </Button>
+                {mode !== 'gap' && (
+                  <Button variant="ghost" onClick={accept} disabled={!canAccept} title={canAccept ? 'Câu của bạn đúng ngữ pháp và nghĩa nhưng diễn đạt khác đáp án' : `Cần dùng “${item!.mustUse}”`}>
+                    <ThumbsUp /> Tôi viết đúng
+                  </Button>
+                )}
                 {tries < 2 && (
                   <Button variant="outline" onClick={() => (setResult(null), input.current?.focus())}>
                     <RotateCcw /> Sửa lại

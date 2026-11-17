@@ -38,6 +38,8 @@ const RoadmapDayPage = lazy(() => import('@/pages/RoadmapDayPage'));
 const PlacementPage = lazy(() => import('@/pages/PlacementPage'));
 const SentencesPage = lazy(() => import('@/pages/SentencesPage'));
 const ExampleTranslatePage = lazy(() => import('@/pages/ExampleTranslatePage'));
+const WordFormWeekPage = lazy(() => import('@/pages/WordFormWeekPage'));
+const WritingWeekPage = lazy(() => import('@/pages/WritingWeekPage'));
 const GrammarFixPage = lazy(() => import('@/pages/GrammarFixPage'));
 const SvoPage = lazy(() => import('@/pages/SvoPage'));
 
@@ -67,6 +69,8 @@ export const router = createBrowserRouter([
           { path: '/lo-trinh/:date', element: page(<RoadmapDayPage />) },
           { path: '/viet-cau/:date', element: page(<SentencesPage />) },
           { path: '/dich-vi-du/:date', element: page(<ExampleTranslatePage />) },
+          { path: '/word-form/:date', element: page(<WordFormWeekPage />) },
+          { path: '/writing-tuan/:date', element: page(<WritingWeekPage />) },
           { path: '/sua-loi/:date', element: page(<GrammarFixPage />) },
           { path: '/cau-svo', element: page(<SvoPage />) },
           { path: '/cau-svo/:date', element: page(<SvoPage />) },

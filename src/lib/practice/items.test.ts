@@ -88,10 +88,12 @@ describe('Dịch ví dụ', () => {
 
 describe('phraseItems (Dịch câu với cụm từ)', () => {
   // the first answer keeps the collocation as written (British spelling); later ones may be US variants
-  it('has 3 sentences for every collocation of the first 4 weeks, and the model answer uses its collocation', () => {
-    for (const topic of ACTIVE_TOPICS.filter((t) => t.week && t.week <= 4)) {
-      const items = phraseItems(topic.id, topic.words);
-      expect(items).toHaveLength(topic.words.length * 3);
+  it('has 3 sentences for every collocation learned on the path, and the model answer uses its collocation', () => {
+    for (const topic of ACTIVE_TOPICS.filter((t) => t.week)) {
+      // week 12 stops on Wednesday for Tết: 15 collocations
+      const words = topic.week === 12 ? topic.words.slice(0, 15) : topic.words;
+      const items = phraseItems(topic.id, words);
+      expect(items, topic.id).toHaveLength(words.length * 3);
       for (const it of items) expect(usesWord(it.en[0]!, it.mustUse!), `${it.key}: ${it.en[0]}`).toBe(true);
     }
   });

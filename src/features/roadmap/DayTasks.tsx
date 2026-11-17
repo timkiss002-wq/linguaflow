@@ -19,6 +19,7 @@ import {
   Target,
   Wrench,
   type LucideIcon,
+  Shapes,
 } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -45,6 +46,8 @@ const ICON: Record<TaskKind, LucideIcon> = {
   'vocab-active': PenLine,
   'vocab-translate': Languages,
   'vocab-review': Layers,
+  'wordform-week': Shapes,
+  'writing-week': PenLine,
   'reading-p3': BookOpen,
   'reading-skill': BookOpen,
   'reading-part': BookOpen,
@@ -74,6 +77,8 @@ export const AREA: Record<TaskKind, string> = {
   'vocab-active': 'Từ vựng chủ động · Writing',
   'vocab-translate': 'Từ vựng · dịch ví dụ',
   'vocab-review': 'Từ vựng',
+  'wordform-week': 'Writing · word form',
+  'writing-week': 'Writing · đoạn văn tuần',
   'reading-p3': 'Reading',
   'reading-skill': 'Reading',
   'reading-part': 'Reading',
@@ -91,9 +96,9 @@ export const AREA: Record<TaskKind, string> = {
 };
 
 /** Tasks that only the exercise itself can tick (grammar ≥ 80 %, retest saved…). */
-const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'placement', 'retest', 'rest'];
+const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest'];
 
-const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo'];
+const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week'];
 
 function hrefFor(task: Task) {
   if (task.kind === 'grammar-drill') return `${task.href}?step=drill`;
