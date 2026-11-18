@@ -209,7 +209,7 @@ export function CoverArt({ id, art, className, label, wide }: { id: string; art?
           <stop offset="1" stopColor={b} />
         </linearGradient>
       </defs>
-      {wide ? <rect x="-240" y="-20" width="600" height="130" fill={`url(#${gid})`} /> : <rect width="120" height="90" fill={`url(#${gid})`} />}
+      {wide ? <rect x="-600" y="-40" width="1320" height="170" fill={`url(#${gid})`} /> : <rect width="120" height="90" fill={`url(#${gid})`} />}
       <circle cx={10 + (h % 30)} cy={80 - (h % 20)} r="28" fill="white" opacity="0.12" />
       <circle cx={100 - (h % 25)} cy={10 + (h % 15)} r="20" fill="white" opacity="0.1" />
       {MOTIFS[art ?? ''] ?? MOTIFS.book}
