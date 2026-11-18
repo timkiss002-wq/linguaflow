@@ -131,7 +131,7 @@ function WordBank({ w, open }: { w: WritingWeek; open: boolean }) {
           <ul className="mt-1 space-y-1 text-sm">
             {w.bank.map((b) => (
               <li key={b.term}>
-                <span className="rounded bg-muted px-1 text-[11px] text-muted-foreground">{b.type}</span> <b lang="en">{b.term}</b> — {b.m}
+                <span className="rounded bg-muted px-1 text-xs text-muted-foreground">{b.type}</span> <b lang="en">{b.term}</b> — {b.m}
                 {b.ex && (
                   <span className="block text-xs italic text-muted-foreground" lang="en">
                     {b.ex}
@@ -197,7 +197,7 @@ function Own({ w, taskId }: { w: WritingWeek; taskId: string }) {
         <ul className="mt-2 flex flex-wrap gap-1.5" lang="en">
           {all.map((t) => (
             <li key={`${t.kind}:${t.term}`} className={cn('inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs', usedSet.has(t.term) && 'border-emerald-300 bg-emerald-50 dark:bg-emerald-500/10')}>
-              {usedSet.has(t.term) ? <CheckCircle2 className="size-3 text-success" aria-hidden /> : <Circle className="size-3 text-border" aria-hidden />}
+              {usedSet.has(t.term) ? <CheckCircle2 className="size-3 text-success" aria-hidden /> : <Circle className="size-3 text-input" aria-hidden />}
               {t.term}
             </li>
           ))}

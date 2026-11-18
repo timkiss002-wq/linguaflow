@@ -11,13 +11,13 @@ export function SetCard({ set }: { set: P3Set }) {
     <Link to={`/ielts/passage3/${set.id}`} className="group flex flex-col overflow-hidden rounded-xl border bg-card transition-colors hover:border-primary/40" data-set={set.id}>
       <div className="relative">
         <CoverArt id={set.id} art={set.art} className="aspect-[2/1] w-full" />
-        <span className="absolute left-2 top-2 rounded-md bg-black/55 px-1.5 py-0.5 text-[10px] font-bold text-white">{TYPE_INFO[set.type].short}</span>
+        <span className="absolute left-2 top-2 rounded-md bg-black/55 px-1.5 py-0.5 text-xs font-bold text-white">{TYPE_INFO[set.type].short}</span>
         {d ? (
-          <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-emerald-600 px-2 py-0.5 text-[11px] font-semibold text-white">
+          <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-emerald-600 px-2 py-0.5 text-xs font-semibold text-white">
             <CheckCircle2 className="size-3" aria-hidden /> {d.score}/{d.total}
           </span>
         ) : sum.checked ? (
-          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-slate-900">
+          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-semibold text-slate-900">
             {sum.checked}/{set.items.length}
           </span>
         ) : null}

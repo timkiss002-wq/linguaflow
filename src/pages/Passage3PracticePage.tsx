@@ -122,7 +122,7 @@ function Session({ set }: { set: P3Set }) {
         </Link>
         <CoverArt id={set.id} art={set.art} className="hidden h-10 w-12 shrink-0 rounded-md sm:block" />
         <div className="order-last min-w-0 basis-full sm:order-none sm:basis-auto sm:flex-1">
-          <p className="truncate text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <p className="truncate text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             {set.topic} · {TYPE_INFO[set.type].label}
           </p>
           <h1 className="truncate text-lg font-bold tracking-tight">{set.title}</h1>
@@ -160,7 +160,7 @@ function Session({ set }: { set: P3Set }) {
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-start">
         {/* passage */}
         <section className="max-h-[45vh] overflow-y-auto rounded-2xl border bg-card p-5 shadow-sm sm:p-6 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6.5rem)]" aria-label="Đoạn văn">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Passage</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Passage</p>
           <PassageText tokens={tokens} look={look} onWord={onWord} interactive={!!current} />
         </section>
 
@@ -200,7 +200,7 @@ function Session({ set }: { set: P3Set }) {
                   )}
                   style={done ? { background: st.none[p.id] ? 'hsl(var(--muted))' : meta.color[p.id] } : undefined}
                 >
-                  <span className="text-[11px] font-semibold opacity-60">{meta.pills.indexOf(p.id) + 1}</span>
+                  <span className="text-xs font-semibold opacity-60">{meta.pills.indexOf(p.id) + 1}</span>
                   {isGap ? '______' : p.v}
                   {!done && <span className="text-sm font-bold">?</span>}
                   {st.none[p.id] && <CircleSlash className="size-3.5" aria-label="không có trong bài" />}

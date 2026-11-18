@@ -31,6 +31,7 @@ import { topicById } from '@/lib/grammar/drills';
 import { practiceOf } from '@/lib/practice/results';
 import { activeWordsOf, wordsOf, type Day, type Task, type TaskKind } from '@/lib/roadmap/plan';
 import { hrefFor, isDone, lockReason, setManualDone, topicState, type Context } from '@/lib/roadmap/progress';
+import { TONE, type Tone } from '@/lib/ui/tones';
 import { cn } from '@/lib/utils';
 
 const ICON: Record<TaskKind, LucideIcon> = {
@@ -95,6 +96,16 @@ export const AREA: Record<TaskKind, string> = {
   rest: 'Nghỉ',
 };
 
+/** One colour per skill on the task's icon tile, so the day's mix (grammar, words, reading, writing) reads at a glance. */
+function toneOf(kind: TaskKind): Tone {
+  if (kind.startsWith('grammar')) return 'sky';
+  if (kind.startsWith('vocab') || kind === 'wordform-week') return 'teal';
+  if (kind.startsWith('reading')) return 'violet';
+  if (kind.startsWith('writing')) return 'rose';
+  if (kind.startsWith('mock') || kind === 'placement' || kind === 'retest') return 'amber';
+  return 'slate';
+}
+
 /** Tasks that only the exercise itself can tick (grammar ≥ 80 %, retest saved…). */
 const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest'];
 
@@ -133,8 +144,8 @@ export function TaskCard({ task, day, ctx, compact, showDate, emphasis }: { task
       data-next={next || undefined}
     >
       <div className="flex items-start gap-3">
-        <span className={cn('mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg', done ? 'bg-success/15 text-success' : next ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground')}>
-          {lock && !done ? <Lock className="size-4" aria-hidden /> : <Icon className="size-4" aria-hidden />}
+        <span className={cn('mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-xl', done ? 'bg-success/15 text-success' : lock ? 'bg-muted text-muted-foreground' : TONE[toneOf(task.kind)].tile)}>
+          {lock && !done ? <Lock className="size-4" aria-hidden /> : <Icon className="size-5" aria-hidden />}
         </span>
         <div className="min-w-0 flex-1">
           <p className="text-xs font-medium text-muted-foreground">
@@ -166,7 +177,7 @@ export function TaskCard({ task, day, ctx, compact, showDate, emphasis }: { task
         </div>
         {!rest && (
           <span className="mt-1 shrink-0" aria-label={done ? 'đã xong' : 'chưa xong'}>
-            {done ? <CheckCircle2 className="size-5 text-success" /> : <Circle className="size-5 text-border" />}
+            {done ? <CheckCircle2 className="size-5 text-success" /> : <Circle className="size-5 text-input" />}
           </span>
         )}
       </div>
@@ -201,7 +212,7 @@ export function TaskCard({ task, day, ctx, compact, showDate, emphasis }: { task
       )}
 
       {!rest && !lock && (task.href || !AUTO_ONLY.includes(task.kind)) && (
-        <div className="mt-3 flex flex-wrap items-center gap-2 pl-12">
+        <div className="mt-3 flex flex-wrap items-center gap-2 pl-[52px]">
           {task.href && !lock && (
             <Button size="sm" asChild variant={done || emphasis === 'quiet' ? 'outline' : 'default'}>
               <Link to={hrefFor(task)!}>{task.kind === 'vocab-active' ? (done ? 'Xem / sửa câu' : 'Học cụm & viết câu') : done ? 'Làm lại' : task.kind === 'vocab-new' ? 'Mở Sổ từ' : 'Bắt đầu'}</Link>

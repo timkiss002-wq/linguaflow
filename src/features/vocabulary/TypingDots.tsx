@@ -18,5 +18,5 @@ export function StatusBadge({ status }: { status: string }) {
     reviewing: 'bg-accent text-accent-foreground',
     mastered: 'bg-success/15 text-success',
   };
-  return <span className={cn('rounded px-1.5 py-0.5 text-[11px] font-medium capitalize', cls[status])}>{status}</span>;
+  return <span className={cn('rounded px-1.5 py-0.5 text-xs font-medium capitalize', cls[status])}>{status}</span>;
 }

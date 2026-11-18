@@ -1,12 +1,15 @@
-import { ArrowRight, CalendarClock, FastForward, Layers, Map, Play } from 'lucide-react';
+import { ArrowRight, CalendarClock, FastForward, Flame, Layers, Map, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ProgressRing } from '@/components/ProgressRing';
+import { StudyScene } from '@/components/StudyScene';
 import { Button } from '@/components/ui/button';
-import { useDueToday } from '@/features/dashboard/api';
+import { useDashboardSummary, useDueToday } from '@/features/dashboard/api';
 import { useProfile } from '@/features/profile/api';
 import { DayTasks, TaskCard } from '@/features/roadmap/DayTasks';
 import { useRoadmapContext } from '@/features/roadmap/useRoadmap';
-import { DAYS, START, TARGET, daysBetween, dayByDate, formatDay, phaseOf, todayKey, weekByNumber } from '@/lib/roadmap/plan';
-import { backlog, dayStatus, hrefFor, isStartable, lessonsOf, isDone, nextOpenDay } from '@/lib/roadmap/progress';
+import { DAYS, START, TARGET, WEEKDAY_VI, daysBetween, dayByDate, daysOfWeek, formatDay, phaseOf, toDate, todayKey, weekByNumber } from '@/lib/roadmap/plan';
+import { backlog, dayStatus, hrefFor, isStartable, lessonsOf, isDone, nextOpenDay, type Context, type DayStatus } from '@/lib/roadmap/progress';
+import { cn } from '@/lib/utils';
 
 function greeting(hour: number) {
   if (hour < 11) return 'Chào buổi sáng';
@@ -37,30 +40,53 @@ export default function TodayPage() {
   // The single next step: the first task that can be opened now, in the order the page lists them.
   const next = [...owed, ...day.tasks.map((task) => ({ day, task })), ...(ahead ? ahead.tasks.map((task) => ({ day: ahead, task })) : [])].find(({ day: d, task }) => isStartable(task, d, ctx));
   const nextId = next?.task.id ?? '';
+  const streak = useDashboardSummary().data?.streak ?? 0;
 
   return (
     <div className="space-y-5">
-      <header className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <p className="text-sm text-muted-foreground first-letter:uppercase">{date}</p>
-          <h1 className="text-2xl font-bold tracking-tight">{name ? `${greeting(new Date().getHours())}, ${name}` : 'Hôm nay'}</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {phaseOf(day.phase).name} · Tuần {week.n}: {week.title} · {s.total ? `${s.done}/${s.total} việc hôm nay` : 'hôm nay nghỉ'}
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          <Button asChild variant="ghost" size="sm">
-            <Link to="/lo-trinh">
-              <Map aria-hidden /> Xem cả lộ trình
-            </Link>
-          </Button>
-          {next && (
-            <Button asChild data-testid="next-task">
-              <Link to={hrefFor(next.task)!} title={next.task.title}>
-                <Play aria-hidden /> Làm việc tiếp theo
-              </Link>
-            </Button>
-          )}
+      <header className="relative overflow-hidden rounded-2xl border bg-card p-5 shadow-soft sm:p-6" data-testid="today-hero">
+        <div className="grid items-center gap-5 md:grid-cols-[minmax(0,1fr)_auto] xl:grid-cols-[minmax(0,1fr)_auto_220px]">
+          <div className="min-w-0">
+            <p className="text-sm text-muted-foreground first-letter:uppercase">{date}</p>
+            <h1 className="mt-0.5 text-2xl font-bold tracking-tight sm:text-3xl">{name ? `${greeting(new Date().getHours())}, ${name}` : 'Hôm nay'}</h1>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {phaseOf(day.phase).name} · Tuần {week.n}: {week.title}
+            </p>
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              {next && (
+                <Button asChild size="lg" data-testid="next-task">
+                  <Link to={hrefFor(next.task)!} title={next.task.title}>
+                    <Play aria-hidden /> Làm việc tiếp theo
+                  </Link>
+                </Button>
+              )}
+              <Button asChild variant="ghost">
+                <Link to="/lo-trinh">
+                  <Map aria-hidden /> Xem cả lộ trình
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-5 md:border-l md:pl-5">
+            <ProgressRing value={s.done} max={s.total} size={84} stroke={8}>
+              <span className="text-center leading-tight">
+                <span className="block text-lg font-bold tabular-nums">
+                  {s.done}/{s.total}
+                </span>
+                <span className="block text-xs text-muted-foreground">việc</span>
+              </span>
+            </ProgressRing>
+            <div className="space-y-2">
+              <p className="text-sm font-semibold">{s.total ? (s.done >= s.total ? 'Xong việc hôm nay' : `Còn ${s.total - s.done} việc hôm nay`) : 'Hôm nay nghỉ'}</p>
+              <WeekStrip week={week.n} ctx={ctx} today={today} />
+              <p className="inline-flex items-center gap-1.5 rounded-full bg-warm-soft px-2.5 py-0.5 text-xs font-semibold text-warm-foreground" data-testid="streak">
+                <Flame className="size-3.5" aria-hidden /> Chuỗi {streak} ngày
+              </p>
+            </div>
+          </div>
+
+          <StudyScene className="hidden h-36 w-full xl:block" />
         </div>
       </header>
 
@@ -124,6 +150,44 @@ export default function TodayPage() {
           </section>
         </aside>
       </div>
+    </div>
+  );
+}
+
+const DOT: Record<DayStatus['state'], string> = {
+  done: 'bg-success text-success-foreground',
+  partial: 'bg-warm-soft text-warm-foreground ring-1 ring-inset ring-warm/40',
+  missed: 'bg-muted text-muted-foreground ring-1 ring-inset ring-input',
+  today: 'bg-primary text-primary-foreground',
+  future: 'bg-muted text-muted-foreground',
+  empty: 'bg-muted/60 text-muted-foreground',
+};
+const DOT_LABEL: Record<DayStatus['state'], string> = { done: 'xong', partial: 'làm dở', missed: 'chưa làm', today: 'hôm nay', future: 'ngày sau', empty: 'nghỉ' };
+
+/** The seven days of this week as small chips: how far the week has come and how much is left (goal-gradient). */
+function WeekStrip({ week, ctx, today }: { week: number; ctx: Context; today: string }) {
+  const days = daysOfWeek(week);
+  const states = days.map((d) => dayStatus(d, ctx, today));
+  const doneDays = states.filter((x) => x.state === 'done').length;
+  return (
+    <div>
+      <ol className="flex gap-1" aria-label={`Tuần ${week}: xong ${doneDays}/${days.length} ngày`}>
+        {days.map((d, i) => (
+          <li key={d.date}>
+            <Link
+              to={`/lo-trinh/${d.date}`}
+              title={`${formatDay(d.date)} · ${DOT_LABEL[states[i]!.state]}`}
+              className={cn('flex size-6 items-center justify-center rounded-md text-xs sm:size-7 font-semibold tabular-nums transition hover:ring-2 hover:ring-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring', DOT[states[i]!.state])}
+            >
+              <span className="sr-only">{WEEKDAY_VI[d.weekday]} </span>
+              {toDate(d.date).getDate()}
+            </Link>
+          </li>
+        ))}
+      </ol>
+      <p className="mt-1 text-xs text-muted-foreground">
+        Tuần {week}: xong {doneDays}/{days.length} ngày
+      </p>
     </div>
   );
 }

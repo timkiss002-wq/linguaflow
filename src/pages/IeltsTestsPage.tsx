@@ -18,6 +18,8 @@ import { WebSources } from '@/features/passage3/WebSources';
 import { CAM_INDEX, OWN_SETS, TYPE_INFO as P3_TYPE, filterSets, getImports, notebook, type P3Type } from '@/lib/ielts/passage3';
 import { SkillPanel } from '@/features/passage3/SkillPanel';
 import { SKILLS, skillById, skillProgress } from '@/lib/ielts/skills';
+import { CoverArt } from '@/features/passage3/CoverArt';
+import { artFor } from '@/lib/ui/art';
 import { cn } from '@/lib/utils';
 
 /**
@@ -38,10 +40,6 @@ const SKILL = {
 
 /** Card header colours per part number, so Passage 1/2/3 are told apart at a glance. */
 const PART_COLOR = ['bg-orange-700', 'bg-violet-700', 'bg-sky-700', 'bg-emerald-700']; // 700: white text passes WCAG AA
-const COVER = {
-  reading: 'from-amber-100 via-orange-50 to-rose-100 dark:from-amber-500/15 dark:via-orange-500/5 dark:to-rose-500/15',
-  listening: 'from-teal-100 via-cyan-50 to-sky-100 dark:from-teal-500/15 dark:via-cyan-500/5 dark:to-sky-500/15',
-};
 
 const typesOf = (p: TestPart) => [...new Set(partQuestions(p).map(({ group }) => group.type as QuestionType))];
 
@@ -285,11 +283,11 @@ function GoalBanner({ skill, attempts }: { skill: Skill; attempts: IeltsAttempt[
   );
 }
 
-function Cover({ skill, children }: { skill: Skill; children: ReactNode }) {
-  const Icon = skill === 'reading' ? BookOpen : Headphones;
+/** Card cover: the same topic drawing style as the Passage 3 library (gradient + line art of the passage's subject). */
+function Cover({ seed, topic, children }: { seed: string; topic: string; children: ReactNode }) {
   return (
-    <div className={cn('relative flex h-28 items-center justify-center overflow-hidden bg-gradient-to-br', COVER[skill])}>
-      <Icon className="size-14 text-foreground/10" aria-hidden />
+    <div className="relative h-28 overflow-hidden">
+      <CoverArt id={seed} art={artFor(topic)} wide className="absolute inset-0 size-full" />
       {children}
     </div>
   );
@@ -304,15 +302,15 @@ function PartCard({ test, part, index, unit, stat, loading }: { test: PracticeTe
       className="group flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       data-part={part.id}
     >
-      <Cover skill={test.skill}>
-        <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-medium text-white">
+      <Cover seed={`${test.id}-${part.id}`} topic={part.heading}>
+        <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-black/55 px-2 py-0.5 text-xs font-medium text-white">
           <HistoryIcon className="size-3" aria-hidden /> {loading ? '…' : stat ? `Bạn đã làm ${stat.tries} lần` : 'Bạn chưa làm'}
         </span>
         <span className={cn('absolute bottom-0 left-0 rounded-tr-lg px-2.5 py-1 text-xs font-semibold text-white', PART_COLOR[index % PART_COLOR.length])}>
           {test.pack ? `${part.title} · ${index + 1}` : `${unit} ${index + 1}`}
         </span>
         {pct !== null && (
-          <span className={cn('absolute right-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold', pct >= 70 ? 'bg-emerald-700 text-white' : 'bg-white/90 text-slate-900')}>{pct}% đúng</span>
+          <span className={cn('absolute right-2 top-2 rounded-full px-2 py-0.5 text-xs font-semibold', pct >= 70 ? 'bg-emerald-700 text-white' : 'bg-white/90 text-slate-900')}>{pct}% đúng</span>
         )}
       </Cover>
       <div className="flex flex-1 flex-col gap-2 p-3">
@@ -338,12 +336,12 @@ function FullCard({ test, attempts, loading }: { test: PracticeTest; attempts: I
   const all = test.parts.map((p) => p.id).join(',');
   return (
     <Card className="flex flex-col overflow-hidden" data-test={test.id}>
-      <Cover skill={test.skill}>
+      <Cover seed={test.id} topic={test.parts.map((p) => p.heading).join(' ')}>
         <span className="absolute bottom-0 left-0 rounded-tr-lg bg-amber-700 px-2.5 py-1 text-xs font-semibold text-white">Full đề</span>
         {loading ? null : best ? (
           <Badge className="absolute right-2 top-2">Band tốt nhất {fmtBand(Number(best.band))}</Badge>
         ) : (
-          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[11px] font-medium text-foreground">{attempts.length ? `${attempts.length} lần luyện` : 'Chưa làm'}</span>
+          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-slate-900">{attempts.length ? `${attempts.length} lần luyện` : 'Chưa làm'}</span>
         )}
       </Cover>
       <CardHeader className="pb-2">

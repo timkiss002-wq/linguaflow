@@ -41,14 +41,29 @@ export default function RoadmapPage() {
       <ol className="grid gap-3 md:grid-cols-4" aria-label="Các giai đoạn">
         {PHASES.map((p) => {
           const on = p.from <= today && today <= p.to;
+          const st = DAYS.filter((d) => d.date >= p.from && d.date <= p.to).map((d) => dayStatus(d, ctx, today));
+          const done = st.reduce((n, x) => n + x.done, 0);
+          const total = st.reduce((n, x) => n + x.total, 0);
+          const pct = total ? Math.round((done / total) * 100) : 0;
           return (
             <li key={p.id} className={cn('rounded-xl border p-4', on ? 'border-primary bg-primary/5' : 'bg-card')}>
               <p className="text-xs font-medium text-muted-foreground">
                 {formatDay(p.from)} → {formatDay(p.to)}
-                {on && <span className="ml-2 rounded-full bg-primary px-2 py-0.5 text-[11px] font-semibold text-primary-foreground">đang ở đây</span>}
+                {on && <span className="ml-2 rounded-full bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">đang ở đây</span>}
               </p>
               <p className="mt-1 font-semibold">{p.name}</p>
               <p className="mt-1 text-sm text-muted-foreground">{p.goal}</p>
+              <div className="mt-3" data-phase-progress={p.id}>
+                <div className="h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-label={`Tiến độ ${p.name}`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}>
+                  <div className={cn('h-full rounded-full', pct >= 100 ? 'bg-success' : 'bg-primary')} style={{ width: `${pct}%` }} />
+                </div>
+                <p className="mt-1 flex justify-between text-xs text-muted-foreground tabular-nums">
+                  <span>
+                    {done}/{total} việc
+                  </span>
+                  <span>{pct}%</span>
+                </p>
+              </div>
             </li>
           );
         })}
@@ -91,7 +106,7 @@ function Stat({ label, value, hint }: { label: string; value: number | string; h
     <div className="rounded-lg bg-muted px-3 py-2">
       <p className="text-xl font-bold tabular-nums">{value}</p>
       <p className="text-xs text-muted-foreground">{label}</p>
-      {hint && <p className="text-[11px] text-muted-foreground">{hint}</p>}
+      {hint && <p className="text-xs text-muted-foreground">{hint}</p>}
     </div>
   );
 }
@@ -137,7 +152,7 @@ function WeekRow({ week, ctx, today, current }: { week: Week; ctx: Context; toda
                 title={`${formatDay(d.date)} · ${STATE_LABEL[s.state]}${s.total ? ` · ${s.done}/${s.total} việc` : ''}${d.note ? ` · ${d.note}` : ''}`}
                 className={cn('flex h-12 w-11 flex-col items-center justify-center rounded-lg border text-xs font-semibold tabular-nums transition hover:ring-2 hover:ring-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring', CHIP[s.state], d.light && s.state === 'future' && 'border-dashed')}
               >
-                <span className="text-[10px] font-medium opacity-80">{WEEKDAY_VI[d.weekday]}</span>
+                <span className="text-xs font-medium opacity-80">{WEEKDAY_VI[d.weekday]}</span>
                 {s.state === 'future' && dayLock(d, ctx, today) ? (
                   <span className="flex items-center gap-0.5">
                     {date.getDate()}
