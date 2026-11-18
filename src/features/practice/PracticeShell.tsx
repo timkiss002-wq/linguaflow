@@ -5,7 +5,7 @@ import { toast } from 'sonner';
 import { EmptyState } from '@/components/EmptyState';
 import { Button } from '@/components/ui/button';
 import { useRoadmapContext } from '@/features/roadmap/useRoadmap';
-import { PRACTICE_PASS, practiceOf, savePractice } from '@/lib/practice/results';
+import { PRACTICE_PASS, practiceOf, practicePassed, savePractice } from '@/lib/practice/results';
 import { dayByDate, formatDay, type Day, type Task, type TaskKind } from '@/lib/roadmap/plan';
 import { lockReason, refreshRoadmap } from '@/lib/roadmap/progress';
 
@@ -23,7 +23,7 @@ export function PracticeShell({
   title: string;
   intro: ReactNode;
   empty: string;
-  children: (args: { day: Day; task: Task; save: (score: number, total: number) => void }) => ReactNode;
+  children: (args: { day: Day; task: Task; save: (score: number, total: number, answers?: unknown, passed?: boolean) => void }) => ReactNode;
 }) {
   const ctx = useRoadmapContext();
   const day = dayByDate(date);
@@ -43,11 +43,12 @@ export function PracticeShell({
     );
   const lock = lockReason(task, day, ctx);
   const best = practiceOf(task.id);
-  const save = (score: number, total: number) => {
-    savePractice(task.id, score, total);
+  const save = (score: number, total: number, _answers?: unknown, passed = total > 0 && score / total >= PRACTICE_PASS) => {
+    const before = practicePassed(task.id);
+    savePractice(task.id, score, total, passed);
     refreshRoadmap();
-    if (total && score / total >= PRACTICE_PASS) toast.success(`Đạt ${score}/${total} — đã xong việc này.`);
-    else toast(`${score}/${total} câu đúng ngay lần đầu. Cần ${Math.ceil(total * PRACTICE_PASS)} để hoàn thành.`);
+    if (passed && !before) toast.success('Đạt — đã xong việc này.');
+    else if (!passed) toast('Chưa đạt — chỉ cần làm lại những câu sai.');
   };
   return (
     <div className="mx-auto max-w-3xl space-y-5">
@@ -57,9 +58,10 @@ export function PracticeShell({
       <header>
         <h1 className="text-2xl font-bold tracking-tight">{title}</h1>
         <div className="mt-1 text-sm text-muted-foreground">{intro}</div>
-        {best && (
+        {best && (best.total > 0 || practicePassed(task.id)) && (
           <p className="mt-1 text-sm text-muted-foreground">
-            Điểm cao nhất: {best.best}/{best.total}
+            {best.total > 0 && `Đúng ngay lần đầu cao nhất: ${best.best}/${best.total}`}
+            {practicePassed(task.id) && ' · ✓ đã xong'}
           </p>
         )}
       </header>

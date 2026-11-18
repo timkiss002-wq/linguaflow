@@ -88,6 +88,16 @@ export interface TopicProgress {
   best: number;
   total: number;
   at: string;
+  /** passed under the shared rule: ≥ 80 % first try, or the wrong ones redone */
+  passed?: boolean;
+}
+
+function keepBest(all: Record<string, TopicProgress>, topic: string, score: number, total: number, passed: boolean) {
+  const old = all[topic];
+  const wasPassed = Boolean(old && (old.passed || old.best / old.total >= PASS));
+  if (old && old.best >= score && (wasPassed || !passed)) return false;
+  all[topic] = { best: Math.max(old?.best ?? 0, score), total, at: new Date().toISOString(), passed: passed || wasPassed };
+  return true;
 }
 const KEY = 'grammar:progress';
 export function readProgress(): Record<string, TopicProgress> {
@@ -97,10 +107,9 @@ export function readProgress(): Record<string, TopicProgress> {
     return {};
   }
 }
-export function saveProgress(topic: string, score: number, total: number) {
+export function saveProgress(topic: string, score: number, total: number, passed = score / total >= PASS) {
   const all = readProgress();
-  if (all[topic] && all[topic].best >= score) return;
-  all[topic] = { best: score, total, at: new Date().toISOString() };
+  if (!keepBest(all, topic, score, total, passed)) return;
   try {
     localStorage.setItem(KEY, JSON.stringify(all));
   } catch {
@@ -120,10 +129,9 @@ export function readQuiz(): Record<string, TopicProgress> {
     return {};
   }
 }
-export function saveQuiz(topic: string, score: number, total: number) {
+export function saveQuiz(topic: string, score: number, total: number, passed = score / total >= PASS) {
   const all = readQuiz();
-  if (all[topic] && all[topic].best >= score) return;
-  all[topic] = { best: score, total, at: new Date().toISOString() };
+  if (!keepBest(all, topic, score, total, passed)) return;
   try {
     localStorage.setItem(QUIZ_KEY, JSON.stringify(all));
   } catch {

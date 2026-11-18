@@ -27,11 +27,11 @@ export default function WordFormWeekPage() {
   );
 }
 
-function Body({ week, date, started, onStart, save }: { week: number; date: string; started: boolean; onStart: () => void; save: (score: number, total: number) => void }) {
+function Body({ week, date, started, onStart, save }: { week: number; date: string; started: boolean; onStart: () => void; save: (score: number, total: number, answers?: unknown, passed?: boolean) => void }) {
   const w = writingWeek(week);
   const items = useMemo(() => (w ? gapItems(w) : []), [w]);
   if (!w) return <p className="text-sm text-muted-foreground">Tuần này chưa có word form.</p>;
-  if (started) return <WriteRunner key={date} items={items} mode="gap" heading={`Word form · ${w.title}`} onFinish={save} />;
+  if (started) return <WriteRunner key={date} items={items} mode="gap" heading={`Word form · ${w.title}`} onFinish={save} storageKey={`${date}:wordform-week`} />;
   return (
     <div className="space-y-4">
       <p className="text-sm font-medium">

@@ -55,7 +55,7 @@ export default function GrammarFixPage() {
 
   return (
     <PracticeShell date={date} kind="grammar-fix" title="Sửa lỗi sai" intro={INTRO} empty="Bài sửa lỗi có vào các ngày của giai đoạn Nền tảng và Luyện tập.">
-      {({ save }) => <WriteRunner key={date} items={dayItems} mode="fix" heading="Sửa lỗi sai" onFinish={save} />}
+      {({ save }) => <WriteRunner key={date} items={dayItems} mode="fix" heading="Sửa lỗi sai" onFinish={save} storageKey={`${date}:grammar-fix`} />}
     </PracticeShell>
   );
 }

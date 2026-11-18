@@ -59,7 +59,7 @@ export default function RoadmapPage() {
           <Languages className="size-6 shrink-0 text-teal-700 dark:text-teal-300" aria-hidden />
           <div className="flex-1 text-sm">
             <p className="font-semibold">Chủ điểm ngữ pháp đang mở: {t.title_vi}</p>
-            <p className="text-muted-foreground">Chủ điểm sau chỉ mở khi chủ điểm này đạt ≥ 80% ở cả phần nhận diện và phần dịch câu.</p>
+            <p className="text-muted-foreground">Chủ điểm sau chỉ mở khi chủ điểm này đạt ở cả phần nhận diện và phần dịch câu (≥ 80% đúng ngay lần đầu, hoặc làm lại xong các câu sai).</p>
           </div>
           <Button asChild size="sm">
             <Link to={`/grammar/${t.id}`}>Học chủ điểm này</Link>

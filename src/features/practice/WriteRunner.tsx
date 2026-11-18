@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { DiffView } from '@/features/dictation/DiffView';
 import { expandContractions, type Checked } from '@/lib/grammar/drills';
 import { checkWrite, usesWord, type WriteItem } from '@/lib/practice/items';
+import { PASS_RATE, emptyRun, firstRoundDone, firstScore, loadRun, record, runPassed, saveRun, stillWrong, toRedo, type RunState } from '@/lib/practice/retry';
 import { cn } from '@/lib/utils';
 
 export interface WriteAnswer {
@@ -16,12 +17,23 @@ export interface WriteAnswer {
   firstTry: boolean;
 }
 
+export interface RoundResult {
+  /** first-try score of the graded sentences of the first round */
+  score: number;
+  total: number;
+  /** ≥ 80 % first try, or every required sentence redone */
+  passed: boolean;
+}
+
 const norm = (s: string) => expandContractions(s).toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').replace(/\s+/g, ' ').trim();
 
 /**
  * One sentence at a time: write it in English, check against the accepted answers (contractions, capitals and
  * punctuation don't count), see the difference, retry once. "fix" mode starts from the wrong sentence so it can be edited.
- * The score is the number of sentences right on the first try; "Tôi viết đúng" accepts a different correct wording.
+ * Scoring follows the shared rule (lib/practice/retry): graded sentences count on the first try (≥ 80 % to pass), and
+ * after the first round only the sentences that still have to be redone come back — never the whole exercise.
+ * "Tôi viết đúng" accepts a different correct wording. With `storageKey` the run survives leaving the page.
+ * `rounds={false}`: a single pass over the items, no redo (the parent handles it).
  */
 export function WriteRunner({
   items,
@@ -29,17 +41,27 @@ export function WriteRunner({
   heading,
   onFinish,
   summary = true,
+  storageKey,
+  rounds = true,
+  extra,
 }: {
   items: WriteItem[];
   /** translate: Vietnamese → English · fix: correct the wrong sentence · gap: type the right form of the word */
   mode: 'translate' | 'fix' | 'gap';
   heading: ReactNode;
-  /** called after a full run (every sentence), with the first-try score */
-  onFinish: (score: number, total: number, answers: Record<number, WriteAnswer>) => void;
-  /** show the result page at the end (otherwise the parent takes over after onFinish) */
+  /** called at the end of every round (first round and redo rounds) */
+  onFinish: (score: number, total: number, answers: Record<number, WriteAnswer>, passed: boolean) => void;
+  /** show the result page once passed (otherwise the parent takes over after onFinish) */
   summary?: boolean;
+  storageKey?: string;
+  rounds?: boolean;
+  /** more buttons on the result page */
+  extra?: ReactNode;
 }) {
-  const [order, setOrder] = useState(() => items.map((_, i) => i));
+  const [run, setRun] = useState<RunState>(() => (storageKey && rounds ? loadRun(storageKey, items) : emptyRun()));
+  const keyIdx = (keys: string[]) => items.map((it, i) => (keys.includes(it.key) ? i : -1)).filter((i) => i >= 0);
+  const [firstRound, setFirstRound] = useState(() => !firstRoundDone(items, run));
+  const [order, setOrder] = useState(() => (firstRoundDone(items, run) ? [] : items.map((_, i) => i).filter((i) => !(items[i]!.key in run.first))));
   const [pos, setPos] = useState(0);
   const idx = order[pos]!;
   const item = items[idx];
@@ -53,15 +75,23 @@ export function WriteRunner({
   const input = useRef<HTMLTextAreaElement>(null);
   const finished = pos >= order.length;
   const passed = result && result.verdict !== 'wrong';
-  const full = order.length === items.length;
+  const done = runPassed(items, run);
+
+  const update = (st: RunState) => {
+    setRun(st);
+    if (storageKey && rounds) saveRun(storageKey, st);
+  };
 
   useEffect(() => input.current?.focus(), [pos]);
   useEffect(() => {
-    if (!finished) return;
-    if (full) {
+    if (!finished || !order.length) return;
+    if (!rounds) {
       const score = order.filter((i) => answers[i]?.firstTry).length;
-      onFinish(score, order.length, answers);
+      onFinish(score, order.length, answers, score / order.length >= PASS_RATE);
+      return;
     }
+    const { score, total } = firstScore(items, run);
+    onFinish(score, total, answers, runPassed(items, run));
     // run once when the round ends
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished]);
@@ -77,12 +107,15 @@ export function WriteRunner({
     setNote(r.verdict === 'wrong' && item.mustUse && !usesWord(typed, item.mustUse) ? `Câu của bạn chưa dùng “${item.mustUse}”.` : '');
     const ok = r.verdict !== 'wrong';
     setAnswers((a) => ({ ...a, [idx]: { typed, result: r, firstTry: ok && tries === 0 } }));
+    // graded sentences count on their first try only; ungraded ones as soon as they are right
+    if (item.graded === false || tries === 0) update(record(run, item, firstRound, ok && tries === 0, ok));
     setTries((n) => n + 1);
   };
   const canAccept = !item?.mustUse || usesWord(typed, item.mustUse);
   const accept = () => {
-    if (!result) return;
+    if (!result || !item) return;
     setAnswers((a) => ({ ...a, [idx]: { typed, result: { ...result, verdict: 'correct' }, firstTry: tries <= 1 } }));
+    update(record(run, item, firstRound, tries <= 1, true));
     next();
   };
   const next = () => {
@@ -94,8 +127,9 @@ export function WriteRunner({
     setResult(null);
     setNote('');
   };
-  const restart = (only?: number[]) => {
-    const o = only ?? items.map((_, i) => i);
+  const begin = (o: number[], first: boolean, st = run) => {
+    if (st !== run) update(st);
+    setFirstRound(first);
     setOrder(o);
     setAnswers({});
     setPos(0);
@@ -105,8 +139,25 @@ export function WriteRunner({
     setResult(null);
     setNote('');
   };
+  const redo = toRedo(items, run);
+  const optional = stillWrong(items, run);
 
-  if (finished) return summary ? <Summary items={items} order={order} answers={answers} onRetry={restart} /> : null;
+  if (finished) {
+    if (!rounds || (done && !summary)) return null;
+    return (
+      <Summary
+        items={items}
+        run={run}
+        redo={redo}
+        optional={optional}
+        answers={answers}
+        order={order}
+        onRedo={(keys) => begin(keyIdx(keys), false)}
+        onRestart={() => begin(items.map((_, i) => i), true, emptyRun())}
+        extra={extra}
+      />
+    );
+  }
 
   return (
     <div className="space-y-4">
@@ -122,7 +173,13 @@ export function WriteRunner({
 
       <Card>
         <CardContent className="space-y-5 pt-6">
-          <div>
+          <div className={cn(item!.scene && 'flex items-center gap-4')}>
+            {item!.scene && (
+              <div className="flex size-24 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-50 to-teal-50 text-4xl leading-none ring-1 ring-border dark:from-sky-500/10 dark:to-teal-500/10" aria-hidden>
+                <span className="text-center [word-break:keep-all]">{item!.scene}</span>
+              </div>
+            )}
+            <div>
             <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
               {mode === 'fix' ? 'Câu có một lỗi — sửa lại cho đúng' : mode === 'gap' ? 'Điền dạng đúng của từ trong ngoặc' : 'Dịch sang tiếng Anh'}
               {item!.label && <span className="ml-2 rounded bg-muted px-1.5 py-0.5 normal-case tracking-normal">{item!.label}</span>}
@@ -130,11 +187,13 @@ export function WriteRunner({
             <p className={cn('mt-1 text-xl font-semibold leading-snug sm:text-2xl', mode === 'fix' && 'decoration-rose-400 decoration-wavy underline-offset-4')} lang={mode === 'translate' ? 'vi' : 'en'} data-testid="prompt">
               {item!.prompt}
             </p>
+            {!firstRound && <p className="mt-1 text-xs font-medium text-amber-700 dark:text-amber-300">Làm lại câu sai</p>}
             {mode === 'translate' && item!.mustUse && (
               <p className="mt-1 text-sm text-muted-foreground">
                 Dùng: <b lang="en">{item!.mustUse}</b>
               </p>
             )}
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -260,52 +319,103 @@ function Feedback({ result, item }: { result: Checked; item: WriteItem }) {
   );
 }
 
-function Summary({ items, order, answers, onRetry }: { items: WriteItem[]; order: number[]; answers: Record<number, WriteAnswer>; onRetry: (only?: number[]) => void }) {
-  const right = order.filter((i) => answers[i]?.firstTry);
-  const wrong = order.filter((i) => !answers[i]?.firstTry);
-  const pct = Math.round((right.length / order.length) * 100);
+function Summary({
+  items,
+  run,
+  redo,
+  optional,
+  answers,
+  order,
+  onRedo,
+  onRestart,
+  extra,
+}: {
+  items: WriteItem[];
+  run: RunState;
+  redo: string[];
+  optional: string[];
+  answers: Record<number, WriteAnswer>;
+  order: number[];
+  onRedo: (keys: string[]) => void;
+  onRestart: () => void;
+  extra?: ReactNode;
+}) {
+  const { score, total } = firstScore(items, run);
+  const passed = redo.length === 0;
+  const ungraded = items.filter((i) => i.graded === false);
+  const ungradedOk = ungraded.filter((i) => run.first[i.key] || run.fixed.includes(i.key)).length;
+  const pct = total ? Math.round((score / total) * 100) : 100;
+  const rateOk = pct >= PASS_RATE * 100;
+  const list = (passed ? optional : redo).map((k) => items.findIndex((i) => i.key === k)).filter((i) => i >= 0);
   return (
     <div className="space-y-4">
       <Card>
         <CardContent className="space-y-3 pt-6 text-center">
           <p className="text-5xl" aria-hidden>
-            {pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '💪'}
+            {passed ? '🏆' : pct >= 60 ? '👍' : '💪'}
           </p>
-          <h2 className="text-2xl font-bold">
-            {right.length}/{order.length} câu đúng ngay lần đầu
-          </h2>
-          <p className="text-muted-foreground">{order.length < items.length ? 'Đây là vòng luyện lại — điểm của bài chỉ tính khi làm cả bài.' : pct >= 80 ? 'Đạt yêu cầu hôm nay.' : 'Chưa đạt 80%. Luyện lại câu sai rồi làm lại cả bài.'}</p>
+          {total > 0 && (
+            <h2 className="text-2xl font-bold">
+              {score}/{total} câu{ungraded.length ? ' chủ động' : ''} đúng ngay lần đầu
+            </h2>
+          )}
+          {ungraded.length > 0 && (
+            <p className={cn('font-medium', total ? 'text-sm text-muted-foreground' : 'text-2xl font-bold text-foreground')}>
+              {ungradedOk}/{ungraded.length} câu từ thụ động đã đúng
+            </p>
+          )}
+          <p className="text-muted-foreground" data-testid="run-status">
+            {passed
+              ? 'Đạt yêu cầu — đã xong bài này.'
+              : rateOk
+                ? `Phần chủ động đã đạt. Còn ${redo.length} câu từ thụ động — chỉ cần làm lại cho đúng (bao nhiêu lần cũng được).`
+                : `Chưa đạt 80% ngay lần đầu. Chỉ cần làm lại ${redo.length} câu sai — câu nào đúng ngay lần làm lại là qua.`}
+          </p>
           <div className="flex flex-wrap justify-center gap-2">
-            {wrong.length > 0 && (
-              <Button onClick={() => onRetry(wrong)}>
-                <RotateCcw /> Luyện lại {wrong.length} câu sai
+            {!passed && (
+              <Button onClick={() => onRedo(redo)} autoFocus>
+                <RotateCcw /> Làm lại {redo.length} câu sai
               </Button>
             )}
-            <Button variant="outline" onClick={() => onRetry()}>
-              Làm lại cả bài
-            </Button>
+            {passed && optional.length > 0 && (
+              <Button variant="outline" onClick={() => onRedo(optional)}>
+                <RotateCcw /> Luyện thêm {optional.length} câu sai (không bắt buộc)
+              </Button>
+            )}
+            {passed && (
+              <Button variant="ghost" onClick={onRestart}>
+                Làm lại cả bài
+              </Button>
+            )}
+            {extra}
           </div>
         </CardContent>
       </Card>
-      {wrong.length > 0 && (
+      {list.length > 0 && (
         <Card>
           <CardContent className="space-y-3 pt-5">
-            <h3 className="font-semibold">Câu cần xem lại</h3>
+            <h3 className="font-semibold">{passed ? 'Câu sai lần đầu' : 'Câu phải làm lại'}</h3>
             <ul className="divide-y">
-              {wrong.map((i) => (
-                <li key={i} className="space-y-0.5 py-2.5 text-sm">
-                  <p className="font-medium">{items[i]!.prompt}</p>
-                  {answers[i] && (
-                    <p className="text-muted-foreground" lang="en">
-                      Bạn viết: <span className="text-rose-700 dark:text-rose-300">{answers[i]!.typed}</span>
+              {list.map((i) => {
+                const a = order.includes(i) ? answers[i] : undefined;
+                return (
+                  <li key={i} className="space-y-0.5 py-2.5 text-sm">
+                    <p className="font-medium">
+                      {items[i]!.label && <span className="mr-1.5 rounded bg-muted px-1.5 py-0.5 text-xs font-normal">{items[i]!.label}</span>}
+                      {items[i]!.prompt}
                     </p>
-                  )}
-                  <p lang="en">
-                    Đáp án: <b>{answers[i]?.result.closest ?? items[i]!.en[0]}</b>
-                  </p>
-                  {items[i]!.why && <p className="text-muted-foreground">💡 {items[i]!.why}</p>}
-                </li>
-              ))}
+                    {a && (
+                      <p className="text-muted-foreground" lang="en">
+                        Bạn viết: <span className="text-rose-700 dark:text-rose-300">{a.typed}</span>
+                      </p>
+                    )}
+                    <p lang="en">
+                      Đáp án: <b>{a?.result.closest ?? items[i]!.en[0]}</b>
+                    </p>
+                    {items[i]!.why && <p className="text-muted-foreground">💡 {items[i]!.why}</p>}
+                  </li>
+                );
+              })}
             </ul>
           </CardContent>
         </Card>

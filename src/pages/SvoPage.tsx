@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { PracticeShell } from '@/features/practice/PracticeShell';
 import { WriteRunner } from '@/features/practice/WriteRunner';
 import { ROLES, ROLE_INFO, SVO, orderOk, shuffled, svoLevel, svoSet, svoWriteItem, type Chunk, type Role, type SvoSentence } from '@/lib/practice/items';
-import { PRACTICE_PASS } from '@/lib/practice/results';
+import { emptyRun, firstScore, record, runPassed, toRedo, type RunState } from '@/lib/practice/retry';
 import { cn } from '@/lib/utils';
 
 const ROLE_STYLE: Record<Role, string> = {
@@ -55,7 +55,7 @@ export default function SvoPage() {
       date={date}
       kind="grammar-svo"
       title="Câu chuẩn S-V-O"
-      intro="Phần 1: gán nhãn 6 câu · Phần 2: xếp lại 3 câu · Phần 3: viết 3 câu từ tiếng Việt. Tính chung cả 3 phần, cần đúng ít nhất 80%."
+      intro="Phần 1: gán nhãn 6 câu · Phần 2: xếp lại 3 câu · Phần 3: viết 3 câu từ tiếng Việt. Tính chung cả 3 phần, cần đúng ngay lần đầu ít nhất 80%; chưa đạt thì chỉ làm lại những câu sai."
       empty="Bài S-V-O có vào thứ Hai – thứ Bảy của giai đoạn Nền tảng và thứ Hai, Tư, Sáu của giai đoạn Luyện tập."
     >
       {({ task, save }) => (
@@ -118,19 +118,53 @@ function Lesson({ open: initial = false }: { open?: boolean }) {
   );
 }
 
-function Practice({ today, prev, level, onFinish }: { today: SvoSentence[]; prev: SvoSentence[]; level: number; onFinish: (score: number, total: number) => void }) {
+function Practice({ today, prev, level, onFinish }: { today: SvoSentence[]; prev: SvoSentence[]; level: number; onFinish: (score: number, total: number, answers?: unknown, passed?: boolean) => void }) {
+  const arrangeAll = prev.slice(0, 3);
+  const writeAll = useMemo(() => prev.slice(3, 6).map(svoWriteItem), [prev]);
+  // one key per sentence of each part; the shared rule decides what has to be redone
+  const keys = useMemo(() => [...today.map((x) => ({ key: `l:${x.key}` })), ...arrangeAll.map((x) => ({ key: `a:${x.key}` })), ...writeAll.map((x) => ({ key: x.key }))], [today, arrangeAll, writeAll]);
+  const [run, setRun] = useState<RunState>(emptyRun);
+  const [round, setRound] = useState<string[] | null>(null); // null: first round (every sentence)
   const [part, setPart] = useState<1 | 2 | 3 | 4>(1);
-  const [s1, setS1] = useState(0);
-  const [s2, setS2] = useState(0);
-  const [s3, setS3] = useState(0);
-  const arrange = prev.slice(0, 3);
-  const write = useMemo(() => prev.slice(3, 6).map(svoWriteItem), [prev]);
-  const total = today.length + arrange.length + write.length;
-  const score = s1 + s2 + s3;
+  const inRound = (k: string) => !round || round.includes(k);
+  const label = today.filter((x) => inRound(`l:${x.key}`));
+  const arrange = arrangeAll.filter((x) => inRound(`a:${x.key}`));
+  const write = writeAll.filter((x) => inRound(x.key));
+  const nextPart = (from: 1 | 2 | 3) => {
+    const order: [1 | 2 | 3, number][] = [
+      [1, label.length],
+      [2, arrange.length],
+      [3, write.length],
+    ];
+    const n = order.find(([p, len]) => p > from && len > 0);
+    return n ? n[0] : 4;
+  };
+  const add = (results: Record<string, boolean>, st = run) => {
+    let next = st;
+    for (const [k, ok] of Object.entries(results)) next = record(next, { key: k }, !round, ok, ok);
+    setRun(next);
+    return next;
+  };
+  const finish = (st: RunState) => {
+    const { score, total } = firstScore(keys, st);
+    onFinish(score, total, undefined, runPassed(keys, st));
+    setPart(4);
+  };
+  const begin = (only: string[] | null) => {
+    if (!only) setRun(emptyRun());
+    setRound(only);
+    const has = (pre: string, xs: { key: string }[]) => !only || xs.some((x) => only.includes(pre + x.key));
+    setPart(has('l:', today) ? 1 : has('a:', arrangeAll) ? 2 : 3);
+  };
+  const { score, total } = firstScore(keys, run);
+  const redo = toRedo(keys, run);
+  const passed = runPassed(keys, run);
+  const partScore = (pre: string, xs: { key: string }[]) => `${xs.filter((x) => run.first[pre + x.key]).length}/${xs.length}`;
   return (
     <div className="space-y-4">
       <p className="text-sm text-muted-foreground">
         Mức {level}: {LEVEL[level]}
+        {round && <span className="ml-2 font-medium text-amber-700 dark:text-amber-300">· Làm lại {round.length} câu sai</span>}
       </p>
       <ol className="flex gap-2 text-sm" aria-label="Các phần">
         {['Gán nhãn', 'Xếp câu', 'Viết câu', 'Kết quả'].map((t, i) => (
@@ -141,59 +175,66 @@ function Practice({ today, prev, level, onFinish }: { today: SvoSentence[]; prev
       </ol>
       {part === 1 && (
         <Label
-          items={today}
-          onDone={(n) => {
-            setS1(n);
-            setPart(2);
+          key={`l${round?.join() ?? ''}`}
+          items={label}
+          onDone={(r) => {
+            const st = add(Object.fromEntries(Object.entries(r).map(([k, v]) => [`l:${k}`, v])));
+            const n = nextPart(1);
+            if (n === 4) finish(st);
+            else setPart(n);
           }}
         />
       )}
       {part === 2 && (
         <Arrange
+          key={`a${round?.join() ?? ''}`}
           items={arrange}
-          onDone={(n) => {
-            setS2(n);
-            setPart(3);
+          onDone={(r) => {
+            const st = add(Object.fromEntries(Object.entries(r).map(([k, v]) => [`a:${k}`, v])));
+            const n = nextPart(2);
+            if (n === 4) finish(st);
+            else setPart(n);
           }}
         />
       )}
       {part === 3 && (
         <WriteRunner
+          key={`w${round?.join() ?? ''}`}
           items={write}
           mode="translate"
           heading="Phần 3 · viết câu theo trật tự S-V-O"
           summary={false}
-          onFinish={(n, t) => {
-            setS3(n);
-            setPart(4);
-            onFinish(s1 + s2 + n, today.length + arrange.length + t);
-          }}
+          rounds={false}
+          onFinish={(_n, _t, answers) => finish(add(Object.fromEntries(write.map((x, i) => [x.key, Boolean(answers[i]?.firstTry)]))))}
         />
       )}
       {part === 4 && (
         <Card>
           <CardContent className="space-y-3 pt-6 text-center">
             <p className="text-5xl" aria-hidden>
-              {score / total >= PRACTICE_PASS ? '🏆' : '💪'}
+              {passed ? '🏆' : '💪'}
             </p>
             <h2 className="text-2xl font-bold">
-              {score}/{total} đúng
+              {score}/{total} đúng ngay lần đầu
             </h2>
             <p className="text-sm text-muted-foreground">
-              Gán nhãn {s1}/{today.length} · Xếp câu {s2}/{arrange.length} · Viết câu {s3}/{write.length}
+              Gán nhãn {partScore('l:', today)} · Xếp câu {partScore('a:', arrangeAll)} · Viết câu {partScore('', writeAll)}
             </p>
-            <p className="text-muted-foreground">{score / total >= PRACTICE_PASS ? 'Đạt yêu cầu hôm nay.' : `Chưa đạt — cần ${Math.ceil(total * PRACTICE_PASS)}. Xem lại lý thuyết rồi làm lại.`}</p>
-            <Button
-              variant="outline"
-              onClick={() => {
-                setS1(0);
-                setS2(0);
-                setS3(0);
-                setPart(1);
-              }}
-            >
-              <RotateCcw /> Làm lại cả bài
-            </Button>
+            <p className="text-muted-foreground">
+              {passed ? 'Đạt yêu cầu hôm nay.' : `Chưa đạt 80% ngay lần đầu. Chỉ cần làm lại ${redo.length} câu sai — câu nào đúng ngay lần làm lại là qua.`}
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {!passed && (
+                <Button onClick={() => begin(redo)}>
+                  <RotateCcw /> Làm lại {redo.length} câu sai
+                </Button>
+              )}
+              {passed && (
+                <Button variant="outline" onClick={() => begin(null)}>
+                  <RotateCcw /> Làm lại cả bài
+                </Button>
+              )}
+            </div>
           </CardContent>
         </Card>
       )}
@@ -202,7 +243,7 @@ function Practice({ today, prev, level, onFinish }: { today: SvoSentence[]; prev
 }
 
 /** Part 1: pick S / V / O / C / A under every chunk; marked together. A sentence counts when every chunk is right. */
-function Label({ items, onDone }: { items: SvoSentence[]; onDone: (score: number) => void }) {
+function Label({ items, onDone }: { items: SvoSentence[]; onDone: (results: Record<string, boolean>) => void }) {
   const [picked, setPicked] = useState<Record<string, Role>>({});
   const [checked, setChecked] = useState(false);
   const [error, setError] = useState('');
@@ -277,8 +318,8 @@ function Label({ items, onDone }: { items: SvoSentence[]; onDone: (score: number
             <p className="font-semibold">
               {right}/{items.length} câu đúng hết các khối
             </p>
-            <Button size="lg" onClick={() => onDone(right)}>
-              Phần 2 <ArrowRight />
+            <Button size="lg" onClick={() => onDone(Object.fromEntries(items.map((x) => [x.key, x.chunks.every((c, j) => picked[keyOf(x, j)] === c.role)])))}>
+              Tiếp tục <ArrowRight />
             </Button>
           </>
         )}
@@ -291,9 +332,9 @@ const KEEP_CAPITAL = /^(I|English|Hanoi|Japan|Korea|Iceland|Vietnam|Ho Chi Minh|
 const tile = (c: Chunk) => (KEEP_CAPITAL.test(c.text) ? c.text : c.text[0]!.toLowerCase() + c.text.slice(1));
 
 /** Part 2: tap the shuffled chunks in order. One retry per sentence; only the first try counts. */
-function Arrange({ items, onDone }: { items: SvoSentence[]; onDone: (score: number) => void }) {
+function Arrange({ items, onDone }: { items: SvoSentence[]; onDone: (results: Record<string, boolean>) => void }) {
   const [pos, setPos] = useState(0);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState<Record<string, boolean>>({});
   const [answer, setAnswer] = useState<number[]>([]);
   const [result, setResult] = useState<boolean | null>(null);
   const [tries, setTries] = useState(0);
@@ -305,7 +346,7 @@ function Arrange({ items, onDone }: { items: SvoSentence[]; onDone: (score: numb
       answer.map((i) => s.chunks[i]!),
     );
     setResult(ok);
-    if (ok && tries === 0) setScore((n) => n + 1);
+    if (tries === 0) setScore((r) => ({ ...r, [s.key]: ok }));
     setTries((n) => n + 1);
   };
   const next = () => {
@@ -371,7 +412,7 @@ function Arrange({ items, onDone }: { items: SvoSentence[]; onDone: (score: numb
             )}
             {(result === true || (result === false && tries >= 2)) && (
               <Button onClick={next}>
-                {pos + 1 < items.length ? 'Câu tiếp' : 'Phần 3'} <ArrowRight />
+                {pos + 1 < items.length ? 'Câu tiếp' : 'Tiếp tục'} <ArrowRight />
               </Button>
             )}
           </div>
