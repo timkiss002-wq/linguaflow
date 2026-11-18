@@ -19,6 +19,10 @@ export interface WriteItem {
   mustUse?: string;
   /** small label above the prompt (topic, word…) */
   label?: string;
+  /** a few emoji drawn as a little picture of the sentence */
+  scene?: string;
+  /** false: passive vocabulary — only has to be right in the end, not on the first try (default true) */
+  graded?: boolean;
 }
 
 /* ---------- Dịch ví dụ ---------- */
@@ -30,7 +34,7 @@ export function exampleItems(day: Day): WriteItem[] {
   if (passive?.words) {
     for (const w of NEW_WORDS.slice(passive.words[0], passive.words[1])) {
       const vi = passiveExampleVi(w);
-      if (vi && w.ex) out.push({ key: `p:${w.t}`, prompt: vi, en: [w.ex], hint: `${w.t} = ${w.m}`, mustUse: w.t, label: 'Từ thụ động' });
+      if (vi && w.ex) out.push({ key: `p:${w.t}`, prompt: vi, en: [w.ex], hint: `${w.t} = ${w.m}`, mustUse: w.t, label: 'Từ thụ động', graded: false });
     }
   }
   const active = day.tasks.find((t) => t.kind === 'vocab-active');

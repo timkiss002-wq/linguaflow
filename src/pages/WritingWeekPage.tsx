@@ -50,7 +50,7 @@ export default function WritingWeekPage() {
   );
 }
 
-function Body({ w, task, save }: { w: WritingWeek; task: Task; save: (score: number, total: number) => void }) {
+function Body({ w, task, save }: { w: WritingWeek; task: Task; save: (score: number, total: number, answers?: unknown, passed?: boolean) => void }) {
   const items = useMemo(() => paragraphItems(w), [w]);
   const [step, setStep] = useState<'intro' | 'translate' | 'own'>(practiceOf(task.id) ? 'own' : 'intro');
   return (
@@ -76,9 +76,9 @@ function Body({ w, task, save }: { w: WritingWeek; task: Task; save: (score: num
           mode="translate"
           heading="Đoạn văn mẫu"
           summary={false}
-          onFinish={(score, total) => {
-            save(score, total);
-            setStep('own');
+          onFinish={(score, total, answers, passed) => {
+            save(score, total, answers, passed);
+            if (passed) setStep('own');
           }}
         />
       )}

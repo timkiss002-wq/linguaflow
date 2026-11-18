@@ -95,12 +95,12 @@ export interface Context {
 const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ');
 export const normaliseTerm = norm;
 
-/** A grammar topic is passed when its quiz is ≥ 80 % and its translation drill ≥ 80 %. */
+/** A grammar topic is passed when its quiz and its translation drill are each passed (≥ 80 % first try, or the wrong ones redone). */
 export function topicState(topic: string) {
   const q = readQuiz()[topic];
   const d = readProgress()[topic];
-  const quizOk = !!q && q.best / q.total >= PASS;
-  const drillOk = !!d && d.best / d.total >= PASS;
+  const quizOk = !!q && (Boolean(q.passed) || q.best / q.total >= PASS);
+  const drillOk = !!d && (Boolean(d.passed) || d.best / d.total >= PASS);
   return { quiz: q, drill: d, quizOk, drillOk, passed: quizOk && drillOk };
 }
 

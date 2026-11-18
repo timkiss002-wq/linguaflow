@@ -46,18 +46,19 @@ export default function SentencesPage() {
     );
 
   const lock = dayLock(day, ctx);
-  const store = (score: number, total: number) => {
-    const passed = total === 0 || score / total >= PRACTICE_PASS;
+  const store = (score: number, total: number, _answers?: unknown, ok?: boolean) => {
+    const passed = ok ?? (total === 0 || score / total >= PRACTICE_PASS);
     // keep the best result: a worse retry doesn't undo a finished day
     const prev = sentencesOf(date);
     if (prev?.passed && !passed) return;
+    if (prev?.passed && passed && (prev.score ?? 0) >= score) return;
     const entry = { text: '', manual: [], savedAt: new Date().toISOString(), passed, score, total };
     saveSentences(date, entry);
     setSaved(entry);
     refreshRoadmap();
     if (!total) toast.success('Đã đánh dấu học xong 5 cụm hôm nay.');
-    else if (passed) toast.success(`Đạt ${score}/${total} — đã xong bài hôm nay.`);
-    else toast(`${score}/${total} câu đúng ngay lần đầu. Cần ${Math.ceil(total * PRACTICE_PASS)} để hoàn thành.`);
+    else if (passed) toast.success('Đạt — đã xong bài hôm nay.');
+    else toast(`${score}/${total} câu đúng ngay lần đầu, chưa đủ 80%. Chỉ cần làm lại những câu sai.`);
   };
 
   return (
@@ -84,7 +85,7 @@ export default function SentencesPage() {
         <p className={saved.passed ? 'flex items-center gap-1.5 text-sm font-medium text-success' : 'text-sm text-muted-foreground'} data-testid="phrase-result">
           {saved.passed && <CheckCircle2 className="size-4" aria-hidden />}
           {saved.total ? `Lần tốt nhất: ${saved.score}/${saved.total} câu đúng ngay lần đầu` : 'Đã học xong'}
-          {saved.passed ? ' · đã xong bài hôm nay' : ` · cần ${Math.round(PRACTICE_PASS * 100)}% để hoàn thành`}
+          {saved.passed ? ' · đã xong bài hôm nay' : ' · chưa đạt 80% — làm lại các câu sai là xong'}
         </p>
       )}
 
@@ -131,12 +132,12 @@ export default function SentencesPage() {
             )}
           </div>
         ) : started ? (
-          <WriteRunner key={`${date}:${run}`} items={items} mode="translate" heading="Dịch câu với cụm từ" onFinish={store} />
+          <WriteRunner key={`${date}:${run}`} items={items} mode="translate" heading="Dịch câu với cụm từ" onFinish={store} storageKey={`${date}:vocab-active`} />
         ) : (
           <div className="rounded-xl border bg-card p-4 text-sm">
             <p className="text-muted-foreground">
               Ẩn ví dụ ở trên trước khi làm để tự nhớ lại cụm. Gõ câu rồi bấm Enter để kiểm tra; bí thì bấm “Xem gợi ý”. Cần đúng ngay lần đầu{' '}
-              {Math.ceil(items.length * PRACTICE_PASS)}/{items.length} câu.
+              {Math.ceil(items.length * PRACTICE_PASS)}/{items.length} câu; chưa đạt thì chỉ làm lại những câu sai.
             </p>
             <Button
               className="mt-3"
@@ -146,7 +147,7 @@ export default function SentencesPage() {
                 setRun((n) => n + 1);
               }}
             >
-              {saved ? 'Làm lại' : 'Bắt đầu dịch'}
+              {saved?.passed ? 'Xem / luyện lại' : saved ? 'Làm tiếp' : 'Bắt đầu dịch'}
             </Button>
           </div>
         )}
