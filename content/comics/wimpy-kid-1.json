@@ -1,0 +1,1360 @@
+{
+  "id": "wimpy-kid-1",
+  "title": "Diary of a Wimpy Kid (tập 1)",
+  "note_vi": "Câu luyện tập do LinguaFlow tự viết lại bằng tiếng Anh đơn giản, chỉ kể lại các sự việc trong truyện — không chép lời hay hình trong sách. Đọc truyện gốc trong sách của bạn trước, rồi vào đây luyện.",
+  "level": "A2–B1 (IELTS 4.5–5.5)",
+  "chapters": [
+    {
+      "id": "c1",
+      "month": "Tháng 9",
+      "title_vi": "Năm học mới",
+      "art": "book",
+      "summary_vi": "Greg Heffley học cấp 2 và bắt đầu viết nhật ký vì mẹ bắt. Ở trường, cậu lo chuyện được nhiều người thích và sợ “Cheese Touch” — ai chạm vào miếng phô mai mốc trên sân sẽ bị cả trường tránh xa. Ở nhà có anh Rodrick hay trêu cậu và em Manny được bố mẹ chiều.",
+      "words": [
+        {
+          "t": "middle school",
+          "p": "n",
+          "m": "trường cấp 2"
+        },
+        {
+          "t": "popular",
+          "p": "adj",
+          "m": "được nhiều người thích"
+        },
+        {
+          "t": "trick",
+          "p": "n",
+          "m": "trò chơi khăm"
+        },
+        {
+          "t": "spoiled",
+          "p": "adj",
+          "m": "được nuông chiều"
+        },
+        {
+          "t": "avoid",
+          "p": "v",
+          "m": "tránh"
+        },
+        {
+          "t": "disappointed",
+          "p": "adj",
+          "m": "thất vọng"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Mẹ của Greg mua cho cậu ấy một cuốn nhật ký.",
+          "en": [
+            "Greg's mom bought him a diary.",
+            "Greg's mother bought him a diary.",
+            "Greg's mom bought a diary for him."
+          ],
+          "hint": "buy → bought · diary = nhật ký",
+          "scene": "👩📔"
+        },
+        {
+          "vi": "Greg muốn được nhiều người yêu thích ở trường.",
+          "en": [
+            "Greg wants to be popular at school.",
+            "Greg wants to be popular at his school."
+          ],
+          "hint": "popular = được nhiều người thích",
+          "scene": "🏫⭐"
+        },
+        {
+          "vi": "Không ai muốn chạm vào miếng phô mai cũ trên sân.",
+          "en": [
+            "Nobody wants to touch the old cheese on the playground.",
+            "No one wants to touch the old cheese on the playground.",
+            "Nobody wants to touch the old cheese in the playground."
+          ],
+          "hint": "nobody + động từ chia số ít · playground = sân chơi",
+          "scene": "🧀🚫"
+        },
+        {
+          "vi": "Anh trai của Greg đã chơi khăm cậu ấy vào ban đêm.",
+          "en": [
+            "Greg's older brother played a trick on him at night.",
+            "Greg's brother played a trick on him at night.",
+            "Greg's older brother played a trick on him during the night."
+          ],
+          "hint": "play a trick on sb = chơi khăm ai",
+          "scene": "🌙😈"
+        },
+        {
+          "vi": "Rowley là bạn thân nhất của Greg.",
+          "en": [
+            "Rowley is Greg's best friend."
+          ],
+          "hint": "best friend = bạn thân nhất",
+          "scene": "👦🤝👦"
+        },
+        {
+          "vi": "Bố muốn Greg ra ngoài chơi thay vì chơi điện tử.",
+          "en": [
+            "Dad wants Greg to play outside instead of playing video games.",
+            "Greg's dad wants him to play outside instead of playing video games.",
+            "Dad wants Greg to go outside instead of playing video games."
+          ],
+          "hint": "want sb to do sth · instead of + V-ing",
+          "scene": "🎮➡️🌳"
+        }
+      ],
+      "gap": [
+        {
+          "s": "Greg is not very ___ at his school yet.",
+          "base": "popularity",
+          "a": [
+            "popular"
+          ],
+          "why": "Sau “very” và trước giới từ cần tính từ: popular."
+        },
+        {
+          "s": "Rodrick's trick made Greg look ___ in front of Dad.",
+          "base": "fool",
+          "a": [
+            "foolish"
+          ],
+          "why": "look + tính từ: foolish (ngốc nghếch)."
+        },
+        {
+          "s": "Greg was ___ to be put in the hard reading group.",
+          "base": "disappoint",
+          "a": [
+            "disappointed"
+          ],
+          "why": "Cảm xúc của người → tính từ đuôi -ed: disappointed."
+        },
+        {
+          "s": "Mom and Dad always ___ Manny, even when he is naughty.",
+          "base": "protection",
+          "a": [
+            "protect"
+          ],
+          "why": "Chủ ngữ số nhiều + trạng từ always → động từ nguyên mẫu: protect."
+        },
+        {
+          "s": "Greg thinks he is very ___ at video games.",
+          "base": "skill",
+          "a": [
+            "skillful",
+            "skilful",
+            "skilled"
+          ],
+          "why": "very + tính từ: skillful / skilled (giỏi, khéo)."
+        },
+        {
+          "s": "Greg hopes he will be rich and ___ one day.",
+          "base": "fame",
+          "a": [
+            "famous"
+          ],
+          "why": "rich and ___ → hai tính từ nối bằng and: famous."
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "month": "Tháng 10",
+      "title_vi": "Halloween",
+      "art": "star",
+      "summary_vi": "Halloween là ngày lễ Greg thích nhất. Cậu và Rowley thử mở một “nhà ma” dưới tầng hầm nhà Rowley nhưng thất bại. Tối Halloween, hai cậu đi xin kẹo, bị một nhóm thanh niên đuổi và phải chạy trốn sang nhà bà.",
+      "words": [
+        {
+          "t": "haunted house",
+          "p": "n",
+          "m": "nhà ma"
+        },
+        {
+          "t": "costume",
+          "p": "n",
+          "m": "trang phục hoá trang"
+        },
+        {
+          "t": "trick-or-treat",
+          "p": "v",
+          "m": "đi xin kẹo Halloween"
+        },
+        {
+          "t": "basement",
+          "p": "n",
+          "m": "tầng hầm"
+        },
+        {
+          "t": "scary",
+          "p": "adj",
+          "m": "đáng sợ"
+        },
+        {
+          "t": "hide",
+          "p": "v",
+          "m": "trốn"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Halloween là ngày lễ yêu thích của Greg.",
+          "en": [
+            "Halloween is Greg's favorite holiday.",
+            "Halloween is Greg's favourite holiday."
+          ],
+          "hint": "favorite = yêu thích nhất · holiday = ngày lễ",
+          "scene": "🎃"
+        },
+        {
+          "vi": "Mẹ nghĩ Greg đã quá lớn để đi xin kẹo.",
+          "en": [
+            "Mom thinks Greg is too old to go trick-or-treating.",
+            "Mom thinks that Greg is too old to go trick-or-treating.",
+            "Greg's mom thinks he is too old to go trick-or-treating."
+          ],
+          "hint": "too + adj + to V: quá … để …",
+          "scene": "👩🍬"
+        },
+        {
+          "vi": "Greg và Rowley làm một ngôi nhà ma dưới tầng hầm.",
+          "en": [
+            "Greg and Rowley made a haunted house in the basement.",
+            "Greg and Rowley built a haunted house in the basement."
+          ],
+          "hint": "make → made · in the basement",
+          "scene": "🏚️👻"
+        },
+        {
+          "vi": "Bố của Rowley không tin hai cậu bé.",
+          "en": [
+            "Rowley's dad did not believe the two boys.",
+            "Rowley's dad didn't believe the two boys.",
+            "Rowley's father did not believe the two boys."
+          ],
+          "hint": "phủ định quá khứ: did not + V",
+          "scene": "👨🤨"
+        },
+        {
+          "vi": "Hai cậu bé đi xin kẹo cùng nhau vào buổi tối.",
+          "en": [
+            "The two boys went trick-or-treating together in the evening.",
+            "The boys went trick-or-treating together in the evening.",
+            "The two boys went trick-or-treating together at night."
+          ],
+          "hint": "go → went · go trick-or-treating",
+          "scene": "👦👦🍭"
+        },
+        {
+          "vi": "Họ chạy đến nhà bà để trốn.",
+          "en": [
+            "They ran to Grandma's house to hide.",
+            "They ran to their grandma's house to hide.",
+            "They ran to Gramma's house to hide."
+          ],
+          "hint": "run → ran · to + V chỉ mục đích",
+          "scene": "🏃🏠"
+        }
+      ],
+      "gap": [
+        {
+          "s": "The haunted house at the high school was really ___.",
+          "base": "scare",
+          "a": [
+            "scary"
+          ],
+          "why": "was really + tính từ: scary (đáng sợ)."
+        },
+        {
+          "s": "Rowley's dad was not ___ that it was a real haunted house.",
+          "base": "convince",
+          "a": [
+            "convinced"
+          ],
+          "why": "be convinced that … = tin rằng …"
+        },
+        {
+          "s": "The boys' plan for the haunted house was a total ___.",
+          "base": "fail",
+          "a": [
+            "failure"
+          ],
+          "why": "a total + danh từ: failure (sự thất bại)."
+        },
+        {
+          "s": "The little kids were ___ of the houses with spooky decorations.",
+          "base": "fright",
+          "a": [
+            "frightened"
+          ],
+          "why": "be frightened of = sợ … (tính từ -ed chỉ cảm xúc)."
+        },
+        {
+          "s": "Walking slowly with the little kids was very ___ for Greg.",
+          "base": "bore",
+          "a": [
+            "boring"
+          ],
+          "why": "Sự việc gây chán → tính từ đuôi -ing: boring."
+        },
+        {
+          "s": "Greg wanted to get as much candy as ___.",
+          "base": "possibility",
+          "a": [
+            "possible"
+          ],
+          "why": "as much … as possible = càng nhiều càng tốt."
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "month": "Tháng 11",
+      "title_vi": "Đấu vật và cơ bắp",
+      "art": "people",
+      "summary_vi": "Lớp thể dục bắt đầu học đấu vật, và Greg phải đấu với Fregley. Cậu quyết định tập cho khoẻ để có cơ bắp. Cuối tháng, mẹ bắt Greg đăng ký tham gia vở kịch của trường dù cậu rất sợ phải hát.",
+      "words": [
+        {
+          "t": "wrestling",
+          "p": "n",
+          "m": "môn đấu vật"
+        },
+        {
+          "t": "muscle",
+          "p": "n",
+          "m": "cơ bắp"
+        },
+        {
+          "t": "equipment",
+          "p": "n",
+          "m": "dụng cụ, thiết bị"
+        },
+        {
+          "t": "quiz",
+          "p": "n",
+          "m": "bài kiểm tra ngắn"
+        },
+        {
+          "t": "school play",
+          "p": "n",
+          "m": "vở kịch của trường"
+        },
+        {
+          "t": "embarrassing",
+          "p": "adj",
+          "m": "đáng xấu hổ"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Thầy thể dục thông báo các bạn nam sẽ học đấu vật.",
+          "en": [
+            "The P.E. teacher announced that the boys would learn wrestling.",
+            "The PE teacher announced that the boys would learn wrestling.",
+            "The P.E. teacher announced that the boys would do wrestling."
+          ],
+          "hint": "announce that … · P.E. teacher = thầy thể dục",
+          "scene": "📢🤼"
+        },
+        {
+          "vi": "Greg xin bố mẹ mua dụng cụ tập thể dục.",
+          "en": [
+            "Greg asked his parents to buy exercise equipment.",
+            "Greg asked his parents for exercise equipment.",
+            "Greg asked his parents to buy some exercise equipment."
+          ],
+          "hint": "ask sb to do sth · equipment (không đếm được)",
+          "scene": "🏋️🛒"
+        },
+        {
+          "vi": "Greg muốn khoẻ hơn và có nhiều cơ bắp hơn.",
+          "en": [
+            "Greg wants to be stronger and have more muscles.",
+            "Greg wants to be stronger and to have more muscles.",
+            "Greg wants to be stronger and get more muscles."
+          ],
+          "hint": "so sánh hơn: stronger · more muscles",
+          "scene": "💪"
+        },
+        {
+          "vi": "Greg trượt bài kiểm tra bản đồ vì Patty.",
+          "en": [
+            "Greg failed the map quiz because of Patty."
+          ],
+          "hint": "because of + danh từ/tên người",
+          "scene": "🗺️❌"
+        },
+        {
+          "vi": "Mẹ muốn Greg tham gia vở kịch của trường.",
+          "en": [
+            "Mom wants Greg to join the school play.",
+            "Mom wants Greg to take part in the school play.",
+            "Greg's mom wants him to join the school play."
+          ],
+          "hint": "join / take part in = tham gia",
+          "scene": "👩🎭"
+        },
+        {
+          "vi": "Greg sợ phải hát trước cả trường.",
+          "en": [
+            "Greg is afraid of singing in front of the whole school.",
+            "Greg is afraid to sing in front of the whole school.",
+            "Greg is scared of singing in front of the whole school."
+          ],
+          "hint": "be afraid of + V-ing · in front of = trước mặt",
+          "scene": "🎤😰"
+        }
+      ],
+      "gap": [
+        {
+          "s": "Most boys in Greg's school love ___ on TV.",
+          "base": "wrestle",
+          "a": [
+            "wrestling"
+          ],
+          "why": "Sau love cần danh từ (môn thể thao): wrestling."
+        },
+        {
+          "s": "Greg needed to get ___ to win his matches.",
+          "base": "strength",
+          "a": [
+            "stronger",
+            "strong"
+          ],
+          "why": "get + tính từ (so sánh hơn): stronger."
+        },
+        {
+          "s": "Greg decided to start some ___ exercise.",
+          "base": "seriously",
+          "a": [
+            "serious"
+          ],
+          "why": "Trước danh từ exercise cần tính từ: serious."
+        },
+        {
+          "s": "Greg ___ his mom not to make him sign up for the play.",
+          "base": "beg",
+          "a": [
+            "begged"
+          ],
+          "why": "Câu kể chuyện ở quá khứ → begged (nhân đôi g + ed)."
+        },
+        {
+          "s": "Greg thinks singing alone on stage would be very ___.",
+          "base": "embarrass",
+          "a": [
+            "embarrassing"
+          ],
+          "why": "Sự việc gây xấu hổ → tính từ đuôi -ing: embarrassing."
+        },
+        {
+          "s": "After P.E., the cafeteria was full of ___ boys.",
+          "base": "excite",
+          "a": [
+            "excited"
+          ],
+          "why": "Cảm xúc của người (boys) → tính từ đuôi -ed: excited."
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "month": "Tháng 12",
+      "title_vi": "Vở kịch và Giáng sinh",
+      "art": "music",
+      "summary_vi": "Trường diễn vở “Phù thủy xứ Oz” và Greg phải đóng vai một cái cây; buổi diễn rối tung. Giáng sinh, Greg chỉ mong một trò chơi điện tử, nhưng bố lại tặng cậu một bộ tạ rất đắt — đúng lúc cậu đã chán tập tạ.",
+      "words": [
+        {
+          "t": "rehearsal",
+          "p": "n",
+          "m": "buổi tập diễn"
+        },
+        {
+          "t": "line",
+          "p": "n",
+          "m": "lời thoại"
+        },
+        {
+          "t": "present",
+          "p": "n",
+          "m": "món quà"
+        },
+        {
+          "t": "wish list",
+          "p": "n",
+          "m": "danh sách điều ước"
+        },
+        {
+          "t": "expensive",
+          "p": "adj",
+          "m": "đắt tiền"
+        },
+        {
+          "t": "interested in",
+          "p": "adj",
+          "m": "thích, quan tâm"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Vở kịch của trường là “Phù thủy xứ Oz”.",
+          "en": [
+            "The school play was The Wizard of Oz.",
+            "The school play is The Wizard of Oz."
+          ],
+          "hint": "The Wizard of Oz (tên riêng)",
+          "scene": "🎭🌈"
+        },
+        {
+          "vi": "Nhiều học sinh không học thuộc lời thoại.",
+          "en": [
+            "Many students did not learn their lines.",
+            "Many students didn't learn their lines.",
+            "A lot of students did not learn their lines."
+          ],
+          "hint": "learn one's lines = học thuộc lời thoại",
+          "scene": "📜❓"
+        },
+        {
+          "vi": "Greg đóng vai một cái cây trong vở kịch.",
+          "en": [
+            "Greg played a tree in the play.",
+            "Greg was a tree in the play.",
+            "Greg played the part of a tree in the play."
+          ],
+          "hint": "play + vai diễn",
+          "scene": "🌳🎭"
+        },
+        {
+          "vi": "Greg chỉ muốn một trò chơi điện tử cho dịp Giáng sinh.",
+          "en": [
+            "Greg only wanted a video game for Christmas.",
+            "Greg just wanted a video game for Christmas."
+          ],
+          "hint": "for Christmas = cho dịp Giáng sinh",
+          "scene": "🎄🎮"
+        },
+        {
+          "vi": "Bố tặng Greg một bộ tạ rất đắt tiền.",
+          "en": [
+            "Dad gave Greg a very expensive weight set.",
+            "Greg's dad gave him a very expensive weight set.",
+            "Dad gave Greg a very expensive set of weights."
+          ],
+          "hint": "give → gave · weight set = bộ tạ",
+          "scene": "🎁🏋️"
+        },
+        {
+          "vi": "Greg không còn thích tập tạ nữa.",
+          "en": [
+            "Greg was not interested in lifting weights anymore.",
+            "Greg wasn't interested in lifting weights anymore.",
+            "Greg did not like lifting weights anymore.",
+            "Greg didn't like lifting weights anymore."
+          ],
+          "hint": "be interested in + V-ing · not … anymore",
+          "scene": "🏋️😴"
+        }
+      ],
+      "gap": [
+        {
+          "s": "The teacher kept making ___ to the play.",
+          "base": "change",
+          "a": [
+            "changes"
+          ],
+          "why": "make changes (danh từ số nhiều) = thay đổi."
+        },
+        {
+          "s": "Greg could not hide his ___ when he opened the gift.",
+          "base": "disappointed",
+          "a": [
+            "disappointment"
+          ],
+          "why": "Sau tính từ sở hữu his cần danh từ: disappointment."
+        },
+        {
+          "s": "The weight set was very ___.",
+          "base": "expense",
+          "a": [
+            "expensive"
+          ],
+          "why": "very + tính từ: expensive."
+        },
+        {
+          "s": "Greg felt ___ before the show started.",
+          "base": "nerve",
+          "a": [
+            "nervous"
+          ],
+          "why": "feel + tính từ: nervous (lo lắng)."
+        },
+        {
+          "s": "Greg tried to look ___, but he did not like the present.",
+          "base": "happiness",
+          "a": [
+            "happy"
+          ],
+          "why": "look + tính từ: happy."
+        },
+        {
+          "s": "Manny ___ all the toys he wanted in the catalog.",
+          "base": "circle",
+          "a": [
+            "circled"
+          ],
+          "why": "Kể chuyện quá khứ → circled (khoanh tròn)."
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "month": "Tháng 1",
+      "title_vi": "Chiếc xe Big Wheel",
+      "art": "road",
+      "summary_vi": "Greg nghĩ ra trò chơi với chiếc xe ba bánh Big Wheel: Rowley lao xuống dốc, Greg ném bóng. Rowley ngã và gãy tay, rồi được cả trường chú ý nhờ bó bột. Sau đó Greg và Rowley tham gia đội an toàn của trường (Safety Patrol).",
+      "words": [
+        {
+          "t": "hill",
+          "p": "n",
+          "m": "con dốc, đồi"
+        },
+        {
+          "t": "accident",
+          "p": "n",
+          "m": "tai nạn"
+        },
+        {
+          "t": "cast",
+          "p": "n",
+          "m": "bó bột"
+        },
+        {
+          "t": "attention",
+          "p": "n",
+          "m": "sự chú ý"
+        },
+        {
+          "t": "project",
+          "p": "n",
+          "m": "dự án, đề tài"
+        },
+        {
+          "t": "join",
+          "p": "v",
+          "m": "tham gia"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Rowley tặng Greg một chiếc xe ba bánh đồ chơi.",
+          "en": [
+            "Rowley gave Greg a toy tricycle.",
+            "Rowley gave Greg a Big Wheel.",
+            "Rowley gave Greg a toy bike."
+          ],
+          "hint": "tricycle = xe ba bánh (truyện gọi là Big Wheel)",
+          "scene": "🎁🚲"
+        },
+        {
+          "vi": "Greg ném bóng vào Rowley khi cậu ấy lao xuống dốc.",
+          "en": [
+            "Greg threw a ball at Rowley when he rode down the hill.",
+            "Greg threw a football at Rowley when he rode down the hill.",
+            "Greg threw a ball at Rowley when he went down the hill."
+          ],
+          "hint": "throw → threw · throw sth at sb",
+          "scene": "🏈⛰️"
+        },
+        {
+          "vi": "Rowley bị ngã và gãy tay.",
+          "en": [
+            "Rowley fell and broke his hand.",
+            "Rowley fell off and broke his hand."
+          ],
+          "hint": "fall → fell · break → broke",
+          "scene": "🤕✋"
+        },
+        {
+          "vi": "Mọi người đều muốn ký tên lên bó bột của Rowley.",
+          "en": [
+            "Everyone wanted to sign Rowley's cast.",
+            "Everybody wanted to sign Rowley's cast.",
+            "Everyone wanted to write their name on Rowley's cast."
+          ],
+          "hint": "everyone + động từ số ít · sign = ký tên",
+          "scene": "✍️🩹"
+        },
+        {
+          "vi": "Lớp của Greg phải làm một dự án mà không có giáo viên.",
+          "en": [
+            "Greg's class had to do a project without a teacher.",
+            "Greg's class had to work on a project without a teacher."
+          ],
+          "hint": "have to → had to · without = không có",
+          "scene": "🤖📝"
+        },
+        {
+          "vi": "Greg và Rowley tham gia đội an toàn của trường.",
+          "en": [
+            "Greg and Rowley joined the Safety Patrol.",
+            "Greg and Rowley joined the school Safety Patrol.",
+            "Greg and Rowley joined the school's Safety Patrol."
+          ],
+          "hint": "join → joined · Safety Patrol",
+          "scene": "🦺🚸"
+        }
+      ],
+      "gap": [
+        {
+          "s": "Riding the Big Wheel down the hill was fast and ___.",
+          "base": "danger",
+          "a": [
+            "dangerous"
+          ],
+          "why": "fast and ___ → tính từ: dangerous."
+        },
+        {
+          "s": "Rowley got a lot of ___ because of his cast.",
+          "base": "attentive",
+          "a": [
+            "attention"
+          ],
+          "why": "a lot of + danh từ: attention."
+        },
+        {
+          "s": "Independent Study was a new ___ at Greg's school.",
+          "base": "experimental",
+          "a": [
+            "experiment"
+          ],
+          "why": "a new + danh từ: experiment (cuộc thử nghiệm)."
+        },
+        {
+          "s": "The teacher ___ the class for the boys after he read their work.",
+          "base": "cancellation",
+          "a": [
+            "canceled",
+            "cancelled"
+          ],
+          "why": "Động từ quá khứ: canceled / cancelled (huỷ)."
+        },
+        {
+          "s": "The school movie tells kids to be ___ with who they are.",
+          "base": "satisfy",
+          "a": [
+            "satisfied"
+          ],
+          "why": "be satisfied with = hài lòng với."
+        },
+        {
+          "s": "Safety Patrols have an important ___ at school.",
+          "base": "responsible",
+          "a": [
+            "responsibility"
+          ],
+          "why": "an important + danh từ: responsibility (trách nhiệm)."
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "month": "Tháng 2",
+      "title_vi": "Tuyết và truyện tranh",
+      "art": "mountain",
+      "summary_vi": "Trường nghỉ vì tuyết, Greg và Rowley lăn một quả cầu tuyết khổng lồ để phá kỷ lục, nhưng bố Greg phá hỏng nó và hai bạn cãi nhau. Trường tìm người vẽ truyện cho báo trường; Greg tạo ra nhân vật riêng, còn Rowley vẫn vẽ “Zoo-Wee Mama”.",
+      "words": [
+        {
+          "t": "cancel",
+          "p": "v",
+          "m": "huỷ"
+        },
+        {
+          "t": "record",
+          "p": "n",
+          "m": "kỷ lục"
+        },
+        {
+          "t": "melt",
+          "p": "v",
+          "m": "tan chảy"
+        },
+        {
+          "t": "argue",
+          "p": "v",
+          "m": "cãi nhau"
+        },
+        {
+          "t": "cartoonist",
+          "p": "n",
+          "m": "người vẽ truyện tranh"
+        },
+        {
+          "t": "character",
+          "p": "n",
+          "m": "nhân vật"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Trường bị nghỉ vì tuyết rơi.",
+          "en": [
+            "School was canceled because of the snow.",
+            "School was cancelled because of the snow.",
+            "School was closed because of the snow."
+          ],
+          "hint": "bị động quá khứ: was + V3",
+          "scene": "❄️🏫"
+        },
+        {
+          "vi": "Hai bạn muốn làm người tuyết lớn nhất thế giới.",
+          "en": [
+            "The two friends wanted to make the biggest snowman in the world.",
+            "The two boys wanted to make the biggest snowman in the world.",
+            "They wanted to build the biggest snowman in the world."
+          ],
+          "hint": "so sánh nhất: the biggest … in the world",
+          "scene": "⛄🌍"
+        },
+        {
+          "vi": "Tuyết bắt đầu tan vào ngày hôm sau.",
+          "en": [
+            "The snow started to melt the next day.",
+            "The snow began to melt the next day.",
+            "The snow started melting the next day."
+          ],
+          "hint": "start to V / start V-ing · the next day",
+          "scene": "☀️💧"
+        },
+        {
+          "vi": "Greg và Rowley cãi nhau về quả cầu tuyết.",
+          "en": [
+            "Greg and Rowley argued about the snowball.",
+            "Greg and Rowley had an argument about the snowball."
+          ],
+          "hint": "argue about sth",
+          "scene": "😠⚪"
+        },
+        {
+          "vi": "Báo trường cần một người vẽ truyện tranh mới.",
+          "en": [
+            "The school paper needed a new cartoonist.",
+            "The school newspaper needed a new cartoonist.",
+            "The school paper needs a new cartoonist."
+          ],
+          "hint": "school paper = báo trường",
+          "scene": "📰✏️"
+        },
+        {
+          "vi": "Greg tạo ra một nhân vật truyện tranh của riêng mình.",
+          "en": [
+            "Greg created his own comic character.",
+            "Greg created a comic character of his own.",
+            "Greg made his own comic character."
+          ],
+          "hint": "create = tạo ra · one's own = của riêng",
+          "scene": "✏️🦸"
+        }
+      ],
+      "gap": [
+        {
+          "s": "Greg was ___ when school was canceled.",
+          "base": "happiness",
+          "a": [
+            "happy"
+          ],
+          "why": "was + tính từ: happy."
+        },
+        {
+          "s": "Building a huge snowman is not an ___ job.",
+          "base": "easily",
+          "a": [
+            "easy"
+          ],
+          "why": "an + tính từ + danh từ: easy."
+        },
+        {
+          "s": "Dad was ___ with Greg because of the lawn.",
+          "base": "anger",
+          "a": [
+            "angry"
+          ],
+          "why": "be angry with sb = giận ai."
+        },
+        {
+          "s": "Rowley thought Greg was ___ for what happened.",
+          "base": "responsibility",
+          "a": [
+            "responsible"
+          ],
+          "why": "be responsible for = chịu trách nhiệm về."
+        },
+        {
+          "s": "Greg drew his comics very ___.",
+          "base": "quick",
+          "a": [
+            "quickly"
+          ],
+          "why": "Bổ nghĩa cho động từ drew → trạng từ: quickly."
+        },
+        {
+          "s": "Many students sent their comics to the school ___.",
+          "base": "news",
+          "a": [
+            "newspaper",
+            "paper"
+          ],
+          "why": "school newspaper = báo trường (danh từ ghép)."
+        }
+      ]
+    },
+    {
+      "id": "c7",
+      "month": "Tháng 3",
+      "title_vi": "Đội an toàn và chuyện con giun",
+      "art": "leaf",
+      "summary_vi": "Một hôm Greg một mình đưa các em mẫu giáo về và dùng giun doạ các em. Có phụ huynh tưởng đó là Rowley nên Rowley bị phạt. Greg biết mình sai nhưng không nhận lỗi; cuối cùng thầy hiệu trưởng biết sự thật, Greg bị loại khỏi đội còn Rowley được thăng chức.",
+      "words": [
+        {
+          "t": "kindergartner",
+          "p": "n",
+          "m": "trẻ mẫu giáo"
+        },
+        {
+          "t": "worm",
+          "p": "n",
+          "m": "con giun"
+        },
+        {
+          "t": "blame",
+          "p": "v",
+          "m": "đổ lỗi"
+        },
+        {
+          "t": "truth",
+          "p": "n",
+          "m": "sự thật"
+        },
+        {
+          "t": "advice",
+          "p": "n",
+          "m": "lời khuyên"
+        },
+        {
+          "t": "punish",
+          "p": "v",
+          "m": "phạt"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Greg đưa các em mẫu giáo về nhà một mình.",
+          "en": [
+            "Greg walked the kindergartners home alone.",
+            "Greg walked the kindergartners home by himself.",
+            "Greg took the kindergartners home alone."
+          ],
+          "hint": "walk sb home = đưa ai về nhà · alone = một mình",
+          "scene": "🚸👧👦"
+        },
+        {
+          "vi": "Greg dùng giun để doạ các em.",
+          "en": [
+            "Greg used worms to scare the kids.",
+            "Greg used worms to scare the children.",
+            "Greg used worms to frighten the kids."
+          ],
+          "hint": "use sth to V · scare = doạ",
+          "scene": "🪱😱"
+        },
+        {
+          "vi": "Một phụ huynh nghĩ đó là Rowley.",
+          "en": [
+            "A parent thought it was Rowley.",
+            "One parent thought it was Rowley."
+          ],
+          "hint": "think → thought",
+          "scene": "👩‍🦰❓"
+        },
+        {
+          "vi": "Rowley bị phạt vì việc cậu ấy không làm.",
+          "en": [
+            "Rowley was punished for something he did not do.",
+            "Rowley was punished for something he didn't do.",
+            "Rowley got punished for something he did not do."
+          ],
+          "hint": "bị động: was punished for …",
+          "scene": "😢⚖️"
+        },
+        {
+          "vi": "Mẹ khuyên Greg nên làm điều đúng đắn.",
+          "en": [
+            "Mom told Greg to do the right thing.",
+            "Mom advised Greg to do the right thing.",
+            "Greg's mom told him to do the right thing."
+          ],
+          "hint": "tell / advise sb to do sth",
+          "scene": "👩💬✅"
+        },
+        {
+          "vi": "Cuối cùng thầy hiệu trưởng đã biết sự thật.",
+          "en": [
+            "In the end, the principal found out the truth.",
+            "Finally, the principal learned the truth.",
+            "In the end, the principal learned the truth."
+          ],
+          "hint": "find out → found out · principal = hiệu trưởng (trong truyện là thầy phụ trách)",
+          "scene": "🧑‍🏫🔍"
+        }
+      ],
+      "gap": [
+        {
+          "s": "The rain left a lot of worms on the ___.",
+          "base": "side",
+          "a": [
+            "sidewalk",
+            "pavement"
+          ],
+          "why": "sidewalk = vỉa hè (danh từ ghép)."
+        },
+        {
+          "s": "The little kids were very ___ of the worms.",
+          "base": "fear",
+          "a": [
+            "fearful",
+            "afraid",
+            "scared"
+          ],
+          "why": "be afraid / scared / fearful of = sợ."
+        },
+        {
+          "s": "Greg felt ___ because Rowley was in trouble.",
+          "base": "guilt",
+          "a": [
+            "guilty"
+          ],
+          "why": "feel + tính từ: guilty (có lỗi)."
+        },
+        {
+          "s": "Mom gave Greg some good ___.",
+          "base": "advise",
+          "a": [
+            "advice"
+          ],
+          "why": "some good + danh từ không đếm được: advice."
+        },
+        {
+          "s": "Greg was not ___ to his friend.",
+          "base": "loyalty",
+          "a": [
+            "loyal"
+          ],
+          "why": "be loyal to = trung thành với."
+        },
+        {
+          "s": "Rowley got a ___ after the teacher learned the truth.",
+          "base": "promote",
+          "a": [
+            "promotion"
+          ],
+          "why": "a + danh từ: promotion (sự thăng chức)."
+        }
+      ]
+    },
+    {
+      "id": "c8",
+      "month": "Tháng 4",
+      "title_vi": "Tìm bạn mới",
+      "art": "building",
+      "summary_vi": "Rowley chơi thân với Collin, Greg thấy bị bỏ rơi. Để trả đũa, Greg sang ngủ nhà Fregley và có một đêm rất tệ. Xem kỷ yếu cũ của Rodrick, Greg nảy ra ý muốn được bình chọn vào trang “Class Favorites” của năm nay.",
+      "words": [
+        {
+          "t": "sleepover",
+          "p": "n",
+          "m": "buổi ngủ lại nhà bạn"
+        },
+        {
+          "t": "jealous",
+          "p": "adj",
+          "m": "ghen tị"
+        },
+        {
+          "t": "lonely",
+          "p": "adj",
+          "m": "cô đơn"
+        },
+        {
+          "t": "yearbook",
+          "p": "n",
+          "m": "kỷ yếu"
+        },
+        {
+          "t": "vote",
+          "p": "v",
+          "m": "bình chọn"
+        },
+        {
+          "t": "plan",
+          "p": "n",
+          "m": "kế hoạch"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Rowley chơi với Collin mỗi ngày sau giờ học.",
+          "en": [
+            "Rowley hangs out with Collin every day after school.",
+            "Rowley hung out with Collin every day after school.",
+            "Rowley plays with Collin every day after school."
+          ],
+          "hint": "hang out with = đi chơi với",
+          "scene": "👦👦🏫"
+        },
+        {
+          "vi": "Greg cảm thấy cô đơn và ghen tị.",
+          "en": [
+            "Greg felt lonely and jealous.",
+            "Greg feels lonely and jealous."
+          ],
+          "hint": "feel → felt + tính từ",
+          "scene": "😔💚"
+        },
+        {
+          "vi": "Greg ngủ lại nhà Fregley một đêm.",
+          "en": [
+            "Greg slept over at Fregley's house for one night.",
+            "Greg had a sleepover at Fregley's house.",
+            "Greg stayed at Fregley's house for one night."
+          ],
+          "hint": "sleep over at sb's house",
+          "scene": "🛏️🏠"
+        },
+        {
+          "vi": "Đó là một đêm rất tệ đối với Greg.",
+          "en": [
+            "It was a very bad night for Greg.",
+            "It was a terrible night for Greg."
+          ],
+          "hint": "for + người",
+          "scene": "🌙😵"
+        },
+        {
+          "vi": "Greg xem cuốn kỷ yếu cũ của anh trai.",
+          "en": [
+            "Greg looked at his brother's old yearbook.",
+            "Greg read his brother's old yearbook.",
+            "Greg looked through his brother's old yearbook."
+          ],
+          "hint": "look at / look through = xem",
+          "scene": "📕👀"
+        },
+        {
+          "vi": "Greg muốn được bình chọn vào trang kỷ yếu.",
+          "en": [
+            "Greg wants to be voted onto the yearbook page.",
+            "Greg wanted to be voted onto the yearbook page.",
+            "Greg wants to be chosen for the yearbook page."
+          ],
+          "hint": "bị động: be voted onto …",
+          "scene": "🗳️📕"
+        }
+      ],
+      "gap": [
+        {
+          "s": "Rowley and Collin wore ___ T-shirts.",
+          "base": "match",
+          "a": [
+            "matching"
+          ],
+          "why": "Tính từ đuôi -ing đứng trước danh từ: matching (giống nhau)."
+        },
+        {
+          "s": "Greg was ___ of Rowley's new friend.",
+          "base": "jealousy",
+          "a": [
+            "jealous"
+          ],
+          "why": "be jealous of = ghen tị với."
+        },
+        {
+          "s": "Fregley started acting ___ after eating the candy.",
+          "base": "craze",
+          "a": [
+            "crazy"
+          ],
+          "why": "act + tính từ: crazy."
+        },
+        {
+          "s": "Greg ran home ___ in the middle of the night.",
+          "base": "quiet",
+          "a": [
+            "quietly"
+          ],
+          "why": "Bổ nghĩa cho động từ ran → trạng từ: quietly."
+        },
+        {
+          "s": "Some students in the yearbook were very ___.",
+          "base": "talent",
+          "a": [
+            "talented"
+          ],
+          "why": "very + tính từ: talented (có tài)."
+        },
+        {
+          "s": "Greg needed a big ___ to become Class Clown.",
+          "base": "planning",
+          "a": [
+            "plan"
+          ],
+          "why": "a big + danh từ: plan (kế hoạch)."
+        }
+      ]
+    },
+    {
+      "id": "c9",
+      "month": "Tháng 5–6",
+      "title_vi": "Miếng phô mai",
+      "art": "sun",
+      "summary_vi": "Truyện tranh “Zoo-Wee Mama” của Rowley được đăng báo và Rowley nổi tiếng. Hai bạn cãi nhau to, rồi một nhóm thanh niên bắt Rowley ăn miếng phô mai mốc. Để cứu bạn, Greg nói chính mình đã vứt miếng phô mai — nên Greg mang “Cheese Touch”, và hai bạn làm lành.",
+      "words": [
+        {
+          "t": "substitute",
+          "p": "n",
+          "m": "giáo viên dạy thay"
+        },
+        {
+          "t": "credit",
+          "p": "n",
+          "m": "công lao, sự ghi nhận"
+        },
+        {
+          "t": "crowd",
+          "p": "n",
+          "m": "đám đông"
+        },
+        {
+          "t": "save",
+          "p": "v",
+          "m": "cứu"
+        },
+        {
+          "t": "make up",
+          "p": "phr v",
+          "m": "làm lành"
+        },
+        {
+          "t": "last day of school",
+          "p": "n",
+          "m": "ngày cuối năm học"
+        }
+      ],
+      "translate": [
+        {
+          "vi": "Mẹ của Greg là giáo viên dạy thay hôm đó.",
+          "en": [
+            "Greg's mom was the substitute teacher that day.",
+            "Greg's mother was the substitute teacher that day."
+          ],
+          "hint": "substitute teacher = giáo viên dạy thay",
+          "scene": "👩‍🏫😳"
+        },
+        {
+          "vi": "Truyện tranh của Rowley được đăng trên báo trường.",
+          "en": [
+            "Rowley's comic was published in the school paper.",
+            "Rowley's comic was printed in the school paper.",
+            "Rowley's comic was published in the school newspaper."
+          ],
+          "hint": "bị động: was published",
+          "scene": "📰😂"
+        },
+        {
+          "vi": "Greg muốn tên mình có trên truyện tranh.",
+          "en": [
+            "Greg wanted his name on the comic.",
+            "Greg wanted his name to be on the comic."
+          ],
+          "hint": "want + tân ngữ + on …",
+          "scene": "✍️📰"
+        },
+        {
+          "vi": "Một đám đông vây quanh hai cậu bé.",
+          "en": [
+            "A crowd gathered around the two boys.",
+            "A crowd formed around the two boys.",
+            "A crowd stood around the two boys."
+          ],
+          "hint": "gather around = vây quanh",
+          "scene": "👥👦👦"
+        },
+        {
+          "vi": "Greg nói dối để cứu bạn mình.",
+          "en": [
+            "Greg lied to save his friend.",
+            "Greg told a lie to save his friend."
+          ],
+          "hint": "lie → lied · to + V chỉ mục đích",
+          "scene": "🤥🛟"
+        },
+        {
+          "vi": "Cuối cùng, Greg và Rowley lại là bạn bè.",
+          "en": [
+            "In the end, Greg and Rowley were friends again.",
+            "Finally, Greg and Rowley were friends again.",
+            "In the end, Greg and Rowley became friends again."
+          ],
+          "hint": "in the end = cuối cùng · again = lại",
+          "scene": "🤝😊"
+        }
+      ],
+      "gap": [
+        {
+          "s": "Rowley's comic made him very ___ at school.",
+          "base": "fame",
+          "a": [
+            "famous",
+            "popular"
+          ],
+          "why": "very + tính từ: famous."
+        },
+        {
+          "s": "Greg thought he should get some ___ for the comic.",
+          "base": "credible",
+          "a": [
+            "credit"
+          ],
+          "why": "some + danh từ: credit (công lao)."
+        },
+        {
+          "s": "The two boys had a big ___ after school.",
+          "base": "argue",
+          "a": [
+            "argument"
+          ],
+          "why": "a big + danh từ: argument (cuộc cãi vã)."
+        },
+        {
+          "s": "The teenagers were very ___ to the two boys.",
+          "base": "rudeness",
+          "a": [
+            "rude",
+            "mean"
+          ],
+          "why": "be rude to = thô lỗ với."
+        },
+        {
+          "s": "Greg made a ___ choice to help his friend.",
+          "base": "bravery",
+          "a": [
+            "brave"
+          ],
+          "why": "Trước danh từ choice cần tính từ: brave (dũng cảm)."
+        },
+        {
+          "s": "In June, Greg ate lunch ___ at a big table.",
+          "base": "lonely",
+          "a": [
+            "alone"
+          ],
+          "why": "ate lunch alone = ăn trưa một mình (alone là trạng từ)."
+        }
+      ]
+    }
+  ]
+}
