@@ -62,7 +62,7 @@ export default function GrammarPage() {
                   <div className="relative border-b bg-muted/40 px-6 pb-2 pt-4">
                     <GrammarDiagram kind={t.diagram} className="mx-auto max-h-28" />
                     {p && (
-                      <span className={cn('absolute right-2 top-2 flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold', full ? 'bg-emerald-600 text-white' : 'bg-background text-foreground ring-1 ring-border')}>
+                      <span className={cn('absolute right-2 top-2 flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold', full ? 'bg-emerald-600 text-white' : 'bg-background text-foreground ring-1 ring-border')}>
                         {full && <CheckCircle2 className="size-3" aria-hidden />} {p.best}/{p.total}
                       </span>
                     )}

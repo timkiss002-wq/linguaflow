@@ -4,32 +4,38 @@
 
 @layer base {
   :root {
-    /* Warm, friendly light theme: cream background, white cards, teal brand, ink text. */
-    --background: 40 38% 97%;
-    --foreground: 224 33% 15%;
+    /* Palette A "Teal ấm" (Nov 2026): cream page, white cards, teal brand, one warm orange reserved for progress and
+       streaks. Every text pair ≥ 4.5:1 and every control boundary ≥ 3:1 against its surface (WCAG 2.2 AA). */
+    --background: 38 50% 97%;
+    --foreground: 222 29% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 224 33% 15%;
+    --card-foreground: 222 29% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 33% 15%;
-    --primary: 173 80% 27%;
+    --popover-foreground: 222 29% 15%;
+    --primary: 175 77% 26%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 40 30% 93%;
-    --secondary-foreground: 224 33% 15%;
-    --muted: 40 28% 94%;
-    --muted-foreground: 222 11% 41%;
-    --accent: 168 58% 93%;
-    --accent-foreground: 173 80% 21%;
-    --destructive: 0 72% 50%;
+    --secondary: 37 35% 93%;
+    --secondary-foreground: 222 29% 15%;
+    --muted: 37 35% 93%;
+    --muted-foreground: 219 12% 39%;
+    --accent: 169 48% 91%;
+    --accent-foreground: 176 69% 22%;
+    /* warm: progress, streaks, milestones — never for errors or buttons */
+    --warm: 17 88% 40%;
+    --warm-soft: 34 100% 92%;
+    --warm-foreground: 15 79% 34%;
+    --destructive: 0 74% 42%;
     --destructive-foreground: 0 0% 100%;
-    --success: 152 61% 33%;
+    --success: 142 72% 29%;
     --success-foreground: 0 0% 100%;
-    --warning: 30 92% 42%;
+    --warning: 26 90% 37%;
     --warning-foreground: 0 0% 100%;
-    --border: 36 22% 88%;
-    --input: 36 16% 82%;
-    --ring: 173 80% 32%;
+    --border: 36 27% 85%;
+    /* boundaries of inputs, unchecked switches and status rings: 3.8:1 on white */
+    --input: 36 10% 50%;
+    --ring: 175 77% 32%;
     --sidebar: 0 0% 100%;
-    --sidebar-foreground: 224 25% 28%;
+    --sidebar-foreground: 222 25% 28%;
     --radius: 0.875rem;
     /* Chart series colour, validated (dataviz checks) against the light card surface. */
     --chart-1: #008c7c;
@@ -63,8 +69,11 @@
     --warning: 38 92% 55%;
     --warning-foreground: 222 47% 8%;
     --border: 222 22% 20%;
-    --input: 222 22% 24%;
+    --input: 222 16% 55%;
     --ring: 172 66% 45%;
+    --warm: 27 96% 61%;
+    --warm-soft: 27 96% 61% / 0.14;
+    --warm-foreground: 31 97% 72%;
     --sidebar: 224 30% 10%;
     --sidebar-foreground: 215 20% 80%;
     /* Dark step of the same hue, validated against the dark card surface. */
@@ -107,6 +116,10 @@
 
   * {
     @apply border-border;
+  }
+  /* the sticky tab bar (48px) must never hide the element that has keyboard focus (WCAG 2.4.11) */
+  html {
+    scroll-padding-top: 4rem;
   }
   body {
     @apply bg-background text-foreground antialiased;

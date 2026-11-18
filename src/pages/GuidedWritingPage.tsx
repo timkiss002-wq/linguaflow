@@ -223,7 +223,7 @@ function PromptCard({ prompt, type, color, levels, loading }: { prompt: GuidedPr
           </p>
         )}
         <span className={cn('absolute left-0 top-0 rounded-br-lg px-2.5 py-1 text-xs font-semibold text-white', color)}>{type.name}</span>
-        {top !== null && <span className={cn('absolute right-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold', top >= 70 ? 'bg-emerald-600 text-white' : 'bg-white/90 text-foreground')}>{top}%</span>}
+        {top !== null && <span className={cn('absolute right-2 top-2 rounded-full px-2 py-0.5 text-xs font-semibold', top >= 70 ? 'bg-emerald-600 text-white' : 'bg-white/90 text-foreground')}>{top}%</span>}
       </Link>
       <div className="flex flex-1 flex-col gap-2 p-3">
         <Link to={`/writing/guided/${prompt.id}`} className="font-semibold hover:text-rose-700 dark:hover:text-rose-300">
@@ -239,7 +239,7 @@ function PromptCard({ prompt, type, color, levels, loading }: { prompt: GuidedPr
             [...levels.values()]
               .sort((a, b) => a.level - b.level)
               .map((g) => (
-                <Badge key={g.level} variant={g.accuracy >= 70 ? 'default' : 'outline'} className="text-[11px] font-normal">
+                <Badge key={g.level} variant={g.accuracy >= 70 ? 'default' : 'outline'} className="text-xs font-normal">
                   Level {g.level} · {g.accuracy}%
                 </Badge>
               ))

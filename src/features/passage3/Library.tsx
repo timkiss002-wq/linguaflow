@@ -83,7 +83,7 @@ function SetRow({ set }: { set: P3Set }) {
   const sum = setSummary(set);
   return (
     <Link to={`/ielts/passage3/${set.id}`} className="group flex items-center gap-3 rounded-xl border bg-card px-3 py-2.5 transition hover:border-primary/40 hover:shadow-sm" data-set={set.id}>
-      <span className="w-14 shrink-0 rounded-md bg-muted py-0.5 text-center text-[11px] font-bold text-muted-foreground">{TYPE_INFO[set.type].short}</span>
+      <span className="w-14 shrink-0 rounded-md bg-muted py-0.5 text-center text-xs font-bold text-muted-foreground">{TYPE_INFO[set.type].short}</span>
       <span className="min-w-0 flex-1">
         <span className="block truncate text-sm font-medium group-hover:text-primary">{set.title}</span>
         <span className="block truncate text-xs text-muted-foreground">{set.topic}</span>
@@ -152,7 +152,7 @@ export function Cambridge() {
               Cam {b}
               {n > 0 && (
                 <span
-                  className={cn('ml-1.5 rounded-full px-1.5 text-[10px]', book === b ? 'bg-primary-foreground/20' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200')}
+                  className={cn('ml-1.5 rounded-full px-1.5 text-xs', book === b ? 'bg-primary-foreground/20' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200')}
                 >
                   {n}
                 </span>

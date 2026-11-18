@@ -142,7 +142,7 @@ export default function ReviewPage() {
                 {days.map((d) => (
                   <div key={d.date.toISOString()} className="flex flex-1 flex-col items-center gap-0.5" title={`${d.date.toLocaleDateString()}: ${d.count}`}>
                     <div className="w-full rounded-sm bg-primary/60" style={{ height: `${Math.max(2, (d.count / max) * 40)}px` }} />
-                    <span className="text-[10px] text-muted-foreground">{d.date.toLocaleDateString('vi-VN', { weekday: 'narrow' })}</span>
+                    <span className="text-xs text-muted-foreground">{d.date.toLocaleDateString('vi-VN', { weekday: 'narrow' })}</span>
                   </div>
                 ))}
               </div>

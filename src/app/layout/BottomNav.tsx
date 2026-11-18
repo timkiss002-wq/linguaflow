@@ -14,7 +14,7 @@ export function BottomNav() {
           const on = active === s.id;
           return (
             <li key={s.id}>
-              <NavLink to={s.to} aria-current={on ? 'page' : undefined} className="flex flex-col items-center gap-0.5 py-2 text-[11px] font-medium">
+              <NavLink to={s.to} aria-current={on ? 'page' : undefined} className="flex flex-col items-center gap-0.5 py-2 text-xs font-medium">
                 <span className={cn('flex h-7 w-10 items-center justify-center rounded-full transition-colors', on ? 'bg-primary/10 text-primary' : 'text-muted-foreground')}>
                   <s.icon className="size-5" aria-hidden />
                 </span>

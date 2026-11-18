@@ -1,5 +1,6 @@
 import { ArrowRight, Check, CheckCircle2, Lightbulb, RotateCcw, ThumbsUp, X } from 'lucide-react';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { Link, useInRouterContext } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -347,6 +348,7 @@ function Summary({
   const pct = total ? Math.round((score / total) * 100) : 100;
   const rateOk = pct >= PASS_RATE * 100;
   const list = (passed ? optional : redo).map((k) => items.findIndex((i) => i.key === k)).filter((i) => i >= 0);
+  const inRouter = useInRouterContext();
   return (
     <div className="space-y-4">
       <Card>
@@ -375,6 +377,13 @@ function Summary({
             {!passed && (
               <Button onClick={() => onRedo(redo)} autoFocus>
                 <RotateCcw /> Làm lại {redo.length} câu sai
+              </Button>
+            )}
+            {passed && inRouter && (
+              <Button asChild autoFocus data-testid="next-after-pass">
+                <Link to="/dashboard">
+                  Sang việc tiếp theo <ArrowRight />
+                </Link>
               </Button>
             )}
             {passed && optional.length > 0 && (

@@ -18,7 +18,7 @@ export function TodayChip() {
       title={`Chuỗi ${streak} ngày · hôm nay ${minutes}/${goal} phút`}
     >
       <span className="flex items-center gap-1 font-semibold">
-        <Flame className="size-3.5 text-orange-500" aria-hidden /> {streak}
+        <Flame className="size-3.5 text-warm" aria-hidden /> {streak}
       </span>
       <span className={done ? 'font-medium text-emerald-700 dark:text-emerald-400' : 'text-muted-foreground tabular-nums'}>
         {minutes}/{goal} phút
