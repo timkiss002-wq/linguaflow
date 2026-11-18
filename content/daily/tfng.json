@@ -1,0 +1,1076 @@
+{
+  "$comment": "Đoạn đọc ngắn True / False / Not Given, LinguaFlow tự soạn. a: T | F | NG. ev: câu trong bài làm căn cứ (để tô sáng), không có với NG. w: giải thích, nhấn mạnh FALSE (bài nói NGƯỢC lại) và NOT GIVEN (bài KHÔNG nói tới).",
+  "passages": [
+    {
+      "id": "p01",
+      "title": "A school garden",
+      "text": "Last year, a primary school in Da Lat started a small vegetable garden. The idea came from a group of parents, not the teachers. Every Friday, children spend one hour planting and watering. The vegetables are used in the school kitchen. So far, the school has grown cabbages and carrots, but tomatoes did not grow well because of the cold weather.",
+      "q": [
+        {
+          "s": "The garden was the teachers' idea.",
+          "a": "F",
+          "ev": "The idea came from a group of parents, not the teachers.",
+          "w": "Bài nói rõ ý tưởng của phụ huynh, KHÔNG phải giáo viên → ngược lại → FALSE."
+        },
+        {
+          "s": "Children work in the garden once a week.",
+          "a": "T",
+          "ev": "Every Friday, children spend one hour planting and watering.",
+          "w": "Every Friday = mỗi tuần một lần → TRUE."
+        },
+        {
+          "s": "The children enjoy working in the garden.",
+          "a": "NG",
+          "w": "Bài không nói trẻ có thích hay không → NOT GIVEN. Đừng tự suy luận."
+        },
+        {
+          "s": "Some of the vegetables are sold to local shops.",
+          "a": "NG",
+          "w": "Bài chỉ nói rau dùng trong bếp trường; không nhắc tới chuyện bán. Không có câu nào nói 'không bán' → NOT GIVEN."
+        },
+        {
+          "s": "Tomatoes grew successfully in the garden.",
+          "a": "F",
+          "ev": "tomatoes did not grow well because of the cold weather.",
+          "w": "Bài nói cà chua KHÔNG mọc tốt → ngược với 'successfully' → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "title": "Morning coffee",
+      "text": "Vietnam is one of the largest coffee producers in the world. Most of the coffee grown in the country is Robusta, which has a stronger taste than Arabica. In cities, many young people meet friends in coffee shops after work. Some new cafés serve coffee with salt or egg, and these drinks are becoming popular with tourists.",
+      "q": [
+        {
+          "s": "Vietnam produces more coffee than any other country.",
+          "a": "NG",
+          "w": "Bài chỉ nói 'một trong những nước lớn nhất', không nói lớn nhất → không đủ để kết luận đúng hay sai → NOT GIVEN."
+        },
+        {
+          "s": "Robusta tastes stronger than Arabica.",
+          "a": "T",
+          "ev": "Robusta, which has a stronger taste than Arabica.",
+          "w": "Khớp với bài → TRUE."
+        },
+        {
+          "s": "Most coffee grown in Vietnam is Arabica.",
+          "a": "F",
+          "ev": "Most of the coffee grown in the country is Robusta",
+          "w": "Bài nói phần lớn là Robusta → ngược lại → FALSE."
+        },
+        {
+          "s": "Egg coffee is more expensive than normal coffee.",
+          "a": "NG",
+          "w": "Bài không nói gì về giá → NOT GIVEN."
+        },
+        {
+          "s": "Tourists are starting to like coffee with salt or egg.",
+          "a": "T",
+          "ev": "these drinks are becoming popular with tourists.",
+          "w": "becoming popular with tourists = khách du lịch bắt đầu thích → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "title": "Online classes",
+      "text": "During the pandemic, many universities moved their classes online. A survey of 2,000 students found that 60% found it harder to concentrate at home. However, most students said they saved time because they did not have to travel. Several universities now offer a mix of online and face-to-face lessons.",
+      "q": [
+        {
+          "s": "More than half of the students in the survey had difficulty concentrating at home.",
+          "a": "T",
+          "ev": "60% found it harder to concentrate at home.",
+          "w": "60% > một nửa → TRUE."
+        },
+        {
+          "s": "Most students said online classes wasted their time.",
+          "a": "F",
+          "ev": "most students said they saved time",
+          "w": "Bài nói họ TIẾT KIỆM thời gian → ngược với 'wasted' → FALSE."
+        },
+        {
+          "s": "Students got lower marks in online classes.",
+          "a": "NG",
+          "w": "Bài nói về sự tập trung, không nói gì về điểm số → NOT GIVEN."
+        },
+        {
+          "s": "All universities have returned to face-to-face teaching only.",
+          "a": "F",
+          "ev": "Several universities now offer a mix of online and face-to-face lessons.",
+          "w": "Một số trường vẫn kết hợp online → 'all … only face-to-face' bị bài phủ nhận → FALSE."
+        },
+        {
+          "s": "The survey was carried out by the government.",
+          "a": "NG",
+          "w": "Bài không nói ai làm khảo sát → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "title": "City bicycles",
+      "text": "In 2023, the city introduced a bike-sharing scheme with 500 bicycles. Users pay through a mobile app, and the first 30 minutes are free. The scheme was planned for the city centre only, but because of high demand it was extended to two nearby districts in 2024. Officials hope it will reduce traffic jams.",
+      "q": [
+        {
+          "s": "Users must pay for the first half hour.",
+          "a": "F",
+          "ev": "the first 30 minutes are free.",
+          "w": "30 phút đầu MIỄN PHÍ → ngược lại → FALSE."
+        },
+        {
+          "s": "The scheme now covers more areas than originally planned.",
+          "a": "T",
+          "ev": "it was extended to two nearby districts in 2024.",
+          "w": "Ban đầu chỉ trung tâm, sau mở rộng → TRUE."
+        },
+        {
+          "s": "The scheme has already reduced traffic jams.",
+          "a": "NG",
+          "w": "Bài chỉ nói các quan chức HY VỌNG sẽ giảm; chưa nói đã giảm hay chưa → NOT GIVEN."
+        },
+        {
+          "s": "The bicycles can be paid for with cash.",
+          "a": "NG",
+          "w": "Bài nói trả qua app, nhưng không nói có được trả tiền mặt hay không → NOT GIVEN. (Nếu bài viết 'only through an app' thì mới là FALSE.)"
+        },
+        {
+          "s": "The scheme started with 500 bicycles.",
+          "a": "T",
+          "ev": "a bike-sharing scheme with 500 bicycles.",
+          "w": "Khớp → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "title": "Honey bees",
+      "text": "Honey bees live in large groups called colonies. A colony has one queen, who lays all the eggs, and thousands of worker bees. Worker bees are female and collect food for the colony. In winter, bees stay inside the hive and keep warm by moving their wings. Scientists are worried because the number of bees has fallen in many countries.",
+      "q": [
+        {
+          "s": "A colony can have several queens.",
+          "a": "F",
+          "ev": "A colony has one queen",
+          "w": "Bài nói chỉ MỘT nữ hoàng → ngược lại → FALSE."
+        },
+        {
+          "s": "Worker bees are female.",
+          "a": "T",
+          "ev": "Worker bees are female",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Bees sleep for most of the winter.",
+          "a": "NG",
+          "w": "Bài nói ong ở trong tổ và vỗ cánh giữ ấm, không nói chúng ngủ → NOT GIVEN."
+        },
+        {
+          "s": "The number of bees has fallen because of pesticides.",
+          "a": "NG",
+          "w": "Bài có nói số lượng ong giảm nhưng KHÔNG nói nguyên nhân → NOT GIVEN. Bẫy: một nửa câu đúng, nửa kia không có trong bài."
+        },
+        {
+          "s": "Bees move their wings to stay warm in winter.",
+          "a": "T",
+          "ev": "keep warm by moving their wings.",
+          "w": "Khớp → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "title": "A new library",
+      "text": "The new city library opened in March. It has three floors and a café on the ground floor. Unlike the old library, it stays open until 9 p.m. on weekdays. Membership is free for students, while other adults pay a small yearly fee. In its first month, more than 10,000 people visited.",
+      "q": [
+        {
+          "s": "The new library closes earlier than the old one.",
+          "a": "F",
+          "ev": "Unlike the old library, it stays open until 9 p.m. on weekdays.",
+          "w": "Thư viện mới mở MUỘN HƠN thư viện cũ → ngược lại → FALSE."
+        },
+        {
+          "s": "Students do not have to pay to become members.",
+          "a": "T",
+          "ev": "Membership is free for students",
+          "w": "free = không phải trả → TRUE."
+        },
+        {
+          "s": "The café is the most popular part of the library.",
+          "a": "NG",
+          "w": "Bài chỉ nói có quán cà phê, không so sánh mức độ phổ biến → NOT GIVEN."
+        },
+        {
+          "s": "Children can borrow books for free.",
+          "a": "NG",
+          "w": "Bài nói về sinh viên và người lớn khác, không nhắc trẻ em → NOT GIVEN."
+        },
+        {
+          "s": "More than 10,000 people visited the library in its first month.",
+          "a": "T",
+          "ev": "In its first month, more than 10,000 people visited.",
+          "w": "Khớp → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "title": "Working from home",
+      "text": "A software company in Ho Chi Minh City allows staff to work from home two days a week. The manager says productivity has stayed the same, but staff feel less tired. The company plans to keep this policy next year. However, new employees must work in the office every day for their first three months.",
+      "q": [
+        {
+          "s": "Staff can work from home every day.",
+          "a": "F",
+          "ev": "work from home two days a week.",
+          "w": "Chỉ hai ngày mỗi tuần → ngược với 'every day' → FALSE."
+        },
+        {
+          "s": "According to the manager, productivity has increased.",
+          "a": "F",
+          "ev": "productivity has stayed the same",
+          "w": "'stayed the same' (không đổi) mâu thuẫn với 'increased' → FALSE, không phải NOT GIVEN."
+        },
+        {
+          "s": "New employees cannot work from home at first.",
+          "a": "T",
+          "ev": "new employees must work in the office every day for their first three months.",
+          "w": "Phải đến văn phòng mỗi ngày → không được làm ở nhà → TRUE."
+        },
+        {
+          "s": "Most staff prefer working from home.",
+          "a": "NG",
+          "w": "Bài nói họ đỡ mệt, không nói họ thích hơn → NOT GIVEN."
+        },
+        {
+          "s": "The company will continue the policy next year.",
+          "a": "T",
+          "ev": "The company plans to keep this policy next year.",
+          "w": "plans to keep ≈ will continue → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "title": "Street food",
+      "text": "Street food is an important part of life in many Asian cities. It is usually cheap and quick, which makes it popular with office workers. In some cities, the government has moved street sellers away from busy roads to improve safety. Food experts say that the quality of street food is often as good as restaurant food.",
+      "q": [
+        {
+          "s": "Street food is popular with office workers because it is fast and cheap.",
+          "a": "T",
+          "ev": "It is usually cheap and quick, which makes it popular with office workers.",
+          "w": "Khớp cả lý do → TRUE."
+        },
+        {
+          "s": "All street sellers have been banned in Asian cities.",
+          "a": "F",
+          "ev": "the government has moved street sellers away from busy roads",
+          "w": "Chỉ chuyển đi xa đường đông ở MỘT SỐ thành phố, không cấm hết → FALSE."
+        },
+        {
+          "s": "Experts believe street food is usually worse than restaurant food.",
+          "a": "F",
+          "ev": "the quality of street food is often as good as restaurant food.",
+          "w": "Chuyên gia nói thường NGANG BẰNG → ngược với 'worse' → FALSE."
+        },
+        {
+          "s": "Tourists spend more on street food than local people.",
+          "a": "NG",
+          "w": "Bài không nhắc khách du lịch → NOT GIVEN."
+        },
+        {
+          "s": "Street sellers were moved to make roads safer.",
+          "a": "T",
+          "ev": "to improve safety.",
+          "w": "improve safety = làm an toàn hơn → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "title": "Sleep and teenagers",
+      "text": "Doctors recommend that teenagers sleep eight to ten hours a night. However, a study in 2022 showed that many students sleep fewer than seven hours. The main reason was the use of phones late at night. Students who slept more had better memory in tests, according to the researchers.",
+      "q": [
+        {
+          "s": "Doctors say teenagers need at least eight hours of sleep.",
+          "a": "T",
+          "ev": "teenagers sleep eight to ten hours a night.",
+          "w": "8–10 giờ = ít nhất 8 giờ → TRUE."
+        },
+        {
+          "s": "No students in the study slept fewer than seven hours.",
+          "a": "F",
+          "ev": "many students sleep fewer than seven hours.",
+          "w": "Bài nói NHIỀU học sinh ngủ ít hơn 7 tiếng → 'không ai' bị bài phủ nhận → FALSE."
+        },
+        {
+          "s": "Using phones late at night was the main cause of short sleep.",
+          "a": "T",
+          "ev": "The main reason was the use of phones late at night.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Students who slept more also got higher marks in maths.",
+          "a": "NG",
+          "w": "Bài nói về trí nhớ, không nói điểm toán → NOT GIVEN."
+        },
+        {
+          "s": "The study took place in 2022.",
+          "a": "T",
+          "ev": "a study in 2022",
+          "w": "Khớp → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "title": "Plastic bags",
+      "text": "Ten years ago, supermarkets in the town gave plastic bags to customers for free. Now customers must pay for each bag. Since this change, the use of plastic bags has dropped by 70%. Some shoppers complained at first, but most now bring their own bags. The town council is considering a similar rule for plastic bottles.",
+      "q": [
+        {
+          "s": "Supermarkets still give plastic bags for free.",
+          "a": "F",
+          "ev": "Now customers must pay for each bag.",
+          "w": "Bây giờ PHẢI TRẢ TIỀN → ngược lại → FALSE."
+        },
+        {
+          "s": "Plastic bag use has fallen sharply.",
+          "a": "T",
+          "ev": "the use of plastic bags has dropped by 70%.",
+          "w": "Giảm 70% = giảm mạnh → TRUE."
+        },
+        {
+          "s": "No shoppers complained about the change.",
+          "a": "F",
+          "ev": "Some shoppers complained at first",
+          "w": "Có một số người phàn nàn → 'no shoppers' sai → FALSE."
+        },
+        {
+          "s": "The council has already banned plastic bottles.",
+          "a": "F",
+          "ev": "The town council is considering a similar rule for plastic bottles.",
+          "w": "Mới đang CÂN NHẮC, chưa cấm → ngược với 'already banned' → FALSE."
+        },
+        {
+          "s": "Each plastic bag costs about 2,000 dong.",
+          "a": "NG",
+          "w": "Bài không nói giá cụ thể → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "title": "Learning a second language",
+      "text": "Research shows that children can learn a second language more easily than adults, especially pronunciation. However, adults are often better at learning grammar rules because they can think about language in a logical way. Many experts believe that the best age to start is before twelve, but people can learn a language at any age.",
+      "q": [
+        {
+          "s": "Children usually find pronunciation easier to learn than adults do.",
+          "a": "T",
+          "ev": "children can learn a second language more easily than adults, especially pronunciation.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Adults cannot learn a second language.",
+          "a": "F",
+          "ev": "people can learn a language at any age.",
+          "w": "Bài nói học ở tuổi nào cũng được → ngược lại → FALSE."
+        },
+        {
+          "s": "Adults are often better at grammar rules than children.",
+          "a": "T",
+          "ev": "adults are often better at learning grammar rules",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Learning a second language improves children's maths skills.",
+          "a": "NG",
+          "w": "Không nhắc toán → NOT GIVEN."
+        },
+        {
+          "s": "Experts agree that people should start learning after the age of twelve.",
+          "a": "F",
+          "ev": "the best age to start is before twelve",
+          "w": "Bài nói TRƯỚC 12 tuổi → ngược với 'after' → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "title": "A family business",
+      "text": "Mr Nam opened a small bakery in 1995. At first, he sold only bread, but later he added cakes and pastries. Today, his daughter manages the business, and it has three shops in the city. Mr Nam still comes to the main shop every morning to check the bread. He says the secret of his success is using fresh ingredients.",
+      "q": [
+        {
+          "s": "The bakery sold cakes from the beginning.",
+          "a": "F",
+          "ev": "At first, he sold only bread, but later he added cakes",
+          "w": "Lúc đầu CHỈ bán bánh mì → ngược lại → FALSE."
+        },
+        {
+          "s": "Mr Nam's daughter now runs the business.",
+          "a": "T",
+          "ev": "his daughter manages the business",
+          "w": "manages = runs → TRUE."
+        },
+        {
+          "s": "Mr Nam has completely retired from the bakery.",
+          "a": "F",
+          "ev": "Mr Nam still comes to the main shop every morning to check the bread.",
+          "w": "Ông vẫn đến kiểm tra mỗi sáng → không nghỉ hẳn → FALSE."
+        },
+        {
+          "s": "The bakery is the most famous in the city.",
+          "a": "NG",
+          "w": "Bài không so sánh với tiệm khác → NOT GIVEN."
+        },
+        {
+          "s": "Mr Nam believes fresh ingredients are important for his success.",
+          "a": "T",
+          "ev": "the secret of his success is using fresh ingredients.",
+          "w": "Khớp → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "title": "Electric motorbikes",
+      "text": "Electric motorbikes are becoming more common in Vietnam. They are quieter than petrol motorbikes and do not produce smoke. However, many buyers worry about the battery, which usually needs to be charged every day. The price of electric models has fallen in recent years, but charging stations are still limited outside big cities.",
+      "q": [
+        {
+          "s": "Electric motorbikes are noisier than petrol ones.",
+          "a": "F",
+          "ev": "They are quieter than petrol motorbikes",
+          "w": "Bài nói YÊN TĨNH HƠN → ngược lại → FALSE."
+        },
+        {
+          "s": "Some buyers are concerned about the battery.",
+          "a": "T",
+          "ev": "many buyers worry about the battery",
+          "w": "worry = concerned → TRUE."
+        },
+        {
+          "s": "Electric motorbikes are now cheaper than petrol motorbikes.",
+          "a": "NG",
+          "w": "Bài nói giá xe điện GIẢM, nhưng không so với xe xăng → NOT GIVEN. Bẫy so sánh thường gặp."
+        },
+        {
+          "s": "There are plenty of charging stations in rural areas.",
+          "a": "F",
+          "ev": "charging stations are still limited outside big cities.",
+          "w": "Ngoài thành phố lớn trạm sạc còn ÍT → ngược với 'plenty' → FALSE."
+        },
+        {
+          "s": "The government gives money to people who buy electric motorbikes.",
+          "a": "NG",
+          "w": "Không nhắc chính phủ hỗ trợ → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "title": "A mountain village",
+      "text": "Ta Van is a village in the mountains of northern Vietnam. Many visitors come to see the rice terraces, especially in September when the rice turns yellow. Local families offer homestays, so tourists can sleep in traditional houses. Tourism has brought more income, but some residents say the village is becoming too crowded.",
+      "q": [
+        {
+          "s": "The rice turns yellow in September.",
+          "a": "T",
+          "ev": "in September when the rice turns yellow.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Tourists can stay in local people's houses.",
+          "a": "T",
+          "ev": "Local families offer homestays",
+          "w": "homestay = ở nhà dân → TRUE."
+        },
+        {
+          "s": "Tourism has reduced local income.",
+          "a": "F",
+          "ev": "Tourism has brought more income",
+          "w": "Thu nhập TĂNG → ngược với 'reduced' → FALSE."
+        },
+        {
+          "s": "All residents are happy with the number of tourists.",
+          "a": "F",
+          "ev": "some residents say the village is becoming too crowded.",
+          "w": "Có người cho là quá đông → 'all … happy' sai → FALSE."
+        },
+        {
+          "s": "The village has a new hotel.",
+          "a": "NG",
+          "w": "Không nhắc khách sạn → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p15",
+      "title": "Reading habits",
+      "text": "A survey of 1,000 adults found that people read fewer printed books than ten years ago. However, the number of people reading e-books and listening to audiobooks has grown. Younger people were more likely to use audiobooks, often while travelling. Only 15% of the people surveyed said they never read books at all.",
+      "q": [
+        {
+          "s": "People read more printed books than ten years ago.",
+          "a": "F",
+          "ev": "people read fewer printed books than ten years ago.",
+          "w": "fewer = ít hơn → ngược lại → FALSE."
+        },
+        {
+          "s": "Audiobooks are more popular among younger people.",
+          "a": "T",
+          "ev": "Younger people were more likely to use audiobooks",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Most people in the survey never read books.",
+          "a": "F",
+          "ev": "Only 15% of the people surveyed said they never read books at all.",
+          "w": "Chỉ 15% không đọc → không phải đa số → FALSE."
+        },
+        {
+          "s": "E-books are cheaper than printed books.",
+          "a": "NG",
+          "w": "Không nói giá → NOT GIVEN."
+        },
+        {
+          "s": "Older people never use audiobooks.",
+          "a": "NG",
+          "w": "Bài chỉ nói người trẻ dùng NHIỀU HƠN; không nói người lớn tuổi hoàn toàn không dùng → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "title": "The night market",
+      "text": "The night market opens every Friday and Saturday from 6 p.m. to midnight. It has around 200 stalls selling clothes, souvenirs and food. The market was created in 2015 to attract tourists, but today most of the customers are local people. Cars are not allowed in the street while the market is open.",
+      "q": [
+        {
+          "s": "The market opens every evening.",
+          "a": "F",
+          "ev": "The night market opens every Friday and Saturday",
+          "w": "Chỉ thứ Sáu và thứ Bảy → ngược với 'every evening' → FALSE."
+        },
+        {
+          "s": "The market was originally created for tourists.",
+          "a": "T",
+          "ev": "The market was created in 2015 to attract tourists",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Most customers today are tourists.",
+          "a": "F",
+          "ev": "today most of the customers are local people.",
+          "w": "Phần lớn là người địa phương → FALSE."
+        },
+        {
+          "s": "Motorbikes can enter the street during the market.",
+          "a": "NG",
+          "w": "Bài chỉ nói ô tô bị cấm; không nói xe máy → NOT GIVEN. Bẫy: đừng coi 'cars' là 'mọi xe'."
+        },
+        {
+          "s": "The market has about 200 stalls.",
+          "a": "T",
+          "ev": "It has around 200 stalls",
+          "w": "around = about → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p17",
+      "title": "Fast fashion",
+      "text": "Fast fashion companies produce cheap clothes very quickly to follow the latest trends. Because the clothes are cheap, many people buy more than they need and throw them away after a short time. Making clothes uses a lot of water. Some brands have started recycling programmes, where customers can return old clothes in exchange for a discount.",
+      "q": [
+        {
+          "s": "Fast fashion clothes are produced slowly.",
+          "a": "F",
+          "ev": "produce cheap clothes very quickly",
+          "w": "very quickly → ngược với 'slowly' → FALSE."
+        },
+        {
+          "s": "Low prices lead some people to buy too many clothes.",
+          "a": "T",
+          "ev": "Because the clothes are cheap, many people buy more than they need",
+          "w": "Khớp quan hệ nguyên nhân → TRUE."
+        },
+        {
+          "s": "All fashion brands now recycle old clothes.",
+          "a": "F",
+          "ev": "Some brands have started recycling programmes",
+          "w": "Chỉ MỘT SỐ hãng → 'all' sai → FALSE."
+        },
+        {
+          "s": "Customers who return old clothes can get a lower price.",
+          "a": "T",
+          "ev": "in exchange for a discount.",
+          "w": "discount = giảm giá → TRUE."
+        },
+        {
+          "s": "Cotton clothes use more water than other clothes.",
+          "a": "NG",
+          "w": "Bài nói may quần áo tốn nước nói chung, không so cotton với loại khác → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "title": "A volunteer programme",
+      "text": "Every summer, a group of university students volunteers to teach English to children in rural areas. The programme lasts four weeks. Volunteers do not receive a salary, but their food and accommodation are paid for. Last year, 40 students joined, which was twice as many as the year before.",
+      "q": [
+        {
+          "s": "The volunteers are paid a salary.",
+          "a": "F",
+          "ev": "Volunteers do not receive a salary",
+          "w": "Không nhận lương → FALSE."
+        },
+        {
+          "s": "Volunteers do not have to pay for their meals.",
+          "a": "T",
+          "ev": "their food and accommodation are paid for.",
+          "w": "Ăn ở được chi trả → TRUE."
+        },
+        {
+          "s": "The number of volunteers doubled last year.",
+          "a": "T",
+          "ev": "40 students joined, which was twice as many as the year before.",
+          "w": "twice as many = gấp đôi → TRUE."
+        },
+        {
+          "s": "The programme lasts for two months.",
+          "a": "F",
+          "ev": "The programme lasts four weeks.",
+          "w": "Bốn tuần ≈ một tháng, không phải hai tháng → FALSE."
+        },
+        {
+          "s": "The children's English improved a lot after the programme.",
+          "a": "NG",
+          "w": "Không nói kết quả học của trẻ → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p19",
+      "title": "Healthy eating",
+      "text": "Nutritionists advise people to eat at least five portions of fruit and vegetables a day. In a recent study, only one in four adults reached this target. People with busy jobs often chose fast food because it saved time. The study suggested that cooking simple meals at home could help people eat more healthily.",
+      "q": [
+        {
+          "s": "Most adults in the study ate five portions of fruit and vegetables a day.",
+          "a": "F",
+          "ev": "only one in four adults reached this target.",
+          "w": "Chỉ 1/4 đạt → không phải đa số → FALSE."
+        },
+        {
+          "s": "Busy people sometimes eat fast food to save time.",
+          "a": "T",
+          "ev": "People with busy jobs often chose fast food because it saved time.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Fast food is more expensive than home cooking.",
+          "a": "NG",
+          "w": "Không nói giá → NOT GIVEN."
+        },
+        {
+          "s": "The study recommended cooking at home.",
+          "a": "T",
+          "ev": "cooking simple meals at home could help people eat more healthily.",
+          "w": "suggested ≈ recommended → TRUE."
+        },
+        {
+          "s": "Children eat more vegetables than adults.",
+          "a": "NG",
+          "w": "Không nhắc trẻ em → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p20",
+      "title": "The river clean-up",
+      "text": "In 2021, local residents began a project to clean the To Lich River. Volunteers collect rubbish from the banks once a month. The water is still polluted, but the smell has improved, according to people living nearby. The city plans to build a new water treatment plant by 2026.",
+      "q": [
+        {
+          "s": "The river is now completely clean.",
+          "a": "F",
+          "ev": "The water is still polluted",
+          "w": "Vẫn còn ô nhiễm → FALSE."
+        },
+        {
+          "s": "Volunteers collect rubbish every week.",
+          "a": "F",
+          "ev": "Volunteers collect rubbish from the banks once a month.",
+          "w": "Mỗi tháng một lần, không phải mỗi tuần → FALSE."
+        },
+        {
+          "s": "People living near the river say it smells better.",
+          "a": "T",
+          "ev": "the smell has improved, according to people living nearby.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "The new treatment plant has already been built.",
+          "a": "F",
+          "ev": "The city plans to build a new water treatment plant by 2026.",
+          "w": "Mới là KẾ HOẠCH → FALSE."
+        },
+        {
+          "s": "The project was started by the city government.",
+          "a": "F",
+          "ev": "local residents began a project",
+          "w": "Người dân bắt đầu, không phải chính quyền → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "p21",
+      "title": "Smartphones and children",
+      "text": "Many parents give their children smartphones at a young age. Some schools have banned phones during lessons because they distract students. Teachers at these schools report that students talk to each other more at break time. However, the ban does not apply to students who need a phone for medical reasons.",
+      "q": [
+        {
+          "s": "Some schools do not allow phones in class.",
+          "a": "T",
+          "ev": "Some schools have banned phones during lessons",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Teachers say students talk less at break time since the ban.",
+          "a": "F",
+          "ev": "students talk to each other more at break time.",
+          "w": "Nói chuyện NHIỀU HƠN → ngược với 'less' → FALSE."
+        },
+        {
+          "s": "Students' exam results improved after the ban.",
+          "a": "NG",
+          "w": "Bài không nói điểm thi → NOT GIVEN."
+        },
+        {
+          "s": "Every student must leave their phone at home.",
+          "a": "F",
+          "ev": "the ban does not apply to students who need a phone for medical reasons.",
+          "w": "Có ngoại lệ, và lệnh cấm chỉ trong giờ học → FALSE."
+        },
+        {
+          "s": "Most parents think phones are harmful.",
+          "a": "NG",
+          "w": "Không nói ý kiến phụ huynh → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p22",
+      "title": "Robots in factories",
+      "text": "A car factory in the north of the country now uses robots for painting and welding. The company says the robots work faster and make fewer mistakes than humans. No workers lost their jobs; instead, they were trained to check and repair the robots. The company plans to buy more robots next year.",
+      "q": [
+        {
+          "s": "The robots make more mistakes than human workers.",
+          "a": "F",
+          "ev": "make fewer mistakes than humans.",
+          "w": "fewer mistakes → FALSE."
+        },
+        {
+          "s": "Some workers lost their jobs because of the robots.",
+          "a": "F",
+          "ev": "No workers lost their jobs",
+          "w": "Không ai mất việc → FALSE."
+        },
+        {
+          "s": "Workers were trained to repair the robots.",
+          "a": "T",
+          "ev": "they were trained to check and repair the robots.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "The robots cost more than a million dollars.",
+          "a": "NG",
+          "w": "Không nói giá robot → NOT GIVEN."
+        },
+        {
+          "s": "The factory is located in the south of the country.",
+          "a": "F",
+          "ev": "A car factory in the north of the country",
+          "w": "Nhà máy ở phía bắc → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "p23",
+      "title": "Public parks",
+      "text": "Studies show that people who live near green spaces tend to feel less stressed. In the last five years, the city has opened six new parks. Most of them are small, but they have playgrounds and exercise equipment. Entry to all city parks is free, and they are open from 5 a.m. to 10 p.m.",
+      "q": [
+        {
+          "s": "Living near parks can reduce stress.",
+          "a": "T",
+          "ev": "people who live near green spaces tend to feel less stressed.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "The new parks are all very large.",
+          "a": "F",
+          "ev": "Most of them are small",
+          "w": "Phần lớn nhỏ → FALSE."
+        },
+        {
+          "s": "Visitors must pay to enter the parks.",
+          "a": "F",
+          "ev": "Entry to all city parks is free",
+          "w": "Miễn phí → FALSE."
+        },
+        {
+          "s": "The parks are open 24 hours a day.",
+          "a": "F",
+          "ev": "they are open from 5 a.m. to 10 p.m.",
+          "w": "Có giờ mở cửa cụ thể → FALSE."
+        },
+        {
+          "s": "The new parks are popular with elderly people.",
+          "a": "NG",
+          "w": "Không nói ai hay đến công viên → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p24",
+      "title": "A language app",
+      "text": "A new language-learning app was launched last year. It offers short daily lessons of about ten minutes. The basic version is free, but users must pay for extra features such as speaking practice. The company says it has two million users, although it has not said how many of them pay.",
+      "q": [
+        {
+          "s": "Lessons in the app take around ten minutes.",
+          "a": "T",
+          "ev": "short daily lessons of about ten minutes.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Speaking practice is included in the free version.",
+          "a": "F",
+          "ev": "users must pay for extra features such as speaking practice.",
+          "w": "Phải trả tiền → không có trong bản miễn phí → FALSE."
+        },
+        {
+          "s": "Half of the users pay for extra features.",
+          "a": "NG",
+          "ev": "it has not said how many of them pay.",
+          "w": "Công ty CHƯA công bố số người trả tiền → không biết → NOT GIVEN."
+        },
+        {
+          "s": "The app has two million users, according to the company.",
+          "a": "T",
+          "ev": "The company says it has two million users",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "The app teaches more than twenty languages.",
+          "a": "NG",
+          "w": "Không nói số ngôn ngữ → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p25",
+      "title": "Rainy season",
+      "text": "In southern Vietnam, the rainy season usually lasts from May to November. Heavy rain often falls in the afternoon for a short time. In the city, some streets flood quickly because the drainage system is old. The city has started to upgrade the system, but the work will take several years.",
+      "q": [
+        {
+          "s": "The rainy season in the south usually starts in May.",
+          "a": "T",
+          "ev": "the rainy season usually lasts from May to November.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Heavy rain usually lasts all day.",
+          "a": "F",
+          "ev": "Heavy rain often falls in the afternoon for a short time.",
+          "w": "Mưa trong thời gian NGẮN → FALSE."
+        },
+        {
+          "s": "Some streets flood because the drainage system is old.",
+          "a": "T",
+          "ev": "some streets flood quickly because the drainage system is old.",
+          "w": "Khớp cả nguyên nhân → TRUE."
+        },
+        {
+          "s": "The work on the drainage system has been completed.",
+          "a": "F",
+          "ev": "the work will take several years.",
+          "w": "Sẽ mất vài năm → chưa xong → FALSE."
+        },
+        {
+          "s": "Flooding causes many traffic accidents.",
+          "a": "NG",
+          "w": "Không nhắc tai nạn → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p26",
+      "title": "Part-time jobs",
+      "text": "About half of the university students in a survey had a part-time job. Most worked in cafés or as private tutors. Students said the jobs helped them gain experience and pay for their living costs. However, those who worked more than 20 hours a week were more likely to feel stressed during exams.",
+      "q": [
+        {
+          "s": "All the students in the survey had a part-time job.",
+          "a": "F",
+          "ev": "About half of the university students in a survey had a part-time job.",
+          "w": "Chỉ khoảng một nửa → FALSE."
+        },
+        {
+          "s": "Working as a tutor was a common type of job.",
+          "a": "T",
+          "ev": "Most worked in cafés or as private tutors.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Students said their jobs gave them useful experience.",
+          "a": "T",
+          "ev": "the jobs helped them gain experience",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Students who worked long hours got lower grades.",
+          "a": "NG",
+          "w": "Bài nói họ căng thẳng hơn, không nói điểm thấp hơn → NOT GIVEN."
+        },
+        {
+          "s": "Students working more than 20 hours a week felt less stressed.",
+          "a": "F",
+          "ev": "were more likely to feel stressed during exams.",
+          "w": "Căng thẳng HƠN → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "p27",
+      "title": "Old buildings",
+      "text": "The old French-style buildings in the city centre were built more than a hundred years ago. Some of them have been turned into museums and hotels. Others are in poor condition because the owners cannot afford repairs. The city council has offered to pay half the repair costs for buildings of historic value.",
+      "q": [
+        {
+          "s": "The buildings are less than fifty years old.",
+          "a": "F",
+          "ev": "were built more than a hundred years ago.",
+          "w": "Hơn 100 năm → FALSE."
+        },
+        {
+          "s": "Some of the buildings are now used as hotels.",
+          "a": "T",
+          "ev": "Some of them have been turned into museums and hotels.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "The council will pay the full cost of repairs.",
+          "a": "F",
+          "ev": "pay half the repair costs",
+          "w": "Chỉ một nửa → FALSE."
+        },
+        {
+          "s": "Tourists prefer staying in the old hotels.",
+          "a": "NG",
+          "w": "Không nói sở thích của khách → NOT GIVEN."
+        },
+        {
+          "s": "Some owners cannot pay for repairs.",
+          "a": "T",
+          "ev": "the owners cannot afford repairs.",
+          "w": "cannot afford = không đủ tiền → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p28",
+      "title": "Air conditioners",
+      "text": "As summers become hotter, more families in Vietnam are buying air conditioners. They make homes more comfortable, but they use a lot of electricity. Experts suggest setting the temperature at 26°C to save energy. Newer models use less power than older ones, but they are more expensive to buy.",
+      "q": [
+        {
+          "s": "Air conditioners use very little electricity.",
+          "a": "F",
+          "ev": "they use a lot of electricity.",
+          "w": "Dùng NHIỀU điện → FALSE."
+        },
+        {
+          "s": "Experts recommend a temperature of 26°C.",
+          "a": "T",
+          "ev": "Experts suggest setting the temperature at 26°C",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "New air conditioners are cheaper to buy than old ones.",
+          "a": "F",
+          "ev": "they are more expensive to buy.",
+          "w": "Đắt hơn khi mua → FALSE."
+        },
+        {
+          "s": "Most families in Vietnam now have an air conditioner.",
+          "a": "NG",
+          "w": "Bài nói ngày càng nhiều gia đình mua, không nói 'đa số' đã có → NOT GIVEN."
+        },
+        {
+          "s": "Newer models are more energy-efficient.",
+          "a": "T",
+          "ev": "Newer models use less power than older ones",
+          "w": "use less power = tiết kiệm điện hơn → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "p29",
+      "title": "A music festival",
+      "text": "The music festival takes place every December on the beach. It started in 2018 with only local bands, but now artists from five countries perform. Tickets usually sell out within a week. This year, the organisers have asked visitors not to bring plastic bottles, and free water stations will be available.",
+      "q": [
+        {
+          "s": "The festival has always included international artists.",
+          "a": "F",
+          "ev": "It started in 2018 with only local bands",
+          "w": "Lúc đầu CHỈ có ban nhạc địa phương → FALSE."
+        },
+        {
+          "s": "Tickets are usually difficult to get.",
+          "a": "T",
+          "ev": "Tickets usually sell out within a week.",
+          "w": "Bán hết trong một tuần → khó mua → TRUE (suy ra trực tiếp)."
+        },
+        {
+          "s": "Visitors will be able to get water for free.",
+          "a": "T",
+          "ev": "free water stations will be available.",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "The festival is held in the mountains.",
+          "a": "F",
+          "ev": "on the beach.",
+          "w": "Tổ chức trên bãi biển → FALSE."
+        },
+        {
+          "s": "Tickets are more expensive this year.",
+          "a": "NG",
+          "w": "Không nói giá vé → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "p30",
+      "title": "Recycling at home",
+      "text": "Since January, households in the district have been asked to separate their rubbish into three bins: food waste, recyclable materials and other waste. Food waste is collected every day, while recyclables are collected twice a week. Families who do not separate their rubbish may receive a warning, but no fines have been given so far.",
+      "q": [
+        {
+          "s": "Households must use three different bins.",
+          "a": "T",
+          "ev": "separate their rubbish into three bins",
+          "w": "Khớp → TRUE."
+        },
+        {
+          "s": "Recyclables are collected every day.",
+          "a": "F",
+          "ev": "recyclables are collected twice a week.",
+          "w": "Hai lần một tuần → FALSE."
+        },
+        {
+          "s": "Several families have already been fined.",
+          "a": "F",
+          "ev": "no fines have been given so far.",
+          "w": "Chưa phạt ai → FALSE."
+        },
+        {
+          "s": "Most families are separating their rubbish correctly.",
+          "a": "NG",
+          "w": "Không có số liệu về việc tuân thủ → NOT GIVEN."
+        },
+        {
+          "s": "Food waste is collected more often than recyclables.",
+          "a": "T",
+          "ev": "Food waste is collected every day, while recyclables are collected twice a week.",
+          "w": "Hằng ngày > hai lần/tuần → TRUE."
+        }
+      ]
+    }
+  ]
+}

@@ -44,6 +44,8 @@ export type TaskKind =
   | 'wordform-week'
   | 'writing-week'
   | 'reading-p3'
+  | 'grammar-mcq'
+  | 'reading-tfng'
   | 'reading-skill'
   | 'reading-part'
   | 'writing-frame'
@@ -273,6 +275,9 @@ export const daysBetween = (a: string, b: string) => Math.round((toDate(b).getTi
 export const todayKey = () => dateKey(new Date());
 
 const grammarHref = (topic: string) => `/grammar/${topic}`;
+/** Daily multiple choice and TFNG start here; [grammar questions, word-form questions, TFNG passages] per phase (same as lib/daily). */
+const DAILY_FROM = '2026-11-19';
+const DAILY_AMOUNT: Record<1 | 2 | 3, [number, number, number]> = { 1: [10, 5, 1], 2: [15, 8, 2], 3: [20, 10, 3] };
 const vocabPerDay = (phase: Phase) => (phase === 1 ? 15 : phase === 2 ? 12 : 0);
 
 function build(): Day[] {
@@ -537,6 +542,24 @@ function build(): Day[] {
           review(15);
           add('rest', { title: 'Nghỉ', detail: 'Chủ nhật chỉ ôn thẻ từ.', minutes: 0 });
       }
+    }
+    // From 19/11: daily multiple choice (grammar + word form) and short True / False / Not Given, more each phase.
+    if (week.phase >= 1 && !light && date >= DAILY_FROM) {
+      const n = DAILY_AMOUNT[week.phase as 1 | 2 | 3];
+      add('grammar-mcq', {
+        title: `Trắc nghiệm ngữ pháp + word form · ${n[0] + n[1]} câu`,
+        detail: `${n[0]} câu ngữ pháp (chủ điểm mới nhất + ôn chủ điểm cũ + câu từng sai) và ${n[1]} câu chọn dạng từ. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại câu sai.`,
+        minutes: week.phase === 1 ? 10 : week.phase === 2 ? 15 : 20,
+        href: `/trac-nghiem/${date}`,
+        gated: true,
+      });
+      add('reading-tfng', {
+        title: `True / False / Not Given · ${n[2]} đoạn ngắn`,
+        detail: 'Đọc đoạn ngắn, chọn TRUE / FALSE / NOT GIVEN cho từng câu; mỗi câu có giải thích vì sao là FALSE (bài nói ngược lại) hay NOT GIVEN (bài không nhắc tới). Cần đúng ngay lần đầu ≥ 80%.',
+        minutes: 8 * n[2],
+        href: `/tfng/${date}`,
+        gated: true,
+      });
     }
     days.push(day);
   }
