@@ -137,7 +137,7 @@ const FAKE_TTS = () => {
   await page.screenshot({ path: `${SHOTS}/m5-03-sheet.png` });
 
   // ── add manually ──
-  await page.getByRole('button', { name: 'Add word' }).click();
+  await page.getByRole('button', { name: 'Thêm từ' }).click();
   const dlg = page.getByRole('dialog');
   await dlg.getByLabel('Word', { exact: true }).fill('Demolish');
   await dlg.getByLabel('Nghĩa tiếng Việt').fill('phá bỏ hoàn toàn');

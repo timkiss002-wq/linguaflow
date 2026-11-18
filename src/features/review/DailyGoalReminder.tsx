@@ -76,28 +76,28 @@ export function DailyGoalReminder() {
   };
 
   return (
-    <div className="border-b border-violet-200 bg-violet-50 dark:border-violet-500/30 dark:bg-violet-500/10" role="status" data-testid="daily-goal-reminder">
+    <div className="border-b border-primary/20 bg-accent/60" role="status" data-testid="daily-goal-reminder">
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2 text-sm sm:px-6">
-        <span className="flex items-center gap-2 font-medium text-violet-900 dark:text-violet-100">
+        <span className="flex items-center gap-2 font-medium text-accent-foreground">
           <BookOpen className="size-4 shrink-0" aria-hidden />
           Từ vựng hôm nay: {goal.learned}/{goal.goal} từ mới {lang === 'zh' ? 'tiếng Trung' : 'tiếng Anh'}
         </span>
-        <span className="h-1.5 w-28 overflow-hidden rounded-full bg-violet-200 dark:bg-violet-500/30" aria-hidden>
-          <span className="block h-full rounded-full bg-violet-600" style={{ width: `${(goal.learned / goal.goal) * 100}%` }} />
+        <span className="h-1.5 w-28 overflow-hidden rounded-full bg-primary/15" aria-hidden>
+          <span className="block h-full rounded-full bg-primary" style={{ width: `${(goal.learned / goal.goal) * 100}%` }} />
         </span>
-        <span className="text-violet-800/80 dark:text-violet-200/80">Còn {left} từ để đạt mục tiêu.</span>
+        <span className="text-muted-foreground">Còn {left} từ để đạt mục tiêu.</span>
         <span className="ml-auto flex items-center gap-1">
           {permission === 'default' && (
-            <Button variant="ghost" size="sm" className="h-7 text-violet-800 dark:text-violet-200" onClick={enableNotifications}>
+            <Button variant="ghost" size="sm" className="h-8 text-accent-foreground" onClick={enableNotifications}>
               <Bell className="size-3.5" /> Nhắc tôi
             </Button>
           )}
-          <Button asChild size="sm" className="h-7 bg-violet-600 text-white hover:bg-violet-700">
+          <Button asChild size="sm">
             <Link to="/review">Học ngay</Link>
           </Button>
           <button
             type="button"
-            className="rounded p-1 text-violet-700 hover:bg-violet-100 dark:text-violet-300 dark:hover:bg-violet-500/20"
+            className="rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             aria-label="Ẩn 2 giờ"
             title="Ẩn 2 giờ"
             onClick={() => {

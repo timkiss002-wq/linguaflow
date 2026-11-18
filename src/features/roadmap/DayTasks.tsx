@@ -30,7 +30,7 @@ import { useImportWords } from '@/features/vocabulary/api';
 import { topicById } from '@/lib/grammar/drills';
 import { practiceOf } from '@/lib/practice/results';
 import { activeWordsOf, wordsOf, type Day, type Task, type TaskKind } from '@/lib/roadmap/plan';
-import { isDone, lockReason, setManualDone, topicState, type Context } from '@/lib/roadmap/progress';
+import { hrefFor, isDone, lockReason, setManualDone, topicState, type Context } from '@/lib/roadmap/progress';
 import { cn } from '@/lib/utils';
 
 const ICON: Record<TaskKind, LucideIcon> = {
@@ -100,40 +100,45 @@ const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active',
 
 const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week'];
 
-function hrefFor(task: Task) {
-  if (task.kind === 'grammar-drill') return `${task.href}?step=drill`;
-  return task.href;
-}
-
-export function DayTasks({ day, ctx, compact }: { day: Day; ctx: Context; compact?: boolean }) {
+/**
+ * `nextId`: the one task to do next. When given, only that card gets the filled button and the other open tasks get
+ * outline buttons, so a page of ten tasks has a single obvious place to start.
+ */
+export function DayTasks({ day, ctx, compact, nextId }: { day: Day; ctx: Context; compact?: boolean; nextId?: string }) {
   return (
     <ul className="space-y-2.5" aria-label={`Việc ngày ${day.date}`}>
       {day.tasks.map((t) => (
         <li key={t.id}>
-          <TaskCard task={t} day={day} ctx={ctx} compact={compact} />
+          <TaskCard task={t} day={day} ctx={ctx} compact={compact} emphasis={nextId === undefined ? undefined : nextId === t.id ? 'next' : 'quiet'} />
         </li>
       ))}
     </ul>
   );
 }
 
-export function TaskCard({ task, day, ctx, compact, showDate }: { task: Task; day: Day; ctx: Context; compact?: boolean; showDate?: string }) {
+export function TaskCard({ task, day, ctx, compact, showDate, emphasis }: { task: Task; day: Day; ctx: Context; compact?: boolean; showDate?: string; emphasis?: 'next' | 'quiet' }) {
   const done = isDone(task, ctx);
   const lock = lockReason(task, day, ctx);
+  const next = emphasis === 'next' && !done && !lock;
   const Icon = ICON[task.kind];
   const topic = task.topic ? topicById(task.topic) : undefined;
   const ts = task.topic ? topicState(task.topic) : undefined;
-  const [open, setOpen] = useState((task.kind === 'vocab-new' || task.kind === 'vocab-active') && !compact && !done);
+  const [open, setOpen] = useState(false);
   const rest = task.kind === 'rest';
 
   return (
-    <div className={cn('rounded-xl border bg-card p-4', done && !rest && 'border-success/40 bg-success/5', lock && 'opacity-80')} data-task={task.kind}>
+    <div
+      className={cn('rounded-xl border bg-card p-4', done && !rest && 'border-success/40 bg-success/5', lock && !done && 'bg-muted/40', next && 'border-primary/50 shadow-soft ring-1 ring-primary/30')}
+      data-task={task.kind}
+      data-next={next || undefined}
+    >
       <div className="flex items-start gap-3">
-        <span className={cn('mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg', done ? 'bg-success/15 text-success' : 'bg-muted text-muted-foreground')}>
-          <Icon className="size-4" aria-hidden />
+        <span className={cn('mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg', done ? 'bg-success/15 text-success' : next ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground')}>
+          {lock && !done ? <Lock className="size-4" aria-hidden /> : <Icon className="size-4" aria-hidden />}
         </span>
         <div className="min-w-0 flex-1">
           <p className="text-xs font-medium text-muted-foreground">
+            {next && <span className="mr-1.5 rounded bg-primary px-1.5 py-0.5 font-semibold text-primary-foreground">Làm tiếp</span>}
             {showDate && <span className="mr-1.5 rounded bg-amber-100 px-1.5 py-0.5 text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">{showDate}</span>}
             {AREA[task.kind]}
             {task.minutes > 0 && ` · ${task.minutes} phút`}
@@ -142,7 +147,7 @@ export function TaskCard({ task, day, ctx, compact, showDate }: { task: Task; da
             {task.title}
             {topic && <span className="font-normal text-muted-foreground"> — {topic.title_vi}</span>}
           </p>
-          {!compact && <p className="mt-1 text-sm text-muted-foreground">{task.detail}</p>}
+          {!compact && !(lock && !done) && <p className="mt-1 text-sm text-muted-foreground">{task.detail}</p>}
           {ts && (task.kind === 'grammar-learn' || task.kind === 'grammar-drill') && (
             <p className="mt-1 text-xs text-muted-foreground">
               Nhận diện: {ts.quiz ? `${ts.quiz.best}/${ts.quiz.total}` : 'chưa làm'} · Dịch câu: {ts.drill ? `${ts.drill.best}/${ts.drill.total}` : 'chưa làm'}
@@ -195,18 +200,12 @@ export function TaskCard({ task, day, ctx, compact, showDate }: { task: Task; da
         </div>
       )}
 
-      {!rest && (task.href || !AUTO_ONLY.includes(task.kind)) && (
+      {!rest && !lock && (task.href || !AUTO_ONLY.includes(task.kind)) && (
         <div className="mt-3 flex flex-wrap items-center gap-2 pl-12">
-          {task.href && (
-            lock ? (
-              <Button size="sm" variant="outline" disabled>
-                <Lock /> Chưa mở
-              </Button>
-            ) : (
-              <Button size="sm" asChild variant={done ? 'outline' : 'default'}>
-                <Link to={hrefFor(task)!}>{task.kind === 'vocab-active' ? (done ? 'Xem / sửa câu' : 'Học cụm & viết câu') : done ? 'Làm lại' : task.kind === 'vocab-new' ? 'Mở Sổ từ' : 'Bắt đầu'}</Link>
-              </Button>
-            )
+          {task.href && !lock && (
+            <Button size="sm" asChild variant={done || emphasis === 'quiet' ? 'outline' : 'default'}>
+              <Link to={hrefFor(task)!}>{task.kind === 'vocab-active' ? (done ? 'Xem / sửa câu' : 'Học cụm & viết câu') : done ? 'Làm lại' : task.kind === 'vocab-new' ? 'Mở Sổ từ' : 'Bắt đầu'}</Link>
+            </Button>
           )}
           {!AUTO_ONLY.includes(task.kind) && !lock && (
             <Button size="sm" variant="ghost" onClick={() => setManualDone(task.id, !done)} aria-pressed={done}>

@@ -43,7 +43,6 @@ export const SECTIONS: Section[] = [
       { to: '/ielts/reading', label: 'Reading', also: ['/ielts/passage3'] },
       { to: '/writing/guided', label: 'Writing' },
       { to: '/writing', label: 'Viết tự do' },
-      { to: '/writing/mistakes', label: 'Lỗi hay lặp lại' },
     ],
   },
   {

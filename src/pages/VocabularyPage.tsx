@@ -83,7 +83,7 @@ export default function VocabularyPage() {
     <>
       <PageHeader
         title={lang === 'zh' ? 'Sổ từ tiếng Trung' : 'Sổ từ tiếng Anh'}
-        description="Your notebook of saved words. Click any cell to edit it."
+        description="Các từ bạn đã lưu. Bấm vào ô bất kỳ để sửa."
         actions={
           <>
             <ImportDialog />
@@ -126,20 +126,22 @@ export default function VocabularyPage() {
               </button>
             ))}
           </div>
-          <Button size="sm" className="ml-auto" asChild>
-            <Link to={practiceHref([])}>
-              <Keyboard /> Practise typing
-            </Link>
-          </Button>
+          {all.length > 0 && (
+            <Button size="sm" variant="outline" className="ml-auto" asChild>
+              <Link to={practiceHref([])}>
+                <Keyboard /> Luyện gõ từ
+              </Link>
+            </Button>
+          )}
         </div>
 
         <div className="grid grid-cols-2 gap-2 md:grid-cols-[1fr_200px_160px]">
           <div className="relative col-span-2 md:col-span-1">
             <Search className="pointer-events-none absolute left-3 top-3 size-4 text-muted-foreground" />
-            <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search words, meanings (không dấu cũng được), examples…" aria-label="Search vocabulary" className="pl-9" />
+            <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Tìm từ, nghĩa (không dấu cũng được), ví dụ…" aria-label="Search vocabulary" className="pl-9" />
           </div>
           <NativeSelect aria-label="Topic" value={filters.topic ?? ''} onChange={(e) => setFilters({ ...filters, topic: e.target.value || undefined })}>
-            <option value="">All topics</option>
+            <option value="">Mọi chủ đề</option>
             {topicOptions(all).map((t) => (
               <option key={t} value={t}>
                 {t}
@@ -147,7 +149,7 @@ export default function VocabularyPage() {
             ))}
           </NativeSelect>
           <NativeSelect aria-label="Word type" value={filters.pos ?? ''} onChange={(e) => setFilters({ ...filters, pos: e.target.value || undefined })}>
-            <option value="">All types</option>
+            <option value="">Mọi từ loại</option>
             {POS.map((p) => (
               <option key={p} value={p}>
                 {POS_LABEL[p]}
@@ -158,17 +160,17 @@ export default function VocabularyPage() {
 
         {selectedIds.length > 0 && (
           <div className="flex flex-wrap items-center gap-2 rounded-md border border-primary/40 bg-accent/50 px-3 py-2 text-sm" role="region" aria-label="Selection">
-            <span className="font-medium">{selectedIds.length} selected</span>
+            <span className="font-medium">Đã chọn {selectedIds.length} từ</span>
             <Button size="sm" asChild>
               <Link to={practiceHref(selectedIds)}>
-                <Keyboard /> Practise these
+                <Keyboard /> Luyện các từ này
               </Link>
             </Button>
             <Button size="sm" variant="outline" onClick={() => setConfirmDelete(true)} disabled={remove.isPending}>
-              <Trash2 /> Delete
+              <Trash2 /> Xoá
             </Button>
             <Button size="sm" variant="ghost" onClick={() => setSelected(new Set())} className="ml-auto">
-              Clear
+              Bỏ chọn
             </Button>
           </div>
         )}
@@ -180,16 +182,16 @@ export default function VocabularyPage() {
         ) : all.length === 0 ? (
           <EmptyState
             icon={BookOpen}
-            title="Your notebook is empty"
-            description="Open a lesson, show the text and click any word to save it — or import your existing sheet as CSV."
+            title="Sổ từ còn trống"
+            description="Thêm các từ của bài hôm nay chỉ với một nút ở trang Hôm nay, hoặc nhập bảng từ của bạn bằng Import CSV."
             action={
               <Button variant="outline" size="sm" asChild>
-                <Link to="/lessons">Explore lessons</Link>
+                <Link to="/dashboard">Lấy từ trong việc hôm nay</Link>
               </Button>
             }
           />
         ) : words.length === 0 ? (
-          <EmptyState icon={Search} title="No words match" description="Try another search or remove some filters." />
+          <EmptyState icon={Search} title="Không có từ nào khớp" description="Thử từ khoá khác hoặc bỏ bớt bộ lọc." />
         ) : (
           <>
             <div className="flex flex-wrap items-center justify-between gap-2">

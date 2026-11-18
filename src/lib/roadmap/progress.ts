@@ -224,3 +224,14 @@ const DAILY_HABITS: Task['kind'][] = ['rest', 'vocab-review', 'reading-p3', 'set
 export function backlog(ctx: Context, today = todayKey()): { day: Day; task: Task }[] {
   return DAYS.filter((d) => d.date < today).flatMap((day) => day.tasks.filter((t) => !DAILY_HABITS.includes(t.kind) && !isDone(t, ctx)).map((task) => ({ day, task })));
 }
+
+/** Link that opens a task (a grammar drill opens straight on the translation step). */
+export function hrefFor(task: Task) {
+  if (task.kind === 'grammar-drill') return `${task.href}?step=drill`;
+  return task.href;
+}
+
+/** A task the learner can open right now: has a page, isn't done, isn't waiting on an earlier step. */
+export function isStartable(task: Task, day: Day, ctx: Context) {
+  return Boolean(task.href) && task.kind !== 'rest' && !isDone(task, ctx) && !lockReason(task, day, ctx);
+}

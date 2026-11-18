@@ -1,11 +1,12 @@
-import { ArrowRight, CalendarClock, FastForward, Layers, Map } from 'lucide-react';
+import { ArrowRight, CalendarClock, FastForward, Layers, Map, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import { useDueToday } from '@/features/dashboard/api';
 import { useProfile } from '@/features/profile/api';
 import { DayTasks, TaskCard } from '@/features/roadmap/DayTasks';
 import { useRoadmapContext } from '@/features/roadmap/useRoadmap';
 import { DAYS, START, TARGET, daysBetween, dayByDate, formatDay, phaseOf, todayKey, weekByNumber } from '@/lib/roadmap/plan';
-import { backlog, dayStatus, lessonsOf, isDone, nextOpenDay } from '@/lib/roadmap/progress';
+import { backlog, dayStatus, hrefFor, isStartable, lessonsOf, isDone, nextOpenDay } from '@/lib/roadmap/progress';
 
 function greeting(hour: number) {
   if (hour < 11) return 'Chào buổi sáng';
@@ -33,6 +34,9 @@ export default function TodayPage() {
   const name = profile.data?.display_name;
   const todayLessonsDone = lessonsOf(day).every((t) => isDone(t, ctx));
   const ahead = owedTotal === 0 && todayLessonsDone ? nextOpenDay(ctx) : undefined;
+  // The single next step: the first task that can be opened now, in the order the page lists them.
+  const next = [...owed, ...day.tasks.map((task) => ({ day, task })), ...(ahead ? ahead.tasks.map((task) => ({ day: ahead, task })) : [])].find(({ day: d, task }) => isStartable(task, d, ctx));
+  const nextId = next?.task.id ?? '';
 
   return (
     <div className="space-y-5">
@@ -44,9 +48,20 @@ export default function TodayPage() {
             {phaseOf(day.phase).name} · Tuần {week.n}: {week.title} · {s.total ? `${s.done}/${s.total} việc hôm nay` : 'hôm nay nghỉ'}
           </p>
         </div>
-        <Link to="/lo-trinh" className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-          <Map className="size-4" aria-hidden /> Xem cả lộ trình
-        </Link>
+        <div className="flex flex-wrap items-center gap-2">
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/lo-trinh">
+              <Map aria-hidden /> Xem cả lộ trình
+            </Link>
+          </Button>
+          {next && (
+            <Button asChild data-testid="next-task">
+              <Link to={hrefFor(next.task)!} title={next.task.title}>
+                <Play aria-hidden /> Làm việc tiếp theo
+              </Link>
+            </Button>
+          )}
+        </div>
       </header>
 
       <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
@@ -59,7 +74,7 @@ export default function TodayPage() {
               <ul className="space-y-2.5">
                 {owed.map(({ day: d, task }) => (
                   <li key={task.id}>
-                    <TaskCard task={task} day={d} ctx={ctx} compact showDate={formatDay(d.date)} />
+                    <TaskCard task={task} day={d} ctx={ctx} compact showDate={formatDay(d.date)} emphasis={task.id === nextId ? 'next' : 'quiet'} />
                   </li>
                 ))}
               </ul>
@@ -70,7 +85,7 @@ export default function TodayPage() {
             <h2 id="today-tasks" className="text-sm font-semibold">
               Việc hôm nay {day.date !== today && `(${formatDay(day.date)})`}
             </h2>
-            <DayTasks day={day} ctx={ctx} />
+            <DayTasks day={day} ctx={ctx} nextId={nextId} />
           </section>
           {ahead && (
             <section aria-labelledby="ahead" className="space-y-2.5">
@@ -83,7 +98,7 @@ export default function TodayPage() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground">Không bắt buộc. Học xong ngày này thì ngày sau nữa tự mở.</p>
-              <DayTasks day={ahead} ctx={ctx} />
+              <DayTasks day={ahead} ctx={ctx} nextId={nextId} />
             </section>
           )}
         </div>
@@ -99,7 +114,7 @@ export default function TodayPage() {
             </p>
             <p className="mt-1 text-2xl font-bold tabular-nums">{due ?? '—'}</p>
             <Link to="/review" className="mt-1 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-              {due ? 'Ôn ngay' : 'Mở sổ từ'} <ArrowRight className="size-3.5" aria-hidden />
+              {due ? 'Ôn ngay' : 'Mở trang Ôn tập'} <ArrowRight className="size-3.5" aria-hidden />
             </Link>
           </section>
           <section className="rounded-xl border bg-card p-4">
