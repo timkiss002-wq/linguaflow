@@ -76,7 +76,7 @@ export default function ReviewPage() {
 
       {/* Daily goal */}
       {goal && (
-        <Card className={cn('mb-5 flex flex-col gap-4 p-5 sm:flex-row sm:items-center', goal.done ? 'border-emerald-200 bg-emerald-50/60 dark:border-emerald-500/30 dark:bg-emerald-500/5' : 'border-violet-200 bg-violet-50/60 dark:border-violet-500/30 dark:bg-violet-500/5')} data-testid="daily-goal">
+        <Card className={cn('mb-5 flex flex-col gap-4 p-5 sm:flex-row sm:items-center', goal.done ? 'border-emerald-200 bg-emerald-50/60 dark:border-emerald-500/30 dark:bg-emerald-500/5' : 'border-primary/20 bg-accent/40')} data-testid="daily-goal">
           <Ring value={goal.learned} max={goal.goal} done={goal.done} />
           <div className="flex-1 space-y-1">
             <p className="text-lg font-semibold">{goal.done ? 'Xong mục tiêu hôm nay! 🎉' : `Mục tiêu: học ${DAILY_NEW_GOAL} từ mới mỗi ngày`}</p>
@@ -90,21 +90,21 @@ export default function ReviewPage() {
                 Sổ từ chỉ còn {goal.available} từ mới.{' '}
                 {language === 'en' && (
                   <>
-                    <button type="button" className="font-medium text-violet-700 hover:underline disabled:opacity-50 dark:text-violet-300" disabled={!starter.ready || starter.pending} onClick={() => addStarter(DAILY_NEW_GOAL)}>
+                    <button type="button" className="font-medium text-primary hover:underline disabled:opacity-50" disabled={!starter.ready || starter.pending} onClick={() => addStarter(DAILY_NEW_GOAL)}>
                       <Plus className="inline size-3.5" /> Thêm {DAILY_NEW_GOAL} từ IELTS gợi ý
                     </button>{' '}
                     hoặc{' '}
                   </>
                 )}
-                <Link to="/lessons" className="text-violet-700 hover:underline dark:text-violet-300">
-                  lưu từ trong bài nghe
+                <Link to="/dashboard" className="font-medium text-primary hover:underline">
+                  thêm từ trong việc hôm nay
                 </Link>
                 .
               </p>
             )}
             {!goal.done && typeof Notification !== 'undefined' && Notification.permission === 'default' && (
               <p className="flex items-center gap-1 text-xs text-muted-foreground">
-                <Bell className="size-3.5" aria-hidden /> Bấm “Nhắc tôi” ở thanh tím phía trên để nhận thông báo lúc 12h và 20h nếu chưa học xong.
+                <Bell className="size-3.5" aria-hidden /> Bấm “Nhắc tôi” trên thanh mục tiêu ở trang Hôm nay để nhận thông báo lúc 12h và 20h nếu chưa học xong.
               </p>
             )}
           </div>
@@ -123,7 +123,7 @@ export default function ReviewPage() {
               </Button>
             ) : (
               <Button variant="outline" size="sm" asChild>
-                <Link to="/lessons">Tìm từ trong bài học</Link>
+                <Link to="/dashboard">Lấy từ trong việc hôm nay</Link>
               </Button>
             )
           }
@@ -141,7 +141,7 @@ export default function ReviewPage() {
               <div className="mt-2 flex h-12 items-end gap-1" aria-label="Số thẻ đến hạn mỗi ngày" data-testid="forecast">
                 {days.map((d) => (
                   <div key={d.date.toISOString()} className="flex flex-1 flex-col items-center gap-0.5" title={`${d.date.toLocaleDateString()}: ${d.count}`}>
-                    <div className="w-full rounded-sm bg-violet-500/70" style={{ height: `${Math.max(2, (d.count / max) * 40)}px` }} />
+                    <div className="w-full rounded-sm bg-primary/60" style={{ height: `${Math.max(2, (d.count / max) * 40)}px` }} />
                     <span className="text-[10px] text-muted-foreground">{d.date.toLocaleDateString('vi-VN', { weekday: 'narrow' })}</span>
                   </div>
                 ))}
@@ -155,13 +155,13 @@ export default function ReviewPage() {
             </Card>
           ) : (
             <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
-              <Card className="space-y-4 border-violet-200 p-5 dark:border-violet-500/30">
+              <Card className="space-y-4 border-primary/30 p-5">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-violet-700 dark:text-violet-300">Khuyên dùng</p>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-primary">Khuyên dùng</p>
                     <h2 className="text-lg font-semibold">Ôn bằng cách dùng từ</h2>
                   </div>
-                  <span className="rounded-full bg-violet-100 px-2.5 py-0.5 text-sm font-semibold text-violet-800 tabular-nums dark:bg-violet-500/20 dark:text-violet-200">{current.queue.length} từ</span>
+                  <span className="rounded-full bg-accent px-2.5 py-0.5 text-sm font-semibold text-accent-foreground tabular-nums">{current.queue.length} từ</span>
                 </div>
                 <ol className="grid gap-2 sm:grid-cols-3">
                   {[
@@ -171,15 +171,15 @@ export default function ReviewPage() {
                   ].map((s, i) => (
                     <li key={s.t} className="rounded-lg bg-muted/50 p-3 text-sm">
                       <p className="flex items-center gap-1.5 font-medium">
-                        <span className="flex size-5 items-center justify-center rounded-full bg-violet-600 text-[11px] font-bold text-white">{i + 1}</span>
-                        <s.icon className="size-4 text-violet-600" aria-hidden /> {s.t}
+                        <span className="flex size-5 items-center justify-center rounded-full bg-primary text-[11px] font-bold text-primary-foreground">{i + 1}</span>
+                        <s.icon className="size-4 text-primary" aria-hidden /> {s.t}
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">{s.d}</p>
                     </li>
                   ))}
                 </ol>
                 <p className="text-xs text-muted-foreground">Làm theo nhóm 10 từ. Sai bao nhiêu bước quyết định khi nào từ quay lại — bạn không cần tự chấm.</p>
-                <Button size="lg" className="w-full bg-violet-600 text-white hover:bg-violet-700" onClick={() => setSession({ kind: 'practice', queue: current.queue })} data-start="practice">
+                <Button size="lg" className="w-full" onClick={() => setSession({ kind: 'practice', queue: current.queue })} data-start="practice">
                   Bắt đầu ôn {current.queue.length} từ <ArrowRight />
                 </Button>
               </Card>
@@ -228,7 +228,7 @@ function Ring({ value, max, done }: { value: number; max: number; done: boolean 
     <div className="relative size-20 shrink-0" aria-label={`${value} trên ${max} từ mới hôm nay`} role="img">
       <svg viewBox="0 0 72 72" className="size-20 -rotate-90">
         <circle cx="36" cy="36" r={r} fill="none" strokeWidth="7" className="stroke-muted" />
-        <circle cx="36" cy="36" r={r} fill="none" strokeWidth="7" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - pct)} className={done ? 'stroke-emerald-500' : 'stroke-violet-600'} />
+        <circle cx="36" cy="36" r={r} fill="none" strokeWidth="7" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - pct)} className={done ? 'stroke-emerald-500' : 'stroke-primary'} />
       </svg>
       <span className="absolute inset-0 flex items-center justify-center text-lg font-bold tabular-nums">
         {done ? <CheckCircle2 className="size-7 text-emerald-600" aria-hidden /> : `${value}/${max}`}

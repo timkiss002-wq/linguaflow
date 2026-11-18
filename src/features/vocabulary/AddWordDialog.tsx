@@ -58,12 +58,12 @@ export function AddWordDialog({ defaultLanguage }: { defaultLanguage: Language }
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button size="sm">
-          <Plus /> Add word
+          <Plus /> Thêm từ
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogTitle>Add a word</DialogTitle>
-        <DialogDescription>Words you meet in lessons can also be added by clicking them.</DialogDescription>
+        <DialogDescription>Từ gặp trong bài đọc cũng thêm được bằng cách bấm vào từ đó.</DialogDescription>
         <form onSubmit={submit} className="grid gap-3 sm:grid-cols-2">
           <div className="space-y-1">
             <Label htmlFor="aw-lang">Language</Label>

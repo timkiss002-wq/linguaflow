@@ -15,7 +15,7 @@ import { useStudyLanguage } from '@/features/study/context';
 import { visiblePrompt } from '@/lib/writing/guided';
 
 const LANGS: { value: Lang; name: string; blurb: string }[] = [
-  { value: 'en', name: 'English', blurb: 'Paragraphs, emails and IELTS-style letters and essays.' },
+  { value: 'en', name: 'English', blurb: 'Đoạn văn, email, thư và bài luận kiểu IELTS.' },
   { value: 'zh', name: '中文', blurb: 'HSK-style sentences with given words, short texts and essays in characters.' },
 ];
 const KIND_LABEL = { sentences: 'Sentences', paragraph: 'Paragraph', letter: 'Letter / email', essay: 'Essay' } as const;
@@ -72,7 +72,7 @@ function LanguageView({ lang }: { lang: Lang }) {
       )}
       <section aria-labelledby="for-you">
         <h2 id="for-you" className="text-lg font-semibold">
-          Prompts for you
+          Đề gợi ý cho bạn
         </h2>
         <p className="mb-3 text-sm text-muted-foreground">
           Chosen for {levelLabel(lang, profile.level.value)} — {profile.level.source}.
@@ -102,12 +102,12 @@ function LanguageView({ lang }: { lang: Lang }) {
 
       <Card>
         <CardHeader className="pb-2">
-          <CardTitle className="text-base">Your texts</CardTitle>
-          <CardDescription>Each analysis is compared with your earlier texts in the same language.</CardDescription>
+          <CardTitle className="text-base">Bài bạn đã viết</CardTitle>
+          <CardDescription>Mỗi bài được so với các bài trước của bạn để thấy tiến bộ.</CardDescription>
         </CardHeader>
         <CardContent>
           {mine.length === 0 ? (
-            <p className="text-sm text-muted-foreground">Nothing yet — pick a prompt above.</p>
+            <p className="text-sm text-muted-foreground">Chưa có bài nào — chọn một đề ở trên.</p>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full text-sm" data-testid="writing-history">

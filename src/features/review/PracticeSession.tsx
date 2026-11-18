@@ -149,7 +149,7 @@ function Session({ language, cards, mode, onDone }: { language: 'en' | 'zh'; car
             return (
               <li key={s} className="flex items-center gap-1">
                 {i > 0 && <ArrowRight className="size-3 text-muted-foreground" aria-hidden />}
-                <span className={cn('rounded-full px-2.5 py-0.5 text-xs font-medium', at ? 'bg-violet-600 text-white' : past ? 'bg-violet-100 text-violet-700 dark:bg-violet-500/20 dark:text-violet-300' : 'bg-muted text-muted-foreground')} aria-current={at ? 'step' : undefined}>
+                <span className={cn('rounded-full px-2.5 py-0.5 text-xs font-medium', at ? 'bg-primary text-primary-foreground' : past ? 'bg-accent text-accent-foreground' : 'bg-muted text-muted-foreground')} aria-current={at ? 'step' : undefined}>
                   {i + 1}. {STEP_LABEL[s]}
                 </span>
               </li>
@@ -181,7 +181,7 @@ function Session({ language, cards, mode, onDone }: { language: 'en' | 'zh'; car
                     onClick={() => answer({ mark: right ? 'right' : 'wrong', note: null, picked: i })}
                     className={cn(
                       'flex items-start gap-3 rounded-xl border-2 p-3 text-left transition',
-                      !answered && 'hover:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-500/10',
+                      !answered && 'hover:border-primary/50 hover:bg-accent/60',
                       answered && right && 'border-emerald-500 bg-emerald-50 dark:bg-emerald-500/10',
                       answered && picked && !right && 'border-rose-500 bg-rose-50 dark:bg-rose-500/10',
                       answered && !right && !picked && 'opacity-50',
@@ -201,10 +201,10 @@ function Session({ language, cards, mode, onDone }: { language: 'en' | 'zh'; car
           <Prompt label={card.gap.family ? 'Điền dạng đúng của từ trong ngoặc' : 'Điền từ còn thiếu'}>
             <p className="text-xl leading-relaxed sm:text-2xl" lang={lang}>
               {card.gap.before}
-              <span className={cn('mx-1 inline-block min-w-24 border-b-2 px-1 text-center font-semibold', answered ? (answered.mark === 'wrong' ? 'border-rose-500 text-rose-600' : 'border-emerald-500 text-emerald-700 dark:text-emerald-400') : 'border-violet-500 text-violet-700')}>
+              <span className={cn('mx-1 inline-block min-w-24 border-b-2 px-1 text-center font-semibold', answered ? (answered.mark === 'wrong' ? 'border-rose-500 text-rose-600' : 'border-emerald-500 text-emerald-700 dark:text-emerald-400') : 'border-primary text-primary')}>
                 {answered ? card.gap.answer : typed || ' '}
               </span>
-              <span className="text-violet-700 dark:text-violet-300">({card.gap.base})</span>
+              <span className="text-primary">({card.gap.base})</span>
               {card.gap.after}
             </p>
           </Prompt>
