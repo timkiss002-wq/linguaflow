@@ -34,15 +34,16 @@ export const SECTIONS: Section[] = [
     // All exam practice in one place: IELTS Reading · Writing, grammar, free writing and its mistakes.
     id: 'practice',
     label: 'Luyện thi',
-    hint: 'Reading · Writing · Ngữ pháp',
+    hint: 'Reading · Writing · Ngữ pháp · Truyện tranh',
     to: '/ielts/reading',
     icon: GraduationCap,
-    match: ['/ielts', '/writing', '/grammar'],
+    match: ['/ielts', '/writing', '/grammar', '/truyen'],
     tabs: [
       { to: '/grammar', label: 'Ngữ pháp & dịch câu' },
       { to: '/ielts/reading', label: 'Reading', also: ['/ielts/passage3'] },
       { to: '/writing/guided', label: 'Writing' },
       { to: '/writing', label: 'Viết tự do' },
+      { to: '/truyen', label: 'Truyện tranh' },
     ],
   },
   {
@@ -83,7 +84,7 @@ export function sectionFor(pathname: string): Section | undefined {
 }
 
 /** Pages where the learner is doing one task: no menu, nothing else competing for attention. */
-const FOCUS_ROUTES = ['/lo-trinh/kiem-tra', '/writing/new/:taskId', '/writing/guided/frame/:typeId', '/writing/guided/:promptId', '/ielts/:testId', '/vocabulary/practice', '/grammar/:topicId', '/ielts/passage3/:setId', '/ielts/passage3/edit/:key'];
+const FOCUS_ROUTES = ['/lo-trinh/kiem-tra', '/writing/new/:taskId', '/writing/guided/frame/:typeId', '/writing/guided/:promptId', '/ielts/:testId', '/vocabulary/practice', '/grammar/:topicId', '/ielts/passage3/:setId', '/ielts/passage3/edit/:key', '/truyen/:bookId/:chapterId'];
 /** List pages whose path would otherwise look like a focus route (e.g. /ielts/reading vs /ielts/:testId). */
 const LIST_ROUTES = ['/ielts/reading', '/ielts/passage3'];
 export const isFocusRoute = (pathname: string) => !LIST_ROUTES.includes(pathname) && FOCUS_ROUTES.some((p) => matchPath(p, pathname));

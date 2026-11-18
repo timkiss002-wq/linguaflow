@@ -189,18 +189,19 @@ const MOTIFS: Record<string, ReactNode> = {
   ),
 };
 
-export function CoverArt({ id, art, className, label }: { id: string; art?: string; className?: string; label?: string }) {
+/** `wide`: for banners wider than 4:3 — the drawing keeps its size in the middle and the colour fills the sides. */
+export function CoverArt({ id, art, className, label, wide }: { id: string; art?: string; className?: string; label?: string; wide?: boolean }) {
   const [a, b] = PALETTES[hash(id) % PALETTES.length]!;
   const gid = `cov-${id}`;
   const h = hash(id);
   return (
     <svg
       viewBox="0 0 120 90"
-      className={cn('block overflow-hidden', className)}
+      className={cn('block', wide ? 'overflow-visible' : 'overflow-hidden', className)}
       role={label ? 'img' : undefined}
       aria-label={label}
       aria-hidden={label ? undefined : true}
-      preserveAspectRatio="xMidYMid slice"
+      preserveAspectRatio={wide ? 'xMidYMid meet' : 'xMidYMid slice'}
     >
       <defs>
         <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
@@ -208,7 +209,7 @@ export function CoverArt({ id, art, className, label }: { id: string; art?: stri
           <stop offset="1" stopColor={b} />
         </linearGradient>
       </defs>
-      <rect width="120" height="90" fill={`url(#${gid})`} />
+      {wide ? <rect x="-600" y="-40" width="1320" height="170" fill={`url(#${gid})`} /> : <rect width="120" height="90" fill={`url(#${gid})`} />}
       <circle cx={10 + (h % 30)} cy={80 - (h % 20)} r="28" fill="white" opacity="0.12" />
       <circle cx={100 - (h % 25)} cy={10 + (h % 15)} r="20" fill="white" opacity="0.1" />
       {MOTIFS[art ?? ''] ?? MOTIFS.book}
