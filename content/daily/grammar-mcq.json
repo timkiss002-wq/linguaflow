@@ -1,0 +1,437 @@
+{
+  "$comment": "Trắc nghiệm ngữ pháp hằng ngày. Chủ điểm mở dần theo ngày (from): nền tảng trước, khó sau. Mỗi câu: q (câu hỏi), o (4 lựa chọn), a (chỉ số đáp án đúng), w (giải thích tiếng Việt). Nội dung LinguaFlow tự soạn.",
+  "topics": [
+    {
+      "id": "be-there",
+      "title_vi": "Động từ to be · There is / There are",
+      "from": "2026-11-19",
+      "tip_vi": "I am · he/she/it is · we/you/they are. There is + danh từ số ít/không đếm được; There are + danh từ số nhiều.",
+      "items": [
+        { "q": "My parents ___ teachers.", "o": ["is", "am", "are", "be"], "a": 2, "w": "My parents = họ (số nhiều) → are." },
+        { "q": "There ___ a big park near my house.", "o": ["are", "is", "have", "has"], "a": 1, "w": "a big park (số ít) → There is. Không dùng have/has để nói 'có' ở đâu đó." },
+        { "q": "There ___ many students in the library today.", "o": ["is", "are", "has", "be"], "a": 1, "w": "many students (số nhiều) → There are." },
+        { "q": "___ your brother at home now?", "o": ["Are", "Do", "Is", "Does"], "a": 2, "w": "Câu hỏi với to be: đảo is lên đầu. your brother = he → Is." },
+        { "q": "There ___ some milk in the fridge.", "o": ["are", "is", "have", "were"], "a": 1, "w": "milk không đếm được → There is." },
+        { "q": "I ___ not tired, so I can help you.", "o": ["is", "are", "am", "be"], "a": 2, "w": "I → am. Phủ định: am not." },
+        { "q": "My hometown ___ very quiet and beautiful.", "o": ["are", "is", "have", "be"], "a": 1, "w": "Chủ ngữ số ít + tính từ → is. Người Việt hay quên động từ to be trước tính từ." },
+        { "q": "There ___ any problems with the new system.", "o": ["isn't", "aren't", "don't", "doesn't"], "a": 1, "w": "problems (số nhiều) → There aren't any." },
+        { "q": "The news ___ good for everyone.", "o": ["are", "is", "were", "be"], "a": 1, "w": "news trông như số nhiều nhưng là danh từ không đếm được → is." },
+        { "q": "How many people ___ there in your family?", "o": ["is", "are", "do", "have"], "a": 1, "w": "How many people … are there …? (số nhiều)" }
+      ]
+    },
+    {
+      "id": "present-simple",
+      "title_vi": "Thì hiện tại đơn",
+      "from": "2026-11-22",
+      "tip_vi": "Thói quen, sự thật. He/She/It + V-s/es; phủ định/câu hỏi dùng does/doesn't + V nguyên mẫu.",
+      "items": [
+        { "q": "She ___ to work by bus every day.", "o": ["go", "goes", "going", "is go"], "a": 1, "w": "She + every day (thói quen) → goes." },
+        { "q": "My father ___ coffee in the evening.", "o": ["doesn't drink", "don't drink", "doesn't drinks", "not drink"], "a": 0, "w": "Phủ định ngôi 3 số ít: doesn't + V nguyên mẫu (drink, không thêm s)." },
+        { "q": "Water ___ at 100 degrees Celsius.", "o": ["boil", "boils", "is boiling", "boiled"], "a": 1, "w": "Sự thật hiển nhiên → hiện tại đơn; water là số ít → boils." },
+        { "q": "___ your sister like spicy food?", "o": ["Do", "Is", "Does", "Are"], "a": 2, "w": "Câu hỏi ngôi 3 số ít: Does + S + V nguyên mẫu." },
+        { "q": "They usually ___ dinner at 7 p.m.", "o": ["has", "have", "having", "to have"], "a": 1, "w": "They + V nguyên mẫu: have." },
+        { "q": "He ___ his homework before he plays games.", "o": ["finish", "finishs", "finishes", "finishing"], "a": 2, "w": "Động từ tận cùng -sh → thêm -es: finishes." },
+        { "q": "The museum ___ at 9 a.m. on weekdays.", "o": ["open", "opens", "is opening", "opened"], "a": 1, "w": "Lịch cố định → hiện tại đơn; the museum số ít → opens." },
+        { "q": "My brother ___ in a bank.", "o": ["work", "works", "is work", "working"], "a": 1, "w": "Công việc cố định, chủ ngữ số ít → works." },
+        { "q": "Most people in my city ___ motorbikes.", "o": ["uses", "use", "using", "is using"], "a": 1, "w": "Most people (số nhiều) → use." },
+        { "q": "How often ___ she visit her grandparents?", "o": ["do", "does", "is", "has"], "a": 1, "w": "How often + does + she + V nguyên mẫu." }
+      ]
+    },
+    {
+      "id": "present-continuous",
+      "title_vi": "Hiện tại tiếp diễn và so với hiện tại đơn",
+      "from": "2026-11-25",
+      "tip_vi": "Đang xảy ra lúc nói / giai đoạn tạm thời: am/is/are + V-ing. Dấu hiệu: now, at the moment, look!, these days.",
+      "items": [
+        { "q": "Listen! Someone ___ at the door.", "o": ["knocks", "is knocking", "knock", "knocked"], "a": 1, "w": "Listen! → việc đang xảy ra → is knocking." },
+        { "q": "I ___ for my IELTS exam these days.", "o": ["study", "am studying", "studies", "studied"], "a": 1, "w": "these days → giai đoạn tạm thời → am studying." },
+        { "q": "She ___ tea every morning, but today she is drinking coffee.", "o": ["drinks", "is drinking", "drink", "drinking"], "a": 0, "w": "every morning → thói quen → hiện tại đơn drinks." },
+        { "q": "Look! The children ___ in the rain.", "o": ["play", "plays", "are playing", "is playing"], "a": 2, "w": "The children số nhiều + đang xảy ra → are playing." },
+        { "q": "I ___ what you mean.", "o": ["am understanding", "understand", "understands", "am understand"], "a": 1, "w": "understand là động từ trạng thái, không chia tiếp diễn." },
+        { "q": "The number of online shoppers ___ quickly at the moment.", "o": ["rises", "is rising", "rise", "are rising"], "a": 1, "w": "at the moment + xu hướng đang diễn ra; The number (số ít) → is rising." },
+        { "q": "He ___ a new house now; it will be ready next year.", "o": ["builds", "is building", "build", "built"], "a": 1, "w": "Việc đang trong quá trình → is building." },
+        { "q": "This soup ___ delicious.", "o": ["is tasting", "tastes", "taste", "tasting"], "a": 1, "w": "taste (có vị) là động từ trạng thái → tastes." },
+        { "q": "Why ___ you ___ at me like that?", "o": ["do / look", "are / looking", "does / look", "is / looking"], "a": 1, "w": "Hỏi về việc đang xảy ra → are you looking." },
+        { "q": "We ___ a meeting at the moment, so please call later.", "o": ["have", "are having", "has", "having"], "a": 1, "w": "have = tổ chức/tham dự (hành động) dùng tiếp diễn được: are having." }
+      ]
+    },
+    {
+      "id": "past-simple",
+      "title_vi": "Thì quá khứ đơn",
+      "from": "2026-11-28",
+      "tip_vi": "Việc đã xong, có thời gian rõ (yesterday, last…, ago, in 2020). V-ed hoặc cột 2; phủ định/câu hỏi: did + V nguyên mẫu.",
+      "items": [
+        { "q": "I ___ my keys yesterday.", "o": ["lose", "lost", "losed", "have lost"], "a": 1, "w": "yesterday → quá khứ đơn; lose là bất quy tắc → lost." },
+        { "q": "She ___ to Da Nang last summer.", "o": ["go", "goes", "went", "gone"], "a": 2, "w": "last summer → went." },
+        { "q": "We ___ the film because it was boring.", "o": ["didn't enjoy", "didn't enjoyed", "don't enjoy", "not enjoyed"], "a": 0, "w": "did not + V nguyên mẫu: didn't enjoy." },
+        { "q": "When ___ you ___ English?", "o": ["did / start", "do / started", "did / started", "were / start"], "a": 0, "w": "Câu hỏi quá khứ: did + S + V nguyên mẫu." },
+        { "q": "He ___ a lot of money in 2020.", "o": ["earn", "earned", "earns", "earning"], "a": 1, "w": "in 2020 → earned." },
+        { "q": "They ___ a new bridge two years ago.", "o": ["build", "builded", "built", "have built"], "a": 2, "w": "two years ago → quá khứ; build → built." },
+        { "q": "The price of rice ___ sharply in 2010.", "o": ["rises", "rose", "risen", "raised"], "a": 1, "w": "rise – rose – risen (nội động từ, giá tự tăng)." },
+        { "q": "I ___ my homework, so the teacher was angry.", "o": ["didn't do", "don't do", "didn't did", "not did"], "a": 0, "w": "didn't + do (nguyên mẫu)." },
+        { "q": "My grandfather ___ in a factory when he was young.", "o": ["work", "works", "worked", "has worked"], "a": 2, "w": "when he was young → quá khứ → worked." },
+        { "q": "She ___ the email and then ___ the office.", "o": ["sends / leaves", "sent / left", "sent / leaved", "send / left"], "a": 1, "w": "Chuỗi việc trong quá khứ: sent, left (bất quy tắc)." }
+      ]
+    },
+    {
+      "id": "past-continuous",
+      "title_vi": "Quá khứ tiếp diễn · when / while",
+      "from": "2026-12-01",
+      "tip_vi": "was/were + V-ing: việc đang diễn ra tại một lúc trong quá khứ. Việc dài (tiếp diễn) bị việc ngắn (quá khứ đơn) xen vào: while + tiếp diễn, when + quá khứ đơn.",
+      "items": [
+        { "q": "I ___ dinner when my friend called.", "o": ["cooked", "was cooking", "am cooking", "were cooking"], "a": 1, "w": "Việc dài đang diễn ra (cooking) bị cuộc gọi xen vào → was cooking." },
+        { "q": "While she ___ home, it started to rain.", "o": ["walked", "was walking", "walks", "were walking"], "a": 1, "w": "while + quá khứ tiếp diễn: was walking." },
+        { "q": "What ___ you doing at 8 p.m. last night?", "o": ["did", "was", "were", "are"], "a": 2, "w": "you + quá khứ tiếp diễn → were you doing." },
+        { "q": "The students ___ when the teacher came in.", "o": ["were talking", "was talking", "talked", "talk"], "a": 0, "w": "Việc đang diễn ra khi việc khác xen vào; students số nhiều → were talking." },
+        { "q": "He fell asleep while he ___ TV.", "o": ["watched", "was watching", "is watching", "watches"], "a": 1, "w": "while + was watching." },
+        { "q": "When I arrived, they ___ lunch.", "o": ["have", "had", "were having", "are having"], "a": 2, "w": "Khi tôi đến họ đang ăn dở → were having." },
+        { "q": "I ___ my phone when I was running to the bus.", "o": ["was dropping", "dropped", "drop", "were dropping"], "a": 1, "w": "Việc ngắn, xen vào → quá khứ đơn dropped." },
+        { "q": "At this time last year, we ___ in Hanoi.", "o": ["lived", "were living", "was living", "live"], "a": 1, "w": "Một thời điểm cụ thể trong quá khứ + we → were living." },
+        { "q": "The phone rang ___ I was having a shower.", "o": ["when", "while", "during", "for"], "a": 1, "w": "while + mệnh đề tiếp diễn (I was having)." },
+        { "q": "She ___ to music, so she didn't hear me.", "o": ["listened", "was listening", "listens", "were listening"], "a": 1, "w": "Đang nghe nhạc (bối cảnh) → was listening." }
+      ]
+    },
+    {
+      "id": "future",
+      "title_vi": "Tương lai: will / be going to / hiện tại tiếp diễn",
+      "from": "2026-12-04",
+      "tip_vi": "will: quyết định lúc nói, dự đoán, hứa. be going to: kế hoạch đã định, dự đoán có dấu hiệu. Hiện tại tiếp diễn: lịch hẹn đã sắp xếp.",
+      "items": [
+        { "q": "Look at those dark clouds! It ___ rain.", "o": ["will", "is going to", "goes to", "rains"], "a": 1, "w": "Có dấu hiệu rõ (mây đen) → is going to." },
+        { "q": "A: The phone is ringing. B: I ___ answer it.", "o": ["am going to", "will", "answer", "am answering"], "a": 1, "w": "Quyết định ngay lúc nói → will." },
+        { "q": "I ___ study abroad next year. I have already applied.", "o": ["will", "am going to", "go to", "would"], "a": 1, "w": "Kế hoạch đã định (đã nộp đơn) → am going to." },
+        { "q": "I think the population ___ continue to grow.", "o": ["will", "is", "going to", "would be"], "a": 0, "w": "I think + dự đoán → will." },
+        { "q": "We ___ our teacher at 3 p.m. tomorrow. It's in my diary.", "o": ["meet", "are meeting", "will meeting", "met"], "a": 1, "w": "Lịch hẹn đã sắp xếp → hiện tại tiếp diễn." },
+        { "q": "Don't worry. I ___ tell anyone your secret.", "o": ["won't", "am not going", "don't", "not will"], "a": 0, "w": "Lời hứa → won't (will not)." },
+        { "q": "By 2030, more people ___ in cities.", "o": ["live", "will live", "lived", "are live"], "a": 1, "w": "Dự đoán tương lai xa → will live." },
+        { "q": "She ___ a doctor when she grows up.", "o": ["is going to be", "is going to", "will to be", "going to be"], "a": 0, "w": "be going to + V nguyên mẫu: is going to be." },
+        { "q": "I'll call you when I ___ home.", "o": ["will get", "get", "got", "am going to get"], "a": 1, "w": "Sau when (mệnh đề thời gian) dùng hiện tại đơn, không dùng will." },
+        { "q": "The train ___ at 6:15 tomorrow morning.", "o": ["leave", "leaves", "will leaving", "is leave"], "a": 1, "w": "Lịch trình cố định (tàu, xe) → hiện tại đơn leaves." }
+      ]
+    },
+    {
+      "id": "nouns-count",
+      "title_vi": "Danh từ số nhiều · đếm được / không đếm được",
+      "from": "2026-12-07",
+      "tip_vi": "Số nhiều thêm -s/-es; bất quy tắc: children, people, women. Không đếm được (information, advice, money, equipment) không có -s, đi với much / a little / some.",
+      "items": [
+        { "q": "Can you give me some ___ about the course?", "o": ["informations", "information", "an information", "many information"], "a": 1, "w": "information không đếm được → không thêm s, không dùng an." },
+        { "q": "There are three ___ in my class who speak French.", "o": ["child", "childs", "children", "childrens"], "a": 2, "w": "child → children (bất quy tắc)." },
+        { "q": "My teacher gave me a useful piece of ___.", "o": ["advice", "advices", "advise", "an advice"], "a": 0, "w": "a piece of + danh từ không đếm được: advice." },
+        { "q": "How ___ money do you spend on food each month?", "o": ["many", "much", "few", "a few"], "a": 1, "w": "money không đếm được → how much." },
+        { "q": "Many ___ in big cities live in small apartments.", "o": ["family", "families", "familys", "familie"], "a": 1, "w": "Phụ âm + y → ies: families." },
+        { "q": "The gym has a lot of new ___.", "o": ["equipments", "equipment", "an equipment", "equipmentes"], "a": 1, "w": "equipment không đếm được." },
+        { "q": "I bought two ___ of bread.", "o": ["loaf", "loafs", "loaves", "breads"], "a": 2, "w": "loaf → loaves (f → ves)." },
+        { "q": "There isn't much ___ on the roads today.", "o": ["traffics", "traffic", "cars", "vehicle"], "a": 1, "w": "much + danh từ không đếm được: traffic." },
+        { "q": "Most ___ want to earn more money.", "o": ["person", "peoples", "people", "persons"], "a": 2, "w": "Số nhiều thông dụng của person là people." },
+        { "q": "She has done a lot of ___ on climate change.", "o": ["researches", "research", "a research", "many research"], "a": 1, "w": "research thường không đếm được: a lot of research." }
+      ]
+    },
+    {
+      "id": "articles",
+      "title_vi": "Mạo từ a / an / the / không mạo từ",
+      "from": "2026-12-10",
+      "tip_vi": "a/an: lần đầu nhắc, một cái bất kỳ (an trước nguyên âm âm đọc). the: đã biết, duy nhất. Không mạo từ: nói chung chung với danh từ số nhiều / không đếm được.",
+      "items": [
+        { "q": "She is ___ university student.", "o": ["a", "an", "the", "—"], "a": 0, "w": "university đọc /juː/ (phụ âm) → a." },
+        { "q": "I waited for ___ hour.", "o": ["a", "an", "the", "—"], "a": 1, "w": "hour có h câm, đọc nguyên âm → an." },
+        { "q": "___ sun rises in the east.", "o": ["A", "An", "The", "—"], "a": 2, "w": "Vật duy nhất → the sun." },
+        { "q": "___ education is important for everyone.", "o": ["The", "An", "A", "—"], "a": 3, "w": "Nói chung chung về giáo dục → không mạo từ." },
+        { "q": "I bought a book and a pen. ___ book is very interesting.", "o": ["A", "The", "An", "—"], "a": 1, "w": "Nhắc lại lần hai → the." },
+        { "q": "My brother plays ___ guitar very well.", "o": ["a", "the", "an", "—"], "a": 1, "w": "Chơi nhạc cụ: play the + nhạc cụ." },
+        { "q": "___ people who live near the sea are often healthy.", "o": ["The", "A", "An", "—"], "a": 0, "w": "Người được xác định bằng mệnh đề who … → The people." },
+        { "q": "He goes to ___ work by train.", "o": ["a", "the", "—", "an"], "a": 2, "w": "go to work / go to school / go to bed: không mạo từ." },
+        { "q": "This is ___ best restaurant in town.", "o": ["a", "the", "—", "an"], "a": 1, "w": "So sánh nhất luôn có the." },
+        { "q": "Children usually like ___ ice cream.", "o": ["an", "the", "a", "—"], "a": 3, "w": "Nói chung về kem (không đếm được) → không mạo từ." }
+      ]
+    },
+    {
+      "id": "agreement",
+      "title_vi": "Hoà hợp chủ ngữ – động từ",
+      "from": "2026-12-13",
+      "tip_vi": "Tìm danh từ chính của chủ ngữ. The number of + N số nhiều → số ít; A number of → số nhiều; Each / Every → số ít; V-ing làm chủ ngữ → số ít.",
+      "items": [
+        { "q": "The number of tourists ___ increased this year.", "o": ["have", "has", "are", "were"], "a": 1, "w": "The number of … → động từ số ít: has." },
+        { "q": "A number of students ___ absent today.", "o": ["is", "are", "was", "has"], "a": 1, "w": "A number of = nhiều → số nhiều: are." },
+        { "q": "Each of the rooms ___ a window.", "o": ["have", "has", "are having", "were"], "a": 1, "w": "Each of … → số ít: has." },
+        { "q": "Learning languages ___ a lot of time.", "o": ["take", "takes", "are taking", "have taken"], "a": 1, "w": "V-ing làm chủ ngữ → số ít: takes." },
+        { "q": "The books on the table ___ mine.", "o": ["is", "are", "was", "be"], "a": 1, "w": "Danh từ chính là books (số nhiều), không phải table → are." },
+        { "q": "Everyone in my class ___ the answer.", "o": ["know", "knows", "are knowing", "have known"], "a": 1, "w": "Everyone → số ít: knows." },
+        { "q": "The quality of the products ___ improved.", "o": ["have", "has", "are", "were"], "a": 1, "w": "Danh từ chính: quality (số ít) → has." },
+        { "q": "Both my sister and my brother ___ in Ho Chi Minh City.", "o": ["lives", "live", "is living", "has lived"], "a": 1, "w": "Both A and B → số nhiều: live." },
+        { "q": "One of my friends ___ a car.", "o": ["have", "has", "are having", "own"], "a": 1, "w": "One of + N số nhiều → động từ chia theo 'one' (số ít): has." },
+        { "q": "Ten kilometres ___ too far to walk.", "o": ["are", "is", "were", "have"], "a": 1, "w": "Khoảng cách, tiền, thời gian xem như một khối → số ít: is." }
+      ]
+    },
+    {
+      "id": "sentence-patterns",
+      "title_vi": "Mẫu câu cơ bản và trật tự từ",
+      "from": "2026-12-16",
+      "tip_vi": "S + V + O + nơi chốn + thời gian. Trạng từ tần suất đứng trước động từ thường, sau to be. Tính từ đứng trước danh từ. Câu nào cũng cần một động từ chính.",
+      "items": [
+        { "q": "Chọn câu đúng:", "o": ["I every day drink coffee.", "I drink coffee every day.", "I drink every day coffee.", "Every day coffee I drink."], "a": 1, "w": "S + V + O + thời gian: I drink coffee every day." },
+        { "q": "Chọn câu đúng:", "o": ["She always is late.", "She is always late.", "Always she is late.", "She is late always."], "a": 1, "w": "Trạng từ tần suất đứng sau to be: is always." },
+        { "q": "Chọn câu đúng:", "o": ["He speaks very well English.", "He speaks English very well.", "He very well speaks English.", "He speaks English well very."], "a": 1, "w": "Không chen trạng từ giữa động từ và tân ngữ: speaks English very well." },
+        { "q": "Chọn câu đúng:", "o": ["My city very beautiful.", "My city is very beautiful.", "My city it is very beautiful.", "Very beautiful my city is."], "a": 1, "w": "Câu cần động từ: My city is very beautiful (S + be + adj)." },
+        { "q": "Chọn câu đúng:", "o": ["I met an interesting man.", "I met a man interesting.", "I met an man interesting.", "I an interesting man met."], "a": 0, "w": "Tính từ đứng trước danh từ: an interesting man." },
+        { "q": "Chọn câu đúng:", "o": ["We went last week to the beach.", "We went to the beach last week.", "We last week went to the beach.", "To the beach we went week last."], "a": 1, "w": "Nơi chốn trước thời gian: to the beach last week." },
+        { "q": "Chọn câu đúng:", "o": ["My mother she works in a hospital.", "My mother works in a hospital.", "My mother working in a hospital.", "Works my mother in a hospital."], "a": 1, "w": "Không lặp chủ ngữ bằng đại từ (she) sau danh từ." },
+        { "q": "Chọn câu đúng:", "o": ["I gave my sister a present.", "I gave to my sister a present.", "I gave a present my sister.", "I my sister gave a present."], "a": 0, "w": "give + người + vật, hoặc give + vật + to + người." },
+        { "q": "Chọn câu đúng:", "o": ["She often goes to the gym.", "She goes often to the gym.", "Often she go to the gym.", "She go often to the gym."], "a": 0, "w": "Trạng từ tần suất trước động từ thường: often goes." },
+        { "q": "Chọn câu đúng:", "o": ["It is important to protect the environment.", "Is important to protect the environment.", "It important to protect the environment.", "Protect the environment is important it."], "a": 0, "w": "Tiếng Anh cần chủ ngữ giả It: It is important to …" }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "title_vi": "Hiện tại hoàn thành và so với quá khứ đơn",
+      "from": "2026-12-19",
+      "tip_vi": "have/has + V3: kinh nghiệm, việc kéo dài đến nay (for/since), kết quả còn ở hiện tại. Có thời gian rõ trong quá khứ (yesterday, in 2019) → quá khứ đơn.",
+      "items": [
+        { "q": "I ___ in Hanoi since 2020.", "o": ["live", "lived", "have lived", "am living"], "a": 2, "w": "since + mốc thời gian, việc còn tiếp diễn → have lived." },
+        { "q": "She ___ to Japan three times.", "o": ["has been", "went", "is", "was being"], "a": 0, "w": "Kinh nghiệm, không nói khi nào → has been." },
+        { "q": "We ___ the project last Friday.", "o": ["have finished", "finished", "finish", "has finished"], "a": 1, "w": "last Friday (thời gian rõ) → quá khứ đơn." },
+        { "q": "___ you ever ___ sushi?", "o": ["Did / eat", "Have / eaten", "Have / ate", "Do / eat"], "a": 1, "w": "ever + kinh nghiệm → Have you ever eaten." },
+        { "q": "He has worked here ___ ten years.", "o": ["since", "for", "ago", "in"], "a": 1, "w": "for + khoảng thời gian; since + mốc." },
+        { "q": "I can't find my phone. I think I ___ it.", "o": ["lost", "have lost", "lose", "had lost"], "a": 1, "w": "Kết quả còn ở hiện tại (bây giờ không tìm thấy) → have lost." },
+        { "q": "The company ___ 50 new staff so far this year.", "o": ["hired", "has hired", "hires", "is hiring"], "a": 1, "w": "so far this year → have/has + V3." },
+        { "q": "She ___ her degree in 2019.", "o": ["has got", "got", "has gotten", "gets"], "a": 1, "w": "in 2019 → quá khứ đơn got." },
+        { "q": "They haven't called me ___.", "o": ["already", "yet", "since", "ago"], "a": 1, "w": "Phủ định / câu hỏi hiện tại hoàn thành dùng yet ở cuối câu." },
+        { "q": "How long ___ you known your best friend?", "o": ["do", "did", "have", "are"], "a": 2, "w": "How long + hiện tại hoàn thành: have you known." }
+      ]
+    },
+    {
+      "id": "prepositions",
+      "title_vi": "Giới từ thời gian và nơi chốn",
+      "from": "2026-12-22",
+      "tip_vi": "at + giờ / at night; on + ngày, thứ; in + tháng, năm, mùa, buổi. at + điểm (at the bus stop), in + không gian (in the room), on + bề mặt (on the wall).",
+      "items": [
+        { "q": "The class starts ___ 8 a.m.", "o": ["in", "on", "at", "by"], "a": 2, "w": "Giờ cụ thể → at." },
+        { "q": "My birthday is ___ May.", "o": ["at", "on", "in", "by"], "a": 2, "w": "Tháng → in." },
+        { "q": "We have a test ___ Monday.", "o": ["in", "on", "at", "for"], "a": 1, "w": "Thứ / ngày → on." },
+        { "q": "I usually read ___ the evening.", "o": ["at", "on", "in", "by"], "a": 2, "w": "in the morning / afternoon / evening; nhưng at night." },
+        { "q": "There is a picture ___ the wall.", "o": ["in", "on", "at", "over"], "a": 1, "w": "Trên bề mặt → on." },
+        { "q": "She is waiting ___ the bus stop.", "o": ["at", "in", "on", "to"], "a": 0, "w": "Một điểm → at the bus stop." },
+        { "q": "He was born ___ 2004.", "o": ["on", "at", "in", "since"], "a": 2, "w": "Năm → in." },
+        { "q": "I'll see you ___ the weekend.", "o": ["in", "at", "for", "since"], "a": 1, "w": "at the weekend (Anh–Anh) / on the weekend (Anh–Mỹ); trong 4 lựa chọn chỉ at đúng." },
+        { "q": "My keys are ___ my bag.", "o": ["on", "at", "in", "to"], "a": 2, "w": "Bên trong một không gian → in." },
+        { "q": "The shop is closed ___ Christmas Day.", "o": ["in", "on", "at", "during"], "a": 1, "w": "Một ngày cụ thể (Christmas Day) → on." }
+      ]
+    },
+    {
+      "id": "pronouns",
+      "title_vi": "Đại từ, tính từ sở hữu, đại từ phản thân",
+      "from": "2026-12-25",
+      "tip_vi": "Chủ ngữ: I/he/she/they; tân ngữ: me/him/her/them; sở hữu: my/his/her/their + N; mine/his/hers/theirs đứng một mình; phản thân: myself, themselves.",
+      "items": [
+        { "q": "My parents gave ___ a new laptop.", "o": ["I", "my", "me", "mine"], "a": 2, "w": "Sau động từ cần tân ngữ: me." },
+        { "q": "This is not my pen. It's ___.", "o": ["her", "hers", "she", "herself"], "a": 1, "w": "Đứng một mình (không có danh từ sau) → hers." },
+        { "q": "The students did the project by ___.", "o": ["them", "their", "themselves", "theirs"], "a": 2, "w": "by + đại từ phản thân = tự làm: by themselves." },
+        { "q": "The company changed ___ logo last year.", "o": ["it's", "its", "their", "it"], "a": 1, "w": "Sở hữu của it → its (it's = it is)." },
+        { "q": "___ and I went to the cinema.", "o": ["Him", "He", "His", "Himself"], "a": 1, "w": "Chủ ngữ → He (He and I…)." },
+        { "q": "Can you help ___ with this exercise?", "o": ["we", "our", "us", "ours"], "a": 2, "w": "Tân ngữ của help → us." },
+        { "q": "She hurt ___ while she was cooking.", "o": ["her", "herself", "hers", "she"], "a": 1, "w": "Chủ ngữ và tân ngữ là một người → herself." },
+        { "q": "Is this bag ___?", "o": ["your", "yours", "you", "yourself"], "a": 1, "w": "Đứng cuối câu, không có danh từ → yours." },
+        { "q": "People should take care of ___ health.", "o": ["they", "them", "their", "theirs"], "a": 2, "w": "Trước danh từ health → tính từ sở hữu their." },
+        { "q": "Tom and Linh love ___ new school.", "o": ["they", "their", "there", "them"], "a": 1, "w": "their (của họ) ≠ there (ở đó)." }
+      ]
+    },
+    {
+      "id": "comparison",
+      "title_vi": "So sánh hơn, so sánh nhất, so sánh bằng",
+      "from": "2026-12-28",
+      "tip_vi": "Tính từ ngắn: -er / the -est; dài: more / the most. Bất quy tắc: good–better–best, bad–worse–worst, far–further. So sánh bằng: as + adj + as.",
+      "items": [
+        { "q": "Hanoi is ___ than Hue.", "o": ["big", "bigger", "biggest", "more big"], "a": 1, "w": "Tính từ ngắn + than → bigger (gấp đôi phụ âm g)." },
+        { "q": "This is the ___ book I have ever read.", "o": ["more interesting", "most interesting", "interestinger", "interesting"], "a": 1, "w": "Tính từ dài, so sánh nhất → the most interesting." },
+        { "q": "My English is ___ than last year.", "o": ["good", "gooder", "better", "best"], "a": 2, "w": "good → better (bất quy tắc)." },
+        { "q": "Today is ___ hot as yesterday.", "o": ["so", "as", "more", "than"], "a": 1, "w": "So sánh bằng: as hot as." },
+        { "q": "Living in the city is ___ expensive than living in the countryside.", "o": ["most", "more", "much", "very"], "a": 1, "w": "Tính từ dài + than → more expensive." },
+        { "q": "That was the ___ day of my life.", "o": ["bad", "worse", "worst", "baddest"], "a": 2, "w": "bad → worst (so sánh nhất)." },
+        { "q": "Smartphones are much ___ than they were ten years ago.", "o": ["cheap", "cheaper", "cheapest", "more cheap"], "a": 1, "w": "much + so sánh hơn: much cheaper." },
+        { "q": "The more you practise, the ___ you become.", "o": ["good", "better", "best", "more good"], "a": 1, "w": "Cấu trúc the + so sánh hơn, the + so sánh hơn." },
+        { "q": "Coffee consumption was ___ in 2020 than in 2010.", "o": ["higher", "highest", "more high", "high"], "a": 0, "w": "than → so sánh hơn: higher." },
+        { "q": "She is not as ___ as her sister.", "o": ["tall", "taller", "tallest", "more tall"], "a": 0, "w": "as + tính từ nguyên mẫu + as." }
+      ]
+    },
+    {
+      "id": "modals",
+      "title_vi": "Động từ khuyết thiếu: can, should, must, have to, may",
+      "from": "2027-01-01",
+      "tip_vi": "Modal + V nguyên mẫu (không to, không -s). must: bắt buộc từ người nói; have to: bắt buộc từ bên ngoài; don't have to: không cần; mustn't: cấm.",
+      "items": [
+        { "q": "You ___ smoke in the hospital. It's not allowed.", "o": ["don't have to", "mustn't", "needn't", "can"], "a": 1, "w": "Cấm → mustn't." },
+        { "q": "She ___ speak three languages.", "o": ["can", "cans", "can to", "is can"], "a": 0, "w": "can + V nguyên mẫu, không thêm s." },
+        { "q": "You ___ see a doctor if you feel ill.", "o": ["should", "should to", "shoulds", "are should"], "a": 0, "w": "Lời khuyên: should + V." },
+        { "q": "Tomorrow is Sunday, so I ___ get up early.", "o": ["mustn't", "don't have to", "can't", "shouldn't to"], "a": 1, "w": "Không cần thiết → don't have to." },
+        { "q": "Students ___ wear a uniform at my school. It's a rule.", "o": ["have to", "has to", "can", "may"], "a": 0, "w": "Quy định bên ngoài, chủ ngữ số nhiều → have to." },
+        { "q": "It ___ rain later, so take an umbrella.", "o": ["may", "must", "has to", "should to"], "a": 0, "w": "Khả năng có thể xảy ra → may." },
+        { "q": "The government ___ invest more in public transport.", "o": ["should", "should to", "must to", "has"], "a": 0, "w": "Đưa ý kiến (Writing Task 2): should + V." },
+        { "q": "When I was five, I ___ swim.", "o": ["can't", "couldn't", "mustn't", "don't"], "a": 1, "w": "Khả năng trong quá khứ → could / couldn't." },
+        { "q": "He ___ work late yesterday because of a deadline.", "o": ["must", "had to", "has to", "should"], "a": 1, "w": "Bắt buộc trong quá khứ → had to." },
+        { "q": "___ I open the window?", "o": ["Must", "May", "Have", "Do"], "a": 1, "w": "Xin phép lịch sự: May I …?" }
+      ]
+    },
+    {
+      "id": "passive",
+      "title_vi": "Câu bị động",
+      "from": "2027-01-11",
+      "tip_vi": "be + V3. Hiện tại: is/are + V3; quá khứ: was/were + V3; hoàn thành: has/have been + V3; modal: can/should be + V3.",
+      "items": [
+        { "q": "English ___ in many countries.", "o": ["speaks", "is spoken", "is speaking", "spoke"], "a": 1, "w": "Tiếng Anh được nói → bị động hiện tại: is spoken." },
+        { "q": "The bridge ___ in 1998.", "o": ["built", "was built", "is built", "has built"], "a": 1, "w": "Quá khứ bị động: was built." },
+        { "q": "The rice ___ and then dried in the sun.", "o": ["harvests", "is harvested", "harvested", "is harvesting"], "a": 1, "w": "Mô tả quy trình (Task 1) → hiện tại bị động." },
+        { "q": "A new hospital ___ next year.", "o": ["will build", "will be built", "is building", "builds"], "a": 1, "w": "Tương lai bị động: will be built." },
+        { "q": "The results ___ yet.", "o": ["haven't announced", "haven't been announced", "didn't announce", "aren't announcing"], "a": 1, "w": "Hoàn thành bị động: have(n't) been + V3." },
+        { "q": "Plastic bags should ___ .", "o": ["ban", "be banned", "banned", "being banned"], "a": 1, "w": "Modal bị động: should be + V3." },
+        { "q": "My phone ___ while I was on the bus.", "o": ["stole", "was stolen", "stolen", "is stealing"], "a": 1, "w": "Điện thoại bị lấy → was stolen." },
+        { "q": "The letters ___ by hand in the past.", "o": ["wrote", "were written", "was written", "are writing"], "a": 1, "w": "letters số nhiều, quá khứ → were written." },
+        { "q": "Many trees ___ every year to make paper.", "o": ["cut down", "are cut down", "cuts down", "are cutting down"], "a": 1, "w": "Hiện tại bị động số nhiều: are cut down." },
+        { "q": "This room ___ cleaned every day.", "o": ["is", "are", "was being", "has"], "a": 0, "w": "is + V3 (cleaned): hiện tại bị động." }
+      ]
+    },
+    {
+      "id": "gerund-infinitive",
+      "title_vi": "V-ing hay to V",
+      "from": "2027-01-18",
+      "tip_vi": "+ V-ing: enjoy, avoid, finish, mind, suggest, consider, sau giới từ. + to V: want, decide, plan, hope, agree, refuse, need. It is + adj + to V.",
+      "items": [
+        { "q": "I enjoy ___ to music in my free time.", "o": ["listen", "to listen", "listening", "listened"], "a": 2, "w": "enjoy + V-ing." },
+        { "q": "She decided ___ abroad.", "o": ["study", "to study", "studying", "studied"], "a": 1, "w": "decide + to V." },
+        { "q": "He is interested in ___ a new language.", "o": ["learn", "to learn", "learning", "learned"], "a": 2, "w": "Sau giới từ (in) → V-ing." },
+        { "q": "We should avoid ___ too much sugar.", "o": ["eat", "to eat", "eating", "ate"], "a": 2, "w": "avoid + V-ing." },
+        { "q": "They agreed ___ the meeting.", "o": ["postpone", "to postpone", "postponing", "postponed"], "a": 1, "w": "agree + to V." },
+        { "q": "It is difficult ___ a job in this city.", "o": ["find", "to find", "finding", "found"], "a": 1, "w": "It is + adj + to V." },
+        { "q": "Would you mind ___ the door?", "o": ["close", "to close", "closing", "closed"], "a": 2, "w": "mind + V-ing." },
+        { "q": "I'm looking forward to ___ you.", "o": ["see", "seeing", "saw", "be seen"], "a": 1, "w": "look forward to + V-ing (to là giới từ)." },
+        { "q": "My parents want me ___ a doctor.", "o": ["become", "to become", "becoming", "became"], "a": 1, "w": "want + O + to V." },
+        { "q": "She suggested ___ by train.", "o": ["go", "to go", "going", "went"], "a": 2, "w": "suggest + V-ing." }
+      ]
+    },
+    {
+      "id": "relative",
+      "title_vi": "Mệnh đề quan hệ",
+      "from": "2027-01-25",
+      "tip_vi": "who: người; which: vật; that: người/vật (không sau dấu phẩy); whose: của ai; where: nơi chốn. Có dấu phẩy (thông tin thêm) → không dùng that.",
+      "items": [
+        { "q": "The woman ___ lives next door is a nurse.", "o": ["which", "who", "whose", "where"], "a": 1, "w": "Người làm chủ ngữ → who." },
+        { "q": "This is the book ___ I told you about.", "o": ["who", "which", "where", "whose"], "a": 1, "w": "Vật → which (hoặc that)." },
+        { "q": "That's the restaurant ___ we had our first date.", "o": ["which", "where", "who", "whose"], "a": 1, "w": "Nơi chốn + mệnh đề đủ thành phần → where." },
+        { "q": "I have a friend ___ father is a pilot.", "o": ["who", "whose", "which", "that"], "a": 1, "w": "Sở hữu (bố của bạn ấy) → whose." },
+        { "q": "Hanoi, ___ is the capital of Vietnam, has many lakes.", "o": ["that", "which", "where", "who"], "a": 1, "w": "Sau dấu phẩy không dùng that → which." },
+        { "q": "Students ___ study regularly usually get good results.", "o": ["who", "which", "whose", "where"], "a": 0, "w": "Người → who." },
+        { "q": "The city ___ I visited last year was very clean.", "o": ["where", "which", "who", "whose"], "a": 1, "w": "visited cần tân ngữ → which (where chỉ khi mệnh đề đã đủ)." },
+        { "q": "The man ___ car was stolen called the police.", "o": ["who", "whose", "which", "that"], "a": 1, "w": "Xe của ông ấy → whose car." },
+        { "q": "Chọn câu đúng:", "o": ["The phone that I bought it is broken.", "The phone that I bought is broken.", "The phone I bought it is broken.", "The phone which I bought him is broken."], "a": 1, "w": "Không lặp lại tân ngữ (it) trong mệnh đề quan hệ." },
+        { "q": "Do you know the reason ___ she left?", "o": ["which", "why", "where", "who"], "a": 1, "w": "the reason why …" }
+      ]
+    },
+    {
+      "id": "conditionals",
+      "title_vi": "Câu điều kiện loại 0, 1, 2",
+      "from": "2027-02-01",
+      "tip_vi": "Loại 0: If + hiện tại, hiện tại (sự thật). Loại 1: If + hiện tại, will + V (có thể xảy ra). Loại 2: If + quá khứ, would + V (không có thật ở hiện tại); If I were …",
+      "items": [
+        { "q": "If it rains tomorrow, we ___ at home.", "o": ["stay", "will stay", "would stay", "stayed"], "a": 1, "w": "Loại 1: If + hiện tại, will + V." },
+        { "q": "If you heat ice, it ___.", "o": ["melts", "will melted", "would melt", "melted"], "a": 0, "w": "Loại 0 (sự thật khoa học): hiện tại – hiện tại." },
+        { "q": "If I ___ rich, I would travel around the world.", "o": ["am", "was", "were", "will be"], "a": 2, "w": "Loại 2: If I were (dùng were cho mọi ngôi)." },
+        { "q": "If she studied harder, she ___ the exam.", "o": ["will pass", "would pass", "passes", "passed"], "a": 1, "w": "Loại 2: would + V." },
+        { "q": "I'll call you if I ___ time.", "o": ["will have", "have", "had", "would have"], "a": 1, "w": "Mệnh đề if loại 1 dùng hiện tại, không dùng will." },
+        { "q": "What would you do if you ___ a lot of money?", "o": ["win", "won", "will win", "would win"], "a": 1, "w": "Loại 2: If + quá khứ đơn." },
+        { "q": "Unless you hurry, you ___ the bus.", "o": ["miss", "will miss", "would miss", "missed"], "a": 1, "w": "unless = if not; loại 1 → will miss." },
+        { "q": "If the government ___ more taxes, people would have less money.", "o": ["raises", "raised", "will raise", "raise"], "a": 1, "w": "Vế sau có would → loại 2 → raised." },
+        { "q": "If I were you, I ___ that job.", "o": ["will take", "would take", "take", "took"], "a": 1, "w": "Lời khuyên với If I were you → would + V." },
+        { "q": "People will be healthier if they ___ more exercise.", "o": ["do", "did", "will do", "would do"], "a": 0, "w": "Loại 1: will … if + hiện tại." }
+      ]
+    },
+    {
+      "id": "linking",
+      "title_vi": "Liên từ: although, despite, because, because of, however",
+      "from": "2027-02-08",
+      "tip_vi": "although / because + mệnh đề (S + V); despite / in spite of / because of + danh từ hoặc V-ing. However đứng đầu câu, sau đó có dấu phẩy.",
+      "items": [
+        { "q": "___ it was raining, they played football.", "o": ["Despite", "Although", "Because of", "However"], "a": 1, "w": "Theo sau là mệnh đề (it was raining) → Although." },
+        { "q": "___ the rain, they played football.", "o": ["Although", "Despite", "Because", "Even though"], "a": 1, "w": "Theo sau là danh từ (the rain) → Despite." },
+        { "q": "The flight was delayed ___ the bad weather.", "o": ["because", "because of", "although", "so"], "a": 1, "w": "Danh từ → because of." },
+        { "q": "She stayed at home ___ she was ill.", "o": ["because", "because of", "despite", "however"], "a": 0, "w": "Mệnh đề (she was ill) → because." },
+        { "q": "Public transport is cheap. ___, many people still drive.", "o": ["Although", "However", "Despite", "Because"], "a": 1, "w": "Nối hai câu, đứng đầu câu + dấu phẩy → However." },
+        { "q": "He passed the test ___ studying very little.", "o": ["although", "despite", "because", "so"], "a": 1, "w": "Sau là V-ing → despite." },
+        { "q": "I was tired, ___ I went to bed early.", "o": ["because", "so", "although", "but"], "a": 1, "w": "Kết quả → so." },
+        { "q": "___ some people prefer cities, others enjoy rural life.", "o": ["While", "Despite", "Because of", "So"], "a": 0, "w": "While = trong khi (đối lập hai ý), theo sau là mệnh đề." },
+        { "q": "In spite ___ the high price, the phone sold well.", "o": ["of", "that", "for", "to"], "a": 0, "w": "in spite of + danh từ." },
+        { "q": "Many students work part-time. ___, they can pay for their studies.", "o": ["However", "As a result", "Although", "Despite"], "a": 1, "w": "Kết quả → As a result." }
+      ]
+    },
+    {
+      "id": "perfect-tenses",
+      "title_vi": "Quá khứ hoàn thành · hiện tại hoàn thành tiếp diễn",
+      "from": "2027-02-15",
+      "tip_vi": "had + V3: việc xảy ra trước một việc khác trong quá khứ. have/has been + V-ing: việc kéo dài đến bây giờ, nhấn mạnh quá trình.",
+      "items": [
+        { "q": "When we arrived, the film ___ already ___.", "o": ["has / started", "had / started", "was / starting", "did / start"], "a": 1, "w": "Phim bắt đầu trước khi chúng tôi đến → had started." },
+        { "q": "I ___ English for three years now.", "o": ["learn", "have been learning", "had learned", "am learning"], "a": 1, "w": "Kéo dài đến bây giờ, nhấn mạnh quá trình → have been learning." },
+        { "q": "She was tired because she ___ all day.", "o": ["has worked", "had been working", "works", "is working"], "a": 1, "w": "Việc kéo dài trước một thời điểm quá khứ → had been working." },
+        { "q": "After he ___ his homework, he went out.", "o": ["finished", "had finished", "has finished", "finishes"], "a": 1, "w": "Xong việc này trước việc kia trong quá khứ → had finished." },
+        { "q": "Your eyes are red. ___ you been crying?", "o": ["Have", "Had", "Did", "Are"], "a": 0, "w": "Dấu hiệu ở hiện tại, việc vừa kéo dài → Have you been crying?" },
+        { "q": "By 2010, the population ___ to 5 million.", "o": ["grew", "has grown", "had grown", "grows"], "a": 2, "w": "By + mốc quá khứ → quá khứ hoàn thành had grown." },
+        { "q": "How long ___ you been waiting?", "o": ["did", "have", "had", "are"], "a": 1, "w": "How long have you been waiting? (đến lúc nói)." },
+        { "q": "I didn't recognise him because he ___ a lot.", "o": ["changed", "has changed", "had changed", "changes"], "a": 2, "w": "Thay đổi xảy ra trước lúc gặp → had changed." },
+        { "q": "It ___ raining since this morning.", "o": ["is", "has been", "was", "had"], "a": 1, "w": "since + kéo dài đến nay → has been raining." },
+        { "q": "She told me she ___ the book before.", "o": ["read", "has read", "had read", "reads"], "a": 2, "w": "Câu tường thuật, việc xảy ra trước → had read." }
+      ]
+    },
+    {
+      "id": "quantifiers",
+      "title_vi": "Từ chỉ số lượng: much, many, few, little, a lot of",
+      "from": "2027-02-22",
+      "tip_vi": "many / few / a few + N đếm được số nhiều; much / little / a little + N không đếm được. few/little = ít (tiêu cực); a few/a little = một ít (đủ dùng).",
+      "items": [
+        { "q": "There are ___ cars on the road at night.", "o": ["little", "few", "much", "a little"], "a": 1, "w": "cars đếm được, ý 'ít' → few." },
+        { "q": "I have ___ money left, so I can buy a coffee.", "o": ["a little", "a few", "few", "many"], "a": 0, "w": "money không đếm được, ý 'còn một ít, đủ dùng' → a little." },
+        { "q": "How ___ students passed the exam?", "o": ["much", "many", "little", "less"], "a": 1, "w": "students đếm được → how many." },
+        { "q": "She has very ___ free time these days.", "o": ["few", "little", "many", "a few"], "a": 1, "w": "free time không đếm được, ý 'rất ít' → little." },
+        { "q": "___ people know about this problem.", "o": ["Much", "A lot of", "A little", "Little"], "a": 1, "w": "a lot of dùng được với cả hai loại danh từ." },
+        { "q": "There isn't ___ water in the bottle.", "o": ["many", "much", "few", "a few"], "a": 1, "w": "water không đếm được, phủ định → much." },
+        { "q": "I made ___ mistakes, but my essay was still good.", "o": ["a few", "a little", "much", "little"], "a": 0, "w": "mistakes đếm được, ý 'một vài' → a few." },
+        { "q": "Fewer people ___ newspapers today.", "o": ["reads", "read", "is reading", "has read"], "a": 1, "w": "Fewer people (số nhiều) → read." },
+        { "q": "We should use ___ plastic.", "o": ["fewer", "less", "many", "few"], "a": 1, "w": "plastic không đếm được → less (không dùng fewer)." },
+        { "q": "Both of my parents ___ doctors.", "o": ["is", "are", "was", "has"], "a": 1, "w": "Both of + số nhiều → are." }
+      ]
+    },
+    {
+      "id": "conditionals-3",
+      "title_vi": "Câu điều kiện loại 3 và wish",
+      "from": "2027-03-01",
+      "tip_vi": "Loại 3: If + had + V3, would have + V3 (trái với quá khứ). wish + quá khứ đơn (hiện tại); wish + had + V3 (quá khứ).",
+      "items": [
+        { "q": "If I had studied harder, I ___ the exam.", "o": ["would pass", "would have passed", "will pass", "passed"], "a": 1, "w": "Loại 3: would have + V3." },
+        { "q": "If she ___ earlier, she wouldn't have missed the train.", "o": ["left", "had left", "has left", "would leave"], "a": 1, "w": "Loại 3: If + had + V3." },
+        { "q": "I wish I ___ taller.", "o": ["am", "were", "will be", "have been"], "a": 1, "w": "Ước ở hiện tại → wish + quá khứ (were)." },
+        { "q": "I wish I ___ that mistake yesterday.", "o": ["didn't make", "hadn't made", "don't make", "won't make"], "a": 1, "w": "Ước trái với quá khứ → had(n't) + V3." },
+        { "q": "We would have won if our best player ___ injured.", "o": ["wasn't", "hadn't been", "isn't", "wouldn't be"], "a": 1, "w": "Loại 3 → hadn't been." },
+        { "q": "If it hadn't rained, we ___ to the beach.", "o": ["would go", "went", "would have gone", "will go"], "a": 2, "w": "Loại 3 → would have gone." },
+        { "q": "She wishes she ___ speak Chinese.", "o": ["can", "could", "will", "has"], "a": 1, "w": "wish + could (khả năng ở hiện tại)." },
+        { "q": "If you had told me, I ___ you.", "o": ["would help", "would have helped", "helped", "will help"], "a": 1, "w": "Loại 3 → would have helped." },
+        { "q": "If I ___ you were coming, I would have cooked more.", "o": ["knew", "had known", "know", "would know"], "a": 1, "w": "Loại 3 → had known." },
+        { "q": "I wish it ___ raining. I want to go out.", "o": ["stops", "would stop", "stopped", "had stopped"], "a": 1, "w": "Mong điều gì đó thay đổi (than phiền) → wish + would." }
+      ]
+    },
+    {
+      "id": "reported",
+      "title_vi": "Câu tường thuật · mệnh đề danh từ",
+      "from": "2027-03-08",
+      "tip_vi": "Lùi thì khi động từ tường thuật ở quá khứ: is → was, will → would, can → could. Câu hỏi tường thuật: không đảo ngữ (asked where I lived).",
+      "items": [
+        { "q": "She said that she ___ tired.", "o": ["is", "was", "were", "be"], "a": 1, "w": "said (quá khứ) → lùi thì: is → was." },
+        { "q": "He asked me where I ___.", "o": ["live", "lived", "do I live", "did I live"], "a": 1, "w": "Câu hỏi tường thuật không đảo ngữ, lùi thì → lived." },
+        { "q": "They told us they ___ come the next day.", "o": ["will", "would", "can", "are"], "a": 1, "w": "will → would." },
+        { "q": "I don't know what ___.", "o": ["does he want", "he wants", "wants he", "did he want"], "a": 1, "w": "Mệnh đề danh từ: từ để hỏi + S + V (không đảo)." },
+        { "q": "She asked me ___ I liked coffee.", "o": ["that", "if", "what", "do"], "a": 1, "w": "Câu hỏi Yes/No tường thuật → if / whether." },
+        { "q": "___ he said was surprising.", "o": ["That", "What", "Which", "It"], "a": 1, "w": "What he said = điều anh ấy nói (mệnh đề danh từ làm chủ ngữ)." },
+        { "q": "The teacher told us ___ late.", "o": ["not be", "not to be", "don't be", "to not being"], "a": 1, "w": "Câu mệnh lệnh phủ định tường thuật: tell + O + not to V." },
+        { "q": "It is clear ___ the economy is improving.", "o": ["what", "that", "which", "if"], "a": 1, "w": "It is clear that + mệnh đề." },
+        { "q": "He said he ___ the report the day before.", "o": ["finished", "has finished", "had finished", "finishes"], "a": 2, "w": "Quá khứ đơn lùi thành quá khứ hoàn thành." },
+        { "q": "Can you tell me how much ___?", "o": ["does it cost", "it costs", "costs it", "did it cost"], "a": 1, "w": "Câu hỏi gián tiếp: how much + it + costs." }
+      ]
+    }
+  ]
+}

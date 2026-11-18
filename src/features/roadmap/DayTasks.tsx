@@ -2,6 +2,8 @@ import {
   BookA,
   Blocks,
   BookOpen,
+  BookOpenCheck,
+  ListChecks,
   Check,
   CheckCircle2,
   ChevronDown,
@@ -50,6 +52,8 @@ const ICON: Record<TaskKind, LucideIcon> = {
   'wordform-week': Shapes,
   'writing-week': PenLine,
   'reading-p3': BookOpen,
+  'grammar-mcq': ListChecks,
+  'reading-tfng': BookOpenCheck,
   'reading-skill': BookOpen,
   'reading-part': BookOpen,
   'writing-frame': PenLine,
@@ -81,6 +85,8 @@ export const AREA: Record<TaskKind, string> = {
   'wordform-week': 'Writing · word form',
   'writing-week': 'Writing · đoạn văn tuần',
   'reading-p3': 'Reading',
+  'grammar-mcq': 'Ngữ pháp · trắc nghiệm',
+  'reading-tfng': 'Reading · True / False / Not Given',
   'reading-skill': 'Reading',
   'reading-part': 'Reading',
   'writing-frame': 'Writing',
@@ -107,9 +113,9 @@ function toneOf(kind: TaskKind): Tone {
 }
 
 /** Tasks that only the exercise itself can tick (grammar ≥ 80 %, retest saved…). */
-const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest'];
+const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest', 'grammar-mcq', 'reading-tfng'];
 
-const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week'];
+const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'grammar-mcq', 'reading-tfng'];
 
 /**
  * `nextId`: the one task to do next. When given, only that card gets the filled button and the other open tasks get

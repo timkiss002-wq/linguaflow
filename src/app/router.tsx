@@ -43,6 +43,8 @@ const WritingWeekPage = lazy(() => import('@/pages/WritingWeekPage'));
 const GrammarFixPage = lazy(() => import('@/pages/GrammarFixPage'));
 const SvoPage = lazy(() => import('@/pages/SvoPage'));
 const ComicsPage = lazy(() => import('@/pages/ComicsPage'));
+const DailyMcqPage = lazy(() => import('@/pages/DailyMcqPage'));
+const TfngPage = lazy(() => import('@/pages/TfngPage'));
 const ComicChapterPage = lazy(() => import('@/pages/ComicChapterPage'));
 
 const page = (el: ReactNode) => <Suspense fallback={<FullPageSpinner />}>{el}</Suspense>;
@@ -88,6 +90,8 @@ export const router = createBrowserRouter([
           { path: '/ielts/passage3/:setId', element: page(<Passage3PracticePage />) },
           { path: '/ielts/:testId', element: page(<IeltsTestPage />) },
           { path: '/truyen', element: page(<ComicsPage />) },
+          { path: '/trac-nghiem/:date', element: page(<DailyMcqPage />) },
+          { path: '/tfng/:date', element: page(<TfngPage />) },
           { path: '/truyen/:bookId/:chapterId', element: page(<ComicChapterPage />) },
           { path: '/grammar', element: page(<GrammarPage />) },
           { path: '/grammar/:topicId', element: page(<GrammarDrillPage />) },
