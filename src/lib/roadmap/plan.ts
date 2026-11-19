@@ -559,9 +559,9 @@ function build(): Day[] {
         gated: true,
       });
       add('reading-tfng', {
-        title: `True / False / Not Given · ${n[2]} đoạn ngắn`,
-        detail: 'Đọc đoạn ngắn, chọn TRUE / FALSE / NOT GIVEN cho từng câu; mỗi câu có giải thích vì sao là FALSE (bài nói ngược lại) hay NOT GIVEN (bài không nhắc tới). Cần đúng ngay lần đầu ≥ 50%.',
-        minutes: 8 * n[2],
+        title: `True / False / Not Given · ${n[2]} bài mức Passage 2`,
+        detail: 'Đọc bài ~150 từ mức Passage 2 (câu hỏi paraphrase, có bẫy), chọn TRUE / FALSE / NOT GIVEN cho từng câu; mỗi câu có giải thích vì sao là FALSE (bài nói ngược lại) hay NOT GIVEN (bài không nhắc tới). Cần đúng ngay lần đầu ≥ 50%.',
+        minutes: 10 * n[2],
         href: `/tfng/${date}`,
         gated: true,
       });
