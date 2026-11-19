@@ -1572,6 +1572,46 @@
       "Does the bill include service?"
      ],
      "w": "included = đã bao gồm."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem món này có thể làm không cay được không.",
+     "en": [
+      "Can you make it not spicy?",
+      "Could you make this dish without chilli?",
+      "Can I have it without chilli?",
+      "Could you make it mild, please?"
+     ],
+     "w": "without + danh từ = không có …"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Chúng tôi có thể ngồi ngoài trời không?",
+     "en": [
+      "Can we sit outside?",
+      "Could we sit outside, please?",
+      "Is it possible to sit outside?"
+     ],
+     "w": "sit outside = ngồi ngoài trời."
+    },
+    {
+     "k": "vi",
+     "p": "Báo nhân viên: Tôi gọi gà, không phải bò.",
+     "en": [
+      "I ordered chicken, not beef.",
+      "Excuse me, I ordered chicken, not beef."
+     ],
+     "w": "Quá khứ → I ordered …"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Còn phải chờ món bao lâu nữa ạ?",
+     "en": [
+      "How much longer will our food be?",
+      "How long will our food take?",
+      "How much longer do we have to wait for our food?"
+     ],
+     "w": "How much longer … ? = còn bao lâu nữa?"
     }
    ]
   },
@@ -1725,6 +1765,45 @@
       "How do you say this in English?"
      ],
      "w": "be called = được gọi là."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bài thi này có trừ điểm câu sai không?",
+     "en": [
+      "Do we lose marks for wrong answers?",
+      "Are there negative marks for wrong answers?",
+      "Will wrong answers lose marks?"
+     ],
+     "w": "lose marks = bị trừ điểm."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Em có thể ra khỏi phòng sớm không ạ?",
+     "en": [
+      "Can I leave early?",
+      "May I leave the room early?",
+      "Could I leave early, please?"
+     ],
+     "w": "leave early = về sớm."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Câu 5 có lỗi in, thầy kiểm tra giúp em được không?",
+     "en": [
+      "There is a mistake in question five. Could you check it, please?",
+      "Could you check question five? I think there is a printing mistake.",
+      "There's a typo in question 5. Could you check it?"
+     ],
+     "w": "typo / printing mistake = lỗi in."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bài này chiếm bao nhiêu phần trăm điểm cuối kỳ?",
+     "en": [
+      "What percentage of the final grade is this assignment?",
+      "How much is this assignment worth?"
+     ],
+     "w": "worth = có giá trị bao nhiêu điểm."
     }
    ]
   },
@@ -1831,6 +1910,36 @@
       "Do you have a bag?"
      ],
      "w": "Could I have …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Áo này có giặt máy được không?",
+     "en": [
+      "Can I wash this in the washing machine?",
+      "Is this machine washable?",
+      "Can this be machine washed?"
+     ],
+     "w": "machine washable = giặt máy được."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Cái này làm bằng chất liệu gì?",
+     "en": [
+      "What is this made of?",
+      "What material is this made of?",
+      "What is it made from?"
+     ],
+     "w": "be made of = làm bằng."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể giữ hóa đơn để đổi hàng sau không?",
+     "en": [
+      "Can I keep the receipt in case I need to exchange it?",
+      "Do I need the receipt to exchange it?",
+      "Should I keep the receipt?"
+     ],
+     "w": "receipt = hóa đơn (khi mua hàng)."
     }
    ]
   },
@@ -1943,6 +2052,36 @@
       "Which stop do I get off at?"
      ],
      "w": "get off = xuống xe; giới từ at để cuối câu."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Đường này có tắc vào giờ cao điểm không?",
+     "en": [
+      "Is there much traffic on this road at rush hour?",
+      "Does this road get busy at rush hour?",
+      "Is this road usually crowded at rush hour?"
+     ],
+     "w": "rush hour = giờ cao điểm."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể đi bộ đến đó không?",
+     "en": [
+      "Can I walk there?",
+      "Is it within walking distance?",
+      "Can I get there on foot?"
+     ],
+     "w": "within walking distance = đi bộ được."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi tài xế Grab: Anh đang ở đâu rồi?",
+     "en": [
+      "Where are you now?",
+      "Where are you at the moment?",
+      "How far away are you?"
+     ],
+     "w": "Where are you now?"
     }
    ]
   },
@@ -2016,6 +2155,36 @@
       "Can I check out later?"
      ],
      "w": "late check-out = trả phòng muộn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Phòng có thêm khăn tắm không? Cho tôi xin hai cái.",
+     "en": [
+      "Could I have two more towels, please?",
+      "Could you bring me two extra towels?",
+      "Can I get two more towels, please?"
+     ],
+     "w": "two more / extra + danh từ số nhiều."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Khách sạn có đưa đón sân bay không?",
+     "en": [
+      "Do you offer an airport shuttle?",
+      "Is there an airport transfer?",
+      "Do you provide airport pick-up?"
+     ],
+     "w": "airport shuttle / transfer = xe đưa đón sân bay."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bữa sáng phục vụ ở đâu và mấy giờ?",
+     "en": [
+      "Where and when is breakfast served?",
+      "Where is breakfast served and what time?",
+      "What time and where is breakfast?"
+     ],
+     "w": "Bị động → is breakfast served."
     }
    ]
   },
@@ -2081,6 +2250,36 @@
       "How long until I feel better?"
      ],
      "w": "get better / recover = khỏi bệnh."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Thuốc này có tác dụng phụ không?",
+     "en": [
+      "Does this medicine have any side effects?",
+      "Are there any side effects?",
+      "What are the side effects of this medicine?"
+     ],
+     "w": "side effects = tác dụng phụ."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bác sĩ: Tôi có cần nghỉ học không?",
+     "en": [
+      "Do I need to stay at home from school?",
+      "Should I take time off school?",
+      "Do I need to miss classes?"
+     ],
+     "w": "take time off = nghỉ."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Khi nào tôi cần tái khám?",
+     "en": [
+      "When should I come back for a check-up?",
+      "When do I need to come back?",
+      "When is my next appointment?"
+     ],
+     "w": "check-up = khám lại."
     }
    ]
   },
@@ -2179,6 +2378,37 @@
       "Sorry, could you repeat that?"
      ],
      "w": "speak up = nói to hơn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi đồng nghiệp: Chị có thể xem qua bản nháp của em không?",
+     "en": [
+      "Could you take a look at my draft?",
+      "Could you look over my draft, please?",
+      "Would you mind checking my draft?"
+     ],
+     "w": "look over = xem qua."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi sếp: Việc nào em nên ưu tiên làm trước?",
+     "en": [
+      "Which task should I do first?",
+      "What should I prioritise?",
+      "Which task is the priority?",
+      "Which task should I focus on first?"
+     ],
+     "w": "prioritise = ưu tiên."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ai phụ trách dự án này?",
+     "en": [
+      "Who is in charge of this project?",
+      "Who is responsible for this project?",
+      "Who manages this project?"
+     ],
+     "w": "in charge of = phụ trách."
     }
    ]
   },
@@ -2288,6 +2518,35 @@
       "What's your number?"
      ],
      "w": "What is your phone number?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn: Bạn đang nghĩ gì vậy?",
+     "en": [
+      "What are you thinking about?",
+      "What's on your mind?"
+     ],
+     "w": "think about → What … about?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn: Bạn có muốn đi ăn trưa cùng không?",
+     "en": [
+      "Do you want to have lunch together?",
+      "Would you like to have lunch with me?",
+      "Shall we have lunch together?"
+     ],
+     "w": "Rủ → Would you like to …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có giận mình không?",
+     "en": [
+      "Are you angry with me?",
+      "Are you upset with me?",
+      "Are you mad at me?"
+     ],
+     "w": "angry with / mad at someone."
     }
    ]
   },
@@ -2381,6 +2640,36 @@
       "Where is the nearest cash machine?"
      ],
      "w": "the nearest = gần nhất."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể rút tối đa bao nhiêu tiền một ngày?",
+     "en": [
+      "How much can I withdraw per day?",
+      "What is the daily withdrawal limit?",
+      "What is the maximum I can withdraw a day?"
+     ],
+     "w": "withdraw = rút tiền."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể đăng ký ngân hàng điện tử ở đâu?",
+     "en": [
+      "How can I register for online banking?",
+      "Where can I sign up for internet banking?",
+      "How do I set up online banking?"
+     ],
+     "w": "online / internet banking."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Giao dịch này bao lâu thì tiền về tài khoản?",
+     "en": [
+      "How long will it take for the money to reach the account?",
+      "When will the money arrive in the account?",
+      "How long does the transfer take?"
+     ],
+     "w": "reach / arrive in = đến."
     }
    ]
   },
@@ -2490,6 +2779,46 @@
       "What is the best thing about working here?"
      ],
      "w": "What do you like most about + V-ing?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Công ty đánh giá nhân viên như thế nào?",
+     "en": [
+      "How do you evaluate employees' performance?",
+      "How is performance assessed here?",
+      "How are employees evaluated?"
+     ],
+     "w": "evaluate / assess = đánh giá."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Thời gian thử việc kéo dài bao lâu?",
+     "en": [
+      "How long is the probation period?",
+      "How long does the probation period last?",
+      "How long is the trial period?"
+     ],
+     "w": "probation period = thời gian thử việc."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Kỹ năng nào quan trọng nhất cho vị trí này?",
+     "en": [
+      "What skills are most important for this position?",
+      "Which skill is the most important for this role?",
+      "What is the most important skill for this job?"
+     ],
+     "w": "So sánh nhất → the most important."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Công ty có hỗ trợ học thêm chứng chỉ không?",
+     "en": [
+      "Does the company support employees who want to get certificates?",
+      "Do you support further training or certificates?",
+      "Does the company pay for professional courses?"
+     ],
+     "w": "support / pay for = hỗ trợ."
     }
    ]
   },
@@ -2604,6 +2933,44 @@
       "What makes you think so?"
      ],
      "w": "Why do you think so?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có thể nêu một lý do cụ thể không?",
+     "en": [
+      "Could you give a specific reason?",
+      "Can you give me one specific reason?",
+      "What is one specific reason?"
+     ],
+     "w": "specific = cụ thể."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Nếu bạn là hiệu trưởng, bạn sẽ thay đổi điều gì?",
+     "en": [
+      "If you were the principal, what would you change?",
+      "What would you change if you were the head teacher?"
+     ],
+     "w": "Điều kiện loại 2: If you were …, what would you …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Điều đó có đúng với mọi người không, hay chỉ một số người?",
+     "en": [
+      "Is that true for everyone or only for some people?",
+      "Does that apply to everyone or just some people?"
+     ],
+     "w": "apply to = đúng với."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có thay đổi ý kiến sau khi nghe lập luận của tôi không?",
+     "en": [
+      "Have you changed your mind after hearing my argument?",
+      "Has my argument changed your mind?",
+      "Do you still think the same after hearing my argument?"
+     ],
+     "w": "change your mind = đổi ý."
     }
    ]
   },
@@ -2707,6 +3074,35 @@
       "Is my monthly pass valid on this route?"
      ],
      "w": "monthly pass = vé tháng."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Xe buýt có chỗ để xe đạp không?",
+     "en": [
+      "Can I take my bike on the bus?",
+      "Is there space for bicycles on the bus?",
+      "Are bikes allowed on the bus?"
+     ],
+     "w": "allowed = được phép."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể trả tiền vé bằng ứng dụng không?",
+     "en": [
+      "Can I pay the fare with an app?",
+      "Can I pay by app?",
+      "Is it possible to pay with my phone?"
+     ],
+     "w": "pay by app / with an app."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Trạm xe buýt gần nhất ở đâu?",
+     "en": [
+      "Where is the nearest bus stop?",
+      "Is there a bus stop near here?"
+     ],
+     "w": "bus stop = trạm xe buýt."
     }
    ]
   },
@@ -2800,6 +3196,36 @@
       "Can I get a blanket, please?"
      ],
      "w": "Could I have …, please?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể mang chai nước qua cửa an ninh không?",
+     "en": [
+      "Can I take a bottle of water through security?",
+      "Am I allowed to bring water through security?",
+      "Can I bring a water bottle through security?"
+     ],
+     "w": "security = khu kiểm tra an ninh."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Hành lý của tôi chưa đến, tôi phải báo ở đâu?",
+     "en": [
+      "My luggage hasn't arrived. Where should I report it?",
+      "My bag didn't come out. Where do I report it?",
+      "Where can I report missing luggage?"
+     ],
+     "w": "hasn't arrived → hiện tại hoàn thành."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Chuyến bay có phục vụ đồ ăn không?",
+     "en": [
+      "Is food served on this flight?",
+      "Do you serve meals on this flight?",
+      "Is there food on the flight?"
+     ],
+     "w": "Bị động → Is food served …?"
     }
    ]
   },
@@ -2885,6 +3311,36 @@
       "Do I need to pay a delivery fee?"
      ],
      "w": "Do I have to pay for …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể nhận hàng ở bưu cục thay vì ở nhà không?",
+     "en": [
+      "Can I pick up the parcel at the post office instead?",
+      "Could I collect it from the post office instead of at home?",
+      "Can I collect my parcel at the post office?"
+     ],
+     "w": "pick up / collect = nhận."
+    },
+    {
+     "k": "vi",
+     "p": "Báo shop: Hàng tôi nhận được bị hỏng.",
+     "en": [
+      "The item I received is damaged.",
+      "The product I received is broken.",
+      "My order arrived damaged."
+     ],
+     "w": "received = nhận được; damaged = hư hỏng."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có giao hàng hỏa tốc không?",
+     "en": [
+      "Do you have express delivery?",
+      "Is there an express delivery option?",
+      "Can I choose express delivery?"
+     ],
+     "w": "express delivery = giao hỏa tốc."
     }
    ]
   },
@@ -2969,6 +3425,35 @@
       "How long do I have to sign the contract for?"
      ],
      "w": "minimum = tối thiểu."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tiền thuê đóng vào ngày nào hàng tháng?",
+     "en": [
+      "When is the rent due each month?",
+      "What day do I pay the rent every month?",
+      "On which day should I pay the rent?"
+     ],
+     "w": "due = đến hạn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Nếu chuyển đi sớm thì có mất tiền cọc không?",
+     "en": [
+      "Will I lose my deposit if I move out early?",
+      "Do I lose the deposit if I leave early?"
+     ],
+     "w": "move out = chuyển đi."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Phòng có máy giặt không?",
+     "en": [
+      "Is there a washing machine?",
+      "Does the room have a washing machine?",
+      "Is a washing machine included?"
+     ],
+     "w": "Is there …?"
     }
    ]
   },
@@ -3053,6 +3538,35 @@
       "How much is the late fine?"
      ],
      "w": "fine = tiền phạt."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể đặt trước cuốn sách đang có người mượn không?",
+     "en": [
+      "Can I reserve a book that is on loan?",
+      "Can I reserve this book? Someone has borrowed it.",
+      "Is it possible to reserve a book that someone has borrowed?"
+     ],
+     "w": "reserve = đặt trước; on loan = đang được mượn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Thư viện có máy in không? Mỗi trang bao nhiêu tiền?",
+     "en": [
+      "Is there a printer in the library? How much is it per page?",
+      "Can I print here? How much does it cost per page?"
+     ],
+     "w": "per page = mỗi trang."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể truy cập tài liệu điện tử từ nhà không?",
+     "en": [
+      "Can I access the e-books from home?",
+      "Can I access online resources from home?",
+      "Is it possible to use the online database at home?"
+     ],
+     "w": "access = truy cập."
     }
    ]
   },
@@ -3138,6 +3652,36 @@
       "Have you got a charger for this phone?"
      ],
      "w": "a charger for + thiết bị."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Pin máy tính của tôi hết rất nhanh, có cần thay không?",
+     "en": [
+      "My laptop battery runs out very quickly. Do I need to replace it?",
+      "My battery dies quickly. Should I replace it?",
+      "Does my laptop battery need replacing?"
+     ],
+     "w": "run out = hết; replace = thay."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Anh có thể cài lại hệ điều hành giúp tôi không?",
+     "en": [
+      "Could you reinstall the operating system for me?",
+      "Can you reinstall Windows for me?",
+      "Could you reinstall the system, please?"
+     ],
+     "w": "reinstall = cài lại."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có cần sao lưu dữ liệu trước không?",
+     "en": [
+      "Should I back up my data first?",
+      "Do I need to back up my files first?",
+      "Do I need to make a backup first?"
+     ],
+     "w": "back up = sao lưu."
     }
    ]
   },
@@ -3224,6 +3768,35 @@
       "Am I breaking up?"
      ],
      "w": "breaking up = tiếng bị đứt quãng."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ai đang chia sẻ màn hình vậy?",
+     "en": [
+      "Who is sharing their screen?",
+      "Who is sharing the screen?"
+     ],
+     "w": "Hỏi chủ ngữ → Who is sharing …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể bật camera sau được không? Mạng đang yếu.",
+     "en": [
+      "Can I turn my camera on later? My connection is weak.",
+      "Is it OK if I keep my camera off? My internet is slow.",
+      "Can I switch on my camera later? My internet is weak."
+     ],
+     "w": "turn on / switch on = bật."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bài tập về nhà nộp trên nền tảng nào?",
+     "en": [
+      "Which platform do we submit the homework on?",
+      "Where do we submit our homework online?",
+      "On which platform should we submit our homework?"
+     ],
+     "w": "Giới từ on cuối câu hoặc đầu câu."
     }
    ]
   },
@@ -3308,6 +3881,35 @@
       "What are the limitations of this study?"
      ],
      "w": "limitation = hạn chế."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có thể nói chậm lại ở phần số liệu không?",
+     "en": [
+      "Could you speak more slowly in the data part?",
+      "Could you slow down when you talk about the figures?",
+      "Could you go through the numbers more slowly?"
+     ],
+     "w": "slow down = chậm lại."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tại sao nhóm bạn chọn chủ đề này?",
+     "en": [
+      "Why did your group choose this topic?",
+      "Why did you choose this topic?"
+     ],
+     "w": "Quá khứ → Why did … choose?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi người thuyết trình: Bạn có thể gửi slide sau buổi này không?",
+     "en": [
+      "Could you send us the slides after the session?",
+      "Could you share the slides afterwards?",
+      "Will you send the slides after the presentation?"
+     ],
+     "w": "afterwards = sau đó."
     }
    ]
   },
@@ -3395,6 +3997,36 @@
       "How many credits are required for graduation?"
      ],
      "w": "credits đếm được → How many credits."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Em có thể học lại môn này vào học kỳ hè không?",
+     "en": [
+      "Can I retake this course in the summer semester?",
+      "Is it possible to retake this subject in summer?",
+      "Can I take this course again in the summer term?"
+     ],
+     "w": "retake = học lại."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Thẻ sinh viên bị mất thì làm lại ở đâu?",
+     "en": [
+      "Where can I get a new student card? I lost mine.",
+      "I've lost my student card. Where can I get a new one?",
+      "Where do I replace a lost student ID card?"
+     ],
+     "w": "one thay cho student card."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Em xin bảng điểm bằng tiếng Anh ở đâu?",
+     "en": [
+      "Where can I get an English transcript?",
+      "Where can I request my transcript in English?",
+      "How can I get my transcript in English?"
+     ],
+     "w": "transcript = bảng điểm."
     }
    ]
   },
@@ -3481,6 +4113,36 @@
       "Shall we play football on Sunday?"
      ],
      "w": "Rủ → Would you like to / Do you want to …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Phòng tập có huấn luyện viên cá nhân không? Giá bao nhiêu?",
+     "en": [
+      "Do you have personal trainers? How much do they cost?",
+      "Is there a personal trainer? How much is it?",
+      "How much is a personal trainer?"
+     ],
+     "w": "personal trainer = huấn luyện viên cá nhân."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể tạm dừng thẻ tập khi đi công tác không?",
+     "en": [
+      "Can I freeze my membership while I'm away on business?",
+      "Can I pause my membership when I travel?",
+      "Is it possible to freeze my membership?"
+     ],
+     "w": "freeze / pause = tạm dừng."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Hồ bơi mở cửa lúc mấy giờ?",
+     "en": [
+      "What time does the swimming pool open?",
+      "When does the pool open?",
+      "What are the pool's opening hours?"
+     ],
+     "w": "What time does … open?"
     }
    ]
   },
@@ -3556,6 +4218,26 @@
       "Is there a long wait?"
      ],
      "w": "How long do I have to wait?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có cần hẹn trước không?",
+     "en": [
+      "Do I need to make an appointment?",
+      "Do I need to book in advance?",
+      "Can I just walk in?"
+     ],
+     "w": "in advance = trước."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Màu này có bền không?",
+     "en": [
+      "How long will this colour last?",
+      "Does this colour last long?",
+      "Will the colour fade quickly?"
+     ],
+     "w": "last = giữ được; fade = phai."
     }
    ]
   },
@@ -3658,6 +4340,36 @@
       "Is life easier or more difficult for young people today than for their parents?"
      ],
      "w": "Câu hỏi lựa chọn + so sánh hơn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Lợi ích có lớn hơn tác hại không?",
+     "en": [
+      "Do the advantages outweigh the disadvantages?",
+      "Do the benefits outweigh the drawbacks?",
+      "Are the benefits greater than the harms?"
+     ],
+     "w": "outweigh = lớn hơn, nặng hơn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Chính phủ nên làm gì để giải quyết vấn đề này?",
+     "en": [
+      "What should the government do to solve this problem?",
+      "What should the government do about this problem?",
+      "How should the government deal with this issue?"
+     ],
+     "w": "deal with = giải quyết."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có nghĩ vấn đề này sẽ tệ hơn trong tương lai không?",
+     "en": [
+      "Do you think this problem will get worse in the future?",
+      "Will this problem become worse in the future?",
+      "Do you think the problem will get worse?"
+     ],
+     "w": "get worse = tệ hơn."
     }
    ]
   },
@@ -3764,6 +4476,36 @@
       "Can I buy them separately?"
      ],
      "w": "individually / separately = bán lẻ từng cái."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Cái này có phải hàng Việt Nam không?",
+     "en": [
+      "Is this made in Vietnam?",
+      "Is this a Vietnamese product?",
+      "Was this made in Vietnam?"
+     ],
+     "w": "made in + nước."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Quả này có ngọt không?",
+     "en": [
+      "Is this fruit sweet?",
+      "Are these sweet?",
+      "Is it sweet?"
+     ],
+     "w": "Is … sweet?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có giao hàng tận nhà khi mua trên 500 nghìn không?",
+     "en": [
+      "Do you deliver for free if I spend over five hundred thousand dong?",
+      "Is delivery free for orders over 500,000 dong?",
+      "Do you offer free delivery for orders over 500k?"
+     ],
+     "w": "over = trên."
     }
    ]
   },
@@ -3857,6 +4599,36 @@
       "What is the extension for HR?"
      ],
      "w": "extension = số máy lẻ."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bây giờ có tiện nói chuyện không?",
+     "en": [
+      "Is this a good time to talk?",
+      "Is now a good time?",
+      "Are you free to talk now?"
+     ],
+     "w": "a good time to talk = lúc tiện nói chuyện."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Mấy giờ thì tôi có thể gọi lại cho anh ấy?",
+     "en": [
+      "What time can I call him back?",
+      "When is a good time to call him back?",
+      "When should I call him back?"
+     ],
+     "w": "call back = gọi lại."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có thể nhắn tin địa chỉ cho tôi không?",
+     "en": [
+      "Could you text me the address?",
+      "Could you send me the address by message?",
+      "Can you text me the address?"
+     ],
+     "w": "text someone something = nhắn cho ai cái gì."
     }
    ]
   },
@@ -3950,6 +4722,35 @@
       "How can I report a lost card?"
      ],
      "w": "report = báo cáo, trình báo."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Đồn công an gần nhất ở đâu?",
+     "en": [
+      "Where is the nearest police station?",
+      "Is there a police station near here?"
+     ],
+     "w": "police station = đồn công an."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có thấy một chiếc ô màu xanh ở đây không?",
+     "en": [
+      "Have you seen a blue umbrella here?",
+      "Did you see a blue umbrella here?",
+      "Has anyone seen a blue umbrella?"
+     ],
+     "w": "Have you seen …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi bị lạc, anh có thể chỉ đường về khách sạn không?",
+     "en": [
+      "I'm lost. Could you tell me how to get back to my hotel?",
+      "I'm lost. Could you show me the way to my hotel?",
+      "Could you help me? I'm lost. How do I get back to my hotel?"
+     ],
+     "w": "I'm lost = tôi bị lạc."
     }
    ]
   },
@@ -4044,6 +4845,36 @@
       "Have you finished your homework?"
      ],
      "w": "… yet?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi mẹ: Mẹ có cần con giúp nấu ăn không?",
+     "en": [
+      "Do you need any help with cooking?",
+      "Do you need me to help you cook?",
+      "Can I help you with the cooking?",
+      "Shall I help you cook?"
+     ],
+     "w": "help with + V-ing."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ai để quên đèn sáng cả đêm vậy?",
+     "en": [
+      "Who left the lights on all night?",
+      "Who left the light on all night?"
+     ],
+     "w": "Hỏi chủ ngữ → Who left … on?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Cuối tuần này cả nhà mình có đi đâu không?",
+     "en": [
+      "Are we going anywhere this weekend?",
+      "Is our family going anywhere this weekend?",
+      "Are we going out this weekend?"
+     ],
+     "w": "anywhere trong câu hỏi."
     }
    ]
   },
@@ -4128,6 +4959,25 @@
       "Are there any good pho restaurants around here?"
      ],
      "w": "Is there … near here?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Anh/chị có biết ai sửa ống nước giỏi không?",
+     "en": [
+      "Do you know a good plumber?",
+      "Do you know anyone who can fix pipes?",
+      "Can you recommend a good plumber?"
+     ],
+     "w": "plumber = thợ sửa ống nước."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tối nay nhà anh/chị có tổ chức tiệc à?",
+     "en": [
+      "Are you having a party tonight?",
+      "Is there a party at your place tonight?"
+     ],
+     "w": "have a party = tổ chức tiệc."
     }
    ]
   },
@@ -4224,6 +5074,36 @@
       "Is there a free map?"
      ],
      "w": "Do you have …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Nơi nào đẹp nhất để ngắm hoàng hôn?",
+     "en": [
+      "Where is the best place to watch the sunset?",
+      "What is the best spot to see the sunset?",
+      "Where can I see the best sunset?"
+     ],
+     "w": "the best place to + V."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có cần đặt vé trước không?",
+     "en": [
+      "Do I need to book tickets in advance?",
+      "Should I book in advance?",
+      "Do we have to buy tickets in advance?"
+     ],
+     "w": "in advance = trước."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Mùa nào đẹp nhất để đến đây?",
+     "en": [
+      "What is the best time of year to visit?",
+      "When is the best season to come here?",
+      "When is the best time to visit?"
+     ],
+     "w": "the best time to + V."
     }
    ]
   },
@@ -4307,6 +5187,26 @@
       "Are there Vietnamese subtitles?"
      ],
      "w": "subtitles = phụ đề."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có được mang đồ ăn vào rạp không?",
+     "en": [
+      "Can I bring food into the cinema?",
+      "Are we allowed to take food inside?",
+      "Is outside food allowed?"
+     ],
+     "w": "bring … into = mang vào."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Vé cho trẻ em giá bao nhiêu?",
+     "en": [
+      "How much is a child's ticket?",
+      "How much are tickets for children?",
+      "How much is it for children?"
+     ],
+     "w": "a child's ticket = vé trẻ em."
     }
    ]
   },
@@ -4390,6 +5290,36 @@
       "Is this app available in Vietnamese?"
      ],
      "w": "available in + ngôn ngữ."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Làm sao để bật xác thực hai lớp?",
+     "en": [
+      "How do I turn on two-factor authentication?",
+      "How can I enable two-step verification?",
+      "How do I set up two-factor authentication?"
+     ],
+     "w": "enable / turn on = bật."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể nói chuyện với nhân viên thật không?",
+     "en": [
+      "Can I speak to a real person?",
+      "Could I talk to a human agent?",
+      "Can I speak to someone from customer service?"
+     ],
+     "w": "a real person = người thật."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tại sao tài khoản của tôi bị khóa?",
+     "en": [
+      "Why has my account been locked?",
+      "Why was my account blocked?",
+      "Why is my account locked?"
+     ],
+     "w": "Bị động hoàn thành → has been locked."
     }
    ]
   },
@@ -4473,6 +5403,26 @@
       "When does the parking area close?"
      ],
      "w": "car park / parking lot = bãi đỗ xe."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Xe này một lít xăng đi được bao nhiêu cây số?",
+     "en": [
+      "How many kilometres does this motorbike do per litre?",
+      "How far can it go on one litre of petrol?",
+      "How many kilometres per litre does it get?"
+     ],
+     "w": "per litre = mỗi lít."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể thuê xe máy ở đâu?",
+     "en": [
+      "Where can I rent a motorbike?",
+      "Where can I hire a motorbike?",
+      "Is there a motorbike rental shop near here?"
+     ],
+     "w": "rent / hire = thuê."
     }
    ]
   },
@@ -4568,6 +5518,26 @@
       "Who is presenting the conclusion?"
      ],
      "w": "present = thuyết trình."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ai sẽ ghi biên bản cuộc họp nhóm?",
+     "en": [
+      "Who will take notes at the group meeting?",
+      "Who is going to take the minutes?",
+      "Who is taking notes today?"
+     ],
+     "w": "take notes / take the minutes = ghi biên bản."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Chúng ta có nên hỏi ý kiến cô giáo trước không?",
+     "en": [
+      "Should we ask the teacher first?",
+      "Shall we ask the teacher for advice first?",
+      "Should we check with the teacher first?"
+     ],
+     "w": "check with someone = hỏi ý kiến."
     }
    ]
   },
@@ -4660,6 +5630,35 @@
       "Have you seen any good movies recently?"
      ],
      "w": "recently / lately → hiện tại hoàn thành."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn làm ở đây lâu chưa?",
+     "en": [
+      "How long have you worked here?",
+      "How long have you been working here?",
+      "Have you worked here long?"
+     ],
+     "w": "How long have you worked …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Cuối tuần của bạn thế nào?",
+     "en": [
+      "How was your weekend?",
+      "Did you have a good weekend?"
+     ],
+     "w": "How was …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn đến từ thành phố nào?",
+     "en": [
+      "Which city are you from?",
+      "What city are you from?",
+      "Where are you from?"
+     ],
+     "w": "Which city … from?"
     }
    ]
   },
@@ -4747,6 +5746,36 @@
       "Could I bring a friend with me?"
      ],
      "w": "Is it OK if I + V?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi cô dâu chú rể: Hai bạn quen nhau như thế nào?",
+     "en": [
+      "How did you two meet?",
+      "How did you meet each other?",
+      "How did you meet?"
+     ],
+     "w": "Quá khứ → How did you meet?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn muốn uống gì?",
+     "en": [
+      "What would you like to drink?",
+      "What can I get you to drink?",
+      "What do you want to drink?"
+     ],
+     "w": "What would you like to drink?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tiệc có ai mà tôi quen không?",
+     "en": [
+      "Will there be anyone I know at the party?",
+      "Is anyone I know coming to the party?",
+      "Will I know anyone there?"
+     ],
+     "w": "Will there be …?"
     }
    ]
   }
