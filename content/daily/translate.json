@@ -88,6 +88,10 @@
    "name": "Câu bị động",
    "tip": "be + V3 (by …): \"is held\", \"was built\", \"has been banned\", \"should be applied\". Dùng khi người làm không quan trọng."
   },
+  "reported": {
+   "name": "Câu tường thuật",
+   "tip": "Kể lại lời người khác: said (that) / told sb (that) + lùi một thì (is → was, has done → had done); hỏi: asked if / whether + S + V; yêu cầu: told / asked sb to V."
+  },
   "phrasal": {
    "name": "Cụm động từ & cách nói tự nhiên",
    "tip": "Học cả cụm, không dịch từng chữ: try on, break down, get used to, keep in touch, let sb know, give up, pick sb up."
@@ -3626,6 +3630,7 @@
       "He said the meeting had been postponed to Thursday."
      ],
      "t": [
+      "reported",
       "passive",
       "phrasal"
      ],
@@ -3640,7 +3645,7 @@
       "Did he ask whether you had finished your presentation?"
      ],
      "t": [
-      "question",
+      "reported",
       "pp"
      ],
      "h": "ask if / whether + S + V"
@@ -3654,8 +3659,8 @@
       "Yes, he told me to send him the draft before Wednesday."
      ],
      "t": [
-      "vpat",
-      "prep"
+      "reported",
+      "vpat"
      ]
     }
    ]
@@ -3824,6 +3829,7 @@
       "Yes, they recommended that I become a tutor."
      ],
      "t": [
+      "reported",
       "vpat"
      ],
      "h": "advise sb to V"
@@ -6047,6 +6053,7 @@
       "She said that she had just missed the last train and had nowhere to stay."
      ],
      "t": [
+      "reported",
       "pp"
      ]
     },
@@ -6242,8 +6249,8 @@
       "He told me he had come to Vietnam for the first time when he was twenty."
      ],
      "t": [
-      "pp",
-      "past"
+      "reported",
+      "pp"
      ]
     },
     {

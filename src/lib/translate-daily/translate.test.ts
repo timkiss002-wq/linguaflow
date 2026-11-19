@@ -104,3 +104,30 @@ describe('daily choice', () => {
     expect(dayByDate('2026-11-18')!.tasks.some((t) => t.kind === 'translate-dialogue')).toBe(false);
   });
 });
+
+describe('weak points shared with the multiple choice', () => {
+  it('every multiple-choice topic maps to known grammar points', async () => {
+    const { GRAMMAR_TOPICS, TOPIC_TAGS } = await import('@/lib/practice-daily');
+    for (const t of GRAMMAR_TOPICS) {
+      expect(TOPIC_TAGS[t.id], t.id).toBeTruthy();
+      for (const tag of TOPIC_TAGS[t.id]!) expect(TAGS[tag], `${t.id}: ${tag}`).toBeTruthy();
+    }
+  });
+  it('a multiple-choice mistake counts once a day and makes that topic come first in the review part', async () => {
+    const { applyTagResult } = await import('./index');
+    const { grammarSet, topicWeights, TOPIC_TAGS } = await import('@/lib/practice-daily');
+    let log = applyTagResult(emptyLog(), '2027-01-20', 'mcq:g:articles:0', TOPIC_TAGS.articles!, false);
+    log = applyTagResult(log, '2027-01-20', 'mcq:g:articles:0', TOPIC_TAGS.articles!, false);
+    expect(log.tags.article).toBe(1);
+    // a translation mistake on the same point adds up
+    log = applyResults(log, '2027-01-20', [{ key: lineKey('d', 'd02', 3), ok: false }]); // article + sva
+    expect(log.tags.article).toBe(2);
+    const weak = topicWeights(log);
+    expect(weak.articles).toBe(2);
+    const set = grammarSet('2027-01-21', 2, [], weak);
+    const plain = grammarSet('2027-01-21', 2, [], {});
+    const count = (xs: { id: string }[]) => xs.filter((m) => m.id.startsWith('g:articles:')).length;
+    expect(count(set)).toBeGreaterThan(count(plain));
+    expect(count(set)).toBeGreaterThanOrEqual(3);
+  });
+});

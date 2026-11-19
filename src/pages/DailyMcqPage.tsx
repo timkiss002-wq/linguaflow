@@ -3,7 +3,8 @@ import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { McqRunner } from '@/features/daily/McqRunner';
-import { DAILY_START, currentTopic, dailyAmount, frozenSet, grammarSet, openTopics, readWrong, wordFormSet, type Mcq } from '@/lib/practice-daily';
+import { DAILY_START, currentTopic, dailyAmount, frozenSet, grammarSet, openTopics, readWrong, sharedWeakTopics, wordFormSet, type Mcq } from '@/lib/practice-daily';
+import { WeakPoints } from '@/features/daily/WeakPoints';
 import { savePractice, practiceOf } from '@/lib/practice/results';
 import { dayByDate, daysBetween, formatDay } from '@/lib/roadmap/plan';
 
@@ -18,7 +19,7 @@ export default function DailyMcqPage() {
     if (!day) return [];
     const ids = frozenSet(`daily:set:${taskId}`, () => {
       const wrong = Object.keys(readWrong());
-      const g = grammarSet(date, phase, wrong);
+      const g = grammarSet(date, phase, wrong, sharedWeakTopics());
       const w = wordFormSet(date, phase, Math.max(0, daysBetween(DAILY_START, date)), wrong);
       return [...g, ...w];
     });
@@ -52,7 +53,7 @@ export default function DailyMcqPage() {
         <p className="text-sm text-muted-foreground">Trắc nghiệm hằng ngày · {formatDay(date)}</p>
         <h1 className="text-2xl font-bold tracking-tight">Ngữ pháp & word form</h1>
         <p className="max-w-3xl text-muted-foreground">
-          {amount.grammar} câu ngữ pháp + {amount.wordForm} câu chọn dạng từ. Khoảng một nửa câu ngữ pháp thuộc chủ điểm mới nhất, phần còn lại ôn các chủ điểm trước và những câu bạn từng sai. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại câu sai.
+          {amount.grammar} câu ngữ pháp + {amount.wordForm} câu chọn dạng từ. Khoảng một nửa câu ngữ pháp thuộc chủ điểm mới nhất, phần còn lại ôn các chủ điểm trước (ưu tiên điểm ngữ pháp bạn hay sai, ở cả bài này lẫn bài dịch) và những câu bạn từng sai. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại câu sai.
         </p>
       </header>
 
@@ -75,6 +76,8 @@ export default function DailyMcqPage() {
           ))}
         </ol>
       </section>
+
+      <WeakPoints />
 
       <div className="flex flex-wrap items-center gap-3">
         <Button size="lg" onClick={() => setStarted(true)} autoFocus data-testid="start-mcq">

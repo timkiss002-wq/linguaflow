@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight, MessagesSquare, Target, TrendingUp } from 'lucid
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { WeakPoints } from '@/features/daily/WeakPoints';
 import { WriteRunner } from '@/features/practice/WriteRunner';
 import { practiceOf, savePractice } from '@/lib/practice/results';
 import { loadRun } from '@/lib/practice/retry';
@@ -116,24 +117,7 @@ export default function TranslateDialoguePage() {
         </ul>
       </section>
 
-      <section aria-labelledby="weak" className="space-y-2">
-        <h2 id="weak" className="text-sm font-semibold">
-          Lỗi bạn hay mắc
-        </h2>
-        {weak.length ? (
-          <ul className="space-y-1.5">
-            {weak.map((t) => (
-              <li key={t.id} className="rounded-lg border bg-card px-3 py-2 text-sm">
-                <span className="font-medium">{t.name}</span>
-                <span className="ml-2 rounded-full bg-rose-100 px-2 py-0.5 text-xs font-medium text-rose-700 tabular-nums dark:bg-rose-500/15 dark:text-rose-300">sai {Math.round(t.weight)} lần gần đây</span>
-                <p className="mt-0.5 text-muted-foreground">{t.tip}</p>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="text-sm text-muted-foreground">Chưa có. Sau mỗi bài, câu nào sai lần đầu sẽ được ghi lại theo điểm ngữ pháp; bài hôm sau sẽ ưu tiên đúng những điểm đó.</p>
-        )}
-      </section>
+      <WeakPoints log={log} />
 
       <div className="flex flex-wrap items-center gap-3">
         <Button size="lg" onClick={() => setStarted(true)} autoFocus data-testid="start-translate">

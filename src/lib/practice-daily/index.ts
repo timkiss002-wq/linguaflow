@@ -1,6 +1,8 @@
 import familiesJson from '../../../content/word-families.json';
 import grammarJson from '../../../content/daily/grammar-mcq.json';
 import tfngJson from '../../../content/daily/tfng.json';
+import { readErrors, recordTagResult, type ErrorLog } from '@/lib/translate-daily';
+import { todayKey } from '@/lib/roadmap/plan';
 
 /**
  * Daily multiple choice (grammar + word form) and short True / False / Not Given passages.
@@ -79,6 +81,47 @@ function shuffle<T>(list: T[], r: () => number): T[] {
 
 const grammarItems = (t: GrammarTopic): Mcq[] => t.items.map((x, i) => ({ id: `g:${t.id}:${i}`, q: x.q, o: x.o, a: x.a, w: x.w, label: t.title_vi }));
 
+/**
+ * Each multiple-choice topic trains the same grammar points as the daily translation (lib/translate-daily TAGS),
+ * so both exercises share one list of weak points: a mistake in either one brings that point back in both.
+ */
+export const TOPIC_TAGS: Record<string, string[]> = {
+  'be-there': ['be', 'there'],
+  'present-simple': ['sva', 'question', 'neg'],
+  'present-continuous': ['cont'],
+  'past-simple': ['past'],
+  'past-continuous': ['cont', 'past'],
+  future: ['future'],
+  'nouns-count': ['plural', 'count'],
+  articles: ['article'],
+  agreement: ['sva'],
+  'sentence-patterns': ['order'],
+  'present-perfect': ['pp'],
+  prepositions: ['prep'],
+  pronouns: ['pron'],
+  comparison: ['compare'],
+  modals: ['modal'],
+  passive: ['passive'],
+  'gerund-infinitive': ['vpat'],
+  relative: ['rel'],
+  conditionals: ['cond'],
+  linking: ['conj'],
+  'perfect-tenses': ['pp'],
+  quantifiers: ['count'],
+  'conditionals-3': ['cond'],
+  reported: ['reported'],
+};
+
+/** How weak each topic is: the heaviest of its grammar points in the shared log. */
+export function topicWeights(log: ErrorLog): Record<string, number> {
+  const out: Record<string, number> = {};
+  for (const [topic, tags] of Object.entries(TOPIC_TAGS)) {
+    const w = Math.max(0, ...tags.map((t) => log.tags[t] ?? 0));
+    if (w >= 1) out[topic] = w;
+  }
+  return out;
+}
+
 /** Topics open on a date (always at least the first one). */
 export function openTopics(date: string) {
   const open = GRAMMAR_TOPICS.filter((t) => t.from <= date);
@@ -93,9 +136,10 @@ for (const t of GRAMMAR_TOPICS) for (const m of grammarItems(t)) ALL_MCQ.set(m.i
 
 /**
  * The day's grammar questions: up to a third from questions answered wrong on earlier days, about half from the
- * newest topic (all of it in the final phase is mixed), the rest spread over the earlier topics.
+ * newest topic (all of it in the final phase is mixed), the rest spread over the earlier topics — at least half of
+ * that rest from the open topics whose grammar points are weakest (mistakes in the multiple choice or the translation).
  */
-export function grammarSet(date: string, phase: number, wrongIds: string[] = []): Mcq[] {
+export function grammarSet(date: string, phase: number, wrongIds: string[] = [], weak: Record<string, number> = {}): Mcq[] {
   const n = dailyAmount(phase).grammar;
   const r = rng(seedOf(`g${date}`));
   const open = openTopics(date);
@@ -118,7 +162,14 @@ export function grammarSet(date: string, phase: number, wrongIds: string[] = [])
     open.flatMap((t) => grammarItems(t)),
     r,
   ).filter((m) => !used.has(m.id));
-  return shuffle([...review, ...fresh, ...rest].slice(0, n), r);
+  const left = n - review.length - fresh.length;
+  const topicOf = (m: Mcq) => m.id.split(':')[1]!;
+  const weakFirst = rest
+    .filter((m) => weak[topicOf(m)])
+    .sort((a, b) => weak[topicOf(b)]! - weak[topicOf(a)]!)
+    .slice(0, Math.ceil(left / 2));
+  const picked = new Set(weakFirst.map((m) => m.id));
+  return shuffle([...review, ...fresh, ...weakFirst, ...rest.filter((m) => !picked.has(m.id))].slice(0, n), r);
 }
 
 /* ---------- word form (from the word families) ---------- */
@@ -182,6 +233,8 @@ export function tfngSet(phase: number, dayIndex: number): TfngPassage[] {
   return out;
 }
 
+export const sharedWeakTopics = () => topicWeights(readErrors());
+
 export const TFNG_LABEL: Record<TfngStatement['a'], string> = { T: 'TRUE', F: 'FALSE', NG: 'NOT GIVEN' };
 
 /* ---------- questions answered wrong (kept in this browser) ---------- */
@@ -198,6 +251,8 @@ export function readWrong(): Record<string, number> {
 
 /** Wrong on the first try → comes back on later days; right on a later day → leaves the list. */
 export function recordAnswer(id: string, firstTryCorrect: boolean) {
+  // grammar questions also feed the weak points shared with the daily translation
+  if (id.startsWith('g:')) recordTagResult(todayKey(), `mcq:${id}`, TOPIC_TAGS[id.split(':')[1]!] ?? [], firstTryCorrect);
   try {
     const all = readWrong();
     if (firstTryCorrect) delete all[id];
