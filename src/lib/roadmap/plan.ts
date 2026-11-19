@@ -591,9 +591,9 @@ function build(): Day[] {
         gated: true,
       });
       add('questions', {
-        title: 'Đặt câu hỏi · 5 câu',
-        detail: '2 câu hỏi đời thường (gọi thanh toán, xin thêm giấy thi, hỏi đường…) + 3 câu theo ngữ pháp: đặt câu hỏi cho phần được tô màu (She works [at a bank] → Where does she work?) hoặc hỏi bằng tiếng Anh theo tình huống. Đi từ to be → do / does → các thì → câu hỏi gián tiếp. Cần đúng ngay lần đầu ≥ 50%; có nút "Luyện thêm 5 câu" nếu muốn làm nhiều hơn.',
-        minutes: 8,
+        title: 'Đặt câu hỏi · 13 câu (10 câu đời thường)',
+        detail: '10 câu hỏi đời thường (gọi thanh toán, xin thêm giấy thi, ngân hàng, phỏng vấn, xe buýt…) + 3 câu theo ngữ pháp: đặt câu hỏi cho phần được tô màu (She works [at a bank] → Where does she work?) hoặc hỏi bằng tiếng Anh theo tình huống. Đi từ to be → do / does → các thì → câu hỏi gián tiếp. Cần đúng ngay lần đầu ≥ 50%; có nút "Luyện thêm 5 câu" nếu muốn làm nhiều hơn.',
+        minutes: 15,
         href: `/dat-cau-hoi/${date}`,
         gated: true,
       });
