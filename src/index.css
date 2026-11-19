@@ -75,7 +75,7 @@
     --warm-soft: 27 96% 61% / 0.14;
     --warm-foreground: 31 97% 72%;
     --sidebar: 224 30% 10%;
-    --sidebar-foreground: 215 20% 80%;
+    --sidebar-foreground: 215 20% 50%;
     /* Dark step of the same hue, validated against the dark card surface. */
     --chart-1: #14a394;
     --chart-grid: #263041;

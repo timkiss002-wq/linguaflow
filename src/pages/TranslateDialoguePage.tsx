@@ -62,7 +62,7 @@ export default function TranslateDialoguePage() {
         <p className="text-sm text-muted-foreground">Dịch hằng ngày · {formatDay(date)}</p>
         <h1 className="text-2xl font-bold tracking-tight">Dịch hội thoại đời thường</h1>
         <p className="max-w-3xl text-muted-foreground">
-          {items.length} câu ngắn, dịch sang tiếng Anh từng câu. Kiểm tra xong sẽ thấy đáp án mẫu và mẹo ngữ pháp. Viết khác đáp án mà vẫn đúng thì bấm “Tôi viết đúng”. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ dịch lại câu sai.
+          {items.length} câu ngắn, dịch sang tiếng Anh từng câu. Kiểm tra xong sẽ thấy đáp án mẫu và mẹo ngữ pháp. Viết khác đáp án mà vẫn đúng thì bấm “Tôi viết đúng”. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ dịch lại câu sai.
         </p>
       </header>
 

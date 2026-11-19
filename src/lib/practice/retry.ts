@@ -2,7 +2,7 @@
  * Pass rule shared by every practice exercise of the path:
  *
  * - "Graded" sentences (active vocabulary, grammar, S-V-O, word form…) are scored on the FIRST try of the first round.
- *   At ≥ 80 % first-try right the exercise is passed. Below 80 %, only the graded sentences that were wrong the first
+ *   At ≥ 50 % first-try right the exercise is passed. Below 50 %, only the graded sentences that were wrong the first
  *   time have to be redone — never the whole exercise — and each counts once it is right on the first try of a redo.
  * - "Ungraded" sentences (passive vocabulary) only have to be right in the end, however many tries it takes; a wrong
  *   one comes back in the redo round until it is right.
@@ -10,7 +10,7 @@
  * Progress of a run is kept in this browser, so leaving the page halfway doesn't lose the first-try results.
  */
 
-export const PASS_RATE = 0.8;
+export const PASS_RATE = 0.5;
 
 export interface RunItem {
   key: string;

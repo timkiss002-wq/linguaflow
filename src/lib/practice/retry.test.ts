@@ -25,17 +25,18 @@ function firstRound(wrong: string[]) {
 }
 
 describe("shared pass rule", () => {
-  it("passes at ≥ 80 % first try of the active sentences, without redoing anything", () => {
+  it("passes at ≥ 50 % first try of the active sentences, without redoing anything", () => {
     const st = firstRound(["a0"]);
     expect(firstScore(items, st)).toEqual({ score: 4, total: 5 });
     expect(toRedo(items, st)).toEqual([]);
     expect(runPassed(items, st)).toBe(true);
   });
 
-  it("below 80 % only the active sentences wrong the first time come back", () => {
-    const st = firstRound(["a0", "a3"]);
-    expect(toRedo(items, st)).toEqual(["a0", "a3"]);
+  it("below 50 % only the active sentences wrong the first time come back", () => {
+    const st = firstRound(["a0", "a2", "a3"]);
+    expect(toRedo(items, st)).toEqual(["a0", "a2", "a3"]);
     let r = record(st, active[0]!, false, true, true);
+    r = record(r, active[2]!, false, true, true);
     expect(toRedo(items, r)).toEqual(["a3"]);
     // right only on the second try of the redo: still to redo
     r = record(r, active[3]!, false, false, true);
@@ -43,7 +44,7 @@ describe("shared pass rule", () => {
     r = record(r, active[3]!, false, true, true);
     expect(runPassed(items, r)).toBe(true);
     // the first-try score itself never changes
-    expect(firstScore(items, r).score).toBe(3);
+    expect(firstScore(items, r).score).toBe(2);
   });
 
   it("passive sentences only have to be right in the end, however many tries", () => {

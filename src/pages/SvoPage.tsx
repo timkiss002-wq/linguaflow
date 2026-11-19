@@ -55,7 +55,7 @@ export default function SvoPage() {
       date={date}
       kind="grammar-svo"
       title="Câu chuẩn S-V-O"
-      intro="Phần 1: gán nhãn 6 câu · Phần 2: xếp lại 3 câu · Phần 3: viết 3 câu từ tiếng Việt. Tính chung cả 3 phần, cần đúng ngay lần đầu ít nhất 80%; chưa đạt thì chỉ làm lại những câu sai."
+      intro="Phần 1: gán nhãn 6 câu · Phần 2: xếp lại 3 câu · Phần 3: viết 3 câu từ tiếng Việt. Tính chung cả 3 phần, cần đúng ngay lần đầu ít nhất 50%; chưa đạt thì chỉ làm lại những câu sai."
       empty="Bài S-V-O có vào thứ Hai – thứ Bảy của giai đoạn Nền tảng và thứ Hai, Tư, Sáu của giai đoạn Luyện tập."
     >
       {({ task, save }) => (
@@ -221,7 +221,7 @@ function Practice({ today, prev, level, onFinish }: { today: SvoSentence[]; prev
               Gán nhãn {partScore('l:', today)} · Xếp câu {partScore('a:', arrangeAll)} · Viết câu {partScore('', writeAll)}
             </p>
             <p className="text-muted-foreground">
-              {passed ? 'Đạt yêu cầu hôm nay.' : `Chưa đạt 80% ngay lần đầu. Chỉ cần làm lại ${redo.length} câu sai — câu nào đúng ngay lần làm lại là qua.`}
+              {passed ? 'Đạt yêu cầu hôm nay.' : `Chưa đạt 50% ngay lần đầu. Chỉ cần làm lại ${redo.length} câu sai — câu nào đúng ngay lần làm lại là qua.`}
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               {!passed && (

@@ -53,7 +53,7 @@ export default function DailyMcqPage() {
         <p className="text-sm text-muted-foreground">Trắc nghiệm hằng ngày · {formatDay(date)}</p>
         <h1 className="text-2xl font-bold tracking-tight">Ngữ pháp & word form</h1>
         <p className="max-w-3xl text-muted-foreground">
-          {amount.grammar} câu ngữ pháp + {amount.wordForm} câu chọn dạng từ. Khoảng một nửa câu ngữ pháp thuộc chủ điểm mới nhất, phần còn lại ôn các chủ điểm trước (ưu tiên điểm ngữ pháp bạn hay sai, ở cả bài này lẫn bài dịch) và những câu bạn từng sai. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại câu sai.
+          {amount.grammar} câu ngữ pháp + {amount.wordForm} câu chọn dạng từ. Khoảng một nửa câu ngữ pháp thuộc chủ điểm mới nhất, phần còn lại ôn các chủ điểm trước (ưu tiên điểm ngữ pháp bạn hay sai, ở cả bài này lẫn bài dịch) và những câu bạn từng sai. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại câu sai.
         </p>
       </header>
 

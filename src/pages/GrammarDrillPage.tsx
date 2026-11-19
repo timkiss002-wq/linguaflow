@@ -208,7 +208,7 @@ function Quiz({ topic, onLearn, onNext }: { topic: GrammarTopic; onLearn: () => 
           <CardContent className="flex flex-wrap items-center gap-3 pt-5">
             <p className="flex-1 font-semibold">
               {score}/{items.length} câu đúng ngay lần đầu ·{' '}
-              {pass ? 'Đạt — sang bước dịch câu.' : `Chưa đạt 80%. Chỉ cần làm lại ${redo.length} câu sai.`}
+              {pass ? 'Đạt — sang bước dịch câu.' : `Chưa đạt 50%. Chỉ cần làm lại ${redo.length} câu sai.`}
             </p>
             {pass ? (
               <Button onClick={onNext}>
@@ -248,7 +248,7 @@ function Formula({ topic, compact }: { topic: GrammarTopic; compact?: boolean })
   );
 }
 
-/** Step 3: translate the topic's sentences — the shared runner: ≥ 80 % first try, otherwise redo only the wrong ones. */
+/** Step 3: translate the topic's sentences — the shared runner: ≥ 50 % first try, otherwise redo only the wrong ones. */
 function Drill({ topic }: { topic: GrammarTopic }) {
   const [showFormula, setShowFormula] = useState(false);
   const items = useMemo<WriteItem[]>(() => topic.items.map((it, i) => ({ key: `${topic.id}:${i}`, prompt: it.vi, en: it.en, hint: it.hint, scene: it.scene })), [topic]);

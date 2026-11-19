@@ -7,12 +7,12 @@ export interface PracticeResult {
   best: number;
   total: number;
   at: string;
-  /** passed under the shared rule (lib/practice/retry): ≥ 80 % first try, or the wrong sentences redone */
+  /** passed under the shared rule (lib/practice/retry): ≥ 50 % first try, or the wrong sentences redone */
   passed?: boolean;
 }
 
 export const PRACTICE_KEY = 'roadmap:practice:v1';
-export const PRACTICE_PASS = 0.8;
+export const PRACTICE_PASS = 0.5;
 
 export function readPractice(): Record<string, PracticeResult> {
   try {

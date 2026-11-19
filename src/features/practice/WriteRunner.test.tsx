@@ -27,7 +27,7 @@ const next = () =>
   fireEvent.click(screen.getByRole("button", { name: /Câu tiếp|Xem kết quả/ }));
 
 describe("WriteRunner — redo only the wrong sentences", () => {
-  it("below 80 % asks to redo only the active sentences wrong the first time; a passive one only has to end right", () => {
+  it("below 50 % asks to redo only the active sentences wrong the first time; a passive one only has to end right", () => {
     localStorage.clear();
     const onFinish = vi.fn();
     render(
@@ -46,7 +46,9 @@ describe("WriteRunner — redo only the wrong sentences", () => {
     fireEvent.click(screen.getByRole("button", { name: /Sửa lại/ }));
     answer("She reads books.");
     next();
-    for (const it of active.slice(2)) {
+    answer("nope");
+    next();
+    for (const it of active.slice(3)) {
       answer(it.en[0]!);
       next();
     }
@@ -55,24 +57,26 @@ describe("WriteRunner — redo only the wrong sentences", () => {
     fireEvent.click(screen.getByRole("button", { name: /Sửa lại/ }));
     answer("The sky is blue.");
     next();
-    expect(onFinish).toHaveBeenLastCalledWith(3, 5, expect.anything(), false);
+    expect(onFinish).toHaveBeenLastCalledWith(2, 5, expect.anything(), false);
     expect(
-      screen.getByRole("button", { name: /Làm lại 2 câu sai/ }),
+      screen.getByRole("button", { name: /Làm lại 3 câu sai/ }),
     ).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /Làm lại cả bài/ })).toBeNull();
 
-    fireEvent.click(screen.getByRole("button", { name: /Làm lại 2 câu sai/ }));
+    fireEvent.click(screen.getByRole("button", { name: /Làm lại 3 câu sai/ }));
     expect(screen.getByTestId("prompt")).toHaveTextContent("câu 0");
     answer("I like apples.");
     next();
     expect(screen.getByTestId("prompt")).toHaveTextContent("câu 1");
     answer("She reads books.");
     next();
-    expect(onFinish).toHaveBeenLastCalledWith(3, 5, expect.anything(), true);
+    answer(active[2]!.en[0]!);
+    next();
+    expect(onFinish).toHaveBeenLastCalledWith(2, 5, expect.anything(), true);
     expect(screen.getByTestId("run-status")).toHaveTextContent("Đạt");
   });
 
-  it("at ≥ 80 % passes without redoing, but a passive sentence still wrong comes back", () => {
+  it("at ≥ 50 % passes without redoing, but a passive sentence still wrong comes back", () => {
     localStorage.clear();
     const onFinish = vi.fn();
     render(
