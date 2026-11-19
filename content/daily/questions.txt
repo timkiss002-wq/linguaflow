@@ -1,0 +1,196 @@
+# Đặt câu hỏi hằng ngày — nguồn để sửa / thêm câu. Sau khi sửa chạy: node scripts/build-questions-daily.mjs
+#
+# @group <id> <cấp 1–6> <điểm ngữ pháp, cách nhau dấu phẩy> | <tên nhóm> | <cách đặt câu hỏi ngắn gọn>
+# ?  câu trả lời có [phần cần hỏi] trong ngoặc vuông || câu hỏi đúng 1 // câu hỏi đúng 2 … || giải thích
+# >  tình huống tiếng Việt cần hỏi bằng tiếng Anh || câu hỏi đúng 1 // câu hỏi đúng 2 … || giải thích
+# Dấu chấm hỏi, chữ hoa và viết tắt (isn't / is not) không tính khi chấm.
+
+############ CẤP 1 · to be ############
+
+@group be-wh 1 be,question | Wh- + to be | Từ để hỏi + am / is / are + chủ ngữ? Đảo to be lên trước chủ ngữ: She is a nurse → What is she?
+? My name is [Lan]. || What is your name? || Hỏi tên → What + is + your name. Đổi my → your khi hỏi lại người nói.
+? She is [a nurse]. || What is she? // What does she do? || Hỏi nghề nghiệp: What is she? hoặc What does she do?
+? They are [in the library]. || Where are they? || Hỏi nơi chốn → Where; chủ ngữ số nhiều → are.
+? He is [twenty-two] years old. || How old is he? || Hỏi tuổi → How old + is + he.
+? The meeting is [at 9 a.m.]. || What time is the meeting? // When is the meeting? || Giờ cụ thể → What time; When cũng đúng.
+? My favourite subject is [Maths]. || What is your favourite subject? || my → your; is đứng trước chủ ngữ dài "your favourite subject".
+? I am [from Hai Phong]. || Where are you from? || Hỏi quê → Where + are + you + from? Giới từ from để ở cuối câu.
+? The weather is [cold and windy] today. || What is the weather like today? // How is the weather today? || Hỏi thời tiết → What is … like? hoặc How is …?
+? Her new phone is [black]. || What colour is her new phone? || Hỏi màu → What colour + is + danh từ.
+? [My brother] is in the kitchen. || Who is in the kitchen? || Hỏi CHỦ NGỮ là người → Who + is …, không đảo.
+> Hỏi bạn: Bạn có khỏe không? || How are you? || Hỏi sức khỏe → How are you?
+> Hỏi xem cái túi này giá bao nhiêu. || How much is this bag? // How much does this bag cost? || Hỏi giá → How much is …? hoặc How much does … cost?
+
+@group be-yn 1 be,question | Câu hỏi Yes / No với to be | Đưa am / is / are lên đầu câu: You are tired → Are you tired? Trả lời Yes, I am / No, I'm not.
+? [Yes], I am a student. || Are you a student? || Trả lời "Yes, I am" → hỏi Are you …?
+? [No], she isn't at home. || Is she at home? || isn't → câu hỏi bắt đầu bằng Is.
+? [Yes], they are ready. || Are they ready? || they → Are they …?
+? [No], the shop isn't open on Sundays. || Is the shop open on Sundays? || Chủ ngữ số ít "the shop" → Is.
+? [Yes], there is a bank near here. || Is there a bank near here? || There is → Is there …?
+? [No], there aren't any eggs in the fridge. || Are there any eggs in the fridge? || There are → Are there any …? Câu hỏi dùng any.
+? [Yes], it is your book. || Is it my book? || your (người trả lời nói) → my (người hỏi nói).
+? [No], we aren't late. || Are we late? || we → Are we …?
+> Hỏi bạn: Đây có phải là lần đầu bạn đến Hà Nội không? || Is this your first time in Hanoi? // Is this your first visit to Hanoi? || Là / phải không → dùng to be: Is this …?
+> Hỏi xem trong phòng có wifi không. || Is there wifi in the room? // Is there wi-fi in the room? // Does the room have wifi? || "Có … không" (tồn tại) → Is there …?
+> Hỏi xem bố mẹ bạn ấy có ở nhà không. || Are your parents at home? // Are your parents home? || Chủ ngữ số nhiều → Are.
+
+############ CẤP 2 · hiện tại đơn ############
+
+@group ps-wh 2 sva,question | Wh- + do / does | Từ để hỏi + do / does + chủ ngữ + động từ NGUYÊN MẪU. He works → Where does he work? (works → work)
+? I live [in Ha Dong]. || Where do you live? || Động từ thường → mượn do; I → you.
+? She works [at a bank]. || Where does she work? || she → does; works → work (bỏ s).
+? He gets up [at six o'clock]. || What time does he get up? // When does he get up? || does + get up (bỏ s ở gets).
+? They go to school [by bus]. || How do they go to school? || Hỏi phương tiện → How.
+? My father drinks [coffee] every morning. || What does your father drink every morning? || drinks → does … drink.
+? She studies English [because she wants to work abroad]. || Why does she study English? || studies → does … study (không giữ -ies).
+? The film starts [at 8 p.m.]. || What time does the film start? // When does the film start? || starts → does … start.
+? We have lunch [in the canteen]. || Where do you have lunch? || we → you; have giữ nguyên.
+? My sister likes [K-pop]. || What kind of music does your sister like? // What does your sister like? || likes → does … like.
+? [Minh] teaches us Maths. || Who teaches you Maths? || Hỏi CHỦ NGỮ → Who + teaches (giữ s, KHÔNG dùng does).
+> Hỏi bạn ấy thường làm gì vào cuối tuần. || What do you usually do at the weekend? // What do you usually do at weekends? // What do you usually do on weekends? || usually đứng sau chủ ngữ, trước động từ chính.
+> Hỏi xem từ "career" nghĩa là gì. || What does career mean? // What does the word career mean? || mean → What does … mean? (không dùng "What is mean")
+
+@group ps-yn 2 sva,question | Do / Does … ? và How often | Do / Does + chủ ngữ + V nguyên mẫu? Hỏi tần suất → How often do / does …?
+? [Yes], I like spicy food. || Do you like spicy food? || Yes, I do → Do you …?
+? [No], he doesn't play football. || Does he play football? || doesn't → Does he + play.
+? [Yes], my mother cooks every day. || Does your mother cook every day? || cooks → Does … cook.
+? I go to the gym [three times a week]. || How often do you go to the gym? || Tần suất → How often.
+? She checks her email [every hour]. || How often does she check her email? || checks → does … check.
+? [No], they don't live near the university. || Do they live near the university? || don't → Do they …?
+? It [rarely] rains here in December. || How often does it rain here in December? || It + rains → does it rain.
+? [Yes], the bus stops here. || Does the bus stop here? || Chủ ngữ số ít → Does.
+> Hỏi bạn ấy có nói được tiếng Trung không. || Do you speak Chinese? // Can you speak Chinese? || speak → Do you speak …? (Can you … cũng đúng)
+> Hỏi xem bạn ấy có thích công việc hiện tại không. || Do you like your job? // Do you like your current job? // Do you enjoy your job? // Do you enjoy your current job? || Do you like …?
+> Hỏi xem chị gái bạn có làm việc ở Hà Nội không. || Does your sister work in Hanoi? || sister → Does; work giữ nguyên.
+
+############ CẤP 3 · hiện tại tiếp diễn & quá khứ ############
+
+@group pc 3 cont,question | Hiện tại tiếp diễn | Từ để hỏi + am / is / are + chủ ngữ + V-ing? She is reading → What is she reading?
+? She is reading [a novel]. || What is she reading? || Giữ V-ing, đảo is lên trước she.
+? They are waiting [for the bus]. || What are they waiting for? // Who are they waiting for? || wait for → giới từ for để cuối câu.
+? I am studying [for my IELTS exam]. || What are you studying for? || I am → are you.
+? [Yes], it is raining now. || Is it raining now? || Yes/No → Is it raining?
+? He is talking [to his manager]. || Who is he talking to? || talk to → Who … to?
+? We are staying [at a small hotel]. || Where are you staying? || we → you.
+? The children are crying [because they are hungry]. || Why are the children crying? || Lý do → Why.
+? [No], I'm not working this weekend. || Are you working this weekend? || Tiếp diễn chỉ kế hoạch tương lai gần → Are you working …?
+> Hỏi bạn ấy đang làm gì vậy. || What are you doing? || đang làm → What are you doing?
+> Hỏi xem dạo này bạn ấy đang đọc sách gì. || What book are you reading at the moment? // What are you reading these days? // What book are you reading these days? // What are you reading at the moment? || Hành động đang diễn ra quanh thời điểm nói → tiếp diễn.
+
+@group past 3 past,question | Quá khứ đơn | Từ để hỏi + did + chủ ngữ + V NGUYÊN MẪU? went → did … go. Với was / were thì đảo lên đầu như to be.
+? I went [to Da Nang] last summer. || Where did you go last summer? || went → did … go (không viết "did you went").
+? She bought [a new laptop] yesterday. || What did she buy yesterday? || bought → did … buy.
+? They arrived [at midnight]. || What time did they arrive? // When did they arrive? || arrived → did … arrive.
+? He left the company [in 2022]. || When did he leave the company? || left → did … leave.
+? We met [at a friend's party]. || Where did you meet? || met → did … meet.
+? She was late [because of the traffic]. || Why was she late? || was → Why was she …? (không thêm did với was)
+? The trip was [wonderful]. || How was the trip? || Hỏi cảm nhận → How was …?
+? [Yes], I finished the report. || Did you finish the report? || Yes, I did → Did you finish …?
+? I was [at home] last night. || Where were you last night? || I was → were you.
+? [No], they weren't at the meeting. || Were they at the meeting? || weren't → Were they …?
+? [Tom] broke the window. || Who broke the window? || Hỏi CHỦ NGỮ → Who + broke, không dùng did.
+> Hỏi bạn ấy đã làm gì vào tối qua. || What did you do last night? || Quá khứ → did + do.
+> Hỏi xem kỳ nghỉ của bạn ấy thế nào. || How was your holiday? // How was your vacation? || How was …?
+
+@group past-cont 3 cont,past,question | Quá khứ tiếp diễn | Từ để hỏi + was / were + chủ ngữ + V-ing? Thường đi với "when / at 8 p.m. yesterday".
+? I was watching [TV] when you called. || What were you watching when I called? // What were you doing when I called? || I was → were you; you called → I called.
+? She was living [in Hue] in 2020. || Where was she living in 2020? || was + living, đảo was.
+? At 9 p.m. yesterday they were [having dinner]. || What were they doing at 9 p.m. yesterday? || Hỏi hành động → What were they doing?
+? He was driving [too fast] when the accident happened. || How was he driving when the accident happened? || Hỏi cách thức → How.
+? [Yes], it was raining when we left. || Was it raining when you left? || we left → you left.
+> Hỏi bạn ấy đang làm gì lúc mất điện. || What were you doing when the power went out? // What were you doing when the power cut happened? // What were you doing when the electricity went off? || Hành động đang dở thì bị cắt ngang → quá khứ tiếp diễn.
+
+############ CẤP 4 · tương lai & số lượng ############
+
+@group future 4 future,question | Will / be going to | Will + chủ ngữ + V? hoặc am / is / are + chủ ngữ + going to + V?
+? I will call you [tomorrow]. || When will you call me? || will → đảo lên trước you; you → me.
+? She is going to study [in Australia]. || Where is she going to study? || is going to → is she going to study.
+? They are going to buy [a new car]. || What are they going to buy? || Giữ going to + V.
+? The project will finish [next month]. || When will the project finish? || will finish → When will … finish.
+? [Yes], I will help you. || Will you help me? || I will → Will you …? ; you → me.
+? We are going to visit [our grandparents] this weekend. || Who are you going to visit this weekend? || Hỏi người là tân ngữ → Who + are you going to visit.
+? He is going to quit his job [because he wants to start a business]. || Why is he going to quit his job? || Lý do → Why.
+> Hỏi bạn ấy sẽ làm gì sau khi tốt nghiệp. || What are you going to do after graduation? // What will you do after graduation? // What are you going to do after you graduate? // What will you do after you graduate? || Kế hoạch → be going to (will cũng chấp nhận).
+> Hỏi xem bạn ấy có đến bữa tiệc tối nay không. || Are you coming to the party tonight? // Will you come to the party tonight? // Are you going to come to the party tonight? || Kế hoạch đã định → hiện tại tiếp diễn hoặc be going to.
+
+@group how 4 count,question | How much / many / long / far · Which · Whose | many + danh từ đếm được số nhiều; much + không đếm được; How long = bao lâu; How far = bao xa; Whose = của ai.
+? I have [two] brothers. || How many brothers do you have? || Đếm được số nhiều → How many + brothers.
+? She drinks [two litres of] water a day. || How much water does she drink a day? || water không đếm được → How much water.
+? The course costs [five million dong]. || How much does the course cost? // How much is the course? || Hỏi giá → How much.
+? It takes [thirty minutes] to get to work. || How long does it take to get to work? || Hỏi thời gian bỏ ra → How long does it take …?
+? My house is [about two kilometres] from here. || How far is your house from here? || Khoảng cách → How far.
+? This is [Mai's] umbrella. || Whose umbrella is this? // Whose is this umbrella? || Của ai → Whose + danh từ.
+? I prefer [the blue] shirt. || Which shirt do you prefer? || Chọn trong số có sẵn → Which.
+? There are [forty] students in my class. || How many students are there in your class? || There are → How many … are there?
+? We stayed in Japan [for ten days]. || How long did you stay in Japan? || for ten days → How long; stayed → did … stay.
+? I need [some] sugar. || How much sugar do you need? || sugar không đếm được → How much.
+> Hỏi xem bạn ấy học tiếng Anh được bao lâu rồi. || How long have you studied English? // How long have you been studying English? // How long have you learned English? // How long have you been learning English? || "được bao lâu rồi" (đến nay) → How long have you …?
+> Hỏi xem ở cửa hàng có bao nhiêu nhân viên. || How many staff are there in the shop? // How many employees are there in the shop? // How many people work in the shop? // How many employees does the shop have? || employees đếm được → How many.
+
+############ CẤP 5 · hoàn thành & khuyết thiếu ############
+
+@group pp 5 pp,question | Hiện tại hoàn thành | Have / Has + chủ ngữ + V3? Ever = đã từng; How long … for / since; yet trong câu hỏi.
+? [Yes], I have been to Singapore. || Have you ever been to Singapore? // Have you been to Singapore? || Kinh nghiệm → Have you ever been to …?
+? She has worked here [for five years]. || How long has she worked here? // How long has she been working here? || for five years → How long has she worked …?
+? They have lived in this city [since 2019]. || How long have they lived in this city? // How long have they been living in this city? // Since when have they lived in this city? || since 2019 → How long have they lived …?
+? [No], he hasn't finished his homework yet. || Has he finished his homework yet? // Has he finished his homework? || hasn't → Has he finished … yet?
+? I have read [three] books this month. || How many books have you read this month? || How many + books + have you read.
+? We have just eaten [pizza]. || What have you just eaten? // What have you eaten? || have eaten → What have you eaten?
+? She has visited [Japan and Korea]. || Which countries has she visited? // What countries has she visited? || has visited → Which countries has she visited?
+> Hỏi xem bạn ấy đã từng ăn sầu riêng chưa. || Have you ever eaten durian? // Have you ever tried durian? || "đã từng … chưa" → Have you ever + V3.
+> Hỏi xem bạn ấy đã nộp bài tập chưa. || Have you submitted your assignment yet? // Have you handed in your assignment yet? // Have you submitted your homework yet? // Have you handed in your homework yet? // Have you submitted your assignment? // Have you handed in your assignment? || "đã … chưa" → Have you … yet?
+
+@group modal 5 modal,question | Can · Should · Must / Have to · Could you…? | Can / Should / Must + chủ ngữ + V? Have to mượn do: Do I have to …? Lời đề nghị lịch sự: Could you …?
+? [Yes], I can swim. || Can you swim? || can → Can you + V.
+? You should take [a taxi]. || What should I take? // What should I do? || You should → What should I …?
+? We have to arrive [before 7 a.m.]. || When do we have to arrive? // What time do we have to arrive? || have to → do we have to (mượn do).
+? [No], you don't have to wear a uniform. || Do I have to wear a uniform? || don't have to → Do I have to …?
+? She can play [the piano and the guitar]. || What can she play? // What instruments can she play? || can play → What can she play?
+? You can park [behind the building]. || Where can I park? || You can → Where can I …?
+> Hỏi nhờ người khác nói chậm lại một cách lịch sự. || Could you speak more slowly, please? // Could you please speak more slowly? // Can you speak more slowly, please? // Could you speak slowly, please? || Nhờ lịch sự → Could you …, please?
+> Hỏi ý kiến: Tôi có nên học thêm một ngoại ngữ nữa không? || Should I learn another foreign language? // Should I learn another language? // Should I study another foreign language? // Should I study another language? || Xin lời khuyên → Should I …?
+> Hỏi xem bạn có thể mượn bút của người ấy không. || Can I borrow your pen? // Could I borrow your pen? // May I borrow your pen? || Xin phép → Can / Could / May I …?
+
+############ CẤP 6 · câu hỏi nâng cao ############
+
+@group subject 6 question,order | Hỏi chủ ngữ hay hỏi tân ngữ | Hỏi CHỦ NGỮ (Who / What làm việc đó?) → không dùng do / does / did, động từ chia như câu thường: Who called you? Hỏi TÂN NGỮ → có trợ động từ: Who did you call?
+? [Linh] called me last night. || Who called you last night? || Linh là người gọi (chủ ngữ) → Who called …? (KHÔNG "Who did call")
+? I called [Linh] last night. || Who did you call last night? || Linh là người được gọi (tân ngữ) → Who did you call?
+? [A strange noise] woke me up. || What woke you up? || Chủ ngữ là vật → What + woke.
+? The storm damaged [the roof]. || What did the storm damage? || roof là tân ngữ → What did the storm damage?
+? [Most students] prefer online classes. || Who prefers online classes? // How many students prefer online classes? || Hỏi chủ ngữ → Who prefers (động từ số ít sau Who).
+? [An accident] happened on the bridge. || What happened on the bridge? || happen không có tân ngữ → What happened …? (không dùng did)
+? My boss gave me [a bonus]. || What did your boss give you? || bonus là tân ngữ → What did … give …?
+? [My mother] cooks dinner in my family. || Who cooks dinner in your family? || Chủ ngữ → Who cooks (giữ s).
+> Hỏi xem ai đã viết cuốn sách này. || Who wrote this book? || Hỏi chủ ngữ ở quá khứ → Who wrote …? (không dùng did)
+> Hỏi xem chuyện gì đã xảy ra với điện thoại của bạn ấy. || What happened to your phone? || happen to → What happened to …?
+
+@group prep-end 6 question,prep | Giới từ ở cuối câu hỏi | Động từ đi với giới từ (listen to, look for, worry about, depend on…) → giới từ để ở CUỐI câu hỏi: Who are you talking to?
+? She is listening [to jazz]. || What is she listening to? || listen to → What … listening to?
+? I am worried [about my exam]. || What are you worried about? || worried about → What … worried about?
+? He is looking [for his keys]. || What is he looking for? || look for → What … looking for?
+? The decision depends [on the price]. || What does the decision depend on? || depend on → What does … depend on?
+? They are talking [about the new project]. || What are they talking about? || talk about → What … about?
+? I live [with my cousins]. || Who do you live with? || live with → Who do you live with?
+? This letter is [from the bank]. || Who is this letter from? // Where is this letter from? || from → Who … from?
+> Hỏi xem bạn ấy quan tâm đến lĩnh vực gì. || What are you interested in? // What field are you interested in? // Which field are you interested in? || interested in → What are you interested in?
+
+@group passive-q 6 passive,question | Câu hỏi bị động | Từ để hỏi + is / are / was / were + chủ ngữ + V3? The bridge was built in 1902 → When was the bridge built?
+? The bridge was built [in 1902]. || When was the bridge built? || was built → When was … built?
+? Coffee is grown [in the Central Highlands]. || Where is coffee grown? || is grown → Where is coffee grown?
+? The novel was written [by Nguyen Du]. || Who was the novel written by? // Who wrote the novel? || was written by → Who … written by? (hoặc Who wrote …?)
+? These phones are made [in Viet Nam]. || Where are these phones made? || are made → Where are … made?
+? The meeting was cancelled [because of the storm]. || Why was the meeting cancelled? || was cancelled → Why was … cancelled?
+? [Yes], the windows are cleaned every week. || Are the windows cleaned every week? || Yes/No bị động → Are + chủ ngữ + V3?
+> Hỏi xem ngôi chùa này được xây khi nào. || When was this pagoda built? // When was this temple built? || Bị động quá khứ → When was … built?
+> Hỏi xem tiếng Anh có được dạy ở trường tiểu học không. || Is English taught in primary schools? // Is English taught at primary schools? || Bị động hiện tại → Is English taught …?
+
+@group indirect 6 question,order | Câu hỏi gián tiếp (lịch sự) | Could you tell me / Do you know + từ để hỏi + CHỦ NGỮ + ĐỘNG TỪ (không đảo, không do / does / did): Where is the station? → Could you tell me where the station is?
+> Hỏi lịch sự (bắt đầu bằng Could you tell me): Nhà ga ở đâu? || Could you tell me where the station is? // Could you tell me where the train station is? || Câu gián tiếp → where + the station + is (không đảo: KHÔNG "where is the station").
+> Hỏi lịch sự (bắt đầu bằng Do you know): Mấy giờ thì cửa hàng đóng cửa? || Do you know what time the shop closes? // Do you know when the shop closes? || Bỏ does: What time does the shop close? → what time the shop closes (thêm s lại).
+> Hỏi lịch sự (bắt đầu bằng Could you tell me): Vé giá bao nhiêu? || Could you tell me how much the ticket is? // Could you tell me how much the ticket costs? // Could you tell me how much the tickets are? // Could you tell me how much the tickets cost? || how much + the ticket + is / costs.
+> Hỏi lịch sự (bắt đầu bằng Do you know): Anh ấy đã đi đâu? || Do you know where he went? || Bỏ did: Where did he go? → where he went (động từ về quá khứ).
+> Hỏi lịch sự (bắt đầu bằng Can you tell me): Bài thi bắt đầu khi nào? || Can you tell me when the exam starts? // Can you tell me what time the exam starts? // Can you tell me when the test starts? || when + the exam + starts.
+> Hỏi lịch sự (bắt đầu bằng I wonder): Liệu cô ấy có đến không? || I wonder if she will come. // I wonder whether she will come. // I wonder if she is coming. // I wonder whether she is coming. || Câu hỏi Yes/No gián tiếp → if / whether + chủ ngữ + động từ.
+> Hỏi lịch sự (bắt đầu bằng Do you know): Phòng 201 ở tầng mấy? || Do you know which floor room 201 is on? // Do you know what floor room 201 is on? || which floor + room 201 + is on (giới từ cuối câu).
+> Hỏi lịch sự (bắt đầu bằng Could you tell me): Tôi nên điền mẫu đơn này như thế nào? || Could you tell me how I should fill in this form? // Could you tell me how to fill in this form? // Could you tell me how I should fill out this form? // Could you tell me how to fill out this form? || how + I + should + V, hoặc gọn hơn: how to + V.

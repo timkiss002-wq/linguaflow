@@ -136,6 +136,7 @@ export function isDone(task: Task, ctx: Context): boolean {
     case 'translate-dialogue':
     case 'translate-story':
     case 'linking':
+    case 'questions':
     case 'argue':
       return practicePassed(task.id);
     case 'reading-p3':

@@ -1,5 +1,5 @@
 import { ArrowRight, Check, CheckCircle2, Lightbulb, RotateCcw, ThumbsUp, X } from 'lucide-react';
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, useInRouterContext } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -26,6 +26,25 @@ export interface RoundResult {
   total: number;
   /** ≥ 50 % first try, or every required sentence redone */
   passed: boolean;
+}
+
+/** "[part]" in a prompt is the part to ask about (daily question forming): shown highlighted, without the brackets. */
+const MARKED = /\[[^\]]+\]/;
+function Marked({ text }: { text: string }) {
+  if (!MARKED.test(text)) return <>{text}</>;
+  return (
+    <>
+      {text.split(/(\[[^\]]+\])/).map((p, i) =>
+        p.startsWith('[') && p.endsWith(']') ? (
+          <mark key={i} className="rounded bg-amber-200/70 px-1 text-foreground underline decoration-amber-500 decoration-2 underline-offset-4 dark:bg-amber-500/30">
+            {p.slice(1, -1)}
+          </mark>
+        ) : (
+          <Fragment key={i}>{p}</Fragment>
+        ),
+      )}
+    </>
+  );
 }
 
 const norm = (s: string) => expandContractions(s).toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').replace(/\s+/g, ' ').trim();
@@ -204,8 +223,8 @@ export function WriteRunner({
               {item!.task ?? (mode === 'fix' ? 'Câu có một lỗi — sửa lại cho đúng' : mode === 'gap' ? 'Điền dạng đúng của từ trong ngoặc' : 'Dịch sang tiếng Anh')}
               {item!.label && <span className="ml-2 rounded bg-muted px-1.5 py-0.5 normal-case tracking-normal">{item!.label}</span>}
             </p>
-            <p className={cn('mt-1 text-xl font-semibold leading-snug sm:text-2xl', mode === 'fix' && 'decoration-rose-400 decoration-wavy underline-offset-4')} lang={mode === 'translate' ? 'vi' : 'en'} data-testid="prompt">
-              {item!.prompt}
+            <p className={cn('mt-1 text-xl font-semibold leading-snug sm:text-2xl', mode === 'fix' && 'decoration-rose-400 decoration-wavy underline-offset-4')} lang={mode === 'translate' && !MARKED.test(item!.prompt) ? 'vi' : 'en'} data-testid="prompt">
+              <Marked text={item!.prompt} />
             </p>
             {!firstRound && <p className="mt-1 text-xs font-medium text-amber-700 dark:text-amber-300">Làm lại câu sai</p>}
             {mode === 'translate' && item!.mustUse && (
@@ -459,7 +478,7 @@ function Summary({
                   <li key={i} className="space-y-0.5 py-2.5 text-sm">
                     <p className="font-medium">
                       {items[i]!.label && <span className="mr-1.5 rounded bg-muted px-1.5 py-0.5 text-xs font-normal">{items[i]!.label}</span>}
-                      {items[i]!.prompt}
+                      <Marked text={items[i]!.prompt} />
                     </p>
                     {a && (
                       <p className="text-muted-foreground" lang="en">
