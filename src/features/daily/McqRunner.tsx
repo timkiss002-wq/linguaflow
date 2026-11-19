@@ -6,12 +6,12 @@ import { Progress } from '@/components/ui/progress';
 import { recordAnswer, type Mcq } from '@/lib/practice-daily';
 import { cn } from '@/lib/utils';
 
-const PASS = 0.8;
+const PASS = 0.5;
 const LETTERS = ['A', 'B', 'C', 'D'];
 
 /**
  * Multiple choice, one question at a time: pick an option (or press 1–4 / A–D), see right or wrong with the reason,
- * go on. The first round is scored; under 80 % only the questions answered wrong are done again, until right.
+ * go on. The first round is scored; under 50 % only the questions answered wrong are done again, until right.
  */
 export function McqRunner({ items, onFinish, extra }: { items: Mcq[]; onFinish: (score: number, total: number, passed: boolean) => void; extra?: ReactNode }) {
   const [order, setOrder] = useState(() => items.map((_, i) => i));
@@ -71,7 +71,7 @@ export function McqRunner({ items, onFinish, extra }: { items: Mcq[]; onFinish: 
             {score}/{items.length} câu đúng ngay lần đầu ({pct}%)
           </h2>
           <p className="text-muted-foreground" data-testid="mcq-status">
-            {passed ? 'Đạt yêu cầu — đã xong bài hôm nay. Câu sai sẽ quay lại ở những ngày sau.' : `Chưa đạt 80%. Làm lại ${wrong.length} câu sai — chọn đúng là qua.`}
+            {passed ? 'Đạt yêu cầu — đã xong bài hôm nay. Câu sai sẽ quay lại ở những ngày sau.' : `Chưa đạt 50%. Làm lại ${wrong.length} câu sai — chọn đúng là qua.`}
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {!passed && (

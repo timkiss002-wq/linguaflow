@@ -126,7 +126,7 @@ function toneOf(kind: TaskKind): Tone {
   return 'slate';
 }
 
-/** Tasks that only the exercise itself can tick (grammar ≥ 80 %, retest saved…). */
+/** Tasks that only the exercise itself can tick (grammar ≥ 50 %, retest saved…). */
 const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story', 'grammar-weak', 'linking', 'argue'];
 
 const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story', 'grammar-weak', 'linking', 'argue'];

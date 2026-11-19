@@ -96,7 +96,7 @@ export interface Context {
 const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ');
 export const normaliseTerm = norm;
 
-/** A grammar topic is passed when its quiz and its translation drill are each passed (≥ 80 % first try, or the wrong ones redone). */
+/** A grammar topic is passed when its quiz and its translation drill are each passed (≥ 50 % first try, or the wrong ones redone). */
 export function topicState(topic: string) {
   const q = readQuiz()[topic];
   const d = readProgress()[topic];
@@ -199,14 +199,14 @@ export function lockReason(task: Task, day: Day, ctx: Context, today = todayKey(
   if (locked) return locked;
   if (task.kind === 'grammar-learn' || task.kind === 'grammar-drill' || task.kind === 'grammar-own') {
     const prev = previousTopic(task.topic!);
-    if (prev && !topicState(prev).passed) return 'Cần qua chủ điểm trước (nhận diện và dịch câu, mỗi phần ≥ 80%).';
-    if (task.kind === 'grammar-drill' && !topicState(task.topic!).quizOk) return 'Làm phần nhận diện trước (≥ 80%).';
-    if (task.kind === 'grammar-own' && !topicState(task.topic!).drillOk) return 'Qua phần dịch 8 câu trước (≥ 80%).';
+    if (prev && !topicState(prev).passed) return 'Cần qua chủ điểm trước (nhận diện và dịch câu, mỗi phần ≥ 50%).';
+    if (task.kind === 'grammar-drill' && !topicState(task.topic!).quizOk) return 'Làm phần nhận diện trước (≥ 50%).';
+    if (task.kind === 'grammar-own' && !topicState(task.topic!).drillOk) return 'Qua phần dịch 8 câu trước (≥ 50%).';
   }
   if (task.kind === 'grammar-fix' && task.topic) {
     const prev = previousTopic(task.topic);
-    if (prev && !topicState(prev).passed) return 'Cần qua chủ điểm trước (nhận diện và dịch câu, mỗi phần ≥ 80%).';
-    if (!topicState(task.topic).quizOk) return 'Học lý thuyết + làm phần nhận diện của chủ điểm này trước (≥ 80%).';
+    if (prev && !topicState(prev).passed) return 'Cần qua chủ điểm trước (nhận diện và dịch câu, mỗi phần ≥ 50%).';
+    if (!topicState(task.topic).quizOk) return 'Học lý thuyết + làm phần nhận diện của chủ điểm này trước (≥ 50%).';
   }
   return undefined;
 }

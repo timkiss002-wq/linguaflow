@@ -22,7 +22,7 @@ export default function ExampleTranslatePage() {
           Mỗi câu là ví dụ của một từ / cụm từ hôm nay. Dịch sang tiếng Anh và <b>phải dùng đúng từ đó</b> (được chia thì, thêm -s…). Câu của bạn
           khác đáp án nhưng vẫn đúng thì bấm “Tôi viết đúng”.
           <br />
-          <b>Cụm chủ động</b>: cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại câu chủ động bị sai. <b>Từ thụ động</b>: chỉ cần dịch đúng, sai thì làm lại câu đó
+          <b>Cụm chủ động</b>: cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại câu chủ động bị sai. <b>Từ thụ động</b>: chỉ cần dịch đúng, sai thì làm lại câu đó
           (bao nhiêu lần cũng được).
         </>
       }

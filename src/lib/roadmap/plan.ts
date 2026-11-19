@@ -83,7 +83,7 @@ export interface Task {
   fix?: { topic: string; idx: number }[];
   /** grammar-svo: today's set (labelling) and the set reused for ordering + writing */
   svo?: { set: number; prev: number };
-  /** done only through the exercise itself (≥ 80 % first try, or the wrong sentences redone), not by ticking */
+  /** done only through the exercise itself (≥ 50 % first try, or the wrong sentences redone), not by ticking */
   gated?: boolean;
 }
 
@@ -315,7 +315,7 @@ function build(): Day[] {
       const to = Math.min(topic.words.length, from + ACTIVE_PER_DAY);
       add('vocab-active', {
         title: `${to - from} cụm từ chủ động · ${topic.name}`,
-        detail: 'Học 5 cụm Writing theo chủ đề tuần (nghĩa + ví dụ), rồi dịch 3 câu tiếng Việt đơn giản cho mỗi cụm sang tiếng Anh, dùng đúng cụm đó. Máy chấm đúng / sai ngay, có gợi ý. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại những câu sai.',
+        detail: 'Học 5 cụm Writing theo chủ đề tuần (nghĩa + ví dụ), rồi dịch 3 câu tiếng Việt đơn giản cho mỗi cụm sang tiếng Anh, dùng đúng cụm đó. Máy chấm đúng / sai ngay, có gợi ý. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại những câu sai.',
         minutes: 15,
         href: `/viet-cau/${date}`,
         active: { topic: topic.id, from, to, prompt: topic.prompts[n % topic.prompts.length]! },
@@ -331,7 +331,7 @@ function build(): Day[] {
       if (!nP && !nA) return;
       add('vocab-translate', {
         title: `Dịch ví dụ Việt → Anh · ${nP + nA} câu`,
-        detail: 'Mỗi từ, cụm từ vừa học có một câu ví dụ bằng tiếng Việt. Dịch sang tiếng Anh và phải dùng đúng từ đó (gợi ý có sẵn). Cụm chủ động: cần đúng ngay lần đầu ≥ 80%, chưa đạt thì chỉ làm lại câu chủ động bị sai. Từ thụ động: chỉ cần dịch đúng (sai thì làm lại câu đó, bao nhiêu lần cũng được).',
+        detail: 'Mỗi từ, cụm từ vừa học có một câu ví dụ bằng tiếng Việt. Dịch sang tiếng Anh và phải dùng đúng từ đó (gợi ý có sẵn). Cụm chủ động: cần đúng ngay lần đầu ≥ 50%, chưa đạt thì chỉ làm lại câu chủ động bị sai. Từ thụ động: chỉ cần dịch đúng (sai thì làm lại câu đó, bao nhiêu lần cũng được).',
         minutes: 15,
         href: `/dich-vi-du/${date}`,
         gated: true,
@@ -341,7 +341,7 @@ function build(): Day[] {
       if (!items.length) return;
       add('grammar-fix', {
         title: `Sửa lỗi sai · ${items.length} câu`,
-        detail: 'Mỗi câu có một lỗi ngữ pháp người Việt hay mắc. Viết lại cả câu cho đúng rồi đọc giải thích. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại những câu sai.',
+        detail: 'Mỗi câu có một lỗi ngữ pháp người Việt hay mắc. Viết lại cả câu cho đúng rồi đọc giải thích. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại những câu sai.',
         minutes: 15,
         href: `/sua-loi/${date}`,
         topic,
@@ -355,7 +355,7 @@ function build(): Day[] {
       svoN++;
       add('grammar-svo', {
         title: 'Câu chuẩn S-V-O · phân tích, xếp câu, viết câu',
-        detail: 'Gán nhãn S / V / O / C / A cho 6 câu, xếp lại 3 câu bị xáo trộn, rồi tự viết 3 câu từ tiếng Việt đúng trật tự S-V-O. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại những câu sai.',
+        detail: 'Gán nhãn S / V / O / C / A cho 6 câu, xếp lại 3 câu bị xáo trộn, rồi tự viết 3 câu từ tiếng Việt đúng trật tự S-V-O. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại những câu sai.',
         minutes: 20,
         href: `/cau-svo/${date}`,
         svo: { set, prev },
@@ -366,7 +366,7 @@ function build(): Day[] {
       if (!WRITING_WEEK_NUMBERS.has(week.n)) return;
       add('wordform-week', {
         title: `Word form tuần · ${writingTitle(week.n)}`,
-        detail: 'Học 8 họ từ chọn lọc cho bài Writing của tuần (danh từ, động từ, tính từ, trạng từ), rồi điền đúng dạng từ vào 16 câu cùng chủ đề. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại những câu sai.',
+        detail: 'Học 8 họ từ chọn lọc cho bài Writing của tuần (danh từ, động từ, tính từ, trạng từ), rồi điền đúng dạng từ vào 16 câu cùng chủ đề. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại những câu sai.',
         minutes: 20,
         href: `/word-form/${date}`,
         gated: true,
@@ -376,7 +376,7 @@ function build(): Day[] {
       if (!WRITING_WEEK_NUMBERS.has(week.n)) return;
       add('writing-week', {
         title: `Writing tuần · ${writingTitle(week.n)}`,
-        detail: 'Dịch đoạn văn mẫu từng câu (chỉ dùng cụm từ, word form và từ bổ sung đã học), rồi tự viết một đoạn 120–150 từ cho đề thứ hai. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại những câu sai.',
+        detail: 'Dịch đoạn văn mẫu từng câu (chỉ dùng cụm từ, word form và từ bổ sung đã học), rồi tự viết một đoạn 120–150 từ cho đề thứ hai. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại những câu sai.',
         minutes: 35,
         href: `/writing-tuan/${date}`,
         gated: true,
@@ -399,8 +399,8 @@ function build(): Day[] {
       const [a, b] = week.grammar!;
       const topic = weekday >= 1 && weekday <= 3 ? a : b;
       const step = weekday === 0 ? 0 : ((weekday - 1) % 3) + 1; // 1 learn · 2 drill · 3 own sentences
-      if (step === 1) add('grammar-learn', { title: 'Ngữ pháp · lý thuyết + nhận diện', detail: 'Xem hình minh hoạ, công thức, lỗi hay gặp; làm 6 câu nhận diện. Cần đúng ngay lần đầu ít nhất 5/6 (≥ 80%); chưa đạt thì chỉ làm lại câu sai.', minutes: 20, href: grammarHref(topic), topic, gated: true });
-      if (step === 2) add('grammar-drill', { title: 'Ngữ pháp · dịch 8 câu Việt → Anh', detail: 'Cần đúng ngay lần đầu ít nhất 7/8 câu. Chưa đạt thì luyện lại câu sai rồi làm lại cả bài.', minutes: 20, href: grammarHref(topic), topic, gated: true });
+      if (step === 1) add('grammar-learn', { title: 'Ngữ pháp · lý thuyết + nhận diện', detail: 'Xem hình minh hoạ, công thức, lỗi hay gặp; làm 6 câu nhận diện. Cần đúng ngay lần đầu ít nhất 3/6 (≥ 50%); chưa đạt thì chỉ làm lại câu sai.', minutes: 20, href: grammarHref(topic), topic, gated: true });
+      if (step === 2) add('grammar-drill', { title: 'Ngữ pháp · dịch 8 câu Việt → Anh', detail: 'Cần đúng ngay lần đầu ít nhất 4/8 câu (≥ 50%); chưa đạt thì chỉ làm lại câu sai.', minutes: 20, href: grammarHref(topic), topic, gated: true });
       if (step === 3) add('grammar-own', { title: 'Ngữ pháp · tự đặt 5 câu', detail: 'Viết 5 câu của riêng bạn dùng cấu trúc vừa học và từ vựng tuần này, ở "Viết tự do". Đọc lại, tự sửa từng câu theo phần "Lỗi hay gặp".', minutes: 15, href: '/writing', topic });
       const earlier = GRAMMAR_ORDER.slice(0, GRAMMAR_ORDER.indexOf(topic));
       if (step) {
@@ -553,14 +553,14 @@ function build(): Day[] {
       const n = DAILY_AMOUNT[week.phase as 1 | 2 | 3];
       add('grammar-mcq', {
         title: `Trắc nghiệm ngữ pháp + word form · ${n[0] + n[1]} câu`,
-        detail: `${n[0]} câu ngữ pháp (chủ điểm mới nhất + ôn chủ điểm cũ + câu từng sai) và ${n[1]} câu chọn dạng từ. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ làm lại câu sai.`,
+        detail: `${n[0]} câu ngữ pháp (chủ điểm mới nhất + ôn chủ điểm cũ + câu từng sai) và ${n[1]} câu chọn dạng từ. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại câu sai.`,
         minutes: week.phase === 1 ? 10 : week.phase === 2 ? 15 : 20,
         href: `/trac-nghiem/${date}`,
         gated: true,
       });
       add('reading-tfng', {
         title: `True / False / Not Given · ${n[2]} đoạn ngắn`,
-        detail: 'Đọc đoạn ngắn, chọn TRUE / FALSE / NOT GIVEN cho từng câu; mỗi câu có giải thích vì sao là FALSE (bài nói ngược lại) hay NOT GIVEN (bài không nhắc tới). Cần đúng ngay lần đầu ≥ 80%.',
+        detail: 'Đọc đoạn ngắn, chọn TRUE / FALSE / NOT GIVEN cho từng câu; mỗi câu có giải thích vì sao là FALSE (bài nói ngược lại) hay NOT GIVEN (bài không nhắc tới). Cần đúng ngay lần đầu ≥ 50%.',
         minutes: 8 * n[2],
         href: `/tfng/${date}`,
         gated: true,
@@ -570,21 +570,21 @@ function build(): Day[] {
     if (!light && date >= DAILY_FROM && date < TARGET) {
       add('translate-dialogue', {
         title: 'Dịch hội thoại đời thường · 20 câu',
-        detail: '4 đoạn hội thoại ngắn nhiều chủ đề + 4 câu ôn đúng những lỗi bạn hay mắc. Độ khó tăng dần mỗi 2 tuần. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ dịch lại câu sai.',
+        detail: '4 đoạn hội thoại ngắn nhiều chủ đề + 4 câu ôn đúng những lỗi bạn hay mắc. Độ khó tăng dần mỗi 2 tuần. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ dịch lại câu sai.',
         minutes: 20,
         href: `/dich-hoi-thoai/${date}`,
         gated: true,
       });
       add('translate-story', {
         title: 'Dịch truyện ngắn · 5–6 câu',
-        detail: 'Đọc cả mẩu truyện tiếng Việt, dịch từng câu sang tiếng Anh, cuối bài xem lại bản tiếng Anh hoàn chỉnh. Cần đúng ngay lần đầu ≥ 80%.',
+        detail: 'Đọc cả mẩu truyện tiếng Việt, dịch từng câu sang tiếng Anh, cuối bài xem lại bản tiếng Anh hoàn chỉnh. Cần đúng ngay lần đầu ≥ 50%.',
         minutes: 12,
         href: `/dich-truyen/${date}`,
         gated: true,
       });
       add('linking', {
         title: 'Từ nối · 6 câu chọn + 4 câu viết',
-        detail: 'Chọn từ nối đúng (however, moreover, despite, instead of, whereas…), nối hai câu bằng từ cho sẵn và sửa câu dùng sai. Câu sai quay lại các ngày sau. Mỗi bước cần đúng ngay lần đầu ≥ 80%.',
+        detail: 'Chọn từ nối đúng (however, moreover, despite, instead of, whereas…), nối hai câu bằng từ cho sẵn và sửa câu dùng sai. Câu sai quay lại các ngày sau. Mỗi bước cần đúng ngay lần đầu ≥ 50%.',
         minutes: 10,
         href: `/tu-noi/${date}`,
         gated: true,

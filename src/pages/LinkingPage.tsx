@@ -85,7 +85,7 @@ export default function LinkingPage() {
         <p className="text-sm text-muted-foreground">Bài tập hằng ngày · {formatDay(date)}</p>
         <h1 className="text-2xl font-bold tracking-tight">Từ nối</h1>
         <p className="max-w-3xl text-muted-foreground">
-          Bước 1: {mcq.length} câu chọn từ nối. Bước 2: {write.length} câu viết — nối hai câu bằng từ cho sẵn và sửa câu dùng sai. Câu sai sẽ quay lại vào các ngày sau và được tính vào điểm “Liên từ” trong lỗi hay mắc. Mỗi bước cần đúng ngay lần đầu ≥ 80%.
+          Bước 1: {mcq.length} câu chọn từ nối. Bước 2: {write.length} câu viết — nối hai câu bằng từ cho sẵn và sửa câu dùng sai. Câu sai sẽ quay lại vào các ngày sau và được tính vào điểm “Liên từ” trong lỗi hay mắc. Mỗi bước cần đúng ngay lần đầu ≥ 50%.
         </p>
       </header>
 

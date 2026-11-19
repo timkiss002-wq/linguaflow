@@ -16,7 +16,7 @@ import { saveSentences, sentencesOf } from '@/lib/roadmap/sentences';
 /**
  * /viet-cau/:date — the active-vocabulary task of one day: learn 5 Writing collocations, then translate 3 simple
  * Vietnamese sentences per collocation into English with it. Checked on the device against model answers, with hints;
- * done at 80 % right on the first try. Saved in this browser.
+ * done at 50 % right on the first try. Saved in this browser.
  */
 export default function SentencesPage() {
   const { date = '' } = useParams();
@@ -58,7 +58,7 @@ export default function SentencesPage() {
     refreshRoadmap();
     if (!total) toast.success('Đã đánh dấu học xong 5 cụm hôm nay.');
     else if (passed) toast.success('Đạt — đã xong bài hôm nay.');
-    else toast(`${score}/${total} câu đúng ngay lần đầu, chưa đủ 80%. Chỉ cần làm lại những câu sai.`);
+    else toast(`${score}/${total} câu đúng ngay lần đầu, chưa đủ 50%. Chỉ cần làm lại những câu sai.`);
   };
 
   return (
@@ -85,7 +85,7 @@ export default function SentencesPage() {
         <p className={saved.passed ? 'flex items-center gap-1.5 text-sm font-medium text-success' : 'text-sm text-muted-foreground'} data-testid="phrase-result">
           {saved.passed && <CheckCircle2 className="size-4" aria-hidden />}
           {saved.total ? `Lần tốt nhất: ${saved.score}/${saved.total} câu đúng ngay lần đầu` : 'Đã học xong'}
-          {saved.passed ? ' · đã xong bài hôm nay' : ' · chưa đạt 80% — làm lại các câu sai là xong'}
+          {saved.passed ? ' · đã xong bài hôm nay' : ' · chưa đạt 50% — làm lại các câu sai là xong'}
         </p>
       )}
 

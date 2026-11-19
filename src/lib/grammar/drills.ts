@@ -88,7 +88,7 @@ export interface TopicProgress {
   best: number;
   total: number;
   at: string;
-  /** passed under the shared rule: ≥ 80 % first try, or the wrong ones redone */
+  /** passed under the shared rule: ≥ 50 % first try, or the wrong ones redone */
   passed?: boolean;
 }
 
@@ -118,7 +118,7 @@ export function saveProgress(topic: string, score: number, total: number, passed
 }
 
 /** Pass mark for both steps of a topic on the learning path. */
-export const PASS = 0.8;
+export const PASS = 0.5;
 
 /** Best recognition-quiz score per topic, kept in this browser. */
 const QUIZ_KEY = 'grammar:quiz';

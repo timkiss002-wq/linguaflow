@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 type Ans = TfngStatement['a'];
 const CHOICES: Ans[] = ['T', 'F', 'NG'];
-const PASS = 0.8;
+const PASS = 0.5;
 
 /** Shows a passage with the evidence sentences marked once the answers are checked. */
 function PassageText({ text, marks }: { text: string; marks: string[] }) {

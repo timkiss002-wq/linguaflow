@@ -24,7 +24,7 @@ export interface RoundResult {
   /** first-try score of the graded sentences of the first round */
   score: number;
   total: number;
-  /** ≥ 80 % first try, or every required sentence redone */
+  /** ≥ 50 % first try, or every required sentence redone */
   passed: boolean;
 }
 
@@ -33,7 +33,7 @@ const norm = (s: string) => expandContractions(s).toLowerCase().replace(/[^a-z0-
 /**
  * One sentence at a time: write it in English, check against the accepted answers (contractions, capitals and
  * punctuation don't count), see the difference, retry once. "fix" mode starts from the wrong sentence so it can be edited.
- * Scoring follows the shared rule (lib/practice/retry): graded sentences count on the first try (≥ 80 % to pass), and
+ * Scoring follows the shared rule (lib/practice/retry): graded sentences count on the first try (≥ 50 % to pass), and
  * after the first round only the sentences that still have to be redone come back — never the whole exercise.
  * "Tôi viết đúng" accepts a different correct wording. With `storageKey` the run survives leaving the page.
  * `rounds={false}`: a single pass over the items, no redo (the parent handles it).
@@ -419,7 +419,7 @@ function Summary({
               ? 'Đạt yêu cầu — đã xong bài này.'
               : rateOk
                 ? `Phần chủ động đã đạt. Còn ${redo.length} câu từ thụ động — chỉ cần làm lại cho đúng (bao nhiêu lần cũng được).`
-                : `Chưa đạt 80% ngay lần đầu. Chỉ cần làm lại ${redo.length} câu sai — câu nào đúng ngay lần làm lại là qua.`}
+                : `Chưa đạt 50% ngay lần đầu. Chỉ cần làm lại ${redo.length} câu sai — câu nào đúng ngay lần làm lại là qua.`}
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {!passed && (
