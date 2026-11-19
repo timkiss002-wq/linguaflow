@@ -3558,6 +3558,1197 @@
      "w": "How long do I have to wait?"
     }
    ]
+  },
+  {
+   "id": "life-debate2",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Tranh luận nâng cao (Speaking Part 3)",
+   "tip": "Hỏi mức độ, so sánh, dự đoán: To what extent …? · Is it fair to say that …? · How might … change in the future?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn đồng ý với quan điểm này đến mức nào?",
+     "en": [
+      "To what extent do you agree with this view?",
+      "To what extent do you agree with this opinion?",
+      "How far do you agree with this view?"
+     ],
+     "w": "To what extent do you agree …? (dạng câu hỏi hay gặp trong IELTS)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có công bằng không khi nói rằng người trẻ đọc sách ít hơn trước?",
+     "en": [
+      "Is it fair to say that young people read less than before?",
+      "Would it be fair to say that young people read less than before?",
+      "Is it true that young people read less than before?"
+     ],
+     "w": "Is it fair to say that + mệnh đề?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Theo bạn, công việc sẽ thay đổi thế nào trong 20 năm tới?",
+     "en": [
+      "How do you think jobs will change in the next twenty years?",
+      "How will jobs change in the next 20 years?",
+      "How do you think work will change over the next twenty years?"
+     ],
+     "w": "How do you think + mệnh đề KHÔNG đảo: jobs will change."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ai nên chịu trách nhiệm bảo vệ môi trường, chính phủ hay người dân?",
+     "en": [
+      "Who should be responsible for protecting the environment, the government or individuals?",
+      "Who should take responsibility for protecting the environment, the government or ordinary people?",
+      "Should the government or individuals be responsible for protecting the environment?"
+     ],
+     "w": "be responsible for + V-ing."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ưu điểm và nhược điểm của làm việc từ xa là gì?",
+     "en": [
+      "What are the advantages and disadvantages of working from home?",
+      "What are the pros and cons of remote work?",
+      "What are the advantages and disadvantages of remote working?"
+     ],
+     "w": "pros and cons = ưu nhược điểm."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tại sao ngày càng nhiều người chuyển lên thành phố sinh sống?",
+     "en": [
+      "Why are more and more people moving to cities?",
+      "Why do more and more people move to big cities?",
+      "Why are more people moving to cities?"
+     ],
+     "w": "more and more = ngày càng nhiều; xu hướng đang diễn ra → tiếp diễn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Việc này có lợi cho ai nhiều nhất?",
+     "en": [
+      "Who benefits most from this?",
+      "Who benefits the most from this?",
+      "Who gains the most from this?"
+     ],
+     "w": "Hỏi chủ ngữ → Who benefits (không dùng does)."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có nghĩ điều này sẽ xảy ra ở Việt Nam không?",
+     "en": [
+      "Do you think this will happen in Vietnam?",
+      "Do you think this could happen in Vietnam?",
+      "Is this likely to happen in Vietnam?"
+     ],
+     "w": "Do you think + will …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: So với thế hệ cha mẹ, cuộc sống của người trẻ ngày nay dễ hơn hay khó hơn?",
+     "en": [
+      "Is life easier or harder for young people today compared with their parents' generation?",
+      "Compared with their parents, is life easier or harder for young people today?",
+      "Is life easier or more difficult for young people today than for their parents?"
+     ],
+     "w": "Câu hỏi lựa chọn + so sánh hơn."
+    }
+   ]
+  },
+  {
+   "id": "life-market",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Siêu thị & chợ",
+   "tip": "Tìm hàng, hỏi hạn dùng, mặc cả: Where can I find …? · When does … expire? · Can you make it cheaper?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi nhân viên siêu thị: Sữa để ở quầy nào?",
+     "en": [
+      "Where can I find the milk?",
+      "Which aisle is the milk in?",
+      "Where is the milk?",
+      "Where do you keep the milk?"
+     ],
+     "w": "aisle = dãy hàng; giới từ in để cuối câu."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi hạn sử dụng của hộp sữa chua này.",
+     "en": [
+      "When does this yoghurt expire?",
+      "What is the expiry date of this yoghurt?",
+      "When is the use-by date for this yoghurt?",
+      "When does this yogurt expire?"
+     ],
+     "w": "expire = hết hạn; expiry date = hạn dùng."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi giá một cân táo.",
+     "en": [
+      "How much is a kilo of apples?",
+      "How much are apples per kilo?",
+      "How much does a kilo of apples cost?"
+     ],
+     "w": "a kilo of + danh từ."
+    },
+    {
+     "k": "vi",
+     "p": "Mặc cả ở chợ: Chị bớt cho em một chút được không?",
+     "en": [
+      "Can you make it a bit cheaper?",
+      "Could you give me a better price?",
+      "Can you lower the price a little?",
+      "Could you make it cheaper?"
+     ],
+     "w": "make it cheaper = bớt giá."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem rau này có phải rau sạch không.",
+     "en": [
+      "Is this vegetable organic?",
+      "Are these vegetables organic?",
+      "Are these vegetables grown without chemicals?"
+     ],
+     "w": "organic = hữu cơ, rau sạch."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem đang có chương trình khuyến mãi nào không.",
+     "en": [
+      "Are there any special offers today?",
+      "Do you have any promotions at the moment?",
+      "Is anything on sale today?",
+      "Are there any discounts today?"
+     ],
+     "w": "special offer / on sale = khuyến mãi."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có thể dùng mã giảm giá này không.",
+     "en": [
+      "Can I use this voucher?",
+      "Can I use this discount code?",
+      "Is this coupon valid?"
+     ],
+     "w": "voucher / coupon = phiếu giảm giá."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi quầy thanh toán nào ít người.",
+     "en": [
+      "Which checkout is less busy?",
+      "Which till has the shortest queue?",
+      "Which counter is less crowded?"
+     ],
+     "w": "checkout / till = quầy tính tiền."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có bán theo lẻ không, không cần mua cả hộp.",
+     "en": [
+      "Can I buy just one, not the whole box?",
+      "Do you sell them individually?",
+      "Can I buy them separately?"
+     ],
+     "w": "individually / separately = bán lẻ từng cái."
+    }
+   ]
+  },
+  {
+   "id": "life-phone",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Gọi điện & đặt lịch hẹn",
+   "tip": "Đặt lịch, để lại lời nhắn: I'd like to make an appointment. · Could I leave a message? · Is … available?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Gọi điện hỏi xem bác sĩ Minh có rảnh vào thứ Năm không.",
+     "en": [
+      "Is Doctor Minh available on Thursday?",
+      "Is Dr Minh free on Thursday?",
+      "Does Doctor Minh have any time on Thursday?"
+     ],
+     "w": "available = rảnh, có thể gặp."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có thể để lại lời nhắn không.",
+     "en": [
+      "Could I leave a message?",
+      "Can I leave a message, please?",
+      "May I leave a message?"
+     ],
+     "w": "leave a message = để lại lời nhắn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi người nghe máy: Ai đang gọi đấy ạ?",
+     "en": [
+      "Who is calling, please?",
+      "May I ask who is calling?",
+      "Who's calling?",
+      "Who is speaking, please?"
+     ],
+     "w": "Trên điện thoại → Who is calling?"
+    },
+    {
+     "k": "vi",
+     "p": "Nhờ người kia gọi lại sau 10 phút.",
+     "en": [
+      "Could you call me back in ten minutes?",
+      "Could you call back in ten minutes, please?",
+      "Can you call me back in 10 minutes?"
+     ],
+     "w": "call back = gọi lại; in ten minutes = 10 phút nữa."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có thể dời lịch hẹn sang tuần sau không.",
+     "en": [
+      "Can I reschedule my appointment for next week?",
+      "Could I move my appointment to next week?",
+      "Is it possible to change my appointment to next week?"
+     ],
+     "w": "reschedule = dời lịch."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem mình đang nói chuyện với ai.",
+     "en": [
+      "Who am I speaking to?",
+      "Who am I talking to?",
+      "May I know who I am speaking to?"
+     ],
+     "w": "speak to → Who am I speaking to? (giới từ cuối)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Anh có thể đánh vần tên mình không?",
+     "en": [
+      "Could you spell your name, please?",
+      "Can you spell your name?",
+      "How do you spell your name?"
+     ],
+     "w": "spell = đánh vần."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Số máy lẻ của phòng nhân sự là bao nhiêu?",
+     "en": [
+      "What is the extension number for the HR department?",
+      "What is the HR department's extension?",
+      "What is the extension for HR?"
+     ],
+     "w": "extension = số máy lẻ."
+    }
+   ]
+  },
+  {
+   "id": "life-lost",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Mất đồ & khẩn cấp",
+   "tip": "Báo mất, xin giúp: I've lost my … · Has anyone found …? · Where is the nearest …? · Could you call …?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi quầy lễ tân: Có ai nhặt được ví màu đen không?",
+     "en": [
+      "Has anyone found a black wallet?",
+      "Has anyone handed in a black wallet?",
+      "Did anyone find a black wallet?"
+     ],
+     "w": "Has anyone found …? (anyone + has)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi bị mất hộ chiếu, tôi nên làm gì?",
+     "en": [
+      "I have lost my passport. What should I do?",
+      "I've lost my passport. What should I do?",
+      "What should I do if I lose my passport?"
+     ],
+     "w": "lost → hiện tại hoàn thành: I have lost."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bệnh viện gần nhất ở đâu.",
+     "en": [
+      "Where is the nearest hospital?",
+      "Is there a hospital near here?",
+      "How do I get to the nearest hospital?"
+     ],
+     "w": "the nearest + nơi chốn."
+    },
+    {
+     "k": "vi",
+     "p": "Nhờ người khác gọi xe cấp cứu.",
+     "en": [
+      "Could you call an ambulance, please?",
+      "Can you call an ambulance?",
+      "Please could you call an ambulance?"
+     ],
+     "w": "ambulance = xe cấp cứu."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi khu đồ thất lạc ở đâu.",
+     "en": [
+      "Where is the lost and found?",
+      "Where is lost property?",
+      "Where is the lost property office?"
+     ],
+     "w": "lost and found / lost property = nơi giữ đồ thất lạc."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi người bị ngã: Bạn có sao không?",
+     "en": [
+      "Are you all right?",
+      "Are you OK?",
+      "Are you hurt?",
+      "Are you okay?"
+     ],
+     "w": "Are you all right?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể dùng điện thoại của bạn một chút không? Điện thoại tôi hết pin.",
+     "en": [
+      "Could I use your phone for a minute? My battery is dead.",
+      "Can I borrow your phone? My phone has run out of battery.",
+      "Could I use your phone? My battery is flat."
+     ],
+     "w": "run out of battery / battery is dead = hết pin."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể báo mất thẻ ở đâu?",
+     "en": [
+      "Where can I report a lost card?",
+      "Where do I report a lost card?",
+      "How can I report a lost card?"
+     ],
+     "w": "report = báo cáo, trình báo."
+    }
+   ]
+  },
+  {
+   "id": "life-home",
+   "level": 1,
+   "tags": [
+    "question"
+   ],
+   "name": "Ở nhà với gia đình",
+   "tip": "Hỏi han việc nhà, bữa ăn: What's for dinner? · Have you seen my …? · Who is going to …?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi mẹ: Tối nay ăn gì ạ?",
+     "en": [
+      "What's for dinner tonight?",
+      "What are we having for dinner tonight?",
+      "What are we eating tonight?",
+      "What is for dinner tonight?"
+     ],
+     "w": "What's for dinner? (rất tự nhiên)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có ai thấy chìa khóa xe của con đâu không?",
+     "en": [
+      "Has anyone seen my motorbike keys?",
+      "Has anyone seen my keys?",
+      "Have you seen my motorbike keys?",
+      "Has anybody seen my keys?"
+     ],
+     "w": "Has anyone seen …? (hiện tại hoàn thành)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Hôm nay ai rửa bát?",
+     "en": [
+      "Who is washing the dishes today?",
+      "Who is going to wash the dishes today?",
+      "Whose turn is it to wash the dishes?",
+      "Who is doing the dishes today?"
+     ],
+     "w": "Whose turn is it to + V? = đến lượt ai?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Mẹ có cần con mua gì ở chợ không?",
+     "en": [
+      "Do you need me to buy anything at the market?",
+      "Do you want me to get anything from the market?",
+      "Shall I buy anything at the market?"
+     ],
+     "w": "need someone to + V."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Mấy giờ bố về ạ?",
+     "en": [
+      "What time will Dad be home?",
+      "When will Dad be back?",
+      "What time is Dad coming home?",
+      "When is Dad coming home?"
+     ],
+     "w": "Tương lai gần → is Dad coming home?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Con để điện thoại ở đâu nhỉ?",
+     "en": [
+      "Where did I put my phone?",
+      "Where did I leave my phone?"
+     ],
+     "w": "Quá khứ → Where did I put …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ai đã ăn hết bánh rồi?",
+     "en": [
+      "Who ate all the cake?",
+      "Who has eaten all the cake?",
+      "Who finished the cake?"
+     ],
+     "w": "Hỏi chủ ngữ → Who ate … (không dùng did)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi em trai: Em làm bài tập xong chưa?",
+     "en": [
+      "Have you finished your homework yet?",
+      "Have you done your homework yet?",
+      "Have you finished your homework?"
+     ],
+     "w": "… yet?"
+    }
+   ]
+  },
+  {
+   "id": "life-neighbour",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Hàng xóm & khu trọ",
+   "tip": "Làm quen, nhờ vả, phàn nàn lịch sự: Could you keep the noise down? · Would you mind …? · Do you know when …?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Nhờ hàng xóm vặn nhỏ nhạc một chút.",
+     "en": [
+      "Could you turn the music down a bit, please?",
+      "Would you mind turning the music down?",
+      "Could you keep the noise down, please?",
+      "Could you turn down the music a little?"
+     ],
+     "w": "Would you mind + V-ing? = phiền bạn … được không?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi hàng xóm: Anh/chị mới chuyển đến à?",
+     "en": [
+      "Have you just moved in?",
+      "Are you new here?",
+      "Did you just move in?"
+     ],
+     "w": "move in = chuyển đến."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bao giờ thì có người đến thu rác?",
+     "en": [
+      "When is the rubbish collected?",
+      "When do they collect the rubbish?",
+      "What day is rubbish collection?",
+      "When does the garbage truck come?"
+     ],
+     "w": "Bị động → When is the rubbish collected?"
+    },
+    {
+     "k": "vi",
+     "p": "Nhờ hàng xóm nhận hộ bưu kiện.",
+     "en": [
+      "Could you take in a parcel for me?",
+      "Could you receive a package for me, please?",
+      "Would you mind collecting a parcel for me?"
+     ],
+     "w": "take in a parcel = nhận hộ."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Anh/chị có biết khi nào thì có điện lại không?",
+     "en": [
+      "Do you know when the power will come back on?",
+      "Do you know when the electricity will be back?",
+      "Do you know when the power will be back?"
+     ],
+     "w": "Câu gián tiếp: when + the power + will come back."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có thể đỗ xe máy ở đây không.",
+     "en": [
+      "Can I park my motorbike here?",
+      "Is it OK to park my motorbike here?",
+      "Am I allowed to park here?"
+     ],
+     "w": "Can I park …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ở gần đây có quán phở nào ngon không?",
+     "en": [
+      "Is there a good pho restaurant near here?",
+      "Do you know a good pho place nearby?",
+      "Are there any good pho restaurants around here?"
+     ],
+     "w": "Is there … near here?"
+    }
+   ]
+  },
+  {
+   "id": "life-sight",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Du lịch & tham quan",
+   "tip": "Hỏi vé, giờ mở cửa, chụp ảnh: What time does … open? · Is photography allowed? · Could you take a photo of us?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi bảo tàng mở cửa lúc mấy giờ.",
+     "en": [
+      "What time does the museum open?",
+      "When does the museum open?",
+      "What are the museum's opening hours?"
+     ],
+     "w": "What time does … open?"
+    },
+    {
+     "k": "vi",
+     "p": "Nhờ người lạ chụp giúp một tấm ảnh.",
+     "en": [
+      "Could you take a photo of us, please?",
+      "Would you mind taking a picture of us?",
+      "Could you take a picture of us?",
+      "Could you take our photo, please?"
+     ],
+     "w": "take a photo of someone."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có được chụp ảnh bên trong không.",
+     "en": [
+      "Can I take photos inside?",
+      "Is photography allowed inside?",
+      "Are we allowed to take pictures inside?",
+      "Can we take photos in here?"
+     ],
+     "w": "Is photography allowed?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi giá vé vào cửa cho sinh viên.",
+     "en": [
+      "How much is a student ticket?",
+      "Is there a student discount?",
+      "How much is the entrance fee for students?",
+      "How much is it for students?"
+     ],
+     "w": "entrance fee = phí vào cửa."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có tour có hướng dẫn viên tiếng Anh không.",
+     "en": [
+      "Is there a guided tour in English?",
+      "Do you have tours with an English-speaking guide?",
+      "Are there any English tours?"
+     ],
+     "w": "guided tour = tour có hướng dẫn viên."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ở đây có món đặc sản nào nên thử?",
+     "en": [
+      "What local food should I try here?",
+      "What is the local speciality here?",
+      "What should I eat here?",
+      "What specialities should I try?"
+     ],
+     "w": "local speciality = đặc sản địa phương."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Đi bộ đến bãi biển mất bao lâu?",
+     "en": [
+      "How long does it take to walk to the beach?",
+      "How long is the walk to the beach?",
+      "How far is the beach on foot?"
+     ],
+     "w": "How long does it take to walk to …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có bản đồ miễn phí không.",
+     "en": [
+      "Do you have a free map?",
+      "Can I get a free map?",
+      "Is there a free map?"
+     ],
+     "w": "Do you have …?"
+    }
+   ]
+  },
+  {
+   "id": "life-event",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Xem phim, ca nhạc, sự kiện",
+   "tip": "Đặt vé, chọn chỗ: Are there any tickets left for …? · What time does … start? · Where are our seats?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi xem còn vé cho suất chiếu 8 giờ tối không.",
+     "en": [
+      "Are there any tickets left for the 8 p.m. show?",
+      "Are there any seats left for the 8 p.m. showing?",
+      "Do you have any tickets for the 8 p.m. show?"
+     ],
+     "w": "tickets left = vé còn lại."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bộ phim dài bao lâu.",
+     "en": [
+      "How long is the film?",
+      "How long does the film last?",
+      "How long is the movie?"
+     ],
+     "w": "How long is …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ghế của chúng ta ở đâu?",
+     "en": [
+      "Where are our seats?",
+      "Where are we sitting?",
+      "Which seats are ours?"
+     ],
+     "w": "Where are our seats?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Buổi hòa nhạc bắt đầu lúc mấy giờ?",
+     "en": [
+      "What time does the concert start?",
+      "When does the concert begin?",
+      "What time is the concert?"
+     ],
+     "w": "What time does … start?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có thể đổi sang suất chiếu khác không.",
+     "en": [
+      "Can I change to another showing?",
+      "Could I change my ticket to a different time?",
+      "Can I exchange my ticket for another show?"
+     ],
+     "w": "change / exchange a ticket."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn: Bạn muốn xem phim gì?",
+     "en": [
+      "What film do you want to watch?",
+      "What do you want to see?",
+      "Which movie would you like to watch?",
+      "What film would you like to see?"
+     ],
+     "w": "What film / Which movie …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem phim có phụ đề tiếng Việt không.",
+     "en": [
+      "Does the film have Vietnamese subtitles?",
+      "Is the film subtitled in Vietnamese?",
+      "Are there Vietnamese subtitles?"
+     ],
+     "w": "subtitles = phụ đề."
+    }
+   ]
+  },
+  {
+   "id": "life-app",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Ứng dụng, tài khoản & chăm sóc khách hàng",
+   "tip": "Quên mật khẩu, lỗi thanh toán: I can't log in. · How do I reset …? · Why was I charged …?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi tổng đài: Tôi quên mật khẩu, làm sao để đặt lại?",
+     "en": [
+      "I forgot my password. How do I reset it?",
+      "I've forgotten my password. How can I reset it?",
+      "How do I reset my password?"
+     ],
+     "w": "reset = đặt lại."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tại sao tôi bị trừ tiền hai lần?",
+     "en": [
+      "Why was I charged twice?",
+      "Why have I been charged twice?",
+      "Why did you charge me twice?"
+     ],
+     "w": "Bị động → Why was I charged …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi cách hủy gói đăng ký.",
+     "en": [
+      "How do I cancel my subscription?",
+      "How can I cancel my subscription?",
+      "Can I cancel my subscription?"
+     ],
+     "w": "subscription = gói đăng ký."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Khi nào tôi nhận được tiền hoàn lại?",
+     "en": [
+      "When will I get my refund?",
+      "When will I receive my refund?",
+      "How long does a refund take?",
+      "When will the money be refunded?"
+     ],
+     "w": "refund = tiền hoàn lại."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi không đăng nhập được, anh có thể kiểm tra giúp không?",
+     "en": [
+      "I can't log in. Could you check my account?",
+      "I can't log in. Could you help me?",
+      "I can't sign in. Could you check it for me?"
+     ],
+     "w": "log in / sign in = đăng nhập."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem có thể đổi số điện thoại trong tài khoản không.",
+     "en": [
+      "Can I change the phone number on my account?",
+      "How do I change my phone number in the account?",
+      "Can I update my phone number?"
+     ],
+     "w": "update = cập nhật."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ứng dụng này có phiên bản tiếng Việt không?",
+     "en": [
+      "Is there a Vietnamese version of this app?",
+      "Does this app have a Vietnamese version?",
+      "Is this app available in Vietnamese?"
+     ],
+     "w": "available in + ngôn ngữ."
+    }
+   ]
+  },
+  {
+   "id": "life-vehicle",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Xe máy, đổ xăng, gửi xe",
+   "tip": "Sửa xe, gửi xe: My tyre is flat. · How much is parking? · Can you check …?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi thợ: Xe tôi bị thủng lốp, anh vá giúp được không?",
+     "en": [
+      "I have a flat tyre. Can you fix it?",
+      "My tyre is flat. Could you repair it?",
+      "I've got a flat tyre. Can you fix it?",
+      "My tire is flat. Can you fix it?"
+     ],
+     "w": "flat tyre = lốp bị xẹp / thủng."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi giá gửi xe máy một ngày.",
+     "en": [
+      "How much is it to park a motorbike for a day?",
+      "How much does parking cost per day?",
+      "How much is parking for one day?"
+     ],
+     "w": "How much is it to + V?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi cây xăng gần nhất ở đâu.",
+     "en": [
+      "Where is the nearest petrol station?",
+      "Is there a petrol station near here?",
+      "Where is the nearest gas station?"
+     ],
+     "w": "petrol station (Anh) / gas station (Mỹ)."
+    },
+    {
+     "k": "vi",
+     "p": "Nhờ thợ kiểm tra phanh.",
+     "en": [
+      "Could you check the brakes, please?",
+      "Can you check my brakes?",
+      "Could you have a look at the brakes?"
+     ],
+     "w": "brakes = phanh."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Xe tôi kêu lạ, có chuyện gì vậy?",
+     "en": [
+      "My motorbike is making a strange noise. What's wrong with it?",
+      "What's wrong with my motorbike? It's making a strange noise.",
+      "Why is my motorbike making a strange noise?"
+     ],
+     "w": "What's wrong with …? = bị làm sao?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Thay dầu mất bao lâu?",
+     "en": [
+      "How long does an oil change take?",
+      "How long will it take to change the oil?",
+      "How long does it take to change the oil?"
+     ],
+     "w": "oil change = thay dầu."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bãi gửi xe mở cửa đến mấy giờ.",
+     "en": [
+      "What time does the car park close?",
+      "How late is the parking lot open?",
+      "When does the parking area close?"
+     ],
+     "w": "car park / parking lot = bãi đỗ xe."
+    }
+   ]
+  },
+  {
+   "id": "life-group",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Làm việc nhóm với bạn học",
+   "tip": "Chia việc, hẹn họp: Who is going to …? · When shall we …? · Could you send …? · Which part …?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi nhóm: Ai sẽ làm phần slide?",
+     "en": [
+      "Who is going to make the slides?",
+      "Who will do the slides?",
+      "Who is doing the slides?",
+      "Who is responsible for the slides?"
+     ],
+     "w": "Hỏi chủ ngữ ở tương lai → Who is going to …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Khi nào nhóm mình họp tiếp?",
+     "en": [
+      "When shall we meet next?",
+      "When is our next meeting?",
+      "When will our group meet again?",
+      "When should we meet next?"
+     ],
+     "w": "When shall we …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn: Bạn muốn làm phần nào?",
+     "en": [
+      "Which part do you want to do?",
+      "Which part would you like to do?",
+      "Which section do you want to work on?"
+     ],
+     "w": "Which part …?"
+    },
+    {
+     "k": "vi",
+     "p": "Nhờ bạn gửi file vào nhóm chat.",
+     "en": [
+      "Could you send the file to the group chat?",
+      "Could you post the file in the group chat, please?",
+      "Can you share the file in our group chat?"
+     ],
+     "w": "group chat = nhóm chat."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Hạn nộp bản nháp là khi nào?",
+     "en": [
+      "When is the deadline for the draft?",
+      "When do we have to submit the draft?",
+      "When is the draft due?"
+     ],
+     "w": "due = đến hạn."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn đã làm xong phần của mình chưa?",
+     "en": [
+      "Have you finished your part yet?",
+      "Have you done your part yet?",
+      "Have you finished your section?",
+      "Is your part done yet?"
+     ],
+     "w": "Have you finished … yet?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Chúng ta có nên chia lại công việc không?",
+     "en": [
+      "Should we divide the work again?",
+      "Should we redistribute the tasks?",
+      "Shall we split the work differently?"
+     ],
+     "w": "divide / split the work = chia việc."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Ai sẽ thuyết trình phần kết luận?",
+     "en": [
+      "Who will present the conclusion?",
+      "Who is going to present the conclusion?",
+      "Who is presenting the conclusion?"
+     ],
+     "w": "present = thuyết trình."
+    }
+   ]
+  },
+  {
+   "id": "life-smalltalk",
+   "level": 1,
+   "tags": [
+    "question"
+   ],
+   "name": "Làm quen & nói chuyện phiếm",
+   "tip": "Mở đầu câu chuyện: How long have you …? · What do you do in your free time? · Have you been here before?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi người mới quen: Bạn sống ở đây lâu chưa?",
+     "en": [
+      "How long have you lived here?",
+      "How long have you been living here?",
+      "Have you lived here long?"
+     ],
+     "w": "How long have you lived …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Lúc rảnh bạn thường làm gì?",
+     "en": [
+      "What do you do in your free time?",
+      "What do you usually do in your free time?",
+      "What do you like doing in your spare time?"
+     ],
+     "w": "in your free / spare time."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn đã đến đây bao giờ chưa?",
+     "en": [
+      "Have you been here before?",
+      "Is this your first time here?",
+      "Have you ever been here before?"
+     ],
+     "w": "Have you been here before?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Thời tiết hôm nay đẹp nhỉ?",
+     "en": [
+      "Lovely weather today, isn't it?",
+      "It's a beautiful day, isn't it?",
+      "The weather is nice today, isn't it?",
+      "Nice weather today, isn't it?"
+     ],
+     "w": "Câu hỏi đuôi: …, isn't it?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn học ngành gì?",
+     "en": [
+      "What do you study?",
+      "What is your major?",
+      "What are you studying?",
+      "What subject do you study?"
+     ],
+     "w": "major = chuyên ngành."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn biết chủ nhà của bữa tiệc thế nào?",
+     "en": [
+      "How do you know the host?",
+      "How do you know the host of the party?"
+     ],
+     "w": "How do you know + người? = quen người đó thế nào?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Bạn có anh chị em không?",
+     "en": [
+      "Do you have any brothers or sisters?",
+      "Have you got any brothers or sisters?",
+      "Do you have any siblings?"
+     ],
+     "w": "siblings = anh chị em."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Gần đây bạn có xem phim gì hay không?",
+     "en": [
+      "Have you seen any good films recently?",
+      "Have you watched any good movies lately?",
+      "Have you seen any good movies recently?"
+     ],
+     "w": "recently / lately → hiện tại hoàn thành."
+    }
+   ]
+  },
+  {
+   "id": "life-party",
+   "level": 1,
+   "tags": [
+    "question",
+    "modal"
+   ],
+   "name": "Đám cưới, sinh nhật & tiệc",
+   "tip": "Mời, hỏi han khách: Would you like to come to …? · What should I bring? · Shall I …? · Would you like some more …?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Mời bạn đến dự tiệc sinh nhật vào thứ Bảy.",
+     "en": [
+      "Would you like to come to my birthday party on Saturday?",
+      "Can you come to my birthday party on Saturday?",
+      "Do you want to come to my birthday party on Saturday?"
+     ],
+     "w": "Mời → Would you like to come to …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi chủ tiệc: Tôi nên mang theo gì?",
+     "en": [
+      "What should I bring?",
+      "Should I bring anything?",
+      "Do you want me to bring anything?",
+      "Shall I bring anything?"
+     ],
+     "w": "What should I bring?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Đám cưới tổ chức ở đâu?",
+     "en": [
+      "Where is the wedding?",
+      "Where is the wedding being held?",
+      "Where will the wedding take place?",
+      "Where is the wedding taking place?"
+     ],
+     "w": "take place / be held = được tổ chức."
+    },
+    {
+     "k": "vi",
+     "p": "Mời khách: Bạn có muốn ăn thêm không?",
+     "en": [
+      "Would you like some more?",
+      "Would you like some more food?",
+      "Do you want some more?",
+      "Would you like a bit more?"
+     ],
+     "w": "Would you like some more? (some trong lời mời)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Có cần mặc trang phục gì đặc biệt không?",
+     "en": [
+      "Is there a dress code?",
+      "What should I wear?",
+      "Do I need to dress up?",
+      "Is there a special dress code?"
+     ],
+     "w": "dress code = quy định trang phục."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Mấy giờ thì tiệc kết thúc?",
+     "en": [
+      "What time does the party finish?",
+      "When will the party end?",
+      "What time will the party end?",
+      "When does the party finish?"
+     ],
+     "w": "finish / end = kết thúc."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi: Tôi có thể dẫn bạn đi cùng không?",
+     "en": [
+      "Can I bring a friend?",
+      "Is it OK if I bring a friend?",
+      "Could I bring a friend with me?"
+     ],
+     "w": "Is it OK if I + V?"
+    }
+   ]
   }
  ]
 }

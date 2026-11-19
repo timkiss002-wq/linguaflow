@@ -419,3 +419,130 @@
 > Hỏi: Kiểu tóc nào hợp với mặt tôi? || Which hairstyle would suit my face? // What hairstyle suits my face? // What style would suit me? // Which hairstyle suits my face? || suit = hợp với.
 > Hỏi: Nhuộm tóc mất bao lâu? || How long does it take to dye my hair? // How long does hair colouring take? // How long will it take to dye my hair? || How long does it take to + V?
 > Hỏi xem có phải đợi lâu không. || Do I have to wait long? // How long is the wait? // How long do I have to wait? // Is there a long wait? || How long do I have to wait?
+
+@group life-debate2 1 question,modal | Tranh luận nâng cao (Speaking Part 3) | Hỏi mức độ, so sánh, dự đoán: To what extent …? · Is it fair to say that …? · How might … change in the future?
+> Hỏi: Bạn đồng ý với quan điểm này đến mức nào? || To what extent do you agree with this view? // To what extent do you agree with this opinion? // How far do you agree with this view? || To what extent do you agree …? (dạng câu hỏi hay gặp trong IELTS)
+> Hỏi: Có công bằng không khi nói rằng người trẻ đọc sách ít hơn trước? || Is it fair to say that young people read less than before? // Would it be fair to say that young people read less than before? // Is it true that young people read less than before? || Is it fair to say that + mệnh đề?
+> Hỏi: Theo bạn, công việc sẽ thay đổi thế nào trong 20 năm tới? || How do you think jobs will change in the next twenty years? // How will jobs change in the next 20 years? // How do you think work will change over the next twenty years? || How do you think + mệnh đề KHÔNG đảo: jobs will change.
+> Hỏi: Ai nên chịu trách nhiệm bảo vệ môi trường, chính phủ hay người dân? || Who should be responsible for protecting the environment, the government or individuals? // Who should take responsibility for protecting the environment, the government or ordinary people? // Should the government or individuals be responsible for protecting the environment? || be responsible for + V-ing.
+> Hỏi: Ưu điểm và nhược điểm của làm việc từ xa là gì? || What are the advantages and disadvantages of working from home? // What are the pros and cons of remote work? // What are the advantages and disadvantages of remote working? || pros and cons = ưu nhược điểm.
+> Hỏi: Tại sao ngày càng nhiều người chuyển lên thành phố sinh sống? || Why are more and more people moving to cities? // Why do more and more people move to big cities? // Why are more people moving to cities? || more and more = ngày càng nhiều; xu hướng đang diễn ra → tiếp diễn.
+> Hỏi: Việc này có lợi cho ai nhiều nhất? || Who benefits most from this? // Who benefits the most from this? // Who gains the most from this? || Hỏi chủ ngữ → Who benefits (không dùng does).
+> Hỏi: Bạn có nghĩ điều này sẽ xảy ra ở Việt Nam không? || Do you think this will happen in Vietnam? // Do you think this could happen in Vietnam? // Is this likely to happen in Vietnam? || Do you think + will …?
+> Hỏi: So với thế hệ cha mẹ, cuộc sống của người trẻ ngày nay dễ hơn hay khó hơn? || Is life easier or harder for young people today compared with their parents' generation? // Compared with their parents, is life easier or harder for young people today? // Is life easier or more difficult for young people today than for their parents? || Câu hỏi lựa chọn + so sánh hơn.
+
+@group life-market 1 question,modal | Siêu thị & chợ | Tìm hàng, hỏi hạn dùng, mặc cả: Where can I find …? · When does … expire? · Can you make it cheaper?
+> Hỏi nhân viên siêu thị: Sữa để ở quầy nào? || Where can I find the milk? // Which aisle is the milk in? // Where is the milk? // Where do you keep the milk? || aisle = dãy hàng; giới từ in để cuối câu.
+> Hỏi hạn sử dụng của hộp sữa chua này. || When does this yoghurt expire? // What is the expiry date of this yoghurt? // When is the use-by date for this yoghurt? // When does this yogurt expire? || expire = hết hạn; expiry date = hạn dùng.
+> Hỏi giá một cân táo. || How much is a kilo of apples? // How much are apples per kilo? // How much does a kilo of apples cost? || a kilo of + danh từ.
+> Mặc cả ở chợ: Chị bớt cho em một chút được không? || Can you make it a bit cheaper? // Could you give me a better price? // Can you lower the price a little? // Could you make it cheaper? || make it cheaper = bớt giá.
+> Hỏi xem rau này có phải rau sạch không. || Is this vegetable organic? // Are these vegetables organic? // Are these vegetables grown without chemicals? || organic = hữu cơ, rau sạch.
+> Hỏi xem đang có chương trình khuyến mãi nào không. || Are there any special offers today? // Do you have any promotions at the moment? // Is anything on sale today? // Are there any discounts today? || special offer / on sale = khuyến mãi.
+> Hỏi xem có thể dùng mã giảm giá này không. || Can I use this voucher? // Can I use this discount code? // Is this coupon valid? || voucher / coupon = phiếu giảm giá.
+> Hỏi quầy thanh toán nào ít người. || Which checkout is less busy? // Which till has the shortest queue? // Which counter is less crowded? || checkout / till = quầy tính tiền.
+> Hỏi xem có bán theo lẻ không, không cần mua cả hộp. || Can I buy just one, not the whole box? // Do you sell them individually? // Can I buy them separately? || individually / separately = bán lẻ từng cái.
+
+@group life-phone 1 question,modal | Gọi điện & đặt lịch hẹn | Đặt lịch, để lại lời nhắn: I'd like to make an appointment. · Could I leave a message? · Is … available?
+> Gọi điện hỏi xem bác sĩ Minh có rảnh vào thứ Năm không. || Is Doctor Minh available on Thursday? // Is Dr Minh free on Thursday? // Does Doctor Minh have any time on Thursday? || available = rảnh, có thể gặp.
+> Hỏi xem có thể để lại lời nhắn không. || Could I leave a message? // Can I leave a message, please? // May I leave a message? || leave a message = để lại lời nhắn.
+> Hỏi người nghe máy: Ai đang gọi đấy ạ? || Who is calling, please? // May I ask who is calling? // Who's calling? // Who is speaking, please? || Trên điện thoại → Who is calling?
+> Nhờ người kia gọi lại sau 10 phút. || Could you call me back in ten minutes? // Could you call back in ten minutes, please? // Can you call me back in 10 minutes? || call back = gọi lại; in ten minutes = 10 phút nữa.
+> Hỏi xem có thể dời lịch hẹn sang tuần sau không. || Can I reschedule my appointment for next week? // Could I move my appointment to next week? // Is it possible to change my appointment to next week? || reschedule = dời lịch.
+> Hỏi xem mình đang nói chuyện với ai. || Who am I speaking to? // Who am I talking to? // May I know who I am speaking to? || speak to → Who am I speaking to? (giới từ cuối)
+> Hỏi: Anh có thể đánh vần tên mình không? || Could you spell your name, please? // Can you spell your name? // How do you spell your name? || spell = đánh vần.
+> Hỏi: Số máy lẻ của phòng nhân sự là bao nhiêu? || What is the extension number for the HR department? // What is the HR department's extension? // What is the extension for HR? || extension = số máy lẻ.
+
+@group life-lost 1 question,modal | Mất đồ & khẩn cấp | Báo mất, xin giúp: I've lost my … · Has anyone found …? · Where is the nearest …? · Could you call …?
+> Hỏi quầy lễ tân: Có ai nhặt được ví màu đen không? || Has anyone found a black wallet? // Has anyone handed in a black wallet? // Did anyone find a black wallet? || Has anyone found …? (anyone + has)
+> Hỏi: Tôi bị mất hộ chiếu, tôi nên làm gì? || I have lost my passport. What should I do? // I've lost my passport. What should I do? // What should I do if I lose my passport? || lost → hiện tại hoàn thành: I have lost.
+> Hỏi bệnh viện gần nhất ở đâu. || Where is the nearest hospital? // Is there a hospital near here? // How do I get to the nearest hospital? || the nearest + nơi chốn.
+> Nhờ người khác gọi xe cấp cứu. || Could you call an ambulance, please? // Can you call an ambulance? // Please could you call an ambulance? || ambulance = xe cấp cứu.
+> Hỏi khu đồ thất lạc ở đâu. || Where is the lost and found? // Where is lost property? // Where is the lost property office? || lost and found / lost property = nơi giữ đồ thất lạc.
+> Hỏi người bị ngã: Bạn có sao không? || Are you all right? // Are you OK? // Are you hurt? // Are you okay? || Are you all right?
+> Hỏi: Tôi có thể dùng điện thoại của bạn một chút không? Điện thoại tôi hết pin. || Could I use your phone for a minute? My battery is dead. // Can I borrow your phone? My phone has run out of battery. // Could I use your phone? My battery is flat. || run out of battery / battery is dead = hết pin.
+> Hỏi: Tôi có thể báo mất thẻ ở đâu? || Where can I report a lost card? // Where do I report a lost card? // How can I report a lost card? || report = báo cáo, trình báo.
+
+@group life-home 1 question | Ở nhà với gia đình | Hỏi han việc nhà, bữa ăn: What's for dinner? · Have you seen my …? · Who is going to …?
+> Hỏi mẹ: Tối nay ăn gì ạ? || What's for dinner tonight? // What are we having for dinner tonight? // What are we eating tonight? // What is for dinner tonight? || What's for dinner? (rất tự nhiên)
+> Hỏi: Có ai thấy chìa khóa xe của con đâu không? || Has anyone seen my motorbike keys? // Has anyone seen my keys? // Have you seen my motorbike keys? // Has anybody seen my keys? || Has anyone seen …? (hiện tại hoàn thành)
+> Hỏi: Hôm nay ai rửa bát? || Who is washing the dishes today? // Who is going to wash the dishes today? // Whose turn is it to wash the dishes? // Who is doing the dishes today? || Whose turn is it to + V? = đến lượt ai?
+> Hỏi: Mẹ có cần con mua gì ở chợ không? || Do you need me to buy anything at the market? // Do you want me to get anything from the market? // Shall I buy anything at the market? || need someone to + V.
+> Hỏi: Mấy giờ bố về ạ? || What time will Dad be home? // When will Dad be back? // What time is Dad coming home? // When is Dad coming home? || Tương lai gần → is Dad coming home?
+> Hỏi: Con để điện thoại ở đâu nhỉ? || Where did I put my phone? // Where did I leave my phone? || Quá khứ → Where did I put …?
+> Hỏi: Ai đã ăn hết bánh rồi? || Who ate all the cake? // Who has eaten all the cake? // Who finished the cake? || Hỏi chủ ngữ → Who ate … (không dùng did)
+> Hỏi em trai: Em làm bài tập xong chưa? || Have you finished your homework yet? // Have you done your homework yet? // Have you finished your homework? || … yet?
+
+@group life-neighbour 1 question,modal | Hàng xóm & khu trọ | Làm quen, nhờ vả, phàn nàn lịch sự: Could you keep the noise down? · Would you mind …? · Do you know when …?
+> Nhờ hàng xóm vặn nhỏ nhạc một chút. || Could you turn the music down a bit, please? // Would you mind turning the music down? // Could you keep the noise down, please? // Could you turn down the music a little? || Would you mind + V-ing? = phiền bạn … được không?
+> Hỏi hàng xóm: Anh/chị mới chuyển đến à? || Have you just moved in? // Are you new here? // Did you just move in? || move in = chuyển đến.
+> Hỏi: Bao giờ thì có người đến thu rác? || When is the rubbish collected? // When do they collect the rubbish? // What day is rubbish collection? // When does the garbage truck come? || Bị động → When is the rubbish collected?
+> Nhờ hàng xóm nhận hộ bưu kiện. || Could you take in a parcel for me? // Could you receive a package for me, please? // Would you mind collecting a parcel for me? || take in a parcel = nhận hộ.
+> Hỏi: Anh/chị có biết khi nào thì có điện lại không? || Do you know when the power will come back on? // Do you know when the electricity will be back? // Do you know when the power will be back? || Câu gián tiếp: when + the power + will come back.
+> Hỏi xem có thể đỗ xe máy ở đây không. || Can I park my motorbike here? // Is it OK to park my motorbike here? // Am I allowed to park here? || Can I park …?
+> Hỏi: Ở gần đây có quán phở nào ngon không? || Is there a good pho restaurant near here? // Do you know a good pho place nearby? // Are there any good pho restaurants around here? || Is there … near here?
+
+@group life-sight 1 question,modal | Du lịch & tham quan | Hỏi vé, giờ mở cửa, chụp ảnh: What time does … open? · Is photography allowed? · Could you take a photo of us?
+> Hỏi bảo tàng mở cửa lúc mấy giờ. || What time does the museum open? // When does the museum open? // What are the museum's opening hours? || What time does … open?
+> Nhờ người lạ chụp giúp một tấm ảnh. || Could you take a photo of us, please? // Would you mind taking a picture of us? // Could you take a picture of us? // Could you take our photo, please? || take a photo of someone.
+> Hỏi xem có được chụp ảnh bên trong không. || Can I take photos inside? // Is photography allowed inside? // Are we allowed to take pictures inside? // Can we take photos in here? || Is photography allowed?
+> Hỏi giá vé vào cửa cho sinh viên. || How much is a student ticket? // Is there a student discount? // How much is the entrance fee for students? // How much is it for students? || entrance fee = phí vào cửa.
+> Hỏi xem có tour có hướng dẫn viên tiếng Anh không. || Is there a guided tour in English? // Do you have tours with an English-speaking guide? // Are there any English tours? || guided tour = tour có hướng dẫn viên.
+> Hỏi: Ở đây có món đặc sản nào nên thử? || What local food should I try here? // What is the local speciality here? // What should I eat here? // What specialities should I try? || local speciality = đặc sản địa phương.
+> Hỏi: Đi bộ đến bãi biển mất bao lâu? || How long does it take to walk to the beach? // How long is the walk to the beach? // How far is the beach on foot? || How long does it take to walk to …?
+> Hỏi xem có bản đồ miễn phí không. || Do you have a free map? // Can I get a free map? // Is there a free map? || Do you have …?
+
+@group life-event 1 question,modal | Xem phim, ca nhạc, sự kiện | Đặt vé, chọn chỗ: Are there any tickets left for …? · What time does … start? · Where are our seats?
+> Hỏi xem còn vé cho suất chiếu 8 giờ tối không. || Are there any tickets left for the 8 p.m. show? // Are there any seats left for the 8 p.m. showing? // Do you have any tickets for the 8 p.m. show? || tickets left = vé còn lại.
+> Hỏi bộ phim dài bao lâu. || How long is the film? // How long does the film last? // How long is the movie? || How long is …?
+> Hỏi: Ghế của chúng ta ở đâu? || Where are our seats? // Where are we sitting? // Which seats are ours? || Where are our seats?
+> Hỏi: Buổi hòa nhạc bắt đầu lúc mấy giờ? || What time does the concert start? // When does the concert begin? // What time is the concert? || What time does … start?
+> Hỏi xem có thể đổi sang suất chiếu khác không. || Can I change to another showing? // Could I change my ticket to a different time? // Can I exchange my ticket for another show? || change / exchange a ticket.
+> Hỏi bạn: Bạn muốn xem phim gì? || What film do you want to watch? // What do you want to see? // Which movie would you like to watch? // What film would you like to see? || What film / Which movie …?
+> Hỏi xem phim có phụ đề tiếng Việt không. || Does the film have Vietnamese subtitles? // Is the film subtitled in Vietnamese? // Are there Vietnamese subtitles? || subtitles = phụ đề.
+
+@group life-app 1 question,modal | Ứng dụng, tài khoản & chăm sóc khách hàng | Quên mật khẩu, lỗi thanh toán: I can't log in. · How do I reset …? · Why was I charged …?
+> Hỏi tổng đài: Tôi quên mật khẩu, làm sao để đặt lại? || I forgot my password. How do I reset it? // I've forgotten my password. How can I reset it? // How do I reset my password? || reset = đặt lại.
+> Hỏi: Tại sao tôi bị trừ tiền hai lần? || Why was I charged twice? // Why have I been charged twice? // Why did you charge me twice? || Bị động → Why was I charged …?
+> Hỏi cách hủy gói đăng ký. || How do I cancel my subscription? // How can I cancel my subscription? // Can I cancel my subscription? || subscription = gói đăng ký.
+> Hỏi: Khi nào tôi nhận được tiền hoàn lại? || When will I get my refund? // When will I receive my refund? // How long does a refund take? // When will the money be refunded? || refund = tiền hoàn lại.
+> Hỏi: Tôi không đăng nhập được, anh có thể kiểm tra giúp không? || I can't log in. Could you check my account? // I can't log in. Could you help me? // I can't sign in. Could you check it for me? || log in / sign in = đăng nhập.
+> Hỏi xem có thể đổi số điện thoại trong tài khoản không. || Can I change the phone number on my account? // How do I change my phone number in the account? // Can I update my phone number? || update = cập nhật.
+> Hỏi: Ứng dụng này có phiên bản tiếng Việt không? || Is there a Vietnamese version of this app? // Does this app have a Vietnamese version? // Is this app available in Vietnamese? || available in + ngôn ngữ.
+
+@group life-vehicle 1 question,modal | Xe máy, đổ xăng, gửi xe | Sửa xe, gửi xe: My tyre is flat. · How much is parking? · Can you check …?
+> Hỏi thợ: Xe tôi bị thủng lốp, anh vá giúp được không? || I have a flat tyre. Can you fix it? // My tyre is flat. Could you repair it? // I've got a flat tyre. Can you fix it? // My tire is flat. Can you fix it? || flat tyre = lốp bị xẹp / thủng.
+> Hỏi giá gửi xe máy một ngày. || How much is it to park a motorbike for a day? // How much does parking cost per day? // How much is parking for one day? || How much is it to + V?
+> Hỏi cây xăng gần nhất ở đâu. || Where is the nearest petrol station? // Is there a petrol station near here? // Where is the nearest gas station? || petrol station (Anh) / gas station (Mỹ).
+> Nhờ thợ kiểm tra phanh. || Could you check the brakes, please? // Can you check my brakes? // Could you have a look at the brakes? || brakes = phanh.
+> Hỏi: Xe tôi kêu lạ, có chuyện gì vậy? || My motorbike is making a strange noise. What's wrong with it? // What's wrong with my motorbike? It's making a strange noise. // Why is my motorbike making a strange noise? || What's wrong with …? = bị làm sao?
+> Hỏi: Thay dầu mất bao lâu? || How long does an oil change take? // How long will it take to change the oil? // How long does it take to change the oil? || oil change = thay dầu.
+> Hỏi bãi gửi xe mở cửa đến mấy giờ. || What time does the car park close? // How late is the parking lot open? // When does the parking area close? || car park / parking lot = bãi đỗ xe.
+
+@group life-group 1 question,modal | Làm việc nhóm với bạn học | Chia việc, hẹn họp: Who is going to …? · When shall we …? · Could you send …? · Which part …?
+> Hỏi nhóm: Ai sẽ làm phần slide? || Who is going to make the slides? // Who will do the slides? // Who is doing the slides? // Who is responsible for the slides? || Hỏi chủ ngữ ở tương lai → Who is going to …?
+> Hỏi: Khi nào nhóm mình họp tiếp? || When shall we meet next? // When is our next meeting? // When will our group meet again? // When should we meet next? || When shall we …?
+> Hỏi bạn: Bạn muốn làm phần nào? || Which part do you want to do? // Which part would you like to do? // Which section do you want to work on? || Which part …?
+> Nhờ bạn gửi file vào nhóm chat. || Could you send the file to the group chat? // Could you post the file in the group chat, please? // Can you share the file in our group chat? || group chat = nhóm chat.
+> Hỏi: Hạn nộp bản nháp là khi nào? || When is the deadline for the draft? // When do we have to submit the draft? // When is the draft due? || due = đến hạn.
+> Hỏi: Bạn đã làm xong phần của mình chưa? || Have you finished your part yet? // Have you done your part yet? // Have you finished your section? // Is your part done yet? || Have you finished … yet?
+> Hỏi: Chúng ta có nên chia lại công việc không? || Should we divide the work again? // Should we redistribute the tasks? // Shall we split the work differently? || divide / split the work = chia việc.
+> Hỏi: Ai sẽ thuyết trình phần kết luận? || Who will present the conclusion? // Who is going to present the conclusion? // Who is presenting the conclusion? || present = thuyết trình.
+
+@group life-smalltalk 1 question | Làm quen & nói chuyện phiếm | Mở đầu câu chuyện: How long have you …? · What do you do in your free time? · Have you been here before?
+> Hỏi người mới quen: Bạn sống ở đây lâu chưa? || How long have you lived here? // How long have you been living here? // Have you lived here long? || How long have you lived …?
+> Hỏi: Lúc rảnh bạn thường làm gì? || What do you do in your free time? // What do you usually do in your free time? // What do you like doing in your spare time? || in your free / spare time.
+> Hỏi: Bạn đã đến đây bao giờ chưa? || Have you been here before? // Is this your first time here? // Have you ever been here before? || Have you been here before?
+> Hỏi: Thời tiết hôm nay đẹp nhỉ? || Lovely weather today, isn't it? // It's a beautiful day, isn't it? // The weather is nice today, isn't it? // Nice weather today, isn't it? || Câu hỏi đuôi: …, isn't it?
+> Hỏi: Bạn học ngành gì? || What do you study? // What is your major? // What are you studying? // What subject do you study? || major = chuyên ngành.
+> Hỏi: Bạn biết chủ nhà của bữa tiệc thế nào? || How do you know the host? // How do you know the host of the party? || How do you know + người? = quen người đó thế nào?
+> Hỏi: Bạn có anh chị em không? || Do you have any brothers or sisters? // Have you got any brothers or sisters? // Do you have any siblings? || siblings = anh chị em.
+> Hỏi: Gần đây bạn có xem phim gì hay không? || Have you seen any good films recently? // Have you watched any good movies lately? // Have you seen any good movies recently? || recently / lately → hiện tại hoàn thành.
+
+@group life-party 1 question,modal | Đám cưới, sinh nhật & tiệc | Mời, hỏi han khách: Would you like to come to …? · What should I bring? · Shall I …? · Would you like some more …?
+> Mời bạn đến dự tiệc sinh nhật vào thứ Bảy. || Would you like to come to my birthday party on Saturday? // Can you come to my birthday party on Saturday? // Do you want to come to my birthday party on Saturday? || Mời → Would you like to come to …?
+> Hỏi chủ tiệc: Tôi nên mang theo gì? || What should I bring? // Should I bring anything? // Do you want me to bring anything? // Shall I bring anything? || What should I bring?
+> Hỏi: Đám cưới tổ chức ở đâu? || Where is the wedding? // Where is the wedding being held? // Where will the wedding take place? // Where is the wedding taking place? || take place / be held = được tổ chức.
+> Mời khách: Bạn có muốn ăn thêm không? || Would you like some more? // Would you like some more food? // Do you want some more? // Would you like a bit more? || Would you like some more? (some trong lời mời)
+> Hỏi: Có cần mặc trang phục gì đặc biệt không? || Is there a dress code? // What should I wear? // Do I need to dress up? // Is there a special dress code? || dress code = quy định trang phục.
+> Hỏi: Mấy giờ thì tiệc kết thúc? || What time does the party finish? // When will the party end? // What time will the party end? // When does the party finish? || finish / end = kết thúc.
+> Hỏi: Tôi có thể dẫn bạn đi cùng không? || Can I bring a friend? // Is it OK if I bring a friend? // Could I bring a friend with me? || Is it OK if I + V?

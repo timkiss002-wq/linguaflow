@@ -5,12 +5,24 @@ import { Button } from '@/components/ui/button';
 import { WriteRunner } from '@/features/practice/WriteRunner';
 import { readWrong, recordAnswer } from '@/lib/practice-daily';
 import { practiceOf, savePractice } from '@/lib/practice/results';
-import { PER_DAY, Q_LEVELS, extraRounds, extraSetFor, qGroupOf, qItemsOf, qLevelOf, questionSetFor, type QItem } from '@/lib/questions-daily';
+import {
+  EXTRA_PER_ROUND,
+  LIFE_PER_DAY,
+  PER_DAY,
+  Q_LEVELS,
+  extraRounds,
+  extraSetFor,
+  qGroupOf,
+  qItemsOf,
+  qLevelOf,
+  questionSetFor,
+  type QItem,
+} from '@/lib/questions-daily';
 import { dayByDate, formatDay, todayKey } from '@/lib/roadmap/plan';
 import { recordTagResult } from '@/lib/translate-daily';
 
 /**
- * /dat-cau-hoi/:date — question forming of the day: 5 questions (ask about the highlighted part, or ask in English
+ * /dat-cau-hoi/:date — question forming of the day: 13 questions (10 everyday) (ask about the highlighted part, or ask in English
  * about a Vietnamese situation). Passed with ≥ 50 % right on the first try, otherwise only the wrong ones are redone.
  * "Luyện thêm 5 câu" gives 5 more as often as wanted; they don't change the day's result but mistakes come back later.
  */
@@ -33,7 +45,7 @@ export default function QuestionsPage() {
     recordAnswer(item.key, ok);
     recordTagResult(todayKey(), `ask:${item.key}`, (item as QItem).tags, ok);
   };
-  const more = (label = `Luyện thêm ${PER_DAY} câu`) => (
+  const more = (label = `Luyện thêm ${EXTRA_PER_ROUND} câu`) => (
     <Button variant="outline" onClick={() => setRound(Math.max(round, done) + 1)} data-testid="more-questions">
       <Plus /> {label}
     </Button>
@@ -52,7 +64,7 @@ export default function QuestionsPage() {
           items={main}
           mode="translate"
           heading={`Đặt câu hỏi · ${main.length} câu hôm nay`}
-          storageKey={`questions:run:${date}`}
+          storageKey={`questions:run2:${date}`}
           onFirstTry={onFirstTry}
           onFinish={(score, total, _a, passed) => {
             savePractice(taskId, score, total, passed);
@@ -72,10 +84,10 @@ export default function QuestionsPage() {
           items={extra}
           mode="translate"
           heading={`Luyện thêm · lượt ${round} · ${extra.length} câu`}
-          storageKey={`questions:run:${date}:x${round}`}
+          storageKey={`questions:run2:${date}:x${round}`}
           onFirstTry={onFirstTry}
           onFinish={() => setTick((t) => t + 1)}
-          extra={more(`Luyện thêm ${PER_DAY} câu nữa`)}
+          extra={more(`Luyện thêm ${EXTRA_PER_ROUND} câu nữa`)}
         />
       </div>
     );
@@ -86,7 +98,11 @@ export default function QuestionsPage() {
         <p className="text-sm text-muted-foreground">Bài tập hằng ngày · {formatDay(date)}</p>
         <h1 className="text-2xl font-bold tracking-tight">Đặt câu hỏi</h1>
         <p className="max-w-3xl text-muted-foreground">
-          {PER_DAY} câu mỗi ngày: 2 câu hỏi đời thường (22 tình huống: quán ăn, phòng thi, ngân hàng, phỏng vấn xin việc, tranh luận, xe buýt, sân bay, thuê nhà, họp online…) và 3 câu theo chủ điểm ngữ pháp — đặt câu hỏi cho phần được tô màu, hoặc hỏi bằng tiếng Anh theo tình huống tiếng Việt. Câu nhờ / xin phép chấp nhận cả Could / Can / May và có hay không có “please”. Không tính dấu chấm hỏi, chữ hoa và viết tắt. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại câu sai. Muốn luyện nhiều hơn thì bấm “Luyện thêm” — bao nhiêu lượt cũng được, câu sai sẽ quay lại vào các ngày sau.
+          {PER_DAY} câu mỗi ngày: {LIFE_PER_DAY} câu hỏi đời thường (35 tình huống: quán ăn, phòng thi, ngân hàng, phỏng vấn xin việc, tranh luận, xe buýt, sân
+          bay, siêu thị, gọi điện, làm việc nhóm…) và {PER_DAY - LIFE_PER_DAY} câu theo chủ điểm ngữ pháp — đặt câu hỏi cho phần được tô màu, hoặc hỏi bằng
+          tiếng Anh theo tình huống tiếng Việt. Câu nhờ / xin phép chấp nhận cả Could / Can / May và có hay không có “please”. Không tính dấu chấm hỏi, chữ hoa
+          và viết tắt. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại câu sai. Muốn luyện nhiều hơn thì bấm “Luyện thêm” — bao nhiêu lượt cũng được, câu
+          sai sẽ quay lại vào các ngày sau.
         </p>
       </header>
 
@@ -112,7 +128,8 @@ export default function QuestionsPage() {
           ))}
         </ul>
         <p className="text-sm text-muted-foreground">
-          Mẹo chung: tìm động từ trong câu trả lời → chọn trợ động từ (am / is / are · do / does / did · have / has · will / can…) → từ để hỏi + trợ động từ + chủ ngữ + động từ. Nếu hỏi chính <b>chủ ngữ</b> (Who / What làm việc đó?) thì không cần trợ động từ.
+          Mẹo chung: tìm động từ trong câu trả lời → chọn trợ động từ (am / is / are · do / does / did · have / has · will / can…) → từ để hỏi + trợ động từ +
+          chủ ngữ + động từ. Nếu hỏi chính <b>chủ ngữ</b> (Who / What làm việc đó?) thì không cần trợ động từ.
         </p>
       </section>
 
@@ -120,7 +137,7 @@ export default function QuestionsPage() {
         <Button size="lg" onClick={() => setRound(-1)} autoFocus data-testid="start-questions">
           <HelpCircle /> {best ? 'Làm tiếp / làm lại' : 'Bắt đầu'} · {main.length} câu
         </Button>
-        {more(done ? `Luyện thêm ${PER_DAY} câu (đã luyện thêm ${done} lượt)` : undefined)}
+        {more(done ? `Luyện thêm ${EXTRA_PER_ROUND} câu (đã luyện thêm ${done} lượt)` : undefined)}
         {best && (
           <span className="text-sm text-muted-foreground tabular-nums">
             Đúng ngay lần đầu: {best.best}/{best.total}
