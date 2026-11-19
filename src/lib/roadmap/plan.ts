@@ -46,6 +46,8 @@ export type TaskKind =
   | 'reading-p3'
   | 'grammar-mcq'
   | 'reading-tfng'
+  | 'translate-dialogue'
+  | 'translate-story'
   | 'reading-skill'
   | 'reading-part'
   | 'writing-frame'
@@ -558,6 +560,23 @@ function build(): Day[] {
         detail: 'Đọc đoạn ngắn, chọn TRUE / FALSE / NOT GIVEN cho từng câu; mỗi câu có giải thích vì sao là FALSE (bài nói ngược lại) hay NOT GIVEN (bài không nhắc tới). Cần đúng ngay lần đầu ≥ 80%.',
         minutes: 8 * n[2],
         href: `/tfng/${date}`,
+        gated: true,
+      });
+    }
+    // From 19/11: daily translation — 20 lines of everyday dialogue and one short story (Việt → Anh), harder every 2 weeks.
+    if (!light && date >= DAILY_FROM && date < TARGET) {
+      add('translate-dialogue', {
+        title: 'Dịch hội thoại đời thường · 20 câu',
+        detail: '4 đoạn hội thoại ngắn nhiều chủ đề + 4 câu ôn đúng những lỗi bạn hay mắc. Độ khó tăng dần mỗi 2 tuần. Cần đúng ngay lần đầu ≥ 80%; chưa đạt thì chỉ dịch lại câu sai.',
+        minutes: 20,
+        href: `/dich-hoi-thoai/${date}`,
+        gated: true,
+      });
+      add('translate-story', {
+        title: 'Dịch truyện ngắn · 5–6 câu',
+        detail: 'Đọc cả mẩu truyện tiếng Việt, dịch từng câu sang tiếng Anh, cuối bài xem lại bản tiếng Anh hoàn chỉnh. Cần đúng ngay lần đầu ≥ 80%.',
+        minutes: 12,
+        href: `/dich-truyen/${date}`,
         gated: true,
       });
     }

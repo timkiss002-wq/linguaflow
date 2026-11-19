@@ -23,6 +23,8 @@ export interface WriteItem {
   scene?: string;
   /** false: passive vocabulary — only has to be right in the end, not on the first try (default true) */
   graded?: boolean;
+  /** grammar practice: a "spelling" slip that is really a grammar ending (work/works, bedroom/bedrooms, a/an) is wrong */
+  inflection?: boolean;
 }
 
 /* ---------- Dịch ví dụ ---------- */
@@ -90,7 +92,23 @@ export const usesWord = (text: string, word: string) => usesPhrase(text, word.re
  */
 export function checkWrite(item: WriteItem, typed: string, strict: boolean): Checked {
   const r = checkTranslation({ en: item.en } as DrillItem, typed);
-  return strict && r.verdict === 'spelling' ? { ...r, verdict: 'wrong' } : r;
+  if (r.verdict !== 'spelling') return r;
+  if (strict || (item.inflection && r.diff.tokens.some((t) => t.kind === 'misspelled' && t.expected && t.actual && grammarSlip(t.expected, t.actual)))) return { ...r, verdict: 'wrong' };
+  return r;
+}
+
+const ENDINGS = ['s', 'es', 'd', 'ed', 'ing', 'er', 'est', 'n'];
+/** Two words that differ only by a grammar ending: work / works, watch / watched, bedroom / bedrooms, a / an, study / studies. */
+export function grammarSlip(a: string, b: string) {
+  const x = a.toLowerCase();
+  const y = b.toLowerCase();
+  if (x === y) return false;
+  const [s, l] = x.length <= y.length ? [x, y] : [y, x];
+  if (l.startsWith(s) && ENDINGS.includes(l.slice(s.length))) return true;
+  if (s.endsWith('y') && (l === `${s.slice(0, -1)}ies` || l === `${s.slice(0, -1)}ied`)) return true;
+  if (s.endsWith('e') && (l === `${s.slice(0, -1)}ing` || l === `${s}d`)) return true;
+  // doubled consonant: stop / stopped, run / running
+  return l.length === s.length + 3 && l.startsWith(s) && l[s.length] === s.at(-1) && ['ed', 'ing'].some((e) => l.endsWith(e));
 }
 
 /* ---------- Sửa lỗi sai ---------- */

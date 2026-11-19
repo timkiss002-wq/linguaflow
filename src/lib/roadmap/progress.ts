@@ -132,6 +132,8 @@ export function isDone(task: Task, ctx: Context): boolean {
     case 'writing-week':
     case 'grammar-mcq':
     case 'reading-tfng':
+    case 'translate-dialogue':
+    case 'translate-story':
       return practicePassed(task.id);
     case 'reading-p3':
       return Boolean(s.done[task.id]) || ctx.p3Days.has(task.id.slice(0, 10));
