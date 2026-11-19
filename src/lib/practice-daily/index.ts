@@ -253,6 +253,8 @@ export function readWrong(): Record<string, number> {
 export function recordAnswer(id: string, firstTryCorrect: boolean) {
   // grammar questions also feed the weak points shared with the daily translation
   if (id.startsWith('g:')) recordTagResult(todayKey(), `mcq:${id}`, TOPIC_TAGS[id.split(':')[1]!] ?? [], firstTryCorrect);
+  // linking words (lib/linking-daily) count towards "Liên từ"
+  if (id.startsWith('l:')) recordTagResult(todayKey(), `link:${id}`, ['conj'], firstTryCorrect);
   try {
     const all = readWrong();
     if (firstTryCorrect) delete all[id];

@@ -48,6 +48,9 @@ export type TaskKind =
   | 'reading-tfng'
   | 'translate-dialogue'
   | 'translate-story'
+  | 'grammar-weak'
+  | 'linking'
+  | 'argue'
   | 'reading-skill'
   | 'reading-part'
   | 'writing-frame'
@@ -579,6 +582,28 @@ function build(): Day[] {
         href: `/dich-truyen/${date}`,
         gated: true,
       });
+      add('linking', {
+        title: 'Từ nối · 6 câu chọn + 4 câu viết',
+        detail: 'Chọn từ nối đúng (however, moreover, despite, instead of, whereas…), nối hai câu bằng từ cho sẵn và sửa câu dùng sai. Câu sai quay lại các ngày sau. Mỗi bước cần đúng ngay lần đầu ≥ 80%.',
+        minutes: 10,
+        href: `/tu-noi/${date}`,
+        gated: true,
+      });
+      add('argue', {
+        title: 'Lập luận & dẫn dắt · 1 đoạn + 4 câu hỏi',
+        detail: 'Xếp câu thành đoạn thân bài (ý chính → giải thích → ví dụ → kết đoạn), rồi chọn câu chủ đề, ví dụ, cách nói giảm, nhận ra lập luận yếu và phản biện.',
+        minutes: 10,
+        href: `/lap-luan/${date}`,
+        gated: true,
+      });
+      if (date > DAILY_FROM)
+        add('grammar-weak', {
+          title: 'Ôn lại ngữ pháp theo lỗi hay mắc',
+          detail: `Chỉ có bài khi một điểm ngữ pháp bị sai từ 3 lần trở lên (tính chung bài dịch, trắc nghiệm, từ nối): nhắc nhanh quy tắc, ví dụ và 8 câu đúng điểm đó. Không có thì tự đánh dấu xong.`,
+          minutes: 8,
+          href: `/on-tap-loi/${date}`,
+          gated: true,
+        });
     }
     days.push(day);
   }

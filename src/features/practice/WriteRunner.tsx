@@ -9,6 +9,8 @@ import { DiffView } from '@/features/dictation/DiffView';
 import { expandContractions, type Checked } from '@/lib/grammar/drills';
 import { checkWrite, usesWord, type WriteItem } from '@/lib/practice/items';
 import { PASS_RATE, emptyRun, firstRoundDone, firstScore, loadRun, record, runPassed, saveRun, stillWrong, toRedo, type RunState } from '@/lib/practice/retry';
+import { diagnose, type Finding } from '@/lib/diagnose';
+import { TAGS } from '@/lib/translate-daily';
 import { cn } from '@/lib/utils';
 
 export interface WriteAnswer {
@@ -45,6 +47,7 @@ export function WriteRunner({
   storageKey,
   rounds = true,
   extra,
+  onFirstTry,
 }: {
   items: WriteItem[];
   /** translate: Vietnamese → English · fix: correct the wrong sentence · gap: type the right form of the word */
@@ -58,6 +61,11 @@ export function WriteRunner({
   rounds?: boolean;
   /** more buttons on the result page */
   extra?: ReactNode;
+  /**
+   * The first try of each sentence of the first round, once it is settled: right (or accepted with "Tôi viết đúng")
+   * or wrong (reported when the learner moves on, so an accepted wording is not counted as a mistake).
+   */
+  onFirstTry?: (item: WriteItem, typed: string, result: Checked, ok: boolean) => void;
 }) {
   const [run, setRun] = useState<RunState>(() => (storageKey && rounds ? loadRun(storageKey, items) : emptyRun()));
   const keyIdx = (keys: string[]) => items.map((it, i) => (keys.includes(it.key) ? i : -1)).filter((i) => i >= 0);
@@ -74,6 +82,7 @@ export function WriteRunner({
   const [note, setNote] = useState('');
   const [answers, setAnswers] = useState<Record<number, WriteAnswer>>({});
   const input = useRef<HTMLTextAreaElement>(null);
+  const firstWrong = useRef<{ typed: string; result: Checked } | null>(null);
   const finished = pos >= order.length;
   const passed = result && result.verdict !== 'wrong';
   const done = runPassed(items, run);
@@ -110,6 +119,10 @@ export function WriteRunner({
     setAnswers((a) => ({ ...a, [idx]: { typed, result: r, firstTry: ok && tries === 0 } }));
     // graded sentences count on their first try only; ungraded ones as soon as they are right
     if (item.graded === false || tries === 0) update(record(run, item, firstRound, ok && tries === 0, ok));
+    if (tries === 0 && firstRound) {
+      if (ok) onFirstTry?.(item, typed, r, true);
+      else firstWrong.current = { typed, result: r };
+    }
     setTries((n) => n + 1);
   };
   const canAccept = !item?.mustUse || usesWord(typed, item.mustUse);
@@ -117,9 +130,15 @@ export function WriteRunner({
     if (!result || !item) return;
     setAnswers((a) => ({ ...a, [idx]: { typed, result: { ...result, verdict: 'correct' }, firstTry: tries <= 1 } }));
     update(record(run, item, firstRound, tries <= 1, true));
+    if (tries <= 1 && firstWrong.current) {
+      onFirstTry?.(item, firstWrong.current.typed, firstWrong.current.result, true);
+      firstWrong.current = null;
+    }
     next();
   };
   const next = () => {
+    if (firstWrong.current && item) onFirstTry?.(item, firstWrong.current.typed, firstWrong.current.result, false);
+    firstWrong.current = null;
     const p = pos + 1;
     setPos(p);
     setTyped(start(items[order[p]!]));
@@ -182,7 +201,7 @@ export function WriteRunner({
             )}
             <div>
             <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-              {mode === 'fix' ? 'Câu có một lỗi — sửa lại cho đúng' : mode === 'gap' ? 'Điền dạng đúng của từ trong ngoặc' : 'Dịch sang tiếng Anh'}
+              {item!.task ?? (mode === 'fix' ? 'Câu có một lỗi — sửa lại cho đúng' : mode === 'gap' ? 'Điền dạng đúng của từ trong ngoặc' : 'Dịch sang tiếng Anh')}
               {item!.label && <span className="ml-2 rounded bg-muted px-1.5 py-0.5 normal-case tracking-normal">{item!.label}</span>}
             </p>
             <p className={cn('mt-1 text-xl font-semibold leading-snug sm:text-2xl', mode === 'fix' && 'decoration-rose-400 decoration-wavy underline-offset-4')} lang={mode === 'translate' ? 'vi' : 'en'} data-testid="prompt">
@@ -305,6 +324,7 @@ function Feedback({ result, item }: { result: Checked; item: WriteItem }) {
         <span className="text-muted-foreground">Đáp án: </span>
         <b>{result.closest}</b>
       </p>
+      {result.verdict === 'wrong' && item.diagnose && <Diagnosis findings={diagnose(result.diff.tokens, item.diagnose)} />}
       {item.why && <p className="text-sm">💡 {item.why}</p>}
       {others.length > 0 && (
         <details className="text-sm">
@@ -316,6 +336,34 @@ function Feedback({ result, item }: { result: Checked; item: WriteItem }) {
           </ul>
         </details>
       )}
+    </div>
+  );
+}
+
+/** "Bạn sai ở đâu": one line per mistake, with a link to review its grammar point. */
+function Diagnosis({ findings }: { findings: Finding[] }) {
+  const inRouter = useInRouterContext();
+  if (!findings.length) return null;
+  return (
+    <div className="rounded-lg border border-rose-200 bg-white/70 p-3 text-sm dark:border-rose-500/30 dark:bg-transparent" data-testid="diagnosis">
+      <p className="font-semibold">Bạn sai ở đâu</p>
+      <ul className="mt-1 space-y-1">
+        {findings.map((f) => (
+          <li key={f.text} className="flex flex-wrap items-baseline gap-x-2">
+            {f.tag && TAGS[f.tag] ? (
+              <span className="rounded bg-rose-100 px-1.5 py-0.5 text-xs font-medium text-rose-800 dark:bg-rose-500/15 dark:text-rose-200">{TAGS[f.tag]!.name}</span>
+            ) : (
+              <span className="rounded bg-muted px-1.5 py-0.5 text-xs font-medium">Từ vựng</span>
+            )}
+            <span>{f.text}</span>
+            {f.tag && TAGS[f.tag] && inRouter && (
+              <Link to={`/on-ngu-phap/${f.tag}`} className="text-xs font-medium text-primary underline-offset-2 hover:underline">
+                Ôn lại →
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

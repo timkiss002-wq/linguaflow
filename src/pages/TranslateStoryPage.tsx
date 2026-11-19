@@ -4,9 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { WriteRunner } from '@/features/practice/WriteRunner';
 import { practiceOf, savePractice } from '@/lib/practice/results';
-import { loadRun } from '@/lib/practice/retry';
 import { dayByDate, formatDay } from '@/lib/roadmap/plan';
-import { LEVELS, markStoryDone, recordResults, runKey, storyById, storyFor, storyItems } from '@/lib/translate-daily';
+import { LEVELS, markStoryDone, firstTryTags, recordResults, runKey, storyById, storyFor, storyItems } from '@/lib/translate-daily';
 
 /**
  * /dich-truyen/:date — one short story a day: read the whole story in Vietnamese, translate it sentence by sentence,
@@ -58,12 +57,8 @@ export default function TranslateStoryPage() {
           mode="translate"
           heading={`Dịch truyện · ${story.title}`}
           storageKey={storageKey}
+          onFirstTry={(item, _typed, result, ok) => recordResults(date, [{ key: item.key, ok, tags: ok ? undefined : firstTryTags(item, result) }])}
           onFinish={(score, total, _a, passed) => {
-            const run = loadRun(storageKey, items);
-            recordResults(
-              date,
-              items.filter((it) => it.key in run.first).map((it) => ({ key: it.key, ok: Boolean(run.first[it.key]) })),
-            );
             savePractice(taskId, score, total, passed);
             if (passed) markStoryDone(story.id, date);
             setTick((t) => t + 1);

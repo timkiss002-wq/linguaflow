@@ -9,7 +9,7 @@ export function WeakPoints({ log }: { log?: ErrorLog }) {
   return (
     <section aria-labelledby="weak" className="space-y-2">
       <h2 id="weak" className="text-sm font-semibold">
-        Lỗi bạn hay mắc <span className="font-normal text-muted-foreground">· tính chung bài dịch và trắc nghiệm ngữ pháp</span>
+        Lỗi bạn hay mắc <span className="font-normal text-muted-foreground">· tính chung bài dịch, trắc nghiệm ngữ pháp và từ nối</span>
       </h2>
       {weak.length ? (
         <ul className="space-y-1.5">

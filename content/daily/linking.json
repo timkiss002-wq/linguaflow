@@ -1,0 +1,2045 @@
+{
+ "groups": [
+  {
+   "id": "basic",
+   "level": 1,
+   "name": "and · but · so · because · or",
+   "tip": "and thêm ý; but đối lập; so chỉ kết quả (đứng trước kết quả); because chỉ nguyên nhân (đứng trước nguyên nhân); or đưa lựa chọn.",
+   "mcq": [
+    {
+     "q": "I was tired, ___ I went to bed early.",
+     "o": [
+      "so",
+      "because",
+      "but",
+      "or"
+     ],
+     "w": "\"đi ngủ sớm\" là kết quả của \"mệt\" → so + kết quả."
+    },
+    {
+     "q": "I went to bed early ___ I was tired.",
+     "o": [
+      "because",
+      "so",
+      "but",
+      "or"
+     ],
+     "w": "\"mệt\" là nguyên nhân → because + nguyên nhân."
+    },
+    {
+     "q": "The phone is cheap, ___ the battery is very weak.",
+     "o": [
+      "but",
+      "so",
+      "because",
+      "or"
+     ],
+     "w": "Hai ý trái ngược (rẻ ↔ pin yếu) → but."
+    },
+    {
+     "q": "Would you like tea ___ coffee?",
+     "o": [
+      "or",
+      "and",
+      "but",
+      "so"
+     ],
+     "w": "Hỏi chọn một trong hai → or."
+    },
+    {
+     "q": "She likes reading ___ listening to music.",
+     "o": [
+      "and",
+      "but",
+      "or",
+      "so"
+     ],
+     "w": "Thêm một sở thích nữa, cùng chiều → and."
+    },
+    {
+     "q": "It started to rain, ___ we stayed at home.",
+     "o": [
+      "so",
+      "because",
+      "but",
+      "or"
+     ],
+     "w": "Ở nhà là kết quả của trời mưa → so."
+    },
+    {
+     "q": "We stayed at home ___ it was raining.",
+     "o": [
+      "because",
+      "so",
+      "and",
+      "or"
+     ],
+     "w": "Trời mưa là lý do → because."
+    },
+    {
+     "q": "He studied hard, ___ he failed the test.",
+     "o": [
+      "but",
+      "so",
+      "because",
+      "and"
+     ],
+     "w": "Học chăm mà vẫn trượt — kết quả trái mong đợi → but."
+    },
+    {
+     "q": "You can pay by card ___ in cash.",
+     "o": [
+      "or",
+      "but",
+      "so",
+      "because"
+     ],
+     "w": "Hai cách trả, chọn một → or."
+    },
+    {
+     "q": "My brother is tall ___ thin.",
+     "o": [
+      "and",
+      "but",
+      "so",
+      "or"
+     ],
+     "w": "Hai đặc điểm cùng được nêu thêm → and."
+    },
+    {
+     "q": "I didn't have breakfast, ___ I am very hungry now.",
+     "o": [
+      "so",
+      "because",
+      "but",
+      "or"
+     ],
+     "w": "Đói là kết quả → so."
+    },
+    {
+     "q": "I am very hungry ___ I didn't have breakfast.",
+     "o": [
+      "because",
+      "so",
+      "or",
+      "but"
+     ],
+     "w": "Không ăn sáng là nguyên nhân → because."
+    },
+    {
+     "q": "The film was long, ___ it was very interesting.",
+     "o": [
+      "but",
+      "so",
+      "because",
+      "or"
+     ],
+     "w": "Dài (điểm trừ) nhưng hay (điểm cộng) → but."
+    },
+    {
+     "q": "Hurry up, ___ we will miss the bus.",
+     "o": [
+      "or",
+      "and",
+      "because",
+      "so"
+     ],
+     "w": "\"Nhanh lên, nếu không thì…\" → or (= otherwise)."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "sequence",
+   "level": 1,
+   "name": "first · then · after that · finally · also · too",
+   "tip": "first / then / after that / finally kể các bước theo thứ tự; also đứng trước động từ thường (I also like…), too đứng cuối câu.",
+   "mcq": [
+    {
+     "q": "___, wash the rice. Then put it in the cooker.",
+     "o": [
+      "First",
+      "Finally",
+      "Also",
+      "Too"
+     ],
+     "w": "Bước đầu tiên → First."
+    },
+    {
+     "q": "I went to the bank. ___, I bought some fruit at the market.",
+     "o": [
+      "After that",
+      "First",
+      "Too",
+      "Or"
+     ],
+     "w": "Việc xảy ra tiếp theo → After that."
+    },
+    {
+     "q": "We walked for three hours. ___, we reached the top of the mountain.",
+     "o": [
+      "Finally",
+      "First",
+      "Also",
+      "Because"
+     ],
+     "w": "Cuối cùng (sau một quá trình dài) → Finally."
+    },
+    {
+     "q": "I like football. My brother likes it ___.",
+     "o": [
+      "too",
+      "also",
+      "then",
+      "first"
+     ],
+     "w": "too đứng cuối câu."
+    },
+    {
+     "q": "I like football. My brother ___ likes it.",
+     "o": [
+      "also",
+      "too",
+      "then",
+      "finally"
+     ],
+     "w": "also đứng trước động từ thường (also likes)."
+    },
+    {
+     "q": "She speaks English. She can ___ speak a little Chinese.",
+     "o": [
+      "also",
+      "too",
+      "then",
+      "first"
+     ],
+     "w": "Sau động từ khuyết thiếu (can) → can also + V."
+    },
+    {
+     "q": "Open the app. ___ choose your language.",
+     "o": [
+      "Then",
+      "Too",
+      "Also",
+      "Because"
+     ],
+     "w": "Bước kế tiếp → Then."
+    },
+    {
+     "q": "He finished his homework and ___ he watched TV.",
+     "o": [
+      "then",
+      "too",
+      "first",
+      "also"
+     ],
+     "w": "Việc làm sau → then."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "basic-join",
+   "level": 1,
+   "name": "Nối hai câu",
+   "tip": "Khi nối bằng because / so / but thì bỏ dấu chấm và viết thành một câu.",
+   "mcq": [],
+   "join": [
+    {
+     "a": "It was cold.",
+     "b": "I wore a jacket.",
+     "use": "so",
+     "en": [
+      "It was cold, so I wore a jacket.",
+      "It was cold so I wore a jacket."
+     ],
+     "w": "so đứng trước kết quả (mặc áo khoác)."
+    },
+    {
+     "a": "I wore a jacket.",
+     "b": "It was cold.",
+     "use": "because",
+     "en": [
+      "I wore a jacket because it was cold."
+     ],
+     "w": "because đứng trước nguyên nhân (trời lạnh)."
+    },
+    {
+     "a": "The hotel was old.",
+     "b": "It was very clean.",
+     "use": "but",
+     "en": [
+      "The hotel was old, but it was very clean.",
+      "The hotel was old but it was very clean."
+     ],
+     "w": "Hai ý đối lập → but."
+    },
+    {
+     "a": "I missed the bus.",
+     "b": "I was late for class.",
+     "use": "so",
+     "en": [
+      "I missed the bus, so I was late for class.",
+      "I missed the bus so I was late for class."
+     ],
+     "w": "Muộn học là kết quả."
+    },
+    {
+     "a": "Lan is happy.",
+     "b": "She passed the exam.",
+     "use": "because",
+     "en": [
+      "Lan is happy because she passed the exam."
+     ],
+     "w": "Đỗ thi là nguyên nhân."
+    },
+    {
+     "a": "First, I had breakfast.",
+     "b": "I went to school.",
+     "use": "then",
+     "en": [
+      "First, I had breakfast, and then I went to school.",
+      "First, I had breakfast. Then I went to school.",
+      "First I had breakfast and then I went to school."
+     ],
+     "w": "then nối việc làm sau."
+    }
+   ],
+   "fix": [
+    {
+     "wrong": "I am tired so because I worked late.",
+     "en": [
+      "I am tired because I worked late.",
+      "I worked late, so I am tired."
+     ],
+     "w": "Không dùng so và because cùng lúc: chọn một."
+    },
+    {
+     "wrong": "Because it rained. We stayed at home.",
+     "en": [
+      "Because it rained, we stayed at home.",
+      "We stayed at home because it rained."
+     ],
+     "w": "\"Because it rained\" chưa phải câu hoàn chỉnh → nối với mệnh đề chính."
+    },
+    {
+     "wrong": "Although it was late, but he kept working.",
+     "en": [
+      "Although it was late, he kept working.",
+      "It was late, but he kept working."
+     ],
+     "w": "Although và but không đi cùng nhau."
+    },
+    {
+     "wrong": "I like coffee, I also like tea too.",
+     "en": [
+      "I like coffee, and I also like tea.",
+      "I like coffee, and I like tea too.",
+      "I like coffee. I also like tea."
+     ],
+     "w": "Dùng also hoặc too, không dùng cả hai; nối hai mệnh đề cần and."
+    },
+    {
+     "wrong": "She also is a good singer.",
+     "en": [
+      "She is also a good singer."
+     ],
+     "w": "also đứng sau to be (is also)."
+    },
+    {
+     "wrong": "He can play the guitar and also he can sing.",
+     "en": [
+      "He can play the guitar, and he can also sing.",
+      "He can play the guitar and he can also sing."
+     ],
+     "w": "also đứng sau động từ khuyết thiếu: can also sing."
+    }
+   ]
+  },
+  {
+   "id": "addition",
+   "level": 2,
+   "name": "in addition · moreover · furthermore · additionally · besides · as well as",
+   "tip": "Thêm một ý cùng chiều. In addition / Moreover / Furthermore / Additionally / Besides đứng đầu câu + dấu phẩy. as well as + danh từ / V-ing.",
+   "mcq": [
+    {
+     "q": "The flat is near my office. ___, the rent is quite low.",
+     "o": [
+      "Moreover",
+      "However",
+      "Therefore",
+      "For example"
+     ],
+     "w": "Thêm một ưu điểm nữa → Moreover."
+    },
+    {
+     "q": "Cycling is good for your health. ___, it does not pollute the air.",
+     "o": [
+      "In addition",
+      "However",
+      "Instead",
+      "Although"
+     ],
+     "w": "Thêm một lợi ích → In addition."
+    },
+    {
+     "q": "The course is expensive. ___, the classes are always crowded.",
+     "o": [
+      "Furthermore",
+      "Therefore",
+      "However",
+      "For instance"
+     ],
+     "w": "Thêm một điểm trừ nữa (cùng chiều tiêu cực) → Furthermore."
+    },
+    {
+     "q": "She speaks English ___ French.",
+     "o": [
+      "as well as",
+      "moreover",
+      "in addition",
+      "besides that"
+     ],
+     "w": "as well as + danh từ, nối trong câu."
+    },
+    {
+     "q": "___, the app lets you study offline.",
+     "o": [
+      "Additionally",
+      "Although",
+      "Because",
+      "Despite"
+     ],
+     "w": "Thêm tính năng → Additionally, đầu câu + dấu phẩy."
+    },
+    {
+     "q": "I don't want to go out; ___, it is raining.",
+     "o": [
+      "besides",
+      "however",
+      "therefore",
+      "instead"
+     ],
+     "w": "besides = hơn nữa (thêm một lý do), hay dùng khi nói."
+    },
+    {
+     "q": "Online learning saves time. ___, students can study at their own pace.",
+     "o": [
+      "What is more",
+      "However",
+      "As a result",
+      "Instead"
+     ],
+     "w": "What is more = Moreover (thêm ý)."
+    },
+    {
+     "q": "He plays the piano ___ the guitar.",
+     "o": [
+      "as well as",
+      "in addition",
+      "furthermore",
+      "moreover"
+     ],
+     "w": "Nối hai danh từ trong cùng câu → as well as."
+    },
+    {
+     "q": "Exercise improves your mood. It ___ helps you sleep better.",
+     "o": [
+      "also",
+      "however",
+      "therefore",
+      "instead"
+     ],
+     "w": "Cách thêm ý đơn giản nhất: It also + V."
+    },
+    {
+     "q": "Public transport is cheap. ___, it is better for the environment.",
+     "o": [
+      "On top of that",
+      "However",
+      "In contrast",
+      "Otherwise"
+     ],
+     "w": "On top of that = thêm vào đó (thân mật hơn)."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "contrast",
+   "level": 2,
+   "name": "however · although · even though · while",
+   "tip": "However + dấu phẩy, đầu câu thứ hai. Although / Even though + mệnh đề (S + V), không dùng cùng but.",
+   "mcq": [
+    {
+     "q": "The test was difficult. ___, most students passed.",
+     "o": [
+      "However",
+      "Moreover",
+      "Therefore",
+      "For example"
+     ],
+     "w": "Ý sau trái với mong đợi → However."
+    },
+    {
+     "q": "___ the test was difficult, most students passed.",
+     "o": [
+      "Although",
+      "However",
+      "Despite",
+      "Moreover"
+     ],
+     "w": "Đứng đầu câu ghép, theo sau là mệnh đề → Although."
+    },
+    {
+     "q": "I enjoyed the trip, ___ the weather was bad.",
+     "o": [
+      "even though",
+      "however",
+      "despite",
+      "moreover"
+     ],
+     "w": "even though + mệnh đề, nhấn mạnh hơn although."
+    },
+    {
+     "q": "The city is noisy. ___, I love living here.",
+     "o": [
+      "However",
+      "Therefore",
+      "In addition",
+      "Because"
+     ],
+     "w": "Ồn mà vẫn thích → However."
+    },
+    {
+     "q": "___ she was tired, she finished her homework.",
+     "o": [
+      "Although",
+      "However",
+      "Because of",
+      "Despite"
+     ],
+     "w": "Although + S + V."
+    },
+    {
+     "q": "Some people like living in cities, ___ others prefer the countryside.",
+     "o": [
+      "while",
+      "however",
+      "moreover",
+      "therefore"
+     ],
+     "w": "while nối hai ý đối lập trong cùng câu."
+    },
+    {
+     "q": "The phone has a great camera. The battery, ___, is disappointing.",
+     "o": [
+      "however",
+      "although",
+      "despite",
+      "because"
+     ],
+     "w": "however có thể đứng giữa câu, giữa hai dấu phẩy."
+    },
+    {
+     "q": "He is rich. ___, he is not happy.",
+     "o": [
+      "However",
+      "Moreover",
+      "Therefore",
+      "Additionally"
+     ],
+     "w": "Giàu mà không hạnh phúc → đối lập."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "result",
+   "level": 2,
+   "name": "therefore · as a result · so · that's why",
+   "tip": "Chỉ kết quả. Therefore / As a result đứng đầu câu sau + dấu phẩy; so nối trong câu.",
+   "mcq": [
+    {
+     "q": "Prices went up. ___, people bought less.",
+     "o": [
+      "As a result",
+      "However",
+      "Moreover",
+      "Although"
+     ],
+     "w": "Mua ít hơn là kết quả của giá tăng → As a result."
+    },
+    {
+     "q": "The road was flooded. ___, the school was closed.",
+     "o": [
+      "Therefore",
+      "However",
+      "In addition",
+      "For instance"
+     ],
+     "w": "Kết quả → Therefore."
+    },
+    {
+     "q": "I forgot my password, ___ I couldn't log in.",
+     "o": [
+      "so",
+      "therefore",
+      "as a result",
+      "because"
+     ],
+     "w": "Nối trong câu bằng dấu phẩy → so (Therefore cần câu mới hoặc dấu chấm phẩy)."
+    },
+    {
+     "q": "He practised every day. ___ he speaks English so well.",
+     "o": [
+      "That's why",
+      "Because",
+      "However",
+      "Although"
+     ],
+     "w": "That's why = vì thế mà (nói)."
+    },
+    {
+     "q": "The factory closed. ___, many people lost their jobs.",
+     "o": [
+      "As a result",
+      "Although",
+      "Instead",
+      "For example"
+     ],
+     "w": "Mất việc là kết quả của nhà máy đóng cửa."
+    },
+    {
+     "q": "Fast food is cheap and quick. ___, many students eat it every day.",
+     "o": [
+      "Therefore",
+      "However",
+      "Despite this",
+      "Instead"
+     ],
+     "w": "Rẻ và nhanh → nên nhiều người ăn → Therefore."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "example",
+   "level": 2,
+   "name": "for example · for instance · such as",
+   "tip": "For example / For instance + câu hoàn chỉnh (đầu câu + dấu phẩy). such as + danh từ, ngay sau danh từ được ví dụ.",
+   "mcq": [
+    {
+     "q": "Many fruits, ___ oranges and lemons, contain vitamin C.",
+     "o": [
+      "such as",
+      "for example,",
+      "for instance,",
+      "moreover"
+     ],
+     "w": "Liệt kê danh từ ngay sau \"fruits\" → such as."
+    },
+    {
+     "q": "Technology helps students. ___, they can watch lessons online.",
+     "o": [
+      "For example",
+      "Such as",
+      "However",
+      "Therefore"
+     ],
+     "w": "Đưa ví dụ bằng một câu → For example."
+    },
+    {
+     "q": "Some jobs are dangerous. ___, firefighters risk their lives every day.",
+     "o": [
+      "For instance",
+      "Such as",
+      "Moreover",
+      "Although"
+     ],
+     "w": "For instance = For example."
+    },
+    {
+     "q": "I love outdoor sports ___ hiking and cycling.",
+     "o": [
+      "such as",
+      "for example",
+      "for instance",
+      "like as"
+     ],
+     "w": "such as + danh từ / V-ing."
+    },
+    {
+     "q": "You can save money in small ways. ___, you can cook at home instead of eating out.",
+     "o": [
+      "For example",
+      "Such as",
+      "Instead",
+      "Otherwise"
+     ],
+     "w": "Ví dụ là một câu → For example."
+    },
+    {
+     "q": "Big cities ___ Hanoi and Ho Chi Minh City have serious traffic problems.",
+     "o": [
+      "such as",
+      "for example",
+      "for instance",
+      "including that"
+     ],
+     "w": "such as đứng ngay sau danh từ."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "l2-join",
+   "level": 2,
+   "name": "Nối câu cấp 2",
+   "tip": "Chú ý dấu câu: Moreover, / However, / Therefore, / For example, đứng đầu câu kèm dấu phẩy.",
+   "mcq": [],
+   "join": [
+    {
+     "a": "The restaurant is cheap.",
+     "b": "The food is delicious.",
+     "use": "moreover",
+     "en": [
+      "The restaurant is cheap. Moreover, the food is delicious.",
+      "The restaurant is cheap; moreover, the food is delicious."
+     ],
+     "w": "Moreover thêm ý, đầu câu + dấu phẩy."
+    },
+    {
+     "a": "The hotel was cheap.",
+     "b": "The room was very comfortable.",
+     "use": "however",
+     "en": [
+      "The hotel was cheap. However, the room was very comfortable.",
+      "The hotel was cheap; however, the room was very comfortable."
+     ],
+     "w": "Rẻ mà phòng lại rất thoải mái — trái mong đợi → However."
+    },
+    {
+     "a": "He was ill.",
+     "b": "He went to work.",
+     "use": "although",
+     "en": [
+      "Although he was ill, he went to work.",
+      "He went to work although he was ill."
+     ],
+     "w": "Although + mệnh đề, không thêm but."
+    },
+    {
+     "a": "It rained heavily.",
+     "b": "The match was cancelled.",
+     "use": "as a result",
+     "en": [
+      "It rained heavily. As a result, the match was cancelled.",
+      "It rained heavily; as a result, the match was cancelled."
+     ],
+     "w": "As a result chỉ kết quả."
+    },
+    {
+     "a": "Many animals are in danger.",
+     "b": "Tigers and elephants are hunted for money.",
+     "use": "for example",
+     "en": [
+      "Many animals are in danger. For example, tigers and elephants are hunted for money."
+     ],
+     "w": "For example + một câu ví dụ."
+    },
+    {
+     "a": "I enjoy water sports.",
+     "b": "I enjoy swimming and surfing.",
+     "use": "such as",
+     "en": [
+      "I enjoy water sports such as swimming and surfing."
+     ],
+     "w": "such as + danh từ / V-ing ngay sau \"water sports\"."
+    },
+    {
+     "a": "The bus was late.",
+     "b": "We missed the beginning of the film.",
+     "use": "therefore",
+     "en": [
+      "The bus was late. Therefore, we missed the beginning of the film.",
+      "The bus was late; therefore, we missed the beginning of the film."
+     ],
+     "w": "Therefore + kết quả."
+    },
+    {
+     "a": "She speaks Japanese.",
+     "b": "She speaks Korean.",
+     "use": "as well as",
+     "en": [
+      "She speaks Japanese as well as Korean.",
+      "She speaks Korean as well as Japanese."
+     ],
+     "w": "as well as + danh từ."
+    },
+    {
+     "a": "Living alone is lonely.",
+     "b": "It is expensive.",
+     "use": "in addition",
+     "en": [
+      "Living alone is lonely. In addition, it is expensive.",
+      "Living alone is lonely; in addition, it is expensive."
+     ],
+     "w": "In addition thêm một điểm trừ nữa."
+    },
+    {
+     "a": "The phone is old.",
+     "b": "It still works well.",
+     "use": "even though",
+     "en": [
+      "Even though the phone is old, it still works well.",
+      "The phone still works well even though it is old."
+     ],
+     "w": "Even though + mệnh đề."
+    }
+   ],
+   "fix": [
+    {
+     "wrong": "However the weather was bad, we went out.",
+     "en": [
+      "The weather was bad. However, we went out.",
+      "Although the weather was bad, we went out."
+     ],
+     "w": "However không nối hai mệnh đề trong một câu như although; dùng Although, hoặc tách câu."
+    },
+    {
+     "wrong": "Although she was busy, but she helped me.",
+     "en": [
+      "Although she was busy, she helped me.",
+      "She was busy, but she helped me."
+     ],
+     "w": "Although và but không đi cùng nhau."
+    },
+    {
+     "wrong": "I like many sports, such as, football and tennis.",
+     "en": [
+      "I like many sports, such as football and tennis."
+     ],
+     "w": "Không đặt dấu phẩy ngay sau such as."
+    },
+    {
+     "wrong": "Such as, many students work part-time.",
+     "en": [
+      "For example, many students work part-time."
+     ],
+     "w": "Đầu câu đưa ví dụ dùng For example, không dùng Such as."
+    },
+    {
+     "wrong": "It was late, therefore we took a taxi.",
+     "en": [
+      "It was late, so we took a taxi.",
+      "It was late. Therefore, we took a taxi.",
+      "It was late; therefore, we took a taxi."
+     ],
+     "w": "Therefore không nối hai mệnh đề bằng dấu phẩy: dùng so, hoặc tách câu / dấu chấm phẩy."
+    },
+    {
+     "wrong": "Moreover the price is high.",
+     "en": [
+      "Moreover, the price is high."
+     ],
+     "w": "Sau Moreover đầu câu cần dấu phẩy."
+    },
+    {
+     "wrong": "In addition to, the hotel has a pool.",
+     "en": [
+      "In addition, the hotel has a pool.",
+      "In addition to a gym, the hotel has a pool."
+     ],
+     "w": "In addition, (đầu câu) khác in addition to + danh từ."
+    },
+    {
+     "wrong": "He is clever, however he is lazy.",
+     "en": [
+      "He is clever. However, he is lazy.",
+      "He is clever, but he is lazy.",
+      "He is clever; however, he is lazy."
+     ],
+     "w": "However không nối hai mệnh đề bằng dấu phẩy: dùng but, hoặc tách câu."
+    }
+   ]
+  },
+  {
+   "id": "despite",
+   "level": 3,
+   "name": "despite · in spite of · although",
+   "tip": "despite / in spite of + danh từ / V-ing / the fact that; although + mệnh đề (S + V).",
+   "mcq": [
+    {
+     "q": "___ the rain, we went for a walk.",
+     "o": [
+      "Despite",
+      "Although",
+      "However",
+      "Even though"
+     ],
+     "w": "\"the rain\" là danh từ → Despite."
+    },
+    {
+     "q": "___ it was raining, we went for a walk.",
+     "o": [
+      "Although",
+      "Despite",
+      "In spite of",
+      "However"
+     ],
+     "w": "\"it was raining\" là mệnh đề → Although."
+    },
+    {
+     "q": "In spite of ___ hard, he failed the exam.",
+     "o": [
+      "studying",
+      "he studied",
+      "study",
+      "studied"
+     ],
+     "w": "in spite of + V-ing."
+    },
+    {
+     "q": "She went to work ___ feeling ill.",
+     "o": [
+      "despite",
+      "although",
+      "however",
+      "even though"
+     ],
+     "w": "Sau chỗ trống là V-ing → despite."
+    },
+    {
+     "q": "___ his age, my grandfather still runs every morning.",
+     "o": [
+      "Despite",
+      "Although",
+      "Even though",
+      "However"
+     ],
+     "w": "\"his age\" là cụm danh từ → Despite."
+    },
+    {
+     "q": "We enjoyed the holiday ___ the hotel was not very good.",
+     "o": [
+      "although",
+      "despite",
+      "in spite of",
+      "however"
+     ],
+     "w": "Mệnh đề theo sau → although."
+    },
+    {
+     "q": "Despite ___ he was tired, he kept working.",
+     "o": [
+      "the fact that",
+      "that",
+      "of",
+      "being"
+     ],
+     "w": "despite the fact that + mệnh đề."
+    },
+    {
+     "q": "The team won ___ playing with ten men.",
+     "o": [
+      "despite",
+      "although",
+      "even",
+      "however"
+     ],
+     "w": "despite + V-ing."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "cause",
+   "level": 3,
+   "name": "because of · due to · because · since",
+   "tip": "because of / due to + danh từ / cụm danh từ; because / since + mệnh đề.",
+   "mcq": [
+    {
+     "q": "The flight was delayed ___ the storm.",
+     "o": [
+      "because of",
+      "because",
+      "so",
+      "although"
+     ],
+     "w": "\"the storm\" là danh từ → because of."
+    },
+    {
+     "q": "The flight was delayed ___ there was a storm.",
+     "o": [
+      "because",
+      "because of",
+      "due to",
+      "despite"
+     ],
+     "w": "Mệnh đề → because."
+    },
+    {
+     "q": "Many people get sick ___ air pollution.",
+     "o": [
+      "due to",
+      "because",
+      "since",
+      "so"
+     ],
+     "w": "due to + danh từ."
+    },
+    {
+     "q": "___ it was a public holiday, the banks were closed.",
+     "o": [
+      "Since",
+      "Because of",
+      "Due to",
+      "Despite"
+     ],
+     "w": "Since (= because) + mệnh đề, hay đứng đầu câu."
+    },
+    {
+     "q": "He couldn't sleep ___ the noise from the street.",
+     "o": [
+      "because of",
+      "because",
+      "since",
+      "as a result"
+     ],
+     "w": "+ cụm danh từ → because of."
+    },
+    {
+     "q": "The match was cancelled ___ heavy rain.",
+     "o": [
+      "due to",
+      "because",
+      "since",
+      "so that"
+     ],
+     "w": "+ danh từ → due to."
+    },
+    {
+     "q": "___ the high price, few people bought the new phone.",
+     "o": [
+      "Because of",
+      "Because",
+      "Since",
+      "Although"
+     ],
+     "w": "+ cụm danh từ → Because of."
+    },
+    {
+     "q": "She stayed at home ___ she had a headache.",
+     "o": [
+      "as",
+      "because of",
+      "due to",
+      "despite"
+     ],
+     "w": "as (= because) + mệnh đề."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "compare-contrast",
+   "level": 3,
+   "name": "whereas · while · on the other hand · in contrast · similarly",
+   "tip": "whereas / while nối hai mệnh đề trái ngược trong một câu. On the other hand / In contrast đầu câu sau + dấu phẩy. Similarly = tương tự.",
+   "mcq": [
+    {
+     "q": "My sister loves cats, ___ I prefer dogs.",
+     "o": [
+      "whereas",
+      "moreover",
+      "therefore",
+      "similarly"
+     ],
+     "w": "So sánh hai người trái ngược trong một câu → whereas."
+    },
+    {
+     "q": "Living in the city is exciting. ___, it can be stressful.",
+     "o": [
+      "On the other hand",
+      "In addition",
+      "Similarly",
+      "For example"
+     ],
+     "w": "Mặt khác (trái chiều) → On the other hand."
+    },
+    {
+     "q": "In Vietnam, people drive on the right. ___, people in Japan drive on the left.",
+     "o": [
+      "In contrast",
+      "Similarly",
+      "Moreover",
+      "As a result"
+     ],
+     "w": "Đối lập hai nơi → In contrast."
+    },
+    {
+     "q": "Buses are cheap, ___ taxis are expensive.",
+     "o": [
+      "while",
+      "despite",
+      "moreover",
+      "so"
+     ],
+     "w": "while = whereas."
+    },
+    {
+     "q": "Running is good for the heart. ___, swimming makes the heart stronger.",
+     "o": [
+      "Similarly",
+      "However",
+      "In contrast",
+      "Instead"
+     ],
+     "w": "Hai ý giống nhau → Similarly."
+    },
+    {
+     "q": "Some students study best in the morning, ___ others work better at night.",
+     "o": [
+      "whereas",
+      "so",
+      "moreover",
+      "because of"
+     ],
+     "w": "Hai nhóm trái ngược → whereas."
+    },
+    {
+     "q": "The job pays well. ___, the hours are very long.",
+     "o": [
+      "On the other hand",
+      "Similarly",
+      "For instance",
+      "As a result"
+     ],
+     "w": "Điểm cộng rồi điểm trừ → On the other hand."
+    },
+    {
+     "q": "Men in my family are tall. ___, the women are quite short.",
+     "o": [
+      "In contrast",
+      "Likewise",
+      "Therefore",
+      "Besides"
+     ],
+     "w": "Đối lập → In contrast."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "instead",
+   "level": 3,
+   "name": "instead · instead of · rather than",
+   "tip": "instead of / rather than + danh từ / V-ing (thay vì). Instead đứng cuối câu hoặc đầu câu + dấu phẩy (thay vào đó).",
+   "mcq": [
+    {
+     "q": "Let's walk ___ taking a taxi.",
+     "o": [
+      "instead of",
+      "instead",
+      "otherwise",
+      "despite"
+     ],
+     "w": "+ V-ing → instead of."
+    },
+    {
+     "q": "I didn't go to the party. I stayed at home ___.",
+     "o": [
+      "instead",
+      "instead of",
+      "rather",
+      "otherwise"
+     ],
+     "w": "Cuối câu, không có danh từ theo sau → instead."
+    },
+    {
+     "q": "She drinks tea ___ coffee.",
+     "o": [
+      "instead of",
+      "instead",
+      "otherwise",
+      "unless"
+     ],
+     "w": "+ danh từ → instead of."
+    },
+    {
+     "q": "He decided to study abroad ___ working for his father.",
+     "o": [
+      "rather than",
+      "instead",
+      "otherwise",
+      "whereas"
+     ],
+     "w": "rather than + V-ing / danh từ."
+    },
+    {
+     "q": "We couldn't go to the beach. ___, we visited a museum.",
+     "o": [
+      "Instead",
+      "Instead of",
+      "Otherwise",
+      "Unless"
+     ],
+     "w": "Đầu câu + dấu phẩy, không có danh từ theo sau → Instead."
+    },
+    {
+     "q": "You should use the stairs ___ the lift.",
+     "o": [
+      "instead of",
+      "instead",
+      "otherwise",
+      "rather"
+     ],
+     "w": "+ danh từ → instead of."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "condition",
+   "level": 3,
+   "name": "unless · otherwise · as long as · in case",
+   "tip": "unless = if … not; otherwise = nếu không thì (đầu câu sau / sau dấu chấm phẩy); as long as = miễn là; in case = phòng khi.",
+   "mcq": [
+    {
+     "q": "You will fail the exam ___ you study harder.",
+     "o": [
+      "unless",
+      "if",
+      "otherwise",
+      "in case"
+     ],
+     "w": "\"trừ khi\" = if … not → unless."
+    },
+    {
+     "q": "Hurry up. ___, we will miss the train.",
+     "o": [
+      "Otherwise",
+      "Unless",
+      "In case",
+      "As long as"
+     ],
+     "w": "\"Nếu không thì\" → Otherwise."
+    },
+    {
+     "q": "You can borrow my bike ___ you bring it back tomorrow.",
+     "o": [
+      "as long as",
+      "unless",
+      "otherwise",
+      "in case"
+     ],
+     "w": "\"miễn là\" → as long as."
+    },
+    {
+     "q": "Take an umbrella ___ it rains.",
+     "o": [
+      "in case",
+      "unless",
+      "otherwise",
+      "as long as"
+     ],
+     "w": "\"phòng khi\" → in case."
+    },
+    {
+     "q": "I won't go ___ you come with me.",
+     "o": [
+      "unless",
+      "if",
+      "as long as",
+      "otherwise"
+     ],
+     "w": "Không đi trừ khi bạn đi cùng → unless."
+    },
+    {
+     "q": "Save your work every ten minutes; ___, you may lose it.",
+     "o": [
+      "otherwise",
+      "unless",
+      "in case",
+      "as long as"
+     ],
+     "w": "otherwise sau dấu chấm phẩy."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "l3-join",
+   "level": 3,
+   "name": "Nối câu cấp 3",
+   "tip": "Chọn đúng dạng: danh từ / V-ing (despite, because of, instead of) hay mệnh đề (although, because).",
+   "mcq": [],
+   "join": [
+    {
+     "a": "It was very cold.",
+     "b": "We went swimming.",
+     "use": "despite",
+     "en": [
+      "Despite the cold, we went swimming.",
+      "We went swimming despite the cold.",
+      "Despite the fact that it was very cold, we went swimming.",
+      "We went swimming despite the cold weather."
+     ],
+     "w": "despite + danh từ (the cold) hoặc the fact that + mệnh đề."
+    },
+    {
+     "a": "The train was late.",
+     "b": "There was a technical problem.",
+     "use": "because of",
+     "en": [
+      "The train was late because of a technical problem."
+     ],
+     "w": "because of + cụm danh từ."
+    },
+    {
+     "a": "I watched a film.",
+     "b": "I did not study.",
+     "use": "instead of",
+     "en": [
+      "I watched a film instead of studying."
+     ],
+     "w": "instead of + V-ing."
+    },
+    {
+     "a": "My father likes classical music.",
+     "b": "My mother likes pop music.",
+     "use": "whereas",
+     "en": [
+      "My father likes classical music, whereas my mother likes pop music.",
+      "My father likes classical music whereas my mother likes pop music."
+     ],
+     "w": "whereas nối hai ý trái ngược."
+    },
+    {
+     "a": "You won't improve.",
+     "b": "You practise every day.",
+     "use": "unless",
+     "en": [
+      "You won't improve unless you practise every day.",
+      "You won't improve unless you practice every day."
+     ],
+     "w": "unless = if … not."
+    },
+    {
+     "a": "He has a lot of money.",
+     "b": "He lives in a small flat.",
+     "use": "in spite of",
+     "en": [
+      "In spite of having a lot of money, he lives in a small flat.",
+      "He lives in a small flat in spite of having a lot of money.",
+      "In spite of his money, he lives in a small flat."
+     ],
+     "w": "in spite of + V-ing / danh từ."
+    },
+    {
+     "a": "The roads were icy.",
+     "b": "Many accidents happened.",
+     "use": "due to",
+     "en": [
+      "Many accidents happened due to the icy roads.",
+      "Due to the icy roads, many accidents happened."
+     ],
+     "w": "due to + cụm danh từ."
+    },
+    {
+     "a": "Write your password down.",
+     "b": "You might forget it.",
+     "use": "in case",
+     "en": [
+      "Write your password down in case you forget it."
+     ],
+     "w": "in case + hiện tại đơn."
+    },
+    {
+     "a": "Leave now.",
+     "b": "You will be late.",
+     "use": "otherwise",
+     "en": [
+      "Leave now. Otherwise, you will be late.",
+      "Leave now; otherwise, you will be late.",
+      "Leave now, otherwise you will be late."
+     ],
+     "w": "Otherwise = nếu không thì."
+    },
+    {
+     "a": "Cities offer more jobs.",
+     "b": "The countryside offers a quieter life.",
+     "use": "on the other hand",
+     "en": [
+      "Cities offer more jobs. On the other hand, the countryside offers a quieter life.",
+      "Cities offer more jobs; on the other hand, the countryside offers a quieter life."
+     ],
+     "w": "On the other hand đầu câu sau."
+    },
+    {
+     "a": "You can use my laptop.",
+     "b": "You are careful with it.",
+     "use": "as long as",
+     "en": [
+      "You can use my laptop as long as you are careful with it."
+     ],
+     "w": "as long as = miễn là."
+    },
+    {
+     "a": "We took the stairs.",
+     "b": "We did not wait for the lift.",
+     "use": "rather than",
+     "en": [
+      "We took the stairs rather than wait for the lift.",
+      "We took the stairs rather than waiting for the lift."
+     ],
+     "w": "rather than + V nguyên mẫu / V-ing."
+    }
+   ],
+   "fix": [
+    {
+     "wrong": "Despite it was raining, we played football.",
+     "en": [
+      "Although it was raining, we played football.",
+      "Despite the rain, we played football.",
+      "Despite the fact that it was raining, we played football."
+     ],
+     "w": "despite không đi với mệnh đề: dùng although hoặc despite + danh từ."
+    },
+    {
+     "wrong": "Although the bad weather, the plane took off.",
+     "en": [
+      "Despite the bad weather, the plane took off.",
+      "Although the weather was bad, the plane took off."
+     ],
+     "w": "although cần mệnh đề; với danh từ dùng despite."
+    },
+    {
+     "wrong": "He was late because of he missed the bus.",
+     "en": [
+      "He was late because he missed the bus.",
+      "He was late because of missing the bus."
+     ],
+     "w": "because + mệnh đề; because of + danh từ / V-ing."
+    },
+    {
+     "wrong": "The game was cancelled because the rain.",
+     "en": [
+      "The game was cancelled because of the rain.",
+      "The game was cancelled due to the rain.",
+      "The game was cancelled because it rained."
+     ],
+     "w": "Trước danh từ cần because of / due to."
+    },
+    {
+     "wrong": "I will stay at home instead go out.",
+     "en": [
+      "I will stay at home instead of going out.",
+      "I will stay at home rather than go out."
+     ],
+     "w": "instead of + V-ing."
+    },
+    {
+     "wrong": "Unless you don't hurry, you will be late.",
+     "en": [
+      "Unless you hurry, you will be late.",
+      "If you don't hurry, you will be late."
+     ],
+     "w": "unless đã mang nghĩa phủ định, không thêm don't."
+    },
+    {
+     "wrong": "In spite of he was tired, he finished the race.",
+     "en": [
+      "In spite of being tired, he finished the race.",
+      "Although he was tired, he finished the race.",
+      "In spite of the fact that he was tired, he finished the race."
+     ],
+     "w": "in spite of + V-ing / danh từ, không + mệnh đề."
+    },
+    {
+     "wrong": "My brother is shy, whereas my sister is shy too.",
+     "en": [
+      "My brother is shy, and my sister is shy too.",
+      "My brother is shy. Similarly, my sister is shy.",
+      "My brother is shy, whereas my sister is outgoing."
+     ],
+     "w": "whereas chỉ dùng cho hai ý trái ngược."
+    },
+    {
+     "wrong": "Bring a jacket in case it will be cold.",
+     "en": [
+      "Bring a jacket in case it is cold.",
+      "Bring a jacket in case it gets cold."
+     ],
+     "w": "Sau in case dùng hiện tại đơn cho tương lai."
+    },
+    {
+     "wrong": "Instead going by car, we cycled.",
+     "en": [
+      "Instead of going by car, we cycled."
+     ],
+     "w": "instead of + V-ing."
+    }
+   ]
+  },
+  {
+   "id": "structure",
+   "level": 4,
+   "name": "firstly · secondly · finally · in conclusion · to sum up",
+   "tip": "Sắp xếp bài viết: Firstly / Secondly / Finally mở các ý chính; In conclusion / To sum up mở đoạn kết. Không dùng \"At last\" để liệt kê ý cuối (at last = cuối cùng thì, sau khi chờ đợi).",
+   "mcq": [
+    {
+     "q": "___, working from home saves time because there is no need to commute.",
+     "o": [
+      "Firstly",
+      "In conclusion",
+      "Instead",
+      "At last"
+     ],
+     "w": "Mở ý thứ nhất → Firstly."
+    },
+    {
+     "q": "___, people who work from home can spend more time with their families.",
+     "o": [
+      "Secondly",
+      "Firstly",
+      "In contrast",
+      "At last"
+     ],
+     "w": "Ý thứ hai → Secondly."
+    },
+    {
+     "q": "___, I believe that the advantages of online learning outweigh the disadvantages.",
+     "o": [
+      "In conclusion",
+      "Firstly",
+      "For example",
+      "Moreover"
+     ],
+     "w": "Đoạn kết → In conclusion."
+    },
+    {
+     "q": "The bus was two hours late. When it ___ arrived, everyone cheered.",
+     "o": [
+      "finally",
+      "in conclusion",
+      "lastly",
+      "to sum up"
+     ],
+     "w": "\"Cuối cùng thì (sau khi chờ)\" → finally; lastly / in conclusion dùng để liệt kê / kết bài."
+    },
+    {
+     "q": "___, both governments and individuals have a role to play in protecting the environment.",
+     "o": [
+      "To sum up",
+      "For instance",
+      "Furthermore",
+      "Otherwise"
+     ],
+     "w": "Tóm lại → To sum up."
+    },
+    {
+     "q": "___, and most importantly, exercise improves mental health.",
+     "o": [
+      "Finally",
+      "At last",
+      "In conclusion",
+      "For example"
+     ],
+     "w": "Ý cuối trong danh sách → Finally / Lastly."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "concession",
+   "level": 4,
+   "name": "nevertheless · nonetheless · even so · admittedly",
+   "tip": "Nevertheless / Nonetheless / Even so = tuy vậy (trang trọng hơn however), đầu câu + dấu phẩy. Admittedly = phải thừa nhận rằng (nhượng bộ trước khi phản bác).",
+   "mcq": [
+    {
+     "q": "Online courses are convenient. ___, they require a lot of self-discipline.",
+     "o": [
+      "Nevertheless",
+      "Therefore",
+      "Similarly",
+      "For example"
+     ],
+     "w": "Thừa nhận ưu điểm rồi nêu hạn chế → Nevertheless."
+    },
+    {
+     "q": "___, public transport is not always comfortable. However, it is much cheaper than driving.",
+     "o": [
+      "Admittedly",
+      "Therefore",
+      "Consequently",
+      "For instance"
+     ],
+     "w": "Nhượng bộ trước rồi phản bác bằng However → Admittedly."
+    },
+    {
+     "q": "The plan was risky. ___, the company decided to try it.",
+     "o": [
+      "Nonetheless",
+      "Consequently",
+      "Likewise",
+      "Namely"
+     ],
+     "w": "Nonetheless = Nevertheless."
+    },
+    {
+     "q": "The hotel was far from the centre. ___, we enjoyed our stay.",
+     "o": [
+      "Even so",
+      "As a result",
+      "In other words",
+      "Similarly"
+     ],
+     "w": "Even so = dù vậy."
+    },
+    {
+     "q": "Tourism brings money to local people. ___, it can damage the environment.",
+     "o": [
+      "Nevertheless",
+      "Moreover",
+      "Likewise",
+      "Thus"
+     ],
+     "w": "Mặt trái → Nevertheless."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "consequence",
+   "level": 4,
+   "name": "consequently · thus · hence · this means that · this leads to",
+   "tip": "Chỉ kết quả, trang trọng. Consequently / Thus đầu câu + dấu phẩy; This means that + mệnh đề; This leads to + danh từ.",
+   "mcq": [
+    {
+     "q": "Many young people move to cities. ___, rural areas are losing their workforce.",
+     "o": [
+      "Consequently",
+      "Nevertheless",
+      "Similarly",
+      "In contrast"
+     ],
+     "w": "Kết quả → Consequently."
+    },
+    {
+     "q": "Children spend hours on screens. ___ they get less physical exercise.",
+     "o": [
+      "This means that",
+      "This leads to",
+      "Despite this",
+      "For instance"
+     ],
+     "w": "+ mệnh đề → This means that."
+    },
+    {
+     "q": "Car use has increased sharply. This ___ more air pollution in big cities.",
+     "o": [
+      "has led to",
+      "means that",
+      "consequently",
+      "thus"
+     ],
+     "w": "lead to + danh từ."
+    },
+    {
+     "q": "The new law reduces plastic waste and, ___, protects marine life.",
+     "o": [
+      "thus",
+      "despite",
+      "whereas",
+      "likewise"
+     ],
+     "w": "thus = vì vậy, có thể đứng giữa câu."
+    },
+    {
+     "q": "Fewer people are having children. ___, the population is ageing quickly.",
+     "o": [
+      "As a consequence",
+      "Instead",
+      "In other words",
+      "Likewise"
+     ],
+     "w": "As a consequence = Consequently."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "clarify",
+   "level": 4,
+   "name": "in other words · that is · namely · in particular · especially",
+   "tip": "In other words / That is giải thích lại cho rõ; namely = cụ thể là (nêu tên); in particular / especially = đặc biệt là.",
+   "mcq": [
+    {
+     "q": "Many teenagers are addicted to their phones. ___, they cannot stop using them even when they want to.",
+     "o": [
+      "In other words",
+      "For instance",
+      "Nevertheless",
+      "Similarly"
+     ],
+     "w": "Nói lại cho rõ → In other words."
+    },
+    {
+     "q": "Two subjects are compulsory, ___ maths and literature.",
+     "o": [
+      "namely",
+      "especially",
+      "in other words",
+      "for instance"
+     ],
+     "w": "Nêu đúng tên hai môn đó → namely."
+    },
+    {
+     "q": "Air pollution harms everyone, ___ young children and old people.",
+     "o": [
+      "especially",
+      "namely",
+      "in other words",
+      "thus"
+     ],
+     "w": "Đặc biệt là nhóm nào → especially."
+    },
+    {
+     "q": "Some countries, ___ Finland, have excellent school systems.",
+     "o": [
+      "in particular",
+      "in other words",
+      "namely that",
+      "consequently"
+     ],
+     "w": "in particular = đặc biệt là (nêu nổi bật)."
+    },
+    {
+     "q": "The company wants to \"go green\" — ___, it wants to reduce its impact on the environment.",
+     "o": [
+      "that is",
+      "for instance",
+      "nevertheless",
+      "similarly"
+     ],
+     "w": "that is = nghĩa là."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "add-strong",
+   "level": 4,
+   "name": "not only … but also · as well as · apart from · likewise",
+   "tip": "Not only … but also nối hai ý (ý sau mạnh hơn); apart from + danh từ / V-ing = ngoài … ra; Likewise = Similarly.",
+   "mcq": [
+    {
+     "q": "Exercise is not only good for the body ___ for the mind.",
+     "o": [
+      "but also",
+      "and also",
+      "as well",
+      "moreover"
+     ],
+     "w": "not only … but also."
+    },
+    {
+     "q": "___ being cheap, the bus is also fast.",
+     "o": [
+      "Apart from",
+      "Moreover",
+      "Furthermore",
+      "Not only"
+     ],
+     "w": "+ V-ing → Apart from."
+    },
+    {
+     "q": "Students need to manage their time well. ___, workers need to plan their day carefully.",
+     "o": [
+      "Likewise",
+      "Nevertheless",
+      "Instead",
+      "Otherwise"
+     ],
+     "w": "Ý tương tự → Likewise."
+    },
+    {
+     "q": "Not only ___ the internet faster, but it is also cheaper.",
+     "o": [
+      "is",
+      "it is",
+      "does",
+      "it"
+     ],
+     "w": "Not only đứng đầu câu → đảo ngữ: Not only is the internet…"
+    },
+    {
+     "q": "The project will create jobs ___ improving local roads.",
+     "o": [
+      "as well as",
+      "not only",
+      "likewise",
+      "moreover"
+     ],
+     "w": "as well as + V-ing nối trong câu."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "purpose",
+   "level": 4,
+   "name": "in order to · so as to · so that",
+   "tip": "in order to / so as to + V nguyên mẫu (để); so that + mệnh đề (thường có can / could / will). Phủ định: in order not to / so as not to.",
+   "mcq": [
+    {
+     "q": "Many students work part-time ___ pay for their studies.",
+     "o": [
+      "in order to",
+      "so that",
+      "because of",
+      "in order that"
+     ],
+     "w": "+ V nguyên mẫu → in order to."
+    },
+    {
+     "q": "She saved money ___ she could travel to Japan.",
+     "o": [
+      "so that",
+      "in order to",
+      "so as to",
+      "because of"
+     ],
+     "w": "+ mệnh đề có could → so that."
+    },
+    {
+     "q": "We left early ___ miss the train.",
+     "o": [
+      "so as not to",
+      "so that not",
+      "in order to not",
+      "not to so"
+     ],
+     "w": "Phủ định của so as to → so as not to."
+    },
+    {
+     "q": "The government built more bike lanes ___ people would drive less.",
+     "o": [
+      "so that",
+      "in order to",
+      "so as",
+      "due to"
+     ],
+     "w": "+ mệnh đề → so that."
+    },
+    {
+     "q": "You should write a plan first ___ organise your ideas.",
+     "o": [
+      "in order to",
+      "so that",
+      "because",
+      "in case"
+     ],
+     "w": "+ V nguyên mẫu → in order to."
+    }
+   ],
+   "join": [],
+   "fix": []
+  },
+  {
+   "id": "l4-join",
+   "level": 4,
+   "name": "Nối câu cấp 4 (văn viết)",
+   "tip": "Câu học thuật: từ nối đầu câu + dấu phẩy, hoặc dấu chấm phẩy trước từ nối.",
+   "mcq": [],
+   "join": [
+    {
+     "a": "Online shopping is convenient.",
+     "b": "Customers cannot touch the products.",
+     "use": "nevertheless",
+     "en": [
+      "Online shopping is convenient. Nevertheless, customers cannot touch the products.",
+      "Online shopping is convenient; nevertheless, customers cannot touch the products."
+     ],
+     "w": "Nevertheless = tuy vậy (trang trọng)."
+    },
+    {
+     "a": "Fewer people use cars.",
+     "b": "The air in the city is cleaner.",
+     "use": "consequently",
+     "en": [
+      "Fewer people use cars. Consequently, the air in the city is cleaner.",
+      "Fewer people use cars; consequently, the air in the city is cleaner."
+     ],
+     "w": "Consequently + kết quả."
+    },
+    {
+     "a": "Reading improves vocabulary.",
+     "b": "Reading reduces stress.",
+     "use": "not only … but also",
+     "en": [
+      "Reading not only improves vocabulary but also reduces stress.",
+      "Not only does reading improve vocabulary, but it also reduces stress."
+     ],
+     "w": "not only + V … but also + V."
+    },
+    {
+     "a": "Many people learn English.",
+     "b": "They want to get better jobs.",
+     "use": "in order to",
+     "en": [
+      "Many people learn English in order to get better jobs."
+     ],
+     "w": "in order to + V nguyên mẫu (bỏ \"they want\")."
+    },
+    {
+     "a": "The government lowered bus fares.",
+     "b": "More people would use public transport.",
+     "use": "so that",
+     "en": [
+      "The government lowered bus fares so that more people would use public transport."
+     ],
+     "w": "so that + mệnh đề."
+    },
+    {
+     "a": "Some jobs are disappearing.",
+     "b": "Factory and office jobs are disappearing.",
+     "use": "in particular",
+     "en": [
+      "Some jobs are disappearing, in particular factory and office jobs.",
+      "Some jobs are disappearing, factory and office jobs in particular."
+     ],
+     "w": "in particular = đặc biệt là."
+    },
+    {
+     "a": "Many students feel stressed.",
+     "b": "They feel worried and cannot sleep.",
+     "use": "in other words",
+     "en": [
+      "Many students feel stressed. In other words, they feel worried and cannot sleep."
+     ],
+     "w": "In other words giải thích lại."
+    },
+    {
+     "a": "Tourism creates jobs.",
+     "b": "Tourism brings money to local businesses.",
+     "use": "apart from",
+     "en": [
+      "Apart from creating jobs, tourism brings money to local businesses."
+     ],
+     "w": "Apart from + V-ing."
+    },
+    {
+     "a": "Admittedly, technology can be distracting.",
+     "b": "It is a useful tool for learning.",
+     "use": "however",
+     "en": [
+      "Admittedly, technology can be distracting. However, it is a useful tool for learning.",
+      "Admittedly, technology can be distracting; however, it is a useful tool for learning."
+     ],
+     "w": "Admittedly … However: thừa nhận rồi phản bác."
+    }
+   ],
+   "fix": [
+    {
+     "wrong": "In conclusion, firstly, there are many benefits.",
+     "en": [
+      "Firstly, there are many benefits.",
+      "In conclusion, there are many benefits."
+     ],
+     "w": "Không dùng In conclusion và Firstly cùng lúc: một cái mở ý đầu, một cái mở đoạn kết."
+    },
+    {
+     "wrong": "At last, I will discuss the disadvantages.",
+     "en": [
+      "Finally, I will discuss the disadvantages.",
+      "Lastly, I will discuss the disadvantages."
+     ],
+     "w": "Liệt kê ý cuối dùng Finally / Lastly; At last = cuối cùng thì (sau khi chờ đợi)."
+    },
+    {
+     "wrong": "Not only the bus is cheap but also fast.",
+     "en": [
+      "The bus is not only cheap but also fast.",
+      "Not only is the bus cheap, but it is also fast."
+     ],
+     "w": "not only … but also nối hai thành phần cùng loại (cheap / fast); đầu câu thì phải đảo ngữ."
+    },
+    {
+     "wrong": "People work hard in order to they can buy a house.",
+     "en": [
+      "People work hard in order to buy a house.",
+      "People work hard so that they can buy a house."
+     ],
+     "w": "in order to + V; so that + mệnh đề."
+    },
+    {
+     "wrong": "Nevertheless the cost, many families choose private schools.",
+     "en": [
+      "Despite the cost, many families choose private schools.",
+      "The cost is high. Nevertheless, many families choose private schools."
+     ],
+     "w": "Nevertheless không đi với danh từ; với danh từ dùng Despite."
+    },
+    {
+     "wrong": "Many factories closed, consequently many people lost their jobs.",
+     "en": [
+      "Many factories closed; consequently, many people lost their jobs.",
+      "Many factories closed. Consequently, many people lost their jobs.",
+      "Many factories closed, so many people lost their jobs."
+     ],
+     "w": "Consequently không nối hai mệnh đề bằng dấu phẩy."
+    },
+    {
+     "wrong": "In the other words, the plan failed.",
+     "en": [
+      "In other words, the plan failed."
+     ],
+     "w": "Cụm cố định: In other words (không có \"the\")."
+    },
+    {
+     "wrong": "On the other hands, cities are crowded.",
+     "en": [
+      "On the other hand, cities are crowded."
+     ],
+     "w": "Cụm cố định: On the other hand (hand số ít)."
+    },
+    {
+     "wrong": "This leads to people drive less.",
+     "en": [
+      "This leads to people driving less.",
+      "This means that people drive less."
+     ],
+     "w": "lead to + danh từ / V-ing; This means that + mệnh đề."
+    },
+    {
+     "wrong": "Especially, children need more sleep than adults.",
+     "en": [
+      "Children, in particular, need more sleep than adults.",
+      "Children especially need more sleep than adults.",
+      "In particular, children need more sleep than adults."
+     ],
+     "w": "Especially thường không đứng đầu câu với dấu phẩy; dùng In particular, hoặc đặt especially sau chủ ngữ."
+    }
+   ]
+  }
+ ]
+}
