@@ -122,6 +122,32 @@ export function applyResults(log: ErrorLog, date: string, results: { key: string
   return next;
 }
 
+/**
+ * The same weak-point log is shared with the daily multiple choice (lib/practice-daily): a grammar question answered
+ * on its first try counts towards the grammar points of its topic, once per day, like a translated line.
+ */
+export function applyTagResult(log: ErrorLog, date: string, source: string, tags: string[], ok: boolean): ErrorLog {
+  const tag = `${date}|${source}`;
+  if (log.logged.includes(tag) || !tags.length) return log;
+  const next: ErrorLog = { tags: { ...log.tags }, items: log.items, logged: [...log.logged, tag].slice(-3000) };
+  for (const t of tags) {
+    if (ok) {
+      const w = (next.tags[t] ?? 0) - 0.34;
+      if (w > 0.01) next.tags[t] = Math.round(w * 100) / 100;
+      else delete next.tags[t];
+    } else next.tags[t] = (next.tags[t] ?? 0) + 1;
+  }
+  return next;
+}
+
+export function recordTagResult(date: string, source: string, tags: string[], ok: boolean) {
+  try {
+    localStorage.setItem(ERR_KEY, JSON.stringify(applyTagResult(readErrors(), date, source, tags, ok)));
+  } catch {
+    /* private mode */
+  }
+}
+
 export function recordResults(date: string, results: { key: string; ok: boolean }[]) {
   try {
     localStorage.setItem(ERR_KEY, JSON.stringify(applyResults(readErrors(), date, results)));

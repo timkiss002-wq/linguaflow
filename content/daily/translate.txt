@@ -28,6 +28,7 @@
 @tag cond | Câu điều kiện | Loại 1 (có thể xảy ra): If + hiện tại, will + V. Loại 2 (giả định): If + quá khứ, would / could + V; "If I were you, I would…".
 @tag rel | Mệnh đề quan hệ | who (người), which (vật), that (cả hai), where (nơi), whose (của người mà) — đặt ngay sau danh từ được bổ nghĩa.
 @tag passive | Câu bị động | be + V3 (by …): "is held", "was built", "has been banned", "should be applied". Dùng khi người làm không quan trọng.
+@tag reported | Câu tường thuật | Kể lại lời người khác: said (that) / told sb (that) + lùi một thì (is → was, has done → had done); hỏi: asked if / whether + S + V; yêu cầu: told / asked sb to V.
 @tag phrasal | Cụm động từ & cách nói tự nhiên | Học cả cụm, không dịch từng chữ: try on, break down, get used to, keep in touch, let sb know, give up, pick sb up.
 
 ############ CẤP 1 · hiện tại đơn, to be, there is/are, số nhiều ############
@@ -410,9 +411,9 @@ Tất nhiên, và chúng tôi sẽ tặng anh bữa sáng miễn phí vì sự b
 
 @dialogue d62 6 🗨️📅 | Sếp nói gì
 Lúc nãy sếp gọi cho bạn nói gì vậy? || What did the boss say when he called you earlier? // What did the boss say on the phone just now? // What did your boss say when she called you earlier? // What did the boss say when he called earlier? || past question
-Anh ấy nói rằng cuộc họp đã bị hoãn đến thứ Năm. || He said that the meeting had been postponed until Thursday. // He said the meeting had been put off until Thursday. // He said that the meeting was postponed until Thursday. // He said the meeting had been postponed to Thursday. || passive phrasal || put off = postpone · lùi thì khi tường thuật
-Anh ấy có hỏi bạn đã làm xong bài thuyết trình chưa? || Did he ask whether you had finished the presentation? // Did he ask if you had finished the presentation? // Did he ask if you'd finished your presentation? // Did he ask whether you had finished your presentation? || question pp || ask if / whether + S + V
-Có, và anh ấy bảo mình gửi bản nháp trước thứ Tư. || Yes, and he told me to send the draft before Wednesday. // Yes, and he asked me to send him the draft by Wednesday. // Yes, and he told me to send the draft by Wednesday. // Yes, he told me to send him the draft before Wednesday. || vpat prep
+Anh ấy nói rằng cuộc họp đã bị hoãn đến thứ Năm. || He said that the meeting had been postponed until Thursday. // He said the meeting had been put off until Thursday. // He said that the meeting was postponed until Thursday. // He said the meeting had been postponed to Thursday. || reported passive phrasal || put off = postpone · lùi thì khi tường thuật
+Anh ấy có hỏi bạn đã làm xong bài thuyết trình chưa? || Did he ask whether you had finished the presentation? // Did he ask if you had finished the presentation? // Did he ask if you'd finished your presentation? // Did he ask whether you had finished your presentation? || reported pp || ask if / whether + S + V
+Có, và anh ấy bảo mình gửi bản nháp trước thứ Tư. || Yes, and he told me to send the draft before Wednesday. // Yes, and he asked me to send him the draft by Wednesday. // Yes, and he told me to send the draft by Wednesday. // Yes, he told me to send him the draft before Wednesday. || reported vpat
 
 @dialogue d63 6 🙏🍦 | Rủ bạn đi chơi
 Đi với mình đi, chỉ một tiếng thôi mà. || Come with me, it's only for an hour. // Come on, come with me. It's just one hour. // Come with me. It will only take an hour. // Please come with me, it's only one hour. || phrasal
@@ -429,7 +430,7 @@ Lần sau mình sẽ báo cho bạn sớm hơn. || Next time I will let you know
 @dialogue d65 6 🔎📘 | Tìm việc làm thêm
 Mình đang tìm một công việc bán thời gian không ảnh hưởng đến việc học. || I'm looking for a part-time job that doesn't affect my studies. // I am looking for a part-time job which won't affect my studies. // I'm looking for a part-time job that won't affect my studies. // I am looking for a part-time job that does not affect my studies. || rel cont
 Bạn đã thử hỏi ở trung tâm hỗ trợ sinh viên chưa? || Have you tried asking at the student support centre? // Have you tried asking the student support center? // Have you tried asking at the student services office? // Have you tried the student support centre? || pp vpat
-Rồi, họ khuyên mình nên làm gia sư. || Yes, they advised me to become a tutor. // Yes, they suggested that I work as a tutor. // Yes, they advised me to work as a tutor. // Yes, they recommended that I become a tutor. || vpat || advise sb to V
+Rồi, họ khuyên mình nên làm gia sư. || Yes, they advised me to become a tutor. // Yes, they suggested that I work as a tutor. // Yes, they advised me to work as a tutor. // Yes, they recommended that I become a tutor. || reported vpat || advise sb to V
 Nghe hợp lý đấy, vì bạn giỏi toán mà. || That makes sense, since you're good at maths. // Sounds reasonable, because you are good at math. // That makes sense because you're good at maths. // That sounds sensible, since you're good at math. || phrasal conj prep
 
 @dialogue d66 6 👟↩️ | Trả lại giày
@@ -656,7 +657,7 @@ Nếu thành phố của chúng ta làm được như vậy, đường phố s�
 @story s26 6 📞🌙 | Cuộc gọi lúc nửa đêm
 Gần nửa đêm, điện thoại của tôi đột nhiên reo. || Close to midnight, my phone suddenly rang. // Near midnight, my phone suddenly rang. // At almost midnight, my phone suddenly rang. || past
 Đó là bạn cùng phòng cũ, người mà tôi đã không gặp suốt hai năm. || It was my old roommate, whom I hadn't seen for two years. // It was my former roommate, who I hadn't seen for two years. // It was my old roommate, who I had not seen for two years. || rel pp
-Cô ấy nói rằng cô ấy vừa bị lỡ chuyến tàu cuối cùng và không có chỗ ngủ. || She said she had just missed the last train and had nowhere to sleep. // She told me that she had just missed the last train and had no place to stay. // She said that she had just missed the last train and had nowhere to stay. || pp
+Cô ấy nói rằng cô ấy vừa bị lỡ chuyến tàu cuối cùng và không có chỗ ngủ. || She said she had just missed the last train and had nowhere to sleep. // She told me that she had just missed the last train and had no place to stay. // She said that she had just missed the last train and had nowhere to stay. || reported pp
 Dù đã rất buồn ngủ, tôi vẫn bắt taxi ra ga đón cô ấy. || Although I was very sleepy, I still took a taxi to the station to pick her up. // Even though I was really sleepy, I took a taxi to the station to pick her up. || conj phrasal || pick sb up
 Chúng tôi nói chuyện đến sáng như thể chưa từng xa nhau. || We talked until morning as if we had never been apart. // We talked until the morning as if we had never been apart. // We talked till morning as though we had never been apart. || conj pp
 
@@ -676,7 +677,7 @@ Ngay cả khi đã có điện thoại mới, tôi vẫn giữ thói quen ấy. 
 
 @story s29 6 🚆🇫🇷 | Người lạ trên tàu
 Trên chuyến tàu từ Huế ra Hà Nội, tôi ngồi cạnh một ông cụ người Pháp. || On the train from Hue to Hanoi, I sat next to an old French man. // On the train from Hue to Hanoi, I sat beside an elderly Frenchman. // On the train from Hue to Hanoi, I sat next to an elderly French man. || order prep article || old + French + man (tuổi trước quốc tịch)
-Ông kể rằng ông đã đến Việt Nam lần đầu vào năm hai mươi tuổi. || He told me that he had first come to Vietnam when he was twenty. // He said he first came to Vietnam at the age of twenty. // He told me he had come to Vietnam for the first time when he was twenty. || pp past
+Ông kể rằng ông đã đến Việt Nam lần đầu vào năm hai mươi tuổi. || He told me that he had first come to Vietnam when he was twenty. // He said he first came to Vietnam at the age of twenty. // He told me he had come to Vietnam for the first time when he was twenty. || reported pp
 Điều làm ông ngạc nhiên nhất là sự thay đổi của các thành phố. || What surprised him most was how much the cities had changed. // What surprised him the most was the change in the cities. // The thing that surprised him most was how the cities had changed. || rel compare
 Chúng tôi nói chuyện bằng tiếng Anh suốt sáu tiếng mà không thấy chán. || We talked in English for six hours without getting bored. // We spoke English for six hours and never got bored. // We chatted in English for six hours without feeling bored. || vpat prep
 Trước khi xuống tàu, ông đưa tôi địa chỉ email và bảo tôi hãy viết thư cho ông. || Before getting off the train, he gave me his email address and asked me to write to him. // Before he got off, he gave me his email address and told me to write to him. // Before getting off the train, he gave me his email address and told me to write to him. || vpat phrasal
