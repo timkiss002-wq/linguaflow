@@ -50,6 +50,7 @@ export type TaskKind =
   | 'translate-story'
   | 'grammar-weak'
   | 'linking'
+  | 'questions'
   | 'argue'
   | 'reading-skill'
   | 'reading-part'
@@ -587,6 +588,13 @@ function build(): Day[] {
         detail: 'Chọn từ nối đúng (however, moreover, despite, instead of, whereas…), nối hai câu bằng từ cho sẵn và sửa câu dùng sai. Câu sai quay lại các ngày sau. Mỗi bước cần đúng ngay lần đầu ≥ 50%.',
         minutes: 10,
         href: `/tu-noi/${date}`,
+        gated: true,
+      });
+      add('questions', {
+        title: 'Đặt câu hỏi · 5 câu',
+        detail: 'Đặt câu hỏi cho phần được tô màu (She works [at a bank] → Where does she work?) hoặc hỏi bằng tiếng Anh theo tình huống. Đi từ to be → do / does → các thì → câu hỏi gián tiếp. Cần đúng ngay lần đầu ≥ 50%; có nút "Luyện thêm 5 câu" nếu muốn làm nhiều hơn.',
+        minutes: 8,
+        href: `/dat-cau-hoi/${date}`,
         gated: true,
       });
       add('argue', {

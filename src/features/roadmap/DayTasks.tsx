@@ -7,6 +7,7 @@ import {
   MessagesSquare,
   BookText,
   Link2,
+  HelpCircle,
   Scale,
   Check,
   CheckCircle2,
@@ -62,6 +63,7 @@ const ICON: Record<TaskKind, LucideIcon> = {
   'translate-story': BookText,
   'grammar-weak': Repeat,
   linking: Link2,
+  questions: HelpCircle,
   argue: Scale,
   'reading-skill': BookOpen,
   'reading-part': BookOpen,
@@ -100,6 +102,7 @@ export const AREA: Record<TaskKind, string> = {
   'translate-story': 'Dịch · truyện ngắn',
   'grammar-weak': 'Ngữ pháp · ôn theo lỗi',
   linking: 'Writing · từ nối',
+  questions: 'Writing · đặt câu hỏi',
   argue: 'Writing · lập luận',
   'reading-skill': 'Reading',
   'reading-part': 'Reading',
@@ -121,15 +124,15 @@ function toneOf(kind: TaskKind): Tone {
   if (kind.startsWith('grammar')) return 'sky';
   if (kind.startsWith('vocab') || kind === 'wordform-week') return 'teal';
   if (kind.startsWith('reading')) return 'violet';
-  if (kind.startsWith('writing') || kind.startsWith('translate') || kind === 'linking' || kind === 'argue') return 'rose';
+  if (kind.startsWith('writing') || kind.startsWith('translate') || kind === 'linking' || kind === 'questions' || kind === 'argue') return 'rose';
   if (kind.startsWith('mock') || kind === 'placement' || kind === 'retest') return 'amber';
   return 'slate';
 }
 
 /** Tasks that only the exercise itself can tick (grammar ≥ 50 %, retest saved…). */
-const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story', 'grammar-weak', 'linking', 'argue'];
+const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story', 'grammar-weak', 'linking', 'questions', 'argue'];
 
-const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story', 'grammar-weak', 'linking', 'argue'];
+const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story', 'grammar-weak', 'linking', 'questions', 'argue'];
 
 /**
  * `nextId`: the one task to do next. When given, only that card gets the filled button and the other open tasks get

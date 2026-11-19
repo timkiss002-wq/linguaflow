@@ -49,6 +49,7 @@ const TranslateStoryPage = lazy(() => import('@/pages/TranslateStoryPage'));
 const GrammarReviewPage = lazy(() => import('@/pages/GrammarReviewPage'));
 const LinkingPage = lazy(() => import('@/pages/LinkingPage'));
 const ArguePage = lazy(() => import('@/pages/ArguePage'));
+const QuestionsPage = lazy(() => import('@/pages/QuestionsPage'));
 const TfngPage = lazy(() => import('@/pages/TfngPage'));
 const ComicChapterPage = lazy(() => import('@/pages/ComicChapterPage'));
 
@@ -103,6 +104,7 @@ export const router = createBrowserRouter([
           { path: '/on-tap-loi/:date', element: page(<GrammarReviewPage />) },
           { path: '/tu-noi/:date', element: page(<LinkingPage />) },
           { path: '/lap-luan/:date', element: page(<ArguePage />) },
+          { path: '/dat-cau-hoi/:date', element: page(<QuestionsPage />) },
           { path: '/truyen/:bookId/:chapterId', element: page(<ComicChapterPage />) },
           { path: '/grammar', element: page(<GrammarPage />) },
           { path: '/grammar/:topicId', element: page(<GrammarDrillPage />) },

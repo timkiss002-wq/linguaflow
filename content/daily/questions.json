@@ -1,0 +1,1454 @@
+{
+ "groups": [
+  {
+   "id": "be-wh",
+   "level": 1,
+   "tags": [
+    "be",
+    "question"
+   ],
+   "name": "Wh- + to be",
+   "tip": "Từ để hỏi + am / is / are + chủ ngữ? Đảo to be lên trước chủ ngữ: She is a nurse → What is she?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "My name is [Lan].",
+     "en": [
+      "What is your name?"
+     ],
+     "w": "Hỏi tên → What + is + your name. Đổi my → your khi hỏi lại người nói."
+    },
+    {
+     "k": "ask",
+     "p": "She is [a nurse].",
+     "en": [
+      "What is she?",
+      "What does she do?"
+     ],
+     "w": "Hỏi nghề nghiệp: What is she? hoặc What does she do?"
+    },
+    {
+     "k": "ask",
+     "p": "They are [in the library].",
+     "en": [
+      "Where are they?"
+     ],
+     "w": "Hỏi nơi chốn → Where; chủ ngữ số nhiều → are."
+    },
+    {
+     "k": "ask",
+     "p": "He is [twenty-two] years old.",
+     "en": [
+      "How old is he?"
+     ],
+     "w": "Hỏi tuổi → How old + is + he."
+    },
+    {
+     "k": "ask",
+     "p": "The meeting is [at 9 a.m.].",
+     "en": [
+      "What time is the meeting?",
+      "When is the meeting?"
+     ],
+     "w": "Giờ cụ thể → What time; When cũng đúng."
+    },
+    {
+     "k": "ask",
+     "p": "My favourite subject is [Maths].",
+     "en": [
+      "What is your favourite subject?"
+     ],
+     "w": "my → your; is đứng trước chủ ngữ dài \"your favourite subject\"."
+    },
+    {
+     "k": "ask",
+     "p": "I am [from Hai Phong].",
+     "en": [
+      "Where are you from?"
+     ],
+     "w": "Hỏi quê → Where + are + you + from? Giới từ from để ở cuối câu."
+    },
+    {
+     "k": "ask",
+     "p": "The weather is [cold and windy] today.",
+     "en": [
+      "What is the weather like today?",
+      "How is the weather today?"
+     ],
+     "w": "Hỏi thời tiết → What is … like? hoặc How is …?"
+    },
+    {
+     "k": "ask",
+     "p": "Her new phone is [black].",
+     "en": [
+      "What colour is her new phone?"
+     ],
+     "w": "Hỏi màu → What colour + is + danh từ."
+    },
+    {
+     "k": "ask",
+     "p": "[My brother] is in the kitchen.",
+     "en": [
+      "Who is in the kitchen?"
+     ],
+     "w": "Hỏi CHỦ NGỮ là người → Who + is …, không đảo."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn: Bạn có khỏe không?",
+     "en": [
+      "How are you?"
+     ],
+     "w": "Hỏi sức khỏe → How are you?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem cái túi này giá bao nhiêu.",
+     "en": [
+      "How much is this bag?",
+      "How much does this bag cost?"
+     ],
+     "w": "Hỏi giá → How much is …? hoặc How much does … cost?"
+    }
+   ]
+  },
+  {
+   "id": "be-yn",
+   "level": 1,
+   "tags": [
+    "be",
+    "question"
+   ],
+   "name": "Câu hỏi Yes / No với to be",
+   "tip": "Đưa am / is / are lên đầu câu: You are tired → Are you tired? Trả lời Yes, I am / No, I'm not.",
+   "items": [
+    {
+     "k": "ask",
+     "p": "[Yes], I am a student.",
+     "en": [
+      "Are you a student?"
+     ],
+     "w": "Trả lời \"Yes, I am\" → hỏi Are you …?"
+    },
+    {
+     "k": "ask",
+     "p": "[No], she isn't at home.",
+     "en": [
+      "Is she at home?"
+     ],
+     "w": "isn't → câu hỏi bắt đầu bằng Is."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], they are ready.",
+     "en": [
+      "Are they ready?"
+     ],
+     "w": "they → Are they …?"
+    },
+    {
+     "k": "ask",
+     "p": "[No], the shop isn't open on Sundays.",
+     "en": [
+      "Is the shop open on Sundays?"
+     ],
+     "w": "Chủ ngữ số ít \"the shop\" → Is."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], there is a bank near here.",
+     "en": [
+      "Is there a bank near here?"
+     ],
+     "w": "There is → Is there …?"
+    },
+    {
+     "k": "ask",
+     "p": "[No], there aren't any eggs in the fridge.",
+     "en": [
+      "Are there any eggs in the fridge?"
+     ],
+     "w": "There are → Are there any …? Câu hỏi dùng any."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], it is your book.",
+     "en": [
+      "Is it my book?"
+     ],
+     "w": "your (người trả lời nói) → my (người hỏi nói)."
+    },
+    {
+     "k": "ask",
+     "p": "[No], we aren't late.",
+     "en": [
+      "Are we late?"
+     ],
+     "w": "we → Are we …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn: Đây có phải là lần đầu bạn đến Hà Nội không?",
+     "en": [
+      "Is this your first time in Hanoi?",
+      "Is this your first visit to Hanoi?"
+     ],
+     "w": "Là / phải không → dùng to be: Is this …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem trong phòng có wifi không.",
+     "en": [
+      "Is there wifi in the room?",
+      "Is there wi-fi in the room?",
+      "Does the room have wifi?"
+     ],
+     "w": "\"Có … không\" (tồn tại) → Is there …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bố mẹ bạn ấy có ở nhà không.",
+     "en": [
+      "Are your parents at home?",
+      "Are your parents home?"
+     ],
+     "w": "Chủ ngữ số nhiều → Are."
+    }
+   ]
+  },
+  {
+   "id": "ps-wh",
+   "level": 2,
+   "tags": [
+    "sva",
+    "question"
+   ],
+   "name": "Wh- + do / does",
+   "tip": "Từ để hỏi + do / does + chủ ngữ + động từ NGUYÊN MẪU. He works → Where does he work? (works → work)",
+   "items": [
+    {
+     "k": "ask",
+     "p": "I live [in Ha Dong].",
+     "en": [
+      "Where do you live?"
+     ],
+     "w": "Động từ thường → mượn do; I → you."
+    },
+    {
+     "k": "ask",
+     "p": "She works [at a bank].",
+     "en": [
+      "Where does she work?"
+     ],
+     "w": "she → does; works → work (bỏ s)."
+    },
+    {
+     "k": "ask",
+     "p": "He gets up [at six o'clock].",
+     "en": [
+      "What time does he get up?",
+      "When does he get up?"
+     ],
+     "w": "does + get up (bỏ s ở gets)."
+    },
+    {
+     "k": "ask",
+     "p": "They go to school [by bus].",
+     "en": [
+      "How do they go to school?"
+     ],
+     "w": "Hỏi phương tiện → How."
+    },
+    {
+     "k": "ask",
+     "p": "My father drinks [coffee] every morning.",
+     "en": [
+      "What does your father drink every morning?"
+     ],
+     "w": "drinks → does … drink."
+    },
+    {
+     "k": "ask",
+     "p": "She studies English [because she wants to work abroad].",
+     "en": [
+      "Why does she study English?"
+     ],
+     "w": "studies → does … study (không giữ -ies)."
+    },
+    {
+     "k": "ask",
+     "p": "The film starts [at 8 p.m.].",
+     "en": [
+      "What time does the film start?",
+      "When does the film start?"
+     ],
+     "w": "starts → does … start."
+    },
+    {
+     "k": "ask",
+     "p": "We have lunch [in the canteen].",
+     "en": [
+      "Where do you have lunch?"
+     ],
+     "w": "we → you; have giữ nguyên."
+    },
+    {
+     "k": "ask",
+     "p": "My sister likes [K-pop].",
+     "en": [
+      "What kind of music does your sister like?",
+      "What does your sister like?"
+     ],
+     "w": "likes → does … like."
+    },
+    {
+     "k": "ask",
+     "p": "[Minh] teaches us Maths.",
+     "en": [
+      "Who teaches you Maths?"
+     ],
+     "w": "Hỏi CHỦ NGỮ → Who + teaches (giữ s, KHÔNG dùng does)."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn ấy thường làm gì vào cuối tuần.",
+     "en": [
+      "What do you usually do at the weekend?",
+      "What do you usually do at weekends?",
+      "What do you usually do on weekends?"
+     ],
+     "w": "usually đứng sau chủ ngữ, trước động từ chính."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem từ \"career\" nghĩa là gì.",
+     "en": [
+      "What does career mean?",
+      "What does the word career mean?"
+     ],
+     "w": "mean → What does … mean? (không dùng \"What is mean\")"
+    }
+   ]
+  },
+  {
+   "id": "ps-yn",
+   "level": 2,
+   "tags": [
+    "sva",
+    "question"
+   ],
+   "name": "Do / Does … ? và How often",
+   "tip": "Do / Does + chủ ngữ + V nguyên mẫu? Hỏi tần suất → How often do / does …?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "[Yes], I like spicy food.",
+     "en": [
+      "Do you like spicy food?"
+     ],
+     "w": "Yes, I do → Do you …?"
+    },
+    {
+     "k": "ask",
+     "p": "[No], he doesn't play football.",
+     "en": [
+      "Does he play football?"
+     ],
+     "w": "doesn't → Does he + play."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], my mother cooks every day.",
+     "en": [
+      "Does your mother cook every day?"
+     ],
+     "w": "cooks → Does … cook."
+    },
+    {
+     "k": "ask",
+     "p": "I go to the gym [three times a week].",
+     "en": [
+      "How often do you go to the gym?"
+     ],
+     "w": "Tần suất → How often."
+    },
+    {
+     "k": "ask",
+     "p": "She checks her email [every hour].",
+     "en": [
+      "How often does she check her email?"
+     ],
+     "w": "checks → does … check."
+    },
+    {
+     "k": "ask",
+     "p": "[No], they don't live near the university.",
+     "en": [
+      "Do they live near the university?"
+     ],
+     "w": "don't → Do they …?"
+    },
+    {
+     "k": "ask",
+     "p": "It [rarely] rains here in December.",
+     "en": [
+      "How often does it rain here in December?"
+     ],
+     "w": "It + rains → does it rain."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], the bus stops here.",
+     "en": [
+      "Does the bus stop here?"
+     ],
+     "w": "Chủ ngữ số ít → Does."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn ấy có nói được tiếng Trung không.",
+     "en": [
+      "Do you speak Chinese?",
+      "Can you speak Chinese?"
+     ],
+     "w": "speak → Do you speak …? (Can you … cũng đúng)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bạn ấy có thích công việc hiện tại không.",
+     "en": [
+      "Do you like your job?",
+      "Do you like your current job?",
+      "Do you enjoy your job?",
+      "Do you enjoy your current job?"
+     ],
+     "w": "Do you like …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem chị gái bạn có làm việc ở Hà Nội không.",
+     "en": [
+      "Does your sister work in Hanoi?"
+     ],
+     "w": "sister → Does; work giữ nguyên."
+    }
+   ]
+  },
+  {
+   "id": "pc",
+   "level": 3,
+   "tags": [
+    "cont",
+    "question"
+   ],
+   "name": "Hiện tại tiếp diễn",
+   "tip": "Từ để hỏi + am / is / are + chủ ngữ + V-ing? She is reading → What is she reading?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "She is reading [a novel].",
+     "en": [
+      "What is she reading?"
+     ],
+     "w": "Giữ V-ing, đảo is lên trước she."
+    },
+    {
+     "k": "ask",
+     "p": "They are waiting [for the bus].",
+     "en": [
+      "What are they waiting for?",
+      "Who are they waiting for?"
+     ],
+     "w": "wait for → giới từ for để cuối câu."
+    },
+    {
+     "k": "ask",
+     "p": "I am studying [for my IELTS exam].",
+     "en": [
+      "What are you studying for?"
+     ],
+     "w": "I am → are you."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], it is raining now.",
+     "en": [
+      "Is it raining now?"
+     ],
+     "w": "Yes/No → Is it raining?"
+    },
+    {
+     "k": "ask",
+     "p": "He is talking [to his manager].",
+     "en": [
+      "Who is he talking to?"
+     ],
+     "w": "talk to → Who … to?"
+    },
+    {
+     "k": "ask",
+     "p": "We are staying [at a small hotel].",
+     "en": [
+      "Where are you staying?"
+     ],
+     "w": "we → you."
+    },
+    {
+     "k": "ask",
+     "p": "The children are crying [because they are hungry].",
+     "en": [
+      "Why are the children crying?"
+     ],
+     "w": "Lý do → Why."
+    },
+    {
+     "k": "ask",
+     "p": "[No], I'm not working this weekend.",
+     "en": [
+      "Are you working this weekend?"
+     ],
+     "w": "Tiếp diễn chỉ kế hoạch tương lai gần → Are you working …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn ấy đang làm gì vậy.",
+     "en": [
+      "What are you doing?"
+     ],
+     "w": "đang làm → What are you doing?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem dạo này bạn ấy đang đọc sách gì.",
+     "en": [
+      "What book are you reading at the moment?",
+      "What are you reading these days?",
+      "What book are you reading these days?",
+      "What are you reading at the moment?"
+     ],
+     "w": "Hành động đang diễn ra quanh thời điểm nói → tiếp diễn."
+    }
+   ]
+  },
+  {
+   "id": "past",
+   "level": 3,
+   "tags": [
+    "past",
+    "question"
+   ],
+   "name": "Quá khứ đơn",
+   "tip": "Từ để hỏi + did + chủ ngữ + V NGUYÊN MẪU? went → did … go. Với was / were thì đảo lên đầu như to be.",
+   "items": [
+    {
+     "k": "ask",
+     "p": "I went [to Da Nang] last summer.",
+     "en": [
+      "Where did you go last summer?"
+     ],
+     "w": "went → did … go (không viết \"did you went\")."
+    },
+    {
+     "k": "ask",
+     "p": "She bought [a new laptop] yesterday.",
+     "en": [
+      "What did she buy yesterday?"
+     ],
+     "w": "bought → did … buy."
+    },
+    {
+     "k": "ask",
+     "p": "They arrived [at midnight].",
+     "en": [
+      "What time did they arrive?",
+      "When did they arrive?"
+     ],
+     "w": "arrived → did … arrive."
+    },
+    {
+     "k": "ask",
+     "p": "He left the company [in 2022].",
+     "en": [
+      "When did he leave the company?"
+     ],
+     "w": "left → did … leave."
+    },
+    {
+     "k": "ask",
+     "p": "We met [at a friend's party].",
+     "en": [
+      "Where did you meet?"
+     ],
+     "w": "met → did … meet."
+    },
+    {
+     "k": "ask",
+     "p": "She was late [because of the traffic].",
+     "en": [
+      "Why was she late?"
+     ],
+     "w": "was → Why was she …? (không thêm did với was)"
+    },
+    {
+     "k": "ask",
+     "p": "The trip was [wonderful].",
+     "en": [
+      "How was the trip?"
+     ],
+     "w": "Hỏi cảm nhận → How was …?"
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], I finished the report.",
+     "en": [
+      "Did you finish the report?"
+     ],
+     "w": "Yes, I did → Did you finish …?"
+    },
+    {
+     "k": "ask",
+     "p": "I was [at home] last night.",
+     "en": [
+      "Where were you last night?"
+     ],
+     "w": "I was → were you."
+    },
+    {
+     "k": "ask",
+     "p": "[No], they weren't at the meeting.",
+     "en": [
+      "Were they at the meeting?"
+     ],
+     "w": "weren't → Were they …?"
+    },
+    {
+     "k": "ask",
+     "p": "[Tom] broke the window.",
+     "en": [
+      "Who broke the window?"
+     ],
+     "w": "Hỏi CHỦ NGỮ → Who + broke, không dùng did."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn ấy đã làm gì vào tối qua.",
+     "en": [
+      "What did you do last night?"
+     ],
+     "w": "Quá khứ → did + do."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem kỳ nghỉ của bạn ấy thế nào.",
+     "en": [
+      "How was your holiday?",
+      "How was your vacation?"
+     ],
+     "w": "How was …?"
+    }
+   ]
+  },
+  {
+   "id": "past-cont",
+   "level": 3,
+   "tags": [
+    "cont",
+    "past",
+    "question"
+   ],
+   "name": "Quá khứ tiếp diễn",
+   "tip": "Từ để hỏi + was / were + chủ ngữ + V-ing? Thường đi với \"when / at 8 p.m. yesterday\".",
+   "items": [
+    {
+     "k": "ask",
+     "p": "I was watching [TV] when you called.",
+     "en": [
+      "What were you watching when I called?",
+      "What were you doing when I called?"
+     ],
+     "w": "I was → were you; you called → I called."
+    },
+    {
+     "k": "ask",
+     "p": "She was living [in Hue] in 2020.",
+     "en": [
+      "Where was she living in 2020?"
+     ],
+     "w": "was + living, đảo was."
+    },
+    {
+     "k": "ask",
+     "p": "At 9 p.m. yesterday they were [having dinner].",
+     "en": [
+      "What were they doing at 9 p.m. yesterday?"
+     ],
+     "w": "Hỏi hành động → What were they doing?"
+    },
+    {
+     "k": "ask",
+     "p": "He was driving [too fast] when the accident happened.",
+     "en": [
+      "How was he driving when the accident happened?"
+     ],
+     "w": "Hỏi cách thức → How."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], it was raining when we left.",
+     "en": [
+      "Was it raining when you left?"
+     ],
+     "w": "we left → you left."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn ấy đang làm gì lúc mất điện.",
+     "en": [
+      "What were you doing when the power went out?",
+      "What were you doing when the power cut happened?",
+      "What were you doing when the electricity went off?"
+     ],
+     "w": "Hành động đang dở thì bị cắt ngang → quá khứ tiếp diễn."
+    }
+   ]
+  },
+  {
+   "id": "future",
+   "level": 4,
+   "tags": [
+    "future",
+    "question"
+   ],
+   "name": "Will / be going to",
+   "tip": "Will + chủ ngữ + V? hoặc am / is / are + chủ ngữ + going to + V?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "I will call you [tomorrow].",
+     "en": [
+      "When will you call me?"
+     ],
+     "w": "will → đảo lên trước you; you → me."
+    },
+    {
+     "k": "ask",
+     "p": "She is going to study [in Australia].",
+     "en": [
+      "Where is she going to study?"
+     ],
+     "w": "is going to → is she going to study."
+    },
+    {
+     "k": "ask",
+     "p": "They are going to buy [a new car].",
+     "en": [
+      "What are they going to buy?"
+     ],
+     "w": "Giữ going to + V."
+    },
+    {
+     "k": "ask",
+     "p": "The project will finish [next month].",
+     "en": [
+      "When will the project finish?"
+     ],
+     "w": "will finish → When will … finish."
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], I will help you.",
+     "en": [
+      "Will you help me?"
+     ],
+     "w": "I will → Will you …? ; you → me."
+    },
+    {
+     "k": "ask",
+     "p": "We are going to visit [our grandparents] this weekend.",
+     "en": [
+      "Who are you going to visit this weekend?"
+     ],
+     "w": "Hỏi người là tân ngữ → Who + are you going to visit."
+    },
+    {
+     "k": "ask",
+     "p": "He is going to quit his job [because he wants to start a business].",
+     "en": [
+      "Why is he going to quit his job?"
+     ],
+     "w": "Lý do → Why."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi bạn ấy sẽ làm gì sau khi tốt nghiệp.",
+     "en": [
+      "What are you going to do after graduation?",
+      "What will you do after graduation?",
+      "What are you going to do after you graduate?",
+      "What will you do after you graduate?"
+     ],
+     "w": "Kế hoạch → be going to (will cũng chấp nhận)."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bạn ấy có đến bữa tiệc tối nay không.",
+     "en": [
+      "Are you coming to the party tonight?",
+      "Will you come to the party tonight?",
+      "Are you going to come to the party tonight?"
+     ],
+     "w": "Kế hoạch đã định → hiện tại tiếp diễn hoặc be going to."
+    }
+   ]
+  },
+  {
+   "id": "how",
+   "level": 4,
+   "tags": [
+    "count",
+    "question"
+   ],
+   "name": "How much / many / long / far · Which · Whose",
+   "tip": "many + danh từ đếm được số nhiều; much + không đếm được; How long = bao lâu; How far = bao xa; Whose = của ai.",
+   "items": [
+    {
+     "k": "ask",
+     "p": "I have [two] brothers.",
+     "en": [
+      "How many brothers do you have?"
+     ],
+     "w": "Đếm được số nhiều → How many + brothers."
+    },
+    {
+     "k": "ask",
+     "p": "She drinks [two litres of] water a day.",
+     "en": [
+      "How much water does she drink a day?"
+     ],
+     "w": "water không đếm được → How much water."
+    },
+    {
+     "k": "ask",
+     "p": "The course costs [five million dong].",
+     "en": [
+      "How much does the course cost?",
+      "How much is the course?"
+     ],
+     "w": "Hỏi giá → How much."
+    },
+    {
+     "k": "ask",
+     "p": "It takes [thirty minutes] to get to work.",
+     "en": [
+      "How long does it take to get to work?"
+     ],
+     "w": "Hỏi thời gian bỏ ra → How long does it take …?"
+    },
+    {
+     "k": "ask",
+     "p": "My house is [about two kilometres] from here.",
+     "en": [
+      "How far is your house from here?"
+     ],
+     "w": "Khoảng cách → How far."
+    },
+    {
+     "k": "ask",
+     "p": "This is [Mai's] umbrella.",
+     "en": [
+      "Whose umbrella is this?",
+      "Whose is this umbrella?"
+     ],
+     "w": "Của ai → Whose + danh từ."
+    },
+    {
+     "k": "ask",
+     "p": "I prefer [the blue] shirt.",
+     "en": [
+      "Which shirt do you prefer?"
+     ],
+     "w": "Chọn trong số có sẵn → Which."
+    },
+    {
+     "k": "ask",
+     "p": "There are [forty] students in my class.",
+     "en": [
+      "How many students are there in your class?"
+     ],
+     "w": "There are → How many … are there?"
+    },
+    {
+     "k": "ask",
+     "p": "We stayed in Japan [for ten days].",
+     "en": [
+      "How long did you stay in Japan?"
+     ],
+     "w": "for ten days → How long; stayed → did … stay."
+    },
+    {
+     "k": "ask",
+     "p": "I need [some] sugar.",
+     "en": [
+      "How much sugar do you need?"
+     ],
+     "w": "sugar không đếm được → How much."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bạn ấy học tiếng Anh được bao lâu rồi.",
+     "en": [
+      "How long have you studied English?",
+      "How long have you been studying English?",
+      "How long have you learned English?",
+      "How long have you been learning English?"
+     ],
+     "w": "\"được bao lâu rồi\" (đến nay) → How long have you …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem ở cửa hàng có bao nhiêu nhân viên.",
+     "en": [
+      "How many staff are there in the shop?",
+      "How many employees are there in the shop?",
+      "How many people work in the shop?",
+      "How many employees does the shop have?"
+     ],
+     "w": "employees đếm được → How many."
+    }
+   ]
+  },
+  {
+   "id": "pp",
+   "level": 5,
+   "tags": [
+    "pp",
+    "question"
+   ],
+   "name": "Hiện tại hoàn thành",
+   "tip": "Have / Has + chủ ngữ + V3? Ever = đã từng; How long … for / since; yet trong câu hỏi.",
+   "items": [
+    {
+     "k": "ask",
+     "p": "[Yes], I have been to Singapore.",
+     "en": [
+      "Have you ever been to Singapore?",
+      "Have you been to Singapore?"
+     ],
+     "w": "Kinh nghiệm → Have you ever been to …?"
+    },
+    {
+     "k": "ask",
+     "p": "She has worked here [for five years].",
+     "en": [
+      "How long has she worked here?",
+      "How long has she been working here?"
+     ],
+     "w": "for five years → How long has she worked …?"
+    },
+    {
+     "k": "ask",
+     "p": "They have lived in this city [since 2019].",
+     "en": [
+      "How long have they lived in this city?",
+      "How long have they been living in this city?",
+      "Since when have they lived in this city?"
+     ],
+     "w": "since 2019 → How long have they lived …?"
+    },
+    {
+     "k": "ask",
+     "p": "[No], he hasn't finished his homework yet.",
+     "en": [
+      "Has he finished his homework yet?",
+      "Has he finished his homework?"
+     ],
+     "w": "hasn't → Has he finished … yet?"
+    },
+    {
+     "k": "ask",
+     "p": "I have read [three] books this month.",
+     "en": [
+      "How many books have you read this month?"
+     ],
+     "w": "How many + books + have you read."
+    },
+    {
+     "k": "ask",
+     "p": "We have just eaten [pizza].",
+     "en": [
+      "What have you just eaten?",
+      "What have you eaten?"
+     ],
+     "w": "have eaten → What have you eaten?"
+    },
+    {
+     "k": "ask",
+     "p": "She has visited [Japan and Korea].",
+     "en": [
+      "Which countries has she visited?",
+      "What countries has she visited?"
+     ],
+     "w": "has visited → Which countries has she visited?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bạn ấy đã từng ăn sầu riêng chưa.",
+     "en": [
+      "Have you ever eaten durian?",
+      "Have you ever tried durian?"
+     ],
+     "w": "\"đã từng … chưa\" → Have you ever + V3."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bạn ấy đã nộp bài tập chưa.",
+     "en": [
+      "Have you submitted your assignment yet?",
+      "Have you handed in your assignment yet?",
+      "Have you submitted your homework yet?",
+      "Have you handed in your homework yet?",
+      "Have you submitted your assignment?",
+      "Have you handed in your assignment?"
+     ],
+     "w": "\"đã … chưa\" → Have you … yet?"
+    }
+   ]
+  },
+  {
+   "id": "modal",
+   "level": 5,
+   "tags": [
+    "modal",
+    "question"
+   ],
+   "name": "Can · Should · Must / Have to · Could you…?",
+   "tip": "Can / Should / Must + chủ ngữ + V? Have to mượn do: Do I have to …? Lời đề nghị lịch sự: Could you …?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "[Yes], I can swim.",
+     "en": [
+      "Can you swim?"
+     ],
+     "w": "can → Can you + V."
+    },
+    {
+     "k": "ask",
+     "p": "You should take [a taxi].",
+     "en": [
+      "What should I take?",
+      "What should I do?"
+     ],
+     "w": "You should → What should I …?"
+    },
+    {
+     "k": "ask",
+     "p": "We have to arrive [before 7 a.m.].",
+     "en": [
+      "When do we have to arrive?",
+      "What time do we have to arrive?"
+     ],
+     "w": "have to → do we have to (mượn do)."
+    },
+    {
+     "k": "ask",
+     "p": "[No], you don't have to wear a uniform.",
+     "en": [
+      "Do I have to wear a uniform?"
+     ],
+     "w": "don't have to → Do I have to …?"
+    },
+    {
+     "k": "ask",
+     "p": "She can play [the piano and the guitar].",
+     "en": [
+      "What can she play?",
+      "What instruments can she play?"
+     ],
+     "w": "can play → What can she play?"
+    },
+    {
+     "k": "ask",
+     "p": "You can park [behind the building].",
+     "en": [
+      "Where can I park?"
+     ],
+     "w": "You can → Where can I …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi nhờ người khác nói chậm lại một cách lịch sự.",
+     "en": [
+      "Could you speak more slowly, please?",
+      "Could you please speak more slowly?",
+      "Can you speak more slowly, please?",
+      "Could you speak slowly, please?"
+     ],
+     "w": "Nhờ lịch sự → Could you …, please?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi ý kiến: Tôi có nên học thêm một ngoại ngữ nữa không?",
+     "en": [
+      "Should I learn another foreign language?",
+      "Should I learn another language?",
+      "Should I study another foreign language?",
+      "Should I study another language?"
+     ],
+     "w": "Xin lời khuyên → Should I …?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bạn có thể mượn bút của người ấy không.",
+     "en": [
+      "Can I borrow your pen?",
+      "Could I borrow your pen?",
+      "May I borrow your pen?"
+     ],
+     "w": "Xin phép → Can / Could / May I …?"
+    }
+   ]
+  },
+  {
+   "id": "subject",
+   "level": 6,
+   "tags": [
+    "question",
+    "order"
+   ],
+   "name": "Hỏi chủ ngữ hay hỏi tân ngữ",
+   "tip": "Hỏi CHỦ NGỮ (Who / What làm việc đó?) → không dùng do / does / did, động từ chia như câu thường: Who called you? Hỏi TÂN NGỮ → có trợ động từ: Who did you call?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "[Linh] called me last night.",
+     "en": [
+      "Who called you last night?"
+     ],
+     "w": "Linh là người gọi (chủ ngữ) → Who called …? (KHÔNG \"Who did call\")"
+    },
+    {
+     "k": "ask",
+     "p": "I called [Linh] last night.",
+     "en": [
+      "Who did you call last night?"
+     ],
+     "w": "Linh là người được gọi (tân ngữ) → Who did you call?"
+    },
+    {
+     "k": "ask",
+     "p": "[A strange noise] woke me up.",
+     "en": [
+      "What woke you up?"
+     ],
+     "w": "Chủ ngữ là vật → What + woke."
+    },
+    {
+     "k": "ask",
+     "p": "The storm damaged [the roof].",
+     "en": [
+      "What did the storm damage?"
+     ],
+     "w": "roof là tân ngữ → What did the storm damage?"
+    },
+    {
+     "k": "ask",
+     "p": "[Most students] prefer online classes.",
+     "en": [
+      "Who prefers online classes?",
+      "How many students prefer online classes?"
+     ],
+     "w": "Hỏi chủ ngữ → Who prefers (động từ số ít sau Who)."
+    },
+    {
+     "k": "ask",
+     "p": "[An accident] happened on the bridge.",
+     "en": [
+      "What happened on the bridge?"
+     ],
+     "w": "happen không có tân ngữ → What happened …? (không dùng did)"
+    },
+    {
+     "k": "ask",
+     "p": "My boss gave me [a bonus].",
+     "en": [
+      "What did your boss give you?"
+     ],
+     "w": "bonus là tân ngữ → What did … give …?"
+    },
+    {
+     "k": "ask",
+     "p": "[My mother] cooks dinner in my family.",
+     "en": [
+      "Who cooks dinner in your family?"
+     ],
+     "w": "Chủ ngữ → Who cooks (giữ s)."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem ai đã viết cuốn sách này.",
+     "en": [
+      "Who wrote this book?"
+     ],
+     "w": "Hỏi chủ ngữ ở quá khứ → Who wrote …? (không dùng did)"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem chuyện gì đã xảy ra với điện thoại của bạn ấy.",
+     "en": [
+      "What happened to your phone?"
+     ],
+     "w": "happen to → What happened to …?"
+    }
+   ]
+  },
+  {
+   "id": "prep-end",
+   "level": 6,
+   "tags": [
+    "question",
+    "prep"
+   ],
+   "name": "Giới từ ở cuối câu hỏi",
+   "tip": "Động từ đi với giới từ (listen to, look for, worry about, depend on…) → giới từ để ở CUỐI câu hỏi: Who are you talking to?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "She is listening [to jazz].",
+     "en": [
+      "What is she listening to?"
+     ],
+     "w": "listen to → What … listening to?"
+    },
+    {
+     "k": "ask",
+     "p": "I am worried [about my exam].",
+     "en": [
+      "What are you worried about?"
+     ],
+     "w": "worried about → What … worried about?"
+    },
+    {
+     "k": "ask",
+     "p": "He is looking [for his keys].",
+     "en": [
+      "What is he looking for?"
+     ],
+     "w": "look for → What … looking for?"
+    },
+    {
+     "k": "ask",
+     "p": "The decision depends [on the price].",
+     "en": [
+      "What does the decision depend on?"
+     ],
+     "w": "depend on → What does … depend on?"
+    },
+    {
+     "k": "ask",
+     "p": "They are talking [about the new project].",
+     "en": [
+      "What are they talking about?"
+     ],
+     "w": "talk about → What … about?"
+    },
+    {
+     "k": "ask",
+     "p": "I live [with my cousins].",
+     "en": [
+      "Who do you live with?"
+     ],
+     "w": "live with → Who do you live with?"
+    },
+    {
+     "k": "ask",
+     "p": "This letter is [from the bank].",
+     "en": [
+      "Who is this letter from?",
+      "Where is this letter from?"
+     ],
+     "w": "from → Who … from?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem bạn ấy quan tâm đến lĩnh vực gì.",
+     "en": [
+      "What are you interested in?",
+      "What field are you interested in?",
+      "Which field are you interested in?"
+     ],
+     "w": "interested in → What are you interested in?"
+    }
+   ]
+  },
+  {
+   "id": "passive-q",
+   "level": 6,
+   "tags": [
+    "passive",
+    "question"
+   ],
+   "name": "Câu hỏi bị động",
+   "tip": "Từ để hỏi + is / are / was / were + chủ ngữ + V3? The bridge was built in 1902 → When was the bridge built?",
+   "items": [
+    {
+     "k": "ask",
+     "p": "The bridge was built [in 1902].",
+     "en": [
+      "When was the bridge built?"
+     ],
+     "w": "was built → When was … built?"
+    },
+    {
+     "k": "ask",
+     "p": "Coffee is grown [in the Central Highlands].",
+     "en": [
+      "Where is coffee grown?"
+     ],
+     "w": "is grown → Where is coffee grown?"
+    },
+    {
+     "k": "ask",
+     "p": "The novel was written [by Nguyen Du].",
+     "en": [
+      "Who was the novel written by?",
+      "Who wrote the novel?"
+     ],
+     "w": "was written by → Who … written by? (hoặc Who wrote …?)"
+    },
+    {
+     "k": "ask",
+     "p": "These phones are made [in Viet Nam].",
+     "en": [
+      "Where are these phones made?"
+     ],
+     "w": "are made → Where are … made?"
+    },
+    {
+     "k": "ask",
+     "p": "The meeting was cancelled [because of the storm].",
+     "en": [
+      "Why was the meeting cancelled?"
+     ],
+     "w": "was cancelled → Why was … cancelled?"
+    },
+    {
+     "k": "ask",
+     "p": "[Yes], the windows are cleaned every week.",
+     "en": [
+      "Are the windows cleaned every week?"
+     ],
+     "w": "Yes/No bị động → Are + chủ ngữ + V3?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem ngôi chùa này được xây khi nào.",
+     "en": [
+      "When was this pagoda built?",
+      "When was this temple built?"
+     ],
+     "w": "Bị động quá khứ → When was … built?"
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi xem tiếng Anh có được dạy ở trường tiểu học không.",
+     "en": [
+      "Is English taught in primary schools?",
+      "Is English taught at primary schools?"
+     ],
+     "w": "Bị động hiện tại → Is English taught …?"
+    }
+   ]
+  },
+  {
+   "id": "indirect",
+   "level": 6,
+   "tags": [
+    "question",
+    "order"
+   ],
+   "name": "Câu hỏi gián tiếp (lịch sự)",
+   "tip": "Could you tell me / Do you know + từ để hỏi + CHỦ NGỮ + ĐỘNG TỪ (không đảo, không do / does / did): Where is the station? → Could you tell me where the station is?",
+   "items": [
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng Could you tell me): Nhà ga ở đâu?",
+     "en": [
+      "Could you tell me where the station is?",
+      "Could you tell me where the train station is?"
+     ],
+     "w": "Câu gián tiếp → where + the station + is (không đảo: KHÔNG \"where is the station\")."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng Do you know): Mấy giờ thì cửa hàng đóng cửa?",
+     "en": [
+      "Do you know what time the shop closes?",
+      "Do you know when the shop closes?"
+     ],
+     "w": "Bỏ does: What time does the shop close? → what time the shop closes (thêm s lại)."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng Could you tell me): Vé giá bao nhiêu?",
+     "en": [
+      "Could you tell me how much the ticket is?",
+      "Could you tell me how much the ticket costs?",
+      "Could you tell me how much the tickets are?",
+      "Could you tell me how much the tickets cost?"
+     ],
+     "w": "how much + the ticket + is / costs."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng Do you know): Anh ấy đã đi đâu?",
+     "en": [
+      "Do you know where he went?"
+     ],
+     "w": "Bỏ did: Where did he go? → where he went (động từ về quá khứ)."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng Can you tell me): Bài thi bắt đầu khi nào?",
+     "en": [
+      "Can you tell me when the exam starts?",
+      "Can you tell me what time the exam starts?",
+      "Can you tell me when the test starts?"
+     ],
+     "w": "when + the exam + starts."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng I wonder): Liệu cô ấy có đến không?",
+     "en": [
+      "I wonder if she will come.",
+      "I wonder whether she will come.",
+      "I wonder if she is coming.",
+      "I wonder whether she is coming."
+     ],
+     "w": "Câu hỏi Yes/No gián tiếp → if / whether + chủ ngữ + động từ."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng Do you know): Phòng 201 ở tầng mấy?",
+     "en": [
+      "Do you know which floor room 201 is on?",
+      "Do you know what floor room 201 is on?"
+     ],
+     "w": "which floor + room 201 + is on (giới từ cuối câu)."
+    },
+    {
+     "k": "vi",
+     "p": "Hỏi lịch sự (bắt đầu bằng Could you tell me): Tôi nên điền mẫu đơn này như thế nào?",
+     "en": [
+      "Could you tell me how I should fill in this form?",
+      "Could you tell me how to fill in this form?",
+      "Could you tell me how I should fill out this form?",
+      "Could you tell me how to fill out this form?"
+     ],
+     "w": "how + I + should + V, hoặc gọn hơn: how to + V."
+    }
+   ]
+  }
+ ]
+}
