@@ -4,6 +4,8 @@ import {
   BookOpen,
   BookOpenCheck,
   ListChecks,
+  MessagesSquare,
+  BookText,
   Check,
   CheckCircle2,
   ChevronDown,
@@ -54,6 +56,8 @@ const ICON: Record<TaskKind, LucideIcon> = {
   'reading-p3': BookOpen,
   'grammar-mcq': ListChecks,
   'reading-tfng': BookOpenCheck,
+  'translate-dialogue': MessagesSquare,
+  'translate-story': BookText,
   'reading-skill': BookOpen,
   'reading-part': BookOpen,
   'writing-frame': PenLine,
@@ -87,6 +91,8 @@ export const AREA: Record<TaskKind, string> = {
   'reading-p3': 'Reading',
   'grammar-mcq': 'Ngữ pháp · trắc nghiệm',
   'reading-tfng': 'Reading · True / False / Not Given',
+  'translate-dialogue': 'Dịch · hội thoại',
+  'translate-story': 'Dịch · truyện ngắn',
   'reading-skill': 'Reading',
   'reading-part': 'Reading',
   'writing-frame': 'Writing',
@@ -107,15 +113,15 @@ function toneOf(kind: TaskKind): Tone {
   if (kind.startsWith('grammar')) return 'sky';
   if (kind.startsWith('vocab') || kind === 'wordform-week') return 'teal';
   if (kind.startsWith('reading')) return 'violet';
-  if (kind.startsWith('writing')) return 'rose';
+  if (kind.startsWith('writing') || kind.startsWith('translate')) return 'rose';
   if (kind.startsWith('mock') || kind === 'placement' || kind === 'retest') return 'amber';
   return 'slate';
 }
 
 /** Tasks that only the exercise itself can tick (grammar ≥ 80 %, retest saved…). */
-const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest', 'grammar-mcq', 'reading-tfng'];
+const AUTO_ONLY: TaskKind[] = ['grammar-learn', 'grammar-drill', 'vocab-active', 'vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'placement', 'retest', 'rest', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story'];
 
-const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'grammar-mcq', 'reading-tfng'];
+const PRACTICE_KINDS: TaskKind[] = ['vocab-translate', 'grammar-fix', 'grammar-svo', 'wordform-week', 'writing-week', 'grammar-mcq', 'reading-tfng', 'translate-dialogue', 'translate-story'];
 
 /**
  * `nextId`: the one task to do next. When given, only that card gets the filled button and the other open tasks get

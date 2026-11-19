@@ -1,0 +1,689 @@
+# Dịch hằng ngày — hội thoại đời thường + truyện ngắn (Việt → Anh)
+# Nguồn để sửa / thêm câu. Sau khi sửa chạy: node scripts/build-translate-daily.mjs  (tạo translate.json)
+#
+# @tag <id> | <tên> | <mẹo hiện sau khi kiểm tra>
+# @dialogue <id> <cấp 1–6> <emoji> | <tên bài>      (4 câu A–B–A–B)
+# @story <id> <cấp 1–6> <emoji> | <tên truyện>
+# câu: tiếng Việt || đáp án 1 // đáp án 2 … || điểm ngữ pháp (cách nhau dấu cách) || gợi ý (không bắt buộc)
+
+@tag be | Động từ to be | am / is / are (quá khứ was / were) đi với tính từ, danh từ, nơi chốn: "I am tired", "She is a doctor".
+@tag sva | Chia động từ theo chủ ngữ | Chủ ngữ he / she / it / một người, một vật → động từ thêm -s/-es ở hiện tại đơn: "He works", "My mother cooks". Everyone / everybody cũng là số ít.
+@tag plural | Danh từ số nhiều | Từ hai trở lên → thêm -s/-es (two cats, three boxes). Bất quy tắc: mouse → mice, child → children, person → people.
+@tag article | Mạo từ a / an / the | Lần đầu nhắc, một cái bất kỳ → a/an (an trước nguyên âm). Đã biết là cái nào, duy nhất → the. Nghề nghiệp: "He is an engineer".
+@tag there | There is / There are | "Có…" (tồn tại) = There is + số ít / There are + số nhiều. Không dịch "có" thành "have" khi nói về nơi chốn.
+@tag question | Câu hỏi & trợ động từ | Câu hỏi: (Từ hỏi) + do / does / did / is / are / will… + S + V. Sau does / did, động từ về nguyên mẫu.
+@tag neg | Câu phủ định | don't / doesn't / didn't + V nguyên mẫu; isn't / aren't với to be. "Me neither / Neither do I" khi đồng ý với câu phủ định.
+@tag pron | Đại từ & sở hữu | I – me – my, he – him – his, they – them – their. Vật số nhiều (shoes, keys) → they / them. "Ha and I" khi làm chủ ngữ.
+@tag prep | Giới từ | at + giờ, on + ngày / thứ, in + tháng / năm / buổi; in + thành phố, at + địa điểm cụ thể; good at, afraid of, harmful to.
+@tag order | Trật tự từ | Trạng từ tần suất (always, usually, often) đứng trước động từ thường, sau to be. Tính từ đứng trước danh từ: "a small apartment". Câu hỏi gián tiếp giữ S + V: "where you used it".
+@tag count | Đếm được / không đếm được | Không đếm được (water, milk, rice, money, time, advice) → much, a little, some; đếm được → many, a few. Đếm bằng đơn vị: two bottles of water.
+@tag past | Quá khứ đơn | Việc đã xong, có mốc quá khứ (yesterday, last week, ago) → V-ed / cột 2 (go → went, buy → bought). Phủ định / hỏi: didn't / did + V nguyên mẫu.
+@tag cont | Thì tiếp diễn | Đang xảy ra lúc nói → am / is / are + V-ing; đang xảy ra ở một lúc trong quá khứ → was / were + V-ing.
+@tag future | Tương lai | will + V: quyết định lúc nói, dự đoán, hứa. be going to + V: kế hoạch có sẵn. Hiện tại tiếp diễn cũng dùng cho lịch hẹn đã định.
+@tag pp | Hiện tại hoàn thành | have / has + V3: đã từng (ever / never), vừa mới (just), đã… chưa (yet), kéo dài đến nay (for + khoảng, since + mốc).
+@tag modal | Động từ khuyết thiếu | can / could / should / must / have to / would + V nguyên mẫu (không "to", không chia -s): "She can swim", "You should rest".
+@tag compare | So sánh | Tính từ ngắn: -er than / the -est; dài: more … than / the most …; as … as; much / a lot + so sánh hơn để nhấn mạnh.
+@tag vpat | Động từ + to V / V-ing | enjoy, mind, finish, stop, avoid, consider + V-ing; want, hope, decide, plan, forget, remember, promise + to V; giới từ + V-ing (afraid of making).
+@tag conj | Liên từ | because (vì), so (nên), but, although / even though (mặc dù), when, while, until, as soon as. Sau when / until / as soon as dùng hiện tại đơn cho tương lai.
+@tag cond | Câu điều kiện | Loại 1 (có thể xảy ra): If + hiện tại, will + V. Loại 2 (giả định): If + quá khứ, would / could + V; "If I were you, I would…".
+@tag rel | Mệnh đề quan hệ | who (người), which (vật), that (cả hai), where (nơi), whose (của người mà) — đặt ngay sau danh từ được bổ nghĩa.
+@tag passive | Câu bị động | be + V3 (by …): "is held", "was built", "has been banned", "should be applied". Dùng khi người làm không quan trọng.
+@tag phrasal | Cụm động từ & cách nói tự nhiên | Học cả cụm, không dịch từng chữ: try on, break down, get used to, keep in touch, let sb know, give up, pick sb up.
+
+############ CẤP 1 · hiện tại đơn, to be, there is/are, số nhiều ############
+
+@dialogue d01 1 ☀️👋 | Chào buổi sáng
+Chào buổi sáng! Hôm nay bạn thế nào? || Good morning! How are you today? || be question
+Tôi khỏe, cảm ơn. Còn bạn? || I'm fine, thank you. And you? // I'm fine, thanks. How about you? // I'm fine, thanks. And you? // I'm good, thanks. And you? || be
+Tôi hơi mệt. || I'm a bit tired. // I am a little tired. // I'm a little tired. || be order || a bit / a little + tính từ
+Bạn có muốn uống một tách cà phê không? || Would you like a cup of coffee? // Do you want a cup of coffee? || question article || Would you like…?
+
+@dialogue d02 1 👨‍👩‍👧 | Gia đình bạn
+Gia đình bạn có mấy người? || How many people are there in your family? // How many people are in your family? || there question
+Nhà tôi có năm người: bố mẹ, hai em gái và tôi. || There are five people in my family: my parents, my two younger sisters and me. // There are five people in my family: my parents, my two sisters and me. // There are five people in my family: my parents, my two little sisters and me. || there plural
+Bố bạn làm nghề gì? || What does your father do? // What is your father's job? // What does your dad do? || question sva
+Bố tôi là kỹ sư. Ông ấy làm việc ở một nhà máy. || My father is an engineer. He works in a factory. // My father is an engineer. He works at a factory. // My dad is an engineer. He works in a factory. || article sva
+
+@dialogue d03 1 🏫📚 | Lớp học của tôi
+Lớp bạn có bao nhiêu sinh viên? || How many students are there in your class? // How many students are in your class? || there plural
+Có khoảng bốn mươi sinh viên. || There are about forty students. // There are around forty students. || there plural
+Bạn có thích môn tiếng Anh không? || Do you like English? // Do you like studying English? // Do you like learning English? || question
+Có, nhưng tôi không giỏi ngữ pháp. || Yes, but I am not good at grammar. // Yes, but I'm not very good at grammar. || neg prep || be good at
+
+@dialogue d04 1 ⚽🎧 | Sở thích cuối tuần
+Bạn thường làm gì vào cuối tuần? || What do you usually do at the weekend? // What do you usually do on weekends? // What do you usually do at weekends? // What do you usually do on the weekend? || question order prep
+Tôi thường chơi bóng đá với bạn bè. || I usually play football with my friends. // I usually play soccer with my friends. // I often play football with my friends. || order pron
+Em trai tôi không thích thể thao. || My younger brother doesn't like sports. // My younger brother does not like sport. // My little brother doesn't like sports. // My younger brother doesn't like sport. || neg sva
+Cậu ấy thích làm gì? || What does he like doing? // What does he like to do? || question sva
+
+@dialogue d05 1 🍜 | Ăn sáng ở đâu
+Bạn thường ăn sáng ở đâu? || Where do you usually have breakfast? // Where do you usually eat breakfast? || question order
+Tôi thường ăn phở ở một quán gần nhà. || I usually eat pho at a restaurant near my house. // I usually have pho at a small restaurant near my house. // I usually eat pho at a shop near my house. // I usually have pho at a restaurant near my house. || article prep
+Phở ở đó có ngon không? || Is the pho there good? // Is the pho there delicious? // Is the pho good there? || be question
+Rất ngon và không đắt. || It is very good and it is not expensive. // It's very delicious and not expensive. // It's very good and not expensive. // It is delicious and it is not expensive. || be neg
+
+@dialogue d06 1 🏠 | Nhà bạn ở đâu
+Bạn sống ở đâu? || Where do you live? || question
+Tôi sống ở một căn hộ nhỏ ở Hà Nội. || I live in a small apartment in Hanoi. // I live in a small flat in Hanoi. // I live in a small apartment in Ha Noi. || article order prep
+Căn hộ của bạn có mấy phòng? || How many rooms does your apartment have? // How many rooms are there in your apartment? // How many rooms does your flat have? || question sva
+Có hai phòng ngủ và một nhà bếp. || There are two bedrooms and a kitchen. // There are two bedrooms and one kitchen. // It has two bedrooms and a kitchen. || there plural
+
+@dialogue d07 1 ⏰🚌 | Đi học
+Mấy giờ bạn đi học? || What time do you go to school? // What time do you go to class? || question prep
+Tôi đi học lúc bảy giờ sáng. || I go to school at seven in the morning. // I go to school at seven o'clock in the morning. || prep || at + giờ
+Bạn đi học bằng gì? || How do you get to school? // How do you go to school? || question
+Tôi thường đi xe buýt, đôi khi tôi đi bộ. || I usually take the bus, and sometimes I walk. // I usually go by bus, and sometimes I walk. // I usually take the bus. Sometimes I walk. // I usually go by bus. Sometimes I walk. || order article
+
+@dialogue d08 1 🙂🤝 | Làm quen bạn mới
+Bạn tên là gì? || What is your name? // What's your name? || pron question
+Mình tên là Lan. Mình là sinh viên năm nhất. || My name is Lan. I am a first-year student. // My name's Lan. I'm a first-year student. // I am Lan. I am a first-year student. || pron article
+Bạn đến từ đâu? || Where are you from? // Where do you come from? || question be
+Mình đến từ Hải Phòng, nhưng bây giờ mình sống ở Hà Nội. || I am from Hai Phong, but I live in Hanoi now. // I'm from Hai Phong, but now I live in Hanoi. // I come from Hai Phong, but I live in Hanoi now. // I am from Haiphong, but now I live in Hanoi. || be prep
+
+@dialogue d09 1 🛒 | Ở cửa hàng tiện lợi
+Cái bánh mì này bao nhiêu tiền? || How much is this sandwich? // How much is this bread? // How much does this sandwich cost? // How much is this banh mi? || question be
+Hai mươi nghìn đồng. || It is twenty thousand dong. // It's twenty thousand dong. // Twenty thousand dong. || be
+Cho tôi hai chai nước nữa nhé. || And two bottles of water, please. // I'd also like two bottles of water, please. // Two bottles of water too, please. // Can I have two bottles of water too? || plural count || a bottle of water
+Tất cả là năm mươi nghìn. || That is fifty thousand in total. // It's fifty thousand altogether. // That's fifty thousand in total. // The total is fifty thousand. || be
+
+@dialogue d10 1 🌡️ | Trời nóng quá
+Hôm nay trời nóng quá! || It is so hot today! // It's very hot today! // It's so hot today! // It is very hot today! || be || Trời + tính từ → It is…
+Ừ. Ở Hà Nội mùa hè luôn nóng. || Yes. Summer in Hanoi is always hot. // Yeah. It is always hot in Hanoi in summer. // Yes. It's always hot in Hanoi in the summer. // Yeah. Summer in Hanoi is always hot. || order prep
+Mình không thích thời tiết nóng. || I don't like hot weather. // I do not like hot weather. || neg order count
+Mình cũng không thích. Mình thích mùa thu. || Me neither. I like autumn. // Neither do I. I like autumn. // Me neither. I like fall. // I don't like it either. I like autumn. || neg phrasal || Me neither / Neither do I
+
+@dialogue d11 1 🐶🐱 | Thú cưng
+Bạn có nuôi thú cưng không? || Do you have any pets? // Do you have a pet? // Have you got a pet? // Do you have pets? || question count
+Có, mình có một con chó và hai con mèo. || Yes, I have a dog and two cats. // Yes, I have one dog and two cats. // Yes, I've got a dog and two cats. || plural article
+Con chó của bạn tên là gì? || What is your dog's name? // What's your dog's name? // What is your dog called? || pron question
+Nó tên là Mực. Nó ăn rất nhiều. || Its name is Muc. It eats a lot. // His name is Muc. He eats a lot. // It's called Muc. It eats a lot. || pron sva
+
+@dialogue d12 1 🛏️ | Bạn cùng phòng
+Bạn cùng phòng của bạn có thân thiện không? || Is your roommate friendly? // Is your room-mate friendly? || be question
+Có, cô ấy rất tốt bụng và hay giúp mình. || Yes, she is very kind and she often helps me. // Yes, she's very kind and often helps me. // Yes, she is very kind and often helps me. || sva order
+Cô ấy học ngành gì? || What does she study? // What is her major? // What's her major? || question sva
+Cô ấy học kế toán ở Đại học Kinh tế Quốc dân. || She studies accounting at the National Economics University. // She studies accounting at National Economics University. // She studies accounting at NEU. || sva prep
+
+############ CẤP 2 · quá khứ đơn, tiếp diễn, giới từ, đếm được ############
+
+@dialogue d13 2 🎬 | Cuối tuần trước
+Cuối tuần trước bạn đã làm gì? || What did you do last weekend? || past question
+Mình đi xem phim với chị gái. || I went to the cinema with my sister. // I went to see a movie with my sister. // I went to the movies with my older sister. // I watched a movie with my sister. // I went to the cinema with my older sister. || past
+Phim có hay không? || Was the film good? // Was the movie good? // Was the movie interesting? // Was it a good movie? || past be question
+Không hay lắm. Mình ngủ gần hết phim. || Not really. I slept through most of it. // It wasn't very good. I slept through most of the film. // Not very good. I slept for most of the movie. // It was not very good. I slept through most of the movie. || past neg || sleep through
+
+@dialogue d14 2 📱 | Gọi điện buổi tối
+Alo, bạn đang làm gì đấy? || Hello, what are you doing? // Hi, what are you doing right now? // Hello, what are you doing now? // Hi, what are you doing? || cont question
+Mình đang nấu cơm tối. || I am cooking dinner. // I'm making dinner. // I'm cooking dinner. || cont
+Tối nay bạn có rảnh không? || Are you free tonight? // Are you free this evening? || be
+Có, mình rảnh sau tám giờ. || Yes, I am free after eight. // Yes, I'm free after eight o'clock. // Yes, I'm free after eight. || prep
+
+@dialogue d15 2 🧥🛍️ | Mua áo khoác
+Mình đang tìm một chiếc áo khoác màu đen. || I am looking for a black jacket. // I'm looking for a black coat. // I'm looking for a black jacket. || cont order
+Bạn mặc cỡ nào? || What size do you wear? // What size are you? || question
+Cỡ M. Mình thử được không? || Medium. Can I try it on? // Size M. Can I try it on? // M. Can I try it on? // Medium. Can I try it on, please? || modal phrasal || try sth on
+Được, phòng thử đồ ở bên trái. || Sure, the fitting room is on the left. // Of course, the changing room is on the left. // Yes, the fitting room is on the left. // Sure, the changing room is on the left. || prep article
+
+@dialogue d16 2 ⏳🚌 | Đi học muộn
+Sao hôm qua bạn đến lớp muộn? || Why were you late for class yesterday? // Why did you come to class late yesterday? // Why were you late to class yesterday? || past question
+Xe buýt bị hỏng trên đường. || The bus broke down on the way. // My bus broke down on the way. || past phrasal || break down
+Thầy giáo có nói gì không? || Did the teacher say anything? // Did the teacher say something? || past question
+Không, thầy chỉ bảo mình ngồi xuống. || No, he just told me to sit down. // No, he only told me to sit down. // No, he just asked me to sit down. || past vpat || tell sb to V
+
+@dialogue d17 2 🏖️ | Kỳ nghỉ hè
+Hè năm ngoái bạn đi đâu? || Where did you go last summer? || past question
+Mình đi Đà Nẵng với gia đình trong năm ngày. || I went to Da Nang with my family for five days. // I travelled to Da Nang with my family for five days. // I went to Danang with my family for five days. // I traveled to Da Nang with my family for five days. || past prep
+Thời tiết ở đó thế nào? || What was the weather like there? // How was the weather there? || past question
+Trời nắng mỗi ngày nên chúng mình đi biển rất nhiều. || It was sunny every day, so we went to the beach a lot. // It was sunny every day, so we went to the beach very often. // It was sunny every day so we went to the beach a lot. || past conj
+
+@dialogue d18 2 🤒 | Bị ốm
+Trông bạn mệt quá. Bạn bị sao vậy? || You look very tired. What's wrong? // You look so tired. What's the matter? // You look really tired. What's wrong with you? // You look very tired. What is wrong? || be question || look + tính từ
+Mình bị đau đầu và hơi sốt. || I have a headache and a slight fever. // I have a headache and a bit of a fever. // I've got a headache and a slight fever. // I have a headache and a little fever. || article count || have a headache
+Tối qua bạn ngủ có ngon không? || Did you sleep well last night? || past question
+Không, mình làm bài tập đến hai giờ sáng. || No, I did my homework until two in the morning. // No, I did my homework until two o'clock in the morning. // No, I was doing my homework until two in the morning. || past prep count
+
+@dialogue d19 2 🔑📱 | Đồ để đâu rồi
+Điện thoại của mình đâu rồi nhỉ? || Where is my phone? // Where's my phone? || be pron
+Nó ở trên bàn, cạnh cái cốc. || It is on the table, next to the cup. // It's on the desk, next to the cup. // It's on the table next to the cup. // It's on the table, next to the mug. || prep article
+Còn chìa khóa của mình? || And my keys? // What about my keys? // How about my keys? || plural pron
+Chúng ở trong túi áo khoác của bạn. || They are in your jacket pocket. // They're in your coat pocket. // They're in the pocket of your jacket. // They're in your jacket pocket. || pron prep plural
+
+@dialogue d20 2 🎮 | Anh trai đang làm gì
+Anh trai bạn đang làm gì thế? || What is your brother doing? // What's your older brother doing? // What is your older brother doing? // What's your brother doing? || cont question
+Anh ấy đang chơi điện tử trong phòng. || He is playing video games in his room. // He's playing computer games in his room. // He's playing video games in his room. || cont prep
+Anh ấy có hay chơi điện tử không? || Does he often play video games? // Does he play video games a lot? // Does he often play computer games? || question sva
+Có, anh ấy chơi mỗi tối. || Yes, he plays every evening. // Yes, he plays every night. // Yes, he plays them every evening. || sva
+
+@dialogue d21 2 🥛🍚 | Trong tủ lạnh còn gì
+Trong tủ lạnh còn sữa không? || Is there any milk in the fridge? // Is there any milk left in the fridge? || there count
+Không, nhưng có vài quả trứng. || No, but there are some eggs. // No, but there are a few eggs. || there count plural
+Chúng ta cần bao nhiêu gạo? || How much rice do we need? || count question || rice không đếm được → how much
+Không nhiều lắm, chỉ hai bát thôi. || Not much, just two bowls. // Not very much, only two bowls. // Not much, only two bowls. || count plural
+
+@dialogue d22 2 🚿 | Gọi mà không nghe máy
+Hôm qua mình gọi bạn ba lần nhưng bạn không nghe máy. || I called you three times yesterday, but you didn't answer. // I called you three times yesterday but you did not answer. // I called you three times yesterday, but you didn't pick up. || past neg
+Xin lỗi, lúc đó mình đang tắm. || Sorry, I was taking a shower then. // Sorry, I was having a shower at that time. // Sorry, I was in the shower at that time. // Sorry, I was taking a shower at that time. || past cont || was / were + V-ing
+Bạn có xem tin nhắn của mình không? || Did you see my message? // Did you read my message? || past question
+Có rồi, mình trả lời bạn tối qua rồi mà. || Yes, I replied to you last night. // Yes, I answered you last night. // Yes, I replied last night. || past prep || reply to sb
+
+@dialogue d23 2 📖 | Ở thư viện
+Bạn đang đọc sách gì vậy? || What book are you reading? // What are you reading? || cont question
+Mình đang đọc một cuốn tiểu thuyết về chiến tranh. || I am reading a novel about the war. // I'm reading a novel about war. // I'm reading a novel about the war. || cont article prep
+Bạn mượn nó ở thư viện à? || Did you borrow it from the library? || past prep || borrow sth from
+Ừ, mình mượn tuần trước. || Yes, I borrowed it last week. // Yeah, I borrowed it last week. || past
+
+@dialogue d24 2 🎂 | Sinh nhật
+Sinh nhật bạn là ngày nào? || When is your birthday? || be question
+Ngày mười lăm tháng ba. || It is on the fifteenth of March. // It's on March fifteenth. // It's on the fifteenth of March. // It is on March the fifteenth. // On the fifteenth of March. || prep || on + ngày
+Năm ngoái bạn tổ chức sinh nhật thế nào? || How did you celebrate your birthday last year? || past question
+Mình mời vài người bạn đến nhà và chúng mình ăn lẩu. || I invited some friends to my house and we had hotpot. // I invited a few friends to my house and we ate hot pot. // I invited some friends over and we had hotpot. // I invited a few friends to my place and we had hot pot. || past count
+
+############ CẤP 3 · hiện tại hoàn thành, so sánh, can/should/have to, tương lai ############
+
+@dialogue d25 3 🍽️ | Ở nhà hàng
+Chào anh, anh đã đặt bàn chưa ạ? || Hello, have you booked a table? // Good evening, have you made a reservation? // Hello sir, have you reserved a table? // Hello, have you booked a table yet? || pp question
+Rồi, tôi đặt một bàn cho bốn người lúc bảy giờ. || Yes, I booked a table for four at seven. // Yes, I reserved a table for four people at seven o'clock. // Yes, I booked a table for four people at seven. || past prep
+Anh muốn gọi đồ uống trước không ạ? || Would you like to order drinks first? // Would you like something to drink first? || modal vpat
+Cho tôi bốn ly nước cam nhé. || Four glasses of orange juice, please. // Can we have four orange juices, please? // We'll have four glasses of orange juice, please. || plural count
+
+@dialogue d26 3 🗺️ | Hỏi đường ra ga
+Xin lỗi, bạn có thể chỉ cho tôi đường đến ga tàu không? || Excuse me, can you tell me the way to the train station? // Excuse me, could you show me the way to the train station? // Excuse me, could you tell me how to get to the train station? // Excuse me, can you show me the way to the station? || modal
+Bạn đi thẳng rồi rẽ trái ở ngã tư thứ hai. || Go straight and turn left at the second crossroads. // Go straight ahead, then turn left at the second intersection. // Go straight and then turn left at the second junction. // Go straight, then turn left at the second crossroads. || prep article
+Có xa không? Tôi có nên đi taxi không? || Is it far? Should I take a taxi? // Is it far? Should I get a taxi? || modal
+Không cần đâu, đi bộ chỉ mất mười phút. || No need, it only takes ten minutes on foot. // You don't need to. It only takes ten minutes to walk. // There is no need. It's only a ten-minute walk. // No need, it's only a ten-minute walk. || modal phrasal || it takes + thời gian
+
+@dialogue d27 3 ✈️🗾 | Đã bao giờ đi nước ngoài
+Bạn đã bao giờ đi nước ngoài chưa? || Have you ever been abroad? // Have you ever travelled abroad? // Have you ever traveled abroad? // Have you ever been to another country? || pp question
+Mình chưa bao giờ đi, nhưng mình rất muốn đến Nhật Bản. || I have never been abroad, but I really want to go to Japan. // I've never been, but I really want to visit Japan. // I have never been abroad, but I would love to visit Japan. // I've never been abroad, but I really want to visit Japan. || pp vpat
+Mình đã đến Tokyo hai lần rồi. || I have been to Tokyo twice. // I've been to Tokyo twice. // I have visited Tokyo twice. || pp prep || have been to
+Thật à? Ở đó có đắt hơn Việt Nam nhiều không? || Really? Is it much more expensive than Vietnam? // Really? Is it a lot more expensive than Vietnam? // Really? Is it much more expensive there than in Vietnam? || compare
+
+@dialogue d28 3 📅🏡 | Kế hoạch cuối tuần
+Cuối tuần này bạn định làm gì? || What are you going to do this weekend? // What are you doing this weekend? // What do you plan to do this weekend? // What are your plans for this weekend? || future question
+Mình sẽ về quê thăm ông bà. || I am going to visit my grandparents in my hometown. // I'm going back to my hometown to visit my grandparents. // I'm going to go back to my hometown to visit my grandparents. // I will go back to my hometown to visit my grandparents. || future vpat
+Bạn sẽ đi bằng gì? || How will you get there? // How are you going to get there? // How are you going to travel? || future question
+Chắc mình sẽ đi xe khách vì nó rẻ hơn tàu. || I will probably take the coach because it is cheaper than the train. // I'll probably take the bus because it's cheaper than the train. // I will probably go by coach because it's cheaper than the train. // I'll probably take a coach because it's cheaper than the train. || future compare
+
+@dialogue d29 3 🩺 | Đi khám bệnh
+Tôi bị ho suốt một tuần nay rồi. || I have had a cough for a week. // I've had a cough for a week now. // I have been coughing for a week. // I've been coughing for a week. || pp prep || for + khoảng thời gian
+Bạn nên uống nhiều nước ấm và nghỉ ngơi. || You should drink a lot of warm water and get some rest. // You should drink plenty of warm water and rest. // You should drink lots of warm water and get some rest. // You should drink a lot of warm water and rest. || modal count
+Tôi có phải uống thuốc không? || Do I have to take any medicine? // Do I need to take medicine? // Do I have to take medicine? || modal || take medicine
+Có, bạn phải uống thuốc này hai lần một ngày. || Yes, you have to take this medicine twice a day. // Yes, you must take this medicine twice a day. // Yes, you need to take this medicine twice a day. || modal article
+
+@dialogue d30 3 📱✨ | Điện thoại mới
+Điện thoại mới của bạn trông đẹp hơn cái cũ. || Your new phone looks nicer than your old one. // Your new phone looks better than the old one. // Your new phone looks nicer than the old one. // Your new phone looks more beautiful than the old one. || compare pron
+Ừ, pin của nó cũng tốt hơn nhiều. || Yes, and its battery is much better too. // Yeah, its battery is also much better. // Yes, its battery is much better too. || compare pron
+Nó có phải là chiếc đắt nhất trong cửa hàng không? || Is it the most expensive one in the shop? // Was it the most expensive one in the store? // Is it the most expensive phone in the shop? || compare article
+Không, nhưng nó là chiếc tốt nhất mình có thể mua. || No, but it is the best one I can afford. // No, but it's the best one I can buy. // No, but it's the best one I could afford. // No, but it is the best phone I can afford. || compare modal
+
+@dialogue d31 3 📝 | Ôn thi
+Bạn đã ôn xong bài cho kỳ thi chưa? || Have you finished revising for the exam? // Have you finished studying for the exam yet? // Have you finished revising for the exam yet? // Have you finished studying for the exam? || pp vpat || finish + V-ing
+Chưa, mình mới học được một nửa thôi. || Not yet, I have only studied half of it. // Not yet. I've only done half. // Not yet, I've only studied half of it. // Not yet. I have only finished half. || pp
+Kỳ thi sẽ khó hơn năm ngoái không? || Will the exam be harder than last year? // Will the exam be more difficult than last year's? // Will the exam be harder than last year's? // Will the exam be more difficult than last year? || future compare
+Mình nghĩ vậy, nên chúng ta phải chăm chỉ hơn. || I think so, so we have to work harder. // I think so, so we must study harder. // I think so, so we need to study harder. // I think so, so we have to study harder. || modal compare
+
+@dialogue d32 3 📦🏠 | Vừa chuyển nhà
+Nghe nói bạn vừa chuyển nhà à? || I heard you have just moved house. // I heard you've just moved. // I heard you just moved. // I heard you have just moved. || pp || just + V3
+Ừ, mình đã sống ở đây được hai tuần rồi. || Yes, I have lived here for two weeks. // Yeah, I've been living here for two weeks. // Yes, I've lived here for two weeks now. // Yes, I have been here for two weeks. || pp prep
+Nhà mới có rộng hơn nhà cũ không? || Is the new place bigger than the old one? // Is your new house bigger than your old one? // Is the new house bigger than the old one? // Is your new home bigger than the old one? || compare
+Rộng hơn một chút và gần trường hơn nhiều. || It is a bit bigger and much closer to school. // It's a little bigger and much closer to my school. // It's a bit bigger and a lot closer to school. // It's slightly bigger and much closer to school. || compare
+
+@dialogue d33 3 🍕 | Đặt pizza
+Tôi muốn đặt một chiếc pizza cỡ lớn. || I would like to order a large pizza. // I'd like to order a large pizza. // I want to order a large pizza. || modal vpat article
+Khoảng ba mươi phút nữa chúng tôi sẽ giao đến. || We will deliver it in about thirty minutes. // We'll deliver it in about thirty minutes. // It will arrive in about thirty minutes. // We will deliver it in around thirty minutes. || future prep || in + thời gian = sau…
+Tôi có thể trả bằng thẻ không? || Can I pay by card? // Can I pay with a card? // Could I pay by card? || modal prep
+Được, nhưng bạn phải trả thêm phí giao hàng. || Yes, but you have to pay a delivery fee. // Sure, but you have to pay an extra delivery fee. // Yes, but you must pay a delivery fee. // Yes, but you will have to pay an extra delivery charge. || modal article
+
+@dialogue d34 3 ☕💼 | Làm thêm ở quán cà phê
+Bạn làm thêm ở quán cà phê này bao lâu rồi? || How long have you worked at this coffee shop? // How long have you been working at this café? // How long have you worked at this cafe? // How long have you been working at this coffee shop? || pp question
+Khoảng sáu tháng rồi. Mình bắt đầu từ tháng năm. || About six months. I started in May. // For about six months. I started in May. // Around six months. I started in May. || past prep
+Công việc có vất vả không? || Is the job hard? // Is the work hard? // Is it hard work? // Is the job tiring? || be
+Hơi vất vả, nhưng mình có thể luyện tiếng Anh với khách nước ngoài. || It is a bit hard, but I can practise English with foreign customers. // It's quite tiring, but I can practice my English with foreign customers. // It's a bit hard, but I can practise my English with foreign customers. // It's a little tiring, but I can practice English with foreign customers. || modal conj
+
+@dialogue d35 3 👛😟 | Mất ví
+Tôi đã làm mất ví ở đâu đó trong trung tâm thương mại. || I have lost my wallet somewhere in the shopping mall. // I've lost my wallet somewhere in the mall. // I lost my wallet somewhere in the shopping centre. // I lost my wallet somewhere in the mall. || pp past
+Bạn có nhớ lần cuối bạn dùng nó là ở đâu không? || Do you remember where you last used it? // Can you remember where you used it last? // Do you remember where you used it last? || question order || câu hỏi gián tiếp: where + S + V
+Có lẽ ở quầy thu ngân tầng hai. || Maybe at the checkout on the second floor. // Probably at the cashier on the second floor. // Maybe at the cash desk on the second floor. // Perhaps at the checkout on the second floor. || prep
+Chúng ta nên đến quầy thông tin hỏi xem. || We should go to the information desk and ask. // We should ask at the information desk. || modal
+
+@dialogue d36 3 🌧️☂️ | Ngày mai có mưa không
+Ngày mai trời có mưa không nhỉ? || Will it rain tomorrow? // Is it going to rain tomorrow? || future
+Dự báo nói trời sẽ mưa to vào buổi chiều. || The forecast says it will rain heavily in the afternoon. // The weather forecast says it is going to rain heavily in the afternoon. // The forecast says there will be heavy rain in the afternoon. // The weather forecast says it will rain heavily in the afternoon. || future prep
+Vậy mình sẽ mang theo áo mưa. || Then I will bring a raincoat. // Then I'll take a raincoat. // So I'll bring a raincoat. // Then I'll bring a raincoat. || future article
+Ý hay đấy. Đừng quên đóng cửa sổ trước khi đi nhé. || Good idea. Don't forget to close the windows before you leave. // Good idea. Do not forget to close the window before you go. // Good idea. Don't forget to close the window before you leave. // Good idea. Don't forget to close the windows before you go. || vpat conj || forget to V
+
+############ CẤP 4 · to V / V-ing, điều kiện loại 1, liên từ ############
+
+@dialogue d37 4 👔 | Phỏng vấn xin việc
+Tại sao bạn muốn làm việc ở công ty chúng tôi? || Why do you want to work for our company? // Why do you want to work at our company? // Why would you like to work for our company? || vpat question
+Vì tôi thích làm việc với khách hàng và muốn học hỏi thêm. || Because I enjoy working with customers and I want to learn more. // Because I like working with customers and want to learn more. // Because I enjoy working with clients and I want to learn more. // Because I enjoy working with customers and want to learn more. || vpat conj || enjoy + V-ing
+Bạn có ngại làm việc vào cuối tuần không? || Do you mind working at weekends? // Do you mind working on weekends? // Would you mind working at the weekend? // Do you mind working at the weekend? || vpat prep || mind + V-ing
+Không, miễn là tôi được nghỉ một ngày trong tuần. || No, as long as I can have one day off during the week. // No, as long as I get a day off during the week. // Not at all, as long as I can have a day off during the week. // No, as long as I get one day off during the week. || conj phrasal || as long as · a day off
+
+@dialogue d38 4 ☔🧺 | Nếu trời mưa
+Nếu ngày mai trời mưa, chúng ta sẽ làm gì? || If it rains tomorrow, what will we do? // What will we do if it rains tomorrow? || cond future
+Nếu trời mưa, chúng ta sẽ ở nhà xem phim. || If it rains, we will stay at home and watch a film. // If it rains, we'll stay home and watch a movie. // If it rains, we will stay at home and watch a movie. // If it rains, we'll stay at home and watch a film. || cond
+Còn nếu trời nắng thì sao? || And what if it is sunny? // What if it's sunny? // And if it is sunny? // And what if it's sunny? || cond be
+Thì chúng ta sẽ đi dã ngoại ở công viên, trừ khi bạn quá mệt. || Then we will have a picnic in the park, unless you are too tired. // Then we'll go for a picnic in the park unless you're too tired. // Then we'll have a picnic in the park, unless you're too tired. || cond conj || unless = if … not
+
+@dialogue d39 4 💻🐢 | Mạng chậm
+Mạng ở đây chậm quá, mình không tải được tài liệu. || The internet here is too slow. I can't download the document. // The internet is so slow here that I can't download the file. // The Wi-Fi here is too slow, so I can't download the document. // The internet here is very slow, so I can't download the document. || modal conj
+Bạn thử khởi động lại máy tính xem. || Try restarting your computer. // Try to restart your computer. // You should try restarting your computer. || vpat || try + V-ing = thử làm gì
+Mình thử rồi nhưng nó vẫn không chạy. || I have tried that, but it still doesn't work. // I've already tried that, but it still doesn't work. // I tried that, but it still doesn't work. // I've tried, but it still isn't working. || pp neg
+Vậy thì dùng tạm điểm phát wifi từ điện thoại của mình đi. || Then use the hotspot from my phone for now. // Then you can use my phone's hotspot for now. // Then just use my phone as a hotspot for now. // Then use my phone's hotspot for now. || modal phrasal
+
+@dialogue d40 4 🎓🎯 | Sau khi tốt nghiệp
+Sau khi tốt nghiệp bạn định làm gì? || What are you planning to do after you graduate? // What do you plan to do after graduation? // What are you going to do after you graduate? // What do you plan to do after you graduate? || vpat future
+Mình hy vọng tìm được việc ở một công ty công nghệ. || I hope to find a job at a technology company. // I hope to get a job in a tech company. // I hope to find a job at a tech company. // I hope to get a job at a technology company. || vpat article || hope to V
+Bạn có định học thạc sĩ không? || Are you going to do a master's degree? // Do you plan to study for a master's degree? // Are you planning to do a master's? // Do you plan to do a master's degree? || future vpat
+Có thể, nếu mình tiết kiệm đủ tiền. || Maybe, if I save enough money. // Perhaps, if I can save enough money. // Maybe, if I can save enough money. || cond count
+
+@dialogue d41 4 😅📄 | Quên gửi báo cáo
+Xin lỗi, mình quên gửi cho bạn bản báo cáo. || Sorry, I forgot to send you the report. // I'm sorry, I forgot to send the report to you. // Sorry, I forgot to send the report to you. || vpat past || forget to V
+Không sao, nhưng mình cần nó trước năm giờ chiều nay. || It's okay, but I need it before five this afternoon. // That's OK, but I need it by five this afternoon. // No worries, but I need it before five o'clock this afternoon. // No problem, but I need it before five this afternoon. || prep
+Mình sẽ gửi ngay khi về đến nhà. || I will send it as soon as I get home. // I'll send it as soon as I get home. // I'll send it to you as soon as I get home. || future conj || as soon as + hiện tại đơn
+Cảm ơn. Nhớ kiểm tra lại các con số trước khi gửi nhé. || Thanks. Remember to check the numbers before you send it. // Thank you. Remember to double-check the figures before sending it. // Thanks. Remember to check the figures again before you send it. // Thanks. Remember to check the numbers again before sending it. || vpat conj || remember to V
+
+@dialogue d42 4 🏃🏊 | Tập thể dục
+Dạo này mình đang cố gắng dậy sớm để chạy bộ. || These days I am trying to get up early to go running. // I'm trying to get up early to go jogging these days. // Recently I've been trying to get up early to go running. // These days I'm trying to wake up early to go running. || cont vpat
+Hay đấy! Mình thì ghét chạy bộ vì nó rất chán. || That's great! I hate running because it is so boring. // Nice! I hate jogging because it's really boring. // That's great! I hate running because it's really boring. // Great! I hate running because it's so boring. || vpat conj
+Bạn có thể thử đi bơi. Nó vui hơn nhiều. || You could try swimming. It is much more fun. // You can try swimming. It's much more fun. // You could try going swimming. It's a lot more fun. // You could try swimming. It's much more fun. || modal vpat compare
+Ừ, mình sẽ cân nhắc việc đăng ký một khóa bơi. || Yeah, I will think about signing up for a swimming course. // Yes, I'll consider signing up for swimming lessons. // Yeah, I'll consider joining a swimming class. // Yes, I'll think about signing up for a swimming course. || vpat phrasal || consider / think about + V-ing · sign up for
+
+@dialogue d43 4 🚲🌧️ | Đạp xe trong mưa
+Mặc dù trời mưa, anh ấy vẫn đạp xe đi làm. || Although it was raining, he still cycled to work. // Even though it was raining, he still rode his bike to work. // Although it rained, he still cycled to work. // Although it was raining, he still rode his bicycle to work. || conj past || although + mệnh đề (không dùng "but" nữa)
+Sao anh ấy không đi xe buýt? || Why didn't he take the bus? // Why didn't he go by bus? || past question
+Vì anh ấy muốn tiết kiệm tiền và giữ dáng. || Because he wants to save money and keep fit. // Because he wanted to save money and stay fit. // Because he wants to save money and stay in shape. // Because he wanted to save money and keep fit. || vpat conj
+Mình ngưỡng mộ anh ấy, nhưng mình sẽ không làm vậy. || I admire him, but I wouldn't do that. // I admire him, but I won't do that. // I admire him, but I would not do the same. || modal
+
+@dialogue d44 4 🎒⌛ | Đợi bạn
+Mình sẽ đợi ở đây cho đến khi bạn quay lại. || I will wait here until you come back. // I'll wait here until you get back. // I'll wait here until you come back. || future conj || until + hiện tại đơn
+Cảm ơn. Trong lúc đợi, bạn có thể trông túi giúp mình không? || Thanks. While you wait, can you look after my bag? // Thank you. While you're waiting, could you watch my bag for me? // Thanks. While you are waiting, can you keep an eye on my bag? // Thanks. While you wait, could you look after my bag? || conj modal phrasal || look after / keep an eye on
+Được thôi. Khi nào bạn xong thì nhắn cho mình nhé. || Sure. Text me when you finish. // No problem. Send me a message when you're done. // Sure. Text me when you are done. // OK. Message me when you finish. || conj
+Mình hứa sẽ không mất quá mười phút. || I promise it won't take more than ten minutes. // I promise I won't take longer than ten minutes. // I promise it will not take more than ten minutes. || vpat future
+
+@dialogue d45 4 🗣️ | Ngại nói tiếng Anh
+Mình muốn cải thiện kỹ năng nói nhưng mình ngại nói sai. || I want to improve my speaking, but I am afraid of making mistakes. // I want to improve my speaking skills, but I'm afraid of making mistakes. // I want to improve my speaking, but I'm scared of making mistakes. || vpat prep || be afraid of + V-ing
+Đừng lo. Ai học ngoại ngữ cũng mắc lỗi. || Don't worry. Everyone makes mistakes when they learn a foreign language. // Don't worry. Everybody makes mistakes when learning a foreign language. // Don't worry. Everyone who learns a foreign language makes mistakes. || sva conj || everyone + V-s
+Vậy mình nên bắt đầu từ đâu? || So where should I start? // Then where should I begin? // So where should I begin? || modal question
+Bạn nên tập nói một mình mỗi ngày, rồi thử nói chuyện với bạn bè. || You should practise speaking on your own every day, then try talking to your friends. // You should practice speaking by yourself every day, and then try to talk with your friends. // You should practise speaking alone every day, then try talking with friends. // You should practice speaking on your own every day and then try talking to friends. || modal vpat || practise + V-ing
+
+@dialogue d46 4 🏨 | Đặt phòng khách sạn
+Tôi muốn đặt một phòng đôi cho hai đêm. || I would like to book a double room for two nights. // I'd like to book a double room for two nights. // I want to book a double room for two nights. || vpat article plural
+Bạn sẽ đến vào ngày nào? || When will you arrive? // What date will you arrive? // Which day will you arrive? // When are you arriving? || future question
+Thứ sáu này. Nếu tôi đến muộn, phòng có bị hủy không? || This Friday. If I arrive late, will the room be cancelled? // This Friday. If I arrive late, will you cancel the room? // This Friday. Will my booking be cancelled if I arrive late? // This Friday. If I arrive late, will the booking be canceled? || cond passive
+Không, chúng tôi sẽ giữ phòng cho đến nửa đêm. || No, we will keep the room until midnight. // No, we'll hold the room until midnight. // No, we'll keep the room for you until midnight. || future conj
+
+@dialogue d47 4 🤝😕 | Đồng nghiệp hay đến muộn
+Mình không thích làm việc nhóm với Nam vì anh ấy hay đến muộn. || I don't like working in a group with Nam because he is often late. // I don't like working with Nam because he's often late. // I don't like doing group work with Nam because he often comes late. // I don't like working in a team with Nam because he is often late. || vpat conj order
+Bạn đã nói chuyện với anh ấy về việc đó chưa? || Have you talked to him about it? // Have you spoken to him about that? // Have you talked to him about that yet? // Have you talked with him about it? || pp prep
+Chưa, mình sợ làm anh ấy buồn. || Not yet, I am afraid of upsetting him. // Not yet. I'm afraid of making him sad. // Not yet, I'm afraid of upsetting him. // No, I'm afraid of making him upset. || vpat
+Nếu bạn nói nhẹ nhàng, anh ấy sẽ hiểu thôi. || If you say it gently, he will understand. // If you talk to him gently, he'll understand. // If you say it nicely, he'll understand. // If you speak gently, he will understand. || cond
+
+@dialogue d48 4 📲💸 | Ứng dụng quản lý chi tiêu
+Bạn dùng ứng dụng này để làm gì? || What do you use this app for? // What do you use this app to do? || question prep || use sth for
+Mình dùng nó để quản lý chi tiêu hằng tháng. || I use it to manage my monthly spending. // I use it to manage my monthly expenses. // I use it to keep track of my monthly spending. // I use it for managing my monthly spending. || vpat
+Nó có dễ dùng không? || Is it easy to use? || vpat be || easy to V
+Rất dễ, và nó nhắc mình mỗi khi mình tiêu quá nhiều. || Very easy, and it reminds me whenever I spend too much. // It's very easy, and it reminds me every time I spend too much. // Very easy, and it warns me whenever I spend too much. // It's really easy, and it reminds me when I spend too much. || sva conj count
+
+############ CẤP 5 · mệnh đề quan hệ, điều kiện loại 2, bị động ############
+
+@dialogue d49 5 🏘️ | Hàng xóm nhà bên
+Người đàn ông sống cạnh nhà bạn làm nghề gì? || What does the man who lives next door to you do? // What does the man who lives next to you do? // What is the job of the man who lives next door to you? // What does the man living next door to you do? || rel question
+Ông ấy là bác sĩ làm việc ở bệnh viện Bạch Mai. || He is a doctor who works at Bach Mai Hospital. // He's a doctor who works at Bach Mai Hospital. // He is a doctor working at Bach Mai Hospital. // He's a doctor at Bach Mai Hospital. || rel article
+Còn người phụ nữ mà mình gặp hôm qua là ai? || And who is the woman that I met yesterday? // And who was the woman I met yesterday? // Who is the woman I met yesterday? // And who was the woman that I met yesterday? || rel past
+Đó là vợ ông ấy, người dạy toán ở trường mình. || That is his wife, who teaches maths at my school. // That's his wife. She teaches math at my school. // That's his wife, who teaches maths at my school. // That's his wife, who teaches math at our school. || rel sva
+
+@dialogue d50 5 💭⚖️ | Nếu mình là bạn
+Mình không biết nên chọn công việc lương cao hay công việc mình thích. || I don't know whether to choose a well-paid job or a job I like. // I don't know if I should choose a high-paying job or a job that I enjoy. // I don't know whether I should choose a well-paid job or a job I enjoy. // I don't know whether to choose a high-paying job or a job I enjoy. || modal rel
+Nếu mình là bạn, mình sẽ chọn công việc mình thích. || If I were you, I would choose the job I like. // If I were you, I'd choose the job that I enjoy. // If I were you, I would choose the job you enjoy. // If I were you, I'd choose the job you like. || cond rel || If I were you, I would…
+Nhưng nếu mình có nhiều tiền hơn, mình có thể giúp bố mẹ. || But if I had more money, I could help my parents. // But if I earned more money, I could help my parents. || cond compare
+Đúng vậy, nhưng bạn sẽ không vui nếu ngày nào cũng phải làm việc mình ghét. || That's true, but you wouldn't be happy if you had to do something you hate every day. // True, but you would not be happy if you had to do a job you hate every day. // That's true, but you wouldn't be happy if you had to do work you hate every day. || cond rel
+
+@dialogue d51 5 ♻️🌊 | Rác thải nhựa
+Bạn có biết mỗi năm bao nhiêu rác thải nhựa được thải ra biển không? || Do you know how much plastic waste is thrown into the sea every year? // Do you know how much plastic waste ends up in the ocean every year? // Do you know how much plastic waste is dumped into the sea each year? // Do you know how much plastic is thrown into the ocean every year? || passive count
+Mình nghe nói là hàng triệu tấn. || I heard that it is millions of tonnes. // I've heard it's millions of tons. // I heard it's millions of tonnes. // I have heard that it is millions of tons. || plural
+Ở trường mình, túi nilon đã bị cấm từ năm ngoái. || At my school, plastic bags have been banned since last year. // Plastic bags have been banned at my school since last year. // At my school, plastic bags were banned last year. || passive pp
+Tốt quá. Mình nghĩ những quy định như vậy nên được áp dụng ở mọi nơi. || That's great. I think rules like that should be applied everywhere. // Great. I think such rules should be introduced everywhere. // That's good. I think rules like this should be used everywhere. // That's great. I think such rules should be applied everywhere. || passive modal
+
+@dialogue d52 5 🏛️ | Ngôi chùa cổ
+Ngôi chùa này được xây khi nào? || When was this pagoda built? || passive question
+Nó được xây vào thế kỷ mười một. || It was built in the eleventh century. || passive prep
+Nó đã từng được sửa chữa chưa? || Has it ever been repaired? // Has it ever been restored? || passive pp
+Rồi, nó đã được trùng tu hai lần, lần gần nhất là cách đây mười năm. || Yes, it has been restored twice. The last time was ten years ago. // Yes, it has been repaired twice, and the last time was ten years ago. // Yes, it has been restored twice, most recently ten years ago. || passive pp
+
+@dialogue d53 5 🌐📵 | Mạng xã hội
+Bạn có nghĩ mạng xã hội có hại cho giới trẻ không? || Do you think social media is harmful to young people? // Do you think social media is bad for young people? // Do you think social media is harmful for young people? || prep sva || harmful to
+Mình nghĩ nó có cả mặt tốt lẫn mặt xấu. || I think it has both good and bad sides. // I think it has both advantages and disadvantages. // I think it has both positive and negative sides. // I think there are both good and bad sides. || conj
+Người dùng nó quá nhiều thường bị mất ngủ. || People who use it too much often lose sleep. // People who use it too much often have trouble sleeping. // People who use it too much often can't sleep well. || rel order
+Đúng, nếu mọi người dùng nó ít hơn, họ sẽ khỏe mạnh hơn. || Right. If people used it less, they would be healthier. // True. If people used it less, they would be healthier. // Yes, if people spent less time on it, they would be healthier. // Yes, if people used it less, they would be healthier. || cond compare
+
+@dialogue d54 5 🎓💻 | Học trực tuyến
+Các lớp học trực tuyến được tổ chức từ thứ Hai đến thứ Sáu. || Online classes are held from Monday to Friday. // The online classes are held from Monday to Friday. || passive prep
+Bài giảng có được ghi lại không? || Are the lectures recorded? // Are the lessons recorded? || passive question
+Có, và chúng được gửi cho sinh viên sau mỗi buổi học. || Yes, and they are sent to students after each class. // Yes, and they are sent to the students after every lesson. // Yes, and they are sent to students after every class. // Yes, and they are sent to the students after each lesson. || passive
+Tiện thật! Nếu trường mình cũng làm vậy thì tốt biết mấy. || That's convenient! It would be great if my school did the same. // How convenient! It would be great if our university did that too. // That's so convenient! It would be great if my school did that too. // How convenient! It would be nice if my school did the same. || cond
+
+@dialogue d55 5 🚦🛵 | Giao thông thành phố
+Giao thông ở thành phố này ngày càng tệ. || The traffic in this city is getting worse and worse. // Traffic in this city is getting worse. // The traffic in this city is getting worse. || compare cont || get + so sánh hơn
+Đó là vì có quá nhiều xe máy được bán mỗi năm. || That is because too many motorbikes are sold every year. // That's because too many motorbikes are sold each year. // It's because too many motorbikes are sold every year. || passive count conj
+Nếu có nhiều tàu điện ngầm hơn, người ta sẽ ít đi xe máy hơn. || If there were more metro lines, people would use motorbikes less. // If there were more subways, people would ride motorbikes less. // If there were more metro lines, people would ride motorbikes less. // If there were more underground trains, people would use their motorbikes less. || cond there
+Mình đồng ý. Tuyến tàu mới nhất được mở năm ngoái rất đông khách. || I agree. The newest line, which was opened last year, is very busy. // I agree. The newest metro line, which opened last year, is very crowded. // I agree. The newest line, opened last year, has a lot of passengers. // I agree. The newest train line, which was opened last year, is very busy. || rel passive
+
+@dialogue d56 5 🔧📱 | Điện thoại rơi xuống nước
+Điện thoại của mình bị rơi xuống nước hôm qua. || My phone fell into the water yesterday. // My phone was dropped in the water yesterday. // I dropped my phone in the water yesterday. || past passive
+Bạn đã mang nó đi sửa chưa? || Have you had it repaired? // Have you taken it to be repaired? // Have you taken it to a repair shop? // Have you got it fixed? || pp passive || have sth repaired
+Rồi, nhưng thợ nói nó không thể sửa được. || Yes, but the repairman said it couldn't be fixed. // Yes, but the technician said it can't be repaired. // Yes, but the repairman said it could not be repaired. // Yes, but the repair shop said it can't be fixed. || passive modal
+Tiếc thật. Nếu là mình, mình sẽ mua một chiếc chống nước. || What a pity. If I were you, I would buy a waterproof one. // That's a shame. If I were you, I'd buy a waterproof phone. // Too bad. If I were you, I'd buy a waterproof one. // What a shame. If I were you, I would buy a waterproof one. || cond
+
+@dialogue d57 5 👩‍🏫 | Trường cũ, cô giáo cũ
+Đây là ngôi trường nơi mình học cấp ba. || This is the school where I studied in high school. // This is the school where I went to high school. // This is the high school I went to. // This is the high school where I studied. || rel || where = nơi mà
+Cô giáo nào là người bạn nhớ nhất? || Which teacher do you remember most? // Which teacher do you remember the most? || question compare
+Cô Hoa, người mà giờ học của cô luôn rất vui. || Ms Hoa, whose lessons were always fun. // Ms. Hoa, whose classes were always very fun. // Mrs Hoa, whose lessons were always fun. // Ms Hoa, whose lessons were always very interesting. || rel || whose = của người mà
+Bạn còn giữ liên lạc với cô ấy không? || Do you still keep in touch with her? // Are you still in touch with her? // Do you still stay in touch with her? || phrasal question || keep in touch with
+
+@dialogue d58 5 💡 | Hóa đơn tiền điện
+Hóa đơn tiền điện tháng này cao gấp đôi tháng trước. || This month's electricity bill is twice as high as last month's. // The electricity bill this month is double last month's. // This month's electricity bill is twice as much as last month's. || compare || twice as … as
+Đó là vì điều hòa được bật cả ngày. || That's because the air conditioner was on all day. // That is because the air conditioner was turned on all day. // It's because the air conditioning was switched on all day. // That's because the air conditioner was turned on all day. || passive conj
+Nếu chúng ta tắt nó khi ra ngoài, chúng ta sẽ tiết kiệm được khá nhiều. || If we turn it off when we go out, we will save quite a lot. // If we switch it off when we go out, we'll save a lot of money. // If we turn it off when we leave, we'll save quite a lot. || cond phrasal
+Ừ, và đèn cũng nên được tắt khi không có ai trong phòng. || Yes, and the lights should be turned off when nobody is in the room. // Yeah, and the lights should also be switched off when there is no one in the room. // Yes, and the lights should be turned off when no one is in the room. // Yes, and the lights should also be turned off when nobody is in the room. || passive modal there
+
+@dialogue d59 5 🗂️❤️ | Chợ đồ cũ từ thiện
+Mình nghĩ câu lạc bộ nên tổ chức một buổi chợ đồ cũ. || I think the club should organise a second-hand market. // I think the club should hold a flea market. // I think our club should organize a second-hand market. // I think the club should organise a flea market. || modal
+Ý hay! Tiền thu được có thể được dùng để giúp trẻ em vùng cao. || Great idea! The money raised could be used to help children in the mountains. // Good idea! The money we make can be used to help children in mountainous areas. // Great idea! The money could be used to help children in mountain areas. // Good idea! The money raised can be used to help children in remote mountain areas. || passive modal
+Ai sẽ chịu trách nhiệm quảng bá sự kiện? || Who will be responsible for promoting the event? // Who will be in charge of advertising the event? // Who is going to be responsible for promoting the event? || future vpat || be responsible for + V-ing
+Những bạn giỏi thiết kế có thể làm áp phích. || Members who are good at design can make the posters. // People who are good at designing can make posters. // Those who are good at design can make the posters. // Students who are good at design can make posters. || rel prep
+
+@dialogue d60 5 🌏 | Sống ở nước ngoài
+Nếu được chọn, bạn sẽ sống ở nước nào? || If you could choose, which country would you live in? // Which country would you live in if you could choose? // If you had the choice, which country would you live in? || cond prep
+Chắc là Úc, nơi mà khí hậu ấm và người dân thân thiện. || Probably Australia, where the weather is warm and people are friendly. // Probably Australia, where the climate is warm and the people are friendly. // I'd probably choose Australia, where the climate is warm and the people are friendly. || rel
+Bạn có lo về việc phải xa gia đình không? || Are you worried about being far from your family? // Would you worry about being away from your family? // Are you worried about living far away from your family? // Would you be worried about being far from your family? || vpat prep || worry about + V-ing
+Có chứ, nhưng mình nghĩ mình sẽ quen dần. || Of course, but I think I would get used to it. // Yes, but I think I'd get used to it over time. // Of course, but I think I'll get used to it. // Sure, but I think I would gradually get used to it. || phrasal cond || get used to
+
+############ CẤP 6 · tổng hợp, câu tường thuật, cách nói tự nhiên ############
+
+@dialogue d61 6 😤🏨 | Phàn nàn ở khách sạn
+Xin lỗi, máy điều hòa trong phòng tôi không hoạt động. || Excuse me, the air conditioner in my room isn't working. // Excuse me, the air conditioning in my room doesn't work. // Sorry, the air conditioner in my room is not working. // Excuse me, the air conditioner in my room doesn't work. || cont neg
+Chúng tôi rất xin lỗi. Tôi sẽ cho người lên kiểm tra ngay. || We are very sorry. I will send someone up to check it right away. // We're terribly sorry. I'll have someone check it straight away. // We're very sorry. I'll send someone to check it right away. // I'm so sorry. I'll send someone up to look at it right away. || future phrasal
+Nếu không sửa được, tôi có thể đổi phòng không? || If it can't be fixed, can I change rooms? // If you can't fix it, could I move to another room? // If it can't be repaired, can I change rooms? // If it can't be fixed, could I switch rooms? || cond passive
+Tất nhiên, và chúng tôi sẽ tặng anh bữa sáng miễn phí vì sự bất tiện này. || Of course, and we will give you a free breakfast for the inconvenience. // Certainly, and we'll offer you free breakfast to make up for the inconvenience. // Of course, and we'll give you a free breakfast for the inconvenience. // Of course, and breakfast will be free for you because of the inconvenience. || future article
+
+@dialogue d62 6 🗨️📅 | Sếp nói gì
+Lúc nãy sếp gọi cho bạn nói gì vậy? || What did the boss say when he called you earlier? // What did the boss say on the phone just now? // What did your boss say when she called you earlier? // What did the boss say when he called earlier? || past question
+Anh ấy nói rằng cuộc họp đã bị hoãn đến thứ Năm. || He said that the meeting had been postponed until Thursday. // He said the meeting had been put off until Thursday. // He said that the meeting was postponed until Thursday. // He said the meeting had been postponed to Thursday. || passive phrasal || put off = postpone · lùi thì khi tường thuật
+Anh ấy có hỏi bạn đã làm xong bài thuyết trình chưa? || Did he ask whether you had finished the presentation? // Did he ask if you had finished the presentation? // Did he ask if you'd finished your presentation? // Did he ask whether you had finished your presentation? || question pp || ask if / whether + S + V
+Có, và anh ấy bảo mình gửi bản nháp trước thứ Tư. || Yes, and he told me to send the draft before Wednesday. // Yes, and he asked me to send him the draft by Wednesday. // Yes, and he told me to send the draft by Wednesday. // Yes, he told me to send him the draft before Wednesday. || vpat prep
+
+@dialogue d63 6 🙏🍦 | Rủ bạn đi chơi
+Đi với mình đi, chỉ một tiếng thôi mà. || Come with me, it's only for an hour. // Come on, come with me. It's just one hour. // Come with me. It will only take an hour. // Please come with me, it's only one hour. || phrasal
+Mình muốn lắm, nhưng mình còn cả đống việc phải làm. || I'd love to, but I have loads of work to do. // I would love to, but I've got a lot of work to do. // I'd love to, but I still have tons of work to do. // I would love to, but I still have a lot of work to do. || phrasal vpat count || I'd love to, but…
+Thôi mà, nghỉ một chút sẽ giúp bạn làm việc hiệu quả hơn. || Come on, a short break will help you work more effectively. // Come on, taking a break will help you work better. // Come on, a little break will help you work more efficiently. // Come on, a short break will help you work better. || compare vpat || help sb V
+Được rồi, nhưng chúng ta phải về trước chín giờ đấy. || All right, but we have to be back before nine. // OK, but we must be back by nine. // Fine, but we have to get back before nine. // Alright, but we have to come back before nine o'clock. || modal
+
+@dialogue d64 6 🧩 | Hiểu lầm
+Hình như bạn hiểu lầm ý mình rồi. || I think you've misunderstood what I meant. // I think you misunderstood me. // It seems you have misunderstood what I meant. // I think you have misunderstood me. || pp
+Ý bạn là bạn không giận mình à? || Do you mean you're not angry with me? // You mean you aren't angry with me? // Do you mean that you are not angry with me? // So you're not mad at me? || question prep || angry with sb
+Không hề. Mình chỉ hơi thất vọng vì kế hoạch bị thay đổi phút chót. || Not at all. I was just a bit disappointed that the plan was changed at the last minute. // Not at all. I'm just a little disappointed because the plan was changed at the last minute. // Not at all. I was just a bit disappointed because the plan changed at the last minute. || passive phrasal || at the last minute
+Lần sau mình sẽ báo cho bạn sớm hơn. || Next time I will let you know earlier. // I'll tell you earlier next time. // Next time I'll let you know sooner. // I'll let you know earlier next time. || future phrasal compare || let sb know
+
+@dialogue d65 6 🔎📘 | Tìm việc làm thêm
+Mình đang tìm một công việc bán thời gian không ảnh hưởng đến việc học. || I'm looking for a part-time job that doesn't affect my studies. // I am looking for a part-time job which won't affect my studies. // I'm looking for a part-time job that won't affect my studies. // I am looking for a part-time job that does not affect my studies. || rel cont
+Bạn đã thử hỏi ở trung tâm hỗ trợ sinh viên chưa? || Have you tried asking at the student support centre? // Have you tried asking the student support center? // Have you tried asking at the student services office? // Have you tried the student support centre? || pp vpat
+Rồi, họ khuyên mình nên làm gia sư. || Yes, they advised me to become a tutor. // Yes, they suggested that I work as a tutor. // Yes, they advised me to work as a tutor. // Yes, they recommended that I become a tutor. || vpat || advise sb to V
+Nghe hợp lý đấy, vì bạn giỏi toán mà. || That makes sense, since you're good at maths. // Sounds reasonable, because you are good at math. // That makes sense because you're good at maths. // That sounds sensible, since you're good at math. || phrasal conj prep
+
+@dialogue d66 6 👟↩️ | Trả lại giày
+Tôi muốn trả lại đôi giày này vì nó quá chật. || I would like to return these shoes because they are too tight. // I'd like to return these shoes because they're too small. // I want to return these shoes because they are too tight. // I'd like to return these shoes because they're too tight. || plural vpat pron || shoes là số nhiều → these / they
+Anh có còn giữ hóa đơn không ạ? || Do you still have the receipt? // Have you still got the receipt? // Do you still have your receipt? || question order
+Có đây. Tôi mua chúng cách đây ba ngày. || Here it is. I bought them three days ago. // Yes, here it is. I bought them three days ago. // Here you are. I bought them three days ago. || past pron
+Anh có thể đổi sang cỡ khác hoặc được hoàn tiền. || You can exchange them for another size or get a refund. // You can change them for a different size or get your money back. // You can swap them for another size or get a refund. // You can exchange them for a different size or have a refund. || modal phrasal || exchange sth for
+
+@dialogue d67 6 😰📖 | Lo trước kỳ thi IELTS
+Còn hai tháng nữa là thi rồi mà mình vẫn chưa sẵn sàng. || The exam is in two months and I'm still not ready. // There are only two months left before the exam, and I am still not ready. // Only two months to go until the exam, and I'm still not ready. // The exam is in two months, but I'm still not ready. || there neg order
+Đừng tự tạo áp lực cho mình quá. Bạn đã tiến bộ nhiều rồi. || Don't put too much pressure on yourself. You have improved a lot. // Don't put so much pressure on yourself. You've made a lot of progress. // Don't put too much pressure on yourself. You've improved a lot. // Don't put yourself under too much pressure. You have made a lot of progress. || phrasal pp pron
+Mình sẽ đỡ lo hơn nếu điểm Reading của mình ổn định hơn. || I would feel less worried if my Reading score were more stable. // I'd worry less if my reading scores were more consistent. // I would be less worried if my Reading score was more stable. // I'd be less anxious if my reading score were more stable. || cond compare
+Vậy hãy tập trung làm một bài Reading mỗi ngày và xem lại từng câu sai. || Then focus on doing one Reading test every day and review every wrong answer. // So focus on doing one reading test a day and go over each mistake. // Then concentrate on doing a reading test every day and check every question you got wrong. // Then focus on doing one reading test a day and review each wrong answer. || vpat phrasal || focus on + V-ing · go over
+
+@dialogue d68 6 🌱🏫 | Đi tình nguyện
+Hè này nhóm mình sẽ đi tình nguyện ở một ngôi làng ở Hà Giang. || This summer my group is going to volunteer in a village in Ha Giang. // This summer our group will do volunteer work in a village in Ha Giang. // Our group is going to volunteer in a village in Ha Giang this summer. // This summer my group will volunteer in a village in Ha Giang. || future prep
+Các bạn sẽ làm những việc gì ở đó? || What kind of work will you do there? // What will you do there? // What are you going to do there? || future question
+Chúng mình sẽ dạy tiếng Anh cho trẻ em và giúp sửa lại lớp học bị hỏng do lũ. || We will teach English to children and help repair a classroom that was damaged by the flood. // We'll teach the children English and help fix a classroom damaged by floods. // We are going to teach children English and help repair a classroom which was damaged by the flood. // We'll teach English to the kids and help repair a classroom that was damaged in the flood. || rel passive
+Thật ý nghĩa. Nếu còn chỗ, mình có thể tham gia không? || That's so meaningful. If there's still room, can I join? // How meaningful! If there are still places, could I join you? // That's really meaningful. If there's space left, can I join? // That's very meaningful. If there is still a place, can I join? || cond there
+
+@dialogue d69 6 🎁💐 | Quà cho mẹ
+Mình không biết nên tặng gì cho mẹ nhân ngày Phụ nữ Việt Nam. || I don't know what to give my mother for Vietnamese Women's Day. // I don't know what to get my mum for Vietnamese Women's Day. // I don't know what to give my mom for Women's Day. // I have no idea what to give my mother for Vietnamese Women's Day. || vpat || what to V
+Sao bạn không tự nấu cho mẹ một bữa tối? || Why don't you cook dinner for her yourself? // Why don't you make dinner for your mother yourself? // Why don't you cook her a dinner yourself? // Why not cook dinner for her yourself? || question pron || Why don't you…? = gợi ý
+Ý hay, nhưng mình nấu ăn không giỏi lắm. || Good idea, but I'm not very good at cooking. // That's a good idea, but I'm not a very good cook. // Nice idea, but I'm not very good at cooking. // Good idea, but I am not very good at cooking. || prep vpat neg
+Không sao, điều quan trọng là tấm lòng của bạn. || Never mind. It's the thought that counts. // Don't worry. It's the thought that counts. // It doesn't matter. What matters is that it comes from your heart. // That's fine. The important thing is your effort. || phrasal || It's the thought that counts
+
+@dialogue d70 6 🧑‍💻📊 | Họp nhóm dự án
+Chúng ta hãy bắt đầu cuộc họp nhé, mọi người đến đủ rồi. || Let's start the meeting. Everyone is here. // Let's begin the meeting; everybody is here now. // Let's get started. Everyone is here. // Let's start the meeting now that everyone is here. || sva phrasal || everyone + is
+Trước tiên, ai có thể tóm tắt những gì chúng ta đã làm tuần trước? || First, can someone sum up what we did last week? // First of all, could someone summarise what we did last week? // First, could anyone summarize what we did last week? // To begin with, can someone summarise what we did last week? || modal past phrasal || sum up
+Chúng ta đã hoàn thành bản thiết kế, nhưng phần kiểm thử vẫn chưa được thực hiện. || We have finished the design, but the testing hasn't been done yet. // We've completed the design, but the testing has not been done yet. // We finished the design, but the testing hasn't been done yet. // We've finished the design, but the testing still hasn't been done. || pp passive
+Vậy chúng ta cần chia việc rõ ràng hơn để kịp hạn chót. || So we need to divide the work more clearly to meet the deadline. // Then we need to share out the tasks more clearly so that we meet the deadline. // So we need to split the work more clearly to meet the deadline. // Then we need to divide the tasks more clearly to meet the deadline. || vpat compare phrasal || meet the deadline
+
+@dialogue d71 6 🗓️💒 | Xin nghỉ phép
+Em có thể xin nghỉ thứ Sáu tuần sau được không ạ? || Could I take next Friday off? // May I have next Friday off? // Can I take next Friday off, please? // Would it be possible for me to take next Friday off? || modal phrasal || take a day off
+Có việc gì quan trọng à? || Is it something important? // Is something important happening? // Do you have something important to do? // Is there something important? || question
+Vâng, em phải về quê dự đám cưới của chị họ. || Yes, I have to go back to my hometown for my cousin's wedding. // Yes, I need to go home for my cousin's wedding. // Yes, I have to go back to my hometown to attend my cousin's wedding. || modal pron
+Được, miễn là em bàn giao công việc cho đồng nghiệp trước khi đi. || Fine, as long as you hand over your work to a colleague before you leave. // OK, as long as you hand your work over to a colleague before you go. // That's fine, as long as you pass your work to a colleague before you leave. || conj phrasal || hand over
+
+@dialogue d72 6 🌟 | Nhìn lại một năm
+Năm nay là năm mình học được nhiều nhất từ trước đến giờ. || This year is the year I have learned the most so far. // This has been the year I've learned the most. // This year I have learned more than ever before. // This is the year in which I have learned the most so far. || compare pp rel
+Điều gì đã thay đổi bạn nhiều nhất? || What has changed you the most? // What changed you the most? || pp compare
+Có lẽ là việc tự học mỗi ngày, dù chỉ ba mươi phút. || Probably studying on my own every day, even if it was only thirty minutes. // Maybe studying by myself every day, even for just thirty minutes. // Probably studying on my own every day, even if only for thirty minutes. // Perhaps self-studying every day, even if it was only for thirty minutes. || vpat conj
+Nếu bạn cứ giữ thói quen này, năm sau bạn sẽ còn tiến bộ hơn nữa. || If you keep up this habit, you will make even more progress next year. // If you keep this habit, you'll improve even more next year. // If you stick to this habit, you'll make even more progress next year. // If you keep up this habit, you'll improve even more next year. || cond phrasal compare || keep up / stick to
+
+############ TRUYỆN NGẮN · mỗi ngày một truyện, dễ đến khó ############
+
+@story s01 1 🧑‍🎓 | Một ngày của Minh
+Minh là sinh viên năm nhất ở Hà Nội. || Minh is a first-year student in Hanoi. || be article
+Mỗi sáng, cậu ấy dậy lúc sáu giờ và uống một cốc sữa. || Every morning, he gets up at six and drinks a glass of milk. // Every morning he wakes up at six o'clock and drinks a glass of milk. // Every morning, he gets up at six and has a glass of milk. || sva prep
+Cậu ấy đi học bằng xe đạp vì trường không xa. || He goes to school by bike because the school is not far. // He cycles to school because his school isn't far. // He goes to university by bike because it is not far. // He rides his bike to school because the school is not far. || sva prep conj
+Buổi chiều, Minh làm thêm ở một hiệu sách nhỏ. || In the afternoon, Minh works part-time at a small bookshop. // In the afternoons, Minh works part-time in a small bookstore. // In the afternoon, Minh works part-time at a small bookstore. || sva article prep
+Buổi tối, cậu ấy học tiếng Anh và gọi điện cho mẹ. || In the evening, he studies English and calls his mother. // In the evenings, he studies English and phones his mum. // In the evening, he studies English and calls his mom. || sva pron
+Minh rất bận, nhưng cậu ấy luôn vui vẻ. || Minh is very busy, but he is always happy. // Minh is very busy but he is always cheerful. // Minh is very busy, but he's always cheerful. || be order
+
+@story s02 1 🐱🛋️ | Con mèo lười
+Bà tôi có một con mèo béo tên là Mập. || My grandmother has a fat cat named Map. // My grandma has a fat cat called Map. // My grandmother has a fat cat called Map. || sva article
+Nó ngủ gần như cả ngày trên ghế sofa. || It sleeps almost all day on the sofa. // It sleeps on the sofa almost all day. || sva
+Nó không thích chuột và không bao giờ bắt chúng. || It doesn't like mice and it never catches them. // It does not like mice and never catches them. // It doesn't like mice and never catches them. || neg plural order || mouse → mice
+Nhưng khi bà mở tủ lạnh, nó luôn chạy đến rất nhanh. || But when my grandmother opens the fridge, it always runs to her very fast. // But when Grandma opens the fridge, it always comes running very quickly. // But when my grandma opens the fridge, it always runs over very quickly. || sva order conj
+Bà nói Mập là con mèo thông minh nhất thế giới. || My grandmother says Map is the smartest cat in the world. // Grandma says Map is the cleverest cat in the world. // My grandma says that Map is the smartest cat in the world. || sva compare
+
+@story s03 1 🥬🐟 | Chợ sáng đầu phố
+Có một khu chợ nhỏ ở cuối phố nhà tôi. || There is a small market at the end of my street. || there prep
+Chợ mở cửa từ năm giờ sáng. || The market opens at five in the morning. // The market is open from five in the morning. // The market opens from five o'clock in the morning. || sva prep
+Người ta bán rau, hoa quả, cá và thịt tươi. || People sell vegetables, fruit, fish and fresh meat. // They sell vegetables, fruit, fish and fresh meat. // People sell fresh vegetables, fruit, fish and meat. || plural count
+Mẹ tôi đi chợ mỗi sáng và luôn mặc cả. || My mother goes to the market every morning and always bargains. // My mom goes to the market every morning and she always bargains. // My mum goes to the market every morning and always haggles. || sva order
+Tôi không thích đi chợ vì ở đó rất ồn. || I don't like going to the market because it is very noisy there. // I do not like going to the market because it's very noisy. // I don't like going to the market because it's very noisy there. || neg conj vpat
+
+@story s04 1 ✉️🍁 | Người bạn qua thư
+Tôi có một người bạn qua thư ở Canada tên là Emma. || I have a pen pal in Canada named Emma. // I have a pen friend in Canada called Emma. // I have a pen pal in Canada called Emma. || article
+Cô ấy mười chín tuổi và học ngành y. || She is nineteen years old and she studies medicine. // She's nineteen and studies medicine. // She is nineteen and she studies medicine. || be sva
+Chúng tôi viết email cho nhau mỗi tuần. || We write emails to each other every week. // We email each other every week. // We send emails to each other every week. || plural pron
+Emma muốn học tiếng Việt, còn tôi muốn giỏi tiếng Anh. || Emma wants to learn Vietnamese, and I want to be good at English. // Emma wants to learn Vietnamese, and I want to get better at English. // Emma wants to learn Vietnamese, while I want to be good at English. || sva vpat
+Chúng tôi giúp nhau sửa lỗi ngữ pháp. || We help each other correct our grammar mistakes. // We help each other fix grammar mistakes. // We help each other correct grammar mistakes. || plural pron
+
+@story s05 1 🪴🛏️ | Căn phòng của Lan
+Phòng của Lan không lớn nhưng rất sạch. || Lan's room is not big, but it is very clean. // Lan's room isn't big but it's very clean. // Lan's room is not big but very clean. || pron neg
+Có một cái giường, một cái bàn và hai cái ghế. || There is a bed, a desk and two chairs. // There is a bed, a table and two chairs. // There's a bed, a desk and two chairs. || there plural article
+Trên tường có nhiều ảnh của gia đình cô ấy. || There are many photos of her family on the wall. // There are a lot of pictures of her family on the walls. // There are lots of photos of her family on the wall. || there plural pron
+Cạnh cửa sổ có một chậu cây nhỏ. || There is a small plant next to the window. // There's a small potted plant next to the window. // Next to the window, there is a small plant. || there prep
+Lan thích ngồi ở đó và đọc sách vào buổi tối. || Lan likes to sit there and read books in the evening. // Lan likes sitting there and reading in the evenings. // Lan likes sitting there and reading books in the evening. || sva vpat
+
+@story s06 2 🚌😱 | Chuyến xe buýt nhầm
+Sáng thứ Hai tuần trước, tôi dậy muộn. || Last Monday morning, I got up late. // Last Monday morning I woke up late. // On Monday morning last week, I got up late. || past
+Tôi vội vàng chạy ra bến và lên chiếc xe buýt đầu tiên. || I hurried to the bus stop and got on the first bus. // I ran to the bus stop in a hurry and got on the first bus. // I rushed to the bus stop and got on the first bus. || past phrasal || get on
+Hai mươi phút sau, tôi nhận ra mình đang đi nhầm xe. || Twenty minutes later, I realised I was on the wrong bus. // Twenty minutes later I realized I was on the wrong bus. // Twenty minutes later, I realised that I was on the wrong bus. || past article
+Tôi xuống xe và gọi taxi, nhưng đường rất tắc. || I got off the bus and called a taxi, but the traffic was very heavy. // I got off and took a taxi, but the roads were very busy. // I got off the bus and called a taxi, but there was a lot of traffic. // I got off the bus and called a taxi, but the traffic was terrible. || past phrasal
+Khi tôi đến lớp, mọi người đang làm bài kiểm tra. || When I arrived at class, everyone was doing a test. // When I got to class, everybody was taking a test. // When I arrived at class, everyone was taking a test. // When I got to the classroom, everyone was doing a test. || past cont
+Từ hôm đó, tôi luôn đặt hai cái báo thức. || Since that day, I have always set two alarms. // Since then, I always set two alarms. // From that day on, I have always set two alarms. // Since that day I always set two alarms. || pp plural
+
+@story s07 2 🌦️🎸 | Cơn mưa bất chợt
+Chiều hôm qua, tôi và Hà đang đi dạo ở công viên. || Yesterday afternoon, Ha and I were walking in the park. // Yesterday afternoon, Ha and I were taking a walk in the park. || cont past pron || Ha and I (không nói "I and Ha")
+Đột nhiên, trời tối lại và bắt đầu mưa to. || Suddenly, the sky got dark and it started to rain heavily. // Suddenly the sky went dark and it began to rain hard. // Suddenly, it got dark and started raining heavily. || past vpat
+Chúng tôi không mang ô nên chạy vào một quán cà phê. || We didn't bring an umbrella, so we ran into a café. // We did not have an umbrella, so we ran into a coffee shop. // We didn't have an umbrella, so we ran into a cafe. // We didn't bring umbrellas, so we ran into a coffee shop. || past neg conj
+Trong quán, một người đàn ông đang chơi đàn ghi-ta. || In the café, a man was playing the guitar. // Inside the coffee shop, a man was playing the guitar. // In the cafe, a man was playing the guitar. || cont article
+Chúng tôi gọi hai cốc trà nóng và nghe nhạc đến khi tạnh mưa. || We ordered two cups of hot tea and listened to the music until the rain stopped. // We ordered two hot teas and listened to music until the rain stopped. // We ordered two cups of hot tea and listened to the music until it stopped raining. || past plural conj
+
+@story s08 2 🍳🧂 | Bữa tối đầu tiên tự nấu
+Tháng trước, bố mẹ tôi đi công tác một tuần. || Last month, my parents went on a business trip for a week. // Last month my parents were away on business for a week. || past prep
+Tôi quyết định tự nấu bữa tối cho em trai. || I decided to cook dinner for my younger brother myself. // I decided to make dinner for my little brother by myself. // I decided to cook dinner for my brother myself. || past vpat
+Tôi xem một video trên mạng và làm theo từng bước. || I watched a video online and followed every step. // I watched an online video and followed it step by step. // I watched a video on the internet and followed each step. || past
+Nhưng tôi cho quá nhiều muối nên món canh rất mặn. || But I put in too much salt, so the soup was very salty. // But I added too much salt, so the soup was very salty. // But I used too much salt, so the soup was really salty. || past count conj
+Em trai tôi vẫn ăn hết và nói: "Ngon lắm!". || My brother still ate it all and said, "It's delicious!" // My little brother still finished it and said, "Very tasty!" // My younger brother still ate everything and said, "It's very good!" || past
+
+@story s09 2 👔🏢 | Ngày đầu đi làm
+Thứ Hai vừa rồi là ngày đầu tiên tôi đi làm ở một công ty du lịch. || Last Monday was my first day at a travel company. // Last Monday was my first day of work at a travel company. // Last Monday was my first day working at a travel agency. || past article
+Tôi mặc áo sơ mi trắng và đến sớm mười lăm phút. || I wore a white shirt and arrived fifteen minutes early. // I put on a white shirt and got there fifteen minutes early. || past order
+Quản lý giới thiệu tôi với mọi người trong văn phòng. || The manager introduced me to everyone in the office. // My manager introduced me to everybody in the office. || past prep || introduce sb to sb
+Buổi sáng tôi đọc tài liệu, còn buổi chiều tôi trả lời email của khách. || In the morning I read documents, and in the afternoon I answered customers' emails. // I read documents in the morning and answered emails from customers in the afternoon. // In the morning I read some documents, and in the afternoon I replied to customers' emails. || past plural pron
+Tôi rất mệt nhưng cảm thấy mình đã học được nhiều điều. || I was very tired, but I felt that I had learned a lot. // I was really tired but I felt I learned a lot. // I was very tired, but I felt I had learnt a lot. || past
+
+@story s10 2 🕯️ | Mất điện
+Tối thứ Bảy, cả khu phố tôi bị mất điện. || On Saturday evening, there was a power cut in my whole neighbourhood. // On Saturday night, my whole neighborhood lost power. // On Saturday evening, the power went out in my whole neighbourhood. // On Saturday night, there was a power cut in my whole neighborhood. || past there prep
+Lúc đó, tôi đang xem một trận bóng đá trên tivi. || At that time, I was watching a football match on TV. // I was watching a football game on TV at that time. // At that moment, I was watching a football match on TV. || cont prep
+Mẹ tôi tìm thấy vài cây nến trong ngăn kéo. || My mother found some candles in the drawer. // My mom found a few candles in a drawer. // My mum found some candles in the drawer. || past count plural
+Cả nhà ngồi ngoài ban công và kể chuyện cho nhau nghe. || The whole family sat on the balcony and told each other stories. // My whole family sat on the balcony and told stories to each other. || past plural prep
+Đó là buổi tối vui nhất trong tháng. || It was the best evening of the month. // That was the happiest evening of the month. // It was the most fun evening of the month. || compare past
+
+@story s11 3 🏊 | Học bơi ở tuổi hai mươi
+Tôi không biết bơi cho đến năm ngoái. || I couldn't swim until last year. // I could not swim until last year. // I didn't know how to swim until last year. || modal past
+Năm ngoái, tôi đăng ký một khóa học ở bể bơi gần trường. || Last year, I signed up for a course at the swimming pool near my school. // Last year I signed up for a swimming course at the pool near my university. // Last year, I registered for a course at the swimming pool near my school. || past phrasal
+Những buổi đầu, tôi sợ nước hơn tôi nghĩ. || In the first lessons, I was more afraid of the water than I expected. // At first, I was more scared of the water than I thought. // In the first few lessons, I was more afraid of water than I had thought. || compare past
+Bây giờ, tôi có thể bơi năm mươi mét mà không cần dừng lại. || Now I can swim fifty metres without stopping. // Now I can swim fifty meters without stopping. // I can now swim fifty metres without stopping. || modal vpat || without + V-ing
+Tháng sau, tôi sẽ thử bơi ở biển lần đầu tiên. || Next month, I will try swimming in the sea for the first time. // Next month I'm going to try swimming in the sea for the first time. // Next month, I'll try to swim in the sea for the first time. || future vpat
+
+@story s12 3 🍜🍜 | Hai quán phở
+Trên phố tôi có hai quán phở nằm cạnh nhau. || There are two pho restaurants next to each other on my street. // On my street there are two pho shops next to each other. // There are two pho restaurants side by side on my street. || there plural prep
+Quán bên trái rẻ hơn, nhưng quán bên phải ngon hơn. || The one on the left is cheaper, but the one on the right is tastier. // The shop on the left is cheaper, but the one on the right is better. // The restaurant on the left is cheaper, but the one on the right is more delicious. || compare prep
+Quán bên phải cũng đông khách nhất phố. || The one on the right is also the busiest on the street. // The restaurant on the right is also the most crowded on the street. // The shop on the right also has the most customers on the street. || compare
+Tôi đã ăn ở cả hai quán nhiều lần. || I have eaten at both restaurants many times. // I've eaten at both places many times. // I have eaten at both shops lots of times. || pp
+Nếu bạn đến chơi, tôi sẽ đưa bạn đến quán bên phải. || If you visit me, I will take you to the one on the right. // If you come to visit, I'll take you to the restaurant on the right. // If you come over, I'll take you to the one on the right. || cond future
+
+@story s13 3 🚲👴 | Chiếc xe đạp của ông
+Ông tôi đã dùng chiếc xe đạp này hơn bốn mươi năm. || My grandfather has used this bicycle for more than forty years. // My grandpa has had this bike for over forty years. // My grandfather has used this bike for over forty years. || pp prep
+Nó gần bằng tuổi bố tôi. || It is almost as old as my father. // It's almost as old as my dad. // It's nearly as old as my father. || compare || as … as
+Ông nói rằng xe đạp tốt cho sức khỏe hơn xe máy. || He says that a bicycle is better for your health than a motorbike. // He says bikes are better for your health than motorbikes. // He says cycling is healthier than riding a motorbike. // He says that bicycles are better for health than motorbikes. || compare sva
+Mỗi sáng, ông vẫn đạp xe ba cây số đến chợ. || Every morning, he still cycles three kilometres to the market. // Every morning he still rides it three kilometers to the market. // Every morning, he still cycles three kilometers to the market. || sva order
+Tôi hy vọng mình sẽ khỏe như ông khi về già. || I hope I will be as healthy as him when I get old. // I hope I'll be as healthy as he is when I'm old. // I hope I will be as fit as my grandfather when I am old. || future compare
+
+@story s14 3 🎤 | Cuộc thi hùng biện
+Trường tôi vừa thông báo một cuộc thi hùng biện tiếng Anh. || My school has just announced an English speaking contest. // My university has just announced an English speech competition. // My school has just announced an English public speaking competition. || pp article
+Bạn thân tôi muốn tôi tham gia, nhưng tôi rất ngại. || My best friend wants me to take part, but I am very shy. // My best friend wants me to join, but I'm really nervous. // My best friend wants me to enter, but I feel very shy. || vpat sva || want sb to V
+Cô ấy nói tôi nên luyện nói trước gương mỗi tối. || She says I should practise speaking in front of the mirror every evening. // She says I should practice speaking in front of a mirror every night. // She told me I should practise speaking in front of the mirror every evening. || modal vpat
+Tôi đã viết xong bài nói, nhưng tôi chưa thuộc. || I have finished writing my speech, but I haven't learned it by heart yet. // I've finished writing the speech, but I haven't memorised it yet. // I have finished my speech, but I have not memorized it yet. || pp phrasal || learn by heart
+Tuần sau, tôi sẽ đứng trên sân khấu trước hai trăm người. || Next week, I will stand on the stage in front of two hundred people. // Next week I'll be on stage in front of two hundred people. // Next week, I'm going to stand on stage in front of two hundred people. || future prep
+
+@story s15 3 🍅🪴 | Cây cà chua trên ban công
+Tôi đã trồng một cây cà chua trên ban công từ tháng trước. || I have grown a tomato plant on my balcony since last month. // I planted a tomato plant on my balcony last month. // I've been growing a tomato plant on my balcony since last month. || pp prep
+Nó lớn nhanh hơn tôi mong đợi. || It has grown faster than I expected. // It grows faster than I expected. // It is growing faster than I expected. || compare
+Tôi phải tưới nước cho nó hai lần một ngày vì trời rất nóng. || I have to water it twice a day because it is very hot. // I must water it twice a day because the weather is very hot. // I need to water it twice a day because it's very hot. || modal conj
+Tuần này, những quả cà chua đầu tiên đã chuyển sang màu đỏ. || This week, the first tomatoes have turned red. // The first tomatoes turned red this week. // This week the first tomatoes have become red. || pp plural
+Có lẽ cuối tuần này tôi sẽ có món salad từ chính cây mình trồng. || Maybe this weekend I will have a salad from my own plant. // Perhaps this weekend I'll make a salad with tomatoes I grew myself. // I will probably have a salad with my own tomatoes this weekend. || future
+
+@story s16 4 💰💻 | Tiết kiệm mua máy tính
+Nam muốn mua một chiếc máy tính mới để học lập trình. || Nam wants to buy a new laptop to learn programming. // Nam wants to buy a new computer to learn coding. // Nam wants to buy a new computer to study programming. || vpat sva
+Vì bố mẹ không thể cho tiền, cậu ấy quyết định đi làm thêm. || Because his parents can't give him the money, he decides to get a part-time job. // Since his parents cannot give him money, he decided to work part-time. // As his parents can't give him the money, he decides to find a part-time job. // Because his parents could not give him money, he decided to get a part-time job. || conj vpat
+Cậu ấy ngừng mua trà sữa và bắt đầu nấu cơm ở nhà. || He stops buying bubble tea and starts cooking at home. // He stopped buying milk tea and started cooking at home. // He stopped buying bubble tea and began to cook at home. || vpat || stop + V-ing = bỏ thói quen
+Nếu cậu ấy tiết kiệm được hai triệu mỗi tháng, cậu ấy sẽ đủ tiền vào tháng sáu. || If he saves two million dong a month, he will have enough money by June. // If he can save two million each month, he'll have enough by June. // If he saves two million every month, he will have enough money in June. || cond count
+Dù việc này không dễ, Nam chưa bao giờ nghĩ đến chuyện bỏ cuộc. || Although it is not easy, Nam has never thought about giving up. // Even though it isn't easy, Nam has never thought of giving up. // Although this is not easy, Nam has never considered giving up. || conj vpat phrasal || give up
+
+@story s17 4 👵🗺️ | Bà cụ lạc đường
+Khi đang đợi xe buýt, tôi thấy một bà cụ trông rất lo lắng. || While I was waiting for the bus, I saw an old woman who looked very worried. // When I was waiting for the bus, I saw an old lady looking very worried. // While waiting for the bus, I saw an elderly woman who looked very worried. || conj cont rel
+Bà ấy không nhớ đường về nhà con gái. || She couldn't remember the way to her daughter's house. // She could not remember how to get to her daughter's house. // She didn't remember the way to her daughter's house. || modal pron
+Tôi đề nghị gọi điện cho con gái bà. || I offered to call her daughter. // I suggested calling her daughter. || vpat || offer to V · suggest + V-ing
+Mười phút sau, con gái bà đến và cảm ơn tôi rất nhiều. || Ten minutes later, her daughter arrived and thanked me a lot. // Ten minutes later her daughter came and thanked me very much. // Ten minutes later, her daughter arrived and thanked me many times. || past
+Tôi bị lỡ xe buýt, nhưng tôi không hề hối tiếc. || I missed my bus, but I didn't regret it at all. // I missed the bus, but I did not regret it at all. // I missed the bus, but I had no regrets. || past neg
+
+@story s18 4 📵🌙 | Lời hứa với bản thân
+Tôi từng dành sáu tiếng mỗi ngày để lướt điện thoại. || I used to spend six hours a day scrolling on my phone. // I used to spend six hours a day on my phone. // I used to spend six hours every day scrolling through my phone. || vpat || used to V · spend time + V-ing
+Tôi ngủ muộn và luôn cảm thấy mệt khi thức dậy. || I went to bed late and always felt tired when I woke up. // I slept late and always felt tired when I got up. // I stayed up late and always felt tired when I woke up. || past conj order
+Vì vậy, tôi hứa với bản thân sẽ không dùng điện thoại sau mười giờ tối. || So I promised myself not to use my phone after ten at night. // So I promised myself that I wouldn't use my phone after ten at night. // Therefore, I promised myself not to use my phone after ten o'clock at night. || vpat pron || promise (not) to V
+Lúc đầu rất khó, nhưng dần dần tôi quen với việc đọc sách trước khi ngủ. || At first it was very hard, but gradually I got used to reading before bed. // It was very difficult at first, but slowly I got used to reading before going to sleep. // At first it was really hard, but I gradually got used to reading books before bed. || phrasal vpat || get used to + V-ing
+Nếu bạn cũng hay mất ngủ, hãy thử cách này. || If you often can't sleep, try this too. // If you also have trouble sleeping, try this method. // If you often lose sleep too, give this a try. // If you also often can't sleep, try this way. || cond vpat
+
+@story s19 4 ⛰️🧥 | Chuyến đi Sa Pa
+Chúng tôi bắt đầu lên kế hoạch đi Sa Pa từ ba tháng trước. || We started planning our trip to Sa Pa three months ago. // We began planning our trip to Sapa three months ago. // We started to plan our trip to Sa Pa three months ago. || vpat past
+Dù dự báo nói trời sẽ lạnh, chúng tôi vẫn quên mang áo ấm. || Although the forecast said it would be cold, we still forgot to bring warm clothes. // Even though the forecast said it would be cold, we forgot to bring warm clothes. // Although the weather forecast said it would be cold, we still forgot to pack warm clothes. || conj vpat
+Ngay khi đến nơi, chúng tôi phải vào chợ mua áo khoác. || As soon as we arrived, we had to go to the market to buy jackets. // As soon as we got there, we had to buy coats at the market. // As soon as we arrived, we had to go to the market and buy jackets. || conj modal
+Ngày thứ hai, chúng tôi leo núi suốt năm tiếng. || On the second day, we hiked for five hours. // On the second day, we climbed the mountain for five hours. // On day two, we went hiking for five hours. || past prep
+Chân tôi đau mấy ngày sau, nhưng cảnh đẹp đến mức tôi muốn quay lại. || My legs hurt for several days afterwards, but the view was so beautiful that I want to go back. // My legs ached for a few days after that, but the scenery was so beautiful that I want to return. // My legs hurt for days afterwards, but the views were so beautiful that I want to go back. || conj || so + tính từ + that
+
+@story s20 4 🐕🌿 | Con chó nhà hàng xóm
+Mỗi khi tôi đi ngang qua nhà hàng xóm, con chó của họ lại sủa rất to. || Whenever I walk past my neighbours' house, their dog barks loudly. // Every time I pass my neighbor's house, their dog barks very loudly. // Whenever I walk past my neighbour's house, their dog barks very loudly. || conj sva pron
+Tôi sợ nó vì tôi từng bị chó cắn khi còn nhỏ. || I am afraid of it because I was bitten by a dog when I was a child. // I'm scared of it because a dog bit me when I was little. // I'm afraid of it because I was bitten by a dog when I was young. || conj passive
+Một hôm, tôi thấy nó bị mắc kẹt dưới hàng rào. || One day, I saw it stuck under the fence. // One day I found it trapped under the fence. // One day, I saw that it was stuck under the fence. || past
+Tôi giúp nó thoát ra mặc dù tay tôi run. || I helped it get out even though my hands were shaking. // I helped it to get free although my hands were trembling. // I helped it out even though my hands were shaking. || vpat conj || help sb (to) V
+Từ đó, nó vẫy đuôi mỗi khi nhìn thấy tôi. || Since then, it wags its tail whenever it sees me. // Since then, it has wagged its tail every time it sees me. // Ever since, it wags its tail every time it sees me. || sva pron conj
+
+@story s21 5 ☕📚 | Quán cà phê sách
+Gần trường tôi có một quán cà phê được mở bởi hai cựu sinh viên. || Near my school, there is a café which was opened by two former students. // There is a cafe near my school that was opened by two former students. // Near my university there is a café opened by two former students. || there rel passive
+Quán có hàng nghìn cuốn sách mà khách có thể đọc miễn phí. || It has thousands of books that customers can read for free. // The café has thousands of books which customers can read for free. // There are thousands of books that customers can read for free. || rel plural
+Phần lớn sách được tặng bởi những người yêu đọc sách. || Most of the books were donated by book lovers. // Most of the books have been donated by people who love reading. // Most of the books were given by people who love reading. || passive rel
+Nếu tôi có nhiều thời gian hơn, tôi sẽ đến đó mỗi ngày. || If I had more time, I would go there every day. || cond compare
+Đó là nơi mà tôi đã đọc xong cuốn tiểu thuyết tiếng Anh đầu tiên. || It is the place where I finished my first English novel. // That's where I finished reading my first English novel. // It is the place where I finished reading my first novel in English. || rel pp
+
+@story s22 5 🚶‍♀️🚲 | Ngày không xe
+Tháng trước, một "ngày không xe" được tổ chức ở trung tâm thành phố. || Last month, a "car-free day" was held in the city centre. // Last month a car-free day was organised in the city center. // Last month, a car-free day was held in the city center. || passive
+Các con phố chính bị cấm ô tô và xe máy từ sáng đến tối. || The main streets were closed to cars and motorbikes from morning to evening. // The main streets were closed to cars and motorcycles from morning until night. || passive prep plural
+Người dân đi bộ, đạp xe và chơi những trò chơi được chuẩn bị sẵn trên đường. || People walked, cycled and played games that had been set up on the streets. // People walked, rode bikes and played games which were prepared on the roads. // People walked, cycled and played games that were prepared in the streets. || rel passive
+Không khí sạch hơn hẳn và thành phố yên tĩnh đến bất ngờ. || The air was much cleaner and the city was surprisingly quiet. // The air was a lot cleaner and the city was unexpectedly quiet. || compare
+Nếu những ngày như vậy được tổ chức mỗi tháng, mọi người sẽ ý thức hơn về môi trường. || If days like that were held every month, people would be more aware of the environment. // If such days were organised every month, people would be more environmentally aware. // If days like this were held every month, people would be more aware of the environment. || cond passive
+
+@story s23 5 🎻 | Người thầy dạy đàn trong ngõ
+Ông Tâm là một nhạc công đã nghỉ hưu sống trong ngõ nhà tôi. || Mr Tam is a retired musician who lives in my alley. // Mr. Tam is a retired musician who lives in my lane. // Mr Tam is a retired musician living in my alley. || rel article
+Mỗi chiều Chủ nhật, ông dạy đàn miễn phí cho trẻ em trong khu phố. || Every Sunday afternoon, he teaches music to the children in the neighbourhood for free. // Every Sunday afternoon he gives free music lessons to kids in the neighborhood. // Every Sunday afternoon, he teaches the neighbourhood children to play music for free. || sva prep
+Cây đàn mà ông dùng được làm bằng tay từ năm mươi năm trước. || The instrument that he uses was made by hand fifty years ago. // The violin he uses was handmade fifty years ago. // The instrument he plays was made by hand fifty years ago. || rel passive
+Những đứa trẻ học với ông đều rất tự tin khi biểu diễn. || The children who learn with him are all very confident when they perform. // All the kids who study with him are very confident when performing. // The children who study with him are all very confident on stage. || rel sva
+Nếu không có ông, nhiều em sẽ không bao giờ được chạm vào một cây đàn. || Without him, many children would never touch a musical instrument. // If it weren't for him, many kids would never get to touch an instrument. // If he were not there, many children would never have the chance to touch an instrument. || cond
+
+@story s24 5 ☂️💛 | Chiếc ô màu vàng
+Hôm qua, một chiếc ô màu vàng bị bỏ quên trên ghế ở thư viện. || Yesterday, a yellow umbrella was left on a chair in the library. // Yesterday a yellow umbrella was forgotten on a chair in the library. || passive order
+Thủ thư dán một thông báo lên bảng tin. || The librarian put a notice on the notice board. // The librarian put up a notice on the board. // The librarian stuck a notice on the notice board. || phrasal
+Chủ của chiếc ô là một cô bé đã khóc cả buổi sáng. || The owner of the umbrella was a little girl who had cried all morning. // The umbrella belonged to a little girl who had been crying all morning. // The owner of the umbrella was a young girl who cried all morning. || rel
+Chiếc ô đó được bà của cô bé tặng trước khi bà mất. || The umbrella had been given to her by her grandmother before she died. // The umbrella was given to her by her grandmother before she passed away. // Her grandmother gave her that umbrella before she died. || passive
+Khi nhận lại chiếc ô, cô bé cười và ôm lấy cô thủ thư. || When she got the umbrella back, the girl smiled and hugged the librarian. // When she got her umbrella back, the little girl smiled and hugged the librarian. || past phrasal || get sth back
+
+@story s25 5 🏞️♻️ | Ngôi làng không rác
+Có một ngôi làng ở Nhật Bản nơi gần như toàn bộ rác được tái chế. || There is a village in Japan where almost all rubbish is recycled. // There is a village in Japan where nearly all waste is recycled. // There's a village in Japan where almost all the garbage is recycled. || rel passive there
+Người dân ở đó phải chia rác thành hơn bốn mươi loại. || People there have to separate their rubbish into more than forty types. // The people there must sort their waste into over forty categories. // People there have to sort their rubbish into more than forty groups. || modal plural
+Những đồ cũ mà vẫn còn dùng được sẽ được mang đến một cửa hàng miễn phí. || Old things that can still be used are taken to a free shop. // Used items which are still usable are brought to a free shop. // Old things which can still be used are taken to a free shop. || rel passive
+Việc này mất nhiều thời gian, nhưng ai cũng tự hào về ngôi làng của mình. || This takes a lot of time, but everyone is proud of their village. // It takes a lot of time, but everybody is proud of their village. || sva phrasal || everyone + is · be proud of
+Nếu thành phố của chúng ta làm được như vậy, đường phố sẽ sạch hơn rất nhiều. || If our city could do the same, the streets would be much cleaner. // If our city did the same, our streets would be a lot cleaner. // If our city could do that, the streets would be much cleaner. || cond compare
+
+@story s26 6 📞🌙 | Cuộc gọi lúc nửa đêm
+Gần nửa đêm, điện thoại của tôi đột nhiên reo. || Close to midnight, my phone suddenly rang. // Near midnight, my phone suddenly rang. // At almost midnight, my phone suddenly rang. || past
+Đó là bạn cùng phòng cũ, người mà tôi đã không gặp suốt hai năm. || It was my old roommate, whom I hadn't seen for two years. // It was my former roommate, who I hadn't seen for two years. // It was my old roommate, who I had not seen for two years. || rel pp
+Cô ấy nói rằng cô ấy vừa bị lỡ chuyến tàu cuối cùng và không có chỗ ngủ. || She said she had just missed the last train and had nowhere to sleep. // She told me that she had just missed the last train and had no place to stay. // She said that she had just missed the last train and had nowhere to stay. || pp
+Dù đã rất buồn ngủ, tôi vẫn bắt taxi ra ga đón cô ấy. || Although I was very sleepy, I still took a taxi to the station to pick her up. // Even though I was really sleepy, I took a taxi to the station to pick her up. || conj phrasal || pick sb up
+Chúng tôi nói chuyện đến sáng như thể chưa từng xa nhau. || We talked until morning as if we had never been apart. // We talked until the morning as if we had never been apart. // We talked till morning as though we had never been apart. || conj pp
+
+@story s27 6 🧁📈 | Tiệm bánh trên mạng
+Sau khi bị từ chối ở ba cuộc phỏng vấn, Linh quyết định tự kinh doanh. || After being rejected at three interviews, Linh decided to start her own business. // After she was rejected in three interviews, Linh decided to set up her own business. // After being turned down at three job interviews, Linh decided to start her own business. || passive vpat phrasal
+Cô ấy bắt đầu bán bánh ngọt tự làm qua mạng xã hội. || She started selling homemade cakes on social media. // She began to sell home-made cakes through social media. // She started to sell homemade cakes on social media. || vpat
+Những đơn hàng đầu tiên chủ yếu đến từ bạn bè và người thân. || The first orders came mainly from friends and relatives. // Her first orders mostly came from her friends and family. // The first orders mostly came from friends and relatives. || plural
+Nhờ những đánh giá tốt, cửa hàng của cô ấy ngày càng được nhiều người biết đến. || Thanks to good reviews, her shop has become better and better known. // Thanks to positive reviews, more and more people have heard of her shop. // Thanks to good reviews, her shop is becoming more and more popular. || compare passive phrasal || thanks to
+Giờ đây, cô ấy đã thuê thêm hai nhân viên và đang tìm một cửa hàng thật. || Now she has hired two more staff and is looking for a real shop. // Now she has employed two more workers and is looking for a physical store. // Now, she has hired two more employees and she is looking for a real shop. || pp cont
+
+@story s28 6 🔋📖 | Chiếc điện thoại cũ của mẹ
+Khi chiếc điện thoại mới bị hỏng, tôi phải dùng tạm chiếc cũ của mẹ. || When my new phone broke, I had to use my mother's old one for a while. // When my new phone stopped working, I had to borrow my mom's old phone for a while. // When my new phone broke down, I had to use my mum's old one for a while. || modal pron
+Nó không thể cài mạng xã hội hay trò chơi nào cả. || It couldn't run any social media apps or games. // You couldn't install any social media or games on it. // It could not install any social networks or games. || modal neg count
+Ban đầu tôi thấy rất khó chịu, nhưng rồi tôi nhận ra mình có nhiều thời gian hơn. || At first I felt very annoyed, but then I realised I had much more time. // I was really annoyed at first, but then I realized I had more free time. // At first I found it very annoying, but then I realised that I had a lot more time. || compare past
+Tôi đọc được hai cuốn sách và ngủ đủ giấc mỗi đêm. || I read two books and got enough sleep every night. // I managed to read two books and slept well every night. // I read two books and had enough sleep every night. || past count
+Ngay cả khi đã có điện thoại mới, tôi vẫn giữ thói quen ấy. || Even after I got a new phone, I kept that habit. // Even when I had a new phone again, I still kept the habit. // Even after getting a new phone, I kept up that habit. || conj phrasal
+
+@story s29 6 🚆🇫🇷 | Người lạ trên tàu
+Trên chuyến tàu từ Huế ra Hà Nội, tôi ngồi cạnh một ông cụ người Pháp. || On the train from Hue to Hanoi, I sat next to an old French man. // On the train from Hue to Hanoi, I sat beside an elderly Frenchman. // On the train from Hue to Hanoi, I sat next to an elderly French man. || order prep article || old + French + man (tuổi trước quốc tịch)
+Ông kể rằng ông đã đến Việt Nam lần đầu vào năm hai mươi tuổi. || He told me that he had first come to Vietnam when he was twenty. // He said he first came to Vietnam at the age of twenty. // He told me he had come to Vietnam for the first time when he was twenty. || pp past
+Điều làm ông ngạc nhiên nhất là sự thay đổi của các thành phố. || What surprised him most was how much the cities had changed. // What surprised him the most was the change in the cities. // The thing that surprised him most was how the cities had changed. || rel compare
+Chúng tôi nói chuyện bằng tiếng Anh suốt sáu tiếng mà không thấy chán. || We talked in English for six hours without getting bored. // We spoke English for six hours and never got bored. // We chatted in English for six hours without feeling bored. || vpat prep
+Trước khi xuống tàu, ông đưa tôi địa chỉ email và bảo tôi hãy viết thư cho ông. || Before getting off the train, he gave me his email address and asked me to write to him. // Before he got off, he gave me his email address and told me to write to him. // Before getting off the train, he gave me his email address and told me to write to him. || vpat phrasal
+
+@story s30 6 🏁✍️ | Kỳ thi đầu tiên
+Sáng hôm đó, tôi thức dậy sớm hơn thường lệ và ôn lại danh sách từ vựng. || That morning, I woke up earlier than usual and went over my vocabulary list. // That morning I got up earlier than usual and reviewed my word list. // That morning, I woke up earlier than usual and revised my vocabulary list. || compare phrasal
+Phòng thi lạnh đến mức tay tôi run khi viết. || The exam room was so cold that my hands shook when I wrote. // The exam room was so cold that my hands were shaking as I wrote. // The exam room was so cold that my hands were shaking when I wrote. || conj || so + tính từ + that
+Phần Reading khó hơn những đề tôi đã luyện, nhưng tôi không hoảng sợ. || The Reading section was harder than the tests I had practised, but I didn't panic. // The reading part was more difficult than the tests I had done, but I did not panic. // The Reading test was harder than the ones I had practised, but I didn't panic. || compare pp rel
+Tôi áp dụng cách tìm từ đồng nghĩa mà cô giáo đã dạy. || I used the synonym-finding method that my teacher had taught me. // I applied the method of finding synonyms which my teacher had taught. // I used the method of finding synonyms that my teacher taught me. || rel pp
+Khi bước ra khỏi phòng thi, tôi biết rằng mọi nỗ lực của mình đều xứng đáng. || When I walked out of the exam room, I knew that all my hard work had been worth it. // As I left the exam room, I knew all my efforts had been worth it. // When I came out of the exam room, I knew that all my effort was worth it. || pp phrasal || be worth it

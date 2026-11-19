@@ -44,6 +44,8 @@ const GrammarFixPage = lazy(() => import('@/pages/GrammarFixPage'));
 const SvoPage = lazy(() => import('@/pages/SvoPage'));
 const ComicsPage = lazy(() => import('@/pages/ComicsPage'));
 const DailyMcqPage = lazy(() => import('@/pages/DailyMcqPage'));
+const TranslateDialoguePage = lazy(() => import('@/pages/TranslateDialoguePage'));
+const TranslateStoryPage = lazy(() => import('@/pages/TranslateStoryPage'));
 const TfngPage = lazy(() => import('@/pages/TfngPage'));
 const ComicChapterPage = lazy(() => import('@/pages/ComicChapterPage'));
 
@@ -92,6 +94,8 @@ export const router = createBrowserRouter([
           { path: '/truyen', element: page(<ComicsPage />) },
           { path: '/trac-nghiem/:date', element: page(<DailyMcqPage />) },
           { path: '/tfng/:date', element: page(<TfngPage />) },
+          { path: '/dich-hoi-thoai/:date', element: page(<TranslateDialoguePage />) },
+          { path: '/dich-truyen/:date', element: page(<TranslateStoryPage />) },
           { path: '/truyen/:bookId/:chapterId', element: page(<ComicChapterPage />) },
           { path: '/grammar', element: page(<GrammarPage />) },
           { path: '/grammar/:topicId', element: page(<GrammarDrillPage />) },
