@@ -1,1074 +1,1083 @@
 {
-  "$comment": "Đoạn đọc ngắn True / False / Not Given, LinguaFlow tự soạn. a: T | F | NG. ev: câu trong bài làm căn cứ (để tô sáng), không có với NG. w: giải thích, nhấn mạnh FALSE (bài nói NGƯỢC lại) và NOT GIVEN (bài KHÔNG nói tới).",
+  "$comment": "True / False / Not Given mức Passage 2, LinguaFlow tự soạn (2–3 đoạn văn, câu hỏi paraphrase, bẫy từ tuyệt đối / so sánh / mốc thời gian / 'believed' vs 'proved'). Đoạn văn cách nhau bằng dòng trống. a: T | F | NG. ev: câu trong bài làm căn cứ (để tô sáng), không có với NG. w: giải thích, chỉ ra cặp từ đồng nghĩa và vì sao FALSE (bài nói NGƯỢC lại) hay NOT GIVEN (bài KHÔNG nói tới).",
   "passages": [
     {
-      "id": "p01",
-      "title": "A school garden",
-      "text": "Last year, a primary school in Da Lat started a small vegetable garden. The idea came from a group of parents, not the teachers. Every Friday, children spend one hour planting and watering. The vegetables are used in the school kitchen. So far, the school has grown cabbages and carrots, but tomatoes did not grow well because of the cold weather.",
+      "id": "b01",
+      "title": "The box that changed trade",
+      "text": "Before the 1950s, loading a cargo ship was slow and labour-intensive. Goods arrived at the docks in sacks, barrels and crates of every size, and teams of dockworkers carried them on board one by one. A vessel could spend almost as long in port as it did at sea, and theft of cargo was common.\n\nThe American trucking businessman Malcolm McLean is widely credited with popularising the steel shipping container. In 1956 his converted tanker, the Ideal X, carried 58 containers from Newark to Houston. McLean later claimed that the cost of loading fell from several dollars per ton to just a few cents, although historians note that his figures were never independently checked. Within two decades, ports that refused to invest in cranes and storage yards for containers began to lose business to those that did, and many traditional dock jobs disappeared.",
       "q": [
         {
-          "s": "The garden was the teachers' idea.",
-          "a": "F",
-          "ev": "The idea came from a group of parents, not the teachers.",
-          "w": "Bài nói rõ ý tưởng của phụ huynh, KHÔNG phải giáo viên → ngược lại → FALSE."
-        },
-        {
-          "s": "Children work in the garden once a week.",
+          "s": "In the period before containers, ships often remained in port for a long time.",
           "a": "T",
-          "ev": "Every Friday, children spend one hour planting and watering.",
-          "w": "Every Friday = mỗi tuần một lần → TRUE."
+          "ev": "A vessel could spend almost as long in port as it did at sea",
+          "w": "'remained in port for a long time' ≈ 'spend almost as long in port as it did at sea' → TRUE."
         },
         {
-          "s": "The children enjoy working in the garden.",
+          "s": "McLean was the first person to invent the steel shipping container.",
           "a": "NG",
-          "w": "Bài không nói trẻ có thích hay không → NOT GIVEN. Đừng tự suy luận."
+          "w": "Bài chỉ nói McLean được ghi nhận là người PHỔ BIẾN (popularising) container, không nói ông có PHÁT MINH ra nó hay không, cũng không nói ai phát minh. 'popularise' ≠ 'invent' → NOT GIVEN, không phải FALSE vì bài không phủ nhận."
         },
         {
-          "s": "Some of the vegetables are sold to local shops.",
-          "a": "NG",
-          "w": "Bài chỉ nói rau dùng trong bếp trường; không nhắc tới chuyện bán. Không có câu nào nói 'không bán' → NOT GIVEN."
+          "s": "The Ideal X had originally been built for a different purpose.",
+          "a": "T",
+          "ev": "his converted tanker, the Ideal X",
+          "w": "'converted tanker' = tàu chở dầu được hoán cải → ban đầu đóng cho mục đích khác → TRUE. Từ khoá dễ bỏ qua: converted."
         },
         {
-          "s": "Tomatoes grew successfully in the garden.",
+          "s": "McLean's claims about lower loading costs have been confirmed by historians.",
           "a": "F",
-          "ev": "tomatoes did not grow well because of the cold weather.",
-          "w": "Bài nói cà chua KHÔNG mọc tốt → ngược với 'successfully' → FALSE."
+          "ev": "historians note that his figures were never independently checked",
+          "w": "Bài nói số liệu của ông CHƯA BAO GIỜ được kiểm chứng độc lập → ngược với 'confirmed' → FALSE."
+        },
+        {
+          "s": "Ports that did not adapt to containers lost some of their trade.",
+          "a": "T",
+          "ev": "ports that refused to invest in cranes and storage yards for containers began to lose business to those that did",
+          "w": "'did not adapt' ≈ 'refused to invest'; 'lost some of their trade' ≈ 'lose business' → TRUE."
         }
       ]
     },
     {
-      "id": "p02",
-      "title": "Morning coffee",
-      "text": "Vietnam is one of the largest coffee producers in the world. Most of the coffee grown in the country is Robusta, which has a stronger taste than Arabica. In cities, many young people meet friends in coffee shops after work. Some new cafés serve coffee with salt or egg, and these drinks are becoming popular with tourists.",
+      "id": "b02",
+      "title": "Learning from the dance of bees",
+      "text": "For centuries beekeepers noticed that a single bee returning to the hive could somehow lead others to a new source of food, but the mechanism remained a mystery. In the 1940s the Austrian zoologist Karl von Frisch proposed that bees communicate through a 'waggle dance', in which the angle of the dance relative to the vertical indicates the direction of the food in relation to the sun, while the length of the waggling phase signals distance.\n\nVon Frisch's interpretation was not accepted immediately. Some researchers argued that bees found food mainly by smell, and the debate continued for several decades. The question was largely settled in the 2000s, when scientists used radar to track individual bees after they had watched a dance and found that they flew towards the location the dance had indicated. Von Frisch himself had shared a Nobel Prize in 1973, long before this confirmation arrived.",
       "q": [
         {
-          "s": "Vietnam produces more coffee than any other country.",
-          "a": "NG",
-          "w": "Bài chỉ nói 'một trong những nước lớn nhất', không nói lớn nhất → không đủ để kết luận đúng hay sai → NOT GIVEN."
-        },
-        {
-          "s": "Robusta tastes stronger than Arabica.",
-          "a": "T",
-          "ev": "Robusta, which has a stronger taste than Arabica.",
-          "w": "Khớp với bài → TRUE."
-        },
-        {
-          "s": "Most coffee grown in Vietnam is Arabica.",
+          "s": "Beekeepers were unaware that bees could guide each other to food until the twentieth century.",
           "a": "F",
-          "ev": "Most of the coffee grown in the country is Robusta",
-          "w": "Bài nói phần lớn là Robusta → ngược lại → FALSE."
+          "ev": "For centuries beekeepers noticed that a single bee returning to the hive could somehow lead others to a new source of food",
+          "w": "Bài nói người nuôi ong đã NHẬN THẤY điều này hàng thế kỷ; chỉ CƠ CHẾ là bí ẩn. Câu hỏi nói họ không hề biết → ngược lại → FALSE."
         },
         {
-          "s": "Egg coffee is more expensive than normal coffee.",
-          "a": "NG",
-          "w": "Bài không nói gì về giá → NOT GIVEN."
-        },
-        {
-          "s": "Tourists are starting to like coffee with salt or egg.",
+          "s": "According to von Frisch, the duration of part of the dance shows how far away the food is.",
           "a": "T",
-          "ev": "these drinks are becoming popular with tourists.",
-          "w": "becoming popular with tourists = khách du lịch bắt đầu thích → TRUE."
+          "ev": "the length of the waggling phase signals distance",
+          "w": "'duration of part of the dance' ≈ 'length of the waggling phase'; 'how far away' ≈ 'distance' → TRUE."
+        },
+        {
+          "s": "Researchers who believed in the role of smell carried out more experiments than von Frisch.",
+          "a": "NG",
+          "w": "Bài có nhắc nhóm cho rằng ong tìm mồi bằng mùi, nhưng KHÔNG so sánh số thí nghiệm. Bẫy so sánh 'more … than' → NOT GIVEN."
+        },
+        {
+          "s": "Radar studies supported von Frisch's explanation.",
+          "a": "T",
+          "ev": "found that they flew towards the location the dance had indicated",
+          "w": "Ong bay đúng hướng điệu nhảy chỉ → ủng hộ giả thuyết. 'supported' ≈ 'largely settled' → TRUE."
+        },
+        {
+          "s": "Von Frisch received the Nobel Prize after his theory had been confirmed by radar.",
+          "a": "F",
+          "ev": "Von Frisch himself had shared a Nobel Prize in 1973, long before this confirmation arrived.",
+          "w": "Nobel năm 1973, TRƯỚC khi radar xác nhận (những năm 2000) → thứ tự ngược → FALSE."
         }
       ]
     },
     {
-      "id": "p03",
-      "title": "Online classes",
-      "text": "During the pandemic, many universities moved their classes online. A survey of 2,000 students found that 60% found it harder to concentrate at home. However, most students said they saved time because they did not have to travel. Several universities now offer a mix of online and face-to-face lessons.",
+      "id": "b03",
+      "title": "Where coffee really began",
+      "text": "A popular legend tells of an Ethiopian goatherd named Kaldi who noticed his goats becoming unusually energetic after eating the red berries of a certain shrub. The story is charming, but it does not appear in writing until the late seventeenth century, more than a thousand years after the events it supposedly describes, and most historians treat it as folklore.\n\nThe earliest reliable evidence of coffee drinking comes from fifteenth-century Yemen, where members of Sufi religious communities used the drink to stay awake during night-time prayers. From there coffee spread to Mecca and Cairo, and by the sixteenth century coffee houses had become lively centres of conversation in Istanbul. Not everyone welcomed them: on several occasions religious and political authorities tried to close coffee houses, fearing that they encouraged criticism of those in power. These bans were rarely effective for long.",
       "q": [
         {
-          "s": "More than half of the students in the survey had difficulty concentrating at home.",
+          "s": "The story of Kaldi was first recorded shortly after the events took place.",
+          "a": "F",
+          "ev": "it does not appear in writing until the late seventeenth century, more than a thousand years after the events it supposedly describes",
+          "w": "Ghi chép đầu tiên cách sự kiện HƠN 1000 năm → ngược với 'shortly after' → FALSE."
+        },
+        {
+          "s": "Most historians doubt that the Kaldi story is true.",
           "a": "T",
-          "ev": "60% found it harder to concentrate at home.",
-          "w": "60% > một nửa → TRUE."
+          "ev": "most historians treat it as folklore",
+          "w": "'treat it as folklore' (coi là truyện dân gian) ≈ 'doubt that it is true' → TRUE."
         },
         {
-          "s": "Most students said online classes wasted their time.",
-          "a": "F",
-          "ev": "most students said they saved time",
-          "w": "Bài nói họ TIẾT KIỆM thời gian → ngược với 'wasted' → FALSE."
-        },
-        {
-          "s": "Students got lower marks in online classes.",
+          "s": "Coffee was first grown as a crop in Yemen.",
           "a": "NG",
-          "w": "Bài nói về sự tập trung, không nói gì về điểm số → NOT GIVEN."
+          "w": "Bài chỉ nói bằng chứng UỐNG cà phê sớm nhất ở Yemen; không nói nơi đầu tiên TRỒNG cà phê. 'drinking' ≠ 'grown as a crop' → NOT GIVEN."
         },
         {
-          "s": "All universities have returned to face-to-face teaching only.",
+          "s": "Sufi communities drank coffee to help them remain alert at night.",
+          "a": "T",
+          "ev": "used the drink to stay awake during night-time prayers",
+          "w": "'remain alert' ≈ 'stay awake'; 'at night' ≈ 'night-time' → TRUE."
+        },
+        {
+          "s": "Attempts to ban coffee houses usually succeeded in the long term.",
           "a": "F",
-          "ev": "Several universities now offer a mix of online and face-to-face lessons.",
-          "w": "Một số trường vẫn kết hợp online → 'all … only face-to-face' bị bài phủ nhận → FALSE."
-        },
-        {
-          "s": "The survey was carried out by the government.",
-          "a": "NG",
-          "w": "Bài không nói ai làm khảo sát → NOT GIVEN."
+          "ev": "These bans were rarely effective for long.",
+          "w": "'rarely effective for long' = hiếm khi hiệu quả lâu dài → ngược với 'usually succeeded in the long term' → FALSE."
         }
       ]
     },
     {
-      "id": "p04",
-      "title": "City bicycles",
-      "text": "In 2023, the city introduced a bike-sharing scheme with 500 bicycles. Users pay through a mobile app, and the first 30 minutes are free. The scheme was planned for the city centre only, but because of high demand it was extended to two nearby districts in 2024. Officials hope it will reduce traffic jams.",
+      "id": "b04",
+      "title": "Cities that trap heat",
+      "text": "On a summer evening, the centre of a large city can be several degrees warmer than the surrounding countryside. This 'urban heat island' effect occurs because materials such as asphalt and concrete absorb heat during the day and release it slowly after sunset, while the shortage of trees and open water reduces natural cooling. Waste heat from vehicles and air-conditioning units adds to the problem.\n\nThe consequences go beyond discomfort. During heatwaves, death rates in the hottest urban districts tend to rise faster than in cooler ones, with elderly residents especially at risk. Some cities have responded by painting roofs white, planting street trees and creating small parks. Researchers caution, however, that the benefits of such measures vary considerably from one city to another, depending on local climate and building density, and that no single solution suits every location.",
       "q": [
         {
-          "s": "Users must pay for the first half hour.",
+          "s": "City centres are warmer than rural areas only during the daytime.",
           "a": "F",
-          "ev": "the first 30 minutes are free.",
-          "w": "30 phút đầu MIỄN PHÍ → ngược lại → FALSE."
+          "ev": "On a summer evening, the centre of a large city can be several degrees warmer than the surrounding countryside.",
+          "w": "Bài nói rõ BUỔI TỐI trung tâm vẫn nóng hơn, và vật liệu toả nhiệt sau hoàng hôn → 'only during the daytime' bị phủ nhận → FALSE. Bẫy từ tuyệt đối 'only'."
         },
         {
-          "s": "The scheme now covers more areas than originally planned.",
+          "s": "A lack of vegetation contributes to higher urban temperatures.",
           "a": "T",
-          "ev": "it was extended to two nearby districts in 2024.",
-          "w": "Ban đầu chỉ trung tâm, sau mở rộng → TRUE."
+          "ev": "the shortage of trees and open water reduces natural cooling",
+          "w": "'lack of vegetation' ≈ 'shortage of trees' → TRUE."
         },
         {
-          "s": "The scheme has already reduced traffic jams.",
+          "s": "Air-conditioning is the main cause of the urban heat island effect.",
           "a": "NG",
-          "w": "Bài chỉ nói các quan chức HY VỌNG sẽ giảm; chưa nói đã giảm hay chưa → NOT GIVEN."
+          "w": "Bài chỉ nói nhiệt thải từ điều hoà 'adds to the problem' (góp thêm), không xếp hạng nguyên nhân chính. Bài cũng không phủ nhận → NOT GIVEN."
         },
         {
-          "s": "The bicycles can be paid for with cash.",
-          "a": "NG",
-          "w": "Bài nói trả qua app, nhưng không nói có được trả tiền mặt hay không → NOT GIVEN. (Nếu bài viết 'only through an app' thì mới là FALSE.)"
-        },
-        {
-          "s": "The scheme started with 500 bicycles.",
+          "s": "Older people face particular danger in hot city districts during heatwaves.",
           "a": "T",
-          "ev": "a bike-sharing scheme with 500 bicycles.",
-          "w": "Khớp → TRUE."
+          "ev": "with elderly residents especially at risk",
+          "w": "'older people' ≈ 'elderly residents'; 'particular danger' ≈ 'especially at risk' → TRUE."
+        },
+        {
+          "s": "Experts agree that white roofs are the most effective measure for all cities.",
+          "a": "F",
+          "ev": "no single solution suits every location",
+          "w": "Chuyên gia nói lợi ích khác nhau tuỳ thành phố và không giải pháp nào hợp mọi nơi → ngược với 'most effective for all cities' → FALSE."
         }
       ]
     },
     {
-      "id": "p05",
-      "title": "Honey bees",
-      "text": "Honey bees live in large groups called colonies. A colony has one queen, who lays all the eggs, and thousands of worker bees. Worker bees are female and collect food for the colony. In winter, bees stay inside the hive and keep warm by moving their wings. Scientists are worried because the number of bees has fallen in many countries.",
+      "id": "b05",
+      "title": "Before Gutenberg",
+      "text": "Johannes Gutenberg's printing press, developed in Mainz around 1450, is often described as the invention that made the modern world possible. It is less widely known that movable type had been used in East Asia centuries earlier. Records describe a Chinese craftsman, Bi Sheng, who made individual characters from baked clay in the eleventh century, and in Korea the oldest surviving book printed with movable metal type dates from 1377.\n\nWhy, then, did printing transform Europe so rapidly? One explanation lies in the writing systems involved. Chinese requires thousands of distinct characters, so preparing and sorting type was enormously time-consuming, and many Asian printers continued to prefer carved wooden blocks. European alphabets, by contrast, need fewer than a hundred symbols including capitals and punctuation. Gutenberg also adapted the screw press used by winemakers and developed an oil-based ink that stuck to metal type, although it is unclear how many of these ideas were entirely his own.",
       "q": [
         {
-          "s": "A colony can have several queens.",
+          "s": "Movable type was in use in Asia before Gutenberg built his press.",
+          "a": "T",
+          "ev": "movable type had been used in East Asia centuries earlier",
+          "w": "'before Gutenberg' ≈ 'centuries earlier' → TRUE."
+        },
+        {
+          "s": "Bi Sheng's type was made of metal.",
           "a": "F",
-          "ev": "A colony has one queen",
-          "w": "Bài nói chỉ MỘT nữ hoàng → ngược lại → FALSE."
+          "ev": "made individual characters from baked clay",
+          "w": "Bi Sheng dùng ĐẤT SÉT nung; kim loại là của Hàn Quốc năm 1377. Bẫy gán nhầm chi tiết → FALSE."
         },
         {
-          "s": "Worker bees are female.",
-          "a": "T",
-          "ev": "Worker bees are female",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Bees sleep for most of the winter.",
+          "s": "The 1377 Korean book was the first book ever printed with metal type.",
           "a": "NG",
-          "w": "Bài nói ong ở trong tổ và vỗ cánh giữ ấm, không nói chúng ngủ → NOT GIVEN."
+          "w": "Bài nói đây là cuốn sách in kim loại CÒN SÓT LẠI cổ nhất ('oldest surviving'), không nói là cuốn ĐẦU TIÊN từng được in. 'oldest surviving' ≠ 'first ever' → NOT GIVEN."
         },
         {
-          "s": "The number of bees has fallen because of pesticides.",
-          "a": "NG",
-          "w": "Bài có nói số lượng ong giảm nhưng KHÔNG nói nguyên nhân → NOT GIVEN. Bẫy: một nửa câu đúng, nửa kia không có trong bài."
-        },
-        {
-          "s": "Bees move their wings to stay warm in winter.",
+          "s": "Some printers in Asia preferred to keep using wooden blocks.",
           "a": "T",
-          "ev": "keep warm by moving their wings.",
-          "w": "Khớp → TRUE."
+          "ev": "many Asian printers continued to prefer carved wooden blocks",
+          "w": "'keep using' ≈ 'continued to prefer' → TRUE."
+        },
+        {
+          "s": "Historians are certain that Gutenberg invented oil-based ink without help from others.",
+          "a": "F",
+          "ev": "it is unclear how many of these ideas were entirely his own",
+          "w": "Bài nói KHÔNG RÕ bao nhiêu ý tưởng là của riêng ông → ngược với 'certain' → FALSE."
         }
       ]
     },
     {
-      "id": "p06",
-      "title": "A new library",
-      "text": "The new city library opened in March. It has three floors and a café on the ground floor. Unlike the old library, it stays open until 9 p.m. on weekdays. Membership is free for students, while other adults pay a small yearly fee. In its first month, more than 10,000 people visited.",
+      "id": "b06",
+      "title": "Sleep and memory",
+      "text": "Scientists have long suspected that sleep plays a role in memory, but only in recent decades have experiments begun to show how. In a typical study, volunteers learn a list of word pairs or a simple motor task in the evening. Half are then allowed a normal night's sleep, while the other half are kept awake. When both groups are tested again after a period of recovery sleep, those who slept immediately after learning usually perform better.\n\nRecordings of brain activity suggest that during deep sleep, the hippocampus 'replays' patterns of activity from the day, which may help transfer new information into long-term storage. However, researchers stress that most of these experiments have involved young, healthy adults in laboratory settings. Whether the same effects apply equally to older people, or to the complex skills learned at school and work, is still being investigated.",
       "q": [
         {
-          "s": "The new library closes earlier than the old one.",
+          "s": "The link between sleep and memory was first proposed only a few decades ago.",
           "a": "F",
-          "ev": "Unlike the old library, it stays open until 9 p.m. on weekdays.",
-          "w": "Thư viện mới mở MUỘN HƠN thư viện cũ → ngược lại → FALSE."
+          "ev": "Scientists have long suspected that sleep plays a role in memory",
+          "w": "Giả thuyết đã có từ LÂU ('long suspected'); chỉ bằng chứng thực nghiệm mới gần đây → FALSE."
         },
         {
-          "s": "Students do not have to pay to become members.",
+          "s": "In the experiments described, all participants were eventually allowed to sleep before the final test.",
           "a": "T",
-          "ev": "Membership is free for students",
-          "w": "free = không phải trả → TRUE."
+          "ev": "When both groups are tested again after a period of recovery sleep",
+          "w": "Cả hai nhóm đều được ngủ bù ('recovery sleep') trước khi kiểm tra lại → TRUE. Đây là câu khó vì phải hiểu chi tiết quy trình."
         },
         {
-          "s": "The café is the most popular part of the library.",
+          "s": "Word pairs are easier to remember than motor tasks after sleep.",
           "a": "NG",
-          "w": "Bài chỉ nói có quán cà phê, không so sánh mức độ phổ biến → NOT GIVEN."
+          "w": "Bài nêu cả hai loại bài tập nhưng không so sánh loại nào dễ nhớ hơn → NOT GIVEN."
         },
         {
-          "s": "Children can borrow books for free.",
-          "a": "NG",
-          "w": "Bài nói về sinh viên và người lớn khác, không nhắc trẻ em → NOT GIVEN."
-        },
-        {
-          "s": "More than 10,000 people visited the library in its first month.",
+          "s": "The hippocampus may be involved in moving new memories into long-term storage.",
           "a": "T",
-          "ev": "In its first month, more than 10,000 people visited.",
-          "w": "Khớp → TRUE."
+          "ev": "which may help transfer new information into long-term storage",
+          "w": "'moving' ≈ 'transfer'; câu hỏi giữ 'may' giống bài → TRUE."
+        },
+        {
+          "s": "It has been proven that the effect is equally strong in older adults.",
+          "a": "F",
+          "ev": "Whether the same effects apply equally to older people, or to the complex skills learned at school and work, is still being investigated.",
+          "w": "Bài nói vẫn ĐANG nghiên cứu → chưa chứng minh. 'proven' mâu thuẫn với 'still being investigated' → FALSE."
         }
       ]
     },
     {
-      "id": "p07",
+      "id": "b07",
+      "title": "Turning seawater into drinking water",
+      "text": "Desalination, the removal of salt from seawater, has been practised on a small scale for centuries; sailors once boiled seawater and collected the steam. Large modern plants mostly use a process called reverse osmosis, in which seawater is pushed at high pressure through membranes that allow water molecules to pass but block salt. The method requires far less energy than the older thermal plants that dominated the industry until the 1990s.\n\nEven so, desalinated water remains more expensive than water taken from rivers or underground sources in most places. A further concern is brine, the highly salty waste left over from the process. If it is released carelessly, it can harm marine life near the outlet pipes. Countries in the Middle East currently operate a large share of the world's desalination capacity, and several are investing in solar power to run new plants.",
+      "q": [
+        {
+          "s": "Desalination is a technology that was invented in the twentieth century.",
+          "a": "F",
+          "ev": "has been practised on a small scale for centuries",
+          "w": "Bài nói đã được thực hiện quy mô nhỏ hàng THẾ KỶ (thuỷ thủ đun nước biển) → FALSE."
+        },
+        {
+          "s": "Reverse osmosis consumes less energy than thermal desalination.",
+          "a": "T",
+          "ev": "The method requires far less energy than the older thermal plants",
+          "w": "'consumes less energy' ≈ 'requires far less energy' → TRUE."
+        },
+        {
+          "s": "In most locations, desalinated water now costs less than river water.",
+          "a": "F",
+          "ev": "desalinated water remains more expensive than water taken from rivers or underground sources in most places",
+          "w": "Bài: vẫn ĐẮT HƠN ở hầu hết nơi → ngược lại → FALSE."
+        },
+        {
+          "s": "Most desalination plants treat brine before releasing it into the sea.",
+          "a": "NG",
+          "w": "Bài chỉ nói nếu xả brine bừa bãi thì có thể hại sinh vật biển; không nói các nhà máy có xử lý brine hay không, cũng không nói 'hầu hết' → NOT GIVEN."
+        },
+        {
+          "s": "Some Middle Eastern countries plan to use solar energy for desalination.",
+          "a": "T",
+          "ev": "several are investing in solar power to run new plants",
+          "w": "'plan to use solar energy' ≈ 'investing in solar power to run new plants' → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "title": "The road that was never called silk",
+      "text": "The network of trade routes linking China with Central Asia, the Middle East and the Mediterranean is today known as the Silk Road. Yet the people who used these routes never called them by this name. The term was coined in 1877 by the German geographer Ferdinand von Richthofen, and it became widely popular only in the twentieth century.\n\nThe name is also misleading in other ways. There was no single road but a shifting web of paths across deserts and mountains, and few merchants travelled the whole distance; goods usually passed through many hands, with each trader covering one section. Silk was certainly an important export from China, but the routes also carried spices, glass, metals, horses and paper. Perhaps most significantly, they spread ideas and religions: Buddhism, for example, travelled from India into China along these paths.",
+      "q": [
+        {
+          "s": "Traders in ancient times referred to these routes as the Silk Road.",
+          "a": "F",
+          "ev": "the people who used these routes never called them by this name",
+          "w": "Người dùng các tuyến này KHÔNG BAO GIỜ gọi chúng bằng tên đó → FALSE."
+        },
+        {
+          "s": "Von Richthofen's term was immediately adopted by most scholars.",
+          "a": "F",
+          "ev": "it became widely popular only in the twentieth century",
+          "w": "Năm 1877 đặt tên nhưng chỉ phổ biến ở thế kỷ 20 → không phải 'immediately' → FALSE."
+        },
+        {
+          "s": "Most goods were carried along the routes by a series of different merchants.",
+          "a": "T",
+          "ev": "goods usually passed through many hands, with each trader covering one section",
+          "w": "'a series of different merchants' ≈ 'passed through many hands'; 'most' ≈ 'usually' → TRUE."
+        },
+        {
+          "s": "Silk was the most valuable product traded along the routes.",
+          "a": "NG",
+          "w": "Bài chỉ nói lụa là mặt hàng 'important', không nói có GIÁ TRỊ NHẤT hay không → NOT GIVEN. Bẫy so sánh nhất."
+        },
+        {
+          "s": "Religious beliefs were among the things that spread along the routes.",
+          "a": "T",
+          "ev": "they spread ideas and religions",
+          "w": "'religious beliefs' ≈ 'religions' → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "title": "Forests at the edge of the sea",
+      "text": "Mangroves are trees and shrubs that grow in the salty, muddy water of tropical coastlines. Their dense, tangled roots slow down waves and trap sediment, which helps to protect coastal communities from storms and erosion. Studies after the 2004 Indian Ocean tsunami suggested that villages behind healthy mangrove belts sometimes suffered less damage, although scientists disagree about how much protection forests can offer against very large waves.\n\nMangroves also store large amounts of carbon in their waterlogged soils, where dead plant material decays slowly. Despite these benefits, a significant proportion of the world's mangroves were cleared in the late twentieth century, largely to make room for shrimp farms and coastal development. Replanting projects have since been launched in many countries, but their success rate has been mixed: seedlings planted in the wrong position on the shore often fail to survive.",
+      "q": [
+        {
+          "s": "Mangrove roots help to reduce the force of waves.",
+          "a": "T",
+          "ev": "Their dense, tangled roots slow down waves",
+          "w": "'reduce the force of waves' ≈ 'slow down waves' → TRUE."
+        },
+        {
+          "s": "Scientists agree that mangroves can fully protect villages from large tsunamis.",
+          "a": "F",
+          "ev": "scientists disagree about how much protection forests can offer against very large waves",
+          "w": "Các nhà khoa học BẤT ĐỒNG → ngược với 'agree … fully protect' → FALSE."
+        },
+        {
+          "s": "Plant material breaks down quickly in mangrove soils.",
+          "a": "F",
+          "ev": "where dead plant material decays slowly",
+          "w": "'breaks down quickly' ngược với 'decays slowly' → FALSE."
+        },
+        {
+          "s": "Shrimp farming was one of the main reasons for the loss of mangroves.",
+          "a": "T",
+          "ev": "largely to make room for shrimp farms and coastal development",
+          "w": "'main reasons' ≈ 'largely to make room for' → TRUE."
+        },
+        {
+          "s": "Most replanting projects have been organised by international charities.",
+          "a": "NG",
+          "w": "Bài không nói ai tổ chức các dự án trồng lại → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "title": "Two languages, one brain",
+      "text": "For much of the twentieth century, many educators believed that bringing up a child with two languages would cause confusion and slow down learning. Research from the 1960s onwards challenged this view, and by the 2000s a number of studies were reporting that bilingual people performed better on tasks requiring them to switch attention or ignore distractions. This so-called 'bilingual advantage' attracted enormous media coverage.\n\nMore recently, however, the picture has become less clear. Several large studies have failed to reproduce the advantage, and some researchers argue that earlier positive results were more likely to be published than negative ones. Others reply that bilingualism takes many forms and that the effects may depend on how often, and in what situations, people use each language. What almost all researchers now accept is that learning two languages does not harm a child's overall development.",
+      "q": [
+        {
+          "s": "In the past, some teachers thought that learning two languages was bad for children.",
+          "a": "T",
+          "ev": "many educators believed that bringing up a child with two languages would cause confusion and slow down learning",
+          "w": "'bad for children' ≈ 'cause confusion and slow down learning'; 'some teachers' ≈ 'many educators' → TRUE."
+        },
+        {
+          "s": "The bilingual advantage was first identified in the 1960s.",
+          "a": "F",
+          "ev": "by the 2000s a number of studies were reporting that bilingual people performed better",
+          "w": "Những năm 1960 chỉ là lúc nghiên cứu bắt đầu phản bác quan điểm cũ; 'bilingual advantage' được báo cáo vào những năm 2000 → FALSE. Bẫy gán sai mốc thời gian."
+        },
+        {
+          "s": "Recent large studies have consistently confirmed the bilingual advantage.",
+          "a": "F",
+          "ev": "Several large studies have failed to reproduce the advantage",
+          "w": "Nhiều nghiên cứu lớn KHÔNG lặp lại được kết quả → ngược với 'consistently confirmed' → FALSE."
+        },
+        {
+          "s": "Bilingual children usually achieve higher marks at school.",
+          "a": "NG",
+          "w": "Bài nói về bài tập chuyển sự chú ý, không nhắc điểm số ở trường → NOT GIVEN."
+        },
+        {
+          "s": "Most researchers agree that bilingualism is not harmful to children's development.",
+          "a": "T",
+          "ev": "learning two languages does not harm a child's overall development",
+          "w": "'most researchers agree' ≈ 'almost all researchers now accept' → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "title": "Keeping vaccines cold",
+      "text": "Many vaccines lose their effectiveness if they become too warm, and some are damaged by freezing. Moving them from factory to patient therefore depends on a 'cold chain': an unbroken series of refrigerated stores, vehicles and containers that keep the product within a narrow temperature range, usually between 2°C and 8°C. A single failure at any point can make a whole shipment useless, often without any visible sign.\n\nThe final stage of the journey is frequently the most difficult. In remote rural areas, health workers may need to carry vaccines for hours on foot or by motorbike to villages without a reliable electricity supply. Insulated boxes packed with ice, solar-powered refrigerators and small temperature indicators that change colour when a vaccine has been exposed to heat have all helped. Nevertheless, the World Health Organization has estimated that a considerable share of vaccines is wasted globally each year, and temperature problems are one of the causes.",
+      "q": [
+        {
+          "s": "All vaccines can be safely frozen during transport.",
+          "a": "F",
+          "ev": "some are damaged by freezing",
+          "w": "Một số vaccine bị HỎNG khi đông lạnh → 'all … safely frozen' bị phủ nhận → FALSE."
+        },
+        {
+          "s": "It is usually easy to see when a vaccine has been spoiled by temperature changes.",
+          "a": "F",
+          "ev": "often without any visible sign",
+          "w": "Thường KHÔNG có dấu hiệu nhìn thấy được → ngược với 'easy to see' → FALSE."
+        },
+        {
+          "s": "The last part of the delivery process often presents the greatest challenges.",
+          "a": "T",
+          "ev": "The final stage of the journey is frequently the most difficult.",
+          "w": "'last part' ≈ 'final stage'; 'greatest challenges' ≈ 'most difficult' → TRUE."
+        },
+        {
+          "s": "Solar-powered refrigerators are more reliable than ice boxes.",
+          "a": "NG",
+          "w": "Bài liệt kê cả hai giải pháp đều có ích nhưng không so sánh độ tin cậy → NOT GIVEN."
+        },
+        {
+          "s": "Temperature problems are the only reason vaccines are wasted.",
+          "a": "F",
+          "ev": "temperature problems are one of the causes",
+          "w": "Nhiệt độ chỉ là MỘT TRONG các nguyên nhân → ngược với 'only reason' → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "title": "From beads to windows",
+      "text": "Archaeologists believe that the first true glass objects were beads made in Mesopotamia around 4,500 years ago. For many centuries afterwards, glass remained a luxury. Craftsmen shaped it by winding hot glass around a core of clay or by pressing it into moulds, methods that were slow and produced only small items such as jewellery and perfume bottles.\n\nThe situation changed dramatically in the first century BC, when craftsmen on the eastern Mediterranean coast discovered that molten glass could be inflated by blowing through a hollow tube. Glassblowing allowed vessels to be made quickly and cheaply, and under the Roman Empire glass cups and bottles became common household objects. The Romans also produced the first glass windows, although these were thick, uneven and far from transparent. Clear window glass of good quality did not become widely available in Europe until many centuries later.",
+      "q": [
+        {
+          "s": "The earliest glass objects were probably made in Mesopotamia.",
+          "a": "T",
+          "ev": "Archaeologists believe that the first true glass objects were beads made in Mesopotamia",
+          "w": "'probably' ≈ 'archaeologists believe' (mức độ chắc chắn tương đương) → TRUE."
+        },
+        {
+          "s": "Before glassblowing, glass could be used to make only small objects.",
+          "a": "T",
+          "ev": "methods that were slow and produced only small items such as jewellery and perfume bottles",
+          "w": "'only small objects' ≈ 'only small items' → TRUE."
+        },
+        {
+          "s": "Glassblowing was invented by the Romans.",
+          "a": "F",
+          "ev": "craftsmen on the eastern Mediterranean coast discovered that molten glass could be inflated",
+          "w": "Thổi thuỷ tinh do thợ ở bờ ĐÔNG Địa Trung Hải phát hiện; người La Mã chỉ phổ biến đồ thuỷ tinh. Bẫy gán sai chủ thể → FALSE."
+        },
+        {
+          "s": "Glass objects were expensive for ordinary Roman families.",
+          "a": "F",
+          "ev": "under the Roman Empire glass cups and bottles became common household objects",
+          "w": "Cốc, chai thuỷ tinh trở thành đồ gia dụng PHỔ BIẾN và làm 'cheaply' → ngược với 'expensive' → FALSE."
+        },
+        {
+          "s": "Roman glass windows were mainly used in public buildings.",
+          "a": "NG",
+          "w": "Bài chỉ nói cửa kính La Mã dày, không đều, không trong; không nói dùng ở loại công trình nào → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "title": "The invention of paper",
+      "text": "According to traditional Chinese accounts, paper was invented in AD 105 by Cai Lun, an official at the imperial court, who made sheets from tree bark, old rags and fishing nets. Archaeological discoveries, however, have shown that a simple form of paper existed in China at least two centuries before this date. Cai Lun's contribution may therefore have been to improve the process and present it to the emperor, rather than to create it from nothing.\n\nFor several hundred years the technique remained largely within China. It reached the Islamic world in the eighth century, and paper mills were soon operating in Baghdad. Europeans were slower to adopt the material, partly because parchment made from animal skin was already well established for important documents. By the time printing presses appeared in Europe, however, paper had become essential, since it was far cheaper to produce in large quantities.",
+      "q": [
+        {
+          "s": "Cai Lun used recycled materials to make paper.",
+          "a": "T",
+          "ev": "made sheets from tree bark, old rags and fishing nets",
+          "w": "'old rags and fishing nets' = vải vụn, lưới cũ → vật liệu tái sử dụng → TRUE."
+        },
+        {
+          "s": "Archaeological evidence supports the traditional date for the invention of paper.",
+          "a": "F",
+          "ev": "a simple form of paper existed in China at least two centuries before this date",
+          "w": "Khảo cổ cho thấy giấy đã có ít nhất 200 năm TRƯỚC năm 105 → mâu thuẫn với mốc truyền thống → FALSE."
+        },
+        {
+          "s": "Cai Lun was punished for claiming to have invented paper.",
+          "a": "NG",
+          "w": "Bài không nhắc gì về việc Cai Lun bị phạt → NOT GIVEN."
+        },
+        {
+          "s": "Paper production in Baghdad began before the technique reached China.",
+          "a": "F",
+          "ev": "For several hundred years the technique remained largely within China. It reached the Islamic world in the eighth century",
+          "w": "Giấy có ở Trung Quốc trước, rồi mới tới thế giới Hồi giáo → thứ tự ngược → FALSE."
+        },
+        {
+          "s": "One reason Europeans adopted paper slowly was that they already had another writing material.",
+          "a": "T",
+          "ev": "partly because parchment made from animal skin was already well established for important documents",
+          "w": "'another writing material' ≈ 'parchment'; 'one reason' ≈ 'partly because' → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "title": "Parcels from the sky",
+      "text": "Delivery by drone has been promoted for over a decade as a fast and environmentally friendly alternative to vans. Small drones can avoid traffic altogether, and for light parcels travelling short distances they may produce lower emissions per package than road vehicles. Trials in several countries have focused on medical supplies, such as blood samples and medicines, where speed is especially valuable.\n\nLarge-scale commercial services, however, have grown more slowly than early supporters predicted. Most drones can carry only a few kilograms, and their range is limited by battery capacity. Regulators in many countries require operators to keep drones within the pilot's line of sight unless special permission is granted, which makes long-distance deliveries difficult. Public attitudes also matter: surveys indicate that some residents are concerned about noise and privacy. Industry analysts expect drones to complement, rather than replace, conventional delivery vehicles.",
+      "q": [
+        {
+          "s": "Drones are less polluting than vans in every type of delivery.",
+          "a": "F",
+          "ev": "for light parcels travelling short distances they may produce lower emissions per package than road vehicles",
+          "w": "Bài giới hạn: chỉ với hàng NHẸ, quãng NGẮN và chỉ 'may' → không phải 'every type' → FALSE."
+        },
+        {
+          "s": "Medical deliveries have been a focus of drone trials.",
+          "a": "T",
+          "ev": "Trials in several countries have focused on medical supplies",
+          "w": "Paraphrase gần như trực tiếp → TRUE."
+        },
+        {
+          "s": "Commercial drone delivery has expanded faster than was originally expected.",
+          "a": "F",
+          "ev": "Large-scale commercial services, however, have grown more slowly than early supporters predicted.",
+          "w": "Tăng CHẬM HƠN dự đoán → ngược lại → FALSE."
+        },
+        {
+          "s": "Special permission can allow drones to fly beyond the pilot's view.",
+          "a": "T",
+          "ev": "keep drones within the pilot's line of sight unless special permission is granted",
+          "w": "'unless special permission is granted' → có giấy phép đặc biệt thì được bay ngoài tầm nhìn → TRUE. Đọc kỹ 'unless'."
+        },
+        {
+          "s": "Most residents in trial areas support drone deliveries.",
+          "a": "NG",
+          "w": "Bài chỉ nói MỘT SỐ cư dân lo ngại tiếng ồn, quyền riêng tư; không nói tỉ lệ ủng hộ → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "b15",
+      "title": "The clever octopus",
+      "text": "Octopuses have around 500 million neurons, a number comparable to that of a dog, but unusually, about two-thirds of these are located in their arms rather than in the central brain. This arrangement appears to allow each arm a degree of independence; an arm that has been separated from the body can still respond to touch and grasp objects for a short time.\n\nIn laboratory experiments, octopuses have learned to open screw-top jars, find their way through mazes and distinguish between different shapes. Some aquarium staff have reported individuals escaping from their tanks at night and returning before morning, although such stories are difficult to verify. What makes octopus intelligence particularly interesting to biologists is that it evolved quite separately from that of mammals and birds. Since octopuses live for only one or two years and receive no care from their parents, they must learn quickly on their own.",
+      "q": [
+        {
+          "s": "Most of an octopus's neurons are found outside its central brain.",
+          "a": "T",
+          "ev": "about two-thirds of these are located in their arms rather than in the central brain",
+          "w": "Hai phần ba ở tay = phần lớn nằm ngoài não trung tâm → TRUE."
+        },
+        {
+          "s": "An octopus arm stops functioning immediately once it is cut off.",
+          "a": "F",
+          "ev": "an arm that has been separated from the body can still respond to touch and grasp objects for a short time",
+          "w": "Tay bị tách VẪN phản ứng một thời gian → ngược với 'immediately' → FALSE."
+        },
+        {
+          "s": "Octopuses learned to solve mazes more quickly than dogs.",
+          "a": "NG",
+          "w": "Bài so sánh số neuron với chó, nhưng không so sánh tốc độ giải mê cung → NOT GIVEN."
+        },
+        {
+          "s": "Reports of octopuses leaving their tanks at night have been scientifically confirmed.",
+          "a": "F",
+          "ev": "although such stories are difficult to verify",
+          "w": "Những câu chuyện này KHÓ kiểm chứng → không phải 'confirmed' → FALSE."
+        },
+        {
+          "s": "Young octopuses learn without help from their parents.",
+          "a": "T",
+          "ev": "receive no care from their parents, they must learn quickly on their own",
+          "w": "'without help from their parents' ≈ 'receive no care … on their own' → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "title": "Roofs that grow",
+      "text": "A green roof is a roof partly or completely covered with plants growing in a layer of soil or another growing medium. Although the idea is often presented as modern, grass-covered roofs have been used for centuries in Scandinavia, where they provided insulation against harsh winters. Today green roofs are promoted mainly for their environmental benefits in cities.\n\nThe plants and soil absorb rainwater, which reduces the amount flowing into drains during heavy storms, and they can lower the temperature of the roof surface on hot days. Green roofs may also provide habitats for insects and birds. On the other hand, they are more expensive to install than conventional roofs, and the building must be strong enough to support the extra weight, particularly when the soil is saturated with water. In some cities, including Toronto, new buildings above a certain size are required by law to include a green roof.",
+      "q": [
+        {
+          "s": "Green roofs are a completely new invention.",
+          "a": "F",
+          "ev": "grass-covered roofs have been used for centuries in Scandinavia",
+          "w": "Mái phủ cỏ đã có hàng THẾ KỶ ở Bắc Âu → FALSE."
+        },
+        {
+          "s": "Scandinavian grass roofs helped to keep buildings warm.",
+          "a": "T",
+          "ev": "they provided insulation against harsh winters",
+          "w": "'keep buildings warm' ≈ 'insulation against harsh winters' → TRUE."
+        },
+        {
+          "s": "Green roofs can reduce pressure on drainage systems during storms.",
+          "a": "T",
+          "ev": "reduces the amount flowing into drains during heavy storms",
+          "w": "'reduce pressure on drainage systems' ≈ 'reduces the amount flowing into drains' → TRUE."
+        },
+        {
+          "s": "Green roofs are cheaper to maintain than ordinary roofs over time.",
+          "a": "NG",
+          "w": "Bài chỉ nói LẮP ĐẶT đắt hơn; không nói chi phí BẢO TRÌ về lâu dài → NOT GIVEN. Bẫy: 'install' ≠ 'maintain'."
+        },
+        {
+          "s": "In Toronto, every new building must have a green roof.",
+          "a": "F",
+          "ev": "new buildings above a certain size are required by law to include a green roof",
+          "w": "Chỉ toà nhà TRÊN một kích thước nhất định → không phải 'every' → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "title": "Railway time",
+      "text": "Until the nineteenth century, most towns kept their own local time, set by the position of the sun. When it was noon in London, it was a few minutes earlier in Bristol, further west. This caused few problems when travel was slow, but the arrival of the railways made the differences confusing and even dangerous, since timetables became difficult to coordinate.\n\nIn 1840 the Great Western Railway in Britain began using London time at all its stations, and other companies soon followed. By the late 1840s most British railways had adopted this 'railway time', although some towns resisted for years and displayed two times on their public clocks. In the United States, with its much greater distances, railway companies introduced a system of time zones in 1883. Remarkably, this was done by the railways themselves; the system was not made official by federal law until 1918.",
+      "q": [
+        {
+          "s": "Before the railways, towns in the west of Britain were ahead of London in time.",
+          "a": "F",
+          "ev": "When it was noon in London, it was a few minutes earlier in Bristol, further west",
+          "w": "Bristol (phía tây) SỚM HƠN tức là chậm hơn London, không phải 'ahead' → FALSE."
+        },
+        {
+          "s": "Differences in local time were considered a serious problem before trains were introduced.",
+          "a": "F",
+          "ev": "This caused few problems when travel was slow",
+          "w": "Trước đường sắt, chênh lệch giờ gây RẤT ÍT vấn đề → FALSE."
+        },
+        {
+          "s": "All British towns accepted railway time immediately.",
+          "a": "F",
+          "ev": "some towns resisted for years and displayed two times on their public clocks",
+          "w": "Một số thị trấn chống lại nhiều năm → không phải 'all … immediately' → FALSE."
+        },
+        {
+          "s": "The American time zone system was first introduced by railway companies.",
+          "a": "T",
+          "ev": "railway companies introduced a system of time zones in 1883",
+          "w": "Paraphrase trực tiếp → TRUE."
+        },
+        {
+          "s": "American passengers complained that the 1883 system was confusing.",
+          "a": "NG",
+          "w": "Bài không nhắc phản ứng của hành khách Mỹ → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "b18",
+      "title": "Building with bamboo",
+      "text": "Bamboo is technically a grass, yet some species can grow taller than many trees, and certain types grow by almost a metre in a single day. Because it can be harvested after only three to five years, compared with several decades for most timber trees, it is frequently described as one of the most sustainable building materials available.\n\nBamboo has been used for houses, bridges and scaffolding in Asia and South America for thousands of years. Its strength relative to its weight is impressive, and it bends rather than breaks in strong winds and earthquakes. However, untreated bamboo is vulnerable to insects and fungi and may last only a few years outdoors. Modern treatments can extend its life considerably. Engineers also point out that, unlike steel or concrete, natural bamboo varies greatly in size and strength, which has made it harder to create standard building codes for its use.",
+      "q": [
+        {
+          "s": "Bamboo belongs to the same plant family as trees.",
+          "a": "F",
+          "ev": "Bamboo is technically a grass",
+          "w": "Tre về mặt khoa học là CỎ, không phải cây gỗ → FALSE."
+        },
+        {
+          "s": "All bamboo species can grow almost one metre a day.",
+          "a": "F",
+          "ev": "certain types grow by almost a metre in a single day",
+          "w": "Chỉ 'certain types' (một số loại) → không phải 'all' → FALSE."
+        },
+        {
+          "s": "Bamboo can be harvested more quickly than most trees used for timber.",
+          "a": "T",
+          "ev": "harvested after only three to five years, compared with several decades for most timber trees",
+          "w": "3–5 năm so với vài chục năm → nhanh hơn → TRUE."
+        },
+        {
+          "s": "Bamboo buildings performed better than concrete ones in recent earthquakes.",
+          "a": "NG",
+          "w": "Bài nói tre uốn cong thay vì gãy, nhưng không so sánh với bê tông trong các trận động đất cụ thể → NOT GIVEN."
+        },
+        {
+          "s": "The natural variation in bamboo has complicated the development of building standards.",
+          "a": "T",
+          "ev": "natural bamboo varies greatly in size and strength, which has made it harder to create standard building codes",
+          "w": "'complicated' ≈ 'made it harder'; 'building standards' ≈ 'standard building codes' → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b19",
+      "title": "The power of belief",
+      "text": "A placebo is a treatment with no active ingredient, such as a sugar pill, yet patients who receive one often report feeling better. In clinical trials, new drugs are compared with placebos to find out whether their benefits go beyond this effect. Placebo responses tend to be strongest for symptoms that people experience subjectively, such as pain, nausea and fatigue, and weakest for conditions that can be objectively measured, like the size of a tumour.\n\nThe way a treatment is presented also seems to matter. Some studies have found that patients respond more strongly to injections than to pills, and to expensive-looking capsules than to cheap ones. Surprisingly, a few small experiments have reported improvements even when patients were told openly that they were taking a placebo. Researchers caution that these 'open-label' studies have involved small numbers of participants and need to be repeated on a larger scale.",
+      "q": [
+        {
+          "s": "A placebo contains a small amount of the real medicine.",
+          "a": "F",
+          "ev": "A placebo is a treatment with no active ingredient",
+          "w": "Giả dược KHÔNG có hoạt chất → FALSE."
+        },
+        {
+          "s": "Placebos have a greater effect on pain than on tumour size.",
+          "a": "T",
+          "ev": "strongest for symptoms that people experience subjectively, such as pain, nausea and fatigue, and weakest for conditions that can be objectively measured, like the size of a tumour",
+          "w": "Đau: mạnh nhất; kích thước khối u: yếu nhất → so sánh đúng → TRUE."
+        },
+        {
+          "s": "Doctors frequently prescribe placebos to their patients.",
+          "a": "NG",
+          "w": "Bài nói giả dược dùng trong thử nghiệm lâm sàng, không nói bác sĩ có thường kê giả dược hay không → NOT GIVEN."
+        },
+        {
+          "s": "The appearance of a treatment may influence how well it works.",
+          "a": "T",
+          "ev": "The way a treatment is presented also seems to matter.",
+          "w": "'appearance' ≈ 'the way a treatment is presented'; 'may' ≈ 'seems to' → TRUE."
+        },
+        {
+          "s": "Open-label placebo studies have been carried out with large groups of patients.",
+          "a": "F",
+          "ev": "these 'open-label' studies have involved small numbers of participants",
+          "w": "Chỉ với SỐ ÍT người tham gia → ngược với 'large groups' → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "title": "A second life for batteries",
+      "text": "As electric vehicles become more common, the question of what happens to their batteries at the end of their working life is growing more urgent. A car battery is usually considered unsuitable for driving once it can hold around 70 to 80 per cent of its original charge. At this point, however, it may still be useful for less demanding tasks, such as storing electricity from solar panels in homes or supporting the power grid.\n\nEventually, all batteries must be recycled. Lithium-ion batteries contain valuable metals including lithium, cobalt and nickel, and recovering them reduces the need for new mining. Current recycling methods are energy-intensive, though, and recovering lithium in particular has often been uneconomical. The European Union has introduced rules requiring new batteries to contain a minimum proportion of recycled material in the coming years, a policy intended to encourage investment in recycling plants.",
+      "q": [
+        {
+          "s": "Electric car batteries are replaced when they can no longer hold any charge.",
+          "a": "F",
+          "ev": "A car battery is usually considered unsuitable for driving once it can hold around 70 to 80 per cent of its original charge.",
+          "w": "Pin bị coi là không phù hợp khi CÒN 70–80% dung lượng, không phải khi hết hẳn → FALSE."
+        },
+        {
+          "s": "Used car batteries can be used to store energy in homes.",
+          "a": "T",
+          "ev": "storing electricity from solar panels in homes",
+          "w": "Paraphrase trực tiếp → TRUE."
+        },
+        {
+          "s": "Recycling batteries can reduce the demand for mining.",
+          "a": "T",
+          "ev": "recovering them reduces the need for new mining",
+          "w": "'reduce the demand for mining' ≈ 'reduces the need for new mining' → TRUE."
+        },
+        {
+          "s": "Recovering lithium has always been profitable.",
+          "a": "F",
+          "ev": "recovering lithium in particular has often been uneconomical",
+          "w": "Thu hồi lithium THƯỜNG không kinh tế → ngược với 'always profitable' → FALSE."
+        },
+        {
+          "s": "The European Union will provide funding to build recycling plants.",
+          "a": "NG",
+          "w": "Bài nói EU đặt quy định về tỷ lệ vật liệu tái chế để KHUYẾN KHÍCH đầu tư, không nói EU trực tiếp cấp tiền → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "title": "The food of the gods",
+      "text": "Chocolate comes from the seeds of the cacao tree, which is native to the tropical forests of Central and South America. Chemical traces found on ancient pottery suggest that people in the region were preparing drinks from cacao more than 3,000 years ago. These early drinks were very different from modern chocolate: they were usually bitter, often flavoured with chilli, and served frothy rather than sweet.\n\nAmong the Aztecs, cacao beans were so highly valued that they were used as a form of money, and the drink was associated mainly with rulers, warriors and wealthy merchants. When Spanish explorers brought cacao to Europe in the sixteenth century, it was at first an expensive drink for the aristocracy, and Europeans began adding sugar to suit their own tastes. Solid chocolate bars of the kind familiar today were not developed until the nineteenth century, when new machinery made it possible to process cacao on an industrial scale.",
+      "q": [
+        {
+          "s": "Cacao trees originally grew in the Americas.",
+          "a": "T",
+          "ev": "native to the tropical forests of Central and South America",
+          "w": "'originally grew' ≈ 'native to' → TRUE."
+        },
+        {
+          "s": "Early cacao drinks were sweetened with honey.",
+          "a": "F",
+          "ev": "they were usually bitter, often flavoured with chilli, and served frothy rather than sweet",
+          "w": "Đồ uống ban đầu ĐẮNG, không ngọt → FALSE. (Nhiều bạn chọn NG vì không thấy chữ 'honey', nhưng bài đã nói rõ 'rather than sweet'.)"
+        },
+        {
+          "s": "Among the Aztecs, cacao was drunk by all social classes equally.",
+          "a": "F",
+          "ev": "the drink was associated mainly with rulers, warriors and wealthy merchants",
+          "w": "Chủ yếu tầng lớp trên → không phải 'all social classes equally' → FALSE."
+        },
+        {
+          "s": "Spanish explorers were the first Europeans to taste chocolate.",
+          "a": "NG",
+          "w": "Bài nói người Tây Ban Nha mang cacao về châu Âu, nhưng không nói họ là người châu Âu ĐẦU TIÊN nếm → NOT GIVEN."
+        },
+        {
+          "s": "Industrial machinery made modern chocolate bars possible.",
+          "a": "T",
+          "ev": "when new machinery made it possible to process cacao on an industrial scale",
+          "w": "Thanh sô-cô-la ra đời thế kỷ 19 nhờ máy móc → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b22",
+      "title": "Stripes that changed shopping",
+      "text": "The barcode is now so familiar that it is easy to forget it was once a novel idea. In 1952 two American engineers, Norman Woodland and Bernard Silver, received a patent for a code made up of concentric circles, inspired partly by Morse code. Their invention was ahead of its time: the lasers and computers needed to read such codes cheaply did not yet exist, and the patent was eventually sold.\n\nIt took another two decades before the grocery industry agreed on a common standard, the Universal Product Code, which used straight lines rather than circles. In 1974, a packet of chewing gum became the first product to be scanned at a supermarket checkout in Ohio. Shop owners were initially hesitant because of the cost of scanners, but barcodes soon proved their value by speeding up checkouts and allowing stores to track stock far more accurately.",
+      "q": [
+        {
+          "s": "Woodland and Silver's original design used straight lines.",
+          "a": "F",
+          "ev": "a code made up of concentric circles",
+          "w": "Thiết kế ban đầu là các vòng tròn đồng tâm; đường thẳng là của chuẩn UPC sau này → FALSE."
+        },
+        {
+          "s": "The technology to read barcodes cheaply was not available in 1952.",
+          "a": "T",
+          "ev": "the lasers and computers needed to read such codes cheaply did not yet exist",
+          "w": "Paraphrase trực tiếp → TRUE."
+        },
+        {
+          "s": "Woodland and Silver made a large profit from selling their patent.",
+          "a": "NG",
+          "w": "Bài chỉ nói bằng sáng chế cuối cùng bị bán, không nói họ có lời nhiều hay ít → NOT GIVEN."
+        },
+        {
+          "s": "Chewing gum was the first item ever scanned in a shop.",
+          "a": "T",
+          "ev": "a packet of chewing gum became the first product to be scanned at a supermarket checkout",
+          "w": "'first item ever scanned in a shop' ≈ 'first product to be scanned at a supermarket checkout' → TRUE."
+        },
+        {
+          "s": "Shop owners welcomed barcode scanners enthusiastically from the start.",
+          "a": "F",
+          "ev": "Shop owners were initially hesitant because of the cost of scanners",
+          "w": "Ban đầu DO DỰ → ngược với 'enthusiastically from the start' → FALSE."
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "title": "The longest journey",
+      "text": "The Arctic tern is a small seabird weighing just over 100 grams, yet it makes the longest known migration of any animal. Each year it travels from its breeding grounds in the Arctic to the Antarctic and back again, enjoying two summers and more daylight than any other creature. Early estimates put the round trip at around 40,000 kilometres.\n\nWhen researchers fitted terns with tiny tracking devices in the late 2000s, they discovered that the true distance was much greater. Rather than flying in a straight line, the birds followed winding routes that took advantage of prevailing winds, covering on average around 70,000 kilometres a year. Over a lifetime that can exceed thirty years, a single tern may fly a distance equivalent to three return trips to the Moon. The tracking also revealed that the birds made long stopovers in the middle of the Atlantic, where food is plentiful.",
+      "q": [
+        {
+          "s": "The Arctic tern is the largest bird that migrates between the Arctic and Antarctic.",
+          "a": "NG",
+          "w": "Bài chỉ nói nhạn biển nhỏ (khoảng 100g); không so sánh kích thước với loài chim di cư khác. Không có câu phủ nhận → NOT GIVEN."
+        },
+        {
+          "s": "Arctic terns experience summer twice a year.",
+          "a": "T",
+          "ev": "enjoying two summers",
+          "w": "Đi từ Bắc Cực đến Nam Cực → hai mùa hè mỗi năm → TRUE."
+        },
+        {
+          "s": "Tracking studies showed that earlier distance estimates were too high.",
+          "a": "F",
+          "ev": "they discovered that the true distance was much greater",
+          "w": "Khoảng cách thực LỚN HƠN nhiều → ước tính cũ quá THẤP, không phải quá cao → FALSE."
+        },
+        {
+          "s": "The terns fly directly between their summer locations.",
+          "a": "F",
+          "ev": "Rather than flying in a straight line, the birds followed winding routes",
+          "w": "Bay đường vòng, không thẳng → FALSE."
+        },
+        {
+          "s": "The birds stop to feed in the Atlantic during their journey.",
+          "a": "T",
+          "ev": "the birds made long stopovers in the middle of the Atlantic, where food is plentiful",
+          "w": "'stop to feed' ≈ 'long stopovers … where food is plentiful' → TRUE."
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "title": "Birds in a noisy world",
+      "text": "Many birds use song to defend territory and attract mates, so a song that cannot be heard is of little use. In cities, low-frequency noise from traffic and construction can mask bird calls. Studies in Europe and North America have found that some urban birds, such as great tits, sing at a higher pitch than members of the same species in quieter forests, which may help their songs to be heard above the background noise.\n\nOther species appear to adjust the timing of their songs instead. European robins in some noisy areas have been recorded singing at night, when traffic is lighter. It is not yet clear whether these changes are learned behaviour or a result of evolution over many generations. Researchers also warn that adapting has a cost: higher-pitched songs may be less attractive to females, and birds that sing at night may lose valuable sleep.",
+      "q": [
+        {
+          "s": "Traffic noise can make it harder for birds to hear each other.",
+          "a": "T",
+          "ev": "low-frequency noise from traffic and construction can mask bird calls",
+          "w": "'mask bird calls' = che lấp tiếng chim → khó nghe nhau → TRUE."
+        },
+        {
+          "s": "City great tits sing at a lower pitch than forest great tits.",
+          "a": "F",
+          "ev": "sing at a higher pitch than members of the same species in quieter forests",
+          "w": "Chim thành phố hót CAO hơn, không thấp hơn → FALSE."
+        },
+        {
+          "s": "All birds in noisy areas change the pitch of their song.",
+          "a": "F",
+          "ev": "Other species appear to adjust the timing of their songs instead.",
+          "w": "Một số loài đổi THỜI ĐIỂM hót thay vì đổi cao độ → không phải 'all … change the pitch' → FALSE."
+        },
+        {
+          "s": "Scientists have shown that robins learn to sing at night from older birds.",
+          "a": "F",
+          "ev": "It is not yet clear whether these changes are learned behaviour or a result of evolution",
+          "w": "Chưa rõ là học được hay do tiến hoá → không thể 'have shown … learn' → FALSE."
+        },
+        {
+          "s": "Noise pollution has caused some bird populations in cities to decline.",
+          "a": "NG",
+          "w": "Bài nói về thay đổi cách hót và cái giá phải trả, không nói số lượng chim giảm → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "b25",
+      "title": "Islands of spice",
+      "text": "For centuries nutmeg and mace, two spices produced by the same tree, grew naturally only on the tiny Banda Islands in what is now eastern Indonesia. Arab and Asian traders carried them westwards, and by the time they reached the markets of Europe, their price had multiplied many times over. In medieval Europe, nutmeg was valued not only as a flavouring but also, wrongly, as a cure for various diseases.\n\nIn the early seventeenth century the Dutch East India Company fought to establish complete control over the islands, using extreme violence against the local population. The company tried to maintain its monopoly by allowing nutmeg trees to grow on only a few islands and by soaking exported seeds in lime so that they could not be planted elsewhere. These efforts ultimately failed: in the eighteenth century a French official succeeded in smuggling seedlings out, and nutmeg plantations were soon established in other tropical colonies.",
+      "q": [
+        {
+          "s": "Nutmeg and mace come from different types of tree.",
+          "a": "F",
+          "ev": "two spices produced by the same tree",
+          "w": "Hai loại gia vị từ CÙNG một cây → FALSE."
+        },
+        {
+          "s": "Nutmeg was much more expensive in Europe than where it was grown.",
+          "a": "T",
+          "ev": "by the time they reached the markets of Europe, their price had multiplied many times over",
+          "w": "'much more expensive' ≈ 'price had multiplied many times over' → TRUE."
+        },
+        {
+          "s": "Nutmeg was an effective medicine in medieval Europe.",
+          "a": "F",
+          "ev": "nutmeg was valued not only as a flavouring but also, wrongly, as a cure for various diseases",
+          "w": "Chữ 'wrongly' cho biết người ta TIN SAI rằng nó chữa bệnh → không hiệu quả → FALSE. Một chữ nhỏ quyết định đáp án."
+        },
+        {
+          "s": "The Dutch treated seeds so that other countries could not grow nutmeg.",
+          "a": "T",
+          "ev": "soaking exported seeds in lime so that they could not be planted elsewhere",
+          "w": "'treated seeds' ≈ 'soaking … in lime'; 'other countries could not grow' ≈ 'could not be planted elsewhere' → TRUE."
+        },
+        {
+          "s": "The French official who smuggled seedlings was later rewarded by his government.",
+          "a": "NG",
+          "w": "Bài không nói viên quan Pháp có được thưởng hay không → NOT GIVEN."
+        }
+      ]
+    },
+    {
+      "id": "b26",
+      "title": "Plastic too small to see",
+      "text": "Microplastics are pieces of plastic smaller than five millimetres. Some are manufactured at this size, such as the tiny beads once common in facial scrubs, but most are formed when larger items break down under the effects of sunlight, waves and wear. Washing synthetic clothes also releases fibres that pass through many wastewater treatment plants.\n\nMicroplastics have now been found almost everywhere scientists have looked, from deep ocean trenches to Arctic snow, and in drinking water, seafood and human blood. Their effects on human health, however, remain uncertain. Laboratory studies have shown that very high concentrations can damage cells, but these concentrations are often far greater than those people are typically exposed to. Several countries have banned microbeads in cosmetics, though experts point out that such bans address only a small part of the problem, since microbeads make up a minor share of the total.",
+      "q": [
+        {
+          "s": "Most microplastics are produced deliberately at a small size.",
+          "a": "F",
+          "ev": "most are formed when larger items break down",
+          "w": "Phần lớn hình thành do vật lớn BỊ VỠ, không phải sản xuất cố ý → FALSE."
+        },
+        {
+          "s": "Wastewater treatment plants remove all fibres from synthetic clothing.",
+          "a": "F",
+          "ev": "releases fibres that pass through many wastewater treatment plants",
+          "w": "Sợi vẫn ĐI QUA nhiều nhà máy xử lý → không phải 'remove all' → FALSE."
+        },
+        {
+          "s": "Microplastics have been detected in the human body.",
+          "a": "T",
+          "ev": "and in drinking water, seafood and human blood",
+          "w": "'human body' ≈ 'human blood' → TRUE."
+        },
+        {
+          "s": "Scientists have proved that microplastics cause serious illness in humans.",
+          "a": "F",
+          "ev": "Their effects on human health, however, remain uncertain.",
+          "w": "Tác động vẫn CHƯA CHẮC CHẮN → không thể 'proved' → FALSE."
+        },
+        {
+          "s": "Bans on microbeads have greatly reduced plastic pollution in the oceans.",
+          "a": "NG",
+          "w": "Bài chỉ nói lệnh cấm giải quyết một phần nhỏ vấn đề, không nói lượng ô nhiễm đại dương đã giảm bao nhiêu → NOT GIVEN. Lưu ý: 'chỉ giải quyết phần nhỏ' khác với 'không làm giảm'."
+        }
+      ]
+    },
+    {
+      "id": "b27",
       "title": "Working from home",
-      "text": "A software company in Ho Chi Minh City allows staff to work from home two days a week. The manager says productivity has stayed the same, but staff feel less tired. The company plans to keep this policy next year. However, new employees must work in the office every day for their first three months.",
+      "text": "Before 2020, working from home was relatively rare in most countries and was often regarded by managers with suspicion. The COVID-19 pandemic forced millions of office employees to work remotely almost overnight, creating what some researchers described as the largest workplace experiment in history.\n\nThe results have been mixed. Many surveys found that employees valued the time saved by not commuting and felt more productive at home. Some studies measuring actual output, however, reported smaller or even negative effects, particularly for tasks that required close teamwork or the training of new staff. A widely cited experiment at a Chinese travel company found that a hybrid arrangement, with two days a week at home, had no negative effect on performance and reduced the number of employees who resigned. As a result, many organisations have now adopted hybrid models rather than returning fully to the office.",
       "q": [
         {
-          "s": "Staff can work from home every day.",
+          "s": "Before the pandemic, managers generally trusted employees who worked from home.",
           "a": "F",
-          "ev": "work from home two days a week.",
-          "w": "Chỉ hai ngày mỗi tuần → ngược với 'every day' → FALSE."
+          "ev": "was often regarded by managers with suspicion",
+          "w": "Quản lý thường NGHI NGỜ → ngược với 'generally trusted' → FALSE."
         },
         {
-          "s": "According to the manager, productivity has increased.",
-          "a": "F",
-          "ev": "productivity has stayed the same",
-          "w": "'stayed the same' (không đổi) mâu thuẫn với 'increased' → FALSE, không phải NOT GIVEN."
-        },
-        {
-          "s": "New employees cannot work from home at first.",
+          "s": "Employees often believed they worked more efficiently at home.",
           "a": "T",
-          "ev": "new employees must work in the office every day for their first three months.",
-          "w": "Phải đến văn phòng mỗi ngày → không được làm ở nhà → TRUE."
+          "ev": "felt more productive at home",
+          "w": "'believed they worked more efficiently' ≈ 'felt more productive' → TRUE."
         },
         {
-          "s": "Most staff prefer working from home.",
+          "s": "All studies have shown that remote work increases output.",
+          "a": "F",
+          "ev": "Some studies measuring actual output, however, reported smaller or even negative effects",
+          "w": "Một số nghiên cứu cho kết quả nhỏ hoặc TIÊU CỰC → không phải 'all … increases' → FALSE."
+        },
+        {
+          "s": "In the Chinese study, fewer staff left their jobs under the hybrid arrangement.",
+          "a": "T",
+          "ev": "reduced the number of employees who resigned",
+          "w": "'fewer staff left their jobs' ≈ 'reduced the number of employees who resigned' → TRUE."
+        },
+        {
+          "s": "Employees in the Chinese company were paid more for working from home.",
           "a": "NG",
-          "w": "Bài nói họ đỡ mệt, không nói họ thích hơn → NOT GIVEN."
-        },
-        {
-          "s": "The company will continue the policy next year.",
-          "a": "T",
-          "ev": "The company plans to keep this policy next year.",
-          "w": "plans to keep ≈ will continue → TRUE."
+          "w": "Bài không nhắc đến lương → NOT GIVEN."
         }
       ]
     },
     {
-      "id": "p08",
-      "title": "Street food",
-      "text": "Street food is an important part of life in many Asian cities. It is usually cheap and quick, which makes it popular with office workers. In some cities, the government has moved street sellers away from busy roads to improve safety. Food experts say that the quality of street food is often as good as restaurant food.",
+      "id": "b28",
+      "title": "Selling ice to the tropics",
+      "text": "In the early nineteenth century, a young Boston merchant named Frederic Tudor had what most people considered a ridiculous idea: to cut ice from frozen New England ponds in winter and ship it to the hot Caribbean. His first cargo, sent to Martinique in 1806, largely melted, and Tudor lost a great deal of money. For years he struggled with debt and was even imprisoned for it.\n\nTudor persisted, experimenting with different insulating materials and eventually discovering that sawdust was cheap and highly effective. He also had to create demand, offering free ice to bartenders so that customers would become used to cold drinks. By the 1830s his business was shipping ice as far as India, and he became known as the 'Ice King'. The trade employed thousands of workers until the development of mechanical refrigeration in the late nineteenth century gradually made natural ice unnecessary.",
       "q": [
         {
-          "s": "Street food is popular with office workers because it is fast and cheap.",
+          "s": "Most people at the time thought Tudor's plan was likely to succeed.",
+          "a": "F",
+          "ev": "had what most people considered a ridiculous idea",
+          "w": "Hầu hết mọi người cho là ý tưởng NỰC CƯỜI → FALSE."
+        },
+        {
+          "s": "Tudor's first shipment was financially unsuccessful.",
           "a": "T",
-          "ev": "It is usually cheap and quick, which makes it popular with office workers.",
-          "w": "Khớp cả lý do → TRUE."
+          "ev": "His first cargo, sent to Martinique in 1806, largely melted, and Tudor lost a great deal of money.",
+          "w": "'financially unsuccessful' ≈ 'lost a great deal of money' → TRUE."
         },
         {
-          "s": "All street sellers have been banned in Asian cities.",
+          "s": "Sawdust was the most expensive insulating material Tudor tried.",
           "a": "F",
-          "ev": "the government has moved street sellers away from busy roads",
-          "w": "Chỉ chuyển đi xa đường đông ở MỘT SỐ thành phố, không cấm hết → FALSE."
+          "ev": "sawdust was cheap and highly effective",
+          "w": "Mùn cưa RẺ → ngược với 'most expensive' → FALSE."
         },
         {
-          "s": "Experts believe street food is usually worse than restaurant food.",
-          "a": "F",
-          "ev": "the quality of street food is often as good as restaurant food.",
-          "w": "Chuyên gia nói thường NGANG BẰNG → ngược với 'worse' → FALSE."
+          "s": "Tudor gave ice away to encourage people to drink cold drinks.",
+          "a": "T",
+          "ev": "offering free ice to bartenders so that customers would become used to cold drinks",
+          "w": "'gave ice away' ≈ 'offering free ice' → TRUE."
         },
         {
-          "s": "Tourists spend more on street food than local people.",
+          "s": "Tudor's company was the first to develop mechanical refrigeration.",
           "a": "NG",
-          "w": "Bài không nhắc khách du lịch → NOT GIVEN."
-        },
-        {
-          "s": "Street sellers were moved to make roads safer.",
-          "a": "T",
-          "ev": "to improve safety.",
-          "w": "improve safety = làm an toàn hơn → TRUE."
+          "w": "Bài nói làm lạnh cơ học khiến băng tự nhiên hết cần thiết, không nói ai phát triển nó → NOT GIVEN."
         }
       ]
     },
     {
-      "id": "p09",
-      "title": "Sleep and teenagers",
-      "text": "Doctors recommend that teenagers sleep eight to ten hours a night. However, a study in 2022 showed that many students sleep fewer than seven hours. The main reason was the use of phones late at night. Students who slept more had better memory in tests, according to the researchers.",
+      "id": "b29",
+      "title": "Learning from mistakes in aviation",
+      "text": "Commercial flying is today one of the safest forms of transport, but this was not always the case. In the 1950s and 1960s fatal accidents were far more frequent than they are now. Part of the improvement is due to better aircraft and navigation technology, but experts also credit the industry's approach to learning from errors.\n\nWhen an accident occurs, independent investigators examine the wreckage and the 'black box' recorders, which store flight data and conversations in the cockpit. Their reports are usually published so that airlines around the world can apply the lessons. Many countries also run confidential systems that allow pilots to report mistakes and near-misses without fear of being punished. Some hospitals have tried to copy this approach, but progress has been slower, partly because medical staff worry that admitting mistakes could lead to legal action.",
       "q": [
         {
-          "s": "Doctors say teenagers need at least eight hours of sleep.",
+          "s": "Air travel has become safer since the 1960s.",
           "a": "T",
-          "ev": "teenagers sleep eight to ten hours a night.",
-          "w": "8–10 giờ = ít nhất 8 giờ → TRUE."
+          "ev": "In the 1950s and 1960s fatal accidents were far more frequent than they are now.",
+          "w": "Tai nạn chết người khi đó nhiều hơn bây giờ → ngày nay an toàn hơn → TRUE."
         },
         {
-          "s": "No students in the study slept fewer than seven hours.",
+          "s": "Improvements in safety are due entirely to new technology.",
           "a": "F",
-          "ev": "many students sleep fewer than seven hours.",
-          "w": "Bài nói NHIỀU học sinh ngủ ít hơn 7 tiếng → 'không ai' bị bài phủ nhận → FALSE."
+          "ev": "Part of the improvement is due to better aircraft and navigation technology, but experts also credit the industry's approach to learning from errors",
+          "w": "Công nghệ chỉ là MỘT PHẦN; còn cách học từ lỗi → không phải 'entirely' → FALSE."
         },
         {
-          "s": "Using phones late at night was the main cause of short sleep.",
-          "a": "T",
-          "ev": "The main reason was the use of phones late at night.",
-          "w": "Khớp → TRUE."
+          "s": "Accident investigations are carried out by the airlines themselves.",
+          "a": "F",
+          "ev": "independent investigators examine the wreckage",
+          "w": "Điều tra viên ĐỘC LẬP, không phải chính hãng bay → FALSE."
         },
         {
-          "s": "Students who slept more also got higher marks in maths.",
+          "s": "Pilots who report their own mistakes are usually given extra training.",
           "a": "NG",
-          "w": "Bài nói về trí nhớ, không nói điểm toán → NOT GIVEN."
+          "w": "Bài chỉ nói phi công báo lỗi mà không sợ bị phạt; không nói có được đào tạo thêm → NOT GIVEN."
         },
         {
-          "s": "The study took place in 2022.",
+          "s": "Fear of legal consequences has slowed the adoption of this approach in hospitals.",
           "a": "T",
-          "ev": "a study in 2022",
-          "w": "Khớp → TRUE."
+          "ev": "partly because medical staff worry that admitting mistakes could lead to legal action",
+          "w": "'fear of legal consequences' ≈ 'worry … could lead to legal action'; 'slowed' ≈ 'progress has been slower' → TRUE."
         }
       ]
     },
     {
-      "id": "p10",
-      "title": "Plastic bags",
-      "text": "Ten years ago, supermarkets in the town gave plastic bags to customers for free. Now customers must pay for each bag. Since this change, the use of plastic bags has dropped by 70%. Some shoppers complained at first, but most now bring their own bags. The town council is considering a similar rule for plastic bottles.",
+      "id": "b30",
+      "title": "The secret of rice terraces",
+      "text": "In mountainous regions of southern China, the Philippines and Indonesia, farmers have carved steep hillsides into narrow, level fields for growing rice. Some of these terraces are believed to be more than a thousand years old. Building them required enormous collective effort, and maintaining them still depends on cooperation between families, since water must flow from one level to the next.\n\nIn Bali, the distribution of water among rice fields has traditionally been managed by community organisations known as subak, which are closely linked to local water temples. In the 1970s, government programmes encouraged farmers to plant new high-yield varieties as often as possible, ignoring the traditional schedule. Within a few years, pest outbreaks and water shortages had become serious problems. Research by the anthropologist Stephen Lansing later suggested that the temple system had been coordinating planting times in a way that limited pests, and the traditional schedule was partly restored.",
       "q": [
         {
-          "s": "Supermarkets still give plastic bags for free.",
+          "s": "All of the terraces described are over a thousand years old.",
           "a": "F",
-          "ev": "Now customers must pay for each bag.",
-          "w": "Bây giờ PHẢI TRẢ TIỀN → ngược lại → FALSE."
+          "ev": "Some of these terraces are believed to be more than a thousand years old.",
+          "w": "Chỉ MỘT SỐ ruộng bậc thang được cho là hơn 1000 năm → không phải 'all' → FALSE."
         },
         {
-          "s": "Plastic bag use has fallen sharply.",
+          "s": "Farmers working on terraces need to cooperate with their neighbours.",
           "a": "T",
-          "ev": "the use of plastic bags has dropped by 70%.",
-          "w": "Giảm 70% = giảm mạnh → TRUE."
+          "ev": "maintaining them still depends on cooperation between families",
+          "w": "'cooperate with their neighbours' ≈ 'cooperation between families' → TRUE."
         },
         {
-          "s": "No shoppers complained about the change.",
+          "s": "The subak organisations were created by the government in the 1970s.",
           "a": "F",
-          "ev": "Some shoppers complained at first",
-          "w": "Có một số người phàn nàn → 'no shoppers' sai → FALSE."
+          "ev": "has traditionally been managed by community organisations known as subak",
+          "w": "Subak là tổ chức CỘNG ĐỒNG truyền thống; chính phủ những năm 1970 lại bỏ qua lịch truyền thống → FALSE."
         },
         {
-          "s": "The council has already banned plastic bottles.",
-          "a": "F",
-          "ev": "The town council is considering a similar rule for plastic bottles.",
-          "w": "Mới đang CÂN NHẮC, chưa cấm → ngược với 'already banned' → FALSE."
-        },
-        {
-          "s": "Each plastic bag costs about 2,000 dong.",
+          "s": "The new rice varieties tasted worse than traditional ones.",
           "a": "NG",
-          "w": "Bài không nói giá cụ thể → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p11",
-      "title": "Learning a second language",
-      "text": "Research shows that children can learn a second language more easily than adults, especially pronunciation. However, adults are often better at learning grammar rules because they can think about language in a logical way. Many experts believe that the best age to start is before twelve, but people can learn a language at any age.",
-      "q": [
+          "w": "Bài nói giống lúa mới năng suất cao, không nói về hương vị → NOT GIVEN."
+        },
         {
-          "s": "Children usually find pronunciation easier to learn than adults do.",
+          "s": "Lansing's research indicated that the traditional system helped to control pests.",
           "a": "T",
-          "ev": "children can learn a second language more easily than adults, especially pronunciation.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Adults cannot learn a second language.",
-          "a": "F",
-          "ev": "people can learn a language at any age.",
-          "w": "Bài nói học ở tuổi nào cũng được → ngược lại → FALSE."
-        },
-        {
-          "s": "Adults are often better at grammar rules than children.",
-          "a": "T",
-          "ev": "adults are often better at learning grammar rules",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Learning a second language improves children's maths skills.",
-          "a": "NG",
-          "w": "Không nhắc toán → NOT GIVEN."
-        },
-        {
-          "s": "Experts agree that people should start learning after the age of twelve.",
-          "a": "F",
-          "ev": "the best age to start is before twelve",
-          "w": "Bài nói TRƯỚC 12 tuổi → ngược với 'after' → FALSE."
-        }
-      ]
-    },
-    {
-      "id": "p12",
-      "title": "A family business",
-      "text": "Mr Nam opened a small bakery in 1995. At first, he sold only bread, but later he added cakes and pastries. Today, his daughter manages the business, and it has three shops in the city. Mr Nam still comes to the main shop every morning to check the bread. He says the secret of his success is using fresh ingredients.",
-      "q": [
-        {
-          "s": "The bakery sold cakes from the beginning.",
-          "a": "F",
-          "ev": "At first, he sold only bread, but later he added cakes",
-          "w": "Lúc đầu CHỈ bán bánh mì → ngược lại → FALSE."
-        },
-        {
-          "s": "Mr Nam's daughter now runs the business.",
-          "a": "T",
-          "ev": "his daughter manages the business",
-          "w": "manages = runs → TRUE."
-        },
-        {
-          "s": "Mr Nam has completely retired from the bakery.",
-          "a": "F",
-          "ev": "Mr Nam still comes to the main shop every morning to check the bread.",
-          "w": "Ông vẫn đến kiểm tra mỗi sáng → không nghỉ hẳn → FALSE."
-        },
-        {
-          "s": "The bakery is the most famous in the city.",
-          "a": "NG",
-          "w": "Bài không so sánh với tiệm khác → NOT GIVEN."
-        },
-        {
-          "s": "Mr Nam believes fresh ingredients are important for his success.",
-          "a": "T",
-          "ev": "the secret of his success is using fresh ingredients.",
-          "w": "Khớp → TRUE."
-        }
-      ]
-    },
-    {
-      "id": "p13",
-      "title": "Electric motorbikes",
-      "text": "Electric motorbikes are becoming more common in Vietnam. They are quieter than petrol motorbikes and do not produce smoke. However, many buyers worry about the battery, which usually needs to be charged every day. The price of electric models has fallen in recent years, but charging stations are still limited outside big cities.",
-      "q": [
-        {
-          "s": "Electric motorbikes are noisier than petrol ones.",
-          "a": "F",
-          "ev": "They are quieter than petrol motorbikes",
-          "w": "Bài nói YÊN TĨNH HƠN → ngược lại → FALSE."
-        },
-        {
-          "s": "Some buyers are concerned about the battery.",
-          "a": "T",
-          "ev": "many buyers worry about the battery",
-          "w": "worry = concerned → TRUE."
-        },
-        {
-          "s": "Electric motorbikes are now cheaper than petrol motorbikes.",
-          "a": "NG",
-          "w": "Bài nói giá xe điện GIẢM, nhưng không so với xe xăng → NOT GIVEN. Bẫy so sánh thường gặp."
-        },
-        {
-          "s": "There are plenty of charging stations in rural areas.",
-          "a": "F",
-          "ev": "charging stations are still limited outside big cities.",
-          "w": "Ngoài thành phố lớn trạm sạc còn ÍT → ngược với 'plenty' → FALSE."
-        },
-        {
-          "s": "The government gives money to people who buy electric motorbikes.",
-          "a": "NG",
-          "w": "Không nhắc chính phủ hỗ trợ → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p14",
-      "title": "A mountain village",
-      "text": "Ta Van is a village in the mountains of northern Vietnam. Many visitors come to see the rice terraces, especially in September when the rice turns yellow. Local families offer homestays, so tourists can sleep in traditional houses. Tourism has brought more income, but some residents say the village is becoming too crowded.",
-      "q": [
-        {
-          "s": "The rice turns yellow in September.",
-          "a": "T",
-          "ev": "in September when the rice turns yellow.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Tourists can stay in local people's houses.",
-          "a": "T",
-          "ev": "Local families offer homestays",
-          "w": "homestay = ở nhà dân → TRUE."
-        },
-        {
-          "s": "Tourism has reduced local income.",
-          "a": "F",
-          "ev": "Tourism has brought more income",
-          "w": "Thu nhập TĂNG → ngược với 'reduced' → FALSE."
-        },
-        {
-          "s": "All residents are happy with the number of tourists.",
-          "a": "F",
-          "ev": "some residents say the village is becoming too crowded.",
-          "w": "Có người cho là quá đông → 'all … happy' sai → FALSE."
-        },
-        {
-          "s": "The village has a new hotel.",
-          "a": "NG",
-          "w": "Không nhắc khách sạn → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p15",
-      "title": "Reading habits",
-      "text": "A survey of 1,000 adults found that people read fewer printed books than ten years ago. However, the number of people reading e-books and listening to audiobooks has grown. Younger people were more likely to use audiobooks, often while travelling. Only 15% of the people surveyed said they never read books at all.",
-      "q": [
-        {
-          "s": "People read more printed books than ten years ago.",
-          "a": "F",
-          "ev": "people read fewer printed books than ten years ago.",
-          "w": "fewer = ít hơn → ngược lại → FALSE."
-        },
-        {
-          "s": "Audiobooks are more popular among younger people.",
-          "a": "T",
-          "ev": "Younger people were more likely to use audiobooks",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Most people in the survey never read books.",
-          "a": "F",
-          "ev": "Only 15% of the people surveyed said they never read books at all.",
-          "w": "Chỉ 15% không đọc → không phải đa số → FALSE."
-        },
-        {
-          "s": "E-books are cheaper than printed books.",
-          "a": "NG",
-          "w": "Không nói giá → NOT GIVEN."
-        },
-        {
-          "s": "Older people never use audiobooks.",
-          "a": "NG",
-          "w": "Bài chỉ nói người trẻ dùng NHIỀU HƠN; không nói người lớn tuổi hoàn toàn không dùng → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p16",
-      "title": "The night market",
-      "text": "The night market opens every Friday and Saturday from 6 p.m. to midnight. It has around 200 stalls selling clothes, souvenirs and food. The market was created in 2015 to attract tourists, but today most of the customers are local people. Cars are not allowed in the street while the market is open.",
-      "q": [
-        {
-          "s": "The market opens every evening.",
-          "a": "F",
-          "ev": "The night market opens every Friday and Saturday",
-          "w": "Chỉ thứ Sáu và thứ Bảy → ngược với 'every evening' → FALSE."
-        },
-        {
-          "s": "The market was originally created for tourists.",
-          "a": "T",
-          "ev": "The market was created in 2015 to attract tourists",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Most customers today are tourists.",
-          "a": "F",
-          "ev": "today most of the customers are local people.",
-          "w": "Phần lớn là người địa phương → FALSE."
-        },
-        {
-          "s": "Motorbikes can enter the street during the market.",
-          "a": "NG",
-          "w": "Bài chỉ nói ô tô bị cấm; không nói xe máy → NOT GIVEN. Bẫy: đừng coi 'cars' là 'mọi xe'."
-        },
-        {
-          "s": "The market has about 200 stalls.",
-          "a": "T",
-          "ev": "It has around 200 stalls",
-          "w": "around = about → TRUE."
-        }
-      ]
-    },
-    {
-      "id": "p17",
-      "title": "Fast fashion",
-      "text": "Fast fashion companies produce cheap clothes very quickly to follow the latest trends. Because the clothes are cheap, many people buy more than they need and throw them away after a short time. Making clothes uses a lot of water. Some brands have started recycling programmes, where customers can return old clothes in exchange for a discount.",
-      "q": [
-        {
-          "s": "Fast fashion clothes are produced slowly.",
-          "a": "F",
-          "ev": "produce cheap clothes very quickly",
-          "w": "very quickly → ngược với 'slowly' → FALSE."
-        },
-        {
-          "s": "Low prices lead some people to buy too many clothes.",
-          "a": "T",
-          "ev": "Because the clothes are cheap, many people buy more than they need",
-          "w": "Khớp quan hệ nguyên nhân → TRUE."
-        },
-        {
-          "s": "All fashion brands now recycle old clothes.",
-          "a": "F",
-          "ev": "Some brands have started recycling programmes",
-          "w": "Chỉ MỘT SỐ hãng → 'all' sai → FALSE."
-        },
-        {
-          "s": "Customers who return old clothes can get a lower price.",
-          "a": "T",
-          "ev": "in exchange for a discount.",
-          "w": "discount = giảm giá → TRUE."
-        },
-        {
-          "s": "Cotton clothes use more water than other clothes.",
-          "a": "NG",
-          "w": "Bài nói may quần áo tốn nước nói chung, không so cotton với loại khác → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p18",
-      "title": "A volunteer programme",
-      "text": "Every summer, a group of university students volunteers to teach English to children in rural areas. The programme lasts four weeks. Volunteers do not receive a salary, but their food and accommodation are paid for. Last year, 40 students joined, which was twice as many as the year before.",
-      "q": [
-        {
-          "s": "The volunteers are paid a salary.",
-          "a": "F",
-          "ev": "Volunteers do not receive a salary",
-          "w": "Không nhận lương → FALSE."
-        },
-        {
-          "s": "Volunteers do not have to pay for their meals.",
-          "a": "T",
-          "ev": "their food and accommodation are paid for.",
-          "w": "Ăn ở được chi trả → TRUE."
-        },
-        {
-          "s": "The number of volunteers doubled last year.",
-          "a": "T",
-          "ev": "40 students joined, which was twice as many as the year before.",
-          "w": "twice as many = gấp đôi → TRUE."
-        },
-        {
-          "s": "The programme lasts for two months.",
-          "a": "F",
-          "ev": "The programme lasts four weeks.",
-          "w": "Bốn tuần ≈ một tháng, không phải hai tháng → FALSE."
-        },
-        {
-          "s": "The children's English improved a lot after the programme.",
-          "a": "NG",
-          "w": "Không nói kết quả học của trẻ → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p19",
-      "title": "Healthy eating",
-      "text": "Nutritionists advise people to eat at least five portions of fruit and vegetables a day. In a recent study, only one in four adults reached this target. People with busy jobs often chose fast food because it saved time. The study suggested that cooking simple meals at home could help people eat more healthily.",
-      "q": [
-        {
-          "s": "Most adults in the study ate five portions of fruit and vegetables a day.",
-          "a": "F",
-          "ev": "only one in four adults reached this target.",
-          "w": "Chỉ 1/4 đạt → không phải đa số → FALSE."
-        },
-        {
-          "s": "Busy people sometimes eat fast food to save time.",
-          "a": "T",
-          "ev": "People with busy jobs often chose fast food because it saved time.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Fast food is more expensive than home cooking.",
-          "a": "NG",
-          "w": "Không nói giá → NOT GIVEN."
-        },
-        {
-          "s": "The study recommended cooking at home.",
-          "a": "T",
-          "ev": "cooking simple meals at home could help people eat more healthily.",
-          "w": "suggested ≈ recommended → TRUE."
-        },
-        {
-          "s": "Children eat more vegetables than adults.",
-          "a": "NG",
-          "w": "Không nhắc trẻ em → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p20",
-      "title": "The river clean-up",
-      "text": "In 2021, local residents began a project to clean the To Lich River. Volunteers collect rubbish from the banks once a month. The water is still polluted, but the smell has improved, according to people living nearby. The city plans to build a new water treatment plant by 2026.",
-      "q": [
-        {
-          "s": "The river is now completely clean.",
-          "a": "F",
-          "ev": "The water is still polluted",
-          "w": "Vẫn còn ô nhiễm → FALSE."
-        },
-        {
-          "s": "Volunteers collect rubbish every week.",
-          "a": "F",
-          "ev": "Volunteers collect rubbish from the banks once a month.",
-          "w": "Mỗi tháng một lần, không phải mỗi tuần → FALSE."
-        },
-        {
-          "s": "People living near the river say it smells better.",
-          "a": "T",
-          "ev": "the smell has improved, according to people living nearby.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "The new treatment plant has already been built.",
-          "a": "F",
-          "ev": "The city plans to build a new water treatment plant by 2026.",
-          "w": "Mới là KẾ HOẠCH → FALSE."
-        },
-        {
-          "s": "The project was started by the city government.",
-          "a": "F",
-          "ev": "local residents began a project",
-          "w": "Người dân bắt đầu, không phải chính quyền → FALSE."
-        }
-      ]
-    },
-    {
-      "id": "p21",
-      "title": "Smartphones and children",
-      "text": "Many parents give their children smartphones at a young age. Some schools have banned phones during lessons because they distract students. Teachers at these schools report that students talk to each other more at break time. However, the ban does not apply to students who need a phone for medical reasons.",
-      "q": [
-        {
-          "s": "Some schools do not allow phones in class.",
-          "a": "T",
-          "ev": "Some schools have banned phones during lessons",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Teachers say students talk less at break time since the ban.",
-          "a": "F",
-          "ev": "students talk to each other more at break time.",
-          "w": "Nói chuyện NHIỀU HƠN → ngược với 'less' → FALSE."
-        },
-        {
-          "s": "Students' exam results improved after the ban.",
-          "a": "NG",
-          "w": "Bài không nói điểm thi → NOT GIVEN."
-        },
-        {
-          "s": "Every student must leave their phone at home.",
-          "a": "F",
-          "ev": "the ban does not apply to students who need a phone for medical reasons.",
-          "w": "Có ngoại lệ, và lệnh cấm chỉ trong giờ học → FALSE."
-        },
-        {
-          "s": "Most parents think phones are harmful.",
-          "a": "NG",
-          "w": "Không nói ý kiến phụ huynh → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p22",
-      "title": "Robots in factories",
-      "text": "A car factory in the north of the country now uses robots for painting and welding. The company says the robots work faster and make fewer mistakes than humans. No workers lost their jobs; instead, they were trained to check and repair the robots. The company plans to buy more robots next year.",
-      "q": [
-        {
-          "s": "The robots make more mistakes than human workers.",
-          "a": "F",
-          "ev": "make fewer mistakes than humans.",
-          "w": "fewer mistakes → FALSE."
-        },
-        {
-          "s": "Some workers lost their jobs because of the robots.",
-          "a": "F",
-          "ev": "No workers lost their jobs",
-          "w": "Không ai mất việc → FALSE."
-        },
-        {
-          "s": "Workers were trained to repair the robots.",
-          "a": "T",
-          "ev": "they were trained to check and repair the robots.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "The robots cost more than a million dollars.",
-          "a": "NG",
-          "w": "Không nói giá robot → NOT GIVEN."
-        },
-        {
-          "s": "The factory is located in the south of the country.",
-          "a": "F",
-          "ev": "A car factory in the north of the country",
-          "w": "Nhà máy ở phía bắc → FALSE."
-        }
-      ]
-    },
-    {
-      "id": "p23",
-      "title": "Public parks",
-      "text": "Studies show that people who live near green spaces tend to feel less stressed. In the last five years, the city has opened six new parks. Most of them are small, but they have playgrounds and exercise equipment. Entry to all city parks is free, and they are open from 5 a.m. to 10 p.m.",
-      "q": [
-        {
-          "s": "Living near parks can reduce stress.",
-          "a": "T",
-          "ev": "people who live near green spaces tend to feel less stressed.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "The new parks are all very large.",
-          "a": "F",
-          "ev": "Most of them are small",
-          "w": "Phần lớn nhỏ → FALSE."
-        },
-        {
-          "s": "Visitors must pay to enter the parks.",
-          "a": "F",
-          "ev": "Entry to all city parks is free",
-          "w": "Miễn phí → FALSE."
-        },
-        {
-          "s": "The parks are open 24 hours a day.",
-          "a": "F",
-          "ev": "they are open from 5 a.m. to 10 p.m.",
-          "w": "Có giờ mở cửa cụ thể → FALSE."
-        },
-        {
-          "s": "The new parks are popular with elderly people.",
-          "a": "NG",
-          "w": "Không nói ai hay đến công viên → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p24",
-      "title": "A language app",
-      "text": "A new language-learning app was launched last year. It offers short daily lessons of about ten minutes. The basic version is free, but users must pay for extra features such as speaking practice. The company says it has two million users, although it has not said how many of them pay.",
-      "q": [
-        {
-          "s": "Lessons in the app take around ten minutes.",
-          "a": "T",
-          "ev": "short daily lessons of about ten minutes.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Speaking practice is included in the free version.",
-          "a": "F",
-          "ev": "users must pay for extra features such as speaking practice.",
-          "w": "Phải trả tiền → không có trong bản miễn phí → FALSE."
-        },
-        {
-          "s": "Half of the users pay for extra features.",
-          "a": "NG",
-          "ev": "it has not said how many of them pay.",
-          "w": "Công ty CHƯA công bố số người trả tiền → không biết → NOT GIVEN."
-        },
-        {
-          "s": "The app has two million users, according to the company.",
-          "a": "T",
-          "ev": "The company says it has two million users",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "The app teaches more than twenty languages.",
-          "a": "NG",
-          "w": "Không nói số ngôn ngữ → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p25",
-      "title": "Rainy season",
-      "text": "In southern Vietnam, the rainy season usually lasts from May to November. Heavy rain often falls in the afternoon for a short time. In the city, some streets flood quickly because the drainage system is old. The city has started to upgrade the system, but the work will take several years.",
-      "q": [
-        {
-          "s": "The rainy season in the south usually starts in May.",
-          "a": "T",
-          "ev": "the rainy season usually lasts from May to November.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Heavy rain usually lasts all day.",
-          "a": "F",
-          "ev": "Heavy rain often falls in the afternoon for a short time.",
-          "w": "Mưa trong thời gian NGẮN → FALSE."
-        },
-        {
-          "s": "Some streets flood because the drainage system is old.",
-          "a": "T",
-          "ev": "some streets flood quickly because the drainage system is old.",
-          "w": "Khớp cả nguyên nhân → TRUE."
-        },
-        {
-          "s": "The work on the drainage system has been completed.",
-          "a": "F",
-          "ev": "the work will take several years.",
-          "w": "Sẽ mất vài năm → chưa xong → FALSE."
-        },
-        {
-          "s": "Flooding causes many traffic accidents.",
-          "a": "NG",
-          "w": "Không nhắc tai nạn → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p26",
-      "title": "Part-time jobs",
-      "text": "About half of the university students in a survey had a part-time job. Most worked in cafés or as private tutors. Students said the jobs helped them gain experience and pay for their living costs. However, those who worked more than 20 hours a week were more likely to feel stressed during exams.",
-      "q": [
-        {
-          "s": "All the students in the survey had a part-time job.",
-          "a": "F",
-          "ev": "About half of the university students in a survey had a part-time job.",
-          "w": "Chỉ khoảng một nửa → FALSE."
-        },
-        {
-          "s": "Working as a tutor was a common type of job.",
-          "a": "T",
-          "ev": "Most worked in cafés or as private tutors.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Students said their jobs gave them useful experience.",
-          "a": "T",
-          "ev": "the jobs helped them gain experience",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Students who worked long hours got lower grades.",
-          "a": "NG",
-          "w": "Bài nói họ căng thẳng hơn, không nói điểm thấp hơn → NOT GIVEN."
-        },
-        {
-          "s": "Students working more than 20 hours a week felt less stressed.",
-          "a": "F",
-          "ev": "were more likely to feel stressed during exams.",
-          "w": "Căng thẳng HƠN → FALSE."
-        }
-      ]
-    },
-    {
-      "id": "p27",
-      "title": "Old buildings",
-      "text": "The old French-style buildings in the city centre were built more than a hundred years ago. Some of them have been turned into museums and hotels. Others are in poor condition because the owners cannot afford repairs. The city council has offered to pay half the repair costs for buildings of historic value.",
-      "q": [
-        {
-          "s": "The buildings are less than fifty years old.",
-          "a": "F",
-          "ev": "were built more than a hundred years ago.",
-          "w": "Hơn 100 năm → FALSE."
-        },
-        {
-          "s": "Some of the buildings are now used as hotels.",
-          "a": "T",
-          "ev": "Some of them have been turned into museums and hotels.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "The council will pay the full cost of repairs.",
-          "a": "F",
-          "ev": "pay half the repair costs",
-          "w": "Chỉ một nửa → FALSE."
-        },
-        {
-          "s": "Tourists prefer staying in the old hotels.",
-          "a": "NG",
-          "w": "Không nói sở thích của khách → NOT GIVEN."
-        },
-        {
-          "s": "Some owners cannot pay for repairs.",
-          "a": "T",
-          "ev": "the owners cannot afford repairs.",
-          "w": "cannot afford = không đủ tiền → TRUE."
-        }
-      ]
-    },
-    {
-      "id": "p28",
-      "title": "Air conditioners",
-      "text": "As summers become hotter, more families in Vietnam are buying air conditioners. They make homes more comfortable, but they use a lot of electricity. Experts suggest setting the temperature at 26°C to save energy. Newer models use less power than older ones, but they are more expensive to buy.",
-      "q": [
-        {
-          "s": "Air conditioners use very little electricity.",
-          "a": "F",
-          "ev": "they use a lot of electricity.",
-          "w": "Dùng NHIỀU điện → FALSE."
-        },
-        {
-          "s": "Experts recommend a temperature of 26°C.",
-          "a": "T",
-          "ev": "Experts suggest setting the temperature at 26°C",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "New air conditioners are cheaper to buy than old ones.",
-          "a": "F",
-          "ev": "they are more expensive to buy.",
-          "w": "Đắt hơn khi mua → FALSE."
-        },
-        {
-          "s": "Most families in Vietnam now have an air conditioner.",
-          "a": "NG",
-          "w": "Bài nói ngày càng nhiều gia đình mua, không nói 'đa số' đã có → NOT GIVEN."
-        },
-        {
-          "s": "Newer models are more energy-efficient.",
-          "a": "T",
-          "ev": "Newer models use less power than older ones",
-          "w": "use less power = tiết kiệm điện hơn → TRUE."
-        }
-      ]
-    },
-    {
-      "id": "p29",
-      "title": "A music festival",
-      "text": "The music festival takes place every December on the beach. It started in 2018 with only local bands, but now artists from five countries perform. Tickets usually sell out within a week. This year, the organisers have asked visitors not to bring plastic bottles, and free water stations will be available.",
-      "q": [
-        {
-          "s": "The festival has always included international artists.",
-          "a": "F",
-          "ev": "It started in 2018 with only local bands",
-          "w": "Lúc đầu CHỈ có ban nhạc địa phương → FALSE."
-        },
-        {
-          "s": "Tickets are usually difficult to get.",
-          "a": "T",
-          "ev": "Tickets usually sell out within a week.",
-          "w": "Bán hết trong một tuần → khó mua → TRUE (suy ra trực tiếp)."
-        },
-        {
-          "s": "Visitors will be able to get water for free.",
-          "a": "T",
-          "ev": "free water stations will be available.",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "The festival is held in the mountains.",
-          "a": "F",
-          "ev": "on the beach.",
-          "w": "Tổ chức trên bãi biển → FALSE."
-        },
-        {
-          "s": "Tickets are more expensive this year.",
-          "a": "NG",
-          "w": "Không nói giá vé → NOT GIVEN."
-        }
-      ]
-    },
-    {
-      "id": "p30",
-      "title": "Recycling at home",
-      "text": "Since January, households in the district have been asked to separate their rubbish into three bins: food waste, recyclable materials and other waste. Food waste is collected every day, while recyclables are collected twice a week. Families who do not separate their rubbish may receive a warning, but no fines have been given so far.",
-      "q": [
-        {
-          "s": "Households must use three different bins.",
-          "a": "T",
-          "ev": "separate their rubbish into three bins",
-          "w": "Khớp → TRUE."
-        },
-        {
-          "s": "Recyclables are collected every day.",
-          "a": "F",
-          "ev": "recyclables are collected twice a week.",
-          "w": "Hai lần một tuần → FALSE."
-        },
-        {
-          "s": "Several families have already been fined.",
-          "a": "F",
-          "ev": "no fines have been given so far.",
-          "w": "Chưa phạt ai → FALSE."
-        },
-        {
-          "s": "Most families are separating their rubbish correctly.",
-          "a": "NG",
-          "w": "Không có số liệu về việc tuân thủ → NOT GIVEN."
-        },
-        {
-          "s": "Food waste is collected more often than recyclables.",
-          "a": "T",
-          "ev": "Food waste is collected every day, while recyclables are collected twice a week.",
-          "w": "Hằng ngày > hai lần/tuần → TRUE."
+          "ev": "the temple system had been coordinating planting times in a way that limited pests",
+          "w": "'helped to control pests' ≈ 'limited pests'; 'indicated' ≈ 'suggested' → TRUE."
         }
       ]
     }

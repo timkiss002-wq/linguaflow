@@ -13,7 +13,7 @@ const PASS = 0.5;
 
 /** Shows a passage with the evidence sentences marked once the answers are checked. */
 function PassageText({ text, marks }: { text: string; marks: string[] }) {
-  if (!marks.length) return <p className="leading-relaxed">{text}</p>;
+  if (!marks.length) return <p className="whitespace-pre-line leading-relaxed">{text}</p>;
   const parts: (string | { m: string })[] = [];
   let rest = text;
   for (;;) {
@@ -25,7 +25,7 @@ function PassageText({ text, marks }: { text: string; marks: string[] }) {
   }
   parts.push(rest);
   return (
-    <p className="leading-relaxed">
+    <p className="whitespace-pre-line leading-relaxed">
       {parts.map((p, i) => (typeof p === 'string' ? <Fragment key={i}>{p}</Fragment> : <mark key={i} className="rounded bg-warning/25 px-0.5 text-foreground">{p.m}</mark>))}
     </p>
   );
@@ -98,7 +98,7 @@ export default function TfngPage() {
           <b className="text-foreground">NOT GIVEN</b> — bài <b>không nhắc tới</b>, hoặc chỉ nhắc một phần; không có câu nào xác nhận hay phủ nhận.
         </p>
         <p className="flex gap-1.5 text-muted-foreground sm:col-span-3">
-          <Info className="mt-0.5 size-4 shrink-0" aria-hidden /> Mẹo: trước khi chọn FALSE, hãy chỉ ra được câu trong bài nói ngược lại. Không chỉ ra được → NOT GIVEN. Cẩn thận với từ tuyệt đối (all, never, only, most) và so sánh (more, cheaper) mà bài không nói.
+          <Info className="mt-0.5 size-4 shrink-0" aria-hidden /> Mẹo: trước khi chọn FALSE, hãy chỉ ra được câu trong bài nói ngược lại. Không chỉ ra được → NOT GIVEN. Cẩn thận với từ tuyệt đối (all, only, always, entirely), so sánh (more, the most) mà bài không nói, và mức độ chắc chắn: bài nói “believed / suggested / unclear” mà câu hỏi nói “proved / confirmed / certain” → FALSE.
         </p>
       </section>
 
