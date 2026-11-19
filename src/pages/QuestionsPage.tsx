@@ -86,7 +86,7 @@ export default function QuestionsPage() {
         <p className="text-sm text-muted-foreground">Bài tập hằng ngày · {formatDay(date)}</p>
         <h1 className="text-2xl font-bold tracking-tight">Đặt câu hỏi</h1>
         <p className="max-w-3xl text-muted-foreground">
-          {PER_DAY} câu mỗi ngày: đặt câu hỏi cho phần được tô màu trong câu trả lời, hoặc hỏi bằng tiếng Anh theo tình huống tiếng Việt. Không tính dấu chấm hỏi, chữ hoa và viết tắt. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại câu sai. Muốn luyện nhiều hơn thì bấm “Luyện thêm” — bao nhiêu lượt cũng được, câu sai sẽ quay lại vào các ngày sau.
+          {PER_DAY} câu mỗi ngày: 2 câu hỏi đời thường (quán ăn, phòng thi, mua sắm, hỏi đường, khách sạn, hiệu thuốc, công việc, bạn bè) và 3 câu theo chủ điểm ngữ pháp — đặt câu hỏi cho phần được tô màu, hoặc hỏi bằng tiếng Anh theo tình huống tiếng Việt. Câu nhờ / xin phép chấp nhận cả Could / Can / May và có hay không có “please”. Không tính dấu chấm hỏi, chữ hoa và viết tắt. Cần đúng ngay lần đầu ≥ 50%; chưa đạt thì chỉ làm lại câu sai. Muốn luyện nhiều hơn thì bấm “Luyện thêm” — bao nhiêu lượt cũng được, câu sai sẽ quay lại vào các ngày sau.
         </p>
       </header>
 
