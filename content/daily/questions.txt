@@ -194,3 +194,94 @@
 > Hỏi lịch sự (bắt đầu bằng I wonder): Liệu cô ấy có đến không? || I wonder if she will come. // I wonder whether she will come. // I wonder if she is coming. // I wonder whether she is coming. || Câu hỏi Yes/No gián tiếp → if / whether + chủ ngữ + động từ.
 > Hỏi lịch sự (bắt đầu bằng Do you know): Phòng 201 ở tầng mấy? || Do you know which floor room 201 is on? // Do you know what floor room 201 is on? || which floor + room 201 + is on (giới từ cuối câu).
 > Hỏi lịch sự (bắt đầu bằng Could you tell me): Tôi nên điền mẫu đơn này như thế nào? || Could you tell me how I should fill in this form? // Could you tell me how to fill in this form? // Could you tell me how I should fill out this form? // Could you tell me how to fill out this form? || how + I + should + V, hoặc gọn hơn: how to + V.
+
+############ ĐỜI THƯỜNG · mở ngay từ đầu, mỗi ngày 2 câu ############
+# Nhóm có id bắt đầu bằng "life-" là câu hỏi đời thường. Khi chấm, app tự chấp nhận thêm:
+# Could ↔ Can ↔ May (I …?), Could you ↔ Can you, và câu có / không có "please".
+
+@group life-eat 1 question,modal | Quán ăn & cà phê | Gọi món, gọi thanh toán: Could I have …, please? · Can we …? · How much is …?
+> Hỏi nhân viên: Hóa đơn của tôi là bao nhiêu? || How much is my bill? // How much is the bill? // How much do I owe you? || Hỏi số tiền → How much is …? (bill = hóa đơn)
+> Gọi nhân viên để thanh toán: Cho tôi xin hóa đơn. || Could I have the bill, please? // Could we have the bill, please? // Can I get the bill, please? // Could I have the check, please? || Xin cái gì → Could I have …, please? (Anh: bill · Mỹ: check)
+> Hỏi xem có thể trả bằng thẻ không. || Can I pay by card? // Do you accept cards? // Can I pay with a card? // Do you take cards? || Phương thức trả tiền → pay by card / in cash.
+> Hỏi xem quán có thực đơn tiếng Anh không. || Do you have an English menu? // Is there an English menu? // Do you have a menu in English? || Hỏi quán có gì → Do you have …?
+> Gọi thêm một cốc nước. || Could I have another glass of water, please? // Could I have some more water, please? // Could I have a glass of water, please? || another = thêm một cái nữa; some more + danh từ không đếm được.
+> Hỏi xem món này có cay không. || Is this dish spicy? // Is this spicy? // Is it spicy? || Tính chất món → Is this … spicy?
+> Hỏi nhân viên món nào được gọi nhiều nhất. || What is your most popular dish? // What do you recommend? // What would you recommend? || Xin gợi ý → What do you recommend?
+> Hỏi xem có bàn trống cho 4 người không. || Do you have a table for four? // Is there a table for four? // Have you got a table for four? || a table for four = bàn cho 4 người.
+> Hỏi xem có thể mang đồ ăn thừa về không. || Can I take this away? // Could I have a box for this, please? // Can I take the rest home? // Could I get this to go? || take away / to go = mang về.
+> Hỏi mật khẩu wifi của quán. || What is the wifi password? // What's the password for the wifi? // Could you tell me the wifi password? || What is the … password?
+> Hỏi xem đã bao gồm phí phục vụ chưa. || Is service included? // Is the service charge included? // Does the bill include service? || included = đã bao gồm.
+
+@group life-exam 1 question,modal | Phòng thi & lớp học | Xin phép, hỏi quy định: Could I …? · Can I …? · How many / How long …? · Do we have to …?
+> Hỏi giám thị: Em có thể viết bài trên mấy tờ giấy? || How many sheets of paper can I use? // How many pages can I write? // How many sheets can I write on? // How many pieces of paper can I use? || Số lượng giấy → How many sheets / pieces of paper (paper không đếm được nên phải dùng sheets).
+> Xin giám thị: Cho em xin thêm giấy thi. || Could I have some more paper, please? // Could I have another sheet of paper, please? // Could I have an extra answer sheet, please? // Could I have more paper, please? // Could I have another answer sheet, please? || Xin thêm → Could I have some more / another …, please?
+> Hỏi: Còn bao nhiêu thời gian nữa ạ? || How much time do we have left? // How much time is left? // How long do we have left? // How many minutes are left? || time không đếm được → How much time …? left = còn lại.
+> Xin phép đi vệ sinh. || Could I go to the toilet, please? // Could I go to the bathroom, please? // May I go to the toilet? // Could I use the toilet, please? || Xin phép làm gì → Could / May I + V?
+> Hỏi xem có được dùng máy tính cầm tay không. || Can we use a calculator? // Are we allowed to use a calculator? // Can I use a calculator? // Are calculators allowed? || Hỏi quy định → Can we …? / Are we allowed to …?
+> Hỏi xem có phải viết bằng bút mực không. || Do we have to write in pen? // Do I have to use a pen? // Do we have to use a pen? // Do I have to write in pen? || Bắt buộc không → Do we have to …?
+> Hỏi xem có được viết bằng bút chì không. || Can I write in pencil? // Can I use a pencil? // Are we allowed to use a pencil? // Can we write in pencil? || in pencil / in pen = bằng bút chì / bút mực.
+> Hỏi giám thị: Em nộp bài ở đâu ạ? || Where do I hand in my paper? // Where should I put my paper? // Where do I submit my paper? // Where do I hand in my answer sheet? || hand in = nộp.
+> Nhờ thầy cô nhắc lại câu hỏi. || Could you repeat the question, please? // Could you say that again, please? // Could you repeat that, please? || Nhờ làm gì → Could you + V, please?
+> Hỏi: Khi nào có kết quả thi ạ? || When will the results be available? // When will we get our results? // When will the results come out? // When can we see our results? || Tương lai → When will …?
+> Hỏi xem bài này nộp hạn chót khi nào. || When is the deadline? // When is the assignment due? // When do we have to submit it? // When is the deadline for this assignment? || due = đến hạn; deadline = hạn chót.
+> Hỏi: Từ này đọc như thế nào ạ? || How do you pronounce this word? // How do you say this word? // How is this word pronounced? || Cách làm gì → How do you + V?
+> Hỏi: Cái này tiếng Anh gọi là gì? || What is this called in English? // What do you call this in English? // How do you say this in English? || be called = được gọi là.
+
+@group life-shop 1 question,modal | Mua sắm | Hỏi giá, size, đổi trả: How much …? · Do you have … in …? · Can I try …?
+> Hỏi giá chiếc áo này. || How much is this shirt? // How much does this shirt cost? // How much is this? || How much is + danh từ số ít.
+> Hỏi giá đôi giày này. || How much are these shoes? // How much do these shoes cost? // How much are these? || shoes số nhiều → How much ARE these shoes?
+> Hỏi xem có size nhỏ hơn không. || Do you have a smaller size? // Do you have this in a smaller size? // Have you got a smaller size? // Is there a smaller size? || So sánh hơn → a smaller size.
+> Hỏi xem có màu khác không. || Do you have this in another colour? // Do you have it in a different colour? // Does it come in other colours? // Do you have this in other colours? || in another colour = màu khác.
+> Hỏi xem có thể mặc thử không. || Can I try it on? // Could I try this on? // Can I try this on? // Where can I try it on? || try on = mặc thử; đại từ đứng giữa: try it on.
+> Hỏi xem có được giảm giá không. || Can you give me a discount? // Is there a discount? // Could you give me a discount? // Can I get a discount? || discount = giảm giá.
+> Hỏi xem có thể đổi hàng nếu không vừa không. || Can I exchange it if it doesn't fit? // Can I change it if it doesn't fit? // Can I return it if it doesn't fit? || exchange = đổi; return = trả lại.
+> Hỏi xem cửa hàng mấy giờ đóng cửa. || What time do you close? // When do you close? // What time does the shop close? || Lịch cố định → hiện tại đơn: What time do you close?
+> Hỏi xem có túi không. || Could I have a bag, please? // Can I get a bag? // Do you have a bag? || Could I have …?
+
+@group life-go 1 question,modal | Đi lại & hỏi đường | Where is …? · How do I get to …? · How long does it take …? · Does this bus go to …?
+> Hỏi đường đến ga tàu gần nhất. || How do I get to the nearest train station? // Where is the nearest train station? // Could you tell me the way to the nearest station? // How do I get to the nearest station? // Where is the nearest station? || Hỏi đường → How do I get to …?
+> Hỏi xem xe buýt này có đi đến sân bay không. || Does this bus go to the airport? || this bus số ít → Does … go …?
+> Hỏi xem đi đến đó mất bao lâu. || How long does it take to get there? // How long will it take to get there? // How long does it take? || Thời gian di chuyển → How long does it take …?
+> Hỏi xem chỗ đó có xa đây không. || Is it far from here? // How far is it from here? // Is it far? || far = xa.
+> Hỏi tài xế: Đi đến địa chỉ này hết bao nhiêu tiền? || How much is it to this address? // How much does it cost to go to this address? // How much will it cost to get to this address? || How much is it to + nơi đến?
+> Nhờ tài xế dừng ở đây. || Could you stop here, please? // Can you stop here, please? || Nhờ → Could you …?
+> Hỏi: Chuyến tàu tiếp theo mấy giờ chạy? || What time is the next train? // When is the next train? // What time does the next train leave? || What time is …? / What time does … leave?
+> Hỏi xem chỗ này đã có ai ngồi chưa. || Is this seat taken? // Is anyone sitting here? // Is this seat free? || taken = đã có người.
+> Hỏi nhà vệ sinh ở đâu. || Where is the toilet? // Where is the bathroom? // Where are the toilets? // Where is the restroom? || Where is …?
+> Hỏi: Tôi nên xuống ở trạm nào? || Which stop should I get off at? // Where should I get off? // Which stop do I get off at? || get off = xuống xe; giới từ at để cuối câu.
+
+@group life-stay 1 question,modal | Khách sạn & dịch vụ | Check-in, nhờ giúp: Could you …? · What time is …? · Is … included?
+> Hỏi lễ tân: Mấy giờ thì trả phòng? || What time is check-out? // When is check-out? // What time do I have to check out? || check-out = trả phòng.
+> Hỏi xem giá phòng có bao gồm bữa sáng không. || Is breakfast included? // Does the price include breakfast? // Is breakfast included in the price? || Is … included?
+> Hỏi xem có thể gửi hành lý ở đây không. || Can I leave my luggage here? // Could I leave my bags here? // Can I leave my bags here? || leave luggage = gửi hành lý; luggage không đếm được.
+> Nhờ lễ tân gọi taxi giúp. || Could you call a taxi for me, please? // Could you call me a taxi, please? // Could you get me a taxi, please? || call someone a taxi = gọi taxi cho ai.
+> Báo và hỏi: Điều hòa phòng tôi không chạy, anh có thể kiểm tra không? || Could you check the air conditioner in my room? // Could you check the air conditioning in my room, please? // Could someone check the air conditioner in my room? || Nhờ → Could you check …?
+> Hỏi xem có thể trả phòng muộn hơn không. || Can I check out late? // Could I have a late check-out? // Is late check-out possible? // Can I check out later? || late check-out = trả phòng muộn.
+
+@group life-health 1 question,modal | Bác sĩ & hiệu thuốc | Hỏi cách dùng thuốc, đặt lịch: How often should I …? · Do I need …? · Can I make an appointment …?
+> Hỏi dược sĩ: Thuốc này uống mấy lần một ngày? || How many times a day should I take this medicine? // How often should I take this medicine? // How many times a day do I take this? // How often should I take this? || Liều dùng → How often / How many times a day should I take …?
+> Hỏi xem có cần đơn của bác sĩ không. || Do I need a prescription? // Do I need a prescription for this? || prescription = đơn thuốc.
+> Hỏi xem có thể đặt lịch khám vào sáng mai không. || Can I make an appointment for tomorrow morning? // Could I book an appointment for tomorrow morning? // Can I see the doctor tomorrow morning? // Could I make an appointment for tomorrow morning? || make / book an appointment = đặt lịch hẹn.
+> Hỏi xem uống thuốc trước hay sau khi ăn. || Should I take it before or after meals? // Should I take this before or after eating? // Do I take it before or after food? // Should I take it before or after food? || Câu hỏi lựa chọn: … before or after …?
+> Hỏi: Bao lâu thì tôi khỏi? || How long will it take to get better? // When will I get better? // How long will it take me to recover? // How long until I feel better? || get better / recover = khỏi bệnh.
+
+@group life-work 1 question,modal | Công việc & văn phòng | Hỏi lịch, nhờ việc lịch sự: Could you send me …? · When is …? · Do you mind if I …?
+> Hỏi đồng nghiệp: Cuộc họp bắt đầu lúc mấy giờ? || What time does the meeting start? // When does the meeting start? // What time is the meeting? // When is the meeting? || Lịch cố định → What time does … start?
+> Nhờ đồng nghiệp gửi file báo cáo qua email. || Could you send me the report by email, please? // Could you email me the report, please? // Could you send the report to me by email? // Could you email the report to me? || email someone something = gửi email cho ai cái gì.
+> Hỏi xem có thể dời cuộc họp sang thứ Sáu không. || Could we move the meeting to Friday? // Can we reschedule the meeting for Friday? // Could we postpone the meeting until Friday? // Can we move the meeting to Friday? || move / reschedule = dời lịch.
+> Hỏi lịch sự xem mình có thể mở cửa sổ không. || Do you mind if I open the window? // Can I open the window? // Would you mind if I opened the window? || Do you mind if I + V hiện tại? (lịch sự)
+> Hỏi sếp: Em có thể nghỉ một ngày vào thứ Hai tới không ạ? || Can I take a day off next Monday? // Could I have next Monday off? // Could I take a day off next Monday? // Can I have next Monday off? || take a day off = nghỉ một ngày.
+> Hỏi xem máy in ở đâu. || Where is the printer? // Where can I find the printer? || Where is …?
+> Hỏi khi gọi điện: Tôi có thể nói chuyện với chị Lan không? || Could I speak to Lan, please? // Can I speak to Lan, please? // May I speak to Lan, please? // Is Lan there? // Could I speak with Lan, please? || Gọi điện tìm người → Could I speak to …, please?
+> Hỏi khi nghe không rõ trên điện thoại. || Could you speak up, please? // Sorry, could you say that again? // Could you repeat that, please? // Sorry, could you repeat that? || speak up = nói to hơn.
+
+@group life-daily 1 question,modal | Bạn bè & đời sống | Rủ rê, hỏi han: Would you like to …? · Shall we …? · What do you think of …? · How was …?
+> Rủ bạn đi xem phim tối nay. || Would you like to go to the cinema tonight? // Do you want to go to the cinema tonight? // Shall we go to the cinema tonight? // Would you like to see a film tonight? // Do you want to see a movie tonight? || Rủ rê lịch sự → Would you like to + V?
+> Hỏi bạn: Mình gặp nhau lúc mấy giờ? || What time shall we meet? // What time should we meet? // When shall we meet? // What time do we meet? || Hỏi để thống nhất → What time shall we …?
+> Hỏi bạn nghĩ gì về bộ phim. || What do you think of the film? // What did you think of the film? // What do you think about the film? // How did you like the film? || Xin ý kiến → What do you think of …?
+> Hỏi xem bạn có cần giúp gì không. || Do you need any help? // Can I help you? // Do you need help? // Can I help? || Do you need any help?
+> Hỏi mượn sạc điện thoại của bạn. || Can I borrow your phone charger? // Could I borrow your charger? // Can I borrow your charger? || borrow = mượn (từ người khác).
+> Hỏi xem bạn có rảnh vào thứ Bảy không. || Are you free on Saturday? // Are you free this Saturday? // Are you busy on Saturday? || free = rảnh → dùng to be.
+> Hỏi bạn: Dạo này bạn thế nào? || How have you been? // How are you doing? // How are things? // How is it going? || How have you been? (hỏi thăm sau một thời gian không gặp)
+> Hỏi xem bạn ấy làm nghề gì. || What do you do? // What do you do for a living? // What is your job? || Hỏi nghề → What do you do?
+> Hỏi bạn: Số điện thoại của bạn là gì? || What is your phone number? // Can I have your phone number? // Could I have your number? // What's your number? || What is your phone number?
