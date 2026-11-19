@@ -1,7 +1,8 @@
 import fixJson from '../../../content/grammar-fix.json';
 import phraseJson from '../../../content/roadmap/active-sentences.json';
 import svoJson from '../../../content/svo.json';
-import { checkTranslation, topicById, type Checked, type DrillItem } from '@/lib/grammar/drills';
+import { compareEnglish } from '@/lib/compare/english';
+import { checkTranslation, expandContractions, topicById, type Checked, type DrillItem } from '@/lib/grammar/drills';
 import { ACTIVE_TOPICS, NEW_WORDS, activeExampleVi, passiveExampleVi, type ActiveWord, type Day } from '@/lib/roadmap/plan';
 import { usesPhrase } from '@/lib/roadmap/sentences';
 
@@ -25,6 +26,12 @@ export interface WriteItem {
   graded?: boolean;
   /** grammar practice: a "spelling" slip that is really a grammar ending (work/works, bedroom/bedrooms, a/an) is wrong */
   inflection?: boolean;
+  /** commas, full stops and semicolons count (linking words: "However, …" / "; therefore, …") */
+  punctuation?: boolean;
+  /** instruction shown above the prompt instead of the mode's default one */
+  task?: string;
+  /** explain what is wrong word by word (lib/diagnose); the grammar points the sentence trains */
+  diagnose?: string[];
 }
 
 /* ---------- Dịch ví dụ ---------- */
@@ -91,10 +98,20 @@ export const usesWord = (text: string, word: string) => usesPhrase(text, word.re
  * error being trained, so only an exact match (contractions, capitals and punctuation aside) counts.
  */
 export function checkWrite(item: WriteItem, typed: string, strict: boolean): Checked {
-  const r = checkTranslation({ en: item.en } as DrillItem, typed);
+  const r0 = checkTranslation({ en: item.en } as DrillItem, typed);
+  const r = item.punctuation && r0.verdict !== 'wrong' ? withPunctuation(item, typed, r0) : r0;
   if (r.verdict !== 'spelling') return r;
   if (strict || (item.inflection && r.diff.tokens.some((t) => t.kind === 'misspelled' && t.expected && t.actual && grammarSlip(t.expected, t.actual)))) return { ...r, verdict: 'wrong' };
   return r;
+}
+
+/** Same words as an answer: now the punctuation inside the sentence must match one of the answers too. */
+function withPunctuation(item: WriteItem, typed: string, r: Checked): Checked {
+  const trim = (x: string) => expandContractions(x).trim().replace(/[.!?]+$/, '');
+  const mine = trim(typed);
+  for (const a of item.en) if (compareEnglish(trim(a), mine, { ignorePunctuation: false }).isCorrect) return { ...r, verdict: 'correct', closest: a };
+  const closest = r.closest;
+  return { verdict: 'wrong', closest, diff: compareEnglish(trim(closest), mine, { ignorePunctuation: false }) };
 }
 
 const ENDINGS = ['s', 'es', 'd', 'ed', 'ing', 'er', 'est', 'n'];

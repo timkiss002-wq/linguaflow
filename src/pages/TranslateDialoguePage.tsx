@@ -5,9 +5,8 @@ import { Button } from '@/components/ui/button';
 import { WeakPoints } from '@/features/daily/WeakPoints';
 import { WriteRunner } from '@/features/practice/WriteRunner';
 import { practiceOf, savePractice } from '@/lib/practice/results';
-import { loadRun } from '@/lib/practice/retry';
 import { dayByDate, formatDay } from '@/lib/roadmap/plan';
-import { LEVEL_DAYS, LEVELS, dayIndexOf, dialogueById, dialogueItems, dialogueSetFor, levelOf, readErrors, recordResults, runKey, weakTags } from '@/lib/translate-daily';
+import { LEVEL_DAYS, LEVELS, dayIndexOf, dialogueById, dialogueItems, dialogueSetFor, levelOf, readErrors, firstTryTags, recordResults, runKey, weakTags } from '@/lib/translate-daily';
 
 /**
  * /dich-hoi-thoai/:date — 20 lines of everyday dialogue to translate into English: 4 short dialogues of the current
@@ -42,12 +41,8 @@ export default function TranslateDialoguePage() {
           mode="translate"
           heading={`Dịch hội thoại · cấp ${level.n}`}
           storageKey={storageKey}
+          onFirstTry={(item, _typed, result, ok) => recordResults(date, [{ key: item.key, ok, tags: ok ? undefined : firstTryTags(item, result) }])}
           onFinish={(score, total, _a, passed) => {
-            const run = loadRun(storageKey, items);
-            recordResults(
-              date,
-              items.filter((it) => it.key in run.first).map((it) => ({ key: it.key, ok: Boolean(run.first[it.key]) })),
-            );
             savePractice(taskId, score, total, passed);
           }}
           extra={

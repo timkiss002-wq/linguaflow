@@ -1,0 +1,269 @@
+# Lập luận & dẫn dắt — nguồn để sửa / thêm. Sau khi sửa chạy: node scripts/build-argue-daily.mjs
+#
+# @para <id> <cấp 1–3> <emoji> | <chủ đề> | <đề bài / câu hỏi đoạn văn trả lời>
+#   mỗi dòng sau là một câu của đoạn, đúng thứ tự, mở đầu bằng vai trò:
+#   P (ý chính / câu chủ đề) · E (giải thích) · X (ví dụ) · L (câu kết đoạn, nối về đề)
+#   O (ý kiến trái chiều) · R (phản bác)
+# ? <loại> câu hỏi || đáp án đúng | sai 1 | sai 2 | sai 3 || giải thích
+#   loại: topic (câu chủ đề) · example (ví dụ phù hợp) · weak (lập luận yếu) · hedge (nói giảm, thận trọng)
+#         signpost (câu dẫn dắt) · link (câu kết đoạn) · counter (phản biện)
+
+############ CẤP 1 · đoạn PEEL cơ bản ############
+
+@para p01 1 💻🎓 | Giáo dục · học online | Học trực tuyến có lợi cho sinh viên không?
+P One major advantage of online learning is that it saves students a lot of time.
+E Since students do not need to travel to class, they can use that time to study or rest.
+X For example, a student who lives an hour away from the university can save two hours every day.
+L Therefore, online learning can help students manage their time more effectively.
+
+@para p02 1 🚲🌿 | Giao thông · xe đạp | Thành phố có nên khuyến khích người dân đi xe đạp?
+P Encouraging people to cycle would make cities much cleaner.
+E Bicycles do not produce any exhaust fumes, unlike cars and motorbikes.
+X In Copenhagen, where almost half of all trips to work are made by bike, the air is noticeably cleaner than in many other capitals.
+L For this reason, governments should build more safe bike lanes.
+
+@para p03 1 📱👨‍👩‍👧 | Công nghệ · gia đình | Điện thoại thông minh ảnh hưởng thế nào đến gia đình?
+P Smartphones can reduce the time that family members spend talking to each other.
+E When people check their phones during meals, they pay less attention to the people around them.
+X Many parents say that their teenage children answer messages from friends even at the dinner table.
+L As a result, families may become less close if phone use is not controlled.
+
+@para p04 1 🏃‍♀️💪 | Sức khỏe · thể thao | Vì sao mọi người nên tập thể dục thường xuyên?
+P Regular exercise is one of the best ways to stay healthy.
+E It strengthens the heart and helps people control their weight.
+X Doctors recommend just thirty minutes of walking a day to lower the risk of heart disease.
+L Clearly, a small amount of daily exercise can make a big difference to our health.
+
+@para p05 1 🏙️🌾 | Đô thị · việc làm | Vì sao giới trẻ chuyển lên thành phố?
+P The main reason why young people move to cities is to find better jobs.
+E Big cities have more companies, so there are more opportunities and higher salaries.
+X In Vietnam, thousands of graduates move to Hanoi and Ho Chi Minh City every year to start their careers.
+L Unless rural areas create more jobs, this trend is likely to continue.
+
+@para p06 1 📚👶 | Giáo dục · đọc sách | Trẻ em có nên đọc sách giấy mỗi ngày?
+P Reading paper books every day helps children develop their language skills.
+E When children read, they meet new words and learn how sentences are built.
+X A child who reads for twenty minutes a day sees more than a million words in a year.
+L Parents should therefore make reading a daily habit for their children.
+
+@para p07 1 🍔💸 | Sức khỏe · đồ ăn nhanh | Vì sao đồ ăn nhanh phổ biến?
+P Fast food is popular mainly because it is cheap and convenient.
+E People who work long hours often do not have time to cook healthy meals.
+X For instance, many office workers buy a burger or a sandwich and eat it at their desks.
+L This explains why fast food restaurants are always busy at lunchtime.
+
+@para p08 1 ✈️🏝️ | Du lịch · địa phương | Du lịch mang lại lợi ích gì cho người dân địa phương?
+P Tourism can bring many benefits to local communities.
+E Tourists spend money on hotels, food and souvenirs, which creates jobs for local people.
+X In Hoi An, many families earn their living by running small restaurants and tailor shops for visitors.
+L Overall, tourism can improve the standard of living in popular destinations.
+
+@para p09 1 👵👨‍💻 | Xã hội · người cao tuổi | Người cao tuổi có nên học dùng công nghệ?
+P Learning to use technology can make elderly people's lives easier.
+E With a smartphone, they can contact their families, pay bills and see a doctor online.
+X My grandmother now video-calls her grandchildren in Australia every weekend.
+L It is therefore worth helping older people to learn these skills.
+
+@para p10 1 🧑‍🍳🏠 | Lối sống · nấu ăn | Vì sao nên tự nấu ăn ở nhà?
+P Cooking at home is usually healthier than eating out.
+E People who cook for themselves can choose fresh ingredients and use less salt, sugar and oil.
+X A home-made bowl of soup, for example, often has half the salt of a restaurant one.
+L Learning to cook is therefore a simple way to improve our diet.
+
+? topic Đoạn văn nói về lợi ích của việc học ngoại ngữ đối với công việc. Câu chủ đề nào tốt nhất? || Speaking a foreign language can greatly improve a person's job opportunities. | I started learning English when I was ten years old. | There are about 7,000 languages in the world. | English, Chinese and Japanese are popular languages. || Câu chủ đề nêu đúng ý chính (ngoại ngữ → cơ hội việc làm). Các câu khác là thông tin bên lề hoặc chuyện cá nhân.
+? topic Đoạn văn giải thích vì sao trẻ em nên chơi thể thao. Câu chủ đề nào tốt nhất? || Playing sports is important for children's physical and social development. | Football is the most popular sport in the world. | My brother plays basketball every Sunday. | Some sports are very expensive. || Câu chủ đề phải trả lời trực tiếp câu hỏi "vì sao" và bao quát cả đoạn.
+? topic Câu chủ đề nào quá rộng, KHÔNG phù hợp cho một đoạn văn? || Technology has changed everything in the world. | Online banking has made paying bills much faster. | Video calls help families who live far apart stay in touch. | Electric scooters are becoming popular in big cities. || Câu chủ đề cần đủ hẹp để một đoạn (4–6 câu) chứng minh được. "Changed everything" quá rộng.
+? topic Câu nào là câu chủ đề (không phải câu ví dụ)? || Working from home can reduce stress for many employees. | Last year, my aunt started working from home three days a week. | She no longer spends two hours in traffic jams. | Now she has time to cook breakfast for her children. || Câu chủ đề nêu ý chung; ba câu còn lại là chi tiết / ví dụ cụ thể.
+? example Ý chính: "Social media helps small businesses reach more customers." Ví dụ nào phù hợp nhất? || A small bakery in Da Nang doubled its orders after posting photos of its cakes on Facebook. | Facebook was created in 2004 by Mark Zuckerberg. | Many teenagers spend hours on TikTok every day. | Some people think social media is a waste of time. || Ví dụ phải chứng minh đúng ý chính: doanh nghiệp nhỏ + nhiều khách hơn nhờ mạng xã hội.
+? example Ý chính: "Living in a big city can be very expensive." Ví dụ nào phù hợp nhất? || In central Hanoi, renting a small flat can cost half of a young worker's salary. | Hanoi has a population of more than eight million people. | Big cities have many shopping centres and restaurants. | Traffic in big cities is often terrible. || Ví dụ phải nói về chi phí đắt đỏ; các câu khác đúng nhưng không chứng minh ý này.
+? example Ý chính: "Regular exercise improves mental health." Ví dụ nào hỗ trợ tốt nhất? || Studies show that people who walk for thirty minutes a day feel less anxious. | Many gyms open at five o'clock in the morning. | Running shoes can be very expensive. | Some professional athletes earn millions of dollars. || Chỉ câu đầu nối exercise với sức khỏe tinh thần (less anxious).
+? example Ý chính: "Public libraries are still useful today." Ví dụ nào phù hợp nhất? || Many students without a quiet room at home go to the library to study for exams. | The first public library in the world opened a long time ago. | Some libraries are very old and beautiful buildings. | People can read e-books on their phones. || Ví dụ cần cho thấy thư viện vẫn có ích hiện nay.
+? link Đoạn văn: ý chính là "Cycling to work saves money", có giải thích và ví dụ. Câu kết đoạn nào phù hợp nhất? || Therefore, cycling is a practical choice for people who want to cut their transport costs. | Some bicycles are very expensive. | In conclusion, cars are dangerous. | I really like riding my bike at weekends. || Câu kết đoạn nhắc lại ý chính và nối về đề (tiết kiệm tiền), không đưa ý mới.
+? link Câu nào là câu kết đoạn tốt cho đoạn văn về "lợi ích của việc đọc sách"? || In short, reading regularly benefits both our knowledge and our wellbeing. | Firstly, reading helps us learn new words. | For example, my sister reads two books a month. | Some people prefer watching films to reading. || Câu kết đoạn tóm lại ý chính; "Firstly" mở ý, "For example" là ví dụ.
+? signpost Bạn muốn mở ý thứ hai trong bài. Câu nào phù hợp? || Another reason why people choose to live in cities is the quality of healthcare. | In conclusion, people live in cities. | For example, hospitals are good. | Although cities are big. || "Another reason why…" là câu dẫn dắt mở ý tiếp theo, đầy đủ và rõ ràng.
+? signpost Câu nào nêu rõ quan điểm của người viết ngay đầu bài? || In my opinion, the advantages of online shopping clearly outweigh the disadvantages. | Online shopping is shopping on the internet. | Many people talk about online shopping. | Is online shopping good or bad? || Mở bài nên nêu quan điểm rõ ràng (In my opinion / I believe that…), không chỉ định nghĩa hay đặt câu hỏi.
+? weak Lập luận nào yếu nhất? || Everyone in my class likes video games, so all young people love them. | Many surveys show that a large number of teenagers play video games regularly. | Video games can improve reaction speed, according to some research. | Some young people prefer sports to video games. || Lỗi khái quát hoá: từ một lớp học suy ra "tất cả người trẻ".
+? weak Câu nào thiếu giải thích, chỉ khẳng định? || Uniforms are good because they are good. | Uniforms are good because students do not need to worry about what to wear. | Uniforms can reduce the pressure to buy expensive clothes. | Uniforms help students feel part of the school community. || Lập luận vòng tròn: lấy kết luận làm lý do.
+? hedge Câu nào phù hợp hơn với văn viết học thuật? || Fast food may contribute to health problems such as obesity. | Fast food kills everyone who eats it. | Fast food is 100% bad. | Fast food is super terrible for you. || Văn học thuật tránh nói tuyệt đối; "may contribute to" thận trọng và chính xác hơn.
+? hedge Câu nào nói giảm hợp lý nhất? || Young people tend to spend more time online than older people. | All young people are always online. | Young people never go outside. | Every teenager uses the internet 24 hours a day. || "tend to" = có xu hướng — tránh khái quát tuyệt đối (all, always, never, every).
+? topic Đề: "Some people think students should do part-time jobs." Câu chủ đề nào cho đoạn ủng hộ? || Doing a part-time job can help students develop useful skills for their future careers. | I have never had a part-time job. | Part-time jobs are jobs that are not full-time. | Some students are very busy. || Câu chủ đề nêu một lý do ủng hộ cụ thể (kỹ năng cho sự nghiệp).
+? example Ý chính: "Tourism can damage the environment." Ví dụ nào phù hợp nhất? || On some popular beaches, plastic bottles left by tourists harm sea turtles and fish. | Many tourists like taking photos. | Tourism is a big industry in Thailand. | Hotels near the beach are expensive. || Ví dụ chứng minh tác hại môi trường cụ thể.
+? signpost Bạn muốn đưa một ví dụ. Câu dẫn dắt nào đúng? || A good example of this is Singapore, which has very clean streets. | Such as Singapore has clean streets. | For example of Singapore, the streets are clean. | Singapore, for example of this, is clean. || "A good example of this is…" / "For example, …" là cách đưa ví dụ đúng; such as không đứng đầu câu.
+? link Câu nào nối lại về đề bài "Should children learn to cook at school?" tốt nhất? || For these reasons, cooking lessons should be part of the school curriculum. | Cooking is fun. | My mother is a very good cook. | Many restaurants are open late at night. || Câu kết nối về đề: trả lời "should" bằng một khuyến nghị rõ ràng.
+? weak Ví dụ nào KHÔNG liên quan đến ý "Learning English opens up job opportunities"? || English is the official language of many countries, and the UK has a famous royal family. | Many international companies in Vietnam require English for well-paid positions. | Tour guides who speak English can work with more customers. | Hotel staff with good English are often promoted faster. || Ví dụ không liên quan (hoàng gia Anh) làm đoạn văn lạc đề.
+
+############ CẤP 2 · nói giảm, lập luận chặt hơn ############
+
+@para p11 2 🏢🏠 | Công việc · làm ở nhà | Làm việc ở nhà có làm tăng năng suất?
+P Working from home may increase productivity for some types of jobs.
+E Without the noise and interruptions of an office, employees can often concentrate better on tasks that need deep thinking.
+X A software developer, for instance, may finish more code in a quiet room at home than in a busy open-plan office.
+L However, this benefit seems to depend largely on the type of work and the person's self-discipline.
+
+@para p12 2 🧒📺 | Trẻ em · màn hình | Trẻ em xem màn hình quá nhiều có hại không?
+P Spending too much time on screens can have a negative effect on children's health.
+E Children who watch videos for hours tend to sit still and may get less physical exercise.
+X According to some doctors, screen time is one of the reasons why more children are overweight today.
+L It is therefore advisable for parents to set clear limits on daily screen use.
+
+@para p13 2 🚗💨 | Môi trường · xe hơi | Có nên đánh thuế cao xe hơi cá nhân?
+P Higher taxes on private cars could be an effective way to reduce air pollution.
+E If driving becomes more expensive, many people are likely to switch to buses, trains or bicycles.
+X When London introduced a charge for driving into the city centre, traffic in that area fell considerably.
+L Such a policy, however, should go together with better public transport so that people have real alternatives.
+
+@para p14 2 🎓💼 | Giáo dục · đại học | Có phải ai cũng nên học đại học?
+P A university degree is not necessarily the best path for every young person.
+E Many well-paid jobs, such as electricians or chefs, require practical training rather than academic study.
+X In Germany, a large number of school leavers choose vocational programmes and find stable jobs quickly.
+L Young people should therefore be encouraged to consider all their options, not only university.
+
+@para p15 2 🛒🌐 | Mua sắm · online | Mua sắm online ảnh hưởng gì đến cửa hàng nhỏ?
+P The growth of online shopping appears to be putting pressure on small local shops.
+E Online sellers can often offer lower prices because they do not have to pay rent for a shop on a busy street.
+X In many towns, small bookshops have closed since customers started buying books on the internet.
+L To survive, local shops may need to offer something that websites cannot, such as personal service.
+
+@para p16 2 🧓🏥 | Xã hội · dân số già | Dân số già hoá đặt ra thách thức gì?
+P An ageing population is likely to put a heavy burden on healthcare systems.
+E Older people generally need more medical care, and the cost of treating long-term illnesses is high.
+X In Japan, where more than a quarter of the population is over sixty-five, health spending has risen steadily for decades.
+L Governments will therefore need to plan carefully to keep healthcare affordable.
+
+@para p17 2 📰📱 | Truyền thông · tin tức | Đọc tin trên mạng xã hội có đáng tin?
+P News on social media is not always reliable.
+E Anyone can post information online, and false stories often spread faster than true ones because they are more shocking.
+X During health crises, for example, fake cures have been shared millions of times before experts could correct them.
+L Readers should therefore check important news with trusted sources before believing or sharing it.
+
+@para p18 2 🌳🏙️ | Đô thị · công viên | Thành phố có cần thêm không gian xanh?
+P Green spaces play an important role in making cities pleasant places to live.
+E Parks give residents a place to exercise and relax, which can reduce stress.
+X Research suggests that people who live near a park report higher levels of happiness than those who do not.
+L City planners should therefore protect existing parks and create new ones where possible.
+
+@para p19 2 🎮🧠 | Giải trí · trò chơi điện tử | Trò chơi điện tử có lợi ích gì không?
+P Although they are often criticised, video games may have some educational benefits.
+E Many games require players to solve problems, plan ahead and make quick decisions.
+X Some schools even use strategy games to teach history and geography in a more engaging way.
+L Video games, if played in moderation, can therefore be more than just entertainment.
+
+@para p20 2 💧🏭 | Môi trường · nước sạch | Ai chịu trách nhiệm bảo vệ nguồn nước?
+P Protecting clean water is largely the responsibility of governments.
+E Only governments have the power to make laws that stop factories from polluting rivers and lakes.
+X After strict rules were introduced in some European countries, rivers that were once dead are now home to fish again.
+L Individuals can help, but strong laws are likely to have the greatest effect.
+
+? hedge Câu nào là cách nói thận trọng, phù hợp với IELTS Writing? || It could be argued that homework puts too much pressure on young children. | Homework definitely destroys every child's life. | Everybody knows homework is useless. | Homework is always 100% bad. || "It could be argued that…" giới thiệu một quan điểm một cách thận trọng.
+? hedge Từ nào làm câu "Online learning ___ be less effective for young children." thận trọng hơn? || may | will always | must definitely | surely will || may / might / can = có thể — tránh khẳng định tuyệt đối.
+? hedge Câu nào phù hợp nhất cho bài viết học thuật? || Many experts believe that sugar is one of the main causes of obesity. | Sugar is the only cause of obesity. | Sugar makes everyone fat. | I think sugar is bad because I don't like it. || Dựa vào ý kiến chuyên gia và tránh nói tuyệt đối (the only, everyone).
+? hedge Câu nào dùng "tend to" đúng và hợp lý? || People in cities tend to have less contact with their neighbours. | People in cities tend having less contact with their neighbours. | People in cities are tend to have less contact. | People in cities tends to have less contact. || tend to + V nguyên mẫu, chia theo chủ ngữ (people tend to).
+? hedge Chọn từ phù hợp: "There is ___ evidence that regular exercise reduces stress." || strong | absolute | 100% | complete || Văn học thuật dùng strong / growing / some evidence, tránh "absolute / 100%".
+? weak Lập luận nào có lỗi "nguyên nhân sai"? || I wore my lucky shirt and passed the exam, so the shirt helped me pass. | I studied every day for three months, so I passed the exam. | Because I practised many tests, I knew the format well. | I passed because I managed my time carefully. || Hai việc xảy ra cùng lúc không có nghĩa là cái này gây ra cái kia.
+? weak Câu nào đưa ra lý do yếu nhất cho ý "Students should wear uniforms"? || Uniforms should be worn because they have always been worn. | Uniforms reduce the pressure to wear expensive brands. | Uniforms make it easier to recognise students on school trips. | Uniforms save parents time in the morning. || "Vì xưa nay vẫn thế" không phải lý do thuyết phục.
+? weak Câu nào chỉ dựa vào cảm xúc, không có lý lẽ? || Zoos are terrible and anyone who visits them is a bad person. | Some zoos keep animals in cages that are far too small. | Well-run zoos can help protect endangered species. | Many zoos now educate visitors about wildlife. || Công kích người khác và dùng cảm xúc thay cho lý lẽ là lập luận yếu.
+? weak Ví dụ nào yếu nhất để chứng minh "Public transport is unreliable"? || My friend once waited ten minutes for a bus. | According to a city report, 30% of buses arrived more than fifteen minutes late last year. | Commuters' complaints about delays have doubled in two years. | Several train lines were cancelled every week during the rainy season. || Một trải nghiệm cá nhân nhỏ không đủ chứng minh một kết luận chung.
+? topic Câu chủ đề nào thận trọng và rõ ràng nhất? || Working from home may improve the work-life balance of many employees. | Working from home is the best thing ever. | Working from home has many things. | Everybody should work from home forever. || Câu chủ đề tốt: một ý rõ ràng, nói giảm hợp lý (may, many).
+? example Ý chính: "Social media may make teenagers feel worse about themselves." Ví dụ nào có sức thuyết phục nhất? || A survey of 1,000 teenagers found that many felt unhappy after comparing their lives with others' photos online. | My cousin uses Instagram every day. | Social media companies earn money from advertising. | Some teenagers post photos of their food. || Số liệu khảo sát liên quan trực tiếp mạnh hơn chuyện cá nhân hay thông tin bên lề.
+? example Ý chính: "Higher taxes on sugary drinks may improve public health." Ví dụ nào phù hợp nhất? || After Mexico introduced a tax on sugary drinks, people bought fewer of them. | Coca-Cola is sold in more than 200 countries. | Sugary drinks are very sweet. | Some people prefer coffee to soft drinks. || Ví dụ cho thấy chính sách thuế dẫn tới kết quả tốt.
+? signpost Câu nào giới thiệu quan điểm của người khác một cách khách quan? || Some people argue that university education should be free for everyone. | People wrongly say that university should be free. | Stupid people think university should be free. | University should be free, I am sure everybody agrees. || "Some people argue that…" nêu quan điểm khác một cách trung lập.
+? signpost Câu nào chuyển sang ý đối lập trong bài "Discuss both views"? || On the other hand, others believe that students should pay for their own studies. | In addition, students should pay for their studies. | For example, students should pay. | Therefore, students should pay for their studies. || Chuyển sang quan điểm thứ hai → On the other hand, others believe…
+? link Câu kết đoạn nào phù hợp nhất cho đoạn về tác hại của việc thức khuya? || Getting enough sleep is therefore essential for both students' health and their results. | Some people go to bed at nine o'clock. | Firstly, sleep is important. | Coffee contains caffeine. || Câu kết đoạn tóm lại ý và nối về đề, không mở ý mới.
+? link Câu nào KHÔNG nên đặt cuối một đoạn thân bài? || Another important factor is the cost of housing. | This shows that cities need better public transport. | For these reasons, the policy is likely to succeed. | Clearly, this approach has more benefits than drawbacks. || "Another important factor…" mở ý mới, nên đặt đầu đoạn tiếp theo.
+? hedge Cụm nào làm câu "This policy ___ reduce traffic" thận trọng nhất mà vẫn rõ ý? || is likely to | will 100% | must certainly | will definitely always || "is likely to" = nhiều khả năng sẽ.
+? weak Câu nào là khái quát hoá quá mức? || All old people dislike modern technology. | Some older people find modern technology difficult to use. | Many older people now use smartphones to talk to their families. | Older people may need more time to learn new apps. || "All" khái quát toàn bộ một nhóm người là lỗi lập luận.
+? topic Đề: "Is it better to live alone or with family?" Câu chủ đề nào cho đoạn ủng hộ sống cùng gia đình? || Living with family can provide emotional support during difficult times. | Families are groups of people. | I have three sisters and one brother. | Rent is high in many cities. || Câu chủ đề nêu một lý do rõ ràng ủng hộ quan điểm.
+? example Ý chính: "Learning to play an instrument may improve children's concentration." Ví dụ nào phù hợp nhất? || Children who practise the piano daily often have to focus on one task for a long time. | Pianos are very heavy and expensive. | Mozart was a famous composer. | Some people prefer listening to music to playing it. || Ví dụ cho thấy mối liên hệ giữa học nhạc và khả năng tập trung.
+
+############ CẤP 3 · phản biện, nhượng bộ, cân nhắc hai mặt ############
+
+@para p21 3 🏫📵 | Giáo dục · điện thoại trong lớp | Có nên cấm điện thoại trong trường học?
+O Some people argue that mobile phones should be banned in schools completely.
+E They believe phones distract students and make it harder for teachers to control the class.
+R However, a complete ban may ignore the fact that phones can be useful learning tools.
+X Students can use them to look up new words, check facts or join online quizzes during lessons.
+L A better solution, therefore, may be to allow phones only for specific learning activities.
+
+@para p22 3 🧪🐒 | Khoa học · thử nghiệm trên động vật | Có nên cấm thử nghiệm trên động vật?
+O It is often claimed that testing medicines on animals is necessary to protect human health.
+E Supporters say that new drugs must be tested on living bodies before they can be given to people safely.
+R Nevertheless, modern alternatives now make many animal tests unnecessary.
+X Scientists can increasingly use computer models and human cells grown in laboratories to check whether a drug is safe.
+L Animal testing should therefore be reduced as far as possible and replaced wherever alternatives exist.
+
+@para p23 3 💰🎓 | Giáo dục · học phí | Đại học có nên miễn học phí?
+O Opponents of free university education point out that it would be very expensive for taxpayers.
+E They argue that public money could be spent on more urgent needs, such as hospitals.
+R Admittedly, the cost is high; however, educated citizens tend to earn more and pay more tax later in life.
+X Countries such as Norway, where university is free, have some of the most skilled workforces in the world.
+L In the long term, free higher education may therefore be an investment rather than a cost.
+
+@para p24 3 🤖👷 | Công nghệ · trí tuệ nhân tạo | AI có lấy mất việc làm của con người?
+O Many people fear that artificial intelligence will take away millions of jobs.
+E It is true that machines can now do tasks such as answering customer questions or checking documents faster than humans.
+R However, history suggests that new technology also creates new types of work.
+X When computers became common, jobs such as web designer and data analyst appeared that had not existed before.
+L Rather than fearing AI, societies should focus on training workers for the jobs it will create.
+
+@para p25 3 🏟️💸 | Xã hội · tiền cho thể thao | Chính phủ có nên chi nhiều tiền cho thể thao chuyên nghiệp?
+O Some believe that governments should spend large sums on professional sport because it brings national pride.
+E When a national team wins, people often feel happier and more united.
+R On the other hand, this money might be used more effectively to encourage ordinary people to exercise.
+X Building free sports facilities in local parks, for example, could benefit thousands of people rather than a few athletes.
+L Funding for grassroots sport should therefore be a higher priority than funding for elite teams.
+
+@para p26 3 🌍✈️ | Môi trường · đi máy bay | Có nên hạn chế đi máy bay vì môi trường?
+O It could be argued that people should fly less in order to protect the environment.
+E Air travel produces a large amount of carbon dioxide per passenger compared with trains.
+R Even so, simply asking people to fly less is unlikely to work unless there are cheap alternatives.
+X In Europe, where fast trains connect many cities, more travellers now choose the train for short journeys.
+L Investing in high-speed rail may therefore be more effective than telling people not to fly.
+
+@para p27 3 🧑‍🏫💻 | Giáo dục · giáo viên và máy tính | Máy tính có thể thay thế giáo viên?
+O Some people predict that computers will one day replace teachers.
+E Online courses can already deliver lessons to millions of learners at a very low cost.
+R Nonetheless, teachers do much more than deliver information.
+X They notice when a student is confused or unhappy and can change the lesson or offer support immediately.
+L For this reason, technology is more likely to support teachers than to replace them.
+
+@para p28 3 🏘️🏗️ | Đô thị · nhà cao tầng | Thành phố có nên xây thêm nhà cao tầng?
+O Supporters of high-rise buildings argue that they are the best answer to housing shortages in crowded cities.
+E Tall buildings can house many families on a small piece of land.
+R However, if they are not well planned, high-rise areas may lack green space and community facilities.
+X Some tower blocks built quickly in the past are now known for social problems and poor living conditions.
+L High-rise housing can therefore be part of the solution, but only if it is carefully designed.
+
+@para p29 3 🍽️🌱 | Sức khỏe · ăn chay | Mọi người có nên ăn ít thịt hơn?
+O Many argue that people should eat less meat for health and environmental reasons.
+E Producing meat uses a lot of land and water, and eating too much red meat is linked to some diseases.
+R That said, meat is an important source of protein and iron, especially for people with limited diets.
+X In poorer rural areas, a small amount of meat may be the most affordable way to get these nutrients.
+L A balanced approach, in which people reduce rather than give up meat, therefore seems most realistic.
+
+@para p30 3 👩‍💼👨‍🍼 | Xã hội · nghỉ thai sản cho bố | Có nên cho người bố nghỉ dài ngày khi có con?
+O Some employers claim that long paid leave for new fathers is too costly for businesses.
+E They worry that small companies cannot afford to pay staff who are not working.
+R Nevertheless, there is growing evidence that such leave brings long-term benefits.
+X In Sweden, where fathers share parental leave, mothers return to work more easily and children spend more time with both parents.
+L With some government support for small firms, paternity leave could therefore benefit families and the economy.
+
+? counter Câu nào nêu ý kiến trái chiều một cách khách quan trước khi phản bác? || It is often claimed that online friendships are less meaningful than real ones. | Online friendships are obviously fake. | Only foolish people make friends online. | Online friends are the best friends, everyone agrees. || "It is often claimed that…" trình bày quan điểm đối lập trung lập, chuẩn bị cho phần phản bác.
+? counter Sau câu "Some people say that homework is unnecessary.", câu phản bác nào tốt nhất? || However, regular homework can help students remember what they have learned in class. | However, homework is homework. | However, these people are wrong and silly. | However, I don't like homework either. || Phản bác bằng một lý lẽ cụ thể, không công kích hay lặp lại.
+? counter Câu nào dùng "Admittedly" đúng cách (nhượng bộ rồi phản bác)? || Admittedly, electric cars are expensive; however, they are cheaper to run over time. | Admittedly, electric cars are cheaper to run and also cheaper to buy. | Admittedly, I love electric cars. | Admittedly, firstly, electric cars are good. || Admittedly thừa nhận một điểm của phía kia, sau đó However đưa ra phản bác.
+? counter Từ nào điền vào chỗ trống phù hợp nhất? "___ it is true that tourism creates jobs, it can also damage local culture." || While | Despite | Because | Moreover || While (= Although) + mệnh đề: nhượng bộ rồi nêu mặt trái.
+? counter Câu nào là phản bác hiệu quả nhất cho ý "Video games make children violent"? || However, most research has found no clear link between playing games and violent behaviour. | However, video games are fun. | However, I have played games for years. | However, games are expensive. || Phản bác bằng bằng chứng liên quan trực tiếp đến luận điểm.
+? signpost Câu nào mở đoạn "phía bên kia" trong bài thảo luận hai quan điểm? || On the other hand, there are strong arguments against this view. | In conclusion, this view is right. | For example, this view is popular. | Firstly, I agree with this view. || "On the other hand, there are strong arguments against…" chuyển sang phía đối lập.
+? signpost Câu mở bài nào phù hợp cho dạng "To what extent do you agree?" || I partly agree that cities should ban cars, but I believe a complete ban would be unrealistic. | Cars are vehicles with four wheels. | This essay will talk about cars. | Do you like cars? I do. || Mở bài nêu rõ mức độ đồng ý và hướng lập luận.
+? signpost Câu nào giới thiệu kết luận tốt nhất? || In conclusion, although online learning has some drawbacks, its flexibility makes it a valuable option. | In conclusion, there is one more advantage I forgot to mention. | In conclusion, firstly, online learning is good. | In conclusion, the end. || Kết luận tóm tắt quan điểm, có thể nhắc cả hai mặt, không đưa ý mới.
+? weak Lập luận nào là "ngụy biện trượt dốc" (cho rằng một bước nhỏ chắc chắn dẫn tới thảm họa)? || If we allow students to use phones in class, soon they will stop learning completely and fail all their exams. | Allowing phones for some activities may distract a few students. | Phones can help students look up information quickly. | Teachers need clear rules about phone use. || Kéo một bước nhỏ thành chuỗi hậu quả cực đoan mà không có bằng chứng.
+? weak Lập luận nào chỉ đưa ra hai lựa chọn, bỏ qua các khả năng khác? || Either we stop all car use today, or our cities will be destroyed. | Reducing car use could improve air quality. | Better buses may encourage people to drive less. | Some cities have reduced traffic with congestion charges. || "Either … or …" cực đoan, bỏ qua giải pháp trung gian.
+? hedge Câu nào cân bằng và thận trọng nhất? || While social media has clear benefits, it may also have negative effects on young people's sleep. | Social media is completely evil. | Social media has no problems at all. | Social media will destroy the next generation. || Thừa nhận cả hai mặt, dùng "may" — phù hợp văn học thuật.
+? link Câu kết đoạn nào phù hợp sau khi đã nêu ý trái chiều và phản bác? || On balance, the benefits of the scheme appear to outweigh its costs. | Some people think the scheme is expensive. | Another point is that the scheme is new. | For example, the scheme started last year. || "On balance, … outweigh …" cân nhắc hai mặt rồi đưa kết luận.
+? counter Câu nào nhượng bộ (thừa nhận phía kia có lý một phần)? || It is true that living in the countryside can be lonely for young people. | Living in the countryside is perfect in every way. | Nobody should ever live in a city. | The countryside has trees. || "It is true that…" thừa nhận một điểm hợp lý của phía kia.
+? counter Sau câu nhượng bộ "Admittedly, school uniforms can be expensive.", câu nào tiếp theo hợp lý nhất? || However, they may still save families money because children need fewer everyday clothes. | Moreover, uniforms are expensive. | For example, uniforms cost money. | In conclusion, uniforms are expensive. || Sau nhượng bộ phải là phản bác (However…), không phải thêm ý cùng chiều.
+? example Ý phản bác: "Free public transport may not reduce traffic." Ví dụ nào phù hợp nhất? || In one city that made buses free, car traffic hardly changed because the buses were still slow and crowded. | Buses are usually painted in bright colours. | Many people like taking taxis. | Some cities have underground trains. || Ví dụ chứng minh trực tiếp cho ý phản bác.
+? topic Đề: "Should the government pay for people's healthcare?" Câu chủ đề nào cho đoạn trình bày ý kiến trái chiều? || Critics argue that free healthcare could lead to very high taxes. | Healthcare is very important. | My uncle is a doctor. | Hospitals are often crowded. || Đoạn trái chiều mở bằng quan điểm của "critics", nêu lý do cụ thể.
+? hedge Cách viết nào phù hợp hơn: "Rich countries ___ help poorer countries." || should arguably | must 100% | have to definitely always | always must || "arguably" = có thể lập luận rằng — giữ quan điểm nhưng mềm hơn.
+? signpost Câu nào dẫn vào ý quan trọng nhất? || The most important reason, however, is that education gives people more choices in life. | The most important reason is reason number three. | Education is education. | And then there is also another thing. || Câu dẫn dắt nhấn mạnh rõ (The most important reason…) và nêu luôn nội dung.
+? weak Câu nào là lập luận dựa vào số đông (ai cũng làm thì đúng)? || Everyone uses plastic bags, so they cannot be harmful. | Plastic bags take hundreds of years to break down. | Some countries have banned plastic bags. | Paper bags can be recycled more easily. || Nhiều người làm không chứng minh việc đó vô hại.
+? link Câu nào là câu kết đoạn KHÔNG tốt vì đưa ý mới? || In addition, governments should also lower the price of electricity. | Overall, these measures could make cities cleaner. | For these reasons, cycling deserves more support. | This shows how important public parks are. || Câu kết đoạn không nên mở thêm ý mới.

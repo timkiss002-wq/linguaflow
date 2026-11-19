@@ -1,0 +1,246 @@
+# Từ nối hằng ngày — nguồn để sửa / thêm câu. Sau khi sửa chạy: node scripts/build-linking-daily.mjs
+#
+# @group <id> <cấp 1–4> | <tên nhóm> | <cách dùng ngắn gọn>
+# ?  câu có ___ || đáp án đúng | sai 1 | sai 2 | sai 3 || giải thích
+# +  câu 1 // câu 2 || từ nối phải dùng || đáp án 1 // đáp án 2 … || giải thích
+# !  câu dùng sai || câu đúng 1 // câu đúng 2 … || giải thích
+
+############ CẤP 1 · nối ý cơ bản ############
+
+@group basic 1 | and · but · so · because · or | and thêm ý; but đối lập; so chỉ kết quả (đứng trước kết quả); because chỉ nguyên nhân (đứng trước nguyên nhân); or đưa lựa chọn.
+? I was tired, ___ I went to bed early. || so | because | but | or || "đi ngủ sớm" là kết quả của "mệt" → so + kết quả.
+? I went to bed early ___ I was tired. || because | so | but | or || "mệt" là nguyên nhân → because + nguyên nhân.
+? The phone is cheap, ___ the battery is very weak. || but | so | because | or || Hai ý trái ngược (rẻ ↔ pin yếu) → but.
+? Would you like tea ___ coffee? || or | and | but | so || Hỏi chọn một trong hai → or.
+? She likes reading ___ listening to music. || and | but | or | so || Thêm một sở thích nữa, cùng chiều → and.
+? It started to rain, ___ we stayed at home. || so | because | but | or || Ở nhà là kết quả của trời mưa → so.
+? We stayed at home ___ it was raining. || because | so | and | or || Trời mưa là lý do → because.
+? He studied hard, ___ he failed the test. || but | so | because | and || Học chăm mà vẫn trượt — kết quả trái mong đợi → but.
+? You can pay by card ___ in cash. || or | but | so | because || Hai cách trả, chọn một → or.
+? My brother is tall ___ thin. || and | but | so | or || Hai đặc điểm cùng được nêu thêm → and.
+? I didn't have breakfast, ___ I am very hungry now. || so | because | but | or || Đói là kết quả → so.
+? I am very hungry ___ I didn't have breakfast. || because | so | or | but || Không ăn sáng là nguyên nhân → because.
+? The film was long, ___ it was very interesting. || but | so | because | or || Dài (điểm trừ) nhưng hay (điểm cộng) → but.
+? Hurry up, ___ we will miss the bus. || or | and | because | so || "Nhanh lên, nếu không thì…" → or (= otherwise).
+
+@group sequence 1 | first · then · after that · finally · also · too | first / then / after that / finally kể các bước theo thứ tự; also đứng trước động từ thường (I also like…), too đứng cuối câu.
+? ___, wash the rice. Then put it in the cooker. || First | Finally | Also | Too || Bước đầu tiên → First.
+? I went to the bank. ___, I bought some fruit at the market. || After that | First | Too | Or || Việc xảy ra tiếp theo → After that.
+? We walked for three hours. ___, we reached the top of the mountain. || Finally | First | Also | Because || Cuối cùng (sau một quá trình dài) → Finally.
+? I like football. My brother likes it ___. || too | also | then | first || too đứng cuối câu.
+? I like football. My brother ___ likes it. || also | too | then | finally || also đứng trước động từ thường (also likes).
+? She speaks English. She can ___ speak a little Chinese. || also | too | then | first || Sau động từ khuyết thiếu (can) → can also + V.
+? Open the app. ___ choose your language. || Then | Too | Also | Because || Bước kế tiếp → Then.
+? He finished his homework and ___ he watched TV. || then | too | first | also || Việc làm sau → then.
+
+@group basic-join 1 | Nối hai câu | Khi nối bằng because / so / but thì bỏ dấu chấm và viết thành một câu.
++ It was cold. // I wore a jacket. || so || It was cold, so I wore a jacket. // It was cold so I wore a jacket. || so đứng trước kết quả (mặc áo khoác).
++ I wore a jacket. // It was cold. || because || I wore a jacket because it was cold. || because đứng trước nguyên nhân (trời lạnh).
++ The hotel was old. // It was very clean. || but || The hotel was old, but it was very clean. // The hotel was old but it was very clean. || Hai ý đối lập → but.
++ I missed the bus. // I was late for class. || so || I missed the bus, so I was late for class. // I missed the bus so I was late for class. || Muộn học là kết quả.
++ Lan is happy. // She passed the exam. || because || Lan is happy because she passed the exam. || Đỗ thi là nguyên nhân.
++ First, I had breakfast. // I went to school. || then || First, I had breakfast, and then I went to school. // First, I had breakfast. Then I went to school. // First I had breakfast and then I went to school. || then nối việc làm sau.
+! I am tired so because I worked late. || I am tired because I worked late. // I worked late, so I am tired. || Không dùng so và because cùng lúc: chọn một.
+! Because it rained. We stayed at home. || Because it rained, we stayed at home. // We stayed at home because it rained. || "Because it rained" chưa phải câu hoàn chỉnh → nối với mệnh đề chính.
+! Although it was late, but he kept working. || Although it was late, he kept working. // It was late, but he kept working. || Although và but không đi cùng nhau.
+! I like coffee, I also like tea too. || I like coffee, and I also like tea. // I like coffee, and I like tea too. // I like coffee. I also like tea. || Dùng also hoặc too, không dùng cả hai; nối hai mệnh đề cần and.
+! She also is a good singer. || She is also a good singer. || also đứng sau to be (is also).
+! He can play the guitar and also he can sing. || He can play the guitar, and he can also sing. // He can play the guitar and he can also sing. || also đứng sau động từ khuyết thiếu: can also sing.
+
+############ CẤP 2 · thêm ý, đối lập, kết quả, ví dụ ############
+
+@group addition 2 | in addition · moreover · furthermore · additionally · besides · as well as | Thêm một ý cùng chiều. In addition / Moreover / Furthermore / Additionally / Besides đứng đầu câu + dấu phẩy. as well as + danh từ / V-ing.
+? The flat is near my office. ___, the rent is quite low. || Moreover | However | Therefore | For example || Thêm một ưu điểm nữa → Moreover.
+? Cycling is good for your health. ___, it does not pollute the air. || In addition | However | Instead | Although || Thêm một lợi ích → In addition.
+? The course is expensive. ___, the classes are always crowded. || Furthermore | Therefore | However | For instance || Thêm một điểm trừ nữa (cùng chiều tiêu cực) → Furthermore.
+? She speaks English ___ French. || as well as | moreover | in addition | besides that || as well as + danh từ, nối trong câu.
+? ___, the app lets you study offline. || Additionally | Although | Because | Despite || Thêm tính năng → Additionally, đầu câu + dấu phẩy.
+? I don't want to go out; ___, it is raining. || besides | however | therefore | instead || besides = hơn nữa (thêm một lý do), hay dùng khi nói.
+? Online learning saves time. ___, students can study at their own pace. || What is more | However | As a result | Instead || What is more = Moreover (thêm ý).
+? He plays the piano ___ the guitar. || as well as | in addition | furthermore | moreover || Nối hai danh từ trong cùng câu → as well as.
+? Exercise improves your mood. It ___ helps you sleep better. || also | however | therefore | instead || Cách thêm ý đơn giản nhất: It also + V.
+? Public transport is cheap. ___, it is better for the environment. || On top of that | However | In contrast | Otherwise || On top of that = thêm vào đó (thân mật hơn).
+
+@group contrast 2 | however · although · even though · while | However + dấu phẩy, đầu câu thứ hai. Although / Even though + mệnh đề (S + V), không dùng cùng but.
+? The test was difficult. ___, most students passed. || However | Moreover | Therefore | For example || Ý sau trái với mong đợi → However.
+? ___ the test was difficult, most students passed. || Although | However | Despite | Moreover || Đứng đầu câu ghép, theo sau là mệnh đề → Although.
+? I enjoyed the trip, ___ the weather was bad. || even though | however | despite | moreover || even though + mệnh đề, nhấn mạnh hơn although.
+? The city is noisy. ___, I love living here. || However | Therefore | In addition | Because || Ồn mà vẫn thích → However.
+? ___ she was tired, she finished her homework. || Although | However | Because of | Despite || Although + S + V.
+? Some people like living in cities, ___ others prefer the countryside. || while | however | moreover | therefore || while nối hai ý đối lập trong cùng câu.
+? The phone has a great camera. The battery, ___, is disappointing. || however | although | despite | because || however có thể đứng giữa câu, giữa hai dấu phẩy.
+? He is rich. ___, he is not happy. || However | Moreover | Therefore | Additionally || Giàu mà không hạnh phúc → đối lập.
+
+@group result 2 | therefore · as a result · so · that's why | Chỉ kết quả. Therefore / As a result đứng đầu câu sau + dấu phẩy; so nối trong câu.
+? Prices went up. ___, people bought less. || As a result | However | Moreover | Although || Mua ít hơn là kết quả của giá tăng → As a result.
+? The road was flooded. ___, the school was closed. || Therefore | However | In addition | For instance || Kết quả → Therefore.
+? I forgot my password, ___ I couldn't log in. || so | therefore | as a result | because || Nối trong câu bằng dấu phẩy → so (Therefore cần câu mới hoặc dấu chấm phẩy).
+? He practised every day. ___ he speaks English so well. || That's why | Because | However | Although || That's why = vì thế mà (nói).
+? The factory closed. ___, many people lost their jobs. || As a result | Although | Instead | For example || Mất việc là kết quả của nhà máy đóng cửa.
+? Fast food is cheap and quick. ___, many students eat it every day. || Therefore | However | Despite this | Instead || Rẻ và nhanh → nên nhiều người ăn → Therefore.
+
+@group example 2 | for example · for instance · such as | For example / For instance + câu hoàn chỉnh (đầu câu + dấu phẩy). such as + danh từ, ngay sau danh từ được ví dụ.
+? Many fruits, ___ oranges and lemons, contain vitamin C. || such as | for example, | for instance, | moreover || Liệt kê danh từ ngay sau "fruits" → such as.
+? Technology helps students. ___, they can watch lessons online. || For example | Such as | However | Therefore || Đưa ví dụ bằng một câu → For example.
+? Some jobs are dangerous. ___, firefighters risk their lives every day. || For instance | Such as | Moreover | Although || For instance = For example.
+? I love outdoor sports ___ hiking and cycling. || such as | for example | for instance | like as || such as + danh từ / V-ing.
+? You can save money in small ways. ___, you can cook at home instead of eating out. || For example | Such as | Instead | Otherwise || Ví dụ là một câu → For example.
+? Big cities ___ Hanoi and Ho Chi Minh City have serious traffic problems. || such as | for example | for instance | including that || such as đứng ngay sau danh từ.
+
+@group l2-join 2 | Nối câu cấp 2 | Chú ý dấu câu: Moreover, / However, / Therefore, / For example, đứng đầu câu kèm dấu phẩy.
++ The restaurant is cheap. // The food is delicious. || moreover || The restaurant is cheap. Moreover, the food is delicious. // The restaurant is cheap; moreover, the food is delicious. || Moreover thêm ý, đầu câu + dấu phẩy.
++ The hotel was cheap. // The room was very comfortable. || however || The hotel was cheap. However, the room was very comfortable. // The hotel was cheap; however, the room was very comfortable. || Rẻ mà phòng lại rất thoải mái — trái mong đợi → However.
++ He was ill. // He went to work. || although || Although he was ill, he went to work. // He went to work although he was ill. || Although + mệnh đề, không thêm but.
++ It rained heavily. // The match was cancelled. || as a result || It rained heavily. As a result, the match was cancelled. // It rained heavily; as a result, the match was cancelled. || As a result chỉ kết quả.
++ Many animals are in danger. // Tigers and elephants are hunted for money. || for example || Many animals are in danger. For example, tigers and elephants are hunted for money. || For example + một câu ví dụ.
++ I enjoy water sports. // I enjoy swimming and surfing. || such as || I enjoy water sports such as swimming and surfing. || such as + danh từ / V-ing ngay sau "water sports".
++ The bus was late. // We missed the beginning of the film. || therefore || The bus was late. Therefore, we missed the beginning of the film. // The bus was late; therefore, we missed the beginning of the film. || Therefore + kết quả.
++ She speaks Japanese. // She speaks Korean. || as well as || She speaks Japanese as well as Korean. // She speaks Korean as well as Japanese. || as well as + danh từ.
++ Living alone is lonely. // It is expensive. || in addition || Living alone is lonely. In addition, it is expensive. // Living alone is lonely; in addition, it is expensive. || In addition thêm một điểm trừ nữa.
++ The phone is old. // It still works well. || even though || Even though the phone is old, it still works well. // The phone still works well even though it is old. || Even though + mệnh đề.
+! However the weather was bad, we went out. || The weather was bad. However, we went out. // Although the weather was bad, we went out. || However không nối hai mệnh đề trong một câu như although; dùng Although, hoặc tách câu.
+! Although she was busy, but she helped me. || Although she was busy, she helped me. // She was busy, but she helped me. || Although và but không đi cùng nhau.
+! I like many sports, such as, football and tennis. || I like many sports, such as football and tennis. || Không đặt dấu phẩy ngay sau such as.
+! Such as, many students work part-time. || For example, many students work part-time. || Đầu câu đưa ví dụ dùng For example, không dùng Such as.
+! It was late, therefore we took a taxi. || It was late, so we took a taxi. // It was late. Therefore, we took a taxi. // It was late; therefore, we took a taxi. || Therefore không nối hai mệnh đề bằng dấu phẩy: dùng so, hoặc tách câu / dấu chấm phẩy.
+! Moreover the price is high. || Moreover, the price is high. || Sau Moreover đầu câu cần dấu phẩy.
+! In addition to, the hotel has a pool. || In addition, the hotel has a pool. // In addition to a gym, the hotel has a pool. || In addition, (đầu câu) khác in addition to + danh từ.
+! He is clever, however he is lazy. || He is clever. However, he is lazy. // He is clever, but he is lazy. // He is clever; however, he is lazy. || However không nối hai mệnh đề bằng dấu phẩy: dùng but, hoặc tách câu.
+
+############ CẤP 3 · despite, because of, whereas, instead of, unless ############
+
+@group despite 3 | despite · in spite of · although | despite / in spite of + danh từ / V-ing / the fact that; although + mệnh đề (S + V).
+? ___ the rain, we went for a walk. || Despite | Although | However | Even though || "the rain" là danh từ → Despite.
+? ___ it was raining, we went for a walk. || Although | Despite | In spite of | However || "it was raining" là mệnh đề → Although.
+? In spite of ___ hard, he failed the exam. || studying | he studied | study | studied || in spite of + V-ing.
+? She went to work ___ feeling ill. || despite | although | however | even though || Sau chỗ trống là V-ing → despite.
+? ___ his age, my grandfather still runs every morning. || Despite | Although | Even though | However || "his age" là cụm danh từ → Despite.
+? We enjoyed the holiday ___ the hotel was not very good. || although | despite | in spite of | however || Mệnh đề theo sau → although.
+? Despite ___ he was tired, he kept working. || the fact that | that | of | being || despite the fact that + mệnh đề.
+? The team won ___ playing with ten men. || despite | although | even | however || despite + V-ing.
+
+@group cause 3 | because of · due to · because · since | because of / due to + danh từ / cụm danh từ; because / since + mệnh đề.
+? The flight was delayed ___ the storm. || because of | because | so | although || "the storm" là danh từ → because of.
+? The flight was delayed ___ there was a storm. || because | because of | due to | despite || Mệnh đề → because.
+? Many people get sick ___ air pollution. || due to | because | since | so || due to + danh từ.
+? ___ it was a public holiday, the banks were closed. || Since | Because of | Due to | Despite || Since (= because) + mệnh đề, hay đứng đầu câu.
+? He couldn't sleep ___ the noise from the street. || because of | because | since | as a result || + cụm danh từ → because of.
+? The match was cancelled ___ heavy rain. || due to | because | since | so that || + danh từ → due to.
+? ___ the high price, few people bought the new phone. || Because of | Because | Since | Although || + cụm danh từ → Because of.
+? She stayed at home ___ she had a headache. || as | because of | due to | despite || as (= because) + mệnh đề.
+
+@group compare-contrast 3 | whereas · while · on the other hand · in contrast · similarly | whereas / while nối hai mệnh đề trái ngược trong một câu. On the other hand / In contrast đầu câu sau + dấu phẩy. Similarly = tương tự.
+? My sister loves cats, ___ I prefer dogs. || whereas | moreover | therefore | similarly || So sánh hai người trái ngược trong một câu → whereas.
+? Living in the city is exciting. ___, it can be stressful. || On the other hand | In addition | Similarly | For example || Mặt khác (trái chiều) → On the other hand.
+? In Vietnam, people drive on the right. ___, people in Japan drive on the left. || In contrast | Similarly | Moreover | As a result || Đối lập hai nơi → In contrast.
+? Buses are cheap, ___ taxis are expensive. || while | despite | moreover | so || while = whereas.
+? Running is good for the heart. ___, swimming makes the heart stronger. || Similarly | However | In contrast | Instead || Hai ý giống nhau → Similarly.
+? Some students study best in the morning, ___ others work better at night. || whereas | so | moreover | because of || Hai nhóm trái ngược → whereas.
+? The job pays well. ___, the hours are very long. || On the other hand | Similarly | For instance | As a result || Điểm cộng rồi điểm trừ → On the other hand.
+? Men in my family are tall. ___, the women are quite short. || In contrast | Likewise | Therefore | Besides || Đối lập → In contrast.
+
+@group instead 3 | instead · instead of · rather than | instead of / rather than + danh từ / V-ing (thay vì). Instead đứng cuối câu hoặc đầu câu + dấu phẩy (thay vào đó).
+? Let's walk ___ taking a taxi. || instead of | instead | otherwise | despite || + V-ing → instead of.
+? I didn't go to the party. I stayed at home ___. || instead | instead of | rather | otherwise || Cuối câu, không có danh từ theo sau → instead.
+? She drinks tea ___ coffee. || instead of | instead | otherwise | unless || + danh từ → instead of.
+? He decided to study abroad ___ working for his father. || rather than | instead | otherwise | whereas || rather than + V-ing / danh từ.
+? We couldn't go to the beach. ___, we visited a museum. || Instead | Instead of | Otherwise | Unless || Đầu câu + dấu phẩy, không có danh từ theo sau → Instead.
+? You should use the stairs ___ the lift. || instead of | instead | otherwise | rather || + danh từ → instead of.
+
+@group condition 3 | unless · otherwise · as long as · in case | unless = if … not; otherwise = nếu không thì (đầu câu sau / sau dấu chấm phẩy); as long as = miễn là; in case = phòng khi.
+? You will fail the exam ___ you study harder. || unless | if | otherwise | in case || "trừ khi" = if … not → unless.
+? Hurry up. ___, we will miss the train. || Otherwise | Unless | In case | As long as || "Nếu không thì" → Otherwise.
+? You can borrow my bike ___ you bring it back tomorrow. || as long as | unless | otherwise | in case || "miễn là" → as long as.
+? Take an umbrella ___ it rains. || in case | unless | otherwise | as long as || "phòng khi" → in case.
+? I won't go ___ you come with me. || unless | if | as long as | otherwise || Không đi trừ khi bạn đi cùng → unless.
+? Save your work every ten minutes; ___, you may lose it. || otherwise | unless | in case | as long as || otherwise sau dấu chấm phẩy.
+
+@group l3-join 3 | Nối câu cấp 3 | Chọn đúng dạng: danh từ / V-ing (despite, because of, instead of) hay mệnh đề (although, because).
++ It was very cold. // We went swimming. || despite || Despite the cold, we went swimming. // We went swimming despite the cold. // Despite the fact that it was very cold, we went swimming. // We went swimming despite the cold weather. || despite + danh từ (the cold) hoặc the fact that + mệnh đề.
++ The train was late. // There was a technical problem. || because of || The train was late because of a technical problem. || because of + cụm danh từ.
++ I watched a film. // I did not study. || instead of || I watched a film instead of studying. || instead of + V-ing.
++ My father likes classical music. // My mother likes pop music. || whereas || My father likes classical music, whereas my mother likes pop music. // My father likes classical music whereas my mother likes pop music. || whereas nối hai ý trái ngược.
++ You won't improve. // You practise every day. || unless || You won't improve unless you practise every day. // You won't improve unless you practice every day. || unless = if … not.
++ He has a lot of money. // He lives in a small flat. || in spite of || In spite of having a lot of money, he lives in a small flat. // He lives in a small flat in spite of having a lot of money. // In spite of his money, he lives in a small flat. || in spite of + V-ing / danh từ.
++ The roads were icy. // Many accidents happened. || due to || Many accidents happened due to the icy roads. // Due to the icy roads, many accidents happened. || due to + cụm danh từ.
++ Write your password down. // You might forget it. || in case || Write your password down in case you forget it. || in case + hiện tại đơn.
++ Leave now. // You will be late. || otherwise || Leave now. Otherwise, you will be late. // Leave now; otherwise, you will be late. // Leave now, otherwise you will be late. || Otherwise = nếu không thì.
++ Cities offer more jobs. // The countryside offers a quieter life. || on the other hand || Cities offer more jobs. On the other hand, the countryside offers a quieter life. // Cities offer more jobs; on the other hand, the countryside offers a quieter life. || On the other hand đầu câu sau.
++ You can use my laptop. // You are careful with it. || as long as || You can use my laptop as long as you are careful with it. || as long as = miễn là.
++ We took the stairs. // We did not wait for the lift. || rather than || We took the stairs rather than wait for the lift. // We took the stairs rather than waiting for the lift. || rather than + V nguyên mẫu / V-ing.
+! Despite it was raining, we played football. || Although it was raining, we played football. // Despite the rain, we played football. // Despite the fact that it was raining, we played football. || despite không đi với mệnh đề: dùng although hoặc despite + danh từ.
+! Although the bad weather, the plane took off. || Despite the bad weather, the plane took off. // Although the weather was bad, the plane took off. || although cần mệnh đề; với danh từ dùng despite.
+! He was late because of he missed the bus. || He was late because he missed the bus. // He was late because of missing the bus. || because + mệnh đề; because of + danh từ / V-ing.
+! The game was cancelled because the rain. || The game was cancelled because of the rain. // The game was cancelled due to the rain. // The game was cancelled because it rained. || Trước danh từ cần because of / due to.
+! I will stay at home instead go out. || I will stay at home instead of going out. // I will stay at home rather than go out. || instead of + V-ing.
+! Unless you don't hurry, you will be late. || Unless you hurry, you will be late. // If you don't hurry, you will be late. || unless đã mang nghĩa phủ định, không thêm don't.
+! In spite of he was tired, he finished the race. || In spite of being tired, he finished the race. // Although he was tired, he finished the race. // In spite of the fact that he was tired, he finished the race. || in spite of + V-ing / danh từ, không + mệnh đề.
+! My brother is shy, whereas my sister is shy too. || My brother is shy, and my sister is shy too. // My brother is shy. Similarly, my sister is shy. // My brother is shy, whereas my sister is outgoing. || whereas chỉ dùng cho hai ý trái ngược.
+! Bring a jacket in case it will be cold. || Bring a jacket in case it is cold. // Bring a jacket in case it gets cold. || Sau in case dùng hiện tại đơn cho tương lai.
+! Instead going by car, we cycled. || Instead of going by car, we cycled. || instead of + V-ing.
+
+############ CẤP 4 · từ nối cho bài viết IELTS ############
+
+@group structure 4 | firstly · secondly · finally · in conclusion · to sum up | Sắp xếp bài viết: Firstly / Secondly / Finally mở các ý chính; In conclusion / To sum up mở đoạn kết. Không dùng "At last" để liệt kê ý cuối (at last = cuối cùng thì, sau khi chờ đợi).
+? ___, working from home saves time because there is no need to commute. || Firstly | In conclusion | Instead | At last || Mở ý thứ nhất → Firstly.
+? ___, people who work from home can spend more time with their families. || Secondly | Firstly | In contrast | At last || Ý thứ hai → Secondly.
+? ___, I believe that the advantages of online learning outweigh the disadvantages. || In conclusion | Firstly | For example | Moreover || Đoạn kết → In conclusion.
+? The bus was two hours late. When it ___ arrived, everyone cheered. || finally | in conclusion | lastly | to sum up || "Cuối cùng thì (sau khi chờ)" → finally; lastly / in conclusion dùng để liệt kê / kết bài.
+? ___, both governments and individuals have a role to play in protecting the environment. || To sum up | For instance | Furthermore | Otherwise || Tóm lại → To sum up.
+? ___, and most importantly, exercise improves mental health. || Finally | At last | In conclusion | For example || Ý cuối trong danh sách → Finally / Lastly.
+
+@group concession 4 | nevertheless · nonetheless · even so · admittedly | Nevertheless / Nonetheless / Even so = tuy vậy (trang trọng hơn however), đầu câu + dấu phẩy. Admittedly = phải thừa nhận rằng (nhượng bộ trước khi phản bác).
+? Online courses are convenient. ___, they require a lot of self-discipline. || Nevertheless | Therefore | Similarly | For example || Thừa nhận ưu điểm rồi nêu hạn chế → Nevertheless.
+? ___, public transport is not always comfortable. However, it is much cheaper than driving. || Admittedly | Therefore | Consequently | For instance || Nhượng bộ trước rồi phản bác bằng However → Admittedly.
+? The plan was risky. ___, the company decided to try it. || Nonetheless | Consequently | Likewise | Namely || Nonetheless = Nevertheless.
+? The hotel was far from the centre. ___, we enjoyed our stay. || Even so | As a result | In other words | Similarly || Even so = dù vậy.
+? Tourism brings money to local people. ___, it can damage the environment. || Nevertheless | Moreover | Likewise | Thus || Mặt trái → Nevertheless.
+
+@group consequence 4 | consequently · thus · hence · this means that · this leads to | Chỉ kết quả, trang trọng. Consequently / Thus đầu câu + dấu phẩy; This means that + mệnh đề; This leads to + danh từ.
+? Many young people move to cities. ___, rural areas are losing their workforce. || Consequently | Nevertheless | Similarly | In contrast || Kết quả → Consequently.
+? Children spend hours on screens. ___ they get less physical exercise. || This means that | This leads to | Despite this | For instance || + mệnh đề → This means that.
+? Car use has increased sharply. This ___ more air pollution in big cities. || has led to | means that | consequently | thus || lead to + danh từ.
+? The new law reduces plastic waste and, ___, protects marine life. || thus | despite | whereas | likewise || thus = vì vậy, có thể đứng giữa câu.
+? Fewer people are having children. ___, the population is ageing quickly. || As a consequence | Instead | In other words | Likewise || As a consequence = Consequently.
+
+@group clarify 4 | in other words · that is · namely · in particular · especially | In other words / That is giải thích lại cho rõ; namely = cụ thể là (nêu tên); in particular / especially = đặc biệt là.
+? Many teenagers are addicted to their phones. ___, they cannot stop using them even when they want to. || In other words | For instance | Nevertheless | Similarly || Nói lại cho rõ → In other words.
+? Two subjects are compulsory, ___ maths and literature. || namely | especially | in other words | for instance || Nêu đúng tên hai môn đó → namely.
+? Air pollution harms everyone, ___ young children and old people. || especially | namely | in other words | thus || Đặc biệt là nhóm nào → especially.
+? Some countries, ___ Finland, have excellent school systems. || in particular | in other words | namely that | consequently || in particular = đặc biệt là (nêu nổi bật).
+? The company wants to "go green" — ___, it wants to reduce its impact on the environment. || that is | for instance | nevertheless | similarly || that is = nghĩa là.
+
+@group add-strong 4 | not only … but also · as well as · apart from · likewise | Not only … but also nối hai ý (ý sau mạnh hơn); apart from + danh từ / V-ing = ngoài … ra; Likewise = Similarly.
+? Exercise is not only good for the body ___ for the mind. || but also | and also | as well | moreover || not only … but also.
+? ___ being cheap, the bus is also fast. || Apart from | Moreover | Furthermore | Not only || + V-ing → Apart from.
+? Students need to manage their time well. ___, workers need to plan their day carefully. || Likewise | Nevertheless | Instead | Otherwise || Ý tương tự → Likewise.
+? Not only ___ the internet faster, but it is also cheaper. || is | it is | does | it || Not only đứng đầu câu → đảo ngữ: Not only is the internet…
+? The project will create jobs ___ improving local roads. || as well as | not only | likewise | moreover || as well as + V-ing nối trong câu.
+
+@group purpose 4 | in order to · so as to · so that | in order to / so as to + V nguyên mẫu (để); so that + mệnh đề (thường có can / could / will). Phủ định: in order not to / so as not to.
+? Many students work part-time ___ pay for their studies. || in order to | so that | because of | in order that || + V nguyên mẫu → in order to.
+? She saved money ___ she could travel to Japan. || so that | in order to | so as to | because of || + mệnh đề có could → so that.
+? We left early ___ miss the train. || so as not to | so that not | in order to not | not to so || Phủ định của so as to → so as not to.
+? The government built more bike lanes ___ people would drive less. || so that | in order to | so as | due to || + mệnh đề → so that.
+? You should write a plan first ___ organise your ideas. || in order to | so that | because | in case || + V nguyên mẫu → in order to.
+
+@group l4-join 4 | Nối câu cấp 4 (văn viết) | Câu học thuật: từ nối đầu câu + dấu phẩy, hoặc dấu chấm phẩy trước từ nối.
++ Online shopping is convenient. // Customers cannot touch the products. || nevertheless || Online shopping is convenient. Nevertheless, customers cannot touch the products. // Online shopping is convenient; nevertheless, customers cannot touch the products. || Nevertheless = tuy vậy (trang trọng).
++ Fewer people use cars. // The air in the city is cleaner. || consequently || Fewer people use cars. Consequently, the air in the city is cleaner. // Fewer people use cars; consequently, the air in the city is cleaner. || Consequently + kết quả.
++ Reading improves vocabulary. // Reading reduces stress. || not only … but also || Reading not only improves vocabulary but also reduces stress. // Not only does reading improve vocabulary, but it also reduces stress. || not only + V … but also + V.
++ Many people learn English. // They want to get better jobs. || in order to || Many people learn English in order to get better jobs. || in order to + V nguyên mẫu (bỏ "they want").
++ The government lowered bus fares. // More people would use public transport. || so that || The government lowered bus fares so that more people would use public transport. || so that + mệnh đề.
++ Some jobs are disappearing. // Factory and office jobs are disappearing. || in particular || Some jobs are disappearing, in particular factory and office jobs. // Some jobs are disappearing, factory and office jobs in particular. || in particular = đặc biệt là.
++ Many students feel stressed. // They feel worried and cannot sleep. || in other words || Many students feel stressed. In other words, they feel worried and cannot sleep. || In other words giải thích lại.
++ Tourism creates jobs. // Tourism brings money to local businesses. || apart from || Apart from creating jobs, tourism brings money to local businesses. || Apart from + V-ing.
++ Admittedly, technology can be distracting. // It is a useful tool for learning. || however || Admittedly, technology can be distracting. However, it is a useful tool for learning. // Admittedly, technology can be distracting; however, it is a useful tool for learning. || Admittedly … However: thừa nhận rồi phản bác.
+! In conclusion, firstly, there are many benefits. || Firstly, there are many benefits. // In conclusion, there are many benefits. || Không dùng In conclusion và Firstly cùng lúc: một cái mở ý đầu, một cái mở đoạn kết.
+! At last, I will discuss the disadvantages. || Finally, I will discuss the disadvantages. // Lastly, I will discuss the disadvantages. || Liệt kê ý cuối dùng Finally / Lastly; At last = cuối cùng thì (sau khi chờ đợi).
+! Not only the bus is cheap but also fast. || The bus is not only cheap but also fast. // Not only is the bus cheap, but it is also fast. || not only … but also nối hai thành phần cùng loại (cheap / fast); đầu câu thì phải đảo ngữ.
+! People work hard in order to they can buy a house. || People work hard in order to buy a house. // People work hard so that they can buy a house. || in order to + V; so that + mệnh đề.
+! Nevertheless the cost, many families choose private schools. || Despite the cost, many families choose private schools. // The cost is high. Nevertheless, many families choose private schools. || Nevertheless không đi với danh từ; với danh từ dùng Despite.
+! Many factories closed, consequently many people lost their jobs. || Many factories closed; consequently, many people lost their jobs. // Many factories closed. Consequently, many people lost their jobs. // Many factories closed, so many people lost their jobs. || Consequently không nối hai mệnh đề bằng dấu phẩy.
+! In the other words, the plan failed. || In other words, the plan failed. || Cụm cố định: In other words (không có "the").
+! On the other hands, cities are crowded. || On the other hand, cities are crowded. || Cụm cố định: On the other hand (hand số ít).
+! This leads to people drive less. || This leads to people driving less. // This means that people drive less. || lead to + danh từ / V-ing; This means that + mệnh đề.
+! Especially, children need more sleep than adults. || Children, in particular, need more sleep than adults. // Children especially need more sleep than adults. // In particular, children need more sleep than adults. || Especially thường không đứng đầu câu với dấu phẩy; dùng In particular, hoặc đặt especially sau chủ ngữ.

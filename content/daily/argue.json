@@ -1,0 +1,1528 @@
+{
+ "paragraphs": [
+  {
+   "id": "p01",
+   "level": 1,
+   "scene": "💻🎓",
+   "topic": "Giáo dục · học online",
+   "prompt": "Học trực tuyến có lợi cho sinh viên không?",
+   "s": [
+    {
+     "r": "P",
+     "t": "One major advantage of online learning is that it saves students a lot of time."
+    },
+    {
+     "r": "E",
+     "t": "Since students do not need to travel to class, they can use that time to study or rest."
+    },
+    {
+     "r": "X",
+     "t": "For example, a student who lives an hour away from the university can save two hours every day."
+    },
+    {
+     "r": "L",
+     "t": "Therefore, online learning can help students manage their time more effectively."
+    }
+   ]
+  },
+  {
+   "id": "p02",
+   "level": 1,
+   "scene": "🚲🌿",
+   "topic": "Giao thông · xe đạp",
+   "prompt": "Thành phố có nên khuyến khích người dân đi xe đạp?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Encouraging people to cycle would make cities much cleaner."
+    },
+    {
+     "r": "E",
+     "t": "Bicycles do not produce any exhaust fumes, unlike cars and motorbikes."
+    },
+    {
+     "r": "X",
+     "t": "In Copenhagen, where almost half of all trips to work are made by bike, the air is noticeably cleaner than in many other capitals."
+    },
+    {
+     "r": "L",
+     "t": "For this reason, governments should build more safe bike lanes."
+    }
+   ]
+  },
+  {
+   "id": "p03",
+   "level": 1,
+   "scene": "📱👨‍👩‍👧",
+   "topic": "Công nghệ · gia đình",
+   "prompt": "Điện thoại thông minh ảnh hưởng thế nào đến gia đình?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Smartphones can reduce the time that family members spend talking to each other."
+    },
+    {
+     "r": "E",
+     "t": "When people check their phones during meals, they pay less attention to the people around them."
+    },
+    {
+     "r": "X",
+     "t": "Many parents say that their teenage children answer messages from friends even at the dinner table."
+    },
+    {
+     "r": "L",
+     "t": "As a result, families may become less close if phone use is not controlled."
+    }
+   ]
+  },
+  {
+   "id": "p04",
+   "level": 1,
+   "scene": "🏃‍♀️💪",
+   "topic": "Sức khỏe · thể thao",
+   "prompt": "Vì sao mọi người nên tập thể dục thường xuyên?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Regular exercise is one of the best ways to stay healthy."
+    },
+    {
+     "r": "E",
+     "t": "It strengthens the heart and helps people control their weight."
+    },
+    {
+     "r": "X",
+     "t": "Doctors recommend just thirty minutes of walking a day to lower the risk of heart disease."
+    },
+    {
+     "r": "L",
+     "t": "Clearly, a small amount of daily exercise can make a big difference to our health."
+    }
+   ]
+  },
+  {
+   "id": "p05",
+   "level": 1,
+   "scene": "🏙️🌾",
+   "topic": "Đô thị · việc làm",
+   "prompt": "Vì sao giới trẻ chuyển lên thành phố?",
+   "s": [
+    {
+     "r": "P",
+     "t": "The main reason why young people move to cities is to find better jobs."
+    },
+    {
+     "r": "E",
+     "t": "Big cities have more companies, so there are more opportunities and higher salaries."
+    },
+    {
+     "r": "X",
+     "t": "In Vietnam, thousands of graduates move to Hanoi and Ho Chi Minh City every year to start their careers."
+    },
+    {
+     "r": "L",
+     "t": "Unless rural areas create more jobs, this trend is likely to continue."
+    }
+   ]
+  },
+  {
+   "id": "p06",
+   "level": 1,
+   "scene": "📚👶",
+   "topic": "Giáo dục · đọc sách",
+   "prompt": "Trẻ em có nên đọc sách giấy mỗi ngày?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Reading paper books every day helps children develop their language skills."
+    },
+    {
+     "r": "E",
+     "t": "When children read, they meet new words and learn how sentences are built."
+    },
+    {
+     "r": "X",
+     "t": "A child who reads for twenty minutes a day sees more than a million words in a year."
+    },
+    {
+     "r": "L",
+     "t": "Parents should therefore make reading a daily habit for their children."
+    }
+   ]
+  },
+  {
+   "id": "p07",
+   "level": 1,
+   "scene": "🍔💸",
+   "topic": "Sức khỏe · đồ ăn nhanh",
+   "prompt": "Vì sao đồ ăn nhanh phổ biến?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Fast food is popular mainly because it is cheap and convenient."
+    },
+    {
+     "r": "E",
+     "t": "People who work long hours often do not have time to cook healthy meals."
+    },
+    {
+     "r": "X",
+     "t": "For instance, many office workers buy a burger or a sandwich and eat it at their desks."
+    },
+    {
+     "r": "L",
+     "t": "This explains why fast food restaurants are always busy at lunchtime."
+    }
+   ]
+  },
+  {
+   "id": "p08",
+   "level": 1,
+   "scene": "✈️🏝️",
+   "topic": "Du lịch · địa phương",
+   "prompt": "Du lịch mang lại lợi ích gì cho người dân địa phương?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Tourism can bring many benefits to local communities."
+    },
+    {
+     "r": "E",
+     "t": "Tourists spend money on hotels, food and souvenirs, which creates jobs for local people."
+    },
+    {
+     "r": "X",
+     "t": "In Hoi An, many families earn their living by running small restaurants and tailor shops for visitors."
+    },
+    {
+     "r": "L",
+     "t": "Overall, tourism can improve the standard of living in popular destinations."
+    }
+   ]
+  },
+  {
+   "id": "p09",
+   "level": 1,
+   "scene": "👵👨‍💻",
+   "topic": "Xã hội · người cao tuổi",
+   "prompt": "Người cao tuổi có nên học dùng công nghệ?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Learning to use technology can make elderly people's lives easier."
+    },
+    {
+     "r": "E",
+     "t": "With a smartphone, they can contact their families, pay bills and see a doctor online."
+    },
+    {
+     "r": "X",
+     "t": "My grandmother now video-calls her grandchildren in Australia every weekend."
+    },
+    {
+     "r": "L",
+     "t": "It is therefore worth helping older people to learn these skills."
+    }
+   ]
+  },
+  {
+   "id": "p10",
+   "level": 1,
+   "scene": "🧑‍🍳🏠",
+   "topic": "Lối sống · nấu ăn",
+   "prompt": "Vì sao nên tự nấu ăn ở nhà?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Cooking at home is usually healthier than eating out."
+    },
+    {
+     "r": "E",
+     "t": "People who cook for themselves can choose fresh ingredients and use less salt, sugar and oil."
+    },
+    {
+     "r": "X",
+     "t": "A home-made bowl of soup, for example, often has half the salt of a restaurant one."
+    },
+    {
+     "r": "L",
+     "t": "Learning to cook is therefore a simple way to improve our diet."
+    }
+   ]
+  },
+  {
+   "id": "p11",
+   "level": 2,
+   "scene": "🏢🏠",
+   "topic": "Công việc · làm ở nhà",
+   "prompt": "Làm việc ở nhà có làm tăng năng suất?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Working from home may increase productivity for some types of jobs."
+    },
+    {
+     "r": "E",
+     "t": "Without the noise and interruptions of an office, employees can often concentrate better on tasks that need deep thinking."
+    },
+    {
+     "r": "X",
+     "t": "A software developer, for instance, may finish more code in a quiet room at home than in a busy open-plan office."
+    },
+    {
+     "r": "L",
+     "t": "However, this benefit seems to depend largely on the type of work and the person's self-discipline."
+    }
+   ]
+  },
+  {
+   "id": "p12",
+   "level": 2,
+   "scene": "🧒📺",
+   "topic": "Trẻ em · màn hình",
+   "prompt": "Trẻ em xem màn hình quá nhiều có hại không?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Spending too much time on screens can have a negative effect on children's health."
+    },
+    {
+     "r": "E",
+     "t": "Children who watch videos for hours tend to sit still and may get less physical exercise."
+    },
+    {
+     "r": "X",
+     "t": "According to some doctors, screen time is one of the reasons why more children are overweight today."
+    },
+    {
+     "r": "L",
+     "t": "It is therefore advisable for parents to set clear limits on daily screen use."
+    }
+   ]
+  },
+  {
+   "id": "p13",
+   "level": 2,
+   "scene": "🚗💨",
+   "topic": "Môi trường · xe hơi",
+   "prompt": "Có nên đánh thuế cao xe hơi cá nhân?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Higher taxes on private cars could be an effective way to reduce air pollution."
+    },
+    {
+     "r": "E",
+     "t": "If driving becomes more expensive, many people are likely to switch to buses, trains or bicycles."
+    },
+    {
+     "r": "X",
+     "t": "When London introduced a charge for driving into the city centre, traffic in that area fell considerably."
+    },
+    {
+     "r": "L",
+     "t": "Such a policy, however, should go together with better public transport so that people have real alternatives."
+    }
+   ]
+  },
+  {
+   "id": "p14",
+   "level": 2,
+   "scene": "🎓💼",
+   "topic": "Giáo dục · đại học",
+   "prompt": "Có phải ai cũng nên học đại học?",
+   "s": [
+    {
+     "r": "P",
+     "t": "A university degree is not necessarily the best path for every young person."
+    },
+    {
+     "r": "E",
+     "t": "Many well-paid jobs, such as electricians or chefs, require practical training rather than academic study."
+    },
+    {
+     "r": "X",
+     "t": "In Germany, a large number of school leavers choose vocational programmes and find stable jobs quickly."
+    },
+    {
+     "r": "L",
+     "t": "Young people should therefore be encouraged to consider all their options, not only university."
+    }
+   ]
+  },
+  {
+   "id": "p15",
+   "level": 2,
+   "scene": "🛒🌐",
+   "topic": "Mua sắm · online",
+   "prompt": "Mua sắm online ảnh hưởng gì đến cửa hàng nhỏ?",
+   "s": [
+    {
+     "r": "P",
+     "t": "The growth of online shopping appears to be putting pressure on small local shops."
+    },
+    {
+     "r": "E",
+     "t": "Online sellers can often offer lower prices because they do not have to pay rent for a shop on a busy street."
+    },
+    {
+     "r": "X",
+     "t": "In many towns, small bookshops have closed since customers started buying books on the internet."
+    },
+    {
+     "r": "L",
+     "t": "To survive, local shops may need to offer something that websites cannot, such as personal service."
+    }
+   ]
+  },
+  {
+   "id": "p16",
+   "level": 2,
+   "scene": "🧓🏥",
+   "topic": "Xã hội · dân số già",
+   "prompt": "Dân số già hoá đặt ra thách thức gì?",
+   "s": [
+    {
+     "r": "P",
+     "t": "An ageing population is likely to put a heavy burden on healthcare systems."
+    },
+    {
+     "r": "E",
+     "t": "Older people generally need more medical care, and the cost of treating long-term illnesses is high."
+    },
+    {
+     "r": "X",
+     "t": "In Japan, where more than a quarter of the population is over sixty-five, health spending has risen steadily for decades."
+    },
+    {
+     "r": "L",
+     "t": "Governments will therefore need to plan carefully to keep healthcare affordable."
+    }
+   ]
+  },
+  {
+   "id": "p17",
+   "level": 2,
+   "scene": "📰📱",
+   "topic": "Truyền thông · tin tức",
+   "prompt": "Đọc tin trên mạng xã hội có đáng tin?",
+   "s": [
+    {
+     "r": "P",
+     "t": "News on social media is not always reliable."
+    },
+    {
+     "r": "E",
+     "t": "Anyone can post information online, and false stories often spread faster than true ones because they are more shocking."
+    },
+    {
+     "r": "X",
+     "t": "During health crises, for example, fake cures have been shared millions of times before experts could correct them."
+    },
+    {
+     "r": "L",
+     "t": "Readers should therefore check important news with trusted sources before believing or sharing it."
+    }
+   ]
+  },
+  {
+   "id": "p18",
+   "level": 2,
+   "scene": "🌳🏙️",
+   "topic": "Đô thị · công viên",
+   "prompt": "Thành phố có cần thêm không gian xanh?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Green spaces play an important role in making cities pleasant places to live."
+    },
+    {
+     "r": "E",
+     "t": "Parks give residents a place to exercise and relax, which can reduce stress."
+    },
+    {
+     "r": "X",
+     "t": "Research suggests that people who live near a park report higher levels of happiness than those who do not."
+    },
+    {
+     "r": "L",
+     "t": "City planners should therefore protect existing parks and create new ones where possible."
+    }
+   ]
+  },
+  {
+   "id": "p19",
+   "level": 2,
+   "scene": "🎮🧠",
+   "topic": "Giải trí · trò chơi điện tử",
+   "prompt": "Trò chơi điện tử có lợi ích gì không?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Although they are often criticised, video games may have some educational benefits."
+    },
+    {
+     "r": "E",
+     "t": "Many games require players to solve problems, plan ahead and make quick decisions."
+    },
+    {
+     "r": "X",
+     "t": "Some schools even use strategy games to teach history and geography in a more engaging way."
+    },
+    {
+     "r": "L",
+     "t": "Video games, if played in moderation, can therefore be more than just entertainment."
+    }
+   ]
+  },
+  {
+   "id": "p20",
+   "level": 2,
+   "scene": "💧🏭",
+   "topic": "Môi trường · nước sạch",
+   "prompt": "Ai chịu trách nhiệm bảo vệ nguồn nước?",
+   "s": [
+    {
+     "r": "P",
+     "t": "Protecting clean water is largely the responsibility of governments."
+    },
+    {
+     "r": "E",
+     "t": "Only governments have the power to make laws that stop factories from polluting rivers and lakes."
+    },
+    {
+     "r": "X",
+     "t": "After strict rules were introduced in some European countries, rivers that were once dead are now home to fish again."
+    },
+    {
+     "r": "L",
+     "t": "Individuals can help, but strong laws are likely to have the greatest effect."
+    }
+   ]
+  },
+  {
+   "id": "p21",
+   "level": 3,
+   "scene": "🏫📵",
+   "topic": "Giáo dục · điện thoại trong lớp",
+   "prompt": "Có nên cấm điện thoại trong trường học?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Some people argue that mobile phones should be banned in schools completely."
+    },
+    {
+     "r": "E",
+     "t": "They believe phones distract students and make it harder for teachers to control the class."
+    },
+    {
+     "r": "R",
+     "t": "However, a complete ban may ignore the fact that phones can be useful learning tools."
+    },
+    {
+     "r": "X",
+     "t": "Students can use them to look up new words, check facts or join online quizzes during lessons."
+    },
+    {
+     "r": "L",
+     "t": "A better solution, therefore, may be to allow phones only for specific learning activities."
+    }
+   ]
+  },
+  {
+   "id": "p22",
+   "level": 3,
+   "scene": "🧪🐒",
+   "topic": "Khoa học · thử nghiệm trên động vật",
+   "prompt": "Có nên cấm thử nghiệm trên động vật?",
+   "s": [
+    {
+     "r": "O",
+     "t": "It is often claimed that testing medicines on animals is necessary to protect human health."
+    },
+    {
+     "r": "E",
+     "t": "Supporters say that new drugs must be tested on living bodies before they can be given to people safely."
+    },
+    {
+     "r": "R",
+     "t": "Nevertheless, modern alternatives now make many animal tests unnecessary."
+    },
+    {
+     "r": "X",
+     "t": "Scientists can increasingly use computer models and human cells grown in laboratories to check whether a drug is safe."
+    },
+    {
+     "r": "L",
+     "t": "Animal testing should therefore be reduced as far as possible and replaced wherever alternatives exist."
+    }
+   ]
+  },
+  {
+   "id": "p23",
+   "level": 3,
+   "scene": "💰🎓",
+   "topic": "Giáo dục · học phí",
+   "prompt": "Đại học có nên miễn học phí?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Opponents of free university education point out that it would be very expensive for taxpayers."
+    },
+    {
+     "r": "E",
+     "t": "They argue that public money could be spent on more urgent needs, such as hospitals."
+    },
+    {
+     "r": "R",
+     "t": "Admittedly, the cost is high; however, educated citizens tend to earn more and pay more tax later in life."
+    },
+    {
+     "r": "X",
+     "t": "Countries such as Norway, where university is free, have some of the most skilled workforces in the world."
+    },
+    {
+     "r": "L",
+     "t": "In the long term, free higher education may therefore be an investment rather than a cost."
+    }
+   ]
+  },
+  {
+   "id": "p24",
+   "level": 3,
+   "scene": "🤖👷",
+   "topic": "Công nghệ · trí tuệ nhân tạo",
+   "prompt": "AI có lấy mất việc làm của con người?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Many people fear that artificial intelligence will take away millions of jobs."
+    },
+    {
+     "r": "E",
+     "t": "It is true that machines can now do tasks such as answering customer questions or checking documents faster than humans."
+    },
+    {
+     "r": "R",
+     "t": "However, history suggests that new technology also creates new types of work."
+    },
+    {
+     "r": "X",
+     "t": "When computers became common, jobs such as web designer and data analyst appeared that had not existed before."
+    },
+    {
+     "r": "L",
+     "t": "Rather than fearing AI, societies should focus on training workers for the jobs it will create."
+    }
+   ]
+  },
+  {
+   "id": "p25",
+   "level": 3,
+   "scene": "🏟️💸",
+   "topic": "Xã hội · tiền cho thể thao",
+   "prompt": "Chính phủ có nên chi nhiều tiền cho thể thao chuyên nghiệp?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Some believe that governments should spend large sums on professional sport because it brings national pride."
+    },
+    {
+     "r": "E",
+     "t": "When a national team wins, people often feel happier and more united."
+    },
+    {
+     "r": "R",
+     "t": "On the other hand, this money might be used more effectively to encourage ordinary people to exercise."
+    },
+    {
+     "r": "X",
+     "t": "Building free sports facilities in local parks, for example, could benefit thousands of people rather than a few athletes."
+    },
+    {
+     "r": "L",
+     "t": "Funding for grassroots sport should therefore be a higher priority than funding for elite teams."
+    }
+   ]
+  },
+  {
+   "id": "p26",
+   "level": 3,
+   "scene": "🌍✈️",
+   "topic": "Môi trường · đi máy bay",
+   "prompt": "Có nên hạn chế đi máy bay vì môi trường?",
+   "s": [
+    {
+     "r": "O",
+     "t": "It could be argued that people should fly less in order to protect the environment."
+    },
+    {
+     "r": "E",
+     "t": "Air travel produces a large amount of carbon dioxide per passenger compared with trains."
+    },
+    {
+     "r": "R",
+     "t": "Even so, simply asking people to fly less is unlikely to work unless there are cheap alternatives."
+    },
+    {
+     "r": "X",
+     "t": "In Europe, where fast trains connect many cities, more travellers now choose the train for short journeys."
+    },
+    {
+     "r": "L",
+     "t": "Investing in high-speed rail may therefore be more effective than telling people not to fly."
+    }
+   ]
+  },
+  {
+   "id": "p27",
+   "level": 3,
+   "scene": "🧑‍🏫💻",
+   "topic": "Giáo dục · giáo viên và máy tính",
+   "prompt": "Máy tính có thể thay thế giáo viên?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Some people predict that computers will one day replace teachers."
+    },
+    {
+     "r": "E",
+     "t": "Online courses can already deliver lessons to millions of learners at a very low cost."
+    },
+    {
+     "r": "R",
+     "t": "Nonetheless, teachers do much more than deliver information."
+    },
+    {
+     "r": "X",
+     "t": "They notice when a student is confused or unhappy and can change the lesson or offer support immediately."
+    },
+    {
+     "r": "L",
+     "t": "For this reason, technology is more likely to support teachers than to replace them."
+    }
+   ]
+  },
+  {
+   "id": "p28",
+   "level": 3,
+   "scene": "🏘️🏗️",
+   "topic": "Đô thị · nhà cao tầng",
+   "prompt": "Thành phố có nên xây thêm nhà cao tầng?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Supporters of high-rise buildings argue that they are the best answer to housing shortages in crowded cities."
+    },
+    {
+     "r": "E",
+     "t": "Tall buildings can house many families on a small piece of land."
+    },
+    {
+     "r": "R",
+     "t": "However, if they are not well planned, high-rise areas may lack green space and community facilities."
+    },
+    {
+     "r": "X",
+     "t": "Some tower blocks built quickly in the past are now known for social problems and poor living conditions."
+    },
+    {
+     "r": "L",
+     "t": "High-rise housing can therefore be part of the solution, but only if it is carefully designed."
+    }
+   ]
+  },
+  {
+   "id": "p29",
+   "level": 3,
+   "scene": "🍽️🌱",
+   "topic": "Sức khỏe · ăn chay",
+   "prompt": "Mọi người có nên ăn ít thịt hơn?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Many argue that people should eat less meat for health and environmental reasons."
+    },
+    {
+     "r": "E",
+     "t": "Producing meat uses a lot of land and water, and eating too much red meat is linked to some diseases."
+    },
+    {
+     "r": "R",
+     "t": "That said, meat is an important source of protein and iron, especially for people with limited diets."
+    },
+    {
+     "r": "X",
+     "t": "In poorer rural areas, a small amount of meat may be the most affordable way to get these nutrients."
+    },
+    {
+     "r": "L",
+     "t": "A balanced approach, in which people reduce rather than give up meat, therefore seems most realistic."
+    }
+   ]
+  },
+  {
+   "id": "p30",
+   "level": 3,
+   "scene": "👩‍💼👨‍🍼",
+   "topic": "Xã hội · nghỉ thai sản cho bố",
+   "prompt": "Có nên cho người bố nghỉ dài ngày khi có con?",
+   "s": [
+    {
+     "r": "O",
+     "t": "Some employers claim that long paid leave for new fathers is too costly for businesses."
+    },
+    {
+     "r": "E",
+     "t": "They worry that small companies cannot afford to pay staff who are not working."
+    },
+    {
+     "r": "R",
+     "t": "Nevertheless, there is growing evidence that such leave brings long-term benefits."
+    },
+    {
+     "r": "X",
+     "t": "In Sweden, where fathers share parental leave, mothers return to work more easily and children spend more time with both parents."
+    },
+    {
+     "r": "L",
+     "t": "With some government support for small firms, paternity leave could therefore benefit families and the economy."
+    }
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "kind": "topic",
+   "level": 1,
+   "q": "Đoạn văn nói về lợi ích của việc học ngoại ngữ đối với công việc. Câu chủ đề nào tốt nhất?",
+   "o": [
+    "Speaking a foreign language can greatly improve a person's job opportunities.",
+    "I started learning English when I was ten years old.",
+    "There are about 7,000 languages in the world.",
+    "English, Chinese and Japanese are popular languages."
+   ],
+   "w": "Câu chủ đề nêu đúng ý chính (ngoại ngữ → cơ hội việc làm). Các câu khác là thông tin bên lề hoặc chuyện cá nhân."
+  },
+  {
+   "kind": "topic",
+   "level": 1,
+   "q": "Đoạn văn giải thích vì sao trẻ em nên chơi thể thao. Câu chủ đề nào tốt nhất?",
+   "o": [
+    "Playing sports is important for children's physical and social development.",
+    "Football is the most popular sport in the world.",
+    "My brother plays basketball every Sunday.",
+    "Some sports are very expensive."
+   ],
+   "w": "Câu chủ đề phải trả lời trực tiếp câu hỏi \"vì sao\" và bao quát cả đoạn."
+  },
+  {
+   "kind": "topic",
+   "level": 1,
+   "q": "Câu chủ đề nào quá rộng, KHÔNG phù hợp cho một đoạn văn?",
+   "o": [
+    "Technology has changed everything in the world.",
+    "Online banking has made paying bills much faster.",
+    "Video calls help families who live far apart stay in touch.",
+    "Electric scooters are becoming popular in big cities."
+   ],
+   "w": "Câu chủ đề cần đủ hẹp để một đoạn (4–6 câu) chứng minh được. \"Changed everything\" quá rộng."
+  },
+  {
+   "kind": "topic",
+   "level": 1,
+   "q": "Câu nào là câu chủ đề (không phải câu ví dụ)?",
+   "o": [
+    "Working from home can reduce stress for many employees.",
+    "Last year, my aunt started working from home three days a week.",
+    "She no longer spends two hours in traffic jams.",
+    "Now she has time to cook breakfast for her children."
+   ],
+   "w": "Câu chủ đề nêu ý chung; ba câu còn lại là chi tiết / ví dụ cụ thể."
+  },
+  {
+   "kind": "example",
+   "level": 1,
+   "q": "Ý chính: \"Social media helps small businesses reach more customers.\" Ví dụ nào phù hợp nhất?",
+   "o": [
+    "A small bakery in Da Nang doubled its orders after posting photos of its cakes on Facebook.",
+    "Facebook was created in 2004 by Mark Zuckerberg.",
+    "Many teenagers spend hours on TikTok every day.",
+    "Some people think social media is a waste of time."
+   ],
+   "w": "Ví dụ phải chứng minh đúng ý chính: doanh nghiệp nhỏ + nhiều khách hơn nhờ mạng xã hội."
+  },
+  {
+   "kind": "example",
+   "level": 1,
+   "q": "Ý chính: \"Living in a big city can be very expensive.\" Ví dụ nào phù hợp nhất?",
+   "o": [
+    "In central Hanoi, renting a small flat can cost half of a young worker's salary.",
+    "Hanoi has a population of more than eight million people.",
+    "Big cities have many shopping centres and restaurants.",
+    "Traffic in big cities is often terrible."
+   ],
+   "w": "Ví dụ phải nói về chi phí đắt đỏ; các câu khác đúng nhưng không chứng minh ý này."
+  },
+  {
+   "kind": "example",
+   "level": 1,
+   "q": "Ý chính: \"Regular exercise improves mental health.\" Ví dụ nào hỗ trợ tốt nhất?",
+   "o": [
+    "Studies show that people who walk for thirty minutes a day feel less anxious.",
+    "Many gyms open at five o'clock in the morning.",
+    "Running shoes can be very expensive.",
+    "Some professional athletes earn millions of dollars."
+   ],
+   "w": "Chỉ câu đầu nối exercise với sức khỏe tinh thần (less anxious)."
+  },
+  {
+   "kind": "example",
+   "level": 1,
+   "q": "Ý chính: \"Public libraries are still useful today.\" Ví dụ nào phù hợp nhất?",
+   "o": [
+    "Many students without a quiet room at home go to the library to study for exams.",
+    "The first public library in the world opened a long time ago.",
+    "Some libraries are very old and beautiful buildings.",
+    "People can read e-books on their phones."
+   ],
+   "w": "Ví dụ cần cho thấy thư viện vẫn có ích hiện nay."
+  },
+  {
+   "kind": "link",
+   "level": 1,
+   "q": "Đoạn văn: ý chính là \"Cycling to work saves money\", có giải thích và ví dụ. Câu kết đoạn nào phù hợp nhất?",
+   "o": [
+    "Therefore, cycling is a practical choice for people who want to cut their transport costs.",
+    "Some bicycles are very expensive.",
+    "In conclusion, cars are dangerous.",
+    "I really like riding my bike at weekends."
+   ],
+   "w": "Câu kết đoạn nhắc lại ý chính và nối về đề (tiết kiệm tiền), không đưa ý mới."
+  },
+  {
+   "kind": "link",
+   "level": 1,
+   "q": "Câu nào là câu kết đoạn tốt cho đoạn văn về \"lợi ích của việc đọc sách\"?",
+   "o": [
+    "In short, reading regularly benefits both our knowledge and our wellbeing.",
+    "Firstly, reading helps us learn new words.",
+    "For example, my sister reads two books a month.",
+    "Some people prefer watching films to reading."
+   ],
+   "w": "Câu kết đoạn tóm lại ý chính; \"Firstly\" mở ý, \"For example\" là ví dụ."
+  },
+  {
+   "kind": "signpost",
+   "level": 1,
+   "q": "Bạn muốn mở ý thứ hai trong bài. Câu nào phù hợp?",
+   "o": [
+    "Another reason why people choose to live in cities is the quality of healthcare.",
+    "In conclusion, people live in cities.",
+    "For example, hospitals are good.",
+    "Although cities are big."
+   ],
+   "w": "\"Another reason why…\" là câu dẫn dắt mở ý tiếp theo, đầy đủ và rõ ràng."
+  },
+  {
+   "kind": "signpost",
+   "level": 1,
+   "q": "Câu nào nêu rõ quan điểm của người viết ngay đầu bài?",
+   "o": [
+    "In my opinion, the advantages of online shopping clearly outweigh the disadvantages.",
+    "Online shopping is shopping on the internet.",
+    "Many people talk about online shopping.",
+    "Is online shopping good or bad?"
+   ],
+   "w": "Mở bài nên nêu quan điểm rõ ràng (In my opinion / I believe that…), không chỉ định nghĩa hay đặt câu hỏi."
+  },
+  {
+   "kind": "weak",
+   "level": 1,
+   "q": "Lập luận nào yếu nhất?",
+   "o": [
+    "Everyone in my class likes video games, so all young people love them.",
+    "Many surveys show that a large number of teenagers play video games regularly.",
+    "Video games can improve reaction speed, according to some research.",
+    "Some young people prefer sports to video games."
+   ],
+   "w": "Lỗi khái quát hoá: từ một lớp học suy ra \"tất cả người trẻ\"."
+  },
+  {
+   "kind": "weak",
+   "level": 1,
+   "q": "Câu nào thiếu giải thích, chỉ khẳng định?",
+   "o": [
+    "Uniforms are good because they are good.",
+    "Uniforms are good because students do not need to worry about what to wear.",
+    "Uniforms can reduce the pressure to buy expensive clothes.",
+    "Uniforms help students feel part of the school community."
+   ],
+   "w": "Lập luận vòng tròn: lấy kết luận làm lý do."
+  },
+  {
+   "kind": "hedge",
+   "level": 1,
+   "q": "Câu nào phù hợp hơn với văn viết học thuật?",
+   "o": [
+    "Fast food may contribute to health problems such as obesity.",
+    "Fast food kills everyone who eats it.",
+    "Fast food is 100% bad.",
+    "Fast food is super terrible for you."
+   ],
+   "w": "Văn học thuật tránh nói tuyệt đối; \"may contribute to\" thận trọng và chính xác hơn."
+  },
+  {
+   "kind": "hedge",
+   "level": 1,
+   "q": "Câu nào nói giảm hợp lý nhất?",
+   "o": [
+    "Young people tend to spend more time online than older people.",
+    "All young people are always online.",
+    "Young people never go outside.",
+    "Every teenager uses the internet 24 hours a day."
+   ],
+   "w": "\"tend to\" = có xu hướng — tránh khái quát tuyệt đối (all, always, never, every)."
+  },
+  {
+   "kind": "topic",
+   "level": 1,
+   "q": "Đề: \"Some people think students should do part-time jobs.\" Câu chủ đề nào cho đoạn ủng hộ?",
+   "o": [
+    "Doing a part-time job can help students develop useful skills for their future careers.",
+    "I have never had a part-time job.",
+    "Part-time jobs are jobs that are not full-time.",
+    "Some students are very busy."
+   ],
+   "w": "Câu chủ đề nêu một lý do ủng hộ cụ thể (kỹ năng cho sự nghiệp)."
+  },
+  {
+   "kind": "example",
+   "level": 1,
+   "q": "Ý chính: \"Tourism can damage the environment.\" Ví dụ nào phù hợp nhất?",
+   "o": [
+    "On some popular beaches, plastic bottles left by tourists harm sea turtles and fish.",
+    "Many tourists like taking photos.",
+    "Tourism is a big industry in Thailand.",
+    "Hotels near the beach are expensive."
+   ],
+   "w": "Ví dụ chứng minh tác hại môi trường cụ thể."
+  },
+  {
+   "kind": "signpost",
+   "level": 1,
+   "q": "Bạn muốn đưa một ví dụ. Câu dẫn dắt nào đúng?",
+   "o": [
+    "A good example of this is Singapore, which has very clean streets.",
+    "Such as Singapore has clean streets.",
+    "For example of Singapore, the streets are clean.",
+    "Singapore, for example of this, is clean."
+   ],
+   "w": "\"A good example of this is…\" / \"For example, …\" là cách đưa ví dụ đúng; such as không đứng đầu câu."
+  },
+  {
+   "kind": "link",
+   "level": 1,
+   "q": "Câu nào nối lại về đề bài \"Should children learn to cook at school?\" tốt nhất?",
+   "o": [
+    "For these reasons, cooking lessons should be part of the school curriculum.",
+    "Cooking is fun.",
+    "My mother is a very good cook.",
+    "Many restaurants are open late at night."
+   ],
+   "w": "Câu kết nối về đề: trả lời \"should\" bằng một khuyến nghị rõ ràng."
+  },
+  {
+   "kind": "weak",
+   "level": 1,
+   "q": "Ví dụ nào KHÔNG liên quan đến ý \"Learning English opens up job opportunities\"?",
+   "o": [
+    "English is the official language of many countries, and the UK has a famous royal family.",
+    "Many international companies in Vietnam require English for well-paid positions.",
+    "Tour guides who speak English can work with more customers.",
+    "Hotel staff with good English are often promoted faster."
+   ],
+   "w": "Ví dụ không liên quan (hoàng gia Anh) làm đoạn văn lạc đề."
+  },
+  {
+   "kind": "hedge",
+   "level": 2,
+   "q": "Câu nào là cách nói thận trọng, phù hợp với IELTS Writing?",
+   "o": [
+    "It could be argued that homework puts too much pressure on young children.",
+    "Homework definitely destroys every child's life.",
+    "Everybody knows homework is useless.",
+    "Homework is always 100% bad."
+   ],
+   "w": "\"It could be argued that…\" giới thiệu một quan điểm một cách thận trọng."
+  },
+  {
+   "kind": "hedge",
+   "level": 2,
+   "q": "Từ nào làm câu \"Online learning ___ be less effective for young children.\" thận trọng hơn?",
+   "o": [
+    "may",
+    "will always",
+    "must definitely",
+    "surely will"
+   ],
+   "w": "may / might / can = có thể — tránh khẳng định tuyệt đối."
+  },
+  {
+   "kind": "hedge",
+   "level": 2,
+   "q": "Câu nào phù hợp nhất cho bài viết học thuật?",
+   "o": [
+    "Many experts believe that sugar is one of the main causes of obesity.",
+    "Sugar is the only cause of obesity.",
+    "Sugar makes everyone fat.",
+    "I think sugar is bad because I don't like it."
+   ],
+   "w": "Dựa vào ý kiến chuyên gia và tránh nói tuyệt đối (the only, everyone)."
+  },
+  {
+   "kind": "hedge",
+   "level": 2,
+   "q": "Câu nào dùng \"tend to\" đúng và hợp lý?",
+   "o": [
+    "People in cities tend to have less contact with their neighbours.",
+    "People in cities tend having less contact with their neighbours.",
+    "People in cities are tend to have less contact.",
+    "People in cities tends to have less contact."
+   ],
+   "w": "tend to + V nguyên mẫu, chia theo chủ ngữ (people tend to)."
+  },
+  {
+   "kind": "hedge",
+   "level": 2,
+   "q": "Chọn từ phù hợp: \"There is ___ evidence that regular exercise reduces stress.\"",
+   "o": [
+    "strong",
+    "absolute",
+    "100%",
+    "complete"
+   ],
+   "w": "Văn học thuật dùng strong / growing / some evidence, tránh \"absolute / 100%\"."
+  },
+  {
+   "kind": "weak",
+   "level": 2,
+   "q": "Lập luận nào có lỗi \"nguyên nhân sai\"?",
+   "o": [
+    "I wore my lucky shirt and passed the exam, so the shirt helped me pass.",
+    "I studied every day for three months, so I passed the exam.",
+    "Because I practised many tests, I knew the format well.",
+    "I passed because I managed my time carefully."
+   ],
+   "w": "Hai việc xảy ra cùng lúc không có nghĩa là cái này gây ra cái kia."
+  },
+  {
+   "kind": "weak",
+   "level": 2,
+   "q": "Câu nào đưa ra lý do yếu nhất cho ý \"Students should wear uniforms\"?",
+   "o": [
+    "Uniforms should be worn because they have always been worn.",
+    "Uniforms reduce the pressure to wear expensive brands.",
+    "Uniforms make it easier to recognise students on school trips.",
+    "Uniforms save parents time in the morning."
+   ],
+   "w": "\"Vì xưa nay vẫn thế\" không phải lý do thuyết phục."
+  },
+  {
+   "kind": "weak",
+   "level": 2,
+   "q": "Câu nào chỉ dựa vào cảm xúc, không có lý lẽ?",
+   "o": [
+    "Zoos are terrible and anyone who visits them is a bad person.",
+    "Some zoos keep animals in cages that are far too small.",
+    "Well-run zoos can help protect endangered species.",
+    "Many zoos now educate visitors about wildlife."
+   ],
+   "w": "Công kích người khác và dùng cảm xúc thay cho lý lẽ là lập luận yếu."
+  },
+  {
+   "kind": "weak",
+   "level": 2,
+   "q": "Ví dụ nào yếu nhất để chứng minh \"Public transport is unreliable\"?",
+   "o": [
+    "My friend once waited ten minutes for a bus.",
+    "According to a city report, 30% of buses arrived more than fifteen minutes late last year.",
+    "Commuters' complaints about delays have doubled in two years.",
+    "Several train lines were cancelled every week during the rainy season."
+   ],
+   "w": "Một trải nghiệm cá nhân nhỏ không đủ chứng minh một kết luận chung."
+  },
+  {
+   "kind": "topic",
+   "level": 2,
+   "q": "Câu chủ đề nào thận trọng và rõ ràng nhất?",
+   "o": [
+    "Working from home may improve the work-life balance of many employees.",
+    "Working from home is the best thing ever.",
+    "Working from home has many things.",
+    "Everybody should work from home forever."
+   ],
+   "w": "Câu chủ đề tốt: một ý rõ ràng, nói giảm hợp lý (may, many)."
+  },
+  {
+   "kind": "example",
+   "level": 2,
+   "q": "Ý chính: \"Social media may make teenagers feel worse about themselves.\" Ví dụ nào có sức thuyết phục nhất?",
+   "o": [
+    "A survey of 1,000 teenagers found that many felt unhappy after comparing their lives with others' photos online.",
+    "My cousin uses Instagram every day.",
+    "Social media companies earn money from advertising.",
+    "Some teenagers post photos of their food."
+   ],
+   "w": "Số liệu khảo sát liên quan trực tiếp mạnh hơn chuyện cá nhân hay thông tin bên lề."
+  },
+  {
+   "kind": "example",
+   "level": 2,
+   "q": "Ý chính: \"Higher taxes on sugary drinks may improve public health.\" Ví dụ nào phù hợp nhất?",
+   "o": [
+    "After Mexico introduced a tax on sugary drinks, people bought fewer of them.",
+    "Coca-Cola is sold in more than 200 countries.",
+    "Sugary drinks are very sweet.",
+    "Some people prefer coffee to soft drinks."
+   ],
+   "w": "Ví dụ cho thấy chính sách thuế dẫn tới kết quả tốt."
+  },
+  {
+   "kind": "signpost",
+   "level": 2,
+   "q": "Câu nào giới thiệu quan điểm của người khác một cách khách quan?",
+   "o": [
+    "Some people argue that university education should be free for everyone.",
+    "People wrongly say that university should be free.",
+    "Stupid people think university should be free.",
+    "University should be free, I am sure everybody agrees."
+   ],
+   "w": "\"Some people argue that…\" nêu quan điểm khác một cách trung lập."
+  },
+  {
+   "kind": "signpost",
+   "level": 2,
+   "q": "Câu nào chuyển sang ý đối lập trong bài \"Discuss both views\"?",
+   "o": [
+    "On the other hand, others believe that students should pay for their own studies.",
+    "In addition, students should pay for their studies.",
+    "For example, students should pay.",
+    "Therefore, students should pay for their studies."
+   ],
+   "w": "Chuyển sang quan điểm thứ hai → On the other hand, others believe…"
+  },
+  {
+   "kind": "link",
+   "level": 2,
+   "q": "Câu kết đoạn nào phù hợp nhất cho đoạn về tác hại của việc thức khuya?",
+   "o": [
+    "Getting enough sleep is therefore essential for both students' health and their results.",
+    "Some people go to bed at nine o'clock.",
+    "Firstly, sleep is important.",
+    "Coffee contains caffeine."
+   ],
+   "w": "Câu kết đoạn tóm lại ý và nối về đề, không mở ý mới."
+  },
+  {
+   "kind": "link",
+   "level": 2,
+   "q": "Câu nào KHÔNG nên đặt cuối một đoạn thân bài?",
+   "o": [
+    "Another important factor is the cost of housing.",
+    "This shows that cities need better public transport.",
+    "For these reasons, the policy is likely to succeed.",
+    "Clearly, this approach has more benefits than drawbacks."
+   ],
+   "w": "\"Another important factor…\" mở ý mới, nên đặt đầu đoạn tiếp theo."
+  },
+  {
+   "kind": "hedge",
+   "level": 2,
+   "q": "Cụm nào làm câu \"This policy ___ reduce traffic\" thận trọng nhất mà vẫn rõ ý?",
+   "o": [
+    "is likely to",
+    "will 100%",
+    "must certainly",
+    "will definitely always"
+   ],
+   "w": "\"is likely to\" = nhiều khả năng sẽ."
+  },
+  {
+   "kind": "weak",
+   "level": 2,
+   "q": "Câu nào là khái quát hoá quá mức?",
+   "o": [
+    "All old people dislike modern technology.",
+    "Some older people find modern technology difficult to use.",
+    "Many older people now use smartphones to talk to their families.",
+    "Older people may need more time to learn new apps."
+   ],
+   "w": "\"All\" khái quát toàn bộ một nhóm người là lỗi lập luận."
+  },
+  {
+   "kind": "topic",
+   "level": 2,
+   "q": "Đề: \"Is it better to live alone or with family?\" Câu chủ đề nào cho đoạn ủng hộ sống cùng gia đình?",
+   "o": [
+    "Living with family can provide emotional support during difficult times.",
+    "Families are groups of people.",
+    "I have three sisters and one brother.",
+    "Rent is high in many cities."
+   ],
+   "w": "Câu chủ đề nêu một lý do rõ ràng ủng hộ quan điểm."
+  },
+  {
+   "kind": "example",
+   "level": 2,
+   "q": "Ý chính: \"Learning to play an instrument may improve children's concentration.\" Ví dụ nào phù hợp nhất?",
+   "o": [
+    "Children who practise the piano daily often have to focus on one task for a long time.",
+    "Pianos are very heavy and expensive.",
+    "Mozart was a famous composer.",
+    "Some people prefer listening to music to playing it."
+   ],
+   "w": "Ví dụ cho thấy mối liên hệ giữa học nhạc và khả năng tập trung."
+  },
+  {
+   "kind": "counter",
+   "level": 3,
+   "q": "Câu nào nêu ý kiến trái chiều một cách khách quan trước khi phản bác?",
+   "o": [
+    "It is often claimed that online friendships are less meaningful than real ones.",
+    "Online friendships are obviously fake.",
+    "Only foolish people make friends online.",
+    "Online friends are the best friends, everyone agrees."
+   ],
+   "w": "\"It is often claimed that…\" trình bày quan điểm đối lập trung lập, chuẩn bị cho phần phản bác."
+  },
+  {
+   "kind": "counter",
+   "level": 3,
+   "q": "Sau câu \"Some people say that homework is unnecessary.\", câu phản bác nào tốt nhất?",
+   "o": [
+    "However, regular homework can help students remember what they have learned in class.",
+    "However, homework is homework.",
+    "However, these people are wrong and silly.",
+    "However, I don't like homework either."
+   ],
+   "w": "Phản bác bằng một lý lẽ cụ thể, không công kích hay lặp lại."
+  },
+  {
+   "kind": "counter",
+   "level": 3,
+   "q": "Câu nào dùng \"Admittedly\" đúng cách (nhượng bộ rồi phản bác)?",
+   "o": [
+    "Admittedly, electric cars are expensive; however, they are cheaper to run over time.",
+    "Admittedly, electric cars are cheaper to run and also cheaper to buy.",
+    "Admittedly, I love electric cars.",
+    "Admittedly, firstly, electric cars are good."
+   ],
+   "w": "Admittedly thừa nhận một điểm của phía kia, sau đó However đưa ra phản bác."
+  },
+  {
+   "kind": "counter",
+   "level": 3,
+   "q": "Từ nào điền vào chỗ trống phù hợp nhất? \"___ it is true that tourism creates jobs, it can also damage local culture.\"",
+   "o": [
+    "While",
+    "Despite",
+    "Because",
+    "Moreover"
+   ],
+   "w": "While (= Although) + mệnh đề: nhượng bộ rồi nêu mặt trái."
+  },
+  {
+   "kind": "counter",
+   "level": 3,
+   "q": "Câu nào là phản bác hiệu quả nhất cho ý \"Video games make children violent\"?",
+   "o": [
+    "However, most research has found no clear link between playing games and violent behaviour.",
+    "However, video games are fun.",
+    "However, I have played games for years.",
+    "However, games are expensive."
+   ],
+   "w": "Phản bác bằng bằng chứng liên quan trực tiếp đến luận điểm."
+  },
+  {
+   "kind": "signpost",
+   "level": 3,
+   "q": "Câu nào mở đoạn \"phía bên kia\" trong bài thảo luận hai quan điểm?",
+   "o": [
+    "On the other hand, there are strong arguments against this view.",
+    "In conclusion, this view is right.",
+    "For example, this view is popular.",
+    "Firstly, I agree with this view."
+   ],
+   "w": "\"On the other hand, there are strong arguments against…\" chuyển sang phía đối lập."
+  },
+  {
+   "kind": "signpost",
+   "level": 3,
+   "q": "Câu mở bài nào phù hợp cho dạng \"To what extent do you agree?\"",
+   "o": [
+    "I partly agree that cities should ban cars, but I believe a complete ban would be unrealistic.",
+    "Cars are vehicles with four wheels.",
+    "This essay will talk about cars.",
+    "Do you like cars? I do."
+   ],
+   "w": "Mở bài nêu rõ mức độ đồng ý và hướng lập luận."
+  },
+  {
+   "kind": "signpost",
+   "level": 3,
+   "q": "Câu nào giới thiệu kết luận tốt nhất?",
+   "o": [
+    "In conclusion, although online learning has some drawbacks, its flexibility makes it a valuable option.",
+    "In conclusion, there is one more advantage I forgot to mention.",
+    "In conclusion, firstly, online learning is good.",
+    "In conclusion, the end."
+   ],
+   "w": "Kết luận tóm tắt quan điểm, có thể nhắc cả hai mặt, không đưa ý mới."
+  },
+  {
+   "kind": "weak",
+   "level": 3,
+   "q": "Lập luận nào là \"ngụy biện trượt dốc\" (cho rằng một bước nhỏ chắc chắn dẫn tới thảm họa)?",
+   "o": [
+    "If we allow students to use phones in class, soon they will stop learning completely and fail all their exams.",
+    "Allowing phones for some activities may distract a few students.",
+    "Phones can help students look up information quickly.",
+    "Teachers need clear rules about phone use."
+   ],
+   "w": "Kéo một bước nhỏ thành chuỗi hậu quả cực đoan mà không có bằng chứng."
+  },
+  {
+   "kind": "weak",
+   "level": 3,
+   "q": "Lập luận nào chỉ đưa ra hai lựa chọn, bỏ qua các khả năng khác?",
+   "o": [
+    "Either we stop all car use today, or our cities will be destroyed.",
+    "Reducing car use could improve air quality.",
+    "Better buses may encourage people to drive less.",
+    "Some cities have reduced traffic with congestion charges."
+   ],
+   "w": "\"Either … or …\" cực đoan, bỏ qua giải pháp trung gian."
+  },
+  {
+   "kind": "hedge",
+   "level": 3,
+   "q": "Câu nào cân bằng và thận trọng nhất?",
+   "o": [
+    "While social media has clear benefits, it may also have negative effects on young people's sleep.",
+    "Social media is completely evil.",
+    "Social media has no problems at all.",
+    "Social media will destroy the next generation."
+   ],
+   "w": "Thừa nhận cả hai mặt, dùng \"may\" — phù hợp văn học thuật."
+  },
+  {
+   "kind": "link",
+   "level": 3,
+   "q": "Câu kết đoạn nào phù hợp sau khi đã nêu ý trái chiều và phản bác?",
+   "o": [
+    "On balance, the benefits of the scheme appear to outweigh its costs.",
+    "Some people think the scheme is expensive.",
+    "Another point is that the scheme is new.",
+    "For example, the scheme started last year."
+   ],
+   "w": "\"On balance, … outweigh …\" cân nhắc hai mặt rồi đưa kết luận."
+  },
+  {
+   "kind": "counter",
+   "level": 3,
+   "q": "Câu nào nhượng bộ (thừa nhận phía kia có lý một phần)?",
+   "o": [
+    "It is true that living in the countryside can be lonely for young people.",
+    "Living in the countryside is perfect in every way.",
+    "Nobody should ever live in a city.",
+    "The countryside has trees."
+   ],
+   "w": "\"It is true that…\" thừa nhận một điểm hợp lý của phía kia."
+  },
+  {
+   "kind": "counter",
+   "level": 3,
+   "q": "Sau câu nhượng bộ \"Admittedly, school uniforms can be expensive.\", câu nào tiếp theo hợp lý nhất?",
+   "o": [
+    "However, they may still save families money because children need fewer everyday clothes.",
+    "Moreover, uniforms are expensive.",
+    "For example, uniforms cost money.",
+    "In conclusion, uniforms are expensive."
+   ],
+   "w": "Sau nhượng bộ phải là phản bác (However…), không phải thêm ý cùng chiều."
+  },
+  {
+   "kind": "example",
+   "level": 3,
+   "q": "Ý phản bác: \"Free public transport may not reduce traffic.\" Ví dụ nào phù hợp nhất?",
+   "o": [
+    "In one city that made buses free, car traffic hardly changed because the buses were still slow and crowded.",
+    "Buses are usually painted in bright colours.",
+    "Many people like taking taxis.",
+    "Some cities have underground trains."
+   ],
+   "w": "Ví dụ chứng minh trực tiếp cho ý phản bác."
+  },
+  {
+   "kind": "topic",
+   "level": 3,
+   "q": "Đề: \"Should the government pay for people's healthcare?\" Câu chủ đề nào cho đoạn trình bày ý kiến trái chiều?",
+   "o": [
+    "Critics argue that free healthcare could lead to very high taxes.",
+    "Healthcare is very important.",
+    "My uncle is a doctor.",
+    "Hospitals are often crowded."
+   ],
+   "w": "Đoạn trái chiều mở bằng quan điểm của \"critics\", nêu lý do cụ thể."
+  },
+  {
+   "kind": "hedge",
+   "level": 3,
+   "q": "Cách viết nào phù hợp hơn: \"Rich countries ___ help poorer countries.\"",
+   "o": [
+    "should arguably",
+    "must 100%",
+    "have to definitely always",
+    "always must"
+   ],
+   "w": "\"arguably\" = có thể lập luận rằng — giữ quan điểm nhưng mềm hơn."
+  },
+  {
+   "kind": "signpost",
+   "level": 3,
+   "q": "Câu nào dẫn vào ý quan trọng nhất?",
+   "o": [
+    "The most important reason, however, is that education gives people more choices in life.",
+    "The most important reason is reason number three.",
+    "Education is education.",
+    "And then there is also another thing."
+   ],
+   "w": "Câu dẫn dắt nhấn mạnh rõ (The most important reason…) và nêu luôn nội dung."
+  },
+  {
+   "kind": "weak",
+   "level": 3,
+   "q": "Câu nào là lập luận dựa vào số đông (ai cũng làm thì đúng)?",
+   "o": [
+    "Everyone uses plastic bags, so they cannot be harmful.",
+    "Plastic bags take hundreds of years to break down.",
+    "Some countries have banned plastic bags.",
+    "Paper bags can be recycled more easily."
+   ],
+   "w": "Nhiều người làm không chứng minh việc đó vô hại."
+  },
+  {
+   "kind": "link",
+   "level": 3,
+   "q": "Câu nào là câu kết đoạn KHÔNG tốt vì đưa ý mới?",
+   "o": [
+    "In addition, governments should also lower the price of electricity.",
+    "Overall, these measures could make cities cleaner.",
+    "For these reasons, cycling deserves more support.",
+    "This shows how important public parks are."
+   ],
+   "w": "Câu kết đoạn không nên mở thêm ý mới."
+  }
+ ]
+}

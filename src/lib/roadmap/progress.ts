@@ -2,6 +2,7 @@ import { readProgress, readQuiz, PASS } from '@/lib/grammar/drills';
 import { DAYS, GRAMMAR_SEQUENCE, previousTopic, todayKey, wordsOf, type Day, type Task } from './plan';
 import { PRACTICE_KEY, practicePassed } from '@/lib/practice/results';
 import { sentencesOf } from './sentences';
+import { nothingToReview } from '@/lib/grammar-review';
 
 /**
  * What is done on the path. Ticks and retest results are kept in this browser (like the grammar and Passage 3
@@ -134,11 +135,15 @@ export function isDone(task: Task, ctx: Context): boolean {
     case 'reading-tfng':
     case 'translate-dialogue':
     case 'translate-story':
+    case 'linking':
+    case 'argue':
       return practicePassed(task.id);
     case 'reading-p3':
       return Boolean(s.done[task.id]) || ctx.p3Days.has(task.id.slice(0, 10));
     case 'retest':
       return Boolean(s.done[task.id]) || s.placements.some((p) => p.date >= task.id.slice(0, 10));
+    case 'grammar-weak':
+      return practicePassed(task.id) || (task.id.slice(0, 10) <= todayKey() && nothingToReview(task.id.slice(0, 10)));
     case 'rest':
       return true;
     default:

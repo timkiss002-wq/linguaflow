@@ -1,4 +1,6 @@
 import data from '../../../content/daily/translate.json';
+import type { Checked } from '@/lib/grammar/drills';
+import { diagnose, findingTags } from '@/lib/diagnose';
 import type { WriteItem } from '@/lib/practice/items';
 import { daysBetween } from '@/lib/roadmap/plan';
 
@@ -97,10 +99,10 @@ export function readErrors(): ErrorLog {
  * Counts the first try of each line once per day. Wrong: +1 on each of its grammar points and on the line itself.
  * Right: the line leaves the review list and its points lose a little weight, so a point fades once it is mastered.
  */
-export function applyResults(log: ErrorLog, date: string, results: { key: string; ok: boolean }[]): ErrorLog {
+export function applyResults(log: ErrorLog, date: string, results: { key: string; ok: boolean; tags?: string[] }[]): ErrorLog {
   const next: ErrorLog = { tags: { ...log.tags }, items: { ...log.items }, logged: [...log.logged] };
   const seen = new Set(next.logged);
-  for (const { key, ok } of results) {
+  for (const { key, ok, tags } of results) {
     const tag = `${date}|${key}`;
     const ref = LINES.get(key);
     if (seen.has(tag) || !ref) continue;
@@ -115,7 +117,8 @@ export function applyResults(log: ErrorLog, date: string, results: { key: string
       }
     } else {
       next.items[key] = (next.items[key] ?? 0) + 1;
-      for (const t of ref.line.t) next.tags[t] = (next.tags[t] ?? 0) + 1;
+      // what the analysis found wrong (lib/diagnose); without an analysis, every point the line trains
+      for (const t of tags ?? ref.line.t) next.tags[t] = (next.tags[t] ?? 0) + 1;
     }
   }
   next.logged = next.logged.slice(-3000);
@@ -148,7 +151,7 @@ export function recordTagResult(date: string, source: string, tags: string[], ok
   }
 }
 
-export function recordResults(date: string, results: { key: string; ok: boolean }[]) {
+export function recordResults(date: string, results: { key: string; ok: boolean; tags?: string[] }[]) {
   try {
     localStorage.setItem(ERR_KEY, JSON.stringify(applyResults(readErrors(), date, results)));
   } catch {
@@ -285,6 +288,7 @@ function itemOf(ref: LineRef, label: string): WriteItem {
     label,
     scene: ref.piece.scene,
     inflection: true,
+    diagnose: l.t,
   };
 }
 
@@ -366,3 +370,12 @@ export const storyFor = (date: string): string => frozen(`translate:set:${date}:
 
 /** Where an exercise's run is kept (lib/practice/retry) and its best score (lib/practice/results). */
 export const runKey = (date: string, kind: 'dialogue' | 'story') => `translate:run:${date}:${kind}`;
+
+/**
+ * Grammar points to count for a wrong first try: what the analysis found. A sentence far from every answer (another
+ * way of saying it, or lost) counts the points the line trains; only word choices / spelling → no grammar point.
+ */
+export function firstTryTags(item: WriteItem, result: Checked): string[] | undefined {
+  if (result.diff.accuracy < 40) return undefined;
+  return findingTags(diagnose(result.diff.tokens, item.diagnose ?? []));
+}
